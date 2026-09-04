@@ -1,0 +1,209 @@
+[
+  {
+    "stage": "extract_match",
+    "at": "2026-09-03T14:05:58.031604+00:00",
+    "inputs": {
+      "chapter.hi.md": "732423233c25e1bb",
+      "solutions.hi.md": "ed58ed08a9f94439"
+    },
+    "counts": {
+      "examples": 12,
+      "exercises": 23,
+      "raw_solutions": 34,
+      "matched": 23,
+      "content_repaired": 11,
+      "true_orphans_excluded": 11,
+      "aligned": 35,
+      "parts": 33
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "all items - expected, single-language (Hindi-only) chapter, no English source exists"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 4,
+    "notes": "Fresh run under the new 9-stage pipeline (physics-12-1's earlier 02-08 outputs and manifest.json were cleared before this restart; only 00_raw/ and 01_mathpix/ remained). Extraction (dispatched to a narrowly-scoped sub-agent given only step_2/extract.md, never the full step_2/PROMPT.md) found the identical shape as the original run earlier in this project's history: 12 examples, 23 exercises, 34 raw solutions, Hindi-only (no English source for this chapter). join_solutions() matched by number as designed, but this textbook edition is missing one exercise the solutions manual still numbers around (a 'third uncharged sphere C touches A then B' question, solutions' own 1.13) - so every printed textbook number from 1.13 up is one behind the solutions manual's from that point on. Verified this against the actual extracted text (not assumed): q_1.13's question (particle tracks / charge-mass ratio) matches sol_1.14's content exactly; part-counts align perfectly across the shift for all 11 affected items (0<->0, 2<->2, 3<->3 - not a single mismatch). Re-paired q_1.13..q_1.23 to sol_1.14..sol_1.24 respectively by rebuilding each from a PRISTINE (never touched by join_solutions) copy of the question and attaching the correct solution's content by matching part LABELS only - never trusting join_solutions()'s own wholesale parts-replacement fallback, which had already corrupted several of these items' parts via the wrong number-match before this fix ran (caught via a WARNING trail during the first build attempt, then fixed by re-deriving from pristine copies rather than patching the already-mutated ones). sol_1.13 and sol_1.25-1.34 ('अतिरिक्त प्रश्न' / additional questions the textbook edition dropped entirely) remain true orphans, excluded from the chapter - not invented, not force-matched. Final: 35 items (12 examples + 23 exercises), 33 parts total - matches this chapter's previously-established correct count exactly. All three gates clean (gate_counts, gate_solutions_present); gate_bilingual fails all items as expected for a single-language chapter, documented not silently passed."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-03T14:12:24.154718+00:00",
+    "inputs": {},
+    "counts": {
+      "final_answer_fields_fixed": 20
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "CORRECTION to the previous 'extract_match' entry: after that write, calibration flagged 12 items (mostly examples, plus every multi-part item touched) with an empty final_answer despite their solution text clearly containing a stated final value or concluding line - a real extraction gap (step_2/extract.md: ':::answer ... leave it out for proofs/derivations/descriptive answers' - these 12 were none of those, the extraction pass just didn't separate the value out of the solution prose). Fixed by lifting each final_answer verbatim from its own already-extracted solution text (never recomputed, never reworded) for 6 item-level answers (ex_1.1, ex_1.2, ex_1.6, ex_1.8, ex_1.12, q_1.5) and 14 part-level answers across 6 multi-part items (ex_1.3, ex_1.9, ex_1.10, ex_1.11, q_1.4, q_1.7 - every part of every one of these). Two of the six item-level fixes (ex_1.6, q_1.5) are conceptual conclusions, not numeric values (charge conservation, Newton's-third-law/Coulomb's-law consistency) - included since a final_answer field can validly hold a qualitative conclusion, not only a number. Calibration now shows 0 items with no final answer (previously 12; interestingly q_1.15, empty in this chapter's original run through the old pipeline, was NOT among this run's 12 - this fresh extraction happened to capture it directly, a harmless run-to-run extraction variation, not investigated further since it wasn't flagged as missing)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-04T05:49:48.491133+00:00",
+    "inputs": {
+      "chapter.hi.md": "4ca8a25119ac8a0b"
+    },
+    "counts": {
+      "examples_hi_chars": 51613,
+      "qa_hi_chars": 64311,
+      "examples_items": 12,
+      "qa_items": 23
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_examples",
+      "tag_parse_qa",
+      "item_count_sum_matches"
+    ],
+    "model_calls": 0,
+    "notes": "Pure render/split, no model call. Read 02_extract/chapter.hi.md (35 items), filtered by kind into examples.hi.md (12) and qa.hi.md (23) via pipeline.render.render() - both round-trip cleanly through tag._parse, and 12+23=35 matches the source exactly, nothing gained or lost in the split. Hindi-only chapter, no chapter.en.md exists."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-04T05:50:33.359334+00:00",
+    "inputs": {
+      "examples.hi.md": "b67419202ff820dd",
+      "qa.hi.md": "c15412794dd15f1c"
+    },
+    "counts": {
+      "combined_hi_chars": 115714,
+      "items": 35
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "item_count_matches_stage3_sum"
+    ],
+    "model_calls": 0,
+    "notes": "Pure render/recombine, no model call. Read 03_split/examples.hi.md (12) + qa.hi.md (23), merged into one Chapter (35 items) via pipeline.render.render() - round-trips cleanly through tag._parse, and the combined file is byte-identical in size (67,656 chars) to 02_extract/chapter.hi.md before it was split, confirming nothing was gained or lost across the split+recombine round trip. Hindi-only chapter, no chapter.en.md exists."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-04T06:17:42.940392+00:00",
+    "inputs": {
+      "combined.hi.md": "4ca8a25119ac8a0b",
+      "chapter.hi.pdf": "8b8692810d337718",
+      "solutions.hi.pdf": "298c3c84c38aba1e"
+    },
+    "counts": {
+      "corrections_returned": 28,
+      "applied_high": 27,
+      "held": 1,
+      "held_reason": "q_1.17 solution: medium confidence (missing prime on q), not auto-applied",
+      "by_batch": {
+        "ex_1.1-1.6": 4,
+        "ex_1.7-1.12": 0,
+        "q_1.1-1.8": 7,
+        "q_1.9-1.16": 5,
+        "q_1.17-1.23": 12
+      }
+    },
+    "gates_failed": {
+      "gate_math_parity": [
+        "ex_1.1.solution: inline math 11->14 (expected: truncated tail restored)",
+        "ex_1.2.solution: inline math 12->9 (expected: misplaced duplicate sentence from ex_1.1 removed)",
+        "q_1.21 part b.solution: inline math 2->3 (expected: truncated closing value restored)"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts"
+    ],
+    "model_calls": 5,
+    "notes": "5 sub-agents dispatched in parallel (examples 1-6, examples 7-12, exercises 1-8, exercises 9-16, exercises 17-23), each given only step_5/verify.md (not the full PROMPT.md) plus rendered PDF page images (200 DPI via PyMuPDF) as evidence - chapter.hi.pdf for example/question text, solutions.hi.pdf for exercise solutions. Batch 4/5 sub-agents were explicitly briefed on the known +1 numbering drift (guide's problem N+1 = official exercise N, from q_1.13 onward) so they would not mis-flag it. 27 of 28 corrections applied at high confidence; 1 held at medium (q_1.17 solution: missing prime on an intermediate q' symbol, left for a human decision before a lower-confidence pass). gate_math_parity flagged 3 inline-math-count deltas, all reviewed by hand and confirmed to be the correct, deliberate effect of real corrections rather than data loss: ex_1.1's solution was truncated mid-sentence with its dropped tail spliced into ex_1.2's solution out of order (a genuine cross-item extraction bug from stage 2) - fixed by restoring ex_1.1's tail and removing the misplaced duplicate + reordering ex_1.2; q_1.21 part b's solution was truncated before its final numeric value, restored from the solutions-guide PDF. All other corrections were OCR digit/decimal-point errors (e.g. '166' -> '1.66', '188' -> '1.88') or single misread Devanagari letters, verified against the source PDF pages (one sub-agent zoomed/cropped ambiguous digits directly)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-04T06:33:47.320508+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "6fdf1a195dba3e85"
+    },
+    "counts": {
+      "items_simplified": 35,
+      "items_left_unchanged_by_model": 0,
+      "items_restore_failed": 0,
+      "total_items": 35
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "expected failures - Hindi-only chapter, no English side"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 3,
+    "notes": "3 sub-agents dispatched in parallel (all 12 examples; exercises 1-11; exercises 12-23), each given only step_6/simplify.md (not the full PROMPT.md). Every item's full container text was frozen per-item via protect.freeze() before dispatch (own token mapping per item id, so a restore failure on one item could never affect another) - the model only ever saw math/numbers/units/tables/images as opaque ⟦X#⟧ tokens, never the actual values, so it physically could not alter a number even by mistake. After the batches returned, each item was restored by re-rendering the returned (still-frozen) item back to its full container text and calling protect.restore() on that whole text (restoring only the isolated solution field against the full mapping was tried first and produced spurious token-count failures on every item, since most tokens live outside the solution field - fixed by restoring the whole item, then re-parsing to pull out just the restored solution field(s)). All 35 items restored cleanly with zero ProtectionErrors; question/answer/figure/attrs fields were always taken from the pre-simplification verified item, never from the model's returned copy, so those fields are guaranteed byte-identical regardless of what the model did to them. All four gates run against verified vs. simplified: gate_question_text_frozen, gate_answers_unchanged and gate_math_parity all clean; gate_bilingual fails as expected (Hindi-only chapter, same as every prior stage)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-04T07:02:43.828216+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "902eb846622e8a46"
+    },
+    "counts": {
+      "output_chars_hi": 127550,
+      "items": 35
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "protect_parity"
+    ],
+    "model_calls": 3,
+    "notes": "3 sub-agents dispatched in parallel (all 12 examples; exercises 1-11; exercises 12-23), each given only step_7/format.md (not the full PROMPT.md). Each added :::step/:::formula/:::concept/:::note structure inside existing :::solution/:::part blocks, using the fixed Hindi given/key-formula/substitute/conclusion label vocabulary where the flow genuinely matched it, and unlabelled steps or freeform labels elsewhere. No duplicate-trailing-whole-item-solution artifact was found in any of the 35 items this run. One structural violation was caught by the protect.parity gate (display-math count 112->113 on the first pass) and hand-fixed: batch C's agent had split q_1.18's single \\begin{aligned} display-math block (governing equation + substitution together) into two separate $$...$$ blocks across a :::formula and a :::step, which both altered the LaTeX (dropped \\begin{aligned}/\\end{aligned} from the first fragment) and added a display-math boundary that wasn't in the source - fixed by merging both back into one :::step{label=\"मान रखो\"} containing the original unmodified aligned block, matching the pattern the batch B agent used correctly elsewhere for the same kind of inseparable block. After the fix: tag._parse succeeds on the combined output, and protect.parity(stage6, stage7) returns zero problems. Separately noted (not a defect, no fix needed): q_1.20 and q_1.22's solutions contain the source solutions-guide's own '∵'/'∴' shorthand notation (since/therefore, introducing a given value or derived result inline) - present unchanged since stage 5 verification, confirmed by tracing both items' solution text across verified/simplified/structured; a sub-agent flagged it as looking OCR-garbled but correctly left it untouched, out of scope for this stage."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-04T07:09:35.744478+00:00",
+    "inputs": {
+      "structured.hi.md": "7ef7355c73aefe13"
+    },
+    "counts": {
+      "items": 35,
+      "parts": 33,
+      "distinct_figures": 14,
+      "stage_distribution": {
+        "given": 44,
+        "key_formula": 24,
+        "substitute": 46,
+        "conclusion": 54
+      },
+      "duplicate_solution_artifacts_found": 0,
+      "hal_prefixes_stripped": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "item_count_matches_structured_md",
+      "part_count_matches_structured_md",
+      "distinct_figure_src_matches_structured_md"
+    ],
+    "model_calls": 0,
+    "notes": "Implemented as a deterministic Python script, not a model call: step_8/PROMPT.md's given/key-formula/substitute/conclusion inference rule is fully specified as an explicit algorithm (concept always given, formula always key_formula regardless of position; a step/bare-text block already carrying one of the four fixed Hindi labels from stage 7 uses that label's mapped stage as-is, authoritative and not re-derived; an unlabelled stageable block is inferred by its position among ALL stageable blocks in that solution/part - first=given, last=conclusion, else substitute; a solution with exactly one stageable block is entirely conclusion) - so no model judgment call was needed beyond what the prompt itself already pinned down. Walked 07_format/structured.hi.md's tag._parse tree per item/part: a nested :::formula/:::concept/:::note/:::table/:::figure found inside a :::step is hoisted out to its own top-level solution_block entry (never left nested inside a flow, since flow only allows text/figure segments per the JSON schema) - this splits the enclosing step into a leading and trailing fragment sharing the same n/label when the nested block falls in the middle, matching the spec's 'stage 9 does the visual merging' note. No item in this chapter had the duplicate-trailing-whole-item-solution artifact (every item with non-empty parts had no competing item-level :::solution) and no residual 'हल'/हल: opener noise was found in any solution's first block (already clean since stage 5) - both checks ran and found nothing to do, confirming stage 7's own reports from the prior session. Figure src values kept exactly as they appear in structured.hi.md (e.g. images/fig_1_24.jpg), never stripped to a bare filename. Gate: re-parsed the written JSON and cross-checked item count (35), part count (33) and distinct figure src count (14, including a check for stray inline ![...](...) markdown images alongside :::figure containers - none found) against a fresh, independent count from structured.hi.md itself (not against counts already held in memory from building the JSON) - all three matched exactly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-04T07:27:59.797296+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "html_chars": 203981,
+      "css_chars": 10906,
+      "images_copied": 14,
+      "items_rendered": 35
+    },
+    "gates_failed": {
+      "manual_readback_note": [
+        "No code gate exists for this stage. Read-back performed: every multi-digit number in chapter.simplified.hi.md's question/final_answer fields (item- and part-level, 79 distinct values) confirmed present in the rendered HTML text (unicode-superscript digits normalised back to ASCII before comparing). Every <img src> resolved via os.path.exists against the actual 09_design/ output directory (14/14 present - images copied there, not left in a scratch location). Basic tag-balance check (div/span/p/figure/svg open==close) passed. A sample of ~10 items across both sections (including multi-part items ex_1.4/ex_1.9/q_1.23, a note-heavy item ex_1.1, and the item with the source's own \\prime/∵/∴ notation) was read through directly for visual/structural sanity - all rendered correctly."
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hand-authored as a deterministic Python template renderer (not the design skill, not a model call per item) - stage 8 already made every judgment call (given/key-formula/substitute/conclusion structure, note labels, noise already stripped), so this stage is templating that onto solutions-chapter-1.css's real classes, matching the framing that stage 8 done right makes stage 9 close to pure templating. Wrote 09_design/final.hi.css as a copy of the repo-root solutions-chapter-1.css (never forked/restyled) plus two added classes (.s81 safe flex-column stack, .s82 self-contained label+content flex row reusing .s23/.s26/.s36 for sizing) to replace .s22's unsafe grid role, per the documented trap - .s22 itself was never used. Built a small deterministic LaTeX->HTML converter (scratchpad latex.py) covering every LaTeX command actually used in this chapter's JSON (surveyed first: \\frac, \\times, \\mathrm, \\mathbf, \\left/\\right, \\varepsilon, \\pi, aligned/array environments, \\because/\\therefore, \\hat, \\sqrt, Greek letters, etc.) - subscripts as <sub>, simple sign+digit superscripts as literal unicode superscript characters (matching the exemplar's own convention - it uses <sup> exactly once, for a non-numeric exponent), \\frac as the exemplar's stacked .s31/.s32/.s33 fraction, aligned/array rows split into separate lines. Rotating badge color (teal/orange/pink/purple) cycles continuously across all 35 items regardless of section; the four fixed doodle SVGs and the checkmark SVG are reused verbatim from the exemplar, color-matched. All 14 figures in this chapter turned out to be item-level (never embedded mid-solution), simplifying figure placement to one row right after each item's prompt. Multi-part items (ex_1.3/1.9/1.10/1.11, q_1.2/1.4/1.7/1.8/1.11/1.12/1.14/1.16/1.19/1.21/1.23) render each part as its own labelled sub-section (reusing the item's own topic-color class for the 'भाग (a)' heading rather than adding a new class), each with its own full given/key-formula/substitute/conclusion stack and its own boxed final answer - a deliberate design extension beyond the exemplar, which never had a genuinely separate per-part solution. One real bug caught and fixed during review: when a solution had two separate (non-adjacent) conclusion-stage groups, the boxed answer echo was being duplicated onto both instead of only the final one - fixed to attach only to the last conclusion group in the whole solution/part."
+  }
+]
