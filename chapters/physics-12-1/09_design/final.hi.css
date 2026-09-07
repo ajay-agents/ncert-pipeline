@@ -109,5 +109,59 @@ table { break-inside: auto; }
 .s81 { display:flex; flex-direction:column; gap:16px; margin-top:24px; }
 .s82 { display:flex; align-items:flex-start; gap:24px; }
 .s82 > .s23 { flex:0 0 135px; }
-.s82 > .s26, .s82 > .s36 { flex:1; }
+.s82 > .s91 { flex:1; min-width:0; }
+
+/* .s37/.s44/.s50/.s56's organic blob border (border-radius as %) assumes a
+   short, single-line boxed answer, same as every boxed answer in the
+   exemplar. This chapter also has longer, multi-clause answers (several
+   sub-results combined in one line) that wrap to 2+ lines - on a taller
+   box the same % corner radius scales into a much bigger absolute curve
+   and cuts into the wrapped text. These four are the same colors with a
+   plain, fixed-radius rounded rectangle instead, safe at any height; used
+   automatically once the answer text passes a length threshold. */
+.s86 { display:inline-block; border:2.2px solid #10989e; border-radius:12px; padding:6px 16px; font-weight:700; max-width:100%; }
+.s87 { display:inline-block; border:2.2px solid #f5820b; border-radius:12px; padding:6px 16px; font-weight:700; max-width:100%; }
+.s88 { display:inline-block; border:2.2px solid #e42a63; border-radius:12px; padding:6px 16px; font-weight:700; max-width:100%; }
+.s89 { display:inline-block; border:2.2px solid #7a3df0; border-radius:12px; padding:6px 16px; font-weight:700; max-width:100%; }
+
+/* A stacked one-line fraction (.s31/.s32/.s33) is itself two rows tall
+   (numerator over denominator). Loose in running prose that's fine - it
+   just sits taller than the surrounding text - but wrapped in plain "("
+   ")" characters (a sqrt of a fraction, e.g. sqrt(2h/a)) the browser can
+   wrap a line break between the "(" and the fraction, or between the
+   fraction and the ")", tearing the expression apart in a way that reads
+   as broken, not as a line break. .s90 glues the radical sign, its
+   parentheses and its contents into one unit that always wraps (or
+   doesn't) together. Content this wide rarely happens, but on the rare
+   line it does not fit even as one glued unit, let it scroll within its
+   own line instead of overflowing the page - same reasoning as the
+   mobile breakpoint's overflow-x:auto, just not limited to mobile. */
+.s90 { display:inline-flex; align-items:center; white-space:nowrap; max-width:100%; overflow-x:auto; vertical-align:middle; }
+.s26, .s36 { overflow-x:auto; }
+
+/* This page is exported to a fixed PDF (the @page/A4 rules above), not
+   only read in a browser - a fraction or a glued sqrt(fraction) unit can
+   still be torn apart by a PAGE break even once a LINE break can no
+   longer split it, which looks just as broken. The base stylesheet
+   already avoids this for img/figure/svg; extend the same treatment to
+   the two tall multi-row units this chapter adds. */
+.s31, .s90 { break-inside: avoid; }
+
+/* .s1's fixed width:1080px + zoom:0.63 is a desktop/print-page simulation
+   (the base CSS has no mobile breakpoint at all, only @media print) - on a
+   phone that fixed-width block gets squeezed by the browser to fit the
+   narrow viewport, on top of the already-reduced desktop zoom, shrinking
+   text far past readable. Below this width, drop the fixed width/zoom
+   entirely (every s-class's own literal font-size then displays at full
+   size, which reads fine unzoomed) and reflow the two-column layouts
+   (item badge+content, solution label+content) into a single column so
+   the content area actually gets the phone's full width instead of a
+   squeezed leftover next to a fixed-width label column. */
+@media (max-width: 700px) {
+  .s1 { width:100%; zoom:1; padding-right:0; }
+  .s13 { grid-template-columns:1fr; gap:10px; }
+  .s14 { padding-top:0; }
+  .s82 { flex-direction:column; gap:6px; }
+  .s82 > .s23 { flex:0 0 auto; text-align:left; }
+}
 

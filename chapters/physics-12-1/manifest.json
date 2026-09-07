@@ -205,5 +205,125 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Hand-authored as a deterministic Python template renderer (not the design skill, not a model call per item) - stage 8 already made every judgment call (given/key-formula/substitute/conclusion structure, note labels, noise already stripped), so this stage is templating that onto solutions-chapter-1.css's real classes, matching the framing that stage 8 done right makes stage 9 close to pure templating. Wrote 09_design/final.hi.css as a copy of the repo-root solutions-chapter-1.css (never forked/restyled) plus two added classes (.s81 safe flex-column stack, .s82 self-contained label+content flex row reusing .s23/.s26/.s36 for sizing) to replace .s22's unsafe grid role, per the documented trap - .s22 itself was never used. Built a small deterministic LaTeX->HTML converter (scratchpad latex.py) covering every LaTeX command actually used in this chapter's JSON (surveyed first: \\frac, \\times, \\mathrm, \\mathbf, \\left/\\right, \\varepsilon, \\pi, aligned/array environments, \\because/\\therefore, \\hat, \\sqrt, Greek letters, etc.) - subscripts as <sub>, simple sign+digit superscripts as literal unicode superscript characters (matching the exemplar's own convention - it uses <sup> exactly once, for a non-numeric exponent), \\frac as the exemplar's stacked .s31/.s32/.s33 fraction, aligned/array rows split into separate lines. Rotating badge color (teal/orange/pink/purple) cycles continuously across all 35 items regardless of section; the four fixed doodle SVGs and the checkmark SVG are reused verbatim from the exemplar, color-matched. All 14 figures in this chapter turned out to be item-level (never embedded mid-solution), simplifying figure placement to one row right after each item's prompt. Multi-part items (ex_1.3/1.9/1.10/1.11, q_1.2/1.4/1.7/1.8/1.11/1.12/1.14/1.16/1.19/1.21/1.23) render each part as its own labelled sub-section (reusing the item's own topic-color class for the 'भाग (a)' heading rather than adding a new class), each with its own full given/key-formula/substitute/conclusion stack and its own boxed final answer - a deliberate design extension beyond the exemplar, which never had a genuinely separate per-part solution. One real bug caught and fixed during review: when a solution had two separate (non-adjacent) conclusion-stage groups, the boxed answer echo was being duplicated onto both instead of only the final one - fixed to attach only to the last conclusion group in the whole solution/part."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-04T07:43:11.620593+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "html_chars": 203981,
+      "css_chars": 13000
+    },
+    "gates_failed": {
+      "manual_readback_recheck": [
+        "tag balance, image paths and numeric read-back re-verified clean after both fixes below (CSS-only changes, HTML unchanged)."
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Two post-review fixes to 09_design/final.hi.css, found from the user actually opening the page rather than from any automated check (neither is catchable by this stage's read-back script): (1) the boxed final-answer blob border (.s37/.s44/.s50/.s56) cuts into wrapped text once an answer is long enough to reach 2 lines (e.g. ex_1.8's combined E_A/E_B/E_C answer) - added four plain rounded-rectangle variants (.s86-.s89, same colors, fixed-pixel border-radius) used automatically past a ~30-char threshold, kept the original blob for genuinely short answers. (2) the base CSS's .s1 (fixed width:1080px + zoom:0.63, a desktop/print-page simulation with no mobile breakpoint at all) renders unreadably small on a phone - added a @media (max-width:700px) block: .s1 to width:100%/zoom:1, .s13's item grid and .s82's label+content row reflow to a single column below that width, overflow-x:auto added to .s26/.s36 as a safety net for any stray nowrap fraction/derivation line. Desktop rendering is unchanged (the breakpoint only applies below 700px). Both fixes documented in step_9/PROMPT.md (a third and fourth documented trap, alongside the existing .s22 grid trap) so future chapters get them from the start rather than rediscovering the same bugs."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-04T11:56:28.157574+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "html_chars": 205040
+    },
+    "gates_failed": {
+      "manual_readback_recheck": [
+        "tag balance, image paths and numeric read-back re-verified clean after this fix (regenerated HTML from the JSON, no content changed - only whitespace around specific characters)."
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Third post-review fix, reported directly by a student-facing screenshot: illogical line breaks splitting a coefficient from its power of ten (e.g. '6.02 ×' ending one line, '10²³' starting the next) and, more generally, a number splitting from its unit. Root cause was two-fold in the scratchpad latex.py converter: (1) LaTeX's ~ (e.g. \\mathrm{~N}) was being converted to an ordinary breakable space instead of a non-breaking one - wrong on ~'s own LaTeX semantics, not just a style choice; (2) the multiplication/dot/division signs had ordinary spaces on both sides with nothing stopping the browser wrapping right after the operator. Fixed both: ~ now emits an actual non-breaking space; a final whitespace-cleanup pass wraps the spaces immediately around ×/·/÷ in non-breaking spaces too, and collapses any run of an ordinary space touching a non-breaking one down to a single non-breaking space (so a literal source space next to a ~-derived one never doubles up into a visibly wider gap). Regenerated 09_design/final.hi.html from the same structured.hi.json (no content changed, only whitespace handling) and re-ran the read-back/tag-balance/image checks - all clean. Documented as a fourth trap in step_9/PROMPT.md, phrased for whoever converts LaTeX to HTML in any future chapter (script or otherwise), not just this chapter's own scratchpad code."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-04T13:27:56.677698+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "html_chars": 205390,
+      "s90_sqrt_wrappers": 14
+    },
+    "gates_failed": {
+      "manual_readback_recheck": [
+        "tag balance, image paths and numeric read-back re-verified clean after this fix (regenerated HTML from the JSON, no content changed)."
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Fourth post-review fix, again reported directly by a student-facing screenshot (ex_1.7's proton fall-time derivation): sqrt(fraction) expressions - a two-row-tall stacked fraction wrapped in plain '(' ')' text characters - were getting torn apart by ordinary line-wrapping (the parenthesis ending up on a different line than the fraction it belongs to). ex_1.7 has two such expressions chained in one sentence, which is what made it visible. Fixed by wrapping the radical sign + parentheses + contents in a new .s90 span (inline-flex, white-space:nowrap, overflow-x:auto safety net) so the whole unit always moves together; used automatically by the sqrt handler in the scratchpad LaTeX converter for every sqrt in the chapter (14 occurrences). Also made the earlier mobile-only overflow-x:auto safety net on .s26/.s36 unconditional (not just under the 700px breakpoint), since a too-wide glued unit can in principle occur at any viewport width. Regenerated 09_design/final.hi.html from the same structured.hi.json (no content changed) and re-ran the read-back/tag-balance/image checks - all clean. Documented as a continuation of the third trap in step_9/PROMPT.md (same class of bug - content the browser must never be allowed to wrap inside), not a separate one."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-04T13:41:15.590006+00:00",
+    "inputs": {
+      "final.hi.html": "5dea7579e5bcc6b3",
+      "final.hi.css": "6210c60a20efa81d"
+    },
+    "counts": {
+      "pdf_bytes": 1756371,
+      "page_count": 28,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Exported via Playwright + Chromium (both confirmed available in this environment) from 09_design/final.hi.html's own file:// path, with page.evaluate(\"document.fonts.ready...\") awaited before printing so the Devanagari/STIX webfonts were actually loaded, not just requested - printing too early would have silently fallen back to a generic serif font instead of failing loudly. page.pdf(print_background=True, prefer_css_page_size=True) honors the base CSS's own @page/@media print rules (A4, 9mm margins) rather than a Playwright default page size. Result: 28 pages, no blank pages, 1,756,371 bytes. Re-ran the same numeric read-back stage 9 does (79 distinct multi-digit numbers from 06_simplify/chapter.simplified.hi.md's question/final_answer fields) against the PDF's own extracted text via PyMuPDF - 0 missing. One bug caught and fixed in the verification script itself along the way: a naive character-for-character translate() of unicode superscript digits back to ASCII glues an exponent onto its preceding base number into one merged token (10 exp 39 -> '1039'), which then hides a genuine standalone '39'/'36' from ever matching - produced two false 'missing' results on the first pass (ex_1.3a's 10^39/10^36) despite the content being correctly rendered (confirmed present via direct text search: '...=2.4 times 10 sup 39\\nmaan rakho'). Fixed by inserting a separator before a run of superscript characters when normalizing, so a base number and its exponent normalize to two distinct tokens - documented in step_10/PROMPT.md as the gate's own known trap. Visually spot-checked two rendered PDF pages (page 1, and the page containing ex_1.7's chained sqrt(fraction) expressions) - fonts, colors, figures side-by-side, the glued sqrt(fraction) units and the rounded-rectangle long-answer box all render correctly with no visible defects."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-04T13:52:30.342112+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "html_chars": 209254
+    },
+    "gates_failed": {
+      "manual_readback_recheck": [
+        "tag balance, image paths and numeric read-back re-verified clean after this fix."
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Fourth post-review fix, reported directly (ex_1.7's boxed final answer rendering at the top of the conclusion pill's content instead of below it). Root cause: .s82 (the label+content flex row) had THREE direct children whenever a conclusion pill also carried the boxed-answer echo - .s23 (label), .s26 (derivation text) and .s36 (boxed answer) - so flexbox laid out .s26 and .s36 as two side-by-side columns in the same row (both top-aligned) instead of stacking .s36 below .s26. Invisible for a one-line conclusion (nothing to stack under) but obviously wrong for a multi-line one. Fixed by wrapping .s26 (+.s36 when present) in a new .s91 container and moving the .s82 child flex-sizing rule from .s26/.s36 individually onto .s91 - .s82 now always has exactly two direct children (label, content-wrapper), and .s36 stacks naturally below .s26 by normal block flow inside .s91. Regenerated 09_design/final.hi.html and 10_pdf/final.hi.pdf, visually re-confirmed on ex_1.7's page - answer box now sits correctly at the end of the conclusion content. Documented as an addition to the first (.s22-replacement) trap in step_9/PROMPT.md, since it's the same flex-row pattern."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-04T13:52:30.344341+00:00",
+    "inputs": {
+      "final.hi.html": "961d5572b510a372",
+      "final.hi.css": "a745e0e03a0a09ad"
+    },
+    "counts": {
+      "pdf_bytes": 1759946,
+      "page_count": 28,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the .s91 answer-box-stacking fix above (same export method as the first pdf entry). 28 pages, no blank pages, 0/79 numbers missing from the PDF's own extracted text. Visually re-confirmed the fix on the actual paginated PDF page containing ex_1.7."
   }
 ]

@@ -1,6 +1,6 @@
 # NCERT Solutions Pipeline — cross-cutting rules
 
-Read this before any step. It applies across all nine stages; each
+Read this before any step. It applies across all ten stages; each
 `step_N/PROMPT.md` adds only what's specific to that stage.
 
 ## The five rules
@@ -16,17 +16,20 @@ Read this before any step. It applies across all nine stages; each
    `markdown_to_chapter()`/the stage's own logic, then re-render with
    `pipeline/render.py`'s `render()`.
 2. **Deterministic work runs in Python.** Number matching, joining, rendering
-   and all gates (stages 1–8) are code in `pipeline/`. Do not do them by
+   and all gates (stages 1–8, 10) are code in `pipeline/`. Do not do them by
    reading and retyping. If a helper is missing, write the helper. Stage 9 is
    the one exception — see `step_9/PROMPT.md`'s "Final design". (Stage 8's
    own judgement call — assigning each solution's given/key-formula/
    substitute/conclusion structure — is model work, same as stage 7's
-   structural judgement; only its JSON serialization is code.)
+   structural judgement; only its JSON serialization is code. Stage 10's
+   export and its checks are code too, not judgement — see `step_10/PROMPT.md`.)
 3. **Gates are hard stops.** If a gate fails, fix the data or report the problem
    to the user. Do not relax a threshold, skip a gate, or edit `gates.py` to pass.
    (Stage 9's hand-designed path has no code gate on the final HTML; its
    correctness check is the manual read-back in `step_9/PROMPT.md` — treat that
-   as no less mandatory for being manual.)
+   as no less mandatory for being manual. Stage 10, one step later, exports a
+   *fixed* artefact whose content is mechanically checkable again — it gets a
+   real gate, not just a note; see `step_10/PROMPT.md`.)
 4. **NCERT exercise question text is immutable.** It may be corrected against the
    textbook (stage 5) but never reworded, shortened or simplified (stage 6).
    Example *solutions* may be simplified; example *questions* may not.
@@ -120,12 +123,15 @@ batch's self-reported completion.
 
 ## Model-call discipline
 
-- Stages 2, 5, 6, 7, 8 call the model. Stages 1, 3, 4 do not.
+- Stages 2, 5, 6, 7, 8 call the model. Stages 1, 3, 4, 10 do not.
 - Stage 8's model work is the given/key-formula/substitute/conclusion
   judgement call (where stage 7 left a step unlabelled); writing the
   resulting JSON is code, not a model call.
 - Stage 9 is hand-designed only, almost entirely model judgement — there
   is no fixed-code fallback (removed along with `css/`; see CLAUDE.md).
+- Stage 10 is a mechanical export pass (a real browser engine rendering
+  stage 9's finished HTML to a fixed PDF) plus code-checked gates — no
+  model judgement at all; see `step_10/PROMPT.md`.
 - Chunk by section heading, never by token count, so no question is split.
 - Cache the system prompt and JSON schema across chunks.
 - Stage 5 returns a **correction list**, not rewritten prose.

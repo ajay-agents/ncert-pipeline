@@ -80,6 +80,105 @@ flex-direction:column` — arbitrary full-width children, none of `.s22`'s
 column-count assumptions) and one self-contained flex row for each actual
 label+content pair (`display:flex` with the label cell fixed-width and the
 content cell `flex:1`) — never `.s22` itself for this chapter's content.
+**That label+content flex row must have exactly two direct children — the
+label cell and one wrapper holding everything else.** A conclusion pill
+has both its ordinary derivation text (in `.s26`) and, on the final
+conclusion, the boxed final-answer echo (in a separate `.s36`) — if both
+land as direct children of the flex row instead of being wrapped together
+in one child, flexbox lays out `.s26` and `.s36` as two side-by-side
+columns in the *same* row (both are naturally top-aligned), so the boxed
+answer floats up next to the first line of the derivation instead of
+sitting below the last one, which is very obviously wrong once the
+derivation is more than one line — wrap `.s26` and `.s36` together inside
+one container and size *that* to `flex:1`, not the two of them
+individually.
+
+**A second trap, in `.s37`/`.s44`/`.s50`/`.s56` (the boxed final-answer
+span inside a conclusion pill)**: its border is an organic blob
+(`border-radius` given as percentages, e.g. `45% 55% 50% 50% / 60% 55% 45%
+50%`), which only looks right around a short, single-line value — every
+boxed answer in the exemplar itself is well under this. This chapter will
+often have longer, multi-clause answers (several sub-results combined
+into one line, e.g. `E_A = 7.2×10⁴ N C⁻¹; E_B = 3.2×10⁴ N C⁻¹; E_C = 9×10³
+N C⁻¹`); once that wraps to two lines, the same percentage radius scales
+into a much bigger absolute curve and visibly cuts into the wrapped text
+at the corners — this happened for real, on exactly this kind of combined
+answer. Add four matching plain rounded-rectangle variants (same border
+colors, a small fixed-pixel `border-radius` instead of a percentage one,
+safe at any height) and switch to them once the answer's plain-text
+length passes a threshold (~30 characters is a reasonable cutoff) —
+keep the blob for genuinely short answers, exactly as the exemplar uses
+it, and use the plain box only past that length.
+
+**A third trap: the base CSS has no mobile breakpoint at all** — only
+`@media print`. `.s1` (the page's outer wrapper) is a fixed
+`width:1080px` with `zoom:0.63`, a desktop/print-page simulation; opened
+on a phone, that fixed-width block gets squeezed by the browser to fit
+the narrow viewport on top of the already-reduced desktop zoom, shrinking
+every s-class's own literal pixel font-size far past readable. Add a
+`@media (max-width: 700px)` block (in the chapter's own CSS, same as the
+other additions here) that, below that width: sets `.s1` to `width:100%;
+zoom:1` (every class's own font-size then displays at its literal,
+un-zoomed size, which reads fine on a phone without any other change);
+reflows `.s13`'s item grid (`grid-template-columns:150px 1fr`) to a single
+column (`1fr`) so the badge sits above the content instead of eating a
+fixed 150px next to a squeezed content column; and reflows `.s82`'s
+label+content row to stack vertically the same way, so a solution's
+content actually gets the phone's full width. Add `overflow-x:auto` to
+`.s26`/`.s36` too, as a safety net for the rare `white-space:nowrap`
+fraction or derivation line still too wide for a narrow screen even after
+reflowing — it should scroll within its own line rather than overflow the
+page. This does not change how the page looks on desktop at all (the
+breakpoint only applies below 700px); do this for every chapter, not just
+when a student happens to report it.
+
+**A fourth trap: converting LaTeX to plain HTML text can leave ordinary,
+breakable spaces where the browser must never wrap.** Two concrete cases,
+both caught for real on this chapter: (1) LaTeX's `~` (e.g. `\mathrm{~N}`,
+`10~cm`) means "a space here that must never become a line break" — it is
+not decorative, and converting it to an ordinary space lets a number split
+from its unit across a line ("10" ending one line, "cm" starting the
+next). Convert `~` to an actual non-breaking space character, not a plain
+one. (2) A coefficient and its multiplier/divisor (`6.02 \times 10^{23}`,
+`a \cdot b`) must stay on one line too — a bare space around `×`/`·`/`÷`
+lets the browser wrap right after the operator, splitting a value from
+its power of ten in a way that reads like a typo, not a line break. Wrap
+the spaces immediately around these operators in non-breaking spaces as
+well. Do this as a general pass over the final converted text (so it
+also catches a `~` and an operator landing next to each other from
+different source tokens), not just inside the LaTeX converter itself —
+and watch for a run of an ordinary space next to a non-breaking one (e.g.
+a literal source space beside a `~`-derived one); collapse that run to a
+single non-breaking space rather than leaving a visibly doubled gap.
+
+**The same trap also has a layout-shaped version: a stacked one-line
+fraction (`.s31`/`.s32`/`.s33`) is itself two rows tall (numerator over
+denominator).** That's fine loose in running prose — it just sits taller
+than the surrounding line — but wrapped in plain `(`/`)` characters (a
+square root of a fraction, e.g. `\sqrt{\frac{2h}{a}}`, which this chapter
+has more than once, including two in a single sentence) the browser can
+place a line break between the `(` and the fraction, or between the
+fraction and the `)`, tearing the expression visibly apart rather than
+just wrapping it. Wrap the radical sign, its parentheses and their
+contents in one `display:inline-flex; white-space:nowrap` span so they
+always move as a unit; give that span `overflow-x:auto` (and a sane
+`max-width`) as a safety net for the rare case where even the whole glued
+unit doesn't fit a line — let it scroll within its own line rather than
+overflow the page, the same reasoning as the mobile breakpoint's
+`overflow-x:auto`, just not limited to mobile there.
+
+**This page is routinely exported to a fixed PDF (the `@page`/A4 rules at
+the top of the base CSS), not only read in a browser — the same tearing-
+apart failure has a page-break-shaped version, not just a line-break-
+shaped one.** A fraction or a glued `sqrt(fraction)` unit that survives
+line-wrapping intact can still be split across a *page* boundary once
+that page happens to end partway through it, which looks just as broken
+in the exported PDF. The base CSS already protects `img`/`figure`/`svg`
+this way (`break-inside: avoid`) — extend the same rule to `.s31` and
+`.s90` (or whatever ends up holding a fraction/sqrt in this chapter), so
+they never split across a page either. This is worth doing for every
+chapter, since every chapter's page ends up exported the same way, not
+only when a user happens to notice a split fraction in their PDF.
 
 **This path has no code gate on the final HTML.** The check is manual and
 not optional: before calling the chapter done, read every `final_answer`

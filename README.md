@@ -1,7 +1,7 @@
 # NCERT Solutions Pipeline
 
 Bilingual NCERT solutions builder for Physics, Chemistry, Maths and Biology
-(Classes 11–12), run as nine Claude Code stages over one chapter at a time.
+(Classes 11–12), run as ten Claude Code stages over one chapter at a time.
 
 ```
 ncert-pipeline/
@@ -10,7 +10,7 @@ ncert-pipeline/
   _shared/RULES.md          ← the five rules + bilingual/subject/vocabulary notes
   CALIBRATION/calibrate.py  ← measures a chapter; writes <chapter>.md
   CALIBRATION/<chapter>.md  ← every measured number (generated, never typed)
-  step_1 … step_9/PROMPT.md ← the stage instructions (orchestration: files, gates, manifest)
+  step_1 … step_10/PROMPT.md ← the stage instructions (orchestration: files, gates, manifest)
   step_2/extract.md, step_5/verify.md, step_6/simplify.md, step_7/format.md
                             ← the content-judgment instructions those four stages send the model
   .claude/commands/stageN-*.md ← thin wrappers so /stage1-mathpix etc. still work
@@ -50,6 +50,7 @@ Then, one session per stage:
 /stage7-format   physics-11-10
 /stage8-tag      physics-11-10
 /stage9-design   physics-11-10
+/stage10-pdf     physics-11-10
 ```
 
 **Re-run `CALIBRATION/calibrate.py` after any stage whose output changed** —
@@ -73,6 +74,7 @@ python3 CALIBRATION/calibrate.py chapters/physics-11-10
 | **7** | 6 | `07_format/structured.<lang>.md` | wrap the content in the container vocabulary (`:::step`, `:::formula`, …) |
 | **8** | 7 | `08_tag/structured.<lang>.json` | tag each solution's given/key-formula/substitute/conclusion structure and serialize to JSON — see `step_8/PROMPT.md` |
 | **9** | 8 | `09_design/final.<lang>.html` | the hand-designed final page — see `step_9/PROMPT.md` |
+| **10** | 9 | `10_pdf/final.<lang>.pdf` | export the finished page to a fixed PDF via a real browser engine, with a real content gate — see `step_10/PROMPT.md` |
 
 Each stage's full instructions are in `step_N/PROMPT.md`; `_shared/RULES.md`
 covers what's common to all of them.
@@ -90,6 +92,7 @@ covers what's common to all of them.
 | 7 Format | yes | judgement about structure |
 | 8 Tag | yes (judgement) + code (serialization) | assigning the given/key-formula/substitute/conclusion structure is judgement; writing the JSON is deterministic |
 | 9 Design | yes | hand-designed, matching house style — no fixed-code fallback |
+| 10 PDF export | no | mechanical browser-engine export plus code-checked gates — no judgement |
 
 Stage 9 is hand-designed only (see CLAUDE.md's "Tagging and final design"):
 hand-authored as plain static HTML/CSS (not the `design` skill's Claude
@@ -116,9 +119,15 @@ confirms item/part/figure counts match a fresh count from
 `structured.<lang>.md` directly — nothing gets silently dropped in the
 tag-and-serialize step.
 
-This coverage ends at stage 8. Stage 9 has no code gate on the final HTML —
-`step_9/PROMPT.md`'s manual answer-by-answer read-back is what stands in for
-`gate_math_parity` there, and it isn't optional just because it isn't code.
+This coverage lapses for exactly one stage. Stage 9 has no code gate on the
+final HTML — `step_9/PROMPT.md`'s manual answer-by-answer read-back is what
+stands in for `gate_math_parity` there, and it isn't optional just because
+it isn't code. Stage 10 picks the coverage back up: exporting to a *fixed*
+PDF is itself a real additional rendering pass (fonts, pagination, an
+asset that fails to embed) that can independently drop or corrupt content
+even when stage 9's HTML was correct, so it gets its own code gate again —
+page count sanity, no blank pages, and the same numeric read-back re-run
+against the PDF's own extracted text — see `step_10/PROMPT.md`.
 
 ## Before your first real run
 
