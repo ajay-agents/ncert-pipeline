@@ -68,6 +68,23 @@ Reuse the exemplar's real classes, not lookalikes of your own:
   re-derive it to a bare filename; the images live in a subfolder next to
   this page, not beside it directly, and a bare filename 404s silently.
 
+**A trap in `.s23` (the label cell holding a pill plus, for given/key-
+formula, a decorative arrow doodle after it)**: `.s23`'s own base rule is
+just `text-align:center` — the pill span and the doodle SVG that follows
+it are left as plain inline content. When the pill text is short enough
+that it and an ~86px-tall doodle both fit on one shared line, ordinary
+inline baseline alignment puts the doodle's bottom edge on the text
+baseline and lets the (much taller) doodle extend *upward* above that
+line — which pushes the pill down to the *bottom* of the combined line
+instead of level with the first line of its paired content, and the
+doodle ends up rendering above the pill rather than trailing below it as
+intended. Caught for real: the "जानकारी" label rendering visibly below
+where its content starts, with the arrow floating in the gap above it.
+Give `.s23` `display:flex; flex-direction:column; align-items:center;`
+(plus a small `gap`) so the pill always renders first/top regardless of
+the doodle's height, with the doodle trailing below it — harmless when
+there's no doodle, since a lone pill is then just a one-item column.
+
 **A trap already hit once, if reusing `solutions-chapter-1.css`'s own
 `.s22` class**: it is a CSS grid (`grid-template-columns:135px 1fr`) built
 for the exemplar's own content, which only ever paired a label cell with a
@@ -140,9 +157,12 @@ not decorative, and converting it to an ordinary space lets a number split
 from its unit across a line ("10" ending one line, "cm" starting the
 next). Convert `~` to an actual non-breaking space character, not a plain
 one. (2) A coefficient and its multiplier/divisor (`6.02 \times 10^{23}`,
-`a \cdot b`) must stay on one line too — a bare space around `×`/`·`/`÷`
-lets the browser wrap right after the operator, splitting a value from
-its power of ten in a way that reads like a typo, not a line break. Wrap
+`a \cdot b`, and just as much a plain `/` typed directly in source rather
+than a proper `\frac` — e.g. `(250 / 18) \times 6.02 \times 10^{23}`,
+caught for real on this chapter) must stay on one line too — a bare space
+around `×`/`·`/`÷`/`/` lets the browser wrap right after the operator,
+splitting a value from its power of ten (or a numerator from its
+denominator) in a way that reads like a typo, not a line break. Wrap
 the spaces immediately around these operators in non-breaking spaces as
 well. Do this as a general pass over the final converted text (so it
 also catches a `~` and an operator landing next to each other from
@@ -150,6 +170,17 @@ different source tokens), not just inside the LaTeX converter itself —
 and watch for a run of an ordinary space next to a non-breaking one (e.g.
 a literal source space beside a `~`-derived one); collapse that run to a
 single non-breaking space rather than leaving a visibly doubled gap.
+
+`=` gets the same non-breaking padding, for a related but distinct
+reason: LaTeX source very often has *no* space at all on either side of
+it (`\phi=\frac{...}{...}`), which reads visually cramped once converted,
+especially right before a stacked fraction that's already its own
+distinct visual block. Always emit a non-breaking space on both sides of
+a literal `=` regardless of whether the source had one there or not (the
+same run-collapsing rule above keeps this from doubling up when the
+source already had a plain space next to it) — this both fixes the
+cramped spacing and, as a side effect, keeps `=` from ever starting a
+line break right before the value it equals.
 
 **The same trap also has a layout-shaped version: a stacked one-line
 fraction (`.s31`/`.s32`/`.s33`) is itself two rows tall (numerator over
@@ -179,6 +210,33 @@ this way (`break-inside: avoid`) — extend the same rule to `.s31` and
 they never split across a page either. This is worth doing for every
 chapter, since every chapter's page ends up exported the same way, not
 only when a user happens to notice a split fraction in their PDF.
+The same reasoning applies to `.s14` (the item's badge + topic-text +
+doodle column): it's compact (~150-200px) regardless of how long the
+item's own content is, so unlike the item card as a whole (`.s13` —
+genuinely too tall to force onto one page for a long multi-part item,
+so leave that one alone) there's no good reason for it to ever split.
+Caught for real: an item's topic text wrapping to two lines with the
+page break landing between them, stranding the second line and the
+item's doodle alone at the top of the next page while the badge number
+stayed behind on the page before. Give `.s14` `break-inside: avoid` too.
+
+**A multi-part item's own combined prompt is sometimes nothing but one
+part's own question again**, occasionally with a leading `"(a)"`/`"(i)"`-
+style marker that part's own field doesn't itself carry (so a naive exact
+match misses it — strip a leading `(x)` marker before comparing) — rather
+than genuinely shared setup text distinct from every part. Rendering it
+then is pure word-for-word repetition of the very next paragraph, not
+missing content (every part's own text is shown under its own भाग heading
+either way, so nothing is lost by leaving it out). This is a genuine data
+gap upstream (the item-level field should have held real shared context,
+or the full original combined question, and doesn't) — but it isn't
+stage 9's job to invent what it should have said, only to not needlessly
+repeat what's already there twice. Skip the item-level prompt only when
+it duplicates a part's own prompt this way; keep it whenever it's
+genuinely distinct (shared setup not repeated in any part, e.g. a general
+principle statement before each part asks something different about it) —
+check every multi-part item against this, don't assume it applies to none
+of them just because a couple of items look fine.
 
 **This path has no code gate on the final HTML.** The check is manual and
 not optional: before calling the chapter done, read every `final_answer`

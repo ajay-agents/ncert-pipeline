@@ -111,6 +111,19 @@ table { break-inside: auto; }
 .s82 > .s23 { flex:0 0 135px; }
 .s82 > .s91 { flex:1; min-width:0; }
 
+/* .s23 holds a pill (.s24/.s28/.s34/.s35/.s74/.s75) and, for given/key-
+   formula, a decorative arrow doodle (.s25/.s29) after it in the markup.
+   With .s23's own base rule (text-align:center only) those two sit as
+   plain inline content - when the pill text is short enough that it and
+   an 86px-tall doodle both fit on one shared line, ordinary baseline
+   alignment puts the (much shorter) pill text at the BOTTOM of that tall
+   line and lets the doodle float upward above it, instead of the pill
+   sitting at the top (level with the first line of its paired content)
+   and the doodle trailing below it. Stack them as an explicit column so
+   the pill always renders first/top regardless of the doodle's height;
+   harmless when there's no doodle (a lone pill is a one-item column). */
+.s23 { display:flex; flex-direction:column; align-items:center; gap:4px; }
+
 /* .s37/.s44/.s50/.s56's organic blob border (border-radius as %) assumes a
    short, single-line boxed answer, same as every boxed answer in the
    exemplar. This chapter also has longer, multi-clause answers (several
@@ -146,6 +159,16 @@ table { break-inside: auto; }
    already avoids this for img/figure/svg; extend the same treatment to
    the two tall multi-row units this chapter adds. */
 .s31, .s90 { break-inside: avoid; }
+
+/* .s14 (the item badge + topic-text + item doodle column) is compact
+   (~150-200px) regardless of how long the item's own content is, so
+   unlike the item card as a whole (.s13 - genuinely too tall to force
+   onto one page for a long multi-part item) there's no good reason for
+   it to ever split: caught for real, an item's topic text wrapping to
+   two lines with the page break landing between them, stranding the
+   second line + the item's doodle alone at the top of the next page
+   while the badge number stayed with the first line on the page before. */
+.s14 { break-inside: avoid; }
 
 /* .s1's fixed width:1080px + zoom:0.63 is a desktop/print-page simulation
    (the base CSS has no mobile breakpoint at all, only @media print) - on a

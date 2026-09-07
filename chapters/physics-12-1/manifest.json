@@ -325,5 +325,170 @@
     ],
     "model_calls": 0,
     "notes": "Re-export after the .s91 answer-box-stacking fix above (same export method as the first pdf entry). 28 pages, no blank pages, 0/79 numbers missing from the PDF's own extracted text. Visually re-confirmed the fix on the actual paginated PDF page containing ex_1.7."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-07T07:11:37.657213+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "html_chars": 209352
+    },
+    "gates_failed": {
+      "manual_readback_recheck": [
+        "tag balance, image paths and numeric read-back re-verified clean after this fix."
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Fifth post-review fix, reported directly (ex_1.2's solution: '=(250 / 18) × 6.02 × 10²³ है' splitting mid-expression, with '(250 /' ending one line and '18) × 6.02 × 10²³ है' starting the next). Root cause: the source LaTeX writes this division as a literal '/' typed directly ('(250 / 18)'), not as a proper \\frac - the operator-protection added for ×/·/÷ didn't cover a bare '/'. Extended the same non-breaking-space treatment to '/' in the scratchpad latex.py converter's _OPERATOR_SPACING_RE. Confirmed in the regenerated HTML that the whole expression '=(250\\xa0/\\xa018)\\xa0×\\xa06.02\\xa0×\\xa010²³' is now one continuous non-breaking run. Regenerated 09_design/final.hi.html and 10_pdf/final.hi.pdf, re-ran all checks (tag balance, images, numeric read-back on both HTML and PDF text - all clean), visually re-confirmed on ex_1.2's actual page that the expression now wraps as a whole unit. Documented as an extension of the operator-spacing trap in step_9/PROMPT.md."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-07T07:11:37.666048+00:00",
+    "inputs": {
+      "final.hi.html": "d8e84ca93f76eca5",
+      "final.hi.css": "a745e0e03a0a09ad"
+    },
+    "counts": {
+      "pdf_bytes": 1759839,
+      "page_count": 28,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the '/' operator-spacing fix above (same export method as prior pdf entries). 28 pages, no blank pages, 0/79 numbers missing from the PDF's own extracted text. Visually re-confirmed the fix on the actual paginated PDF page containing ex_1.2."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-07T07:50:21.621152+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "css_chars": 15300
+    },
+    "gates_failed": {
+      "manual_readback_recheck": [
+        "CSS-only change, HTML untouched - tag balance/image/numeric read-back unaffected; re-verified anyway, still clean."
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Sixth post-review fix, reported directly (the 'जानकारी' label rendering visibly below where its paired content starts, with the decorative arrow doodle floating in the gap above it instead of trailing below the pill). Root cause: .s23 (label cell) only sets text-align:center - the pill span and the ~86px-tall arrow doodle after it are plain inline content, so when both fit on one shared line, ordinary baseline alignment puts the doodle's bottom edge on the text baseline and lets the much-taller doodle extend upward above the line, pushing the (much shorter) pill text down to the bottom of that combined line - visibly below the top of its paired content instead of level with it. Fixed by adding display:flex;flex-direction:column;align-items:center to .s23 (CSS-only change, no HTML regeneration needed) so the pill always renders first/top and the doodle trails below it, regardless of the doodle's height; harmless for pills with no doodle (a one-item column behaves like plain block content). Re-exported 10_pdf/final.hi.pdf and re-ran the page-count/blank-page/numeric read-back checks - all clean (content unchanged, CSS-only fix). Visually re-confirmed on ex_1.1/ex_1.2's actual PDF pages that the pill now sits level with its content's first line. Documented as a new trap in step_9/PROMPT.md."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-07T07:50:21.625435+00:00",
+    "inputs": {
+      "final.hi.html": "d8e84ca93f76eca5",
+      "final.hi.css": "76806ca0365214e9"
+    },
+    "counts": {
+      "pdf_bytes": 1752981,
+      "page_count": 28,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the .s23 pill/doodle stacking fix above (CSS-only change). 28 pages, no blank pages, 0/79 numbers missing from the PDF's own extracted text."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-07T08:21:34.892159+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "html_chars": 208652,
+      "items_with_deduped_prompt": 1
+    },
+    "gates_failed": {
+      "manual_readback_recheck": [
+        "tag balance, image paths and numeric read-back re-verified clean after all three fixes below."
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Full-document visual review (a forked agent read every one of the 28 rendered PDF pages) requested after the run of targeted fixes above, to check for recurrences of those 6 bug classes elsewhere plus anything new. Result: zero recurrences of the prior 6 classes anywhere in the document; 3 new issues found, all fixed here: (1) .s14 (item badge+topic+doodle column) getting torn across a PDF page boundary - confirmed on ex_1.7 (topic text split between pages 4-5) and q_1.15 (pages 21-22). The existing break-inside:avoid fix only covered .s31/.s90 (fractions), not this compact badge column. Fixed by adding break-inside:avoid to .s14 too (deliberately NOT added to .s13, the whole item card, since long multi-part items are sometimes genuinely taller than one page and forcing the whole card to avoid splitting would just push large blank gaps onto the preceding page instead). (2) A redundant plain divider immediately following the 'भाग 2 · अभ्यास प्रश्न' section header (with no equivalent after भाग 1) - a leftover line in render_page.py, removed. (3) q_1.12's item-level prompt was word-for-word identical to its own part (a) prompt (with a leading '(a)' marker part a's own field didn't carry), so the page showed the same paragraph twice before भाग (b) introduced anything new. Checked this systematically against all 15 multi-part items in this chapter programmatically (not just the one flagged item) - confirmed q_1.12 is the ONLY one affected; the other 14 (ex_1.3/1.9/1.10/1.11, q_1.2/1.4/1.7/1.8/1.11/1.14/1.16/1.19/1.21/1.23) all have genuinely distinct item-level prompts (real shared setup text, not a duplicate of any single part) and were left untouched. Fixed by skipping the item-level prompt render only when it duplicates a part's own prompt (normalizing a leading '(a)'-style marker before comparing) - a rendering-level dedup decision, not a data change; both parts' full question text still appears on the page either way, just not the redundant third copy. All three documented in step_9/PROMPT.md."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-07T08:21:34.896613+00:00",
+    "inputs": {
+      "final.hi.html": "fb075c3888fc43aa",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1752530,
+      "page_count": 28,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the full-review fixes above (badge break-inside, duplicate divider removed, q_1.12 prompt dedup). 28 pages, no blank pages, 0/79 numbers missing from the PDF's own extracted text. Visually re-confirmed all three fixes on the actual paginated PDF: ex_1.7's badge box now stays whole at the top of its page, the भाग 2 section transition has no redundant divider, q_1.12 goes straight from its badge into भाग (a) with no duplicate question paragraph."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-07T08:40:16.765615+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "html_chars": 210378
+    },
+    "gates_failed": {
+      "manual_readback_recheck": [
+        "tag balance, image paths and numeric read-back re-verified clean after this fix."
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Seventh post-review fix, reported directly (an equals sign rendering with zero space on either side, e.g. 'phi=1.45x10^-3 C / 8.854x10^-12 N^-1 m^-2 C^2' cramped right up against phi on the left and the fraction on the right). Root cause: the source LaTeX itself very often has no space around = ('\\phi=\\frac{...}{...}'), and the converter passed it through as a literal character with no padding added. Fixed by always emitting a non-breaking space on both sides of a literal '=' in the scratchpad latex.py converter, using the same run-collapsing rule already in place (so a source that DOES already have a plain space next to '=' doesn't end up double-spaced) - this also has the side benefit of keeping '=' from ever starting a line break right before the value it equals, consistent with the earlier operator-spacing fixes. Verified broadly across the whole document (dozens of '=' occurrences checked via direct string search, all consistently padded) rather than just the one reported instance. Regenerated 09_design/final.hi.html and 10_pdf/final.hi.pdf, re-ran all checks (tag balance, images, numeric read-back on both HTML and PDF text - all clean), visually re-confirmed on the exact reported item (q_1.21 part a's phi=... fraction) that the spacing now reads cleanly. Documented as an extension of the operator-spacing trap in step_9/PROMPT.md."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-07T08:40:16.769401+00:00",
+    "inputs": {
+      "final.hi.html": "97988b3ae29a8d86",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1752679,
+      "page_count": 28,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the '=' spacing fix above (same export method as prior pdf entries). 28 pages, no blank pages, 0/79 numbers missing from the PDF's own extracted text. Visually re-confirmed the fix on the actual paginated PDF page containing q_1.21."
   }
 ]
