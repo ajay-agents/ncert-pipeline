@@ -490,5 +490,88 @@
     ],
     "model_calls": 0,
     "notes": "Re-export after the '=' spacing fix above (same export method as prior pdf entries). 28 pages, no blank pages, 0/79 numbers missing from the PDF's own extracted text. Visually re-confirmed the fix on the actual paginated PDF page containing q_1.21."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-07T10:36:10.240307+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "html_chars": 213125,
+      "literal_divisions_converted_to_fractions": 204
+    },
+    "gates_failed": {
+      "manual_readback_recheck": [
+        "tag balance, image paths and numeric read-back re-verified clean; all 204 rendered fractions individually scanned for sane numerator/denominator grouping (2 apparent anomalies traced to the diagnostic script itself - tag-stripping and nested-fraction regex confusion - confirmed correct in the actual HTML, not real bugs)."
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Eighth post-review request: a literal '/' typed directly in source (not \\frac{}{}) should render as a proper stacked fraction like \\frac does, not a bare slash - this chapter writes divisions this way constantly. Implemented by rewriting a bare '/' into \\frac{num}{den} syntax before the main converter runs, so the existing \\frac handling renders it (rather than a second fraction-rendering implementation). Four real bugs caught and fixed while getting the numerator/denominator boundary detection right, each verified against actual chapter content, not just synthetic examples: (1) a '(A/B)' fully wrapped in one paren becomes the fraction directly, dropping the redundant parens (regex pass first); (2) remaining '/' only counts at bracket-depth 0, with the numerator/denominator each extending to the nearest depth-0 '=' or '\\times'/'×' - so a chain like 'A/B × C/D' splits into two fractions around the ×, not one swallowing everything; (3) a '\\times' gluing a coefficient to its own power of ten (2.3 \\times 10^-8) must never count as that boundary, or the search stops right there and drops the coefficient - caught on ex_1.3b/ex_1.7's acceleration calculations, where '2.3×10⁻⁸ N / 9.11×10⁻³¹ kg' was coming out as '10⁻⁸ N / 9.11' before the fix; (4) '\\text{...}' (trailing prose inside a math span, e.g. 'है।') must also be a boundary, or the denominator search runs past the actual math and swallows the prose whole - caught on the same ex_1.3b passage ('s² है।' collapsing into one fraction denominator before the fix). Separately, a '/' inside a superscript exponent (x^{1/2}, a fractional power) must stay a compact superscript, never get promoted to a full stacked fraction crammed inside a <sup> tag - caught on ex_1.10/ex_1.11's alpha*x^(1/2) field expressions; fixed by having the superscript handler's fallback path bypass the division-rewrite for its own content entirely (the exponent's protective braces are already gone by the time that content is a standalone string, so depth-tracking alone can't distinguish it from ordinary text anymore). Regenerated 09_design/final.hi.html and 10_pdf/final.hi.pdf, re-ran all checks (clean), visually re-confirmed on the exact reported item (ex_1.3b) and the fractional-exponent edge case (ex_1.10/ex_1.11) that both render correctly. Page count grew 28->30 (more vertical space per stacked fraction than inline text needed) - expected and acceptable. All four bug classes documented at length in step_9/PROMPT.md."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-07T10:36:10.244803+00:00",
+    "inputs": {
+      "final.hi.html": "fc419a05264bfb26",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1777290,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the literal-division-to-fraction conversion above. Page count grew from 28 to 30 (expected - stacked fractions need more vertical space than inline '/' text did). No blank pages, 0/79 numbers missing from the PDF's own extracted text. Visually re-confirmed on the actual paginated PDF: ex_1.3b's Coulomb-vs-gravity force ratio (the exact reported case) and ex_1.10/ex_1.11's fractional exponents both render correctly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-07T11:31:42.378083+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "html_chars": 215950
+    },
+    "gates_failed": {
+      "manual_readback_recheck": [
+        "tag balance, image paths and numeric read-back re-verified clean after this fix."
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Ninth post-review fix, reported directly (ex_1.3b's acceleration computation 'a = 2.3e-8 N/9.11e-31 kg = 2.5e22 m/s^2' splitting unevenly across two lines - the first '= fraction' stayed intact but the second one still fell to its own line, half the equation above and half below). Root cause: the non-breaking-space padding already added around '=' only prevents a break AT THAT SPACE CHARACTER - it does not stop the browser choosing a different break point at the boundary between plain text and an adjacent inline-block-like element (a fraction's .s31 span), so nothing was stopping a wrap immediately BEFORE the second '='. Fixed by rendering a \\frac/\\sqrt that immediately follows '=' right there and gluing both inside one more .s90 nowrap span - and critically, chaining through every further '= <frac/sqrt>' that follows immediately into the SAME span, not gluing each '=' independently (gluing only one at a time left the later ones free to wrap apart from each other, exactly as broken-looking as the original problem). Verified in isolation first (test script) before touching the real page. Regenerated 09_design/final.hi.html and 10_pdf/final.hi.pdf, re-ran all checks (clean), visually re-confirmed on the exact reported line that the whole equation now moves together to its own line as one unit. Documented in step_9/PROMPT.md alongside the other '=' and division fixes."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-07T11:31:42.383302+00:00",
+    "inputs": {
+      "final.hi.html": "4418f171fef2787f",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1779663,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the chained equals-to-fraction gluing fix above. 30 pages, no blank pages, 0/79 numbers missing from the PDF's own extracted text. Visually re-confirmed on ex_1.3b's exact reported line that the whole 'a = X = Y' computation now wraps as one unit onto its own line."
   }
 ]

@@ -182,6 +182,74 @@ source already had a plain space next to it) — this both fixes the
 cramped spacing and, as a side effect, keeps `=` from ever starting a
 line break right before the value it equals.
 
+**A literal `/` typed directly in source (rather than `\frac{}{}`) should
+render the same way `\frac` does — as a proper stacked fraction, not a
+bare slash — and this chapter's source writes divisions this way
+constantly** (`8.987 \times 10^{9} \mathrm{Nm}^{2} / \mathrm{C}^{2}`,
+`(250 / 18)`, a value divided by a value in almost every worked solution).
+Rewrite a bare `/` into `\frac{numerator}{denominator}` syntax before the
+main conversion, so the existing `\frac` handling renders it — this is
+far more reliable than trying to draw a second stacked-fraction
+implementation from scratch. Finding the numerator/denominator boundaries
+correctly is the hard part, and every case below was a real bug caught on
+this chapter, not a hypothetical:
+
+- A paren that wraps *exactly* one clean division and nothing else, e.g.
+  `(250 / 18)`, becomes the fraction directly (drop the now-redundant
+  parens — the fraction bar already shows the grouping). A `/` anywhere
+  else counts as "top level" only outside all parens/braces — track
+  bracket depth over the whole string first, and only split at depth 0.
+- Within one factor, the numerator/denominator each extend back/forward
+  to the nearest depth-0 `=`, `\times`/`×`, or start/end of string — so
+  `A / B \times C / D` becomes two separate fractions around the
+  `\times`, not one fraction swallowing the whole expression.
+- **A `\times` that's gluing a coefficient to its own power of ten
+  (`2.3 \times 10^{-8}`) must never count as one of those boundaries** —
+  otherwise the numerator/denominator search stops right there and
+  swallows only the exponent, leaving the coefficient behind (caught for
+  real: `2.3 \times 10^{-8} \mathrm{~N} / 9.11 \times 10^{-31}
+  \mathrm{~kg}` came out as `10⁻⁸ N` over `9.11`, dropping both
+  coefficients). Detect this specifically — a `\times`/`×` immediately
+  followed by `10^` — and skip it as a boundary candidate; it's still
+  converted normally afterward, just not treated as a factor separator.
+- **`\text{...}` (marking prose inside a math span, e.g. a trailing
+  "है।" or "है") must also be a hard boundary**, or a denominator search
+  running past the end of the actual math content swallows the prose
+  whole into the fraction (caught for real: a `/` before `\mathrm{s}^{2}
+  \text { है। }` produced a denominator of `s² है।` instead of stopping
+  at `s²`). Note LaTeX allows a space between `\text` and its brace
+  (`\text { ... }`) — match that too, not just the no-space form.
+- **A `/` inside a superscript exponent (`x^{1 / 2}`, a fractional power)
+  must stay a compact superscript, never get promoted to a full two-row
+  stacked fraction crammed inside a `<sup>` tag** — this looks broken,
+  not readable. The superscript handler's fallback path must bypass the
+  division-rewrite entirely for its own content (call the inner converter
+  directly, not the public entry point that always rewrites divisions
+  first) — this is not a boundary/depth issue like the others; it's that
+  the exponent's braces already got stripped away by the time that
+  content is a standalone string, so depth-tracking alone can't tell it
+  apart from ordinary running text anymore.
+
+**A `=` immediately followed by a `\frac`/`\sqrt` needs more than the
+non-breaking padding above — a non-breaking space does not stop the
+browser breaking the line right at the boundary between plain text and
+an *adjacent inline-block-like element* (a fraction's `.s31` span, a
+sqrt's `.s90` span) the way it does between two ordinary characters.**
+Caught for real: `a = <fraction1> = <fraction2>` still split with `=
+<fraction2>` alone on the next line even after `=` had non-breaking
+spaces on both sides — because nothing was stopping the line from
+wrapping *before* that `=`, only at the space characters immediately
+touching it. When `=` is directly followed by a `\frac{}{}` or
+`\sqrt{...}`, render that construct right there and glue the `=` to it
+inside one more `.s90` span, the same device already used for a bare
+radical sign's own parentheses. **And don't stop at one `=` — chain
+through every further `= <frac/sqrt>` that immediately follows into the
+*same* span** (`a = X = Y = Z` is one glued unit, not three). Gluing only
+the first `=` still leaves the later ones free to wrap away from each
+other, which looks exactly as broken as the original problem: one part
+of a single computed result stranded above, the rest below, an uneven
+split rather than the whole equation moving to a fresh line together.
+
 **The same trap also has a layout-shaped version: a stacked one-line
 fraction (`.s31`/`.s32`/`.s33`) is itself two rows tall (numerator over
 denominator).** That's fine loose in running prose — it just sits taller
