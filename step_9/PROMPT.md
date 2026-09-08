@@ -306,6 +306,83 @@ principle statement before each part asks something different about it) —
 check every multi-part item against this, don't assume it applies to none
 of them just because a couple of items look fine.
 
+**A hand-rolled LaTeX-to-HTML converter built against one chapter's own content will only handle the notation that chapter happened to use — a different subject can silently expose gaps that look like content bugs but are really missing symbol support.** Caught for real: a converter built and fully debugged against a Physics chapter (arithmetic-heavy: `\times`, Greek letters, `°`, `±`) had no handling at all for set-theory/relations/logic notation once reused for a Maths chapter on Relations and Functions — `\in`, `\notin`, `\Rightarrow`, `\rightarrow`, `\subset`, `\cup`, `\cap`, `\forall`, `\neq`, `\leq`, `\geq` all fell through to literal leftover command-name text ("in", "Rightarrow", etc.) instead of their Unicode symbols, on nearly every line of nearly every item — invisible to a numeric-only read-back check (which only verifies digits), since this kind of chapter is mostly symbolic, not numeric. Separately, a bare `\{...\}` (set-builder braces not wrapped in `\left\{`/`\right.`) was silently dropped entirely — the existing code only special-cased the `\left\{`/`\right.` form, and an un-decorated backslash-brace fell through the same "unrecognized command → single space" path that ate the digits, then the bare `{`/`}` that followed got silently consumed by the ordinary "this is just LaTeX grouping syntax" brace-skip rule. Before treating any new chapter's converter as ready, actually exercise it against a full read-back pass (below) rather than trusting that a `\command` producing *some* output means it produced the *right* output — an unhandled command silently degrading to its own bare name is easy to miss by skimming, especially in a language the reviewer may not read fluently themselves.
+
+A related trap: `\begin{cases}...\end{cases}` / `\begin{array}...\end{array}` (a piecewise function definition, e.g. `f(x)=\begin{cases}x+1, & x>0\\...\end{cases}`) appearing **inline** (single `$...$`, not only inside a `$$...$$` display block) needs its own handling in the main character-by-character converter loop, not just in whatever helper only fires for display-math blocks — this construct is common enough in a Maths chapter's piecewise-function questions that it needs to render as a genuinely readable stacked list of rows (one row per line, sharing one radical-sign-style glued unit), not the block-only helper's blind spot. Render each row through the normal converter recursively (so a `\frac`/subscript/etc inside a case still works), and consume any mandatory column-spec group right after `\begin{array}` (e.g. the `{cc}` in `\begin{array}{cc}`) — not meaningful once rendered as stacked rows, but must still be parsed and discarded or it leaks into the first row's text.
+
+Also watch a solution whose blocks never reach the `conclusion` stage — a short solution can legitimately end at `key_formula` or `substitute` with the actual numeric result stated only in the item's own separate `answer` field, never restated as its own concluding sentence. If the boxed-answer-echo logic only ever fires for a block tagged `conclusion`, an item shaped this way loses its answer box entirely — nothing wrong is visible on the page, the answer simply never appears anywhere. Fall back to attaching the boxed answer to the solution's last real stage group whenever no block is tagged `conclusion`, so a genuine answer is never silently dropped just because the solution happened to be short.
+
+One more: `\circ` is genuinely ambiguous in real LaTeX — a degree sign (`30^\circ`) in a Physics chapter, function composition (`g\circ f`) in a Maths chapter on relations/functions. A converter that maps it to one meaning will misrender the other subject's use of it. Before assuming this is fine to leave as-is for a new chapter, actually check whether `\circ` appears anywhere in that chapter's own used content (not just the raw source, which may include discarded/orphaned exercise sections that never make it into the final item set) — only truly disambiguate (e.g. by what precedes/follows it) if a single chapter genuinely needs both meanings at once; don't add that complexity speculatively.
+
+**The LaTeX→HTML converter's macro table is chapter-content-dependent, not
+complete just because it works on the first chapter or two.** A Physics
+chapter's own test content never exercises set-theory/relations/logic
+notation at all, so a converter built and debugged only against it can
+have zero handling for `\in`, `\notin`, `\leq`, `\geq`, `\neq`,
+`\Rightarrow`, `\rightarrow`, `\subset`, `\cup`, `\cap`, `\forall`,
+`\exists`, `\wedge`, `\vee`, `\emptyset` — an unknown bare-letter command
+falls through to printing its literal name as text ("in", "notin",
+"Rightarrow"), silently, with no error. Caught for real: a Maths chapter
+on relations and functions hit this hundreds of times across the chapter
+(`\in` alone 334 times) — invisible to the numeric-only read-back script,
+since none of these are digits. The general lesson: before trusting a
+reused converter on a new chapter, grep the chapter's own
+`06_simplify/chapter.simplified.<lang>.md` for every `\[a-zA-Z]+` command
+actually used and diff that list against the converter's own macro table,
+rather than assuming coverage transfers between subjects.
+
+**A bare `\{`/`\}` (a set-builder brace not part of a `\left\{...\right.`
+pair) needs the same literal-brace treatment in TWO separate code paths,
+not one.** Fixing it only inside the LaTeX-math converter (so `$\{(a,b):
+...\}$` renders correctly) misses a real, recurring case: Mathpix
+sometimes fragments one set-builder expression into several separate
+`$...$` spans around an embedded Hindi word (a math-boundary
+mis-segmentation), stranding one side's escaped brace in the surrounding
+PLAIN PROSE text, outside any `$...$` span entirely. Prose text is
+html-escaped directly, never passed through the math converter — so the
+literal backslash-brace shows up verbatim on the page unless the same
+substitution is also applied to the prose-handling code path. Caught for
+real: 7 occurrences chapter-wide, all in one chapter, none caught by a
+read-back that only checked text *inside* `$...$` spans.
+
+**A `\begin{array}`/`\begin{cases}` piecewise-function definition can
+appear INLINE (single `$...$`), not just inside a `$$...$$` display
+block** — e.g. `f(x)=\left\{\begin{array}{l}x+1,...\\x-1,...\end{array}
+\right.$` written as one inline expression. A converter whose only
+`\begin`/`\end` handling lives in the display-block preprocessing helper
+never sees this at all, and it falls through to the general char-by-char
+loop with no special handling, producing unreadable run-on text
+("begin", "array", "l", "end" as literal words, rows glued together with
+no line break). Handle `\begin{env}` as its own command inside the main
+converter loop (reading the environment name, consuming an optional
+`{colspec}` for `array`, finding the matching `\end{env}`, splitting the
+body on `\\`), not only in the display-block helper — this covers both
+the inline and display cases in one place.
+
+**A part label already wrapped in parens from stage 7 (`label="(i)"`)
+must not be wrapped again when rendering "भाग (label)".** An earlier
+exemplar chapter's part labels were bare letters (`label="a"`), so
+`भाग ({label})` was correct there — a different chapter whose stage 7
+already emits `(i)`, `(ii)` produces a visible "भाग ((i))" double-paren
+bug if the template blindly wraps every label. Check whether the label
+already starts with `(` before adding another pair, rather than assuming
+one convention across every chapter.
+
+**A solution shaped as several independent, parallel case analyses (e.g.
+5 sub-cases (a)–(e), each proving or disproving a property for a
+different concrete relation) does not fit the fixed given → key-formula →
+substitute → conclusion sequence well.** Stage 8's position-based
+inference (first block = given, last = conclusion, everything between =
+substitute) merges ALL the middle cases into one anonymous "मान रखो" pill
+with no visible boundary between them — a reader can tell where the
+first and last case are, but not where case (b) ends and (c) begins.
+This is not a text bug (nothing is dropped, wrong, or mislabeled) and
+current house style has no better place to put it — flagging it here as
+a known limitation of the four-stage model for this specific content
+shape, worth a real design solution in a future session (e.g. a fifth,
+freeform "case" stage), not something to silently reshape at stage 9
+without a decision from the user.
+
 **This path has no code gate on the final HTML.** The check is manual and
 not optional: before calling the chapter done, read every `final_answer`
 and every `question` in `06_simplify/chapter.simplified.<lang>.md` (not

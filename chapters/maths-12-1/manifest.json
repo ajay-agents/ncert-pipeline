@@ -1,0 +1,273 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-08T07:01:51.329304+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "e488004201762b41",
+      "solutions.hi.pdf": "b30ec20cb1627450"
+    },
+    "counts": {
+      "chapter_pages": 19,
+      "solutions_pages": 34,
+      "chapter_chars": 44561,
+      "solutions_chars": 93582,
+      "chapter_dollar_spans": 1570,
+      "solutions_dollar_spans": 4358,
+      "chapter_images": 5,
+      "solutions_images": 0,
+      "solutions_table_rows": 28
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no chapter.en.pdf/solutions.en.pdf provided) - Class 12 Maths Chapter 1, Relations and Functions (संबंध एवं फलन). Source chapter.hi.pdf has embedded text in a legacy glyph-substitution font (garbled if extracted directly, e.g. via PyMuPDF get_text()) - irrelevant to Mathpix since it OCRs from rendered page images, not embedded text; solutions.hi.pdf is fully scanned (0 extractable chars via PyMuPDF on every page) which is likewise fine for Mathpix. Both converted cleanly: chapter.hi.md has 5 image refs (all 5 downloaded to 01_mathpix/images/), solutions.hi.md has 0 images but 28 markdown table rows (plausible for a relations/functions chapter with lookup- style tables). No English files exist for this chapter at all, so downstream stages will run Hindi-only, same pattern as physics-12-1."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-08T07:27:45.160686+00:00",
+    "inputs": {
+      "chapter.hi.md": "20e100e16578d81f",
+      "solutions.hi.md": "48b172dcb200f040"
+    },
+    "counts": {
+      "examples": 26,
+      "exercises": 28,
+      "additional_exercises": 7,
+      "total_items": 61,
+      "parts": 19,
+      "figures": 3,
+      "matched": 35,
+      "needs_review_resolved_by_hand": 34,
+      "solutions_present": 61
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "Hindi-only chapter (single language, no en side, so no align_languages step). Ran 3 extraction passes (examples/exercises/solutions, dispatched as 3 parallel forks) instead of the usual 6 (no English). Two structural discoveries this chapter surfaced that the pipeline had not hit before, both from testing on a Maths chapter for the first time: (1) unlike physics/chemistry's single flat EXERCISES block, this chapter has three separately-numbered exercise sets (Exercise 1.1, Exercise 1.2, and the miscellaneous/additional exercise), each restarting question numbers from 1 - match.norm_num() alone cannot disambiguate a bare '3' between them, so exercise items were given a 3-segment number '<chapter>.<exercise-set>.<n>' (1.1.<n>, 1.2.<n>, and 1.5.<n> for misc - 1.5 deliberately chosen as an unused slot) instead of the usual 2-segment '<chapter>.<n>'; norm_num() passes a dotted string through unchanged when it already contains a '.', so this required no code change, just an extraction-time convention - worth carrying into step_2/PROMPT.md for future Maths chapters. (2) the solutions.hi.pdf supplied is from an OLDER, non-rationalized textbook edition: it has Exercise 1.3 (Composition/Invertible Functions, 14 items) and Exercise 1.4 (Binary Operations, 13 items) that the rationalized 2023-24 chapter.hi.pdf no longer has exercises for at all - 27 solutions correctly surfaced as orphan_solutions via join_solutions() and were discarded per Rule 5 (not invented into placeholder questions), reported here rather than silently dropped. Additionally the misc/additional exercise could NOT be joined by number at all: the rationalized chapter kept only 7 of the old edition's 19 misc questions, renumbered and reordered - join_solutions() would have silently paired every one of the 7 to the WRONG old-numbered solution. Caught only because the solutions-extraction fork proactively content-compared rather than trusting position, per step_2/PROMPT.md's standing warning about Rationalised-edition number drift; I independently re-verified 3 of the 7 pairings by direct text comparison before trusting it. Handled via an explicit hand-verified content-match mapping (chapter Q1..7 -> solutions Q4,5,8,10,15,16,17) instead of join_solutions() for that one section; the other 12 old misc solutions are genuine orphans, discarded. Separately, 5 multi-part questions (q_1.1.1, q_1.1.9, q_1.1.10, q_1.2.2, q_1.2.7) matched an item-level flat solution text via join_solutions() but their solutions-manual counterpart had no matching parts structure, so the automatic per-part distribution never fired, leaving all their parts individually empty (item-level solution non-empty, masking the gap from a shallow check) - would have silently rendered with no visible solution once stage 8/9 start preferring parts over item-level content. Fixed via a follow-up fork that split each flat solution at its source-native (i)/(ii)/... markers and matched them to the question side's existing part labels. calibrate.py's stricter parts-aware empty-solution check (which ignores item-level solution once parts exist) is what caught this - gate_solutions_present did not, since it treats a non-empty item-level solution as sufficient even when parts exist; worth tightening that gate to match calibrate's stricter check in a future session. Final: gate_counts and gate_solutions_present both clean, 0 items with no solution, gate_bilingual N/A (Hindi-only)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-08T07:29:56.096752+00:00",
+    "inputs": {
+      "chapter.hi.md": "b7e852b3043915e6"
+    },
+    "counts": {
+      "examples_hi_items": 26,
+      "examples_hi_chars": 26446,
+      "qa_hi_items": 35,
+      "qa_hi_chars": 66383,
+      "total_items_conserved": 61
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only, pure split (no model call). Round-trip verified via tag._parse: 26 + 35 = 61, matches merged chapter total exactly."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-08T07:33:37.451879+00:00",
+    "inputs": {
+      "examples.hi.md": "8b41742819affb6f",
+      "qa.hi.md": "638f102f56d889a1"
+    },
+    "counts": {
+      "combined_hi_items": 61,
+      "combined_hi_chars": 92744
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only, pure combine (no model call). Round-trip verified via tag._parse: item count matches stage 3's two files summed (26+35=61) exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-08T07:44:49.199028+00:00",
+    "inputs": {
+      "combined.hi.md": "b7e852b3043915e6",
+      "chapter.hi.pdf": "e488004201762b41",
+      "solutions.hi.pdf": "b30ec20cb1627450"
+    },
+    "counts": {
+      "corrections_found": 3,
+      "corrections_applied_high": 3,
+      "corrections_held": 0,
+      "manual_structural_fix": 1,
+      "items_verified": 61
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 10,
+    "notes": "Batched into 10 fork agents (5-8 items each, per step_5/verify.md), each given the specific original PDF pages (rendered to PNG at 200 DPI) alongside its assigned items. 3 corrections found, all high confidence, all applied cleanly: (1) q_1.1.1 parts[0].solution - extraction had silently \"corrected\" a genuine source typo (PDF prints the reflexivity-failure argument under a \"symmetric\" label, not \"reflexive\") back to the mathematically-fitting version, violating transcribe-dont-fix; restored to match the PDF exactly. (2) q_1.2.3 solution - OCR dropped a negation (\"is injective\" vs source's actual \"is NOT injective\"), which also contradicted the solution's own preceding reasoning - a real content-correctness bug if left unfixed. (3) q_1.5.4 final_answer - extraction added a factorial mark \"!\" not present in the source (source literally ends its derivation at \"= n\", no exclamation mark, even though the mathematically standard answer is n!); kept as the source literally shows per Rule 4/5 - not our call to fix a textbook omission. First apply attempt held this one back (found text had a space \"$ !\" the correction was missing) - caught by checking held-corrections and re-verifying the actual field text directly rather than assuming the fork's exact spacing. Also found and fixed one purely structural issue with no addressable text field (not a Correction object): figure fig_maths-12-1_3.jpg was misattached to ex_1.12 (no caption, already had no natural home) but actually illustrates ex_1.11 (which had no figure at all) - moved by direct script edit per step_5/verify.md point 5, not via apply_corrections(). Confirmed ex_1.23's prompt-says-four/solution-says-three discrepancy is a genuine printed textbook inconsistency (verified directly against the PDF), not an extraction error - left untouched and reported per Rule 5 (not our call to silently pick one). gate_math_parity and gate_counts both clean on a freshly model_copy(deep=True) snapshot taken before apply_corrections(). gate_bilingual N/A (Hindi-only)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-08T10:34:33.299293+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "63bf550e797856de"
+    },
+    "counts": {
+      "items_simplified_text_changed": 39,
+      "items_left_unchanged_already_clear": 22,
+      "restore_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 11,
+    "notes": "Batched into 10 fork agents (5-8 items each), each given a frozen (protect.freeze()) copy of its items solution text so the model never sees raw math/numbers directly. One batch (6, q_1.2.7-1.2.12) failed mid-run due to an org rate limit unrelated to content and was retried cleanly after the limit reset (11th model-call batch). All 10 batches reproduced every protected token exactly once - 0 restore failures across all 61 items. 39 items had their solution prose genuinely reworded (shorter sentences, plainer connectives, house-style word swaps like \"is\"/\"atah\" normalization); 22 were correctly judged already-clear and returned unchanged (a valid outcome per step_6/simplify.md, not a skip) - both count as this stage having run on the item, so all 61 are marked simplified=True. All four gates clean: gate_question_text_frozen, gate_answers_unchanged, gate_math_parity (all run against a fresh model_copy(deep=True) before-snapshot of 05_verify/chapter.verified.hi.md), gate_bilingual N/A (Hindi-only). One item (q_1.1.5) was flagged by a batch-2 fork as having a stray English word \"as\" embedded mid-Hindi-sentence inside a math parenthetical - investigated directly against the raw Mathpix OCR of the source PDF page, which already shows this exact text character-for-character, confirming it is genuine source content (this solutions manual mixes in occasional stray English words), not an OCR or pipeline artifact - left untouched per Rule 5, consistent with stage 5 verification not flagging it either."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-08T10:43:26.340418+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "fd535e9192ed5e74"
+    },
+    "counts": {
+      "output_chars": 103084,
+      "items": 61
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_succeeds",
+      "protect_parity_no_drift"
+    ],
+    "model_calls": 10,
+    "notes": "Batched into 10 fork agents (same item groupings as stages 5/6), each adding inner structure (step/formula/table/note/concept containers) per step_7/format.md without changing any wording. Merge required a different approach than prior stages: stage 7 output nests containers inside :::solution blocks that pipeline.schema.Item cannot represent (Item.solution is a flat Text string), so mdio.markdown_to_chapter() raises \"unexpected nested container\" on this stage's own output - expected and matches step_7/format.md's own framing (\"already-final text\" being marked up, not re-modeled). Merged via a lightweight depth-tracking text-span extractor (reusing tag.py's own OPEN_RE/CLOSE_RE/ATTR_RE) that pulls each top-level :::example/:::question block out as raw text keyed by its id attr, then reassembles into the same three kind-grouped sections (example/exercise/additional_exercise) render() itself always uses - not a fresh ordering invented for this merge. Both gates clean: tag._parse succeeds on the combined 103084-char output (61/61 items), and protect.parity shows zero drift in math/table/image counts against stage 6's text. Multiple batches independently confirmed the same redundant-trailing-whole-item-solution artifact on q_1.1.1, q_1.1.9, q_1.1.10, q_1.2.2 and q_1.2.7 (all traced back to the stage-2 flat-solution-plus-per-part-split history) - left untouched and unstructured per step_7/format.md's judgement-calls guidance, flagged here so stage 8 renders only the per-part solutions for these 5 items and treats the trailing block as the redundant copy. Also fixed a manifest bookkeeping issue found while re-running calibration: the \"simplify\" stage entry had incorrectly recorded gate_bilingual as a genuine failure (a placeholder \"N/A - Hindi-only chapter\" string counts as truthy/failed to manifest.append()'s {k:v for k,v in gate_results.items() if v} logic) - corrected by removing the N/A gate from that entry's gates_failed rather than passing a fake non-empty reason for a gate that was never actually applicable to run."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-08T10:50:16.008963+00:00",
+    "inputs": {
+      "structured.hi.md": "b6544053d0b35e82"
+    },
+    "counts": {
+      "items": 61,
+      "parts": 19,
+      "distinct_figure_srcs": 3,
+      "given": 62,
+      "substitute": 110,
+      "conclusion": 72,
+      "key_formula": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "item_part_figure_counts_match_fresh_recount"
+    ],
+    "model_calls": 10,
+    "notes": "Batched into 10 fork agents (same groupings as stages 5-7). Merge reordered items into the canonical example/exercise/additional_exercise, number-ascending order (matching render()'s own convention) rather than trusting batch dispatch order. Gate: a fresh re-parse of 07_format/structured.hi.md via tag._parse (not numbers kept in memory while merging) confirmed exact matches on item count (61), part count (19) and distinct figure src count (3) against the JSON. Note: 2 figures (fig_maths-12-1_1, fig_maths-12-1_4) exist in the mathpix source but were never inside any example/question span (general section-exposition prose between headings) - correctly absent from both the markdown item tree and the JSON, not a gate discrepancy. All 5 known redundant-trailing-whole-item-solution items (q_1.1.1, q_1.1.9, q_1.1.10, q_1.2.2, q_1.2.7) independently confirmed handled correctly across their respective batches: item-level solution_blocks genuinely empty, all real content living in parts. Found and fixed one real given/key_formula/substitute/conclusion judgment-call edge case step_8/PROMPT.md's stated rule does not anticipate: ex_1.5 has a trailing STANDALONE :::concept block (freeform label \"तुल्यता-वर्ग एवं विभाजन\", a general aside on equivalence classes/partitions that follows the example's own proof, per RULES.md's container-vocabulary distinction between a standalone concept and one that is part of a specific solution's own given-to-conclusion flow) positioned AFTER that solution's own conclusion block. The batch fork followed step_8/PROMPT.md's literal, unconditional rule (\"an explicit :::concept block is always stage:given\") and correctly flagged it as worth double-checking rather than silently accepting it. Investigated directly: tagging it stage=given would have rendered a \"Given\" colored pill AFTER a \"Conclusion\" pill in stage 9 - visually wrong. Fixed by removing the stage key entirely from this one block (treating a standalone/freeform-labelled concept not part of the solution's own flow the same as note/figure/table, which never carry a stage) - scanned all 61 items' concept/formula blocks for the same pattern (freeform label + positioned after a conclusion) and confirmed this is the only occurrence in this chapter. Worth adding to step_8/PROMPT.md for future chapters: a standalone concept/formula block (freeform label, not part of the solution's own stage sequence) should not get a stage at all, only an explicit concept/formula that genuinely functions as this solution's own given/key-formula should."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-08T10:53:05.356977+00:00",
+    "inputs": {
+      "structured.hi.md": "8e18d49b64a330ad"
+    },
+    "counts": {
+      "topics_translated": 26
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "round_trip_all_files_after_topic_fix"
+    ],
+    "model_calls": 0,
+    "notes": "Follow-up fix, not a re-run of the stage-8 judgment work itself: a stage-8 batch fork flagged that every example item (26 of 61, all and only the examples) carries an English-language topic label (e.g. \"Onto but not one-one function\") despite this being a Hindi-only chapter - a leftover from stage 2 extraction, where the examples-extraction pass wrote English topics while the exercises-extraction pass correctly wrote Hindi ones. RULES.md's \"Item topics\" section says the field is never checked against the PDF and never rewritten downstream, but doesn't explicitly require matching the chapter's own language - still, an English badge on an otherwise entirely-Hindi page would be a real, visible inconsistency at stage 9. Translated all 26 into concise Hindi noun phrases (reusing this chapter's own established terms - एकैकी/आच्छादक/तुल्यता संबंध, etc. - not machine-translated blindly) and propagated the fix through every stage file that carries the topic attribute: 02_extract/chapter.hi.md, 03_split/examples.hi.md, 04_combined/combined.hi.md, 05_verify/chapter.verified.hi.md and 06_simplify/chapter.simplified.hi.md via a proper mdio load-set-rerender round trip (per Rule 1, not hand-edited text), 07_format/structured.hi.md via a targeted topic=\"...\" attribute regex substitution (its nested containers make it unparseable via mdio), and 08_tag/structured.hi.json directly. Verified every file still round-trips (61/61 items each, structured.hi.md still tag-balanced, JSON still valid) after the patch - only the topic string changed, nothing structural. Worth flagging in step_2/extract.md for future chapters: write topic in the chapter's own language from the start."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-08T11:09:19.409577+00:00",
+    "inputs": {
+      "structured.hi.json": "57d84f7c49f6888b"
+    },
+    "counts": {
+      "html_bytes": 226209,
+      "html_chars": 167441,
+      "css_bytes": 16449,
+      "items_rendered": 61
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify"
+    ],
+    "model_calls": 16,
+    "notes": "Reused the physics-12-1 session's already-debugged render_page.py and latex.py (LaTeX-to-HTML converter) as the starting point rather than writing stage 9 from scratch, since every documented trap in step_9/PROMPT.md is baked into that code already. Structural adaptation needed beyond a straight port: this chapter has THREE separately-numbered exercise sections (1.1/1.2/misc) rather than physics-12-1's single flat block, so build_page() now emits 4 sections (Examples, Exercise 1.1, Exercise 1.2, Miscellaneous) each with its own divider, and item badges show the bare in-section question number (matching how NCERT itself prints each exercise) rather than the 3-segment internal id. A 10-batch manual read-back (per step_9/PROMPT.md's mandatory manual check, since this stage has no code gate) found a serious, chapter-wide rendering defect nearly every batch hit independently: the LaTeX converter was built entirely against a Physics chapter and had NO handling at all for set-theory/relations/logic notation - \\in, \\notin, \\Rightarrow, \\rightarrow, \\subset, \\cup, \\cap, \\forall, \\neq, \\leq, \\geq all rendered as literal leftover command-name text (\"in\", \"Rightarrow\", etc) instead of symbols, and bare \\{...\\} set-builder braces (not wrapped in \\left\\{/\\right.) were silently dropped entirely - both invisible to the automated numeric-only read-back check, which only verifies digits, not symbols, and this chapter is mostly symbolic. Also found: \\begin{cases}/\\begin{array} piecewise-function definitions appearing INLINE (single $...$, not just inside a $$...$$ display block) rendered as unreadable garbled text (\"begincases...\"), since only the display-block helper understood that environment; and one item (q_1.5.4) whose boxed final answer never appeared anywhere on the page at all, because its solution has no \"conclusion\"-stage block (ends at key_formula) and the answer-echo logic only ever fired for a conclusion-stage group. Fixed all three at the converter/template level, not per-item: extended latex.py's symbol table (20+ new entries), added explicit bare-\\{/\\}-as-literal-brace handling, added inline \\begin{cases}/\\begin{array} support (new CSS classes .s92/.s93, a small inline-flex stacked-row block, composes correctly with the pre-existing \\left\\{ handling), and generalized render_solution_stack()'s answer-attachment to fall back to a solution's last real stage group when no block ever reaches \"conclusion\". Verified the fix with a whole-document grep for leftover command-name text (zero hits) plus 3 targeted re-verification fork passes covering all 61 items - all PASS, including a visual screenshot spot-check of the q_1.5.4 fix and the ex_1.12 piecewise-function fix. Also confirmed (not a bug): \\circ is ambiguous in real LaTeX (degree sign vs function composition) and this converter maps it to the degree sign; checked every \\circ in the raw source and confirmed all 22+ occurrences fall inside the discarded orphaned 1.3/1.4 exercise sections (this chapter's own examples write composition as plain \"gof\", never \\circ) - zero impact on the actual 61 rendered items, left unchanged, documented as a latent risk for a future chapter that might need both meanings at once. Every previously-flagged pre-existing source artifact (stray literal \\}, an \"if\"/\"यदि\" duplication, ex_1.23's four/three inconsistency) confirmed still faithfully preserved, not touched by any of these fixes. Figure reassignment from an earlier stage (fig_maths-12-1_3 on ex_1.11) confirmed rendering correctly. This whole finding is written up as a new trap in step_9/PROMPT.md so a future Maths/Chemistry chapter with similar notation inherits the fix instead of rediscovering it."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-08T11:13:09.208394+00:00",
+    "inputs": {
+      "final.hi.html": "3ba1522c37729286",
+      "final.hi.css": "a18dd155e3c0d511"
+    },
+    "counts": {
+      "pdf_bytes": 1458518,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 17,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Exported via Playwright/Chromium (page.goto the real 09_design file:// path, document.fonts.ready wait, print_background=True + prefer_css_page_size=True) per step_10/PROMPT.md - purely mechanical, no model calls. 30 pages for 61 items, no blank pages, 0/17 numbers missing from the PDF's own extracted text (reused the already-fixed normalize_superscripts() from physics-12-1's session, which inserts a separator before a run of superscript digits so a base number and its exponent never glue into one merged token). The low count of 17 distinct multi-digit numbers (vs 79 for physics-12-1) reflects this chapter's own content, not a weaker check - Relations and Functions is mostly symbolic (sets, relations, functions) rather than numeric, so most items have few or no numeric final answers; the real correctness check for this chapter was the manual read-back at stage 9 (13 fork passes across all 61 items), not this numeric script alone. Visual spot-check of pages 1, 10, 20 and 30 (rendered to PNG via fitz) confirms correct A4 pagination, webfonts resolved (Devanagari renders correctly, not a fallback serif), section headers with forced page breaks before Exercise 1.1/1.2/Misc, per-section bare question-number badges, and the document ending cleanly at the last item (q_1.5.7's MCQ answer) with no truncation. No CALIBRATION/calibrate.py re-run per step_10/PROMPT.md (it only reads pre-stage-7 flat markdown)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-08T11:15:59.186324+00:00",
+    "inputs": {
+      "structured.hi.json": "57d84f7c49f6888b"
+    },
+    "counts": {
+      "html_bytes": 226189,
+      "html_chars": 167383,
+      "css_bytes": 16449,
+      "items_rendered": 61
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback_second_pass",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify",
+      "global_stray_latex_command_scan"
+    ],
+    "model_calls": 0,
+    "notes": "Second read-back pass on top of the earlier design-stage work (which had already fixed the chapter-wide \\in/\\notin/\\Rightarrow/piecewise-array converter bugs and re-exported once). Found and fixed 2 MORE real bugs this pass caught: (1) part headings showed doubled parentheses \"भाग ((i))\" instead of \"भाग (i)\" - this chapter\\'s own part labels already come wrapped in parens from stage 7 (label=\"(i)\"), unlike an earlier exemplar chapter whose labels did not, and the template unconditionally wrapped again; fixed to only wrap when the label is not already parenthesized. (2) a bare \\{/\\} (a set-builder brace NOT part of a \\left\\{/\\right. pair) sitting in PLAIN PROSE text between two separate $...$ math spans - a Mathpix math-boundary mis-segmentation that fragments one set-builder expression around an embedded Hindi word, stranding one side's escaped brace outside any math span entirely - rendered as a literal visible backslash-brace on the page (confirmed 7 occurrences chapter-wide), since only the in-math \\{/\\} fix (already applied earlier this stage) ever ran; plain prose text was never passed through that fix at all. Fixed by extending the prose-text path (_prose_text helper) to apply the same \\{/\\}-to-brace substitution before html-escaping, not just inside latex_to_html. Verified via a global regex scan (not just batch-by-batch spot checks) across the whole rendered page for every previously-seen stray-LaTeX-command pattern plus double-parens plus raw backslashes - all zero after the fix. Manually re-verified: all 5 known multi-part items (q_1.1.1, q_1.1.9, q_1.1.10, q_1.2.2, q_1.2.7) show exactly their correct part count with no redundant 6th/3rd duplicate; all 4 piecewise-function items (ex_1.12, q_1.2.4, q_1.2.5, q_1.2.9) render each case on its own line; ex_1.11's figure and ex_1.14's note both still correctly placed; ex_1.23's genuine four-vs-three textbook inconsistency still preserved verbatim; q_1.5.4's boxed answer \"n\" still renders via the conclusion-fallback logic. One legibility characteristic noted but NOT fixed (a design trade-off, not a text bug): q_1.1.1 part (v) has 5 independent sub-case proofs (a)-(e); the given/substitute/conclusion grouping inherent to this house style merges cases (b)/(c)/(d) under one anonymous \"मान रखो\" pill with no visible per-case boundary - worth reconsidering the container-vocabulary model for a \"several independent cases\" content shape in a future session, not a stage-9 template fix."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-08T11:17:34.717396+00:00",
+    "inputs": {
+      "final.hi.html": "3ba1522c37729286",
+      "final.hi.css": "a18dd155e3c0d511"
+    },
+    "counts": {
+      "pdf_bytes": 1458518,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 17,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text",
+      "stray_latex_command_scan_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the second design-stage read-back pass fixed 2 more bugs (part-heading double-parens, prose-level stray brace escapes). Playwright/Chromium export unchanged from the first pass - same 30 pages, no blank pages, 0/17 numbers missing from the PDF's own extracted text (re-ran the same normalize_superscripts() read-back check). Confirmed via direct fitz text extraction that none of the previously-fixed bug patterns (notin/Rightarrow/begin/array as literal text, double-parens) survive into the PDF's own extracted text - 0 occurrences of all of them. Visually spot-checked page 5 (ex_1.12's piecewise function, rendering as a clean two-row bracketed definition) and page 10 (q_1.1.1 part (v)'s 5 sub-cases, \"भाग (v)\" showing correctly single-parenthesized) via PNG render - both confirm the fixes render correctly, not just pass the automated text-extraction checks."
+  }
+]
