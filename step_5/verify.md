@@ -52,6 +52,20 @@ exist — skip those rather than invent a field name.
 
 - `should_be` must be what the PDF actually shows. Never what you think is
   physically correct. If the textbook has an error, that is not your call.
+  **One narrow exception, and it still needs the user's explicit sign-off
+  before it's applied, not silent auto-correction**: a solution's own final
+  concluding sentence restating a result with a unit that's wrong for that
+  *kind* of quantity (a torque given in bare N instead of N·m, a resistance
+  in Ω·m instead of Ω) *when the derivation directly above it already
+  worked out the correct unit* is a same-page self-contradiction, not an
+  ambiguous content judgment call the way a genuine disagreement between
+  two different stated values is (e.g. a count given as "four" one place
+  and "three" another, where either could be what the book actually
+  means — leave that alone, exactly per the rule above). Report this kind
+  of unit slip clearly and let the user decide; do not fold it into an
+  ordinary `confidence: high` correction batch without asking, since it's
+  the one case in this stage where "obviously correctable" and "not your
+  call" can look the same from a distance but aren't.
 - `found` must be an exact substring of the current field **and appear
   exactly once** — a correction whose `found` matches zero or multiple times
   is held back, not applied. If the same fragment occurs twice in a field,

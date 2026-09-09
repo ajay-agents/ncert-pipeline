@@ -1424,7 +1424,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "अत: दूसरे गोले पर पहले गोले के कारण $0.2 \\mathrm{~N}$ ( आकर्षी ) बल लगता है।"
+                  "text": "अत: दूसरे गोले पर पहले गोले के कारण $-0.2 \\mathrm{~N}$ ( आकर्षी ) बल लगता है।"
                 }
               ],
               "n": "2",
@@ -1435,7 +1435,7 @@
           "answer": [
             {
               "type": "text",
-              "text": "**उत्तर:** $0.2 \\mathrm{~N}$ (आकर्षी)"
+              "text": "**उत्तर:** $-0.2 \\mathrm{~N}$ (आकर्षी)"
             }
           ]
         }
@@ -2017,7 +2017,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "अत: द्विध्रुव पर कार्यरत बल आघूर्ण का परिमाण $=10^{-4} \\mathrm{~N}$"
+              "text": "अत: द्विध्रुव पर कार्यरत बल आघूर्ण का परिमाण $=10^{-4} \\mathrm{~Nm}$"
             }
           ],
           "n": "2",
@@ -2619,7 +2619,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "वर्ग $A B C D$ को $0.10 \\mathrm{~cm}$ भुजा वाले घन के एक फलक के रूप में मान सकते हैं। दिया गया आवेश इस घन के केंद्र पर, वर्ग से $5 \\mathrm{~cm}$ दूरी पर स्थित मान सकते हैं।\n$$\n\\because q=10 \\mu \\mathrm{C}=10 \\times 10^{-6} \\mathrm{C}=10^{-5} \\mathrm{C}\n$$"
+              "text": "वर्ग $A B C D$ को $0.10 \\mathrm{~m}$ भुजा वाले घन के एक फलक के रूप में मान सकते हैं। दिया गया आवेश इस घन के केंद्र पर, वर्ग से $5 \\mathrm{~cm}$ दूरी पर स्थित मान सकते हैं।\n$$\n\\because q=10 \\mu \\mathrm{C}=10 \\times 10^{-6} \\mathrm{C}=10^{-5} \\mathrm{C}\n$$"
             }
           ],
           "label": "जानकारी",
@@ -3124,7 +3124,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "या\n$$\n\\lambda=4 \\pi \\varepsilon_{0} \\cdot \\frac{r E}{2}\n$$\n$$\n=\\frac{1 \\mathrm{~N}^{-1} \\mathrm{~m}^{-2} \\mathrm{C}^{2}}{9 \\times 10^{9}}\n$$\nया\n$$\n\\lambda=\\frac{0.02 \\times 10^{-5}}{2} \\mathrm{C} / \\mathrm{m}\n$$\nया\n$$\n\\lambda=1 \\times 10^{-7} \\mathrm{C} / \\mathrm{m}\n$$\nया\n$$\n\\lambda=10 \\mu \\mathrm{C} / \\mathrm{m}\n$$"
+              "text": "या\n$$\n\\lambda=4 \\pi \\varepsilon_{0} \\cdot \\frac{r E}{2}\n$$\n$$\n=\\frac{1 \\mathrm{~N}^{-1} \\mathrm{~m}^{-2} \\mathrm{C}^{2}}{9 \\times 10^{9}}\n$$\nया\n$$\n\\lambda=\\frac{0.02 \\times 10^{-5}}{2} \\mathrm{C} / \\mathrm{m}\n$$\nया\n$$\n\\lambda=1 \\times 10^{-7} \\mathrm{C} / \\mathrm{m}\n$$\nया\n$$\n\\lambda=0.1 \\mu \\mathrm{C} / \\mathrm{m}\n$$"
             }
           ],
           "n": "1",
@@ -3136,7 +3136,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "अत: रैखिक आवेश घनत्व $=10 \\mu \\mathrm{C} / \\mathrm{m}$ है।"
+              "text": "अत: रैखिक आवेश घनत्व $=0.1 \\mu \\mathrm{C} / \\mathrm{m}$ है।"
             }
           ],
           "n": "2",
@@ -3147,7 +3147,7 @@
       "answer": [
         {
           "type": "text",
-          "text": "**उत्तर:** $10 \\mu \\mathrm{C} / \\mathrm{m}$"
+          "text": "**उत्तर:** $0.1 \\mu \\mathrm{C} / \\mathrm{m}$"
         }
       ],
       "figures": []

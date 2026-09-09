@@ -688,11 +688,11 @@ $$
 & =-0.2 \mathrm{~N} \text { (आकर्षी बल) }
 \end{aligned}
 $$
-अत: दूसरे गोले पर पहले गोले के कारण $0.2 \mathrm{~N}$ ( आकर्षी ) बल लगता है।
+अत: दूसरे गोले पर पहले गोले के कारण $-0.2 \mathrm{~N}$ ( आकर्षी ) बल लगता है।
 :::
 
 :::answer
-**उत्तर:** $0.2 \mathrm{~N}$ (आकर्षी)
+**उत्तर:** $-0.2 \mathrm{~N}$ (आकर्षी)
 :::
 
 :::
@@ -1035,7 +1035,7 @@ $$
 
 :::
 
-:::question{number="1.10" kind="exercise" id="q_1.10" topic="द्विध्रुव पर बल आघूर्ण" verified="True"}
+:::question{number="1.10" kind="exercise" id="q_1.10" topic="द्विध्रुव पर बल आघूर्ण" verified="True" corrections_applied="1"}
 #### प्रश्न 1.10
 
 :::prompt
@@ -1052,7 +1052,7 @@ $$
 & =10^{-4} \mathrm{Nm}
 \end{aligned}
 $$
-अत: द्विध्रुव पर कार्यरत बल आघूण का परिमाण $=10^{-4} \mathrm{~N}$
+अत: द्विध्रुव पर कार्यरत बल आघूण का परिमाण $=10^{-4} \mathrm{~Nm}$
 :::
 
 :::answer
@@ -1378,7 +1378,7 @@ $$
 
 :::
 
-:::question{number="1.17" kind="exercise" id="q_1.17" topic="वर्ग के ऊपर स्थित बिंदु आवेश का फ्लक्स" verified="True" corrections_applied="1"}
+:::question{number="1.17" kind="exercise" id="q_1.17" topic="वर्ग के ऊपर स्थित बिंदु आवेश का फ्लक्स" verified="True" corrections_applied="2"}
 #### प्रश्न 1.17
 
 :::prompt
@@ -1390,7 +1390,7 @@ $$
 :::
 
 :::solution{label="हल"}
-वर्ग $A B C D$ को $0.10 \mathrm{~cm}$ भुजा वाले घन का पाश्र्व का फलक मान सकते हैं। दिए गए आवेश की कल्पना $5 \mathrm{~cm}$ दूरी पर इस घन के केन्द्र पर की जा सकती है।
+वर्ग $A B C D$ को $0.10 \mathrm{~m}$ भुजा वाले घन का पाश्र्व का फलक मान सकते हैं। दिए गए आवेश की कल्पना $5 \mathrm{~cm}$ दूरी पर इस घन के केन्द्र पर की जा सकती है।
 $$
 \because q=10 \mu \mathrm{C}=10 \times 10^{-6} \mathrm{C}=10^{-5} \mathrm{C}
 $$
@@ -1669,7 +1669,7 @@ $$
 
 :::
 
-:::question{number="1.22" kind="exercise" id="q_1.22" topic="अनंत रैखिक आवेश का रैखिक आवेश घनत्व" verified="True"}
+:::question{number="1.22" kind="exercise" id="q_1.22" topic="अनंत रैखिक आवेश का रैखिक आवेश घनत्व" verified="True" corrections_applied="3"}
 #### प्रश्न 1.22
 
 :::prompt
@@ -1711,13 +1711,13 @@ $$
 $$
 या
 $$
-\lambda=10 \mu \mathrm{C} / \mathrm{m}
+\lambda=0.1 \mu \mathrm{C} / \mathrm{m}
 $$
-अत: रैखिक आवेश घनत्व $=10 \mu \mathrm{C} / \mathrm{m}$
+अत: रैखिक आवेश घनत्व $=0.1 \mu \mathrm{C} / \mathrm{m}$
 :::
 
 :::answer
-**उत्तर:** $10 \mu \mathrm{C} / \mathrm{m}$
+**उत्तर:** $0.1 \mu \mathrm{C} / \mathrm{m}$
 :::
 
 :::

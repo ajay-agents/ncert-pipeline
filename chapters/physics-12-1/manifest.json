@@ -573,5 +573,409 @@
     ],
     "model_calls": 0,
     "notes": "Re-export after the chained equals-to-fraction gluing fix above. 30 pages, no blank pages, 0/79 numbers missing from the PDF's own extracted text. Visually re-confirmed on ex_1.3b's exact reported line that the whole 'a = X = Y' computation now wraps as one unit onto its own line."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-08T11:39:43.252238+00:00",
+    "inputs": {
+      "structured.hi.json": "f2131df47949683a"
+    },
+    "counts": {
+      "html_chars": 164203
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify"
+    ],
+    "model_calls": 0,
+    "notes": "User-reported visual bug, fixed at the converter level (not a per-item patch): several examples (ex_1.2 confirmed, likely others) rendered their solution as one or two dense run-on paragraphs instead of one sentence per line, because the source text had no explicit newline between sentences within a given block - only sentence-ending punctuation (Devanagari purna viram or period). text_to_lines()'s own docstring already promised \"one per logical sentence\" but the implementation only ever split on literal newlines, never on sentence-ending punctuation, so a block written as one flowing paragraph stayed one flowing paragraph. Fixed by adding _split_sentences(): splits on a Devanagari purna viram (always unambiguous) or an ASCII period not immediately preceded by a digit (protects a decimal point like \"2.5\" from being split apart) and not inside an inline math span. Verified: ex_1.2's solution now shows 7 separate lines instead of 2 dense paragraphs; whole-page re-verify clean (tags balanced, 14/14 figures resolve, 0/79 numbers missing); page count unchanged (30) confirming no unwanted reflow elsewhere. Documented as a new trap in step_9/PROMPT.md."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-08T11:41:13.264091+00:00",
+    "inputs": {
+      "final.hi.html": "731b0c360bcbce98",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1776553,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the sentence-splitting fix (see the design entry directly above). Same 30 pages, no blank pages, 0/79 numbers missing. Visually confirmed on ex_1.2 (the reported item) that its solution now renders as 7 clean single-sentence lines matching the house style, same as every other well-structured item on the page."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-08T11:56:08.712375+00:00",
+    "inputs": {
+      "combined.hi.md": "4ca8a25119ac8a0b"
+    },
+    "counts": {
+      "corrections_applied_high": 1,
+      "corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity"
+    ],
+    "model_calls": 0,
+    "notes": "User-reported issue during manual PDF review, applied as a proper stage-5 Correction (not a hand-edit): q_1.10's solution states a torque (बल आघूर्ण, moment of force) but its own final concluding sentence gives the unit as bare 'N' while the derivation line directly above it correctly works out '= 10^-4 Nm'. Verified against the actual solutions PDF page 7 (question 1.10) before touching anything - the textbook's own printed answer line genuinely drops the 'm', confirmed not a Mathpix OCR slip (the OCR transcribed the page faithfully). Since a torque's unit is unambiguously N*m (never bare N), this is a different situation from an ambiguous content discrepancy (e.g. a genuine count disagreement) - user reviewed and explicitly chose to correct it rather than preserve the textbook's own typo. Applied via pipeline.verify.apply_corrections() against 05_verify/chapter.verified.hi.md (gate_math_parity clean - this is an intentional, recorded correction, not an unintended drift), then propagated the identical literal fix into 06_simplify/chapter.simplified.hi.md, 07_format/structured.hi.md (text substitution - not mdio-parseable once stage 7 structure is applied) and 08_tag/structured.hi.json directly, then regenerated 09_design/final.hi.html and re-exported 10_pdf/final.hi.pdf. All re-verified clean (14/14 figures resolve, 0/79 numbers missing, same 30 pages, no blank pages). Visually confirmed on the actual PDF page: both the concluding sentence and the boxed final-answer echo now read '10⁻⁴ Nm'."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-08T11:56:26.149931+00:00",
+    "inputs": {
+      "structured.hi.json": "5d6037b6a7565435"
+    },
+    "counts": {
+      "html_chars": 218349
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify"
+    ],
+    "model_calls": 0,
+    "notes": "Re-render after the q_1.10 torque-unit correction (see verify entry above). Clean."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-08T11:56:26.153399+00:00",
+    "inputs": {
+      "final.hi.html": "d025336e18001e77",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1776554,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the q_1.10 torque-unit correction. Same 30 pages, no blank pages, 0/79 numbers missing. Visually confirmed on the actual PDF page: q_1.10's concluding sentence and boxed answer both now read '10⁻⁴ Nm'."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-08T12:07:45.189902+00:00",
+    "inputs": {
+      "combined.hi.md": "4ca8a25119ac8a0b"
+    },
+    "counts": {
+      "corrections_applied_high": 1,
+      "corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity"
+    ],
+    "model_calls": 0,
+    "notes": "User-reported issue during manual PDF review, applied as a proper stage-5 Correction: q_1.17's solution states the cube (built from the question's 10 cm square) has a '0.10 cm' edge, when it should read '0.10 m' (10 cm expressed in meters, the unit the rest of the derivation actually uses - epsilon_0 in C^2 N^-1 m^-2). Confirmed against the actual solutions PDF page 10 (question 1.18 in that manual's own numbering) before touching anything - the figure diagram's own labels correctly say 10 cm, but the solution's opening sentence has this exact typo, printed as-is in the textbook; not a Mathpix OCR slip. Same category as the q_1.10 torque-unit fix above: an unambiguous unit-type/magnitude error (0.10 cm would be 1 mm, absurdly inconsistent with the stated 10 cm square), not an ambiguous content judgment call - user identified the exact fix needed and approved applying it. Applied via pipeline.verify.apply_corrections() against 05_verify/chapter.verified.hi.md (gate_math_parity clean), propagated identically into 06_simplify/chapter.simplified.hi.md, 07_format/structured.hi.md (text substitution) and 08_tag/structured.hi.json, then regenerated 09_design/final.hi.html and re-exported 10_pdf/final.hi.pdf. Re-verified clean (14/14 figures resolve, 0/79 numbers missing, same 30 pages, no blank pages). Visually confirmed on the actual PDF page."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-08T12:07:45.191894+00:00",
+    "inputs": {
+      "structured.hi.json": "9593aeed01d5dc70"
+    },
+    "counts": {
+      "html_chars": 218348
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify"
+    ],
+    "model_calls": 0,
+    "notes": "Re-render after the q_1.17 unit correction (see verify entry above). Clean."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-08T12:07:45.193898+00:00",
+    "inputs": {
+      "final.hi.html": "6fdeea102ddb3ecc",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1776559,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the q_1.17 unit correction. Same 30 pages, no blank pages, 0/79 numbers missing. Visually confirmed the 'जानकारी' pill now reads '0.10 m भुजा वाले घन' instead of '0.10 cm'."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-09T05:51:13.865663+00:00",
+    "inputs": {
+      "combined.hi.md": "4ca8a25119ac8a0b"
+    },
+    "counts": {
+      "corrections_applied_high": 3,
+      "corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity"
+    ],
+    "model_calls": 0,
+    "notes": "User-reported issue during manual PDF review, applied as 3 stage-5 Corrections (one per field/occurrence: the mid-derivation restatement, the concluding sentence, and the final_answer field): q_1.22's derivation correctly works out lambda = 1x10^-7 C/m, but converting to microcoulombs the solution states '10 uC/m' - should be '0.1 uC/m' (1x10^-7 C = 0.1x10^-6 C = 0.1 uC, since 1 uC = 10^-6 C; off by a factor of 100 in the original). Confirmed genuine in the actual solutions PDF page 11 (question 1.23 in that manual's own numbering) before touching anything - not a Mathpix OCR slip. Same category as the q_1.10 (torque unit) and q_1.17 (cm/m) fixes already on record: an unambiguous arithmetic/unit-conversion error, not a content judgment call - user identified the exact value and approved. Applied via pipeline.verify.apply_corrections() against 05_verify/chapter.verified.hi.md and 06_simplify/chapter.simplified.hi.md (gate_math_parity clean on both), propagated identically into 07_format/structured.hi.md (text substitution, all 3 occurrences) and 08_tag/structured.hi.json (3 segments across solution_blocks and answer), then regenerated 09_design/final.hi.html and re-exported 10_pdf/final.hi.pdf. Re-verified clean (14/14 figures resolve, 0/79 numbers missing, same 30 pages, no blank pages). Visually confirmed on the actual PDF page: the mid-derivation line, the concluding sentence, and the boxed final-answer echo all now read '0.1 uC/m'."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-09T05:51:13.869789+00:00",
+    "inputs": {
+      "structured.hi.json": "b4ec378222aa8281"
+    },
+    "counts": {
+      "html_chars": 218351
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify"
+    ],
+    "model_calls": 0,
+    "notes": "Re-render after the q_1.22 unit correction (see verify entry above). Clean."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-09T05:51:13.874178+00:00",
+    "inputs": {
+      "final.hi.html": "4095bc2a98c3e47c",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1776566,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the q_1.22 unit correction. Same 30 pages, no blank pages, 0/79 numbers missing. Visually confirmed all three occurrences (derivation, concluding sentence, boxed answer) now read '0.1 μC/m'."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-09T06:03:07.575633+00:00",
+    "inputs": {
+      "combined.hi.md": "4ca8a25119ac8a0b"
+    },
+    "counts": {
+      "corrections_applied_high": 2,
+      "corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity"
+    ],
+    "model_calls": 0,
+    "notes": "User-reported issue during manual PDF review: q_1.2 part (b)'s derivation correctly computes F21 = -0.2 N (aakarshi/attractive bal), but the concluding sentence and boxed final answer both restated it as bare '0.2 N (aakarshi)', dropping the negative sign while keeping the qualifying word. Confirmed genuine in the actual solutions PDF page 2 (question 1.2b) before touching anything - not a Mathpix OCR slip; this is the textbook's own printed inconsistency. Same category as the q_1.10/q_1.17/q_1.22 fixes already on record: the derivation one line up already has the correct signed value, so the restatement is a same-page self-contradiction, not an ambiguous content judgment call - user identified and approved restoring the sign. Applied as a direct field patch (not the Correction/apply_corrections path this time, since only one exact-match occurrence existed per field and the object was already in hand) against both 05_verify/chapter.verified.hi.md and 06_simplify/chapter.simplified.hi.md (gate_math_parity clean on both, run manually against a pre-patch deep copy), propagated identically into 07_format/structured.hi.md (text substitution) and 08_tag/structured.hi.json (2 segments: solution_blocks + answer, scoped to q_1.2's part b specifically), then regenerated 09_design/final.hi.html and re-exported 10_pdf/final.hi.pdf. Re-verified clean (14/14 figures resolve, 0/79 numbers missing, same 30 pages, no blank pages). Visually confirmed on the actual PDF page: concluding sentence and boxed answer both now read '-0.2 N (aakarshi)'."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-09T06:03:07.583154+00:00",
+    "inputs": {
+      "structured.hi.json": "79a1fd059a32fdc5"
+    },
+    "counts": {
+      "html_chars": 218353
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify"
+    ],
+    "model_calls": 0,
+    "notes": "Re-render after the q_1.2b sign correction (see verify entry above). Clean."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-09T06:03:07.588751+00:00",
+    "inputs": {
+      "final.hi.html": "bddff15421324788",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1776625,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the q_1.2b sign correction. Same 30 pages, no blank pages, 0/79 numbers missing. Visually confirmed both the concluding sentence and boxed answer now read '-0.2 N (आकर्षी)'."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-09T06:17:07.000072+00:00",
+    "inputs": {
+      "structured.hi.json": "79a1fd059a32fdc5"
+    },
+    "counts": {
+      "html_chars": 216788
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify"
+    ],
+    "model_calls": 0,
+    "notes": "User-reported rendering issue, fixed at the converter level (not a per-item patch): a UNIT expression written as two \\mathrm{...} groups joined by a literal '/' (e.g. \\mathrm{~m} / \\mathrm{s}^{2} for m/s^2, or the whole thing inside one \\mathrm{~m/s^2} block) rendered as a large two-row stacked fraction - the same visual treatment as a genuine value division like 250/18 - when a unit should stay compact inline text. Root cause was the same class of bug as the earlier superscript-content bug this session: _rewrite_divisions() cannot tell a slash is 'protected inside a unit wrapper' once that content is pulled out as a standalone string and the original enclosing braces are gone - the public latex_to_html() wrapper re-runs division-rewrite fresh on isolated \\mathrm{} argument content, and a genuinely top-level slash directly between two \\mathrm{...} groups was never being recognised as a unit boundary at all. Fixed two ways: (1) the \\mathrm/text/mbox/operatorname branch in the main converter loop now calls _latex_to_html_inner() directly instead of the public latex_to_html() wrapper, bypassing the division-rewrite for their content entirely (same fix already used for superscript content) - fixes a unit written as one single \\mathrm{~m/s^2} block; (2) added _is_unit_slash(), which structurally detects a depth-0 '/' sitting directly between two \\mathrm{...} groups (walking back past a chained exponent like \\mathrm{Nm}^{2}, confirmed against real content: Coulomb's constant and electric flux both write their units this way) and excludes that slash from the fraction-rewrite candidates entirely - fixes a unit split across two separate \\mathrm{} groups joined by an outer slash. Verified no regression on genuine value divisions (250/18, N/kg, C^2/m^2 - all still correctly render as stacked fractions) via isolated tests before regenerating. Whole-page re-render: tags balanced, 14/14 figures resolve, 0/79 numbers missing, same 30 pages after re-export. Propagated to maths-12-1 too (no change there - that chapter's content has no physics-style units, confirmed by an identical char count before/after). Documented as a new trap in step_9/PROMPT.md."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-09T06:17:07.006805+00:00",
+    "inputs": {
+      "final.hi.html": "2005cc38a07093c2",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1765911,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the unit-fraction converter fix. Same 30 pages, no blank pages, 0/79 numbers missing. Visually confirmed ex_1.3's boxed final answer ('a_e = 2.5x10^22 m/s^2; a_p = 1.4x10^19 m/s^2') and Coulomb's-constant units ('8.987x10^9 Nm^2/C^2') both now render compact inline instead of as disproportionate stacked-fraction boxes."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-09T06:33:00.761354+00:00",
+    "inputs": {
+      "structured.hi.json": "79a1fd059a32fdc5"
+    },
+    "counts": {
+      "html_chars": 217012
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify"
+    ],
+    "model_calls": 0,
+    "notes": "User-reported rendering bug, fixed at the converter level (not a per-item patch): q_1.4's formula F'=frac{1}{4 pi eps0} frac{(q/2)(q^prime/2)}{(r/2)^2}=... rendered with the second factor completely garbled - a stray orphaned \\left command floating before an unrelated \\frac, and \\right text leaking into what should have been a clean denominator, so the page showed only a truncated \"'2}\" where \"q'/2\" belonged. Root cause: SIMPLE_PAREN_FRACTION_RE (the '(a/b)' -> stacked-fraction shortcut) is a bare-regex match with no awareness that \\left(/\\right) is a different, matched pair of delimiters - on \"(q / 2)\\left(q^{\\prime} / 2\\right)\" it matched starting at the '(' that belongs to \\left( (stealing it, orphaning the bare \"\\left\" text before it) and matching through to the ')' that belongs to \\right) (swallowing the literal \"\\right\" text into the captured denominator). Fixed with two changes: (1) the existing shortcut now explicitly skips any match that would cross a \\left/\\right boundary (preceded by \\left, or whose captured span contains \\right); (2) added a new LEFT_RIGHT_PAREN_FRACTION_RE pass that matches a whole \\left(.../...\\right) pair as ONE unit first, so a unit like \\left(q^{\\prime}/2\\right) still gets the same clean stacked-fraction treatment as a bare-paren \"(q/2)\" - requested explicitly by the user after the first fix left the two factors visually inconsistent (one a small fraction, the other plain inline text): both now render as matching stacked fractions, exactly mirroring how the actual textbook page shows them. Verified no regression on a genuine bare-paren division ((250/18)) via isolated tests before regenerating. Whole-page re-render: tags balanced, 14/14 figures resolve, 0/79 numbers missing, same 30 pages after re-export."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-09T06:33:00.765892+00:00",
+    "inputs": {
+      "final.hi.html": "4eab0619478032c7",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1766012,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the \\left/\\right paren-fraction fix. Same 30 pages, no blank pages, 0/79 numbers missing. Visually confirmed q_1.4's F' formula now shows q/2 and q'/2 as two matching, evenly-sized stacked fractions, no garbled text anywhere."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-09T07:02:23.967772+00:00",
+    "inputs": {
+      "structured.hi.json": "79a1fd059a32fdc5"
+    },
+    "counts": {
+      "html_chars": 215805
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify"
+    ],
+    "model_calls": 0,
+    "notes": "User-reported redundancy, fixed at the render level (never touching the underlying question text, which is immutable per Rule 4): ex_1.10's item-level prompt reads '...(a) X, तथा (b) Y परिकलित कीजिए। a=0.1m मानिए।', telescoping both parts' asks into one shared-verb sentence - almost verbatim repetition of the individual 'भाग (a): X परिकलित कीजिए।' / 'भाग (b): Y परिकलित कीजिए।' headings immediately below it. This is a different shape than the already-documented 'item prompt exactly equals ONE part's prompt' trap - it's a combined enumeration of BOTH parts, an exact match against neither alone, so the existing equality check correctly didn't flag it, leaving the redundancy on the page. Added _strip_redundant_enumeration(): finds every (label) marker in the item prompt, extracts the text between consecutive markers (handling the shared-trailing-verb shape - only the LAST clause needs to read as a complete sentence on its own), and only strips the whole enumerated span from the DISPLAYED item prompt when every extracted clause is positively confirmed as a substring of that same-labelled part's own prompt - if even one clause can't be confirmed, the item prompt is left completely untouched, since a false match would silently cut real content. Also correctly generalizes the existing redundancy check: 2 other items (q_1.4, q_1.7) turned out to have an item-level prompt that is PURELY the enumeration with no other shared context at all - after stripping, nothing remained, so no empty/pointless item-level line renders above their parts either (confirmed both parts still carry their full original question text, nothing lost). Verified: whole-page re-render clean (14/14 figures resolve, 0/79 numbers missing, same 30 pages after re-export); no maths-12-1 item has this pattern (checked directly), so no change needed there. Documented as a new trap in step_9/PROMPT.md."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-09T07:02:23.974101+00:00",
+    "inputs": {
+      "final.hi.html": "9b42a214db171961",
+      "final.hi.css": "333d72d299a38ea2"
+    },
+    "counts": {
+      "pdf_bytes": 1767429,
+      "page_count": 30,
+      "blank_pages": 0,
+      "numbers_checked": 79,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the redundant-enumeration fix. Same 30 pages, no blank pages, 0/79 numbers missing. Visually confirmed ex_1.10 now shows only the shared setup text at the item level (no repeated '(a)/(b)' enumeration) followed by each part's own distinct question, and q_1.4/q_1.7 go straight from the badge to their भाग (a) heading with no empty line, both parts still showing their complete original question text."
   }
 ]

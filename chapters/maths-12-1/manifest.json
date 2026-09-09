@@ -269,5 +269,47 @@
     ],
     "model_calls": 0,
     "notes": "Re-export after the second design-stage read-back pass fixed 2 more bugs (part-heading double-parens, prose-level stray brace escapes). Playwright/Chromium export unchanged from the first pass - same 30 pages, no blank pages, 0/17 numbers missing from the PDF's own extracted text (re-ran the same normalize_superscripts() read-back check). Confirmed via direct fitz text extraction that none of the previously-fixed bug patterns (notin/Rightarrow/begin/array as literal text, double-parens) survive into the PDF's own extracted text - 0 occurrences of all of them. Visually spot-checked page 5 (ex_1.12's piecewise function, rendering as a clean two-row bracketed definition) and page 10 (q_1.1.1 part (v)'s 5 sub-cases, \"भाग (v)\" showing correctly single-parenthesized) via PNG render - both confirm the fixes render correctly, not just pass the automated text-extraction checks."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-08T11:43:03.859377+00:00",
+    "inputs": {
+      "structured.hi.json": "57d84f7c49f6888b"
+    },
+    "counts": {
+      "html_chars": 170595
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify"
+    ],
+    "model_calls": 0,
+    "notes": "Propagated the sentence-splitting fix found via user feedback on physics-12-1 (text_to_lines() only ever split on literal newlines, never on sentence-ending punctuation, so a block written as one flowing multi-sentence paragraph rendered as one dense run-on paragraph instead of one line per sentence - see physics-12-1/manifest.json's matching design entry for the full writeup). This chapter genuinely had the same issue (html_chars grew from 167383 to 170595 after the fix, confirming several blocks here were also unsplit multi-sentence paragraphs). Verified clean: tags balanced, 3/3 figures resolve, 0/17 numbers missing."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-08T11:43:03.863420+00:00",
+    "inputs": {
+      "final.hi.html": "068d3bbc71f71968",
+      "final.hi.css": "a18dd155e3c0d511"
+    },
+    "counts": {
+      "pdf_bytes": 1455694,
+      "page_count": 32,
+      "blank_pages": 0,
+      "numbers_checked": 17,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-export after the sentence-splitting fix. Page count rose 30 -> 32, expected since more sentences now each take their own line (more vertical space), not a red flag - no blank pages, 0/17 numbers missing."
   }
 ]
