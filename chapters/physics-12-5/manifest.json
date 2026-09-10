@@ -1,0 +1,27 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-10T07:20:58.464106+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "1556c744d7af6fc2",
+      "solutions.hi.pdf": "63f4760d02b6e8fe"
+    },
+    "counts": {
+      "chapter_pages": 17,
+      "solutions_pages": 21,
+      "chapter_chars": 42102,
+      "solutions_chars": 39106,
+      "chapter_dollar_spans": 580,
+      "solutions_dollar_spans": 896,
+      "chapter_table_rows": 22,
+      "solutions_table_rows": 0,
+      "chapter_images": 14,
+      "solutions_images": 14,
+      "images_dir_files": 28
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (Physics Class 12 Chapter 5, चुंबकत्व एवं द्रव्य / Magnetism and Matter), matching prior chapters' precedent - only chapter.hi.pdf + solutions.hi.pdf provided. Both mathpix outputs well above the suspicious-size threshold, image counts sum cleanly to the images/ directory's file count with no collisions (14+14=28). This chapter's own content (bar magnet field lines, Gauss's law for magnetism, earth's magnetism, diamagnetism/paramagnetism/ferromagnetism, hysteresis) is less arithmetic-derivation-heavy and more descriptive/conceptual than chapter 4 - the 22 table rows in the chapter file (vs 0 in chapter 4) likely reflect comparison tables (e.g. dia/para/ferromagnetic material properties), worth confirming at stage 2 extraction rather than assuming they're OCR noise."
+  }
+]
