@@ -361,6 +361,16 @@ reused converter on a new chapter, grep the chapter's own
 actually used and diff that list against the converter's own macro table,
 rather than assuming coverage transfers between subjects.
 
+This isn't only a cross-subject risk — it recurred **within Physics
+itself**: a second Physics chapter (electrostatic potential and
+capacitance) used `\oint` (closed-surface-integral sign, Gauss's law) and
+`\sum` (summation, a hexagon-of-charges potential formula) that the first
+Physics chapter's own content never happened to need, and both fell
+through to literal "oint"/"sum" text the same way the Maths chapter's
+set-theory gap did. Run the same grep-and-diff check even between two
+chapters of the *same* subject — "it's Physics again" is not the same
+guarantee as "this specific chapter's own notation is covered."
+
 **A bare `\{`/`\}` (a set-builder brace not part of a `\left\{...\right.`
 pair) needs the same literal-brace treatment in TWO separate code paths,
 not one.** Fixing it only inside the LaTeX-math converter (so `$\{(a,b):
@@ -389,6 +399,33 @@ converter loop (reading the environment name, consuming an optional
 body on `\\`), not only in the display-block helper — this covers both
 the inline and display cases in one place.
 
+**`\begin{aligned}`/`\begin{array}` are not the only multi-row display
+environment LaTeX source uses — `\begin{gathered}` (a stack of centered
+equations with no alignment column) needs the exact same row-splitting
+treatment, and a converter whose display-block helper only special-cases
+`aligned`/`array` by name will silently mishandle it.** Caught for real:
+a chapter's own drift-velocity derivation used `\begin{gathered}...
+\end{gathered}` inside a `$$...$$` block for the first time (physics-
+12-1/12-2 only ever used `aligned`/`array`) — the display-block helper's
+row-splitting regex didn't match the name `gathered`, so it fell through
+to a generic fallback that still produces correctly-separated `<span>`
+elements per row (via the main-loop's own generic `\begin{env}` handler,
+built for the inline case), but those span classes had never been given
+CSS rules (nothing needed them before this chapter), so the rows
+rendered with **no line break between them at all** — two stacked
+equations ran together onto one visual line. Two independent fixes, do
+both: (1) extend the display-block helper's row-splitting regex to
+treat `gathered` identically to `aligned`/`array` (same proven path,
+rather than trusting the untested fallback), and (2) give the generic
+`\begin{env}` handler's own wrapper/row classes real CSS (a flex-column
+container for the whole block, `display:block` for each row) as a
+backstop for any *inline* `$...$` occurrence of `\begin{cases}`/
+`\begin{gathered}` that never reaches the display-block helper at all.
+Don't assume "the environment name I've seen before is the only one a
+new chapter will use" — grep the chapter's own content for every
+`\begin{...}` name actually present, the same discipline already
+established for bare LaTeX commands.
+
 **A part label already wrapped in parens from stage 7 (`label="(i)"`)
 must not be wrapped again when rendering "भाग (label)".** An earlier
 exemplar chapter's part labels were bare letters (`label="a"`), so
@@ -412,6 +449,30 @@ a known limitation of the four-stage model for this specific content
 shape, worth a real design solution in a future session (e.g. a fifth,
 freeform "case" stage), not something to silently reshape at stage 9
 without a decision from the user.
+
+**A figure referenced mid-solution (not just an item-level `:::figure`
+before any part) can be silently dropped by the render script itself, not
+just by stage 8's serialization.** Stage 8's JSON schema correctly nests a
+figure inside whichever block's `flow` it belongs to (already documented
+above), but a render script that builds each block's text via a
+`flow_text_join()`-style helper which explicitly skips `type: "figure"`
+segments (reasonable for a prompt/answer flow, where a nested figure would
+be unusual) will keep doing that when the SAME helper is reused for a
+solution block's own flow — silently omitting the figure from the page
+with nothing else indicating anything is missing. Caught for real:
+physics-12-2's ex_2.2 has "चित्र 2.7 देखिए" referenced mid-sentence inside
+its own `:::concept`, not as an item-level figure before the parts — the
+figure vanished from the first render entirely. physics-12-1 never
+exercised this path (no item in its own JSON has a figure nested inside a
+solution flow), so the gap was latent, not previously caught. Fix: give
+solution/note rendering its own flow-walker that renders a `type:
+"figure"` segment as a proper figure element in its correct position
+(same markup as the item-level figure row), and keep the simpler
+text-only join for prompt/answer flows where it's still correct. The
+figure-src-count check already mandated below (JSON's distinct count vs.
+what actually resolves in the rendered HTML) is exactly what catches
+this — treat a mismatch there as a render-script bug to fix, not just a
+JSON bug, before assuming stage 8 is at fault.
 
 **This path has no code gate on the final HTML.** The check is manual and
 not optional: before calling the chapter done, read every `final_answer`

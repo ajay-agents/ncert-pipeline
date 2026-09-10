@@ -1,0 +1,414 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-09T11:19:43.577746+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "40eb7bb83fdfed71",
+      "solutions.hi.pdf": "35ef460d0d97b9df"
+    },
+    "counts": {
+      "chapter_pages": 26,
+      "solutions_pages": 19,
+      "chapter_chars": 62853,
+      "solutions_chars": 30560,
+      "chapter_dollar_spans": 724,
+      "solutions_dollar_spans": 510,
+      "chapter_table_rows": 16,
+      "solutions_table_rows": 16,
+      "chapter_images": 24,
+      "solutions_images": 18,
+      "images_dir_files": 42
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (Physics Class 12 Chapter 3, विद्युत धारा / Electric Current), matching physics-12-1/physics-12-2's precedent - only chapter.hi.pdf + solutions.hi.pdf provided, no English source. Confirmed via a rendered page-1 image before converting (title page shows 'अध्याय 3 विद्युत धारा'). Both mathpix outputs well above the suspicious-size threshold, tables present in both (expected - this chapter has resistivity/temperature-coefficient reference tables), image counts sum cleanly to the images/ directory's file count with no collisions (continues numbering from 0, chapter-scoped)."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-09T11:39:56.050962+00:00",
+    "inputs": {
+      "chapter.hi.md": "1c6b615f938fb1fb",
+      "solutions.hi.md": "19fc4d07160e9ed0"
+    },
+    "counts": {
+      "examples_hi": 7,
+      "exercises_hi": 9,
+      "solutions_hi": 24,
+      "matched": 9,
+      "orphan_solutions_discarded": 15,
+      "unmatched_questions": 0,
+      "aligned_items": 16
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 2,
+    "notes": "Hindi-only chapter (Physics 12 Ch3, विद्युत धारा). 2 extraction sub-agent passes (examples, solutions); exercises (only 9, all short single-prompt items with no parts) extracted directly by the coordinator after reading the full section in one pass. CRITICAL FINDING, verified before merging, NOT handled via match.join_solutions()'s default number-matching: this chapter's 'Rationalised' mismatch is NOT the usual shape (solutions manual has more exercises, all appended at the end as 'अतिरिक्त प्रश्न'). Here, the solutions manual's own 'अभ्यास प्रश्न' section (प्रश्न 1-13) has 4 EXTRA questions INTERSPERSED within the main section (प्रश्न 3, 4, 10, 12 - none of their content appears anywhere in this chapter's own 9 exercises, confirmed by grep) that don't exist in this rationalised chapter at all. Plain number-matching would have paired q_3.3 with प्रश्न 3 (a completely different question - series resistors, not room-temperature resistance) and every subsequent exercise would have been silently off by a growing offset - exactly the 'eleven consecutive items silently mismatched' failure mode step_2/PROMPT.md already warns about, recurring in a new shape (scattered insertions, not a clean split point). Resolved by matching every one of the 9 exercises to its correct solutions-manual entry BY CONTENT (charge/resistance/voltage values, not printed number) before merging - verified mapping: q_3.1->प्रश्न1, q_3.2->प्रश्न2, q_3.3->प्रश्न5, q_3.4->प्रश्न6, q_3.5->प्रश्न7, q_3.6->प्रश्न8, q_3.7->प्रश्न9, q_3.8->प्रश्न11, q_3.9->प्रश्न13. Every merged pair spot-checked against distinctive numeric values with no drift found (e.g. q_3.1: E=12V,r=0.4ohm->I_max=30A; q_3.4: A=6e-7 m^2,l=15m,R=5ohm -> rho=2e-7 ohm.m - both match exactly). 15 orphan solutions (प्रश्न 3,4,10,12,14-24) discarded per Rule 5, documented in 02_extract/match_report.md with the full mapping table for future auditability. One additional real finding: प्रश्न 24 (an orphan, discarded regardless) is genuinely printed incomplete in the source solutions PDF itself - its last page (page 70, confirmed by direct visual render) cuts off mid-word after 'सेल का आन्तरिक' with no more content following - a source-document defect, not an extraction/OCR fault; harmless here since this item is discarded anyway, noted for the record. Also flagged for stage 5 verification (not fixed here, per extraction rules): ex_3.7's solution has a visibly out-of-place OCR-bled fragment ('n=6.0e23/63.5 x 9.0e6...') copy-pasted from ex_3.1's copper-density formula into the Wheatstone-bridge algebra where it doesn't belong."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-09T11:42:54.684625+00:00",
+    "inputs": {
+      "chapter.hi.md": "8ec8ffad99f4efea"
+    },
+    "counts": {
+      "examples_hi_items": 7,
+      "examples_hi_chars": 26838,
+      "qa_hi_items": 9,
+      "qa_hi_chars": 17061,
+      "merged_total_items": 16
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split via pipeline.mdio.markdown_to_chapter() + merge_by_id() (hi-only, no en side) + render.render() kind-filtered. Round-trip verified: both output files parse cleanly with tag._parse, and their item counts (7 + 9) sum to the merged chapter's total (16) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-09T11:46:22.811522+00:00",
+    "inputs": {
+      "examples.hi.md": "d5c0f91e2771aea2",
+      "qa.hi.md": "8e7920977ac191b6"
+    },
+    "counts": {
+      "combined_hi_items": 16,
+      "combined_hi_chars": 43753
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter: merge_by_id() doesn't apply (examples.hi.md's and qa.hi.md's item ids never overlap), so the correct 'plain reunion' here is a straight concatenation of the two Chapters' item lists (examples then qa), matching stage 2's original kind order. Round-trip verified: combined.hi.md parses cleanly, its item count (16) equals stage 3's two files' combined count exactly, and its byte size (24549 chars) matches 02_extract/chapter.hi.md's size exactly - nothing gained or lost across split+combine."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-09T11:54:04.552459+00:00",
+    "inputs": {
+      "chapter.hi.md": "1c6b615f938fb1fb",
+      "solutions.hi.md": "19fc4d07160e9ed0"
+    },
+    "counts": {
+      "correction": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 0,
+    "notes": "Correction to the immediately preceding extract_match entry, caught before stage 5 - not a new content issue, a coordinator transcription slip: while hand-writing q_3.9's exercise text (bypassing a sub-agent since the exercises are short - see prior entry), I silently wrote the electron number-density unit as 'm^{-3}' instead of transcribing the source exactly. The chapter's raw mathpix text and the actual printed PDF page (page 104, verified at high zoom) both genuinely show 'm^{3}' with NO negative exponent - a real textbook printing gap (physically it should read m^-3), not an OCR artifact, and not something stage 2 extraction is allowed to silently 'fix' per step_2/extract.md's 'transcribe, don't improve' rule - that decision belongs to stage 5 (and per the same rule stage 5 follows for textbook errata, likely stays uncorrected, flagged for the user instead). Reverted to the literal source reading and rebuilt stages 2-4 from the corrected extraction file; both gates re-ran clean."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-09T11:54:04.553565+00:00",
+    "inputs": {
+      "chapter.hi.md": "21e809ce50825105"
+    },
+    "counts": {
+      "examples_hi_chars": 26838,
+      "qa_hi_chars": 17060
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Rebuilt after the q_3.9 exponent-sign correction above - same round-trip verification, no other change."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-09T11:54:04.555351+00:00",
+    "inputs": {
+      "examples.hi.md": "d5c0f91e2771aea2",
+      "qa.hi.md": "68cb459c51dc0337"
+    },
+    "counts": {
+      "combined_hi_chars": 43752
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Rebuilt after the q_3.9 exponent-sign correction above - same round-trip verification, no other change."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-09T12:06:21.835392+00:00",
+    "inputs": {
+      "combined.hi.md": "21e809ce50825105",
+      "chapter.hi.pdf": "40eb7bb83fdfed71",
+      "solutions.hi.pdf": "35ef460d0d97b9df"
+    },
+    "counts": {
+      "corrections_applied_high": 0,
+      "corrections_held": 0,
+      "items_checked": 16,
+      "items_with_corrections": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 2,
+    "notes": "Hindi-only chapter. All 9 exercises hand-verified by the coordinator directly against the actual source pages (idx24 = page 103 for q_3.1-3.5, idx25 = page 104 for q_3.6-3.9, both already open from stage-2 boundary work) - 0 discrepancies. Dispatched 2 sub-agent batches for the 7 examples (3.1-3.4, 3.5-3.7) - both clean, 0 corrections across all 16 items total. The suspicious OCR-bleed fragment flagged at stage 2 in ex_3.7's solution (a copper-atom-density formula fragment appearing mid-Wheatstone-bridge-algebra where it doesn't belong) was confirmed, via a 400dpi zoom directly on the source page, to be a genuine PRINTED TEXTBOOK ERROR (the NCERT solutions/example text itself carries this leftover fragment) - not an OCR fault, so left uncorrected per 'if the textbook has an error, that is not your call' (this is a mid-derivation extraneous term, not a final-answer unit contradiction, so it doesn't qualify for the narrow unit-slip exception either). Also re-confirmed q_3.9's 'm^3' (missing negative exponent) is genuinely how the source page prints it (already caught and reverted from an accidental coordinator over-correction during stage 2, see that stage's correction entries) - left uncorrected here too, same textbook-errata reasoning. gate_math_parity and gate_counts both pass."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-09T12:23:47.869749+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "21e809ce50825105"
+    },
+    "counts": {
+      "items_processed": 16,
+      "solution_blocks_simplified": 18,
+      "solution_blocks_unchanged": 5,
+      "restore_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen_hi",
+      "gate_answers_unchanged_hi",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 2,
+    "notes": "Hindi-only chapter - gate_bilingual skipped, matching prior precedent. Dispatched 2 sub-agent batches (7 examples, 9 exercises), each following the freeze/rewrite/restore procedure - 0 ProtectionErrors across all 23 solution blocks touched. 18 blocks genuinely simplified; 5 left unchanged where already clear (all in ex_3.2's short qualitative parts a/c/d). ex_3.7's known genuine textbook printing error (a leftover formula fragment from a different example) sits entirely inside a protected display-math token and passed through untouched, exactly as required. All 3 gates (gate_question_text_frozen, gate_answers_unchanged, gate_math_parity) pass against the stage-5 snapshot."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-09T12:32:23.175422+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "bdaa45de5ad605e0"
+    },
+    "counts": {
+      "structured_hi_chars": 47795,
+      "step_containers": 44,
+      "formula_containers": 12,
+      "concept_containers": 12,
+      "note_containers": 1,
+      "table_containers": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "protect_parity_hi"
+    ],
+    "model_calls": 2,
+    "notes": "Hindi-only chapter. Dispatched 2 sub-agent batches (7 examples, 9 exercises), working directly on the markdown text (stage 7 output nests containers inside :::solution, not Chapter-model compatible). Used the fixed Hindi given/formula/substitute/conclusion label vocabulary where the shape fit; left short qualitative parts (all 5 of ex_3.2's parts, ex_3.1 part b) as plain text since they have no numeric derivation to structure - correctly not forced. One freeform :::concept label used for a standalone principle statement (q_3.8's 'series resistor purpose' explanation, outside the main given-formula-conclusion flow) and one :::note{type=tip} for ex_3.6's own verification/check paragraph (content already in source, not invented). ex_3.7's known genuine textbook printing error (a leftover formula fragment from a different example, inside a $$...$$ block) was left untouched, wrapped like any other formula step, per instructions. No trailing whole-item duplicate-solution artifact found in any item (all exercises are single-prompt with no parts; ex_3.1/ex_3.2's parts each have exactly one solution). Coordinator merged via the same depth-tracked top-level-block splitter used for physics-12-2 (reusing tag.py's OPEN_RE/CLOSE_RE), replacing all 16 item blocks in place. Both gates pass: tag._parse succeeds (18 top-level children = 16 items + 2 section headings), protect.parity(stage6_text, stage7_text) shows zero drift in math/table/image counts."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-09T13:18:22.444111+00:00",
+    "inputs": {
+      "structured.hi.md": "28536011f8a4deea"
+    },
+    "counts": {
+      "items": 16,
+      "parts": 7,
+      "distinct_figure_srcs": 8,
+      "stage_given": 16,
+      "stage_key_formula": 12,
+      "stage_substitute": 29,
+      "stage_conclusion": 19,
+      "json_bytes": 68779
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "reparse_item_count_matches_fresh",
+      "reparse_part_count_matches_fresh",
+      "reparse_figure_src_count_matches_fresh"
+    ],
+    "model_calls": 0,
+    "notes": "Reused physics-12-2's deterministic tree-walk script unchanged (same recursive flatten/build_block logic, same stage-inference rules) - no code changes needed for this chapter. Gate: re-parsed the JSON and compared item count (16), part count (7 - ex_3.1's 2 parts + ex_3.2's 5 parts, the only multi-part items), and distinct figure-src count (8) against a fresh, independent count from structured.hi.md - all three match exactly. Spot-checked ex_3.1 (part a: full 4-stage structure; part b: single unlabelled step correctly inferred as 'conclusion' per the single-stageable-block rule), ex_3.7 (6 steps, position-based inference correctly gives first=given, last=conclusion, middle 4=substitute - the known textbook-errata formula sits inside one of the middle 'substitute' steps, unaffected), and q_3.8 (the freeform standalone concept 'प्रतिरोधक का उद्देश्य' correctly forced to stage=given regardless of its late position in the block sequence, exactly per the documented rule 'an explicit :::concept is always given, regardless of position' - flagging this for stage 9's own attention since a 'given'-styled pill appearing after the conclusion pill may read oddly on the rendered page; not a stage-8 bug, a spec-following outcome worth a visual check downstream)."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-09T13:36:28.565760+00:00",
+    "inputs": {
+      "combined.hi.md": "21e809ce50825105",
+      "solutions.hi.pdf": "35ef460d0d97b9df"
+    },
+    "counts": {
+      "corrections_applied_followup": 8,
+      "flagged_for_user_signoff": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 1,
+    "notes": "Correction round, found during stage 9's own read-back prep (not during the original stage 5 pass): a systemic OCR failure in the solutions-manual PDF. That PDF prints the current variable I (and length variable l) as a plain, mostly serif-less vertical stroke - visually near-identical to the digit 1, the letter l, and (in one font instance) Greek phi - and Mathpix resolved this ambiguous glyph inconsistently across the document. The original stage-5 pass verified all 9 exercises' QUESTION text against chapter.hi.pdf directly (clean) and spot-checked distinctive NUMBERS between chapter and solutions documents to confirm the correct content-based pairing (also clean, since a numeric spot-check can't catch a symbol substitution that leaves numbers untouched) - but never re-verified the SOLUTION prose itself, character by character, against the solutions-manual PDF's own pages. Caught by chance while smoke-testing the LaTeX converter's new \\varphi mapping (added for this chapter) against real chapter content and noticing q_3.1's 'varphi_max' didn't belong in a current/battery problem. Dispatched a dedicated re-verification pass covering all 9 exercises' solution text against 00_raw/solutions.hi.pdf; found 8 corrections (q_3.1 x1, q_3.6 x1, q_3.7 x4, q_3.9 x2), all the same root cause, all independently re-confirmed by the coordinator via a second direct page render before applying (2 spot-checks: q_3.7's I/l corrections and q_3.3's separately-flagged unit typo, both confirmed exactly as the sub-agent reported). Applied via a direct text-substitution patch across 05_verify/chapter.verified.hi.md, 06_simplify/chapter.simplified.hi.md and 07_format/structured.hi.md (all three had the identical garbled substrings, byte-for-byte, since they sit inside frozen/protected math spans untouched by simplification or formatting) rather than re-running those stages from scratch. Regenerated 08_tag/structured.hi.json from the corrected structured.hi.md (same deterministic script, no content changes beyond the fix). Re-verified every downstream gate after patching: gate_math_parity (04_combined->05_verify and 05_verify->06_simplify), gate_question_text_frozen, gate_answers_unchanged, gate_counts, protect.parity (06_simplify->07_format), tag._parse - all pass clean. One further finding, NOT applied - flagged for the user's explicit sign-off per step_5/verify.md's same-page self-contradiction exception: q_3.3's concluding sentence reads temperature as '1027 degrees Ω' instead of '1027 degrees C', directly under a correct °C-based derivation - confirmed this is how the solutions-manual PDF itself prints it (page index 2), not an OCR fault, so left unchanged pending the user's decision."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-09T13:36:28.569931+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "e2a6e473bf69ab8d"
+    },
+    "counts": {
+      "patched_after_verify_correction": 8
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen_hi",
+      "gate_answers_unchanged_hi",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 0,
+    "notes": "Patched with the same 8 text substitutions as the verify-stage correction above (byte-identical garbled substrings existed in this file too); re-verified all 3 gates clean."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-09T13:36:28.572185+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "a9ee3cccb0d782ad"
+    },
+    "counts": {
+      "patched_after_verify_correction": 8
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "protect_parity_hi"
+    ],
+    "model_calls": 0,
+    "notes": "Patched with the same 8 text substitutions as the verify-stage correction above; re-verified tag._parse and protect.parity clean."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-09T13:36:28.574168+00:00",
+    "inputs": {
+      "structured.hi.md": "479273fcb1422371"
+    },
+    "counts": {
+      "items": 16,
+      "parts": 7,
+      "distinct_figure_srcs": 8
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "reparse_item_count_matches_fresh",
+      "reparse_part_count_matches_fresh",
+      "reparse_figure_src_count_matches_fresh"
+    ],
+    "model_calls": 0,
+    "notes": "Regenerated from the corrected structured.hi.md after the verify-stage correction above; same deterministic script, gate re-confirmed clean."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-09T13:38:40.521977+00:00",
+    "inputs": {
+      "combined.hi.md": "21e809ce50825105"
+    },
+    "counts": {
+      "corrections_applied_with_user_signoff": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "User sign-off received for q_3.3's separately-flagged same-page unit self-contradiction (asked via AskUserQuestion, presenting both options: correct to C, or preserve the source's own C/ohm typo verbatim). User chose to correct it. Applied the same found/should_be substitution ('1027 degrees ohm' -> '1027 degrees C' in the concluding sentence) across 05_verify/chapter.verified.hi.md, 06_simplify/chapter.simplified.hi.md and 07_format/structured.hi.md (05_verify needed its own exact wording - stage 6 had already reworded this sentence's surrounding prose during simplification, e.g. 'अत:' vs 'अतः तापन-अवयव का', while keeping the frozen math tokens themselves unchanged, so the found substring differed slightly between the pre- and post-simplify files). Regenerated 08_tag/structured.hi.json; re-verified every downstream gate again - all pass clean."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-09T13:38:40.523879+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "2ae54b30ee1adf18"
+    },
+    "counts": {
+      "patched_after_user_signoff": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen_hi",
+      "gate_answers_unchanged_hi",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 0,
+    "notes": "Patched with the q_3.3 correction above after user sign-off; re-verified all 3 gates clean."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-09T13:38:40.525295+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "08d25fd718ea10b4"
+    },
+    "counts": {
+      "patched_after_user_signoff": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "protect_parity_hi"
+    ],
+    "model_calls": 0,
+    "notes": "Patched with the q_3.3 correction above after user sign-off; re-verified tag._parse and protect.parity clean."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-09T13:38:40.526437+00:00",
+    "inputs": {
+      "structured.hi.md": "afdfe94aaf012540"
+    },
+    "counts": {
+      "items": 16,
+      "parts": 7,
+      "distinct_figure_srcs": 8
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "reparse_item_count_matches_fresh",
+      "reparse_part_count_matches_fresh",
+      "reparse_figure_src_count_matches_fresh"
+    ],
+    "model_calls": 0,
+    "notes": "Regenerated after the q_3.3 user-approved correction above; gate re-confirmed clean."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-09T13:47:40.423739+00:00",
+    "inputs": {
+      "structured.hi.json": "8b837dd9ac1efdc9"
+    },
+    "counts": {
+      "html_chars": 87899,
+      "items": 16,
+      "distinct_figure_srcs": 8
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify",
+      "leftover_latex_commands"
+    ],
+    "model_calls": 0,
+    "notes": "Reused physics-12-2's render_page.py/latex.py/final.hi.css almost verbatim, including the standing screen-media-emulation PDF-export fix and the Devanagari font-fallback CSS addition. Before trusting the reused converter, grepped this chapter's own 06_simplify text for every \\command used (25 distinct) and diffed against latex.py's macro table: found \\Omega (44x!), \\Sigma, \\dfrac, \\ell, \\ln, \\max/\\min and \\varphi genuinely missing - this Electric Current chapter is the first to need capital-Omega resistance notation, a Kirchhoff-loop \\Sigma, and named functions at all. Added all of them to GREEK_MAP (as \\uXXXX escapes) and an explicit 'frac'/'dfrac' alias in the \\frac dispatch branch (dfrac renders identically - no display-vs-text-style size distinction exists in this HTML output). Re-confirmed \\circ (38 occurrences) is genuinely always a degree sign in this chapter too (temperature-coefficient problems), not function composition. Found and fixed 3 real bugs during the mandatory read-back: (1) a double-paren part-label bug - this chapter's own examples-extraction wrote part labels already parenthesized ('(a)' not bare 'a', unlike physics-12-1/12-2's convention), and render_item_body() unconditionally wrapped 'भाग ({label})', producing visible 'भाग ((a))' - exactly the trap already documented in step_9/PROMPT.md; fixed by checking whether the label already starts with '(' before wrapping. (2) \\begin{gathered} (a stack of centered equations, no alignment columns) - new to this chapter's own drift-velocity derivation, physics-12-1/12-2 only ever used aligned/array - fell through _display_block_to_lines's regex (which only matched aligned|array) to a fallback path whose output classes (.s92/.s93) were never given CSS rules (nothing needed them before), so two stacked equations rendered running together on one line with no break. Fixed by extending the regex to treat 'gathered' identically to aligned/array (same proven row-split path), and defensively added CSS for .s92/.s93 too as a backstop for any INLINE \\begin{...} this chapter's content might still hit. (3) already covered in stage 5/6/7/8's own correction entries - the systemic I/l/phi OCR-glyph-ambiguity fix. Re-verified after every fix: tag balance clean, 8/8 figures resolve, 59/59 question/final_answer numbers present, 0 leftover bare LaTeX command names, full visual page-by-page read-back of all 13 exported PDF pages clean."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-09T13:49:42.190778+00:00",
+    "inputs": {
+      "final.hi.html": "6b4954125254991e",
+      "final.hi.css": "6dd9f6a29b740a1c"
+    },
+    "counts": {
+      "pdf_bytes": 1042079,
+      "page_count": 13,
+      "blank_pages": 0,
+      "numbers_checked": 59,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium, including the standing page.emulate_media(media='screen') fix (documented in step_10/PROMPT.md) for the Devanagari PDF-shaping bug. Gates: page count 13 (sane for 16 items: 7 examples + 9 exercises), 0 blank pages, numeric read-back against the PDF's own extracted text found all 59 distinct multi-digit numbers from 06_simplify/chapter.simplified.hi.md's question/final_answer fields, using the superscript-run separator normalization. Full 13-page visual read-back already done during stage 9's own prep (3 render/CSS bugs found and fixed there, plus a 9-way OCR correction round in stage 5 propagated through to this export) - this stage's own PDF re-export and gate re-run confirm nothing regressed after those fixes."
+  }
+]

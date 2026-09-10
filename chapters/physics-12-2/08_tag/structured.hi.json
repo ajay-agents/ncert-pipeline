@@ -1,0 +1,1921 @@
+{
+  "front": {
+    "title": "स्थिरवैद्युत विभव तथा धारिता",
+    "chapter": "2"
+  },
+  "items": [
+    {
+      "id": "ex_2.1",
+      "kind": "example",
+      "number": "2.1",
+      "topic": "बिंदु आवेश के कारण विभव व कार्य",
+      "prompt": [],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "आवेश $4 \\times 10^{-7} \\mathrm{C}$ के कारण इससे $9 \\mathrm{~cm}$ दूरी पर स्थित किसी बिंदु P पर विभव परिकलित कीजिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\nV & =\\frac{1}{4 \\pi \\varepsilon_{o}} \\frac{Q}{r}=9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2} \\times \\frac{4 \\times 10^{-7} \\mathrm{C}}{0.09 \\mathrm{~m}} \\\\\n& =4 \\times 10^{4} \\mathrm{~V}\n\\end{aligned}\n$$"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "अब, आवेश $2 \\times 10^{-9} \\mathrm{C}$ को अनंत से बिंदु P तक लाने में किया गया कार्य ज्ञात कीजिए। क्या उत्तर जिस पथ के अनुदिश आवेश को लाया गया है उस पर निर्भर करता है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\nW & =q V=2 \\times 10^{-9} \\mathrm{C} \\times 4 \\times 10^{4} \\mathrm{~V} \\\\\n& =8 \\times 10^{-5} \\mathrm{~J}\n\\end{aligned}\n$$\n\nनहीं, कार्य पथ पर निर्भर नहीं करता। किसी भी छोटे पथ को दो भागों में बाँटा जा सकता है : एक भाग r के अनुदिश, दूसरा भाग r के लंबवत। लंबवत भाग में किया गया कार्य शून्य होता है।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.2",
+      "kind": "example",
+      "number": "2.2",
+      "topic": "दो आवेशों के बीच शून्य विभव बिंदु",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$3 \\times 10^{-8} \\mathrm{C}$ तथा $-2 \\times 10^{-8} \\mathrm{C}$ के दो आवेश एक－दूसरे से $15 \\mathrm{~cm}$ दूरी पर रखे हैं। इन दोनों आवेशों को मिलाने वाली रेखा के किस बिंदु पर वैद्युत विभव शून्य है？ अनंत पर वैद्युत विभव शून्य लीजिए।"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "flow": [
+            {
+              "type": "text",
+              "text": "मान लीजिए धनावेश मूल बिंदु $O$ पर है। दोनों आवेशों को मिलाने वाली रेखा $x$-अक्ष है, और ऋणावेश मूल बिंदु के दाईं ओर है (चित्र $2.7$ देखिए)।"
+            },
+            {
+              "type": "figure",
+              "src": "images/fig_physics-12-2_3.jpg",
+              "caption": "चित्र $2.7$"
+            },
+            {
+              "type": "text",
+              "text": "मान लीजिए $x$-अक्ष पर बिंदु P वह वांछित बिंदु है जहाँ वैद्युत विभव शून्य है। बिंदु P का $x$-निर्देशांक $x$ है, तो $x$ धनात्मक होना चाहिए। $(x<0$ के लिए दोनों आवेशों के कारण वैद्युत विभव जुड़कर शून्य नहीं हो सकता। मान लीजिए $x$ मूल बिंदु O और A के बीच कहीं है, तो"
+            }
+          ],
+          "label": "जानकारी",
+          "stage": "given"
+        },
+        {
+          "type": "formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\frac{1}{4 \\pi \\varepsilon_{0}}\\left[\\frac{3 \\times 10^{-8}}{x \\times 10^{-2}}-\\frac{2 \\times 10^{-8}}{(15-x) \\times 10^{-2}}\\right]=0\n$$"
+            }
+          ],
+          "label": "मुख्य सूत्र",
+          "stage": "key_formula"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "यहाँ $x$ को cm में लिया गया है। इसलिए\n\n$$\n\\frac{3}{x}-\\frac{2}{15-x}=0\n$$\n\nअथवा $x=9 \\mathrm{~cm}$\nअब मान लीजिए बिंदु $x$ विस्तारित रेखा OA पर है, तो वांछित शर्त बनती है\n\n$$\n\\frac{3}{x}-\\frac{2}{x-15}=0\n$$\n\nअथवा\n\n$$\nx=45 \\mathrm{~cm}\n$$"
+            }
+          ],
+          "label": "मान रखो",
+          "n": "1",
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "इस प्रकार, धनावेश से $9 \\mathrm{~cm}$ तथा $45 \\mathrm{~cm}$ दूरी पर, ऋणावेश की ओर, वैद्युत विभव शून्य है। ध्यान दें, यह सूत्र अनंत पर वैद्युत विभव शून्य मानकर व्युत्पन्न किया गया था।"
+            }
+          ],
+          "label": "निष्कर्ष",
+          "n": "2",
+          "stage": "conclusion"
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_2.3",
+      "kind": "example",
+      "number": "2.3",
+      "topic": "विभव व स्थितिज ऊर्जा के चिह्न",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "(a) तथा (b) में क्रमशः एकल धन तथा ॠण आवेशों की क्षेत्र रेखाएँ दर्शायी गई हैं।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_4.jpg",
+          "caption": "चित्र $2.8$"
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "विभवांतर $V_{\\mathrm{P}}-V_{\\mathrm{Q}} ; V_{\\mathrm{B}}-V_{\\mathrm{A}}$ के चिह्न बताइए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "चूँकि $V \\propto \\frac{1}{r}, V_{P}>V_{Q}$, इसलिए $\\left(V_{P}-V_{Q}\\right)$ धनात्मक है। $V_{A}$, $V_{B}$ से कम ऋणात्मक है। इसलिए $V_{B}>V_{A}$ अथवा $\\left(V_{B}-V_{A}\\right)$ धनात्मक है।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "बिंदु Q और $\\mathrm{P} ; \\mathrm{A}$ और B के बीच एक छोटे से ऋण आवेश की स्थितिज ऊर्जा के अंतर का चिह्न बताइए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "कोई छोटा ऋणावेश धनावेश की ओर आकर्षित होगा। ऋणावेश सदैव उच्च स्थितिज ऊर्जा से निम्न स्थितिज ऊर्जा की ओर गति करता है। इसलिए Q से P तक जाने में किसी छोटे ऋणावेश की स्थितिज ऊर्जा में अंतर का चिह्न धनात्मक होगा।\nइसी प्रकार (स्थितिज ऊर्जा)${ }_{\\mathrm{A}}>(\\text { स्थितिज ऊर्जा })_{\\mathrm{B}}$ है। इसलिए स्थितिज ऊर्जा के अंतर का चिह्न भी धनात्मक है।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Q से P तक एक छोटे धनावेश को ले जाने में क्षेत्र द्वारा किए गए कार्य का चिह्न बताइए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "किसी छोटे धनावेश को Q से P तक ले जाने के लिए बाहरी एजेंसी को विद्युत क्षेत्र के विरुद्ध कार्य करना पड़ता है। इसलिए विद्युत क्षेत्र द्वारा किया गया कार्य ऋणात्मक होता है।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "d",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "B से A तक एक छोटे से ऋण आवेश को ले जाने के लिए बाह्य साधन द्वारा किए गए कार्य का चिह्न बताइए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "किसी छोटे ऋणावेश को B से A तक ले जाने के लिए बाहरी एजेंसी को कार्य करना पड़ता है, जो धनात्मक होता है।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "e",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "B से A तक जाने में क्या एक छोटे से ऋणावेश की गतिज ऊर्जा बढ़ेगी या घटेगी?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "ऋणावेश पर प्रतिकर्षी बल लगता है, इसलिए इसका वेग घटता है। अतः B से A तक जाने में गतिज ऊर्जा घट जाती है।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.4",
+      "kind": "example",
+      "number": "2.4",
+      "topic": "वर्ग के शीर्षों पर आवेशों की स्थितिज ऊर्जा",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "चित्र $2.15$ में दर्शाए अनुसार चार आवेश भुजा $d$ वाले किसी वर्ग ABCD के शीर्षों पर व्यवस्थित किए गए हैं।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_7.jpg",
+          "caption": null
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "इस व्यवस्था को एक साथ बनाने में किया गया कार्य ज्ञात कीजिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "किया गया कार्य आवेशों की अंतिम व्यवस्था पर निर्भर करता है, न कि इस पर कि उन्हें किस क्रम में लाया गया। इसलिए हम आवेशों को $\\mathrm{A}, \\mathrm{B}, \\mathrm{C}$, तथा D पर रखने के एक क्रम के लिए कार्य का परिकलन करेंगे। मान लीजिए पहले आवेश $+q$ को A पर लाया जाता है, फिर आवेशों $-q,+q$ तथा $-q$ को क्रमशः B, C तथा D पर लाया जाता है। कुल कार्य को हम इन चरणों में परिकलित करते हैं :"
+                }
+              ],
+              "stage": "given"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "आवेश $+q$ को A पर लाने में कार्य शून्य है, क्योंकि वहाँ पहले से कोई आवेश नहीं है।"
+                }
+              ],
+              "n": "1",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "आवेश $-q$ को B पर लाने में कार्य, जब $+q$ शीर्ष A पर है। यह है ( B पर आवेश $) \\times(\\mathrm{A}$ पर आवेश $+q$ के कारण बिंदु B पर स्थिरवैद्युत विभव)\n$$\n=-q \\times\\left(\\frac{q}{4 \\pi \\varepsilon_{o} d}\\right)=-\\frac{q^{2}}{4 \\pi \\varepsilon_{o} d}\n$$"
+                }
+              ],
+              "n": "2",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "आवेश $+q$ को C पर लाने में कार्य, जब $+q$ शीर्ष A पर तथा $-q$ शीर्ष B पर है। यह है (C पर आवेश) $\\times(\\mathrm{A}$ तथा B पर आवेशों के कारण C पर विभव)\n$$\n\\begin{aligned}\n& =+q\\left(\\frac{+q}{4 \\pi \\varepsilon_{o} d \\sqrt{2}}+\\frac{-q}{4 \\pi \\varepsilon_{o} d}\\right) \\\\\n& =\\frac{-q^{2}}{4 \\pi \\varepsilon_{o} d}\\left(1-\\frac{1}{\\sqrt{2}}\\right)\n\\end{aligned}\n$$"
+                }
+              ],
+              "n": "3",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "आवेश $-q$ को D पर लाने में कार्य, जब $+q$ शीर्ष A पर, $-q$ शीर्ष B पर तथा $+q$ शीर्ष C पर हैं। यह है ( D पर आवेश) $\\times(\\mathrm{A}, \\mathrm{B}$ तथा C पर आवेशों के कारण D पर विभव)\n$$\n\\begin{aligned}\n& =-q\\left(\\frac{+q}{4 \\pi \\varepsilon_{o} d}+\\frac{-q}{4 \\pi \\varepsilon_{o} d \\sqrt{2}}+\\frac{q}{4 \\pi \\varepsilon_{o} d}\\right) \\\\\n& =\\frac{-q^{2}}{4 \\pi \\varepsilon_{o} d}\\left(2-\\frac{1}{\\sqrt{2}}\\right)\n\\end{aligned}\n$$"
+                }
+              ],
+              "n": "4",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "चारों चरणों को जोड़ने पर कुल कार्य\n$$\n\\begin{aligned}\n& =\\frac{-q^{2}}{4 \\pi \\varepsilon_{o} d}\\left\\{(0)+(1)+\\left(1-\\frac{1}{\\sqrt{2}}\\right)+\\left(2-\\frac{1}{\\sqrt{2}}\\right)\\right\\} \\\\\n& =\\frac{-q^{2}}{4 \\pi \\varepsilon_{o} d}(4-\\sqrt{2})\n\\end{aligned}\n$$\nयह कार्य केवल आवेशों की व्यवस्था पर निर्भर करता है, इस पर नहीं कि उन्हें कैसे रखा गया। परिभाषा के अनुसार यही आवेशों की कुल स्थिरवैद्युत ऊर्जा है।\n(विद्यार्थी चाहें तो आवेशों को किसी और क्रम में लेकर यही ऊर्जा निकाल सकते हैं और देख सकते हैं कि हर बार उत्तर समान आता है।)"
+                }
+              ],
+              "label": "निष्कर्ष",
+              "n": "5",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "कोई आवेश $q_{0}$ वर्ग के केंद्र E पर लाया जाता है तथा चारों आवेश अपने शीर्षों पर दृढ़ रहते हैं। ऐसा करने के लिए कितना अतिरिक्त कार्य करना पड़ता है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "जब चारों आवेश $\\mathrm{A}, \\mathrm{B}, \\mathrm{C}$ तथा D पर रखे जा चुके हैं, तब आवेश $q_{0}$ को बिंदु E पर लाने में जो अतिरिक्त कार्य होता है, वह $q_{0} \\times(\\mathrm{A}, \\mathrm{B}, \\mathrm{C}$ तथा D पर हैं आवेशों के कारण E पर स्थिरवैद्युत विभव) के बराबर है। बिंदु E पर स्थिरवैद्युत विभव शून्य होता है, क्योंकि A और C के आवेशों का विभव, B और D के आवेशों के विभव से निरस्त हो जाता है। इसलिए E तक किसी भी आवेश को लाने में कोई कार्य नहीं करना पड़ता।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.5",
+      "kind": "example",
+      "number": "2.5",
+      "topic": "बाह्य क्षेत्र में आवेश निकाय की स्थिरवैद्युत ऊर्जा",
+      "prompt": [],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "दो आवेशों $7 \\mu \\mathrm{C}$ तथा $-2 \\mu \\mathrm{C}$ जो क्रमशः $(-9 \\mathrm{~cm}, 0,0)$ तथा $(9 \\mathrm{~cm}, 0,0)$ पर स्थित हैं, के ऐसे निकाय, जिस पर कोई बाह्य क्षेत्र आरोपित नहीं है, की स्थिरवैद्युत स्थितिज की ऊर्जा ज्ञात कीजिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$U=\\frac{1}{4 \\pi \\varepsilon_{o}} \\frac{q_{1} q_{2}}{r}=9 \\times 10^{9} \\times \\frac{7 \\times(-2) \\times 10^{-12}}{0.18}=-0.7 \\mathrm{~J}$"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "दोनों आवेशों को एक-दूसरे से अनंत दूरी तक पृथक करने के लिए कितने कार्य की आवश्यकता होगी?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$W=U_{2}-U_{1}=0-U=0-(-0.7)=0.7 \\mathrm{~J}$"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "माना कि अब इस आवेश निकाय को किसी बाह्य विद्युत क्षेत्र $E=A\\left(1 / r^{2}\\right)$; $A=9 \\times 10^{5} \\mathrm{Ne}^{-1} \\mathrm{~m}^{2}$ में रखा गया है। इस विन्यास की स्थिरवैद्युत ऊर्जा का परिकलन करें।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "दोनों आवेशों की आपसी अन्योन्य ऊर्जा वही रहती है। इसके अलावा, दोनों आवेशों की बाह्य विद्युत क्षेत्र के साथ भी अन्योन्य क्रिया ऊर्जा होती है। इसलिए हमें मिलता है"
+                }
+              ],
+              "stage": "given"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\nq_{1} V\\left(\\mathbf{r}_{1}\\right)+q_{2} V\\left(\\mathbf{r}_{2}\\right)=A \\frac{7 \\mu \\mathrm{C}}{0.09 \\mathrm{~m}}+A \\frac{-2 \\mu \\mathrm{C}}{0.09 \\mathrm{~m}}\n$$"
+                }
+              ],
+              "n": "1",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "और नेट स्थिरवैद्युत ऊर्जा है\n$$\n\\begin{array}{r}\nq_{1} V\\left(\\mathbf{r}_{1}\\right)+q_{2} V\\left(\\mathbf{r}_{2}\\right)+\\frac{q_{1} q_{2}}{4 \\pi \\varepsilon_{0} r_{12}}=A \\frac{7 \\mu \\mathrm{C}}{0.09 \\mathrm{~m}}+A \\frac{-2 \\mu \\mathrm{C}}{0.09 \\mathrm{~m}}-0.7 \\mathrm{~J} \\\\\n=70-20-0.7=49.3 \\mathrm{~J}\n\\end{array}\n$$"
+                }
+              ],
+              "label": "निष्कर्ष",
+              "n": "2",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.6",
+      "kind": "example",
+      "number": "2.6",
+      "topic": "द्विध्रुव पुनर्विन्यास से मुक्त ऊष्मा ऊर्जा",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "एक पदार्थ के अणु में $10^{-29} \\mathrm{~cm}$ का स्थायी वैद्युत द्विध्रुव आघूर्ण है। $10^{6} \\mathrm{~V} \\mathrm{~m}^{-1}$ परिमाण के एक शक्तिशाली स्थिरवैद्युत क्षेत्र को लगाकर इस पदार्थ के एक मोल (निम्न ताप पर) को ध्रुवित किया गया है। अचानक क्षेत्र की दिशा $60^{\\circ}$ कोण से बदल दी जाती है। क्षेत्र की नयी दिशा में द्विध्रुवों को पंक्तिबद्ध करने में उन्मुक्त ऊष्मा ऊर्जा का आकलन कीजिए। सुविधा के लिए नमूने का ध्रुवण $100 \\%$ माना जा सकता है।"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "flow": [
+            {
+              "type": "text",
+              "text": "यहाँ प्रत्येक अणु का द्विध्रुव आघूर्ण $=10^{-29} \\mathrm{C} \\mathrm{m}$ है।\nएक मोल पदार्थ में $6 \\times 10^{23}$ अणु होते हैं। इसलिए सभी अणुओं का कुल द्विध्रुव आघूर्ण $p=6 \\times 10^{23} \\times 10^{-29} \\mathrm{C} \\mathrm{m}=6 \\times 10^{-6} \\mathrm{C} \\mathrm{m}$ होता है।"
+            }
+          ],
+          "label": "जानकारी",
+          "stage": "given"
+        },
+        {
+          "type": "formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "द्विध्रुव की स्थितिज ऊर्जा के सूत्र से आरंभिक स्थितिज ऊर्जा $U_{i}=-p E \\cos \\theta=-6 \\times 10^{-6} \\times 10^{6} \\cos 0^{\\circ}=-6 \\mathrm{~J}$ मिलती है।"
+            }
+          ],
+          "label": "मुख्य सूत्र",
+          "stage": "key_formula"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "जब द्विध्रुव घूमकर $\\theta=60^{\\circ}$ के कोण पर आ जाता है, तो अंतिम स्थितिज ऊर्जा $U_{f}=-6 \\times 10^{-6} \\times 10^{6} \\cos 60^{\\circ}=-3 \\mathrm{~J}$ होती है।\nइसलिए स्थितिज ऊर्जा में अंतर $=-3 \\mathrm{~J}-(-6 \\mathrm{~J})=3 \\mathrm{~J}$ है।"
+            }
+          ],
+          "label": "मान रखो",
+          "n": "1",
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः यहाँ ऊर्जा की हानि होती है। द्विध्रुवों को पंक्तिबद्ध करने में पदार्थ यह ऊर्जा ऊष्मा के रूप में मुक्त करता है।"
+            }
+          ],
+          "label": "निष्कर्ष",
+          "n": "2",
+          "stage": "conclusion"
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_2.7",
+      "kind": "example",
+      "number": "2.7",
+      "topic": "चालक-स्थिरवैद्युतिकी के व्यावहारिक उदाहरण",
+      "prompt": [],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "सूखे बालों में कंघा घुमाने के बाद वह कागज़ के टुकड़ों को आकर्षित कर लेता है, क्यों? यदि बाल भीगे हों या वर्षा का दिन हो तो क्या होता है? [ध्यान रहे कि कागज़ विद्युत चालक नहीं है।]"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "कंघा घर्षण से आवेशित हो जाता है। आवेशित कंघे के पास आने पर कागज़ के अणु ध्रुवित हो जाते हैं, जिससे एक नेट आकर्षी बल बनता है। यदि बालों में नमी है या दिन बरसात का है, तो कंघे और बालों के बीच घर्षण कम हो जाता है, और कंघा आवेशित नहीं होता। इसलिए वह कागज़ के छोटे टुकड़ों को आकर्षित नहीं करता।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "साधारण रबर विद्युतरोधी है। परंतु वायुयान के विशेष रबर के पहिए हलके चालक बनाए जाते हैं। यह क्यों आवश्यक है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "जिससे घर्षण से बना आवेश भूमि में चालित हो सके। स्थिरवैद्युत आवेश टायरों के पृष्ठ पर अधिक मात्रा में जमा होकर चिनगारी (स्पार्क) पैदा करता है, जिससे आग लग सकती है।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "जो वाहन ज्वलनशील पदार्थ ले जाते हैं उनकी धातु की रस्सियाँ (ज़ंजीरें) वाहन के गतिमय होने पर धरती को छूती रहती हैं, क्यों?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "कारण (b) के समान ही।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "d",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "एक चिड़िया एक उच्च शक्ति के खुले (अरक्षित) बिजली के तार पर बैठी है, और उसको कुछ नहीं होता। धरती पर खड़ा एक व्यक्ति उसी तार को छूता है और उसे सांघातिक (घातक) धक्का लगता है, क्यों?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "विद्युत धारा केवल तब ही प्रवाहित होती है जब विभवांतर होता है।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.8",
+      "kind": "example",
+      "number": "2.8",
+      "topic": "परावैद्युत गुटके से धारिता में परिवर्तन",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$K$ परावैद्युतांक के पदार्थ के किसी गुटके का क्षेत्रफल समांतर पट्टिका संधारित्र की पट्टिकाओं के क्षेत्रफल के समान है परंतु गुटके की मोटाई $(3 / 4) d$ है, यहाँ $d$ पट्टिकाओं के बीच पृथकन है। पट्टिकाओं के बीच गुटके को रखने पर संधारित्र की धारिता में क्या परिवर्तन हो जाएगा?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "flow": [
+            {
+              "type": "text",
+              "text": "बिना परावैद्युत के, पट्टिकाओं के बीच विद्युत क्षेत्र $E_{0}=V_{0} / d$ है, और विभवांतर $V_{0}$ है।"
+            }
+          ],
+          "label": "जानकारी",
+          "stage": "given"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अब परावैद्युत पदार्थ रखने पर, परावैद्युत के भीतर विद्युत क्षेत्र घटकर $E=E_{0} / K$ हो जाता है। इस स्थिति में नया विभवांतर होगा\n$$\n\\begin{aligned}\n& V=E_{0}\\left(\\frac{1}{4} d\\right)+\\frac{E_{0}}{K}\\left(\\frac{3}{4} d\\right) \\\\\n& =E_{0} d\\left(\\frac{1}{4}+\\frac{3}{4 K}\\right)=V_{0} \\frac{K+3}{4 K}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो",
+          "n": "1",
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "इस प्रकार विभवांतर $(K+3) / 4 K$ के गुणज से घट जाता है, जबकि पट्टिकाओं पर आवेश $Q_{0}$ वही रहता है। विभवांतर घटने पर संधारित्र की धारिता बढ़ जाती है :\n$$\nC=\\frac{Q_{0}}{V}=\\frac{4 K}{K+3} \\frac{Q_{0}}{V_{0}}=\\frac{4 K}{K+3} C_{0}\n$$"
+            }
+          ],
+          "label": "निष्कर्ष",
+          "n": "2",
+          "stage": "conclusion"
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_2.9",
+      "kind": "example",
+      "number": "2.9",
+      "topic": "संधारित्र नेटवर्क की तुल्य धारिता व आवेश",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "चित्र $2.29$ में दर्शाए अनुसार $10 \\mu \\mathrm{~F}$ के चार संधारित्रों के किसी नेटवर्क को $500 \\mathrm{~V}$ के स्रोत से संयोजित किया गया है। (a) नेटवर्क की तुल्य धारिता, तथा (b) प्रत्येक संधारित्र पर आवेश ज्ञात कीजिए। (नोटः किसी संधारित्र पर आवेश उसकी उच्च विभव की पट्टिका पर आवेश के बराबर होता है तथा वह आवेश निम्न विभव की पट्टिका पर आवेश के परिमाण में समान, परंतु विजातीय होता है)।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_21.jpg",
+          "caption": "चित्र $2.29$"
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "दिए गए नेटवर्क में तीन संधारित्र $C_{1}, C_{2}$ तथा $C_{3}$ श्रेणीक्रम में जुड़े हैं। श्रेणीक्रम संयोजन के सूत्र से, इन तीनों की प्रभावी धारिता $C^{\\prime}$ इस प्रकार मिलती है :"
+                }
+              ],
+              "n": "1",
+              "stage": "given"
+            },
+            {
+              "type": "formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& \\frac{1}{C^{\\prime}}=\\frac{1}{C_{1}}+\\frac{1}{C_{2}}+\\frac{1}{C_{3}} \\\\\n& C_{1}=C_{2}=C_{3}=10 \\mu \\mathrm{~F}, C^{\\prime}=(10 / 3) \\mu \\mathrm{F}\n\\end{aligned}\n$$"
+                }
+              ],
+              "label": "मुख्य सूत्र",
+              "stage": "key_formula"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "अब $C_{4}$, $C^{\\prime}$ के पाश्र्वक्रम में जुड़ा है। इसलिए समस्त नेटवर्क की तुल्य धारिता है :\n$$\nC=C^{\\prime}+C_{4}=\\frac{10}{3}+10 \\quad \\mu \\mathrm{~F}=13.3 \\mu \\mathrm{~F}\n$$"
+                }
+              ],
+              "label": "निष्कर्ष",
+              "n": "2",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "b",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "चित्र से स्पष्ट है कि $C_{1}, C_{2}$ तथा $C_{3}$ पर आवेश समान है। मान लीजिए यह आवेश $Q$ है, और $C_{4}$ पर आवेश $Q^{\\prime}$ है।"
+                }
+              ],
+              "label": "जानकारी",
+              "stage": "given"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "AB के सिरों पर विभवांतर $Q / C_{1}$, BC के सिरों पर $Q / C_{2}$ तथा CD के सिरों पर $Q / C_{3}$ है। इन तीनों को जोड़ने पर कुल विभवांतर मिलता है :\n$$\n\\frac{Q}{C_{1}}+\\frac{Q}{C_{2}}+\\frac{Q}{C_{3}}=500 \\mathrm{~V}\n$$\nसाथ ही $Q^{\\prime} / C_{4}=500 \\mathrm{~V}$"
+                }
+              ],
+              "n": "1",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "संधारित्रों की दी गई धारिताओं के मान रखने पर :\n$$\n\\begin{aligned}\n& Q=500 \\mathrm{~V} \\times \\frac{10}{3} \\mu \\mathrm{~F}=1.7 \\times 10^{-3} \\mathrm{C} \\text { तथा } \\\\\n& Q^{\\prime}=500 \\mathrm{~V} \\times 10 \\mu \\mathrm{~F}=5.0 \\times 10^{-3} \\mathrm{C}\n\\end{aligned}\n$$"
+                }
+              ],
+              "label": "मान रखो",
+              "n": "2",
+              "stage": "substitute"
+            }
+          ],
+          "answer": []
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.10",
+      "kind": "example",
+      "number": "2.10",
+      "topic": "दो संधारित्र जोड़ने पर संचित ऊर्जा",
+      "prompt": [],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_23.jpg",
+          "caption": null
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$900 \\mathrm{pF}$ के किसी संधारित्र को $100 \\mathrm{~V}$ बैटरी से आवेशित किया गया [चित्र 2.31(a)]। संधारित्र में संचित कुल स्थिरवैद्युत ऊर्जा कितनी है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "संधारित्र पर आवेश\n$$\nQ=C V=900 \\times 10^{-12} \\mathrm{~F} \\times 100 \\mathrm{~V}=9 \\times 10^{-8} \\mathrm{C}\n$$"
+                }
+              ],
+              "n": "1",
+              "stage": "given"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "संधारित्र द्वारा संचित ऊर्जा\n$$\n\\begin{aligned}\n& =(1 / 2) C V^{2}=(1 / 2) Q V \\\\\n& =(1 / 2) \\times 9 \\times 10^{-8} \\mathrm{C} \\times 100 \\mathrm{~V}=4.5 \\times 10^{-6} \\mathrm{~J}\n\\end{aligned}\n$$"
+                }
+              ],
+              "label": "निष्कर्ष",
+              "n": "2",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "इस संधारित्र को बैटरी से वियोजित करके किसी अन्य $900 \\mathrm{pF}$ के संधारित्र से संयोजित किया गया। निकाय द्वारा संचित स्थिरवैद्युत ऊर्जा कितनी है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "स्थायी स्थिति में दोनों संधारित्रों की धनात्मक पट्टिकाएँ समान विभव पर होती हैं, और उनकी ऋणात्मक पट्टिकाएँ भी समान विभव पर होती हैं। मान लीजिए यह उभयनिष्ठ विभवांतर $V^{\\prime}$ है। तब प्रत्येक संधारित्र पर आवेश $Q^{\\prime}=C V^{\\prime}$ होगा। आवेश संरक्षण के नियम से $Q^{\\prime}=Q /$ 2, जिससे मिलता है $V^{\\prime}=\\mathrm{V} / 2$। तब निकाय की कुल ऊर्जा है :\n$$\n=2 \\times \\frac{1}{2} Q^{\\prime} V^{\\prime}=\\frac{1}{4} Q V=2.25 \\times 10^{-6} \\mathrm{~J}\n$$"
+                }
+              ],
+              "n": "1",
+              "stage": "conclusion"
+            },
+            {
+              "type": "note",
+              "note_type": "tip",
+              "label": "ऊर्जा हानि की व्याख्या",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "अतः (a) से (b) में जाने पर आवेश की कोई हानि नहीं होती, फिर भी अंतिम ऊर्जा आरंभिक ऊर्जा की केवल आधी रह जाती है। शेष ऊर्जा कहाँ जाती है? निकाय को स्थिति (b) तक पहुँचने में कुछ समय लगता है। इस दौरान पहले संधारित्र से दूसरे संधारित्र में एक अस्थायी विद्युत धारा बहती है। इसी दौरान कुछ ऊर्जा ऊष्मा तथा विद्युत चुंबकीय विकिरण के रूप में नष्ट हो जाती है।"
+                }
+              ]
+            }
+          ],
+          "answer": []
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.1",
+      "kind": "exercise",
+      "number": "2.1",
+      "topic": "दो आवेशों के बीच शून्य विभव का बिंदु",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$5 \\times 10^{-8} \\mathrm{C}$ तथा $-3 \\times 10^{-8} \\mathrm{C}$ के दो आवेश $16 \\mathrm{~cm}$ दूरी पर स्थित हैं। दोनों आवेशों को मिलाने वाली रेखा के किस बिंदु पर वैद्युत विभव शून्य होगा? अनंत पर विभव शून्य लीजिए।"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\because q_{1}=5 \\times 10^{-8} \\mathrm{C}$ तथा $q_{2}=-3 \\times 10^{-8} \\mathrm{C}$\nऔर $q_{1}$ तथा $q_{2}$ के बीच दूरी $=r=16 \\mathrm{~cm}=0.16 \\mathrm{~m}$\nमाना $q_{1}$ एवं $q_{2}$ बिन्दुओं $A$ एवं $B$ पर हैं।\nमाना $P$ अभीष्ट बिन्दु है, यानी रेखा $A B$ पर $q_{1}$ से $x$ दूरी पर, जहाँ विद्युत-विभव शून्य है। $q_{1}$ और $q_{2}$ के कारण $P$ पर विभव क्रमशः $V_{1}$ तथा $V_{2}$ हैं।"
+            }
+          ],
+          "label": "जानकारी",
+          "stage": "given"
+        },
+        {
+          "type": "formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\because \\quad V=\\frac{1}{4 \\pi \\varepsilon_{0}} \\cdot \\frac{q}{r}$"
+            }
+          ],
+          "label": "मुख्य सूत्र",
+          "stage": "key_formula"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\therefore \\quad V_{1}=\\frac{9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2} \\times 5 \\times 10^{-8} \\mathrm{C}}{x \\mathrm{~m}}$\nतथा $V_{2}=\\frac{9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2} \\times\\left(-3 \\times 10^{-8} \\mathrm{C}\\right)}{(0.16-x) \\mathrm{m}}$\n$P$ पर कुल विभव $V$ है। इसलिए\n\n$$\nV=V_{1}+V_{2} .\n$$\n\nया $\\quad V=0$\nया $\\quad V=\\left[\\frac{9 \\times 10^{9} \\times 5 \\times 10^{-8}}{x}\\right.$\n\n$$\n\\left.+\\frac{9 \\times 10^{9} \\times\\left(-3 \\times 10^{-8}\\right)}{(0.16-x)}\\right] \\mathrm{NmC}^{-1}=0\n$$\n\nया\n\n$$\n9 \\times 10^{9} \\times 10^{-8}\\left[\\frac{5}{x}-\\frac{3}{0.16-x}\\right]=0\n$$\n\nया\n\n$$\n\\frac{5}{x}=\\frac{3}{0.16-x}\n$$\n\nया $5(0.16-x)=3 x$\nया\n\n$$\n0.8-5 x=3 x\n$$\n\nया\n\n$$\n8 x=0.8\n$$\n\nया\n\n$$\nx=0.1 \\mathrm{~m}\n$$\n\nया\n\n$$\nx=10 \\mathrm{~cm}\n$$"
+            }
+          ],
+          "n": "1",
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अब मान लें कि बिंदु $x$, $5 \\times 10^{-8} \\mathrm{C}$ से $10 \\mathrm{~cm}$ दूरी पर, रेखा $A B$ को आगे बढ़ाने पर स्थित है। ऐसी स्थिति में शर्त यह होगी:\n$\\frac{5}{x}-\\frac{3}{x-0.16}=0$\n\n$$\n5(x-0.16)=3 x\n$$\n\nया\n\n$$\n\\begin{aligned}\n2 x & =0.8 \\mathrm{~m} \\\\\nx & =0.4 \\mathrm{~m} \\\\\nx & =40 \\mathrm{~cm}\n\\end{aligned}\n$$\n\nअत: $5 \\times 10^{-8} \\mathrm{C}$ से ऋणावेश की ओर।"
+            }
+          ],
+          "n": "2",
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** $x=10 \\mathrm{~cm}$ ($5 \\times 10^{-8} \\mathrm{C}$ से $-3 \\times 10^{-8} \\mathrm{C}$ की ओर की रेखा पर, दोनों आवेशों के बीच), तथा $x=40 \\mathrm{~cm}$ ($5 \\times 10^{-8} \\mathrm{C}$ से ऋणावेश की दिशा में, बढ़ी हुई रेखा पर)।"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2",
+      "kind": "exercise",
+      "number": "2.2",
+      "topic": "षट्भुज के केंद्र पर विभव",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$10 \\mathrm{~cm}$ भुजा वाले एक सम-षट्भुज के प्रत्येक शीर्ष पर $5 \\mu \\mathrm{C}$ का आवेश है। षट्भुज के केंद्र पर विभव परिकलित कीजिए।"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना $A B C D E F$ एक समषट्भुज है, जिसकी भुजा $10 \\mathrm{~cm}$ है तथा इसका केन्द्र $O$ है।\n∵ पट्भुज के प्रत्येक शीर्ष पर आवेश $=q$\n\n$$\n\\begin{aligned}\n& =5 \\mu \\mathrm{C}=5 \\times 10^{-6} \\mathrm{C} \\\\\nA B & =B C=C D-D E=E F\n\\end{aligned}\n$$\n\nतथा भुजा $=F A=10 \\mathrm{~cm}=0.10 \\mathrm{~m}$\n∵ समषट्भुज में सभी त्रिभुज समत्रिभुज हैं।\n\n$$\n\\begin{aligned}\n\\therefore O A=O B & =O C=O D=O E \\\\\n& =O F=A B=0.10 \\mathrm{~m}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "जानकारी",
+          "stage": "given"
+        },
+        {
+          "type": "formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\because \\quad V=\\frac{1}{4 \\pi \\varepsilon_{0}} \\cdot \\sum_{i=1}^{6} \\frac{q_{i}}{r_{i}}$"
+            }
+          ],
+          "label": "मुख्य सूत्र",
+          "stage": "key_formula"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\therefore \\quad V=\\frac{1}{4 \\pi \\varepsilon_{0}} \\times \\frac{q}{r} \\times 6$\nया $\\quad V=\\frac{6 \\times 9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2} \\times 5 \\times 10^{-6} \\mathrm{C}}{0.1 \\mathrm{~m}}$\nया $V=270 \\times 10^{3} \\times 10 \\mathrm{~V}$\nया $V=2.7 \\times 10^{6} \\mathrm{~V}$"
+            }
+          ],
+          "label": "मान रखो",
+          "n": "1",
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अत: ष्ट्मुज के केंद्र पर विभव\n\n$$\n=2.7 \\times 10^{6} \\mathrm{~V}\n$$"
+            }
+          ],
+          "label": "निष्कर्ष",
+          "n": "2",
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** $2.7 \\times 10^{6} \\mathrm{~V}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.3",
+      "kind": "exercise",
+      "number": "2.3",
+      "topic": "सम विभव पृष्ठ की पहचान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$6 \\mathrm{~cm}$ की दूरी पर अवस्थित दो बिंदुओं A एवं B पर दो आवेश $2 \\mu \\mathrm{C}$ तथा $-2 \\mu \\mathrm{C}$ रखे हैं।"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "निकाय के सम विभव पृष्ठ की पहचान कीजिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\because A$ एवं $B$ पर दो आवेश $2 \\mu \\mathrm{C}$ और $-2 \\mu \\mathrm{C}$ रखे हैं।\n\n$$\n\\text { तथा } A B=6 \\mathrm{~cm}=0.06 \\mathrm{~m}\n$$\n\nदो दिए गए आवेशों के निकाय का सम विभव पृष्ठ $A$ एवं $B$ को मिलाने वाली रेखा के अभिलम्ब पर है।\n\nपृष्ठ, $A B$ के मध्य-बिन्दु $C$ से गुजरता है।\n\n$$\n\\therefore \\frac{1}{4 \\pi \\varepsilon_{0}}\\left[\\frac{2 \\times 10^{-6} \\mathrm{C}}{0.03 \\mathrm{~m}}+\\frac{\\left(-2 \\times 10^{-6} \\mathrm{C}\\right)}{0.03 \\mathrm{~m}}\\right]=0\n$$\n\nइस प्रकार, इस पृष्ठ के प्रत्येक बिन्दु पर समान विभव है और वह शून्य है।\n\nअत: यह एक सम विभव पृष्ठ है।\nअत: $A B$ के अभिलंबवत् एवं इसके मध्य-बिंदु से होकर जाने वाले तल के प्रत्येक बिंदु पर विभव शून्य है।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $AB$ के मध्य-बिन्दु से होकर जाने वाला, $AB$ के अभिलंबवत् तल — इस पर हर बिंदु पर विभव शून्य है।"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "इस पृष्ठ के प्रत्येक बिंदु पर विद्युत क्षेत्र की दिशा क्या है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "विद्युत क्षेत्र सदैव धनावेश से ऋणावेश की ओर कार्य करता है। यहाँ यह धनावेशित बिंदु $A$ से ऋणावेशित बिंदु $B$ की ओर कार्य करता है। यह दिशा सम विभव पृष्ठ के अभिलंब में होती है।\n\nअतः पृष्ठ के हर बिंदु पर विद्युत क्षेत्र, तल के अभिलंब अर्थात् $A B$ दिशा में है।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** सम विभव पृष्ठ के प्रत्येक बिंदु पर विद्युत क्षेत्र $A$ से $B$ की ओर, तल के अभिलंब दिशा में है।"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.4",
+      "kind": "exercise",
+      "number": "2.4",
+      "topic": "गोलीय चालक के भीतर और बाहर विद्युत क्षेत्र",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$12 \\mathrm{~cm}$ त्रिज्या वाले एक गोलीय चालक के पृष्ठ पर $1.6 \\times 10^{-7} \\mathrm{C}$ का आवेश एकसमान रूप से वितरित है।"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "गोले के अंदर"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "गोलीय चालक पर दिया गया आवेश केवल उसके पृष्ठ पर रहता है। इसलिए चालक के अंदर विद्युत क्षेत्र शून्य होना चाहिए। इसे गॉस के नियम से भी दिखाया जा सकता है:"
+                }
+              ],
+              "stage": "given"
+            },
+            {
+              "type": "formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\because \\quad \\boldsymbol{\\phi}=\\oint_{S} \\mathbf{E . d S}$\n\nया\n\n$$\n\\phi=\\frac{q}{\\varepsilon_{0}}\n$$"
+                }
+              ],
+              "label": "मुख्य सूत्र",
+              "stage": "key_formula"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "∵ $q=0$ चालक के भीतर\n$\\therefore \\quad \\phi=0$\nया $E . d s=0$\nया $\\quad \\mathbf{E}=0$\nअत: गोले के अंदर विद्युत क्षेत्र शून्य है।"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $E=0$"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "गोले के ठीक बाहर"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "गोले के ठीक बाहर स्थित किसी बिंदु के लिए, पूरे आवेश को गोले के केंद्र पर संकेंद्रित मान सकते हैं। कूलॉम के नियम से,"
+                }
+              ],
+              "stage": "given"
+            },
+            {
+              "type": "formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\nE=\\frac{1}{4 \\pi \\varepsilon_{0}} \\cdot \\frac{q}{r^{2}}\n$$"
+                }
+              ],
+              "label": "मुख्य सूत्र",
+              "stage": "key_formula"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "∴\n\n$$\nE=\\frac{9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2} \\times 16 \\times 10^{-7} \\mathrm{C}}{(0.12 \\mathrm{~m})^{2}}\n$$\n\nया\n\n$$\nE=\\frac{9 \\times 16 \\times 10^{2}}{144 \\times 10^{-2}} \\cdot \\mathrm{NC}^{-1}\n$$\n\nया\n\n$$\nE=\\frac{14.4 \\times 10^{2}}{14.4 \\times 10^{-3}} \\mathrm{NC}^{-1}\n$$\n\nया\n\n$$\nE=10^{5} \\mathrm{NC}^{-1}\n$$"
+                }
+              ],
+              "label": "मान रखो",
+              "n": "1",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "अत: गोले के ठीक बाहर विद्युत क्षेत्र $10^{5} \\mathrm{NC}^{-1}$ है।"
+                }
+              ],
+              "label": "निष्कर्ष",
+              "n": "2",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $E=10^{5} \\mathrm{NC}^{-1}$"
+            }
+          ]
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "गोले के केंद्र से $18 \\mathrm{~cm}$ पर अवस्थित, किसी बिंदु पर विद्युत क्षेत्र क्या होगा ?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "गोले के केन्द्र से बिन्दु की दूरी\n\n$$\n=x=18 \\mathrm{~cm}=0.18 \\mathrm{~m}\n$$"
+                }
+              ],
+              "stage": "given"
+            },
+            {
+              "type": "formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "∵\n\n$$\nE=\\frac{1}{4 \\pi \\varepsilon_{0}} \\cdot \\frac{q}{x^{2}}\n$$"
+                }
+              ],
+              "label": "मुख्य सूत्र",
+              "stage": "key_formula"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "∴\n\n$$\nE=9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2} \\times \\frac{16 \\times 10^{-7} \\mathrm{C}}{(0.18 \\mathrm{~m})^{2}}\n$$\n\nया\n\n$$\nE=\\frac{14.4 \\times 10^{2}}{3.24 \\times 10^{-2}} \\mathrm{NC}^{-1}\n$$\n\nया\n\n$$\nE=4.44 \\times 10^{4} \\mathrm{NC}^{-1}\n$$\n\nया\n\n$$\nE=4.4 \\times 10^{4} \\mathrm{NC}^{-1}\n$$"
+                }
+              ],
+              "label": "मान रखो",
+              "n": "1",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "अत: गोले के केन्द्र से $18 \\mathrm{~cm}$ पर विद्युत क्षेत्र $4.4 \\times 10^{4} \\mathrm{NC}^{-1}$ है।"
+                }
+              ],
+              "label": "निष्कर्ष",
+              "n": "2",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $E=4.4 \\times 10^{4} \\mathrm{NC}^{-1}$"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.5",
+      "kind": "exercise",
+      "number": "2.5",
+      "topic": "परावैद्युत भरने पर धारिता में परिवर्तन",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "एक समांतर पट्टिका संधारित्र, जिसकी पट्टिकाओं के बीच वायु है, की धारिता $8 \\mathrm{pF}$ $\\left(1 \\mathrm{pF}=10^{-12} \\mathrm{~F}\\right)$ है। यदि पट्टिकाओं के बीच की दूरी को आधा कर दिया जाए और इनके बीच के स्थान में $6$ परावैद्युतांक का एक पदार्थ भर दिया जाए तो इसकी धारिता क्या होगी?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "flow": [
+            {
+              "type": "text",
+              "text": "∵ पट्टिकाओं के बीच वायु वाले समान्तर पट्टिका से संधारित्र की धारिता $C_{0}=8 \\mathrm{pF}$\nया\n\n$$\nC_{0}=8 \\times 10^{-12} \\mathrm{~F}\n$$\n\nमाना प्रत्येक पट्टिका का क्षेत्रफल $=A$\nतथा पट्टिकाओं के बीच दूरी $=d$\nइस प्रकार, $C_{0}=\\frac{\\varepsilon_{0} A}{d}$\n\nपट्टिकाओं के बीच परावैद्युत पदार्थ के साथ उनके बीच की दूरी\n\n$$\n\\begin{aligned}\nd^{\\prime} & =\\frac{d}{2} \\\\\n\\varepsilon & =\\varepsilon_{0} K\n\\end{aligned}\n$$\n\n$C=$ संधारित्र की परावैद्युत पदार्थ की उपस्थिति में धारिता\nतथा\n\n$$\nK=6\n$$"
+            }
+          ],
+          "label": "जानकारी",
+          "stage": "given"
+        },
+        {
+          "type": "formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "इस प्रकार, $C=\\frac{\\varepsilon A}{d}$\nया\n\n$$\nC=\\frac{\\varepsilon_{0} K A}{\\left(\\frac{d}{2}\\right)} .\n$$\n\nया\n\n$$\nC=2 K \\frac{\\varepsilon_{0} A}{d} .\n$$"
+            }
+          ],
+          "label": "मुख्य सूत्र",
+          "stage": "key_formula"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "समीकरण (ii) को समीकरण (i) से भाग देने पर,\n\n$$\n\\frac{C}{C_{0}}=2 K\n$$\n\nया\n\n$$\nC=2 K C_{0}\n$$\n\nया\n\n$$\nC=2 \\times 6 \\times 8 \\times 10^{-12} \\mathrm{~F}\n$$\n\nया\n\n$$\nC=96 \\times 10^{-12} \\mathrm{~F}\n$$\n\nया\n\n$$\nC=96 \\mathrm{pF}\n$$"
+            }
+          ],
+          "label": "मान रखो",
+          "n": "1",
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अत: अभीष्ट धारिता $=96 \\mathrm{pF}$"
+            }
+          ],
+          "label": "निष्कर्ष",
+          "n": "2",
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** $C=96 \\mathrm{pF}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.6",
+      "kind": "exercise",
+      "number": "2.6",
+      "topic": "श्रेणीक्रम संधारित्रों की धारिता तथा विभवांतर",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$9 \\mathrm{pF}$ धारिता वाले तीन संधारित्रों को श्रेणीक्रम में जोड़ा गया है।"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "संयोजन की कुल धारिता क्या है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "श्रेणी संयोजन की धारिता $=C_{S}$\nश्रेणी संयोजन में कुल धारिता"
+                }
+              ],
+              "stage": "given"
+            },
+            {
+              "type": "formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\because \\quad \\frac{1}{C_{s}}=\\frac{1}{C_{1}}+\\frac{1}{C_{2}}+\\frac{1}{C_{3}}$"
+                }
+              ],
+              "label": "मुख्य सूत्र",
+              "stage": "key_formula"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\therefore \\quad \\frac{1}{C_{s}}=\\frac{1}{9 \\times 10^{-12}}+\\frac{1}{9 \\times 10^{-12}}+\\frac{1}{9 \\times 10^{-12}}$\nया $\\frac{1}{C_{s}}=\\frac{1+1+1}{9 \\times 10^{-12}}$\nया $\\frac{1}{C_{s}}=\\frac{1}{3 \\times 10^{-12}}$\nया $C_{s}=3 \\times 10^{-12} \\mathrm{~F}=3 \\mathrm{pF}$"
+                }
+              ],
+              "label": "मान रखो",
+              "n": "1",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "अत: संयोजन की कुल धारिता $=3 \\mathrm{pF}$"
+                }
+              ],
+              "label": "निष्कर्ष",
+              "n": "2",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $C_s = 3 \\mathrm{pF}$"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "यदि संयोजन को $120$ V के संभरण (सप्लाई) से जोड़ दिया जाए, तो प्रत्येक संधारित्र पर क्या विभवांतर होगा?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "माना संधारित्रों के विभव क्रमश: $V_{1}, V_{2}$ तथा $V_{3}$\n$V_{1}, V_{2}$ तथा $V_{3}$ का योग $=V_{1}+V_{2}+V_{3}=120 \\mathrm{~V}$\nमाना प्रत्येक संधारित्र पर $q$ आवेश है, तब\n$q=C V$ से,"
+                }
+              ],
+              "label": "जानकारी",
+              "stage": "given"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\nV_{1}=\\frac{q}{C_{1}}\n$$\n\nइसी प्रकार,\n\n$$\nV_{2}=\\frac{q}{C_{2}}\n$$\n\nतथा\n\n$$\nV_{3}=\\frac{q}{C_{3}}\n$$\n\n∴\n\n$$\n\\frac{q}{C_{1}}+\\frac{q}{C_{2}}+\\frac{q}{C_{3}}=120\n$$\n\n$$\n\\left[\\because V_{1}+V_{2}+V_{3}=120 \\mathrm{~V}\\right]\n$$\n\nया\n\n$$\nq\\left(\\frac{1}{C_{1}}+\\frac{1}{C_{2}}+\\frac{1}{C_{3}}\\right)=120 \\mathrm{~V}\n$$\n\nया\n\n$$\n\\frac{q}{3 \\times 10^{-12}}=120 \\mathrm{~V}\n$$\n\nया\n\n$$\nq=120 \\times 3 \\times 10^{-12} \\mathrm{C}\n$$\n\nया\n\n$$\nq=360 \\times 10^{-12} \\mathrm{C}\n$$\n\nया\n\n$$\nq=0.36 \\mu \\mathrm{C}\n$$"
+                }
+              ],
+              "n": "1",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "∴\n\n$$\nV_{1}+V_{2}+V_{3}=\\frac{q}{C}\n$$\n\nतथा\n\n$$\nV_{1}=V_{2}=V_{3}\n$$\n\n∴\n\n$$\nV_{s}=\\frac{q}{C}\n$$\n\nया\n\n$$\nV_{s}=\\frac{360 \\times 10^{-12} \\mathrm{C}}{9 \\times 10^{-12} \\mathrm{~F}}\n$$\n\nया\n\n$$\nV_{s}=40 \\mathrm{~V}\n$$"
+                }
+              ],
+              "n": "2",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "अत: प्रत्येक संधारित्र पर विभवान्तर होगा $=40 \\mathrm{~V}$"
+                }
+              ],
+              "label": "निष्कर्ष",
+              "n": "3",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** प्रत्येक संधारित्र पर विभवांतर $=40 \\mathrm{~V}$"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.7",
+      "kind": "exercise",
+      "number": "2.7",
+      "topic": "पार्श्वक्रम संधारित्रों की धारिता तथा आवेश",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$2 \\mathrm{pF}, 3 \\mathrm{pF}$ और $4 \\mathrm{pF}$ धारिता वाले तीन संधारित्र पार्श्वक्रम में जोड़े गए हैं।"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "संयोजन की कुल धारिता क्या है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$C_{p}=$ संयोजन (समांतर) की कुल धारिता"
+                }
+              ],
+              "stage": "given"
+            },
+            {
+              "type": "formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\nC_{p}=C_{1}+C_{2}+C_{3}\n$$"
+                }
+              ],
+              "label": "मुख्य सूत्र",
+              "stage": "key_formula"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "या\n\n$$\nC_{p}=\\left(2 \\times 10^{-12}+3 \\times 10^{-12}+4 \\times 10^{-12}\\right) \\mathrm{F}\n$$\n\nया\n\n$$\nC_{p}=9 \\times 10^{-12} \\mathrm{~F}\n$$\n\nया\n\n$$\nC_{p}=9 \\mathrm{pF}\n$$"
+                }
+              ],
+              "label": "मान रखो",
+              "n": "1",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "अत: संयोजन की कुल धारिता $=9 \\mathrm{pF}$"
+                }
+              ],
+              "label": "निष्कर्ष",
+              "n": "2",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $C_p = 9 \\mathrm{pF}$"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "यदि संयोजन को $100$ V के संभरण से जोड़ दें तो प्रत्येक संधारित्र पर आवेश ज्ञात कीजिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "माना संधारित्र $C_{1}, C_{2}$ एवं $C_{3}$ पर आवेश क्रमश:\n$q_{1}, q_{2}$ तथा $q_{3}$ हैं।"
+                }
+              ],
+              "stage": "given"
+            },
+            {
+              "type": "formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "∵\n\n$$\nq=C V \\text { तथा } V=100 \\mathrm{~V}\n$$"
+                }
+              ],
+              "label": "मुख्य सूत्र",
+              "stage": "key_formula"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "∴\n\n$$\nq_{1}=C_{1} V\n$$\n\n$$\n\\begin{aligned}\n& =2 \\times 10^{-12} \\mathrm{~F} \\times 100 \\mathrm{~V} \\\\\n& =2 \\times 10^{-10} \\mathrm{C} \\\\\nq_{2} & =C_{2} \\mathrm{~V} \\\\\n& =3 \\times 10^{-12} \\mathrm{~F} \\times 100 \\mathrm{~V} \\\\\n& =3 \\times 10^{-10} \\mathrm{C}\n\\end{aligned}\n$$\n\nतथा\n\n$$\n\\begin{aligned}\nq_{3} & =C_{3} \\mathrm{~V} \\\\\n& =4 \\times 10^{-12} \\mathrm{~F} \\times 100 \\mathrm{~V} \\\\\n& =4 \\times 10^{-10} \\mathrm{C}\n\\end{aligned}\n$$"
+                }
+              ],
+              "label": "मान रखो",
+              "n": "1",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "अत: प्रत्येक संधारित्र पर आवेश क्रमश: $2 \\times 10^{-10} \\mathrm{C}$, $3 \\times 10^{-10} \\mathrm{C}$ तथा $4 \\times 10^{-10} \\mathrm{C}$ हैं।"
+                }
+              ],
+              "label": "निष्कर्ष",
+              "n": "2",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $q_{1}=2 \\times 10^{-10} \\mathrm{C}$, $q_{2}=3 \\times 10^{-10} \\mathrm{C}$, $q_{3}=4 \\times 10^{-10} \\mathrm{C}$"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.8",
+      "kind": "exercise",
+      "number": "2.8",
+      "topic": "समांतर पट्टिका संधारित्र की धारिता तथा आवेश",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "पट्टिकाओं के बीच वायु वाले एक समांतर पट्टिका संधारित्र की प्रत्येक पट्टिका का क्षेत्रफल $6 \\times 10^{-3} \\mathrm{~m}^{2}$ तथा उनके बीच की दूरी $3 \\mathrm{~mm}$ है। संधारित्र की धारिता को परिकलित कीजिए। यदि इस संधारित्र को $100$ V के संभरण से जोड़ दिया जाए तो संधारित्र की प्रत्येक पट्टिका पर कितना आवेश होगा?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "∵ समान्तर पट्टिका संधारित्र की प्रत्येक पट्टिका का क्षेत्रफल, $A=6 \\times 10^{-3} \\mathrm{~m}^{2}$\n\nपट्टिकाओं के बीच दूरी $=3 \\mathrm{~mm}=3 \\times 10^{-3} \\mathrm{~m}$\nतथा $\\varepsilon_{0}=8.854 \\times 10^{-12} \\mathrm{C}^{2} \\mathrm{~N}^{-1} \\mathrm{~m}^{-2}$\nमाना पट्टिकाओं के बीच वायु के साथ समान्तर पट्टिका एवं संधारित्र की धारिता $=C_{0}$"
+            }
+          ],
+          "stage": "given"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\because \\quad C_{0}=\\frac{\\varepsilon_{0} A}{d}$\n$\\therefore \\quad C_{0}=\\frac{8.854 \\times 10^{-12} \\times 6 \\times 10^{-3}}{3 \\times 10^{-3}} \\mathrm{~F}$\nया $C_{0}=17.708 \\times 10^{-12} \\mathrm{~F}$\nया $C_{0}=17.708 \\mathrm{pF}$\nया $\\quad C_{0}=18 \\mathrm{pF}$\nअत: पट्टिका संधारित्र की धारिता $=18 \\mathrm{pF}$"
+            }
+          ],
+          "n": "1",
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "संधारित्र पर लगाया गया संभरण $=V_{0}=100 \\mathrm{~V}$\nसंधारित्र की प्रत्येक पट्टिका पर आवेश $=q_{0}$\n$\\because \\quad q_{0}=C_{0} V_{0}$\n$\\therefore \\quad q_{0}=17.708 \\times 10^{-12} \\times 100 \\mathrm{C}$\nया $q_{0}=17.708 \\times 10^{-10} \\mathrm{C}$\nया $q_{0}=1771 \\times 10^{-10} \\mathrm{C}$\nया $q_{0}=18 \\times 10^{-9} \\mathrm{C}$\n\nअत: संधारित्र की प्रत्येक पट्टिका पर आवेश होगा $=1.8 \\times 10^{-9} \\mathrm{C}$"
+            }
+          ],
+          "n": "2",
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** धारिता $=18 \\mathrm{pF}$; प्रत्येक पट्टिका पर आवेश $=1.8 \\times 10^{-9} \\mathrm{C}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.9",
+      "kind": "exercise",
+      "number": "2.9",
+      "topic": "परावैद्युत शीट डालने का प्रभाव",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "अभ्यास $2.8$ में दिए गए संधारित्र की पट्टिकाओं के बीच यदि $3 \\mathrm{~mm}$ मोटी अश्रक की एक शीट (पत्तर) (परावैद्युतांक $=6$ ) रख दी जाती है तो स्पष्ट कीजिए कि क्या होगा जब"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "विभव (वोल्टेज) संभरण जुड़ा ही रहेगा।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "संधारित्र की वायु माध्यम के साथ धारिता\n\n$$\n=C_{0}\n$$\n\n∵ पट्रिकाओं के बीच दूरी $=d=3 \\times 10^{-3} \\mathrm{~m}$\nअश्रक (माइका) की पट्टी की मोटाई\n\n$$\n=t=3 \\times 10^{-3} \\mathrm{~m}=d\n$$\n\nपट्टी का परावैद्युतांक $K=6$\n∵ पट्रिकाओं के बीच के स्थान को अश्रक की पट्टी पूर्ण रूप से घेर लेती है।\n\nतथा संधारित्र की धारिता $=C$"
+                }
+              ],
+              "stage": "given"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "∴\n\n$$\nC=K C_{0}\n$$\n\nया\n\n$$\nC=6 \\times 18 \\times 10^{-12} \\mathrm{~F}\n$$\n\nया\n\n$$\nC=108 \\times 10^{-12} \\mathrm{~F}\n$$\n\nया\n\n$$\nC=108 \\mathrm{pF}\n$$\n\nइस प्रकार, अश्रक की पट्टी रखने के पश्चात् संधारित्र की धारिता $K$ गुना हो जाती है।"
+                }
+              ],
+              "n": "1",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "∴ संधारित्र पर विभव $=100 \\mathrm{~V}$\nअश्रक की पट्टी लगे संधारित्र पर आवेश\n\n$$\nq^{\\prime}=C V\n$$\n\nया $q^{\\prime}=108 \\times 10^{-12} \\times 100 \\mathrm{C}$\nया $q^{\\prime}=108 \\times 10^{-8} \\mathrm{C}$\nअत: $q^{\\prime}=K C_{0} V$\nया $q^{\\prime}=K q$\nया $q^{\\prime}=6 \\times 18 \\times 19^{-9} \\mathrm{C}$\nया $q^{\\prime}=108 \\times 10^{-8} \\mathrm{C}$\nअतः पट्टिकाओं पर आवेश, वायु माध्यम की तुलना में $K$ गुना हो जाता है। यानी संभरण जुड़ा रहने पर अभ्रक की पट्टी डालने से आवेश बढ़ जाता है।"
+                }
+              ],
+              "n": "2",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** धारिता $K$ गुना अर्थात् $108 \\mathrm{pF}$ हो जाती है; आवेश भी $K$ गुना बढ़कर $q^{\\prime}=108 \\times 10^{-8} \\mathrm{C}$ हो जाता है।"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "संभरण को हटा लिया जाएगा?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "संधारित्र की अभ्रक माध्यम के साथ धारिता"
+                }
+              ],
+              "stage": "given"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\nC=K C_{0}\n$$\n\nया $C=108 \\times 10^{-12} \\mathrm{~F}$\nया $C=108 \\mathrm{pF}$\nजब संभरण हटा दिया जाता है (या काट दिया जाता है), तो $V=0$ हो जाता है। इस स्थिति में पट्टिकाओं पर विभवांतर $V^{\\prime} K$ गुना कम हो जाता है।\n\nया\n\n$$\nV^{\\prime}=\\frac{100}{6} \\mathrm{~V}=16.67 \\mathrm{~V}\n$$"
+                }
+              ],
+              "n": "1",
+              "stage": "substitute"
+            },
+            {
+              "type": "step",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "अब $C 6$ गुना हो जाता है।\nइस प्रकार, यदि संभरण हटाने के बाद आवेश $=q_{1}$\nतब $q_{1}=C V^{\\prime}$\nया $q_{1}=K C_{0} \\times \\frac{100}{6}$\nया $q_{1}=6 \\times 18 \\times 10^{-12} \\times \\frac{100}{6}$\nया $q_{1}=18 \\times 10^{-10} \\mathrm{C}$\nया $q_{1}=18 \\times 10^{-9} \\mathrm{C}$\nअतः संधारित्र पर आवेश, अभ्रक माध्यम के साथ भी उतना ही रहता है जितना वायु माध्यम के साथ था।"
+                }
+              ],
+              "n": "2",
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** संधारित्र पर विभवांतर घटकर $V^{\\prime}=16.67 \\mathrm{~V}$ हो जाता है; आवेश ($q_{1}=1.8 \\times 10^{-9} \\mathrm{C}$) वायु-माध्यम जितना ही रहता है, अपरिवर्तित।"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.10",
+      "kind": "exercise",
+      "number": "2.10",
+      "topic": "संधारित्र में संचित स्थिरवैद्युत ऊर्जा",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$12 \\mathrm{pF}$ का एक संधारित्र $50 \\mathrm{~V}$ की बैटरी से जुड़ा है। संधारित्र में कितनी स्थिरवैद्युत ऊर्जा संचित होगी?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "flow": [
+            {
+              "type": "text",
+              "text": "∵ संधारित्र की धारिता,\n\n$$\nC=12 \\mathrm{pF}\n$$\n\nया $C=12 \\times 10^{-12} \\mathrm{~F}$\n∵ संधारित्र से जुड़े संभरण की वोल्टता $V=50 \\mathrm{~V}$"
+            }
+          ],
+          "label": "जानकारी",
+          "stage": "given"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना संधारित्र में संग्रहीत स्थिर वैद्युत ऊर्जा $=U$\n\n$$\n\\begin{array}{ll}\n\\because & U=\\frac{1}{2} C V^{2} \\\\\n\\therefore & U=\\frac{1}{2} \\times 12 \\times 10^{-12} \\times(50)^{2} \\mathrm{~J}\n\\end{array}\n$$\n\nया $U=6 \\times 2500 \\times 10^{-12} \\mathrm{~J}$\nया $U=150 \\times 10^{-10} \\mathrm{~J}$\nया $U=15 \\times 10^{-8} \\mathrm{~J}$."
+            }
+          ],
+          "label": "मान रखो",
+          "n": "1",
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अत: संधारित्र में स्थिर वैद्युत ऊर्जा संचित होगी\n\n$$\n=1.5 \\times 10^{-8} \\mathrm{~J}\n$$"
+            }
+          ],
+          "label": "निष्कर्ष",
+          "n": "2",
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** $U=1.5 \\times 10^{-8} \\mathrm{~J}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.11",
+      "kind": "exercise",
+      "number": "2.11",
+      "topic": "संधारित्रों को जोड़ने पर ऊर्जा हानि",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$200 \\mathrm{~V}$ संभरण (सप्लाई) से एक $600 \\mathrm{pF}$ के संधारित्र को आवेशित किया जाता है। फिर इसको संभरण से वियोजित कर देते हैं तथा एक अन्य $600 \\mathrm{pF}$ वाले अनावेशित संधारित्र से जोड़ देते हैं। इस प्रक्रिया में कितनी ऊर्जा का ह्रास होता है?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "flow": [
+            {
+              "type": "text",
+              "text": "∵ संधारित्र की धारिता\n\n$$\n\\begin{aligned}\n& =C_{1}=600 \\mathrm{pF} \\\\\n& =600 \\times 10^{-12} \\mathrm{~F} \\\\\n& =6 \\times 10^{-10} \\mathrm{~F}\n\\end{aligned}\n$$\n\nतथा $V_{1}=$ संभरण वोल्टता $=200 \\mathrm{~V}$"
+            }
+          ],
+          "label": "जानकारी",
+          "stage": "given"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना आरम्भिक संग्रहीत स्थिर वैद्युत ऊर्जा $=U_{1}$\nतब $U=\\frac{1}{2} C V^{2}$\n$\\therefore \\quad U_{1}=\\frac{1}{2} C_{1} V_{1}^{2}$\nया $U_{1}=\\frac{1}{2} \\times 6 \\times 10^{-10} \\times(200)^{2} \\mathrm{~J}$\nया $U_{1}=12 \\times 10^{-6} \\mathrm{~J}$\nया $U_{1}=12 \\mu \\mathrm{~J}$\n∵ दूसरे संधारित्र की धारिता $C_{2}=600 \\mathrm{pF}$\n\n$$\n=6 \\times 10^{-10} \\mathrm{~F}\n$$\n\nतथा दूसरे संधारित्र की धारिता $q_{2}=0$\nपहले संधारित्र पर आवेश $=q_{1}=C_{1} V_{1}$\nया $q_{1}=6 \\times 10^{-10} \\times 200 \\mathrm{C}$\nया $q_{1}=12 \\times 10^{-8} \\mathrm{C}$\nपहले संधारित्र को दूसरे अनावेशित संधारित्र से जोड़ने पर, आवेश दोनों संधारित्रों में बराबर बँट जाता है।\n\nजोड़ने पर, यदि प्रत्येक संधारित्र पर आवेश $=q$\nतब\n\n$$\nq=\\frac{q_{1}+q_{2}}{2}\n$$\n\nया\n\n$$\nq=\\frac{12 \\times 10^{-8}+0_{\\mathrm{C}}}{2}\n$$\n\nया\n\n$$\nq=6 \\times 10^{-8} \\mathrm{C}\n$$\n\nयदि $C_{1}$ पर अंतिम स्थिर वैद्युत ऊर्जा रह जाती है $=U_{2}$\nतब\n\n$$\nU_{2}=\\frac{1}{2} \\times \\frac{q^{2}}{C}\n$$\n\nया\n\n$$\nU_{2}=\\frac{1}{2} \\times \\frac{\\left(6 \\times 10^{-8}\\right)^{2}}{6 \\times 10^{-10}}\n$$\n\nया\n\n$$\nU_{2}=3 \\times 10^{-6} \\mathrm{~J}\n$$\n\nया\n\n$$\nU_{2}=3 \\mu \\mathrm{~J}\n$$\n\nयदि प्रक्रम में ऊर्जा ह्रास $=U$\nतब\n\n$$\nU=U_{1}-U_{2}\n$$\n\n∴\n\n$$\nU=12 \\times 10^{-6} \\mathrm{~J}-6 \\times 10^{-6} \\mathrm{~J}\n$$\n\nया\n\n$$\nU=6 \\times 10^{-6} \\mathrm{~J}\n$$\n\nअत: इस प्रक्रिया में ऊर्जा का ह्रास होता है $=6 \\times 10^{-6} \\mathrm{~J}$"
+            }
+          ],
+          "n": "1",
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "flow": [
+            {
+              "type": "text",
+              "text": "द्वितीय विधि-\n\n$$\nV_{1}=\\frac{1}{2} C_{1} V_{1}^{2}\n$$\n\nया\n\n$$\nV_{1}=\\frac{1}{2} \\times 6 \\times 10^{-10} \\times(200)^{2} \\mathrm{~J}\n$$\n\nया\n\n$$\nV_{1}=12 \\times 10^{-6} \\mathrm{~J}\n$$\n\nतथा\n\n$$\nC_{2}=6 \\times 10^{-10} \\mathrm{~F} \\text { एवं } V_{2}=0\n$$\n\nमाना सम्मिलित विभव $=V$\n∴\n\n$$\nV=\\frac{C_{1} V_{1}+C_{2} V_{2}}{C_{1}+C_{2}}\n$$\n\nया\n\n$$\nV=\\frac{6 \\times 10^{-10} \\times 200+6 \\times 10^{-10} \\times 0}{6 \\times 10^{-10}+6 \\times 10^{-10}} \\mathrm{~V}\n$$\n\nया\n\n$$\nV=-\\frac{12 \\times 10^{-8}}{12 \\times 10^{-10}}\n$$\n\nया\n\n$$\nV=100 \\mathrm{~V}\n$$\n\nयदि अंतिम वैद्युत ऊर्जा $=U_{2}$, तब\n\n$$\nU_{2}=\\frac{1}{2}\\left(C_{1}+C_{2}\\right) V^{2}\n$$\n\nया\n\n$$\nU_{2}=\\frac{1}{2} \\times\\left(6 \\times 10^{-10}+6 \\times 10^{-10}\\right) \\times(100)^{2} \\mathrm{~J}\n$$\n\nया\n\n$$\nU_{2}=6 \\times 10^{-6} \\mathrm{~J}\n$$\n\nस्थिर वैद्युत ऊर्जा में ह्रास $=U_{1}-U_{2}$\n\n$$\n\\begin{aligned}\n& =12 \\times 10^{-6} \\mathrm{~J}-6 \\times 10^{-6} \\mathrm{~J} \\\\\n& =6 \\times 10^{-6} \\mathrm{~J}\n\\end{aligned}\n$$\n\nअत: इस प्रक्रिया में ऊर्जा का ह्रास होता है\n\n$$\n=6 \\times 10^{-6} \\mathrm{~J}\n$$"
+            }
+          ],
+          "n": "2",
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** ऊर्जा ह्रास $=6 \\times 10^{-6} \\mathrm{~J}$ (दोनों विधियों से समान)"
+        }
+      ]
+    }
+  ]
+}

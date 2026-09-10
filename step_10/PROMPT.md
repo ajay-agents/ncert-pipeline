@@ -42,6 +42,32 @@ with sync_playwright() as p:
   they've resolved silently falls back to a generic serif font instead of
   failing loudly — the PDF would still "work", just render Devanagari
   wrong. `networkidle` alone is not the same guarantee.
+- **Always call `page.emulate_media(media="screen")` immediately before
+  `page.pdf()`.** Chromium's default print-media text-shaping pipeline has
+  a real bug mis-rendering Devanagari pre-base vowel-sign reordering
+  (े/ि) for text whose nearest explicitly-font-sized ancestor differs
+  from its own font-size — caught for real on physics-12-2's own chapter
+  title (`.s3` at 38px, nested under `.s1`'s 12.5px page-wide base):
+  "स्थिरवैद्युत विभव तथा धारिता" came out visibly garbled in the exported
+  PDF (extra/misplaced matra strokes) despite the underlying HTML text
+  being byte-correct (confirmed with `repr()` — this is a rendering
+  defect, not a data bug) and despite rendering perfectly on-screen and
+  in a plain screenshot. Root-caused across ~10 isolated test pages
+  before finding the fix: forcing screen-media emulation makes
+  `page.pdf()` use the (unaffected) screen shaping path instead —
+  `page.pdf()` still paginates via `@page` regardless of the emulated
+  media type, so this doesn't reintroduce the "ignores `@page`" problem
+  the `prefer_css_page_size` bullet above warns about; verified byte-
+  identical page count and A4 dimensions with vs. without the call.
+  physics-12-1 never hit this because none of its own title/heading text
+  happened to need pre-base vowel reordering — this is a standing
+  per-export fix for every future chapter, not a one-off patch, since any
+  Hindi chapter's title or a `.s12`/`.s71`-style section-divider label
+  could contain a word that needs it. Do this even if the chapter's own
+  title looks fine in a quick check — the failure is invisible until you
+  specifically zoom into the exported PDF's own rendered text (a live
+  browser screenshot of the same HTML will NOT show it), so it's cheap
+  enough to apply unconditionally rather than re-diagnose per chapter.
 - `prefer_css_page_size=True` + `print_background=True` are what makes
   the export honor the `@page`/`@media print` rules already in the base
   CSS (A4, 9mm margins, colored backgrounds kept) instead of Playwright's

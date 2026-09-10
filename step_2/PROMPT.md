@@ -72,6 +72,25 @@ broken, not a threshold to relax.
    counts look off from a prior run of the same chapter, that's a second
    signal something upstream drifted.
 
+   **The mismatch isn't always "solutions manual has extra questions
+   appended at the end."** A chapter's own solutions manual can instead
+   have extra questions INTERSPERSED within its main "अभ्यास प्रश्न"/
+   exercise section — not just added afterward as a separate "अतिरिक्त
+   प्रश्न" block. Caught for real: physics-12-3's solutions manual has
+   प्रश्न 3, 4, 10 and 12 as real questions that don't exist anywhere in
+   the current rationalised chapter's own 9 exercises, scattered among
+   प्रश्न 1-13 rather than confined to a trailing block — so a plain
+   number-match would have paired the chapter's own q_3.3 with प्रश्न 3
+   (a completely different question) and every exercise after that would
+   have drifted by a growing offset, all before even reaching the
+   separately-appended "अतिरिक्त प्रश्न" section (which was ALSO entirely
+   orphaned, as usual). Never assume the orphan set is confined to a
+   contiguous trailing range just because that's the common shape — grep
+   every solutions-manual entry's distinctive content against the whole
+   chapter before trusting a number-based join, and when a mismatch this
+   shaped turns up, build the merge by hand (content-verified pairs, one
+   at a time) rather than patching `join_solutions()`'s output.
+
    Also watch `join_solutions()`'s own fallback for a matched item with no
    parts yet (`elif hit.parts and not q.parts: q.parts = hit.parts`): once a
    number-only match is wrong, this line can wholesale-replace a question's
