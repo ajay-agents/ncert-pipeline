@@ -23,5 +23,227 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Hindi-only chapter (Physics Class 12 Chapter 5, चुंबकत्व एवं द्रव्य / Magnetism and Matter), matching prior chapters' precedent - only chapter.hi.pdf + solutions.hi.pdf provided. Both mathpix outputs well above the suspicious-size threshold, image counts sum cleanly to the images/ directory's file count with no collisions (14+14=28). This chapter's own content (bar magnet field lines, Gauss's law for magnetism, earth's magnetism, diamagnetism/paramagnetism/ferromagnetism, hysteresis) is less arithmetic-derivation-heavy and more descriptive/conceptual than chapter 4 - the 22 table rows in the chapter file (vs 0 in chapter 4) likely reflect comparison tables (e.g. dia/para/ferromagnetic material properties), worth confirming at stage 2 extraction rather than assuming they're OCR noise."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-10T07:38:13.000404+00:00",
+    "inputs": {
+      "chapter.hi.md": "471bd1609f625a88",
+      "solutions.hi.md": "73772285779566a4"
+    },
+    "counts": {
+      "examples_hi": 5,
+      "exercises_hi": 7,
+      "solutions_hi": 25,
+      "matched": 7,
+      "orphan_solutions_discarded": 18,
+      "unmatched_questions": 0,
+      "aligned_items": 12
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter (Physics 12 Ch5, चुंबकत्व एवं द्रव्य / Magnetism and Matter). Extracted directly by the coordinator (all 5 examples + 7 exercises small enough to read and build as schema.Item objects in one pass, no sub-agent dispatch needed) rather than via 3 separate model extraction passes + match.join_solutions() - the scale of the numbering mismatch (below) made a hand-built, content-verified merge the only safe approach from the start, same as physics-12-3's precedent. CRITICAL FINDING: this chapter's 'Rationalised' mismatch is far larger than any prior chapter's. The current chapter keeps only 7 exercises (5.1-5.7); the solutions manual numbers प्रश्न 1-25, an entire prior edition's Earth's-magnetism section (dip angle, declination, neutral points) plus hysteresis/domain and Curie's-law problems that NCERT's 2023-24 rationalisation cut from this chapter outright - confirmed by grep: none of this content appears anywhere in chapter.hi.md, which has no Earth's-magnetism section and no additional-exercises block at all. Only 7 of 25 solutions-manual entries matched anything, and not contiguously: प्रश्न 1-2 precede the first match, प्रश्न 9-11 are inserted between two matches, प्रश्न 13-25 are all orphaned after the last one. match.norm_num()'s own chapter-prefixing behavior would have made this WORSE than a silent miss: since the solutions manual numbers its own entries bare ('1','2','3'...), norm_num(raw, chapter='5') prepends the chapter number, so प्रश्न 3 normalises to '5.3' and collides with the chapter's own UNRELATED exercise 5.3 (a solenoid question) instead of its real counterpart (exercise 5.1, a bar-magnet-torque question) - needs_review would have stayed empty throughout, since every number 'matched' something. Resolved by verifying every one of the 7 exercises against its solutions-manual entry BY CONTENT (numeric values: field strength, torque, turns count, moment) before writing anything - mapping: q_5.1->प्रश्न3, q_5.2->प्रश्न4, q_5.3->प्रश्न5, q_5.4->प्रश्न6, q_5.5->प्रश्न7, q_5.6->प्रश्न8, q_5.7->प्रश्न12. Full mapping table and the complete 18-entry orphan list (with why each is genuinely absent from the current chapter, not an extraction gap) in 02_extract/match_report.md. Extended step_2/PROMPT.md with this case as a new class of the scattered-mismatch trap - a whole prior edition's worth of orphaned content, not just a handful of scattered extras, plus the norm_num() chapter-prefix collision risk this specific shape exposes. Noted, not extracted: प्रश्न 3's own restated-question preamble (before 'हल') has an OCR-dropped decimal point ('45x10^-2 J' instead of '4.5x10^-2 J') - harmless here since q_5.1's solution field was extracted starting at 'हल' (matching prior chapters' own solution-boundary convention), which correctly and consistently reads '4.5x10^-2 J' throughout its own worked steps; the glitched restatement itself was never carried into any extracted field."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-10T07:39:54.454989+00:00",
+    "inputs": {
+      "chapter.hi.md": "a32648acf902a3c3"
+    },
+    "counts": {
+      "examples_hi_items": 5,
+      "examples_hi_chars": 28339,
+      "qa_hi_items": 7,
+      "qa_hi_chars": 18759,
+      "merged_total_items": 12
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split via pipeline.mdio.markdown_to_chapter() + merge_by_id() (hi-only, no en side) + render.render() kind-filtered. Round-trip verified: both output files parse cleanly with tag._parse, and their item counts (5 + 7) sum to the merged chapter's total (12) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-10T07:41:12.933495+00:00",
+    "inputs": {
+      "examples.hi.md": "cddacefa5971e88c",
+      "qa.hi.md": "06a28c6123076e20"
+    },
+    "counts": {
+      "combined_hi_items": 12,
+      "combined_hi_chars": 46914
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination via pipeline.mdio.markdown_to_chapter() on both stage-3 files + plain item-list concatenation (hi-only, no en side) + render.render(). Round-trip verified: combined.hi.md parses cleanly with tag._parse, its item count (12) matches stage 3's examples+qa total exactly, and its char count (22870) matches 02_extract/chapter.hi.md's own size exactly, confirming a lossless split/recombine round trip."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-10T08:13:11.968287+00:00",
+    "inputs": {
+      "combined.hi.md": "a32648acf902a3c3",
+      "chapter.hi.pdf": "1556c744d7af6fc2",
+      "solutions.hi.pdf": "63f4760d02b6e8fe"
+    },
+    "counts": {
+      "items_checked": 12,
+      "text_corrections_applied": 0,
+      "structural_figure_fixes": 2,
+      "figures_before": 8,
+      "figures_after": 6
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 0,
+    "notes": "Verified every question/solution/final_answer field in all 12 items directly against rendered source PDF pages (chapter.hi.pdf p.138-146/151, solutions.hi.pdf p.94-100 - offsets 135 and 92 respectively, both confirmed via 2+ sample points) - zero text corrections needed anywhere; the coordinator's own direct-from-source extraction at stage 2 held up completely under a full page-by-page re-check, not just a spot-check. One near-miss resolved with no action needed: solutions.hi.md's own Mathpix transcription of प्रश्न 3's restated-question preamble reads '45x10^-2 J' (dropped decimal point) where the actual PDF page (94) clearly prints '4.5x10^-2 J' - a Mathpix OCR artifact confirmed against the real page, not a source discrepancy, and moot regardless since that preamble was never part of any extracted field (q_5.1's solution starts at 'हल'). Two genuine structural figure fixes applied directly to the Chapter object (Correction objects cannot address a figure list, only text fields) - see 05_verify/corrections.md for the full story: (1) ex_5.3's 5 fragmented, partially mislabelled figure crops (missing 2 of 7 panels entirely) replaced with one freshly-cropped composite image showing all 7 panels of the source's own single 'चित्र 5.6', newly saved as 01_mathpix/images/fig_physics-12-5_28.jpg; (2) q_5.7 was missing both of its accompanying diagrams entirely (axial-point and equatorial-point setups, already downloaded by mathpix as fig_physics-12-5_17/_18 but never attached at extraction) - both added. Net figure count 8 -> 6. gate_math_parity confirms zero text-field impact from these figure-only changes; gate_counts and gate_solutions_present both pass."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-10T08:27:43.787971+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "76e566c810e9ea04"
+    },
+    "counts": {
+      "items_processed": 12,
+      "solution_blocks_simplified": 7,
+      "solution_blocks_unchanged": 18,
+      "restore_failures": 0,
+      "items_marked_simplified": 6
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen_hi",
+      "gate_answers_unchanged_hi",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter - gate_bilingual skipped, matching prior precedent. Done directly by the coordinator (freeze -> hand-simplify -> restore -> merge -> gate), not dispatched, given the modest scale (12 items, 25 solution blocks total). 7 blocks genuinely simplified across 6 items (ex_5.2, ex_5.5, q_5.1, q_5.3, q_5.4, q_5.7 - q_5.7 had 2 of its own blocks simplified, one per part) - all were run-on sentences merging 2-3 clauses with no punctuation between them (a genuine mathpix/source-transcription habit, not this pipeline's own artifact), split into short sentences per step_6/simplify.md; one case additionally names the governing rule at point of use (Maxwell's right-hand rule) where the original just stated the result. 18 blocks left unchanged - already short-sentenced and plain-register, nothing to gain from rewriting, a valid outcome per step_6/simplify.md rather than churn for its own sake. 0 ProtectionErrors across all 25 blocks touched. All 3 gates (gate_question_text_frozen, gate_answers_unchanged, gate_math_parity) pass against the stage-5 snapshot - confirmed by direct diff, not just the gate result: every math span, number and unit token reproduced exactly once in each rewritten block."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-10T08:47:08.374914+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "d6b80b1182eda58e"
+    },
+    "counts": {
+      "items_processed": 12,
+      "parts": 20,
+      "concept_blocks": 7,
+      "formula_blocks": 4,
+      "step_blocks": 12,
+      "note_blocks": 0,
+      "table_blocks": 0,
+      "figure_blocks": 6,
+      "answer_blocks": 5,
+      "prompt_blocks": 32
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_hi",
+      "protect_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Done directly by the coordinator (12 items, modest scale - no sub-agent dispatch needed). tag._parse succeeds (14 top-level children: 12 items + 2 section headings); protect.parity shows no drift; prompt blocks (32) and answer blocks (5) verified byte-identical before vs after via direct regex extraction (mdio.markdown_to_chapter() cannot round-trip stage-7's nested container structure by design, so this substitutes for the usual mdio-based check). Fixed 4-stage labels (जानकारी/मुख्य सूत्र/मान रखो/निष्कर्ष) applied wherever a solution had genuine given/key-formula/substitute/conclusion structure (q_5.1-5.4, q_5.6, q_5.7's both parts) - 'निष्कर्ष' used for a solution's own final computation/statement when NO separate :::answer block follows it (q_5.3, q_5.6's both parts, q_5.7's both parts' direction explanations), 'मान रखो' when a separate boxed :::answer already supplies the conclusion (q_5.1, q_5.2's both parts, q_5.4). ex_5.1, ex_5.3, ex_5.4 and q_5.5's two parts left entirely unstructured (plain paragraph text) - each is a qualitative multi-clause conceptual answer or a parallel case-by-case analysis ((a)-(g) for ex_5.3; (i)/(ii) sub-cases for q_5.5) that doesn't genuinely fit the given/formula/substitute/conclude shape, matching step_9/PROMPT.md's already-documented judgement call for this content shape - forcing structure here would misrepresent the source, not clarify it. q_5.7's two figures (fig_17 axial, fig_18 equatorial), extracted at item level at stage 5, moved into their respective part's own solution flow at stage 7 per the 'link figures to the point in the solution where they are referenced' rule - each diagram genuinely belongs to one specific part's own scenario, not the item as a whole. No notes or tables anywhere in this chapter's 12 items."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-10T08:50:13.994934+00:00",
+    "inputs": {
+      "structured.hi.md": "c62f20e80cb4355f"
+    },
+    "counts": {
+      "items": 12,
+      "parts": 20,
+      "distinct_figure_srcs": 6,
+      "stage_given": 12,
+      "stage_key_formula": 4,
+      "stage_substitute": 6,
+      "stage_conclusion": 18,
+      "json_bytes": 63654
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "reparse_item_count_matches_fresh",
+      "reparse_part_count_matches_fresh",
+      "reparse_figure_src_count_matches_fresh"
+    ],
+    "model_calls": 0,
+    "notes": "Reused prior chapters' deterministic tree-walk script unchanged - no code changes needed for this chapter. Gate: re-parsed the JSON and compared item count (12), part count (20), and distinct figure-src count (6) against a fresh, independent count from structured.hi.md - all three match exactly. Spot-checked the full stage-tagged block list by hand: of the 12 'given' blocks, 7 are explicit :::concept wraps and 5 are genuine unwrapped lead-in sentences that precede a :::formula block (ex_5.2, ex_5.5 parts a/b/c, q_5.6 part b) - correctly inferred 'given' by position per the documented algorithm, matching the same pattern already seen and accepted in prior chapters (e.g. physics-12-4's ex_4.1), not a bug. ex_5.1, ex_5.3, ex_5.4's four parts, and q_5.5's two parts (left entirely unstructured at stage 7 as qualitative/parallel-case answers) each correctly serialize as a single 'conclusion'-staged block, matching the single-stageable-block rule."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-10T10:33:23.700165+00:00",
+    "inputs": {
+      "structured.hi.json": "ca2c9d4bc4cda403"
+    },
+    "counts": {
+      "html_chars": 67412,
+      "items": 12,
+      "distinct_figure_srcs": 6
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "manual_readback",
+      "tag_balance",
+      "figure_srcs_resolve",
+      "numeric_readback_vs_06_simplify",
+      "leftover_latex_commands"
+    ],
+    "model_calls": 0,
+    "notes": "Reused physics-12-4's render_page.py/latex.py/final.hi.css almost verbatim. Grepped this chapter's own 08_tag JSON for every \\command used (27 distinct after filtering JSON-escape false positives) and diffed against latex.py's macro table: found \\cong ('approximately equal to', used once for a rounded intermediate result in ex_5.5(c)) genuinely missing - added to GREEK_MAP as U+2245, same convention as the existing \\approx. No \\begin{gathered}/cases - only aligned/array, both already handled. Confirmed \\circ is used only as a degree sign throughout (no function-composition usage). Found and fixed TWO real bugs during the mandatory read-back, both now documented in step_9/PROMPT.md as durable traps: (1) a bare :::figure sitting directly inside :::solution (not nested in a concept/step/formula's own flow) has no 'stage' key, so group_blocks()/render_group() misrouted it into the note-rendering branch, which reads a 'flow' key a raw figure block doesn't have - rendered as an empty, contentless 'सुझाव' pill with the actual diagram silently dropped. Caught via the figure-src-count gate (only 4 of 6 distinct srcs resolved in the first render) on q_5.7, whose stage-7 formatting had correctly moved each part's own diagram to the top of that part's solution flow. Fixed by giving figure-type blocks their own group kind, rendered as a real figure element outside the .s82 two-child flex-row wrapper. (2) _strip_redundant_enumeration's clause-boundary search (for a last labelled clause with no following marker to bound it) had no decimal-point guard on its '.'/'।' search - on q_5.6, whose part (b) prompt's only such punctuation before its own final '?' was the '.' inside '$7.5 \\times 10^{-2} \\mathrm{~T}$', this truncated the clause mid-number; the truncated fragment ('...$7') still happened to be a literal substring of the real part prompt, so the safety check meant to catch a bad guess passed on a coincidence, and raw unconverted LaTeX ('\\times', '\\mathrm', a stray '$') got spliced directly onto the visible page. Fixed by adding the same digit-adjacency guard text_to_lines' own sentence-splitter already uses, at both call sites inside the function. Re-verified after both fixes: tag balance clean (484 div/120 span/32 p/6 figure/29 svg, open=close on every tag), 6/6 figures resolve against the real 09_design/images output directory, 29/29 distinct question/final_answer numbers from 06_simplify present in the rendered HTML, 0 leftover bare LaTeX command names, 0 stray unconverted backslash sequences anywhere in the rendered text. Manually read back q_5.6 (confirms the item-level prompt now correctly shows only the shared setup sentence, enumeration cleanly stripped), q_5.7 (both figures render with correct captions at the top of their own part's solution), q_5.2 and q_5.5 (both correctly kept their full item-level prompt un-stripped, since their own nested (i)/(ii) markers genuinely don't verify as redundant - the safe fallback, not a bug), and ex_5.3 (the freshly-cropped composite figure renders with its full 'चित्र 5.6 (a)-(g)' caption)."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-10T10:39:31.804375+00:00",
+    "inputs": {
+      "final.hi.html": "7e207e59b5dd6579",
+      "final.hi.css": "6dd9f6a29b740a1c"
+    },
+    "counts": {
+      "pdf_bytes": 1338466,
+      "page_count": 10,
+      "blank_pages": 0,
+      "numbers_checked": 29,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium, including the standing page.emulate_media(media='screen') fix for the Devanagari PDF-shaping bug. Gates: page count 10 (sane for 12 items: 5 examples + 7 exercises), 0 blank pages, numeric read-back against the PDF's own extracted text found all 29 distinct multi-digit numbers from 06_simplify/chapter.simplified.hi.md's question/final_answer fields. Rendered and visually inspected 2 exported pages: page 3 confirms ex_5.3's freshly-cropped composite figure ('चित्र 5.6 (a)-(g)') displays all 7 panels cleanly with correct labels; page 9 confirms q_5.7's two previously-dropped figures (fixed at stage 9) now render correctly, each positioned at the top of its own part's solution with the right caption, alongside correctly colored जानकारी/मान रखो/निष्कर्ष pills. Full page-by-page visual read-back (including both stage-9 render-script bug fixes: the dropped-figure group-kind fix and the decimal-point clause-boundary fix) already done during stage 9's own prep; this stage's own PDF re-export and gate re-run confirm nothing regressed after those fixes."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-10T12:15:03.793845+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "5ddfc49fff743b8e",
+      "chapter.hi.pdf": "1556c744d7af6fc2",
+      "solutions.hi.pdf": "63f4760d02b6e8fe"
+    },
+    "counts": {
+      "corrections_applied": 2,
+      "items_affected": 2,
+      "stages_touched": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_05verify",
+      "tag_parse_06simplify",
+      "tag_parse_07format"
+    ],
+    "model_calls": 1,
+    "notes": "POST-COMPLETION correction round, from a dispatched fork's from-scratch audit of final.hi.pdf against both source PDFs, user-approved to fix. Both findings are same-page self-contradictions confirmed printed in the source solutions manual itself (verified by the auditing agent against solutions.hi.pdf pp.99-100 and chapter.hi.pdf p.146) - per this pipeline's own errata rule, this narrow exception (a genuine textbook error that contradicts itself on the same page) gets corrected once flagged and approved, rather than left as printed. (1) q_5.7(ii): the solution states the equatorial field is 'opposite direction' to the magnetic moment, then immediately concludes the SAME direction (S to M) already given for the axial case in part (i) - reversed to 'M to S' so the stated conclusion actually matches its own 'opposite' premise. The P/M/N pole-labelling convention itself (confirmed genuinely printed that way in the source) was left untouched - only the direction was reversed. (2) ex_5.5(d): formula printed mu_r (dimensionless) where physically it must be mu_0, since mu_r alone can't produce units of Tesla - confirmed the substituted numeric answer (794A) already assumes mu_0 under the hood, so only the displayed symbol was wrong, not the arithmetic. Applied identically across 05_verify, 06_simplify and 07_format, then 08_tag/09_design/10_pdf mechanically regenerated. All gates pass (tag balance, 6/6 figures, 29/29 numbers, 0 leftover commands, page count 10/no blank pages)."
   }
 ]

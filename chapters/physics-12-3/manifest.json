@@ -410,5 +410,31 @@
     ],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium, including the standing page.emulate_media(media='screen') fix (documented in step_10/PROMPT.md) for the Devanagari PDF-shaping bug. Gates: page count 13 (sane for 16 items: 7 examples + 9 exercises), 0 blank pages, numeric read-back against the PDF's own extracted text found all 59 distinct multi-digit numbers from 06_simplify/chapter.simplified.hi.md's question/final_answer fields, using the superscript-run separator normalization. Full 13-page visual read-back already done during stage 9's own prep (3 render/CSS bugs found and fixed there, plus a 9-way OCR correction round in stage 5 propagated through to this export) - this stage's own PDF re-export and gate re-run confirm nothing regressed after those fixes."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-10T12:37:38.138835+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "28d3d74ee4aee26c",
+      "chapter.hi.pdf": "40eb7bb83fdfed71",
+      "solutions.hi.pdf": "35ef460d0d97b9df"
+    },
+    "counts": {
+      "corrections_applied": 10,
+      "items_affected": 5,
+      "stages_touched": 3
+    },
+    "gates_failed": {
+      "stage8_counts_match": true,
+      "stage9_gates": true,
+      "stage10_gates": true
+    },
+    "gates_passed": [
+      "tag_parse_05verify",
+      "tag_parse_06simplify",
+      "tag_parse_07format"
+    ],
+    "model_calls": 1,
+    "notes": "POST-COMPLETION correction round, from a dispatched fork's from-scratch audit of final.hi.pdf against both source PDFs, user-approved to fix (blanket 'fix all flagged errors' for chapters 3/4/5). 10 corrections across 5 items: (1) q_3.2: two spelling typos - 'pratirogh' (wrong ligature) -> 'pratirodh' (resistance), and 'votej' (missing la) -> correct voltage spelling (06_simplify's own reworded prose already used the correct spelling by coincidence, so this one only needed fixing in 05_verify/07_format). (2) q_3.4: unit-notation inconsistency within the same solution - the worked-out line uses 'Omega.m' (cdot) but the final-answer sentence switches to 'Omega-m' (hyphen); normalized to the cdot form used everywhere else including the item's own final_answer field. (3) q_3.6: same-page self-contradiction confirmed baked into the source solutions manual itself. The question states the initial current is 3.2A; the solution's given-data restatement and first resistance computation both dropped the decimal ('32A', '230/32') while the rest of the derivation (R_t computed with the correctly-decimalled 2.8A, and the final 't-27=...+27' conclusion) is only consistent with 3.2A - fixed the given-data line, the R_27 computation's first fraction, and a later '(t-32)' denominator substitution that should read '(t-27)' to match the formula immediately above it and the final answer. (4) q_3.7: same-page self-contradiction (also confirmed baked into the source solutions manual) - the derivation establishes I=10/17 A two lines earlier, then the immediate next line's arithmetic used '10/7' instead; the printed result (4/17) is only reachable via 2/5 x 10/17, not 2/5 x 10/7 (=4/7) - fixed to 10/17. (5) q_3.7: figure duplication - three distinct images of the same circuit were attached (fig_23: plain textbook diagram matching the question's own 'Figure 3.20' reference; fig_28: the same circuit from the solutions manual with node D labelled but no current directions, redundant with fig_23+fig_29 combined; fig_29: the fully current-labelled diagram [I1, I2, D/E/F] the derivation actually walks through) - kept fig_23 and fig_29, dropped the redundant fig_28. (6) ex_3.1(b): a footnote marker ('thermal speed*') was printed with no corresponding footnote text ever extracted; traced via a direct page render of chapter.hi.pdf p.7 to a real footnote ('See equation (12.23) of the Physics textbook, Class 11, Chapter 12') that mathpix's OCR dropped as small print at the page bottom - confirmed against the source and appended back (Rule 5: nothing invented, this was directly read off the source page). Applied identically across 05_verify, 06_simplify and 07_format (each field's exact current text independently confirmed via repr() dumps before editing), then 08_tag/09_design/10_pdf mechanically regenerated. All gates pass: tag balance, stage-8 item/part/figure counts match a fresh count (16/7/7), 59/59 numbers present in HTML and PDF, 0 leftover LaTeX commands, PDF page count 12/no blank pages."
   }
 ]

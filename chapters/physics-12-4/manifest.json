@@ -267,5 +267,31 @@
     ],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium, including the standing page.emulate_media(media='screen') fix (documented in step_10/PROMPT.md) for the Devanagari PDF-shaping bug. Gates: page count 14 (sane for 25 items: 12 examples + 13 exercises), 0 blank pages, numeric read-back against the PDF's own extracted text found all 74 distinct multi-digit numbers from 06_simplify/chapter.simplified.hi.md's question/final_answer fields, using the superscript-run separator normalization. Additionally rendered 2 exported pages to images (fitz pixmap) and visually confirmed the newly-added \\mathscr script-capital-I (U+2110) and omega glyphs render with real, correct font coverage in the actual PDF - not just present in extracted text - since a font substitution failure at export time would be invisible to the text-based gate alone. Full page-by-page visual read-back (including the stage 9 fix for the \\, thin-space bug) already done during stage 9's own prep; this stage's own PDF re-export and gate re-run confirm nothing regressed after that fix."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-10T12:28:25.600675+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "bb2e722fe09202e3",
+      "chapter.hi.pdf": "d0490627713edd1c",
+      "solutions.hi.pdf": "c8b457921f3c4054"
+    },
+    "counts": {
+      "corrections_applied": 9,
+      "items_affected": 7,
+      "stages_touched": 3
+    },
+    "gates_failed": {
+      "stage8_counts_match": true,
+      "stage9_gates": true,
+      "stage10_gates": true
+    },
+    "gates_passed": [
+      "tag_parse_05verify",
+      "tag_parse_06simplify",
+      "tag_parse_07format"
+    ],
+    "model_calls": 1,
+    "notes": "POST-COMPLETION correction round, from a dispatched fork's from-scratch audit of final.hi.pdf against both source PDFs, user-approved to fix (blanket 'fix all flagged errors' for chapters 3/4/5). 9 corrections across 7 items, all confirmed against the actual current stage text before fixing: (1) q_4.1: formula 'B=mu0.2pi/n over 4 pi r' is not a valid rendering of B=(mu0/4pi).(2 pi I n)/r - fixed the symbol garbling only; left the already-reviewed cm/m unit typo on r=8cm=8e-2cm untouched (separate, previously-decided-to-leave issue). (2) q_4.3: same class of garbling 'mu0.21 over 4 pi r' -> 'mu0/4pi . 2I/r'. (3) q_4.6: 'F=11B' (digit-like glyphs) -> 'F=IlB'; also fixed the given-line's second 'l=10A' -> 'I=10A' (current, not length) - left the already-approved 0.2T(given)/0.27T(substituted) mismatch untouched. (4) q_4.7: formula missing its '/r' divisor (present in the numeric substitution line right after) -> added; also fixed the given-line's l1/l2 -> I1/I2 (both are currents in Amperes, matching this chapter's known systemic I/l OCR ambiguity). (5) q_4.9: question-text spelling fix (legitimate stage-5-style correction against the source textbook, same precedent as ex_2.6's cm->C m fix): 'oodhrvaadharat:' -> correct 'oordhvaadharatah' (vertically). (6) q_4.10: removed the trailing item-level solution block restating already-given data + the k1=k2 spring-constant assumption - confirmed 100% redundant with the item-level prompt (which already states every value AND explicitly says spring constants are equal), and confirmed via the stage-8 JSON that it was already being silently discarded by the 'if parts: solution_blocks=[]' rule - removing it changes nothing about the rendered output, it just removes a dead, orphaned block that read as a structural/ordering mistake. (7) q_4.12: symbol mislabel 'eta_e' -> 'm_e' (electron mass, already used correctly earlier in the same solution's given block). Applied identically across 05_verify, 06_simplify and 07_format (each field's exact current text independently confirmed via repr() dumps before editing, since 06_simplify's wording differs from 05_verify's in several spots), then 08_tag/09_design/10_pdf mechanically regenerated. All gates pass: tag balance, stage-8 item/part/figure counts match a fresh count (25/21/7), 74/74 numbers present in HTML and PDF, 0 leftover LaTeX commands, PDF page count 14/no blank pages."
   }
 ]

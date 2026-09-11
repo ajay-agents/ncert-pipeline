@@ -474,6 +474,68 @@ what actually resolves in the rendered HTML) is exactly what catches
 this — treat a mismatch there as a render-script bug to fix, not just a
 JSON bug, before assuming stage 8 is at fault.
 
+**A figure can also be a bare top-level block directly inside `:::solution`
+(not nested in any concept/step/formula's own flow, and not an inline
+mid-sentence reference either) — a render script's `group_blocks()`/
+`render_group()` pairing can mishandle this shape differently from, and in
+addition to, the flow-nested case just above.** A block with `type:
+"figure"` carries no `stage` key (only `assign_stages()`-eligible types —
+step/formula/concept — ever get one), so code that groups blocks by
+`b.get('stage')` and treats any `stage is None` block as a "note" (the
+established pattern for a `:::note` block, which genuinely has no stage)
+will silently misroute a bare figure into that same note-rendering branch.
+A note's renderer reads `note.get('flow', [])` for its content — a raw
+figure block has no `flow` key at all (only `src`/`caption`), so this
+renders an empty, contentless note pill (defaulting to a generic
+"सुझाव"/tip label) with the actual diagram nowhere on the page. Caught for
+real: physics-12-5's q_5.7, whose stage 7 formatting moved each part's own
+diagram to the top of that part's own solution flow (exactly per the
+"link figures to the point in the solution where they are referenced"
+rule) — both figures vanished, replaced by two empty tip-styled pills.
+Fix: give a `type: "figure"` block its own group kind in `group_blocks()`
+(check `b['type'] == 'figure'` before the `stage` dispatch, not after), and
+render it as a real figure element — and don't force it through the same
+"exactly two children" flex-row wrapper (`.s82`) a stage pill's
+label-cell-plus-content-cell layout assumes (documented earlier in this
+file for the conclusion pill's boxed-answer echo); let it sit directly in
+the `.s81` stack instead, the same way an item-level figure row already
+does. The figure-src-count check below catches this the same way it
+catches the flow-nested case — a mismatch there means the render script
+dropped something, not that stage 8's JSON is short a figure.
+
+**`_strip_redundant_enumeration`'s own clause-boundary search for the
+*last* labelled clause (no following `(x)` marker to bound it) can mistake
+a bare decimal point inside a number for the clause's sentence-ending
+punctuation.** It searches for the first `।`/`.` after the last marker to
+find where that clause ends — with no guard against a `.` that's actually
+part of a number like `7.5` sitting inside an inline math span the clause
+happens to contain before its own real terminator (or, as happened here,
+with no real terminator besides one at the very end via `?`, so the
+decimal point is the *only* candidate the naive regex finds at all).
+Landing mid-number truncates the candidate clause right after the digit
+before the point — and if that truncated fragment still happens to be a
+literal substring of the corresponding part's own prompt (a short
+fragment like `"...$7"` very easily is, since it's a prefix of that part's
+own `"...$7.5 \times ...`"`), the substring check meant to *catch* a bad
+guess passes anyway, on a coincidence. The function then genuinely
+believes the whole enumeration was verified, splices the text on either
+side of that same wrong boundary, and the result is raw, never-converted
+LaTeX (`\times`, `\mathrm`, a stray `$`) spliced straight onto the visible
+page — not hidden inside a container a gate would catch, just sitting in
+plain sight in the middle of a sentence. Caught for real: physics-12-5's
+q_5.6, whose part (b) prompt's only sentence-ending punctuation before its
+own final "?" was the "." inside "$7.5 \times 10^{-2} \mathrm{~T}$", and
+whose truncated `"...$7"` fragment was (coincidentally) still a valid
+substring of the real, untruncated part prompt. Fix: give this
+boundary-search regex the same decimal-point guard `text_to_lines`'s own
+sentence-splitter already has — don't match a `.` immediately preceded (or
+followed) by a digit — applied everywhere `_strip_redundant_enumeration`
+searches for a clause or enumeration end boundary, not just one of the two
+call sites. The mandatory manual read-back is what catches this kind of
+thing when it happens to slip past every other check (a substring
+coincidence isn't something a gate is shaped to catch) — read the actual
+rendered prompt text for every multi-part item, not just its numbers.
+
 **This path has no code gate on the final HTML.** The check is manual and
 not optional: before calling the chapter done, read every `final_answer`
 and every `question` in `06_simplify/chapter.simplified.<lang>.md` (not

@@ -659,7 +659,7 @@ $$
 
 $$
 \begin{aligned}
-B=\frac{\mu_{0} .2 \pi / n}{4 \pi r} & =\frac{10^{-7} \times 2 \times 3.14 \times 0.4 \times 100}{8 \times 10^{-2}} \\
+B=\frac{\mu_{0}}{4 \pi} \cdot \frac{2 \pi I n}{r} & =\frac{10^{-7} \times 2 \times 3.14 \times 0.4 \times 100}{8 \times 10^{-2}} \\
 & =3.1 \times 10^{-4} \mathrm{~T}
 \end{aligned}
 $$
@@ -724,7 +724,7 @@ $$
 :::
 
 :::step{n="1" label="मान रखो"}
-चुम्बकीय क्षेत्र का परिणाम $B=\frac{\mu_{0} .21}{4 \pi r}=10^{-7} \times \frac{2 \times 50}{2.5}$
+चुम्बकीय क्षेत्र का परिणाम $B=\frac{\mu_{0}}{4 \pi} \cdot \frac{2I}{r}=10^{-7} \times \frac{2 \times 50}{2.5}$
 
 $$
 =4 \times 10^{-6} \mathrm{~T}
@@ -820,14 +820,14 @@ $$
 :::solution{label="हल"}
 :::concept{label="जानकारी"}
 यहाँ चुम्बकीय क्षेत्र और धारा की दिशा के बीच $90^{\circ}$ का कोण है, क्योंकि परिनालिका का चुम्बकीय क्षेत्र उसकी अक्ष के अनुदिश है और तार अक्ष के लम्बवत रखा है।
-दिया है, $l=3 \mathrm{~cm}=3 \times 10^{-2} \mathrm{~m}, l=10 \mathrm{~A}, B=0.2 \mathrm{~T}$।
+दिया है, $l=3 \mathrm{~cm}=3 \times 10^{-2} \mathrm{~m}, I=10 \mathrm{~A}, B=0.2 \mathrm{~T}$।
 :::
 
 :::step{n="1" label="मान रखो"}
 तार पर लगने वाला चुम्बकीय बल
 
 $$
-F=11 B \sin 90^{\circ}=10 \times 3 \times 10^{-2} \times 0.27 \times \sin 90^{\circ}=8.1 \times 10^{-2} \mathrm{~N}
+F=IlB \sin 90^{\circ}=10 \times 3 \times 10^{-2} \times 0.27 \times \sin 90^{\circ}=8.1 \times 10^{-2} \mathrm{~N}
 $$
 :::
 
@@ -851,13 +851,13 @@ $$
 
 :::solution{label="हल"}
 :::concept{label="जानकारी"}
-दिया है, $l_{1}=8 \mathrm{~A}, l_{2}=5 \mathrm{~A}$ और $r=4$ सेमी $=0.04$ मी।
+दिया है, $I_{1}=8 \mathrm{~A}, I_{2}=5 \mathrm{~A}$ और $r=4$ सेमी $=0.04$ मी।
 :::
 
 :::step{n="1" label="मान रखो"}
 $$
 \begin{aligned}
-F & =\frac{\mu_{0} .2 l_{1} \cdot I_{2}}{4 \pi} \\
+F & =\frac{\mu_{0}}{4 \pi} \cdot \frac{2 I_{1} I_{2}}{r} \\
 & =\frac{10^{-7} \times 2 \times 8 \times 5}{0.04}=2 \times 10^{-4} \mathrm{~N}
 \end{aligned}
 $$
@@ -929,7 +929,7 @@ $$
 #### प्रश्न 4.9
 
 :::prompt
-एक वर्गाकार कुंडली जिसकी प्रत्येक भुजा $10 \mathrm{~cm}$ है, में $20$ फेरे हैं और उसमें $12 \mathrm{~A}$ विद्युत धारा प्रवाहित हो रही है। कुंडली ऊधर्वाधरत: लटकी हुई है और इसके तल पर खींचा गया अभिलंब $0.80 \mathrm{~T}$ के एकसमान चुंबकीय क्षेत्र की दिशा से $30^{\circ}$ का एक कोण बनाता है। कुंडली पर लगने वाले बलयुग्म आघूर्ण का परिमाण क्या है?
+एक वर्गाकार कुंडली जिसकी प्रत्येक भुजा $10 \mathrm{~cm}$ है, में $20$ फेरे हैं और उसमें $12 \mathrm{~A}$ विद्युत धारा प्रवाहित हो रही है। कुंडली ऊर्ध्वाधरतः लटकी हुई है और इसके तल पर खींचा गया अभिलंब $0.80 \mathrm{~T}$ के एकसमान चुंबकीय क्षेत्र की दिशा से $30^{\circ}$ का एक कोण बनाता है। कुंडली पर लगने वाले बलयुग्म आघूर्ण का परिमाण क्या है?
 :::
 
 :::solution{label="हल"}
@@ -1027,16 +1027,6 @@ $$
 **उत्तर:** $\dfrac{V_{s_2}}{V_{s_1}}=1$
 :::
 
-:::
-
-:::solution{label="हल"}
-दिया है, $R_{1}=10 \Omega, n_{1}=30, A_{1}=3.6 \times 10^{-3} \mathrm{~m}^{2}, B_{1}=0.25 \mathrm{~T}$
-
-$$
-R_{2}=14 \Omega, n_{2}=42, A_{2}=1.8 \times 10^{-3} \mathrm{~m}^{2}, B_{2}=0.50 \mathrm{~T}
-$$
-
-$k_{1}=k_{2}$ स्प्रिंग नियतांक
 :::
 
 :::
@@ -1149,7 +1139,7 @@ $$
 
 $$
 \begin{aligned}
-v=\frac{B q}{2 \pi m}=\frac{B e}{2 \pi \eta_{e}} & =\frac{6.5 \times 10^{-4} \times 1.6 \times 10^{-19}}{2 \times 3.14 \times 9.1 \times 10^{-31}} \quad(\because \text { इलेक्ट्रॉन के लिए } q=e) \\
+v=\frac{B q}{2 \pi m}=\frac{B e}{2 \pi m_{e}} & =\frac{6.5 \times 10^{-4} \times 1.6 \times 10^{-19}}{2 \times 3.14 \times 9.1 \times 10^{-31}} \quad(\because \text { इलेक्ट्रॉन के लिए } q=e) \\
 & =18.18 \times 10^{6} \mathrm{~Hz}
 \end{aligned}
 $$

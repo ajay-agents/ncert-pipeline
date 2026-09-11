@@ -114,6 +114,39 @@ Any failure here is a hard stop, same as any other gate in this
 pipeline — fix the underlying HTML/CSS (stage 9's own output) or the
 export call, re-export, and re-check; never hand-edit the PDF.
 
+**A known, currently-unresolved limitation, not a bug in this pipeline's
+own code: Chromium's print-to-PDF pipeline generates an incorrect
+ToUnicode CMap for Devanagari "र्" used as a pre-base reph (रेफ़) form —
+"र्" + consonant — dropping that character from the exported PDF's
+*extractable* text layer specifically, while the *visual* rendering stays
+completely correct.** Caught for real on physics-12-2's final PDF: a user
+reading the rendered pages found nothing wrong, but copying text out (or
+re-extracting it, e.g. `fitz`/`pdftotext`) turned "निष्कर्ष" into
+"निष्कष", "पदार्थ" into "पदाथ", "आघूर्ण" into "आघूण", "कार्य" into "काय" —
+every instance of a "र्"-plus-consonant sequence loses the "र्", nothing
+else. Root-caused with an isolated test page (plain "र्"-bearing words, no
+other content) and confirmed with two independent extraction tools
+(`fitz`/PyMuPDF *and* `pdftotext`/poppler both fail on the same text, in
+different ways - `pdftotext` extracts nothing at all for the affected
+run, `fitz` extracts everything except the reph) - this rules out a
+single-tool extraction quirk and confirms the fault is baked into the
+PDF's own embedded CMap at export time, not read-side. Also ruled out as
+the cause: font choice (reproduces identically on both Noto Serif
+Devanagari and Noto Sans Devanagari, regular and bold), the standing
+`emulate_media(media="screen")` fix (reproduces identically with or
+without it - this is a distinct bug from the visual pre-base-vowel-
+reordering one that fix addresses), and Playwright's `tagged=True` PDF
+option plus various Chromium font-rendering flags (none changed the
+result). This means the numeric read-back gate above is unaffected (it
+only checks digits), but any consumer relying on copy-paste, in-PDF
+search, or a future pipeline stage re-reading this PDF's text should
+expect "र्"-bearing words to come back one character short. No working
+fix is known yet from within this pipeline (a real fix would mean either
+post-processing the exported PDF's ToUnicode CMap directly - low-level
+PDF surgery, not attempted - or a different PDF-generation pipeline
+entirely); flag this to the user rather than silently shipping around it
+if it matters for a specific chapter's use case.
+
 ## Manifest
 
 Append a `manifest.py` entry: stage `"pdf"`, inputs the

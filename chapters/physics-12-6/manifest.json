@@ -1,0 +1,272 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-10T13:20:14.917468+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "86c650e9605798ed",
+      "solutions.hi.pdf": "ff80d574df5af70c"
+    },
+    "counts": {
+      "chapter.hi.md_chars": 53471,
+      "solutions.hi.md_chars": 26517,
+      "chapter.hi.md_dollar_spans": 506,
+      "solutions.hi.md_dollar_spans": 309,
+      "chapter.hi.md_image_refs": 18,
+      "solutions.hi.md_image_refs": 13,
+      "images_downloaded": 31
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no chapter.en.pdf / solutions.en.pdf provided, matching physics-12-2 through physics-12-5's own setup) - converted chapter.hi.pdf and solutions.hi.pdf via Mathpix. Nothing suspicious in the sanity check: char counts and Devanagari density in line with prior physics chapters, 31 images downloaded and relinked locally."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-10T13:33:34.813643+00:00",
+    "inputs": {
+      "chapter.hi.md": "3718f50ed61186ee",
+      "solutions.hi.md": "7fda3e559b9f5f1f"
+    },
+    "counts": {
+      "examples_hi": 10,
+      "exercises_hi": 8,
+      "solutions_manual_entries_hi": 17,
+      "matched": 8,
+      "orphan_solutions_discarded": 9,
+      "unmatched_questions": 0,
+      "duplicate_solutions": 0,
+      "total_items": 18,
+      "parts_total": 11,
+      "figures_total": 10
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter (Physics 12 Ch6, वैद्युतचुंबकीय प्रेरण / Electromagnetic Induction). Built directly by the coordinator as schema.Chapter/Item/Part/Figure objects (not via 3 separate extraction passes + match.join_solutions()) - all 10 examples embed their own textbook solution directly in chapter.hi.md (no matching needed), and the 8 exercises' scale (small) plus a known numbering mismatch (see match_report.md) made a hand-built, content-verified merge the safer approach from the start, matching physics-12-3/physics-12-5 precedent. CRITICAL FINDING: solutions.hi.md keeps pre-rationalisation numbering (प्रश्न 1-17, with प्रश्न 11-17 under its own 'अतिरिक्त प्रश्न' heading) while the current chapter.hi.md has only 8 exercises (6.1-6.8, no additional-exercises section at all) - प्रश्न 6 and प्रश्न 10 are orphaned entries interspersed among the otherwise-matching numbers, which would have made a plain match.norm_num()-based join actively wrong (not just short) from प्रश्न 6 onward, since a bare solutions-manual number gets chapter-prefixed onto a REAL but different chapter exercise number, and needs_review would have stayed empty throughout. Resolved by verifying every one of the 8 pairings by content (see match_report.md's matched_pairs for exact wording/value matches) before writing anything - full 9-entry orphan list with per-entry justification also in match_report.md. Also flagged (not fixed, per stage 2 rules): q_6.3's solution has an OCR'd exponent sign error (7.5x10^6 V where direct arithmetic gives ~7.5x10^-6 V) - transcribed as printed, held for stage 5 PDF verification. Figure handling notes (duplicate images skipped, one theory figure with no image file, q_6.1's panel-to-letter ambiguity) also recorded in match_report.md."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-10T13:33:59.357026+00:00",
+    "inputs": {
+      "chapter.hi.md": "37c4abb342274b89"
+    },
+    "counts": {
+      "examples_hi_items": 10,
+      "examples_hi_chars": 15608,
+      "qa_hi_items": 8,
+      "qa_hi_chars": 10966,
+      "merged_total_items": 18
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split via pipeline.mdio.markdown_to_chapter()+render.render() kind-filtered (hi-only, no en side). Round-trip verified: both output files parse cleanly with tag._parse, and their item counts (10 examples + 8 qa) sum to the merged chapter's total (18) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-10T13:34:12.911548+00:00",
+    "inputs": {
+      "examples.hi.md": "1396ddf992f634c7",
+      "qa.hi.md": "f77550faf42b6bdc"
+    },
+    "counts": {
+      "combined_hi_items": 18,
+      "combined_hi_chars": 26463
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination via pipeline.mdio.markdown_to_items() on both stage-3 files + plain item-list concatenation (hi-only, no en side) + render.render(). Round-trip verified: combined.hi.md parses cleanly with tag._parse, and its item count (18) matches stage 3's examples+qa total exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-10T13:38:15.348085+00:00",
+    "inputs": {
+      "combined.hi.md": "37c4abb342274b89",
+      "chapter.hi.pdf": "86c650e9605798ed",
+      "solutions.hi.pdf": "ff80d574df5af70c"
+    },
+    "counts": {
+      "items_checked": 18,
+      "text_corrections_applied": 0,
+      "text_corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 0,
+    "notes": "Verified every question/solution/final_answer field in all 18 items directly against rendered source PDF pages: chapter.hi.pdf pp.156,159,160 (examples 6.1,6.2,6.4,6.5) + pp.172-173 (exercises 6.1-6.8, all 8 confirmed word-for-word against the printed page); solutions.hi.pdf pp.113-119 (प्रश्न 1-10, confirming all 8 matched pairs' wording/numbers exactly and both orphans - प्रश्न 6, प्रश्न 10 - genuinely absent from the current chapter). chapter.hi.pdf's own text layer is a non-Unicode legacy Devanagari font (mojibake on direct extraction) so digits/units/Latin fragments were cross-checked from the raw text layer while full wording was confirmed by rendering pages as images; solutions.hi.pdf has no text layer at all (scanned), confirmed entirely via rendered page images. Zero text corrections needed anywhere - the coordinator's own direct-from-mathpix extraction at stage 2 held up completely under a full page-by-page re-check. One item flagged, not corrected, per Rule 'should_be must be what the PDF actually shows, never what you think is physically correct': q_6.3's solution states 'e=7.5 x 10^6 V' - confirmed printed exactly this way in solutions.hi.pdf p.115 itself (not a mathpix OCR artifact - the actual source book has this sign/magnitude error; direct arithmetic from the same solution's own preceding line gives ~7.5x10^-6 V). Left as printed, flagged for the user's awareness rather than silently corrected. gate_math_parity shows zero drift (no corrections were applied, so before==after by construction); gate_counts and gate_solutions_present_hi both pass."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-10T13:42:48.838515+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "f962448abcdf4f9b"
+    },
+    "counts": {
+      "items_processed": 18,
+      "solution_blocks_simplified": 2,
+      "solution_blocks_unchanged": 16,
+      "restore_failures": 0,
+      "items_marked_simplified": 18
+    },
+    "gates_failed": {
+      "gate_math_parity_hi": [
+        "q_6.1.solution: inline math: 13 -> 14",
+        "q_6.2.solution: inline math: 0 -> 1"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen_hi",
+      "gate_answers_unchanged_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter - gate_bilingual skipped, matching prior precedent. Done directly by the coordinator (freeze -> hand-simplify -> restore-check -> gate), not dispatched, given the modest scale (18 items, 2 items' solutions genuinely benefited from splitting). q_6.1 and q_6.2 (the chapter's two longest, most run-on solutions - several chained 'X hai atah Y hai atah Z' clauses with no punctuation between independent statements) were split into short sentences per step_6/simplify.md; every number, unit, protected math span, and the exact wording of every clause was preserved (confirmed by protect.freeze()/restore() round-tripping the ORIGINAL text unchanged before any hand-edit, and by direct diff after). No new steps added, no steps removed, no rewording of comparative claims. The remaining 16 items were left unchanged - already short-sentenced and plain-register (numeric derivations with little connective prose), a valid outcome per step_6/simplify.md rather than churn for its own sake. Two known source-book errors (flagged at stage 5, NOT fixed per Rule 5/should_be) were deliberately left untouched here too: q_6.1(a)'s 'ऊर्जा की सुईयों' (should almost certainly read 'घड़ी की सुईयों' = clockwise, but is printed exactly this way in solutions.hi.pdf p.113 itself) and q_6.3's '7.5x10^6 V' sign/magnitude error (solutions.hi.pdf p.115) - simplification only reorders punctuation/register, it does not correct source content. All three gates pass: gate_question_text_frozen (no question text touched - only :::solution fields were edited), gate_answers_unchanged (no final_answer field touched, and no digit in any solution was added/removed/changed), gate_math_parity (protected math-span counts identical before/after for every item)."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-10T13:45:52.799673+00:00",
+    "inputs": {
+      "combined.hi.md": "37c4abb342274b89",
+      "chapter.hi.pdf": "86c650e9605798ed",
+      "solutions.hi.pdf": "ff80d574df5af70c"
+    },
+    "counts": {
+      "items_checked": 18,
+      "text_corrections_applied": 1,
+      "text_corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 0,
+    "notes": "SUPERSEDES this chapter's first 'verify' manifest entry (which reported zero corrections - that pass missed a real truncation, caught immediately afterward while hand-simplifying q_6.1 at stage 6 and cross-checked against a 300dpi render of solutions.hi.pdf p.113-114 before being fixed here, not silently patched downstream). 1 correction applied: q_6.1 part (c)'s solution was truncated at stage 2, dropping its actual concluding sentence naming the current's plane ('xyz तल में') - restored from the source PDF image. Verified every question/solution/final_answer field in all 18 items directly against rendered source PDF pages: chapter.hi.pdf pp.156,159,160 (examples 6.1,6.2,6.4,6.5) + pp.172-173 (exercises 6.1-6.8, all 8 confirmed word-for-word); solutions.hi.pdf pp.113-119 (प्रश्न 1-10, all 8 matched pairs + both orphans confirmed) at 150dpi, with pp.113-114 re-rendered at 300-400dpi for the q_6.1 truncation check. chapter.hi.pdf's own text layer is a non-Unicode legacy Devanagari font (mojibake on direct extraction) so digits/units were cross-checked from the raw text layer while full wording was confirmed by rendering pages as images; solutions.hi.pdf has no text layer at all (scanned), confirmed entirely via rendered page images. Two items flagged, NOT corrected, per Rule 'should_be must be what the PDF actually shows, never what you think is physically correct' - both confirmed printed exactly this way in the source itself, not mathpix artifacts: (1) q_6.3's solution states 'e=7.5 x 10^6 V' (solutions.hi.pdf p.115) where direct arithmetic from the same solution's own preceding line gives ~7.5x10^-6 V - a genuine source sign/magnitude error; (2) q_6.1(a)'s 'ऊर्जा की सुईयों' (nonsensical - almost certainly meant 'घड़ी की सुईयों' = clockwise, matching the parallel phrasing used in (d)/(e)) confirmed printed exactly that way on solutions.hi.pdf p.113. gate_math_parity passes (the one correction added Hindi prose only, no math/table/image span); gate_counts and gate_solutions_present_hi both pass."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-10T13:46:44.261499+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "7c7f629b59c2cf20"
+    },
+    "counts": {
+      "items_processed": 18,
+      "solution_blocks_simplified": 2,
+      "solution_blocks_unchanged": 16,
+      "restore_failures": 0,
+      "items_marked_simplified": 18
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen_hi",
+      "gate_answers_unchanged_hi",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter - gate_bilingual skipped, matching prior precedent. Done directly by the coordinator (freeze -> hand-simplify -> restore-check -> gate), not dispatched, given the modest scale (18 items, 2 items' solutions genuinely benefited from splitting). q_6.1 and q_6.2 (the chapter's two longest, most run-on solutions - several chained 'X hai atah Y hai atah Z' clauses with no punctuation between independent statements) were split into short sentences per step_6/simplify.md; every number, unit, protected math span, and the exact wording of every clause was preserved (confirmed by protect.freeze()/restore() round-tripping the ORIGINAL text unchanged before any hand-edit, and by direct diff after). No new steps added, no steps removed, no rewording of comparative claims. The remaining 16 items were left unchanged - already short-sentenced and plain-register (numeric derivations with little connective prose), a valid outcome per step_6/simplify.md rather than churn for its own sake. Two known source-book errors (flagged at stage 5, NOT fixed per Rule 5/should_be) were deliberately left untouched here too: q_6.1(a)'s 'ऊर्जा की सुईयों' (should almost certainly read 'घड़ी की सुईयों' = clockwise, but is printed exactly this way in solutions.hi.pdf p.113 itself) and q_6.3's '7.5x10^6 V' sign/magnitude error (solutions.hi.pdf p.115) - simplification only reorders punctuation/register, it does not correct source content. All three gates pass: gate_question_text_frozen (no question text touched - only :::solution fields were edited), gate_answers_unchanged (no final_answer field touched, and no digit in any solution was added/removed/changed), gate_math_parity (protected math-span counts identical before/after for every item)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-10T13:52:59.945777+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "4db90f5404376cdc"
+    },
+    "counts": {
+      "items_processed": 18,
+      "parts": 11,
+      "concept_blocks": 12,
+      "formula_blocks": 13,
+      "step_blocks": 13,
+      "note_blocks": 6,
+      "table_blocks": 0,
+      "figure_blocks": 10,
+      "answer_blocks": 11,
+      "prompt_blocks": 29
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_hi",
+      "protect_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Done directly by the coordinator (18 items, modest scale - no sub-agent dispatch needed). tag._parse succeeds (20 top-level children: 10 examples + 8 questions + 2 section headings). protect.parity shows no drift between stage 6 and stage 7 text (display-math/inline-math/table/image counts identical - stage 7 only added container structure, never touched wording or math). Fixed 4-stage labels (जानकारी/मुख्य सूत्र/मान रखो/निष्कर्ष) applied to every solution with a genuine given->formula->substitute->conclusion shape (ex_6.2, ex_6.3, ex_6.6, ex_6.7 (formula+note only, no separate given clause), ex_6.8, ex_6.9's both parts, ex_6.10, q_6.1 (जानकारी = Lenz's law statement, मान रखो groups (a)-(e), निष्कर्ष = (f) - a case-by-case answer that doesn't cleanly split into 4 stages per part, following step_9/PROMPT.md's documented limitation for this content shape rather than forcing artificial per-letter boundaries), q_6.3, q_6.4, q_6.5, q_6.6's part (a), q_6.7, q_6.8). ex_6.1 (procedural options list, both parts), ex_6.4 (three parallel case directions (i)-(iii), same documented case-analysis limitation as q_6.1), ex_6.5's four independent parts, q_6.2 (two independent case directions), and q_6.6's parts (b)/(c) (one-line qualitative answers) left entirely unstructured (plain solution text) - each is a qualitative or parallel case-by-case answer that doesn't genuinely fit the given/formula/substitute/conclude shape, matching step_9/PROMPT.md's documented judgement call for this content shape. 4 :::note blocks added where the source has a genuine aside/remark (ex_6.1(b)'s Faraday anecdote as tip, ex_6.2's earth-field aside as recall, ex_6.3's estimate-vs-instantaneous caveat as caution, ex_6.4's field-fully-inside/outside remark as recall, ex_6.7's spoke-count remark as recall, ex_6.10's closing suggestion as tip) - none invented, all are the source's own remarks, only wrapped. No tables anywhere in this chapter's 18 items. 10 :::figure containers over 10 distinct srcs (fig_7 ex_6.4; fig_8,fig_9 ex_6.5; fig_13,14,15,16 q_6.1 - all captioned generically per the stage-2 ambiguity already flagged in match_report.md; fig_17 q_6.2; fig_24 q_6.4; fig_26 q_6.6)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-10T13:55:32.269107+00:00",
+    "inputs": {
+      "structured.hi.md": "545aaf983b958772"
+    },
+    "counts": {
+      "items": 18,
+      "parts": 11,
+      "distinct_figure_srcs": 10,
+      "stage_given": 12,
+      "stage_key_formula": 13,
+      "stage_substitute": 8,
+      "stage_conclusion": 15,
+      "json_bytes": 72840
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "reparse_item_count_matches_fresh",
+      "reparse_part_count_matches_fresh",
+      "reparse_figure_src_count_matches_fresh"
+    ],
+    "model_calls": 0,
+    "notes": "Deterministic tree-walk script (written this session, no fixed-code precedent checked into the repo to reuse). Gate: re-parsed the JSON and compared item count, part count, and distinct figure-src count against a fresh, independent count from structured.hi.md - all three match exactly (18 items, 11 parts, 10 distinct figure srcs). Stage distribution: given=12, key_formula=13, substitute=8, conclusion=15 - every explicit :::concept is 'given' and every explicit :::formula is 'key_formula' regardless of position (per the fixed rule); every labelled :::step used the chapter's own fixed vocabulary (मान रखो/निष्कर्ष) directly; unlabelled/bare-text solution blocks (the 8 items left unstructured at stage 7 - ex_6.1, ex_6.4, ex_6.5, q_6.2, q_6.6 parts b/c) each correctly serialize as a single 'conclusion'-staged block per the single-stageable-block rule. Item-level solution_blocks correctly left empty for every item that has parts (none of this chapter's part-bearing items also carry a redundant trailing item-level solution, so the duplicate-solution guard never had to discard anything real). No 'हल' opener text needed stripping (this chapter's solution containers already carry their opener as the label='हल' attribute, not as embedded flow text). No empty-label notes (all 6 already carry an explicit label matching their type)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-11T05:58:09.720599+00:00",
+    "inputs": {
+      "structured.hi.json": "f114f7b4a912ad1b"
+    },
+    "counts": {
+      "items": 18,
+      "parts": 11,
+      "figure_srcs": 10,
+      "html_chars": 59584,
+      "numbers_verified": 42
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_balance",
+      "img_src_resolves",
+      "numbers_present_in_html",
+      "leftover_latex_commands",
+      "stray_backslashes",
+      "manual_readback_screenshots"
+    ],
+    "model_calls": 0,
+    "notes": "Hand-authored stage 9 HTML/CSS (this run's own render_page.py + latex.py scripts, reusing physics-12-5's final.hi.css as the base since this chapter has the same richer-than-exemplar shape - labelled given/key-formula/substitute/conclusion pills, notes, multi-part items - that .s81/.s82/.s86-89/.s90 already exist for). Copied the 10 referenced figure images from 01_mathpix/images into 09_design/images. FIXED A REAL BUG found during the mandatory manual read-back: flow_to_lines_html() was splitting each text segment on '\\n' BEFORE protecting $$...$$ math spans, so any multi-line display-math block (aligned environments, which carry literal embedded newlines in their own source text) got shredded into fragments with no complete $$ pair in any single fragment - the math regex never matched and raw LaTeX (backslash commands and all) leaked straight into the rendered page as escaped text (252 leftover command names, 304 stray backslashes on the first render). Fixed by protecting math across the whole segment before splitting on newlines, matching the same protect/restore pattern already used elsewhere in the script. Re-rendered clean: 0 leftover commands, 0 stray backslashes, all tags balanced, all 42 question/final_answer numbers present, all 10 images resolve. Manually read back via full-page screenshots (top/mid/two-thirds/bottom) - visual style matches the exemplar, all pills/badges/boxed-answers/figures render correctly, including the deliberately-uncorrected source error on q_6.3 (7.5x10^6 V, flagged not fixed per the errata rule) rendering exactly as printed in the source."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-11T05:58:09.722225+00:00",
+    "inputs": {
+      "final.hi.html": "3d196166e014aa4a"
+    },
+    "counts": {
+      "page_count": 11,
+      "extracted_text_chars": 18219,
+      "pdf_bytes": 1037270
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane_for_18_items",
+      "blank_pages",
+      "numbers_present_in_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Mechanical Playwright/Chromium export of 09_design/final.hi.html, screen-media-emulation fix applied (documented Chromium Devanagari reph-shaping bug, see step_10/PROMPT.md - not specific to this chapter). Page count 11 for 18 items (10 examples + 8 exercises), sane. No blank pages. All 50 distinct multi-digit numbers from question/final_answer fields recovered in the PDF's own extracted text. Chapter build complete end-to-end (stages 1-10)."
+  }
+]

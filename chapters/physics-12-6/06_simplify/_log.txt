@@ -1,0 +1,2 @@
+SIMPLIFIED q_6.1.solution
+SIMPLIFIED q_6.2.solution

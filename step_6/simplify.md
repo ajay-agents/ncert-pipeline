@@ -42,6 +42,26 @@ Length should stay within roughly 130% of the original. If a solution is
 already clear, return it unchanged — that is a valid outcome and better than
 churn.
 
+**Reordering a comparative sentence ("X से Y कम/अधिक है" and its like) can
+silently reverse which quantity the sentence is actually claiming, even
+though not a single number or sign character changed.** Caught for real,
+after the chapter had already gone all the way to final PDF: physics-12-2's
+ex_2.3(a) originally read "$V_{A}$ से $V_{B}$ कम ऋणात्मक है" (V_B is less
+negative than V_A) — correct, and consistent with the very next sentence's
+stated conclusion ($V_B>V_A$). Stage 6 "simplified" this to "$V_{A}$,
+$V_{B}$ से कम ऋणात्मक है" (V_A is less negative than V_B) — a small,
+innocent-looking reordering of the same three tokens that flips which
+quantity is which, producing a premise that directly contradicts the
+conclusion sitting right next to it. Nothing here trips
+`gate_answers_unchanged`/`gate_math_parity` (no number, unit or protected
+token was touched) — this is a plain-language comparison, and the gates
+have nothing to check it against. When rewording a sentence that compares
+two named quantities (X vs Y, more/less, before/after), re-read the
+rewritten sentence against **the conclusion or result it leads into**, not
+just against the original wording in isolation — a locally-plausible
+rephrasing can still reverse the relationship the surrounding solution
+depends on.
+
 Return the same container markdown you were given, with only the text
 inside `:::solution` blocks (item-level and part-level) rewritten.
 `:::answer` blocks are copied through unchanged — a boxed result is not

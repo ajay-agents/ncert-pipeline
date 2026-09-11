@@ -91,6 +91,33 @@ broken, not a threshold to relax.
    shaped turns up, build the merge by hand (content-verified pairs, one
    at a time) rather than patching `join_solutions()`'s output.
 
+   **This can go far beyond a handful of scattered extras — a whole prior
+   edition's worth of orphaned content.** physics-12-5 (Magnetism and
+   Matter): the current rationalised chapter keeps only 7 exercises
+   (5.1-5.7), but the solutions manual numbers प्रश्न 1-25 — an entire
+   Earth's-magnetism section (dip angle, declination, neutral points),
+   plus hysteresis/domain and Curie's-law problems, that the 2023-24
+   rationalisation cut from the chapter outright. Only 7 of the 25
+   entries had any match at all, and even those weren't contiguous:
+   प्रश्न 1-2 came before the first real match, प्रश्न 9-11 were inserted
+   between two real matches, and प्रश्न 13-25 were all orphaned after the
+   last one — 18 of 25 solutions-manual entries discarded in total.
+   Worse, `match.norm_num()`'s own chapter-prefixing behaviour turns a
+   silent miss into an active wrong pairing here: when the solutions
+   manual numbers its own entries bare ("1", "2", "3"...) rather than
+   "5.1"/"5.2", `norm_num(raw, chapter="5")` prepends the chapter number
+   to any number with no "." in it, so प्रश्न 3 normalises to "5.3" -
+   colliding with the chapter's own UNRELATED exercise 5.3, not just
+   failing to match its real counterpart (which was the chapter's
+   exercise 5.1). `needs_review` would stay empty throughout, since every
+   number "matched" something. When a chapter's own topic list looks
+   noticeably shorter than what the solutions manual covers (a strong
+   tell: section headings or worked concepts in the solutions manual with
+   no counterpart anywhere in the chapter's own mathpix text), expect this
+   scale of mismatch specifically, and verify every single retained pairing
+   by content before trusting any number match at all - not just the ones
+   `needs_review` flags.
+
    Also watch `join_solutions()`'s own fallback for a matched item with no
    parts yet (`elif hit.parts and not q.parts: q.parts = hit.parts`): once a
    number-only match is wrong, this line can wholesale-replace a question's

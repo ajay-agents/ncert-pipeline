@@ -10,7 +10,7 @@ measured, never typed. Re-run after any stage whose output changed.
 - example: 7
 - exercise: 9
 - parts (sub-items): 7
-- figures: 8
+- figures: 7
 - verified: 0/16
 - simplified: 14/16
 - corrections applied so far: 0
@@ -27,8 +27,8 @@ measured, never typed. Re-run after any stage whose output changed.
 
 ## Stage history (`manifest.json`)
 
-- entries: 19
-- stages run at least once: combine, extract_match, format, mathpix, simplify, split, tag, verify
-- total model calls across all entries: 9
-- no gate has ever failed for this chapter
+- entries: 22
+- stages run at least once: combine, design, extract_match, format, mathpix, pdf, simplify, split, tag, verify
+- total model calls across all entries: 10
+- gates that have failed at some point: stage10_gates, stage8_counts_match, stage9_gates
 
