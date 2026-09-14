@@ -1,0 +1,339 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-11T07:04:40.271891+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "eaa2d1c00507c667",
+      "solutions.hi.pdf": "b8bc0917f0bdd25c"
+    },
+    "counts": {
+      "chapter.hi.md_chars": 54997,
+      "solutions.hi.md_chars": 33588,
+      "chapter.hi.md_dollar_spans": 629,
+      "solutions.hi.md_dollar_spans": 461,
+      "chapter.hi.md_image_refs": 15,
+      "solutions.hi.md_image_refs": 3,
+      "images_downloaded": 18
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no chapter.en.pdf / solutions.en.pdf provided, same as physics-12-2 through physics-12-6) - converted chapter.hi.pdf and solutions.hi.pdf via Mathpix. Nothing suspicious in the sanity check: char counts and Devanagari density in line with prior physics chapters, 18 images downloaded and relinked locally."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-11T07:18:49.273847+00:00",
+    "inputs": {
+      "chapter.hi.md": "b77fd0b35b219ea5",
+      "solutions.hi.md": "68356d1c2c6b2ba9"
+    },
+    "counts": {
+      "examples_hi": 10,
+      "exercises_hi": 8,
+      "raw_solutions_hi": 26,
+      "matched": 8,
+      "orphan_solutions": 18,
+      "needs_review_from_join_naive": 3,
+      "manually_corrected_mismatches": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 6,
+    "notes": "Hindi-only chapter. Extracted 10 examples (ex_7.1-7.10, all with inline textbook solutions) and 8 exercise questions (q_7.1-7.8) from chapter.hi.md, plus 26 raw solutions-manual entries (sol_7.1-7.26, bare-numbered) from solutions.hi.md. join_solutions() naive number-based match (chapter-prefixing bare numbers) matched all 8 questions with needs_review empty on the first 11-solution test slice, but content spot-check (mandated by step_2/PROMPT.md Part B) found real drift starting at q_7.6: the solutions manual has 3 extra questions (sol_7.6, sol_7.8, sol_7.10) interspersed within its own 1-11 range that do not exist in this rationalised chapter at all, shifting every match from q_7.6 onward by increasing offsets. Manually corrected: q_7.6<-sol_7.7, q_7.7<-sol_7.9, q_7.8<-sol_7.11 (split across its 3 existing parts a/b/c, matched by part label, not by replacing the parts list). 18 of 26 solutions-manual entries are orphaned (sol_7.6, sol_7.8, sol_7.10, sol_7.12 through sol_7.26) - a prior, non-rationalised edition worth of extra LCR/resonance/transformer/power-transmission problems the current chapter does not carry; left out per Rule 5, listed in match_report.md. Also flagged for stage 5: q_7.1 question text in chapter.hi.md reads 200V/50Hz but its matched solution (sol_7.1) computes with 220V (I=2.2A, P=484W, both consistent only with 220V) - likely a mathpix OCR digit error, needs checking against the actual chapter.hi.pdf page. Two item-owned figures identified: fig_7 (ex_7.5, chitra 7.9) and fig_14 (q_7.8, chitra 7.17); all other figures belong to general exposition, not to any example/exercise item, so are out of scope for this pipeline. gate_counts and gate_solutions_present(hi) both pass."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-11T07:19:30.273466+00:00",
+    "inputs": {
+      "chapter.hi.md": "2aec3f667f084bf9"
+    },
+    "counts": {
+      "examples_hi_items": 10,
+      "qa_hi_items": 8,
+      "examples_hi_chars": 13677,
+      "qa_hi_chars": 9084
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "roundtrip_parse_balance",
+      "item_count_conserved"
+    ],
+    "model_calls": 0,
+    "notes": "Pure code split (no model call): chapter.hi.md kind-filtered into examples.hi.md (10 items) and qa.hi.md (8 items). Round-trip parse balanced, item count conserved (18=10+8)."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-11T07:19:50.712269+00:00",
+    "inputs": {
+      "examples.hi.md": "4db09385eb804b32",
+      "qa.hi.md": "4990593914e3bb38"
+    },
+    "counts": {
+      "combined_hi_items": 18,
+      "combined_hi_chars": 22658
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "roundtrip_parse_balance",
+      "item_count_conserved"
+    ],
+    "model_calls": 0,
+    "notes": "Pure code recombine (no model call): examples.hi.md (10) + qa.hi.md (8) merged back into combined.hi.md (18 items), original order. Round-trip parse balanced, count conserved."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-11T07:24:30.068040+00:00",
+    "inputs": {
+      "combined.hi.md": "2aec3f667f084bf9",
+      "chapter.hi.pdf": "eaa2d1c00507c667",
+      "solutions.hi.pdf": "b8bc0917f0bdd25c"
+    },
+    "counts": {
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "items_verified": 18,
+      "flagged_cross_document_mismatches": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 3,
+    "notes": "Verified all 18 items (10 examples, 8 exercises) against rendered pages of chapter.hi.pdf and solutions.hi.pdf (via fitz page pixmaps, since the PDFs use a non-Unicode legacy glyph-mapped font that defeats plain text extraction/search - pages were located by content and rendered as images, then read visually). Zero OCR-type corrections needed - both mathpix extractions were byte-faithful to their own source pages, including all three of stage 2's hand-corrected solution joins (q_7.6/7.7/7.8), which are now independently confirmed correct against solutions.hi.pdf pages 128-132. One cross-document content mismatch flagged for user review, not auto-corrected: q_7.1's chapter text says 200V (confirmed genuinely printed there) but its solutions-manual answer computes with 220V (also confirmed genuinely printed there) - a real disagreement between the two source documents, not a transcription error, so left as-is per Rule 5. All items marked verified=True. gate_math_parity and gate_counts both pass (trivially for parity, since no field text changed)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-11T07:27:44.242125+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "3c39ab0fc0693305"
+    },
+    "counts": {
+      "items_simplified": 4,
+      "items_unchanged": 14,
+      "restore_failed": 0
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "ex_7.1: question missing a language",
+        "ex_7.2: question missing a language",
+        "ex_7.2: solution missing a language",
+        "ex_7.3: question missing a language",
+        "ex_7.3: solution missing a language",
+        "ex_7.4: question missing a language",
+        "ex_7.4: solution missing a language",
+        "ex_7.5: question missing a language",
+        "ex_7.5: solution missing a language",
+        "ex_7.6: question missing a language",
+        "ex_7.7: question missing a language",
+        "ex_7.8: question missing a language",
+        "ex_7.9: question missing a language",
+        "ex_7.10: question missing a language",
+        "ex_7.10: solution missing a language",
+        "q_7.1: question missing a language",
+        "q_7.1: solution missing a language",
+        "q_7.2: question missing a language",
+        "q_7.2: solution missing a language",
+        "q_7.3: question missing a language",
+        "q_7.3: solution missing a language",
+        "q_7.4: question missing a language",
+        "q_7.4: solution missing a language",
+        "q_7.5: question missing a language",
+        "q_7.5: solution missing a language",
+        "q_7.6: question missing a language",
+        "q_7.6: solution missing a language",
+        "q_7.7: question missing a language",
+        "q_7.7: solution missing a language",
+        "q_7.8: question missing a language"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 4,
+    "notes": "Conservative simplification pass: 4 items had genuinely long run-on descriptive/conceptual solution prose worth breaking into shorter, plainer sentences (ex_7.3, ex_7.5, ex_7.7's part (b), ex_7.10) - all rewritten via the freeze/restore protection workflow (every protected math token reproduced exactly once, verified by protect.restore() succeeding with no dropped/duplicated/invented tokens). Each rewrite double-checked against its own conclusion (no reversed comparative claims - e.g. ex_7.3's 'lamp brighter than before when C is reduced' and ex_7.5's 'lamp dims when the rod is inserted' both preserved exactly as in the source). The other 14 items' worked solutions were already short, numeric and formula-driven (typical NCERT derivation style) - left byte-identical per simplify.md's 'if already clear, return unchanged' guidance, not touched at all. Question text (item- and part-level, examples and exercises alike) was never touched. All four gates pass: gate_question_text_frozen, gate_answers_unchanged, gate_math_parity, gate_bilingual."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-11T07:30:49.048486+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "3c39ab0fc0693305"
+    },
+    "counts": {
+      "items_simplified": 4,
+      "items_unchanged": 14,
+      "restore_failed": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen_hi",
+      "gate_answers_unchanged_hi",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 4,
+    "notes": "Hindi-only chapter - gate_bilingual skipped, matching prior precedent (physics-12-5, physics-12-6). Conservative simplification pass: 4 items had genuinely long run-on descriptive/conceptual solution prose worth breaking into shorter, plainer sentences (ex_7.3, ex_7.5, ex_7.7's part (b), ex_7.10) - all rewritten via the freeze/restore protection workflow (every protected math token reproduced exactly once, verified by protect.restore() succeeding with no dropped/duplicated/invented tokens). Each rewrite double-checked against its own conclusion (no reversed comparative claims - e.g. ex_7.3's 'lamp brighter than before when C is reduced' and ex_7.5's 'lamp dims when the rod is inserted' both preserved exactly as in the source). The other 14 items' worked solutions were already short, numeric and formula-driven (typical NCERT derivation style) - left byte-identical per simplify.md's 'if already clear, return unchanged' guidance, not touched at all. Question text (item- and part-level, examples and exercises alike) was never touched. All four gates pass: gate_question_text_frozen, gate_answers_unchanged, gate_math_parity. NOTE: the immediately preceding 'simplify' manifest entry mistakenly ran gate_bilingual (not applicable to a Hindi-only chapter, matching physics-12-5/12-6 precedent) and recorded a false gate failure that caused that run to discard its output without writing chapter.simplified.hi.md; this entry corrects that and is the real, final stage-6 result - the file was written on this run."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-11T07:43:51.555655+00:00",
+    "inputs": {
+      "chapter.hi.md": "69e967561b21ff32"
+    },
+    "counts": {
+      "examples_hi_items": 10,
+      "qa_hi_items": 8
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "roundtrip_parse_balance",
+      "item_count_conserved"
+    ],
+    "model_calls": 0,
+    "notes": "Re-run: stage 2 output was revised (q_7.1/q_7.2 solutions moved from item-level to their own parts, to avoid stage 8s duplicate-solution suppression silently dropping their only copy - found while authoring stage 7). Split re-derived from the corrected chapter.hi.md; supersedes the earlier split entry."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-11T07:44:04.494531+00:00",
+    "inputs": {
+      "examples.hi.md": "4db09385eb804b32",
+      "qa.hi.md": "bcda97b812509c7a"
+    },
+    "counts": {
+      "combined_hi_items": 18
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "roundtrip_parse_balance",
+      "item_count_conserved"
+    ],
+    "model_calls": 0,
+    "notes": "Re-run following the corrected split (q_7.1/q_7.2 solutions moved into parts). Supersedes the earlier combine entry."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-11T07:44:21.913386+00:00",
+    "inputs": {
+      "combined.hi.md": "69e967561b21ff32",
+      "chapter.hi.pdf": "eaa2d1c00507c667",
+      "solutions.hi.pdf": "b8bc0917f0bdd25c"
+    },
+    "counts": {
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "items_verified": 18
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Re-run following the stage-2 fix (q_7.1/q_7.2 solutions moved from item-level into their own parts - pure container reshaping, no textual content changed, so no new verification pass against the source PDFs was needed; corrections.md from the prior run still stands unchanged). Re-marked all items verified=True. Supersedes the earlier verify entry only in that chapter.verified.hi.md now reflects the corrected container shape."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-11T07:44:38.005113+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "7a61cea4a711e99a"
+    },
+    "counts": {
+      "items_simplified": 4,
+      "items_unchanged": 14,
+      "restore_failed": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen_hi",
+      "gate_answers_unchanged_hi",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 4,
+    "notes": "Hindi-only chapter - gate_bilingual skipped, matching prior precedent (physics-12-5, physics-12-6). Conservative simplification pass: 4 items had genuinely long run-on descriptive/conceptual solution prose worth breaking into shorter, plainer sentences (ex_7.3, ex_7.5, ex_7.7's part (b), ex_7.10) - all rewritten via the freeze/restore protection workflow (every protected math token reproduced exactly once, verified by protect.restore() succeeding with no dropped/duplicated/invented tokens). Each rewrite double-checked against its own conclusion (no reversed comparative claims - e.g. ex_7.3's 'lamp brighter than before when C is reduced' and ex_7.5's 'lamp dims when the rod is inserted' both preserved exactly as in the source). The other 14 items' worked solutions were already short, numeric and formula-driven (typical NCERT derivation style) - left byte-identical per simplify.md's 'if already clear, return unchanged' guidance, not touched at all. Question text (item- and part-level, examples and exercises alike) was never touched. All four gates pass: gate_question_text_frozen, gate_answers_unchanged, gate_math_parity. NOTE: the immediately preceding 'simplify' manifest entry mistakenly ran gate_bilingual (not applicable to a Hindi-only chapter, matching physics-12-5/12-6 precedent) and recorded a false gate failure that caused that run to discard its output without writing chapter.simplified.hi.md; this entry corrects that and is the real, final stage-6 result - the file was written on this run."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-11T07:49:01.761416+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "4fb11b4c4cd6373a"
+    },
+    "counts": {
+      "structured_hi_chars": 42666,
+      "items": 18
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_balance",
+      "protect_parity_no_drift"
+    ],
+    "model_calls": 1,
+    "notes": "Hand-authored structured.hi.md directly as text (mdio cannot parse nested containers past stage 6, per this pipelines own operational note). Applied the fixed given/key-formula/substitute/conclusion vocabulary (\"जानकारी\"/\"मुख्य सूत्र\"/\"मान रखो\"/\"निष्कर्ष\") to every numeric worked solution, split by its own natural given-formula-substitution-result shape; not every block has all four (many short derivations only got formula+conclusion). Purely qualitative/descriptive solutions (ex_7.3, ex_7.5, ex_7.10, q_7.5) were left as plain paragraph text or split into unlabelled :::step blocks by natural sub-scenario (ex_7.3: dc vs ac; q_7.5: q3 vs q4 circuit) rather than forced into the given/formula/substitute/conclusion mold, per format.md (\"forcing structure onto ordinary prose is worse than leaving it unmarked\"). ex_7.7 parts (a)/(b) and ex_7.6 part (b) used freeform :::concept/:::note labels (not the fixed 4-word vocabulary) since they are principle/reasoning explanations, not a numeric solutions own given-to-conclusion arc. Two figures (fig_7 on ex_7.5, fig_14 on q_7.8) were already at the correct position (before the parts) from stage 4 - no mid-solution figure references to relocate in this chapter. IMPORTANT FIX ALSO APPLIED UPSTREAM while authoring this stage: q_7.1 and q_7.2 have labelled parts (a)/(b) but stage 2 had put their only solution content at the ITEM level with empty part-level solutions - stage 8s duplicate-solution suppression rule (documented in this pipelines own operational notes) would have silently discarded that only copy, since an item with parts renders only the part-level solutions. Caught before it caused data loss: split the item-level solution into each parts own solution/final_answer at the SOURCE (02_extract/chapter.hi.md), then mechanically re-derived 03_split, 04_combined, 05_verify and 06_simplify from that corrected file (pure container reshaping, no wording changed - re-verified byte-identical content per part, so no new PDF check or simplification judgement was needed, only the mechanical re-render). Superseding manifest entries were appended for split/combine/verify/simplify noting this. Gates: tag._parse succeeds (balanced containers, only vocabulary names used), and protect.parity(stage6 text, stage7 text) shows zero drift overall AND per-item (18/18 items checked individually) - confirmed no display math, inline math, table or image was gained or dropped anywhere while adding structure."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-11T07:58:33.811788+00:00",
+    "inputs": {
+      "structured.hi.md": "f71b54dae439e95b"
+    },
+    "counts": {
+      "items": 18,
+      "parts": 20,
+      "figures": 2,
+      "stage_given": 13,
+      "stage_key_formula": 20,
+      "stage_substitute": 4,
+      "stage_conclusion": 24
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "reparse_count_match"
+    ],
+    "model_calls": 1,
+    "notes": "Parsed structured.hi.md via tag._parse and serialized to 08_tag/structured.hi.json following the schema/conventions in chapters/physics-12-6/08_tag/structured.hi.json. assign_stages(): :::concept always given, :::formula always key_formula regardless of position; a :::step labelled exactly मान रखो/निष्कर्ष uses that mapping directly (already authoritative from stage 7); a :::step with any other label or none falls back to positional inference among the solutions own stageable blocks (first=given, last=conclusion, middle=substitute, solo=conclusion). Stripped the leading हल/हल: opener from every solutions first block (verified after the fact: every remaining literal-substring hit of the two characters is inside an unrelated word - kahlati, pahle - not a leftover opener). Duplicate-solution rule applied: q_7.1, q_7.2 (and every other multi-part item) have empty item-level solution_blocks, with the real content only in each parts own solution_blocks; each such items own combined top-level answer is still kept (a real, distinct summary-across-parts field, not a duplicate). Flagging one known content-shape limitation, matching a documented precedent for this exact situation: ex_7.3 (dc-vs-ac lamp reasoning) and q_7.5 (comparing the q_7.3 and q_7.4 circuits) are each two parallel, independent case analyses with no genuine numeric given/formula/substitute/conclusion arc - positional inference still assigns them given (first case) and conclusion (second case) per the algorithm above, which is a defensible mechanical fallback but not a perfect semantic fit (neither case is really \"given\" information). Not reshaped by hand at this stage per precedent; flagged for stage 9/user awareness, same as documented for this content shape previously. Gate (re-parse structured.hi.json fresh and cross-check against a fresh, independent parse of structured.hi.md): item count 18=18, part count 20=20, distinct figure src count 2=2 (fig_7 on ex_7.5, fig_14 on q_7.8) - all match, PASS. No CALIBRATION re-run (calibrate.py only reads pre-stage-7 flat markdown stems, unaffected by stage 7/8)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-11T08:17:39.654548+00:00",
+    "inputs": {
+      "structured.hi.json": "812827ed3d23c194"
+    },
+    "counts": {
+      "final_hi_html_chars": 82365,
+      "final_hi_css_chars": 18156,
+      "items_rendered": 18,
+      "figures_resolved": 2,
+      "numeric_tokens_checked": 88,
+      "numeric_tokens_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored 09_design/final.hi.html + final.hi.css directly as static HTML/CSS (no design-skill canvas), starting from chapters/physics-12-6/09_design/final.hi.css verbatim (already covers every documented trap - mobile breakpoint, blob-vs-plain answer box by length, note colors, .s23 doodle stacking, break-inside:avoid on fractions/badges - copied unchanged since this chapter's content introduces nothing new: no set-theory notation, no gathered/cases environments, only one begin-env (aligned), grepped from 08_tag/structured.hi.json before assuming coverage). Wrote a bespoke latex.py + render_page.py (this chapter's own converter, not a blind reuse) implementing: division-rewrite (bare '/' -> stacked fraction, with the unit-division (rad/s, m/s) exception, the paren-wrapped-single-division shortcut, and the times-before-10^ non-boundary guard), sqrt as radic+overline, aligned-block row-splitting into .s92/.s93, '=' glued to a following frac/sqrt via .s90 chained through repeats, non-breaking spaces around ~/times/cdot/=/unit-slash, degree signs (both \\circ and the raised-letter-o form actually used in this chapter's own source) as <sup>deg</sup>, therefore/because symbols. Caught and fixed during testing: (1) a whitespace-eating bug where consuming a no-argument command (a Greek letter, times) also silently ate the following literal space, gluing tokens together; (2) begin-aligned blocks getting mangled by the division-rewrite pass reasoning about the whole block as one flat expression - fixed by protecting begin/end blocks as opaque placeholders before division-rewrite runs, then converting each row independently; (3) the answer-box literal markdown-bold 'Answer:' label prefix leaking into the rendered page unconverted - stripped explicitly since the box styling itself already conveys 'this is the answer', matching the reference chapter's own clean (no-prefix) answer boxes. Multi-part items with an item-level combined answer (q_7.1, q_7.2) render each part's own boxed answer AND a final combined box below both parts, verified visually - a real distinct field, not a duplicate. Checks done: every figure src resolves against the actual 09_design/ output directory (2/2); every numeric token pulled from 06_simplify/chapter.simplified.hi.md question/final_answer fields (88 tokens across all 18 items) appears somewhere in the rendered HTML text (0 missing); zero raw LaTeX backslash or literal $ leaks anywhere in the final HTML; actual Playwright screenshots taken and visually reviewed top-to-bottom (7 slices covering the full 10621px page) - color cycling, pill colors/labels, note colors, doodles, figure captions, answer-box shape-by-length all confirmed correct by eye, not just by count. Known content-shape limitation carried forward from stage 8 (not fixed here, per precedent): ex_7.3 and q_7.5 are each two parallel case analyses mechanically tagged given/conclusion by position - reads fine on the page (two step pills, no visible error) but is a known imperfect semantic fit for this content shape, flagged for the user, not silently redesigned."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-11T08:20:41.676743+00:00",
+    "inputs": {
+      "final.hi.html": "a13d343c7ec673f1"
+    },
+    "counts": {
+      "page_count": 11,
+      "file_size_bytes": 833100,
+      "numeric_tokens_checked": 88,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_pdf"
+    ],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium: page.goto(file:// path) with wait_until=networkidle, waited on document.fonts.ready (Noto Serif Devanagari / STIX Two Text load async via CSS @import), called page.emulate_media(media=screen) immediately before page.pdf() per the standing Devanagari pre-base vowel-reordering fix, then page.pdf(print_background=True, prefer_css_page_size=True) with no explicit format/width/height so the page own @page A4 rules govern pagination. Gates: page count 11 (sane for 18 items, several multi-part, at the base CSS zoom level) - PASS. No blank pages (fitz get_text().strip() non-empty on all 11 pages) - PASS. Numeric read-back re-run fresh against the PDFs own extracted text (not assumed carried over from the stage 9 HTML check): pulled every numeric token from each question/final_answer field in 06_simplify/chapter.simplified.hi.md (88 tokens) and confirmed each appears in the PDFs extracted text across all pages - 0 missing. Applied the documented superscript-merge guard (insert a separator before a run of unicode superscript digits before translating to ASCII, so a base number and its exponent normalize to two distinct tokens rather than one glued token) even though this chapter turned out not to need it in practice (its exponents are all rendered via <sup> HTML tags from LaTeX ^{...}, which fitz extracts as separate adjacent text runs already, not as literal unicode superscript characters) - kept as a defensive measure per the standing lesson, not because a failure was observed here. Visually spot-checked 2 of the 11 pages (page 1 and page 6) by rendering to image and reading - Devanagari renders cleanly, math/fractions/superscripts correct, pagination lands in sensible places, no visible garbling or overflow. Known unresolved limitation noted per step_10/PROMPT.md (not this pipelines bug, not chapter-specific): Chromiums print-to-PDF pipeline can drop the reph (र्) character from the extractable text layer for र्+consonant sequences while rendering it correctly on-screen and in the visual PDF - the numeric read-back gate is unaffected (digits only), but any future consumer relying on copy-paste or in-PDF text search from this PDF should be aware. Not independently re-verified against this specific chapters output (no known र् sequence targeted for testing), flagged for completeness per the standing pipeline note. No CALIBRATION/calibrate.py re-run needed - it only reads pre-stage-7 flat markdown and has nothing to say about a PDF export."
+  }
+]

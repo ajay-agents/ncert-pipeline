@@ -1,0 +1,225 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-14T05:45:31.503371+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "1e76d4f6a22f1094",
+      "solutions.hi.pdf": "e3f14d4e84b93d4d"
+    },
+    "counts": {
+      "chapter.hi.md_chars": 44092,
+      "solutions.hi.md_chars": 47932,
+      "chapter.hi.md_dollar_spans": 254,
+      "solutions.hi.md_dollar_spans": 520,
+      "chapter.hi.md_image_refs": 6,
+      "solutions.hi.md_image_refs": 2,
+      "images_downloaded": 8
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no chapter.en.pdf / solutions.en.pdf provided, same as physics-12-2 through physics-12-10) - converted chapter.hi.pdf and solutions.hi.pdf via Mathpix. Notably, solutions.hi.md is nearly as large as chapter.hi.md and has roughly 2x the dollar-span density (520 vs 254) - likely means the solutions manual has substantially more raw entries than this chapter's own exercises use, so expect orphaned/interspersed extras at stage 2 matching, same pattern as physics-12-3/5/6/7/9. 8 images downloaded, low figure count relative to some prior chapters. Nothing else suspicious in the sanity check."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-14T05:58:08.701786+00:00",
+    "inputs": {
+      "chapter.hi.md": "a74a2d051f57b0b9",
+      "solutions.hi.md": "1d031f465c7a0afb"
+    },
+    "counts": {
+      "examples": 3,
+      "exercises": 11,
+      "raw_solutions": 37,
+      "matched": 11,
+      "orphan_solutions_excluded": 26,
+      "parts": 17,
+      "figures": 1
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "all items -- expected, single-language (Hindi-only) chapter, no English source exists"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 6,
+    "notes": "Hindi-only chapter (no English source). 3 examples (11.1-11.3), 11 exercises (11.1-11.11, this rationalised chapter's own '## अभ्यास' section only -- no additional-exercises block exists in chapter.hi.md). solutions.hi.md is a much larger, un-rationalised edition: 37 raw entries (प्रश्नावली 1-19 + विविध प्रश्नावली 20-37). Automated join_solutions() matched by number and produced a superficially clean 11/11 match with zero needs_review entries -- but from q_11.5 onward every one of those matches would have been WRONG (norm_num's chapter-prefixing collides bare solutions-manual numbers '5'..'11' with this chapter's own coincidentally-similar-looking '11.5'..'11.11'). Verified every single pairing by distinctive content (work functions, wavelengths, frequencies) per step_2/PROMPT.md's explicit warning about this exact failure mode, and rebuilt the merge by hand: q_11.1<-sol1, q_11.2<-sol2, q_11.3<-sol3, q_11.4<-sol4, q_11.5<-sol6 (NOT sol5), q_11.6<-sol8 (NOT sol6), q_11.7<-sol9 (NOT sol7), q_11.8<-sol10 (NOT sol8), q_11.9<-sol11 (NOT sol9), q_11.10<-sol15 (NOT sol10), q_11.11<-sol18 (NOT sol11). 26 solutions-manual entries are true orphans (an older edition's exercises this rationalised chapter dropped entirely) -- documented in match_report.md, not force-matched, not fabricated into an additional_exercise section. Also found and reassembled an OCR/layout issue: chapter.hi.md's own worked examples 11.1 and 11.2 arrived with Mathpix reading order crossing between them mid-solution (two-column-page artifact) -- reassembled by content match, every sentence transcribed verbatim, only re-attached to its correct example; see match_report.md. Flagged for stage 5 (not fixed here): q_11.4(c) mislabels m=1.66e-27kg as electron mass (should read hydrogen-atom mass); sol_11.8/sol_11.10 both mislabel a frequency v as 'तीव्रता' (intensity); q_11.8/sol_11.10 has an OCR digit-drop '721e14' for '7.21e14'; q_11.10(b)/sol_11.15(b) is a genuine same-page self-contradiction (solution computes with v=1 m/s, dropping 'km', against the question's own stated 1.0 km/s -- printed value kept as-is here, flagged prominently for stage 5, recommended fix noted in match_report.md). Only 1 of 8 mathpix images (fig_physics-12-11_6.jpg, the V0-v graph) is referenced by this chapter's final item set; the rest illustrate general exposition or an orphaned question."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-14T05:58:43.907692+00:00",
+    "inputs": {
+      "chapter.hi.md": "51ad9dc5039fd81e"
+    },
+    "counts": {
+      "examples.hi.md_chars": 5632,
+      "examples_items": 3,
+      "qa.hi.md_chars": 14993,
+      "qa_items": 11,
+      "total_items": 14
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "round_trip_balance"
+    ],
+    "model_calls": 0,
+    "notes": "Pure split, no model call. Hindi-only. 3 example items -> examples.hi.md, 11 exercise items -> qa.hi.md. Item counts sum to the merged chapter's 14 exactly, nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-14T05:59:30.913969+00:00",
+    "inputs": {
+      "examples.hi.md": "def4df6bb9b6a5e7",
+      "qa.hi.md": "a7eaa0a29439a4d9"
+    },
+    "counts": {
+      "combined.hi.md_chars": 20487,
+      "items": 14
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "round_trip_balance"
+    ],
+    "model_calls": 0,
+    "notes": "Pure reunion of 03_split's two files (Hindi-only), no model call. 3 examples + 11 exercises = 14 items, exactly stage 3's combined count."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-14T06:03:15.939386+00:00",
+    "inputs": {
+      "combined.hi.md": "51ad9dc5039fd81e",
+      "chapter.hi.pdf": "1e76d4f6a22f1094",
+      "solutions.hi.pdf": "e3f14d4e84b93d4d"
+    },
+    "counts": {
+      "corrections_applied_high": 2,
+      "corrections_held": 0,
+      "items_verified": 14,
+      "flagged_not_corrected_source_errors": 2
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 1,
+    "notes": "Verified every item's question/solution/final_answer against the actual source PDF pages (chapter.hi.pdf pp.283-289 for examples/exercises; solutions.hi.pdf pp.41-50 for the 11 content-matched solutions). Applied 2 high-confidence corrections (both q_11.10 part b, solution text + final_answer): the solution's own 'v=1 m/s' contradicted the question's stated 1.0 km/s directly above it (genuinely printed in the source this way, confirmed on solutions.hi.pdf p.49) -- fixed to v=1000 m/s, lambda=1.1e-35 m, per explicit user decision on this exact same-page self-contradiction. Two other flagged issues from stage 2 were checked against the source and left UNCORRECTED because they are genuine source-text errors, not OCR artifacts: (1) q_11.4(c) mislabels m=1.66e-27kg as '(electron's mass)' when it should read '(hydrogen atom's mass)' -- confirmed printed this way on solutions.hi.pdf p.43; (2) the solutions behind q_11.6/q_11.8 both mislabel a frequency v as 'तीव्रता' (intensity) -- confirmed printed this way on solutions.hi.pdf pp.45-46. Per step_5/verify.md, a textbook/solutions-manual's own error is not stage 5's call to silently fix. A third flagged issue (an apparent OCR digit-drop '721e14' vs '7.21e14' in q_11.8) turned out to need no action: solutions.hi.pdf p.46 confirms the source prints '7.21e14' correctly, and this chapter's own stage-2 transcription (chapter.hi.md) already used the correct value -- verified correct, nothing to fix. All 14 items marked verified=True (question/solution/final_answer read against the source PDF this stage)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-14T06:05:36.269520+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "fc6aa2c03b6c3727"
+    },
+    "counts": {
+      "solution_fields_total": 27,
+      "simplified": 4,
+      "unchanged": 23,
+      "restore_failed": 0
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "all items -- expected, single-language (Hindi-only) chapter"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Light-touch simplification: 4 of 27 solution fields (item-level + part-level) genuinely benefited from rewording (breaking a dense sentence, restating an awkward conditional/causal clause in more natural word order, cleaning up a terse transition phrase) -- all via protect.freeze()/restore() around each edit to prove no protected math/number span was touched. The remaining 23 solution fields were already short, clear, formula-led derivations per NCERT solutions-manual house style and were returned unchanged, per step_6/simplify.md ('if a solution is already clear, return it unchanged -- that is a valid outcome and better than churn'). No question text touched (examples or exercises). No figure caption touched. No number/unit/final_answer changed -- confirmed by gate_answers_unchanged. Deliberately left the two flagged-but-genuine source mislabels (q_11.4(c)'s mass label, q_11.6/q_11.8's 'तीव्रता'-for-frequency) completely untouched here too -- stage 6 simplifies register, it does not correct content, and stage 5 already made the deliberate call to leave these as printed."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-14T06:34:56.751543+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "86c6a05925b24fe0"
+    },
+    "counts": {
+      "structured.hi.md_chars": 22682,
+      "items": 14,
+      "parts": 17,
+      "figures": 1,
+      "concept_blocks": 17,
+      "formula_blocks": 13,
+      "step_blocks": 35
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_hi",
+      "protect_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hand-authored 07_format/structured.hi.md from 06_simplify/chapter.simplified.hi.md (Hindi-only). Preserved every outer container/attribute (verified=True, simplified=True, corrections_applied on q_11.10) exactly as carried forward from stage 6; added only inner structure (:::concept/:::formula/:::step, in-language labels जानकारी/मुख्य सूत्र/मान रखो/निष्कर्ष per _shared/RULES.md fixed vocabulary where the 4-stage pattern genuinely fit, plain unlabelled :::step left for stage 8 position-inference otherwise, :::step{n=...} for genuinely multi-stage derivations e.g. q_11.2c/q_11.8/q_11.9). No wording/number/unit changed anywhere; every existing $$...$$/$...$ span kept intact and un-split (never divided a single display-math block across two containers, to avoid inflating protect.parity math-span counts). gate tag._parse succeeded (3 example + 11 question containers, 17 parts, 35 steps, 17 concepts, 13 formulas, 1 figure, no unknown container names); protect.parity(stage6_text, stage7_text) returned zero problems (display/inline math, tables, images all unchanged). Three items have a known item-level trailing :::solution after their :::part children (an upstream multi-solution artifact) -- classified per content, not treated uniformly: ex_11.3s trailing solution is genuine new synthesis (comparing electron vs ball de Broglie wavelengths against measurement limits, not a repeat of either parts working) -- kept, tagged as an explicit conclusion step; q_11.4s trailing solution is genuine shared given data (wavelength + power) that both part a and part b actually depend on -- kept, tagged as given; q_11.10s trailing solution only restates part (a)s own given data (bullet mass/velocity) and is NOT shared by parts b/c (which have their own separate given masses/velocities) -- left in the file exactly as extracted per step_7/format.md (never deleted), but flagged here for stage 8 to treat as the redundant duplicate and exclude from that items rendered solution_blocks. The figure (fig_physics-12-11_6, q_11.5) was already positioned immediately before the solution that references it (chapter has no multi-part item with a figure needing to move across parts), so no repositioning was needed."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-14T06:37:10.315716+00:00",
+    "inputs": {
+      "structured.hi.md": "971c7319fc769248"
+    },
+    "counts": {
+      "items": 14,
+      "parts": 17,
+      "figures": 1,
+      "stage_given": 16,
+      "stage_key_formula": 13,
+      "stage_substitute": 11,
+      "stage_conclusion": 24,
+      "item_level_trailing_solutions_kept": 2,
+      "item_level_trailing_solutions_dropped_as_duplicate": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "reparse_item_count_matches_fresh_md_count",
+      "reparse_part_count_matches_fresh_md_count",
+      "reparse_figure_src_set_matches_fresh_md"
+    ],
+    "model_calls": 0,
+    "notes": "Serialized 07_format/structured.hi.md to 08_tag/structured.hi.json by parsing tag._parse()s container tree in code (no model call -- the judgment was already made at stage 7 by labelling blocks with the fixed जानकारी/मुख्य सूत्र/मान रखो/निष्कर्ष vocabulary; this stage only applies the from-RULES.md position-inference for the handful of :::step blocks stage 7 left unlabelled, per an explicit stage->label map plus the documented given/key_formula fixed-position/last-position/single-block inference). 14 items (3 example + 11 question), 17 parts, 1 figure -- all reparsed from the written JSON and cross-checked against a fresh, direct tag._parse count of structured.hi.md itself (not against in-memory build-time numbers): item count, part count and the distinct figure-src set all matched exactly. Stage distribution across all solution_blocks (item- and part-level): given=16, key_formula=13, substitute=11, conclusion=24. Applied the duplicate-solution rule from step_7/PROMPT.mds notes: for ex_11.3 and q_11.4 (item-level trailing :::solution alongside non-empty parts, both classified at stage 7 as genuine -- ex_11.3s a real synthesizing conclusion, q_11.4s real shared given data for parts a/b) the item-level solution_blocks were kept (1 entry each); for q_11.10 (trailing solution merely restating part (a)s own given data, not shared by b/c) the item-level solution_blocks were left empty per the rule, discarding the duplicate -- its content is still fully present via part (a)s own solution_blocks, nothing is lost. Also stripped the one leading textbook \"हल \" opener found in a solutions first flow segment (q_11.5s ::: concept block) per step_8/PROMPT.mds noise-stripping rule; no other item had this artifact. Figure src kept exactly as authored (images/fig_physics-12-11_6.jpg), verified present in both the JSON and a fresh parse of the .md."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-14T06:46:25.406777+00:00",
+    "inputs": {
+      "structured.hi.json": "bd56ca48f326fb90"
+    },
+    "counts": {
+      "final.hi.html_chars": 54905,
+      "numeric_tokens_readback_checked": 124,
+      "numeric_tokens_readback_missing": 0,
+      "figures_resolved": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored 09_design/final.hi.html + final.hi.css (started from chapters/physics-12-10/09_design as the most recently proven reference implementation, per CLAUDE.md -- not solutions-chapter-1.css directly, since physics-12-10s own CSS is already solutions-chapter-1.css plus every since-discovered addition this chapter also needs; no further CSS additions were needed here). render_page.py copied and adapted (only the CH path + docstring changed -- the template logic itself is fully generic over the JSON). latex.py copied and extended: added \rho and \u000barphi to the GREEK table (both missing from every prior chapters table; \rho is this chapters own momentum symbol, used constantly in ex_11.3/q_11.4/q_11.11, and would otherwise have printed the bare word \"rho\"; \u000barphi is a one-off OCR-style spelling variant of \\phi in q_11.9 for the same work-function variable, mapped to the identical glyph). Found and fixed two real bugs while building this chapter (neither previously hit by physics-12-10, which never exercised either code path): (1) render_page.pys render_item() silently dropped an items own solution_blocks entirely whenever that item had non-empty parts, discarding ex_11.3s and q_11.4s genuine item-level trailing content (the ones stage 7/8 explicitly kept, as opposed to q_11.10s which was correctly dropped as a duplicate) -- fixed by rendering item[\"solution_blocks\"] after the parts loop when non-empty. (2) latex.pys _render_env() split an aligned/array/gathered blocks body on its own \"\\\" row separator BEFORE protecting a NESTED \begin{array}{...} annotation inside one of its rows (q_11.10 parts own bullet-velocity aside), cutting through the nested envs internal row breaks and leaking raw \"begin\", \"array\", \"rl\", \"end\" text onto the page -- fixed by protecting nested envs first and converting each split row against that same nested-envs stash directly (bypassing the top-level convert() entry point, the same bypass pattern already used for \\mathrm/\text content). Checks performed: every figure src (images/fig_physics-12-11_6.jpg, the lone V0-v graph) resolves via os.path.exists against the actual 09_design/ output directory; a numeric read-back script pulled every numeric token out of every question/final_answer field in 06_simplify/chapter.simplified.hi.md via mdio.markdown_to_chapter and confirmed all 124 tokens appear somewhere in the rendered HTMLs plain text -- zero missing; a defensive regex swept the rendered HTML for any leftover raw LaTeX residue (\\command, begin{, end{, bare $) -- zero found; lang=\"hi\" confirmed present. Manually read every screenshot of the full rendered page (8 overlapping 2x-upscaled segments covering all 9500px) end to end, item by item, cross-checking every question/final_answer number and every Greek letter/subscript (nu/phi/rho/theta/lambda -- this chapters own heaviest-used notation) against the source -- all correct, theta visually distinct from a digit at this pages actual render size, no dropped/garbled content anywhere after the two fixes above. No :::note or :::table content in this chapter (confirmed at stage 7), so those render branches are inherited unused, same as physics-12-10."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-14T06:48:47.401744+00:00",
+    "inputs": {
+      "final.hi.html": "43cb2d5498e65802",
+      "final.hi.css": "6dd9f6a29b740a1c"
+    },
+    "counts": {
+      "page_count": 10,
+      "file_size_bytes": 786697,
+      "blank_pages": 0,
+      "numeric_tokens_readback_checked": 124,
+      "numeric_tokens_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Mechanical export pass (Playwright/Chromium), no model judgment. page.emulate_media(media=\"screen\") called immediately before page.pdf() per step_10/PROMPT.mds standing fix for Chromiums print-media Devanagari pre-base vowel-sign reordering bug; prefer_css_page_size=True + print_background=True honor the base CSSs own @page/A4 rules. Output: 10 pages, 786,697 bytes, zero blank pages -- sane for 14 items (3 examples + 11 exercises across 17 parts), consistent with physics-12-10s own 6 pages for 8 items (~0.71 vs ~0.75 pages/item). Numeric read-back re-run against the PDFs own extracted text (via PyMuPDF, mdio.markdown_to_chapter against 06_simplify/chapter.simplified.hi.md, same source stage 9 used): all 124 numeric tokens from every question/final_answer field found -- zero missing. Guarded explicitly against the documented base-plus-exponent-merge trap: extracted text via page.get_text(\"dict\") span-by-span and inserted a separator wherever two adjacent spans on the same line have different baselines (a superscript exponent glued to its base with no literal space), rather than a flat get_text() string or a naive unicode-superscript translate() -- this chapter renders exponents as real HTML <sup> (not literal unicode superscript characters), so the failure mode is the HTML/PDF-adjacency version of the same trap, not the original unicode-translate version, and needed the same defensive fix in spirit. Known, unresolved limitation flagged per step_10/PROMPT.md (not a gate failure -- the numeric gate is digit-only and unaffected): Chromiums print-to-PDF pipeline drops the pre-base reph (\"र्\") from this PDFs *extractable* text layer for every \"र्\"+consonant sequence (visual rendering is unaffected) -- this chapter uses \"निष्कर्ष\" (conclusion pill label) 24 times and \"कार्य-फलन\" (work function) repeatedly, both reph-bearing, so copy-pasted or re-extracted text from this specific PDF will read those words one character short, same as physics-12-2s own final PDF. No fix attempted (documented as a Chromium-level defect outside this pipelines control); flagging to the user now as the PROMPT requires."
+  }
+]

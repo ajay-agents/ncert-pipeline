@@ -1,0 +1,328 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-14T11:14:23.292742+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "8f151243b08633a2",
+      "solutions.hi.pdf": "4e1f9535857c80ed"
+    },
+    "counts": {
+      "chapter.hi.md_chars": 52612,
+      "solutions.hi.md_chars": 17215,
+      "chapter.hi.md_dollar_spans": 253,
+      "solutions.hi.md_dollar_spans": 401,
+      "chapter.hi.md_image_refs": 19,
+      "solutions.hi.md_image_refs": 19,
+      "images_downloaded": 38,
+      "solutions.hi.md_table_rows_approx": 60
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no chapter.en.pdf / solutions.en.pdf provided, same as physics-12-2 through physics-12-13) - converted chapter.hi.pdf and solutions.hi.pdf via Mathpix. Likely 'Semiconductor Electronics: Materials, Devices and Simple Circuits' (chapter 14, final chapter of the syllabus). Very figure-heavy: 38 images, second only to physics-12-9's 43 - expect circuit diagrams, energy-band diagrams, characteristic curves. Solutions manual has ~60 table rows (likely logic-gate truth tables) despite being much shorter overall than the chapter - a new content shape (tables) not seen much in prior physics chapters, budget care for table extraction/rendering at stages 2 and 9. Nothing else suspicious in the sanity check."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-14T11:21:58.203151+00:00",
+    "inputs": {
+      "chapter.hi.md": "f9c6eb4ffa120efb",
+      "solutions.hi.md": "a6510cf6dcf6dd5d"
+    },
+    "counts": {
+      "examples_hi": 3,
+      "exercises_hi": 6,
+      "raw_solutions_hi": 19,
+      "matched": 6,
+      "orphan_solutions": 13,
+      "needs_review_hand_resolved": 1,
+      "figures_used_by_items": 1
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "ex_14.1: question missing a language",
+        "ex_14.1: solution missing a language",
+        "ex_14.2: question missing a language",
+        "ex_14.2: solution missing a language",
+        "ex_14.4: question missing a language",
+        "ex_14.4: solution missing a language",
+        "q_14.1: question missing a language",
+        "q_14.1: solution missing a language",
+        "q_14.2: question missing a language",
+        "q_14.2: solution missing a language",
+        "q_14.3: question missing a language",
+        "q_14.3: solution missing a language",
+        "q_14.4: question missing a language",
+        "q_14.4: solution missing a language",
+        "q_14.5: question missing a language",
+        "q_14.5: solution missing a language",
+        "q_14.6: question missing a language",
+        "q_14.6: solution missing a language"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 3,
+    "notes": "Hindi-only. Chapter has 3 examples (14.1,14.2,14.4 - no 14.3 printed in this rationalised edition, nothing invented) and 6 exercises (14.1-14.6). Solutions manual has 19 raw entries (प्रश्न 1-19); only 6 have a real counterpart in this chapter - the other 13 are orphaned content from sections (Zener diode, photodiode/LED/solar cell, transistor, amplifier, oscillator, logic gates) this rationalised edition cut outright (same pattern as physics-12-5). Matching was done BY HAND, content-verified pair by pair, not via a blind match.join_solutions() number-join - a bare-number join would have wrongly paired q_14.6 with प्रश्न 6 (an unrelated transistor MCQ) instead of the real match, प्रश्न 8. gate_bilingual fails as expected for a Hindi-only chapter (question never has both languages) - same as every prior Hindi-only chapter in this repo. One same-page self-contradiction flagged in q_14.3's matched solution for stage 5 to fix (Ge, not Si, has the smallest band gap - contradicts the item's own boxed '(c)' and the chapter's own summary data). ex_14.2's solution text has scrambled sentence order (mathpix artifact) and an unresolved final_answer, flagged for stage 5. Of 38 chapter images, only 1 (fig_physics-12-14_16.jpg, chitra 14.17) is actually referenced by a matched item; the ~60 table rows and remaining images all belong to orphaned logic-gate content and will not appear in this chapter's final item set."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-14T11:22:37.265675+00:00",
+    "inputs": {
+      "chapter.hi.md": "a558a4a648bdad93"
+    },
+    "counts": {
+      "chapter_hi_items": 9,
+      "examples_hi_items": 3,
+      "examples_hi_chars": 2932,
+      "qa_hi_items": 6,
+      "qa_hi_chars": 4396
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure split (no model call). Round-trip verified: examples.hi.md (3 items) + qa.hi.md (6 items) = 9, matches 02_extract/chapter.hi.md's total item count exactly."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-14T11:22:54.542234+00:00",
+    "inputs": {
+      "examples.hi.md": "b35d5ea2a08ea285",
+      "qa.hi.md": "cee4ddab1cb838c9"
+    },
+    "counts": {
+      "examples_hi_items": 3,
+      "qa_hi_items": 6,
+      "combined_hi_items": 9,
+      "combined_hi_chars": 7146
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure recombination (no model call). combined.hi.md round-trip verified: 9 items, matches examples(3)+qa(6) exactly, same order as source."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-14T11:26:23.088845+00:00",
+    "inputs": {
+      "combined.hi.md": "a558a4a648bdad93",
+      "chapter.hi.pdf": "8f151243b08633a2",
+      "solutions.hi.pdf": "4e1f9535857c80ed"
+    },
+    "counts": {
+      "corrections_applied": 3,
+      "corrections_held": 0,
+      "corrections_by_type": {
+        "ocr_scrambled_sentence_order": 1,
+        "unresolved_final_answer_filled": 1,
+        "same_page_self_contradiction": 1
+      },
+      "items_verified": 9,
+      "items_total": 9
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 2,
+    "notes": "All 9 items checked against original PDF page images (fitz-rendered PNGs, since pdftoppm/poppler is unavailable in this environment and the PDFs' own text layer uses a non-Unicode legacy font). All 9 set verified=True. 3 high-confidence corrections applied, 0 held: (1) ex_14.2 solution - restored mathpix-scrambled sentence order (dropped/duplicated clause), confirmed against chapter.hi.pdf p.10; (2) ex_14.2 final_answer - filled in from the solution's own shown division (was left empty at stage 2 pending this check); (3) q_14.3 solution - fixed a genuine same-page self-contradiction present in the ORIGINAL solutions guide itself (not a mathpix artifact, confirmed on solutions.hi.pdf p.1): boxed answer (c) implies Ge has the smallest band gap, matching the chapter's own summary data, but the explanatory sentence wrongly said Si - fixed per standing authorization. Everything else (ex_14.1, ex_14.4, q_14.1, q_14.2, q_14.4, q_14.5, q_14.6, and solutions प्रश्न 1,2,4,5,8) verified verbatim-correct against the source PDFs, no changes needed. Also re-confirmed q_14.2's matched solution genuinely has no explicit option letter in the ORIGINAL source (not an OCR drop) - left as-is, not invented. Did a full arithmetic re-derivation pass on ex_14.4's V-I characteristic (r_fb=10 ohm, r_rb=1.0e7 ohm) - both confirmed correct against the graph values shown in the PDF."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-14T11:28:15.743005+00:00",
+    "inputs": {
+      "combined.hi.md": "a558a4a648bdad93",
+      "chapter.hi.pdf": "8f151243b08633a2",
+      "solutions.hi.pdf": "4e1f9535857c80ed"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "corrections_held": 0,
+      "pass": "amendment"
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Follow-up amendment to the verify stage, same session, before moving to stage 6: caught one more OCR typo on a close re-read of stage 5's own rendered output ('अर्द्धचातक' -> 'अर्द्धचालक' in q_14.1's solution, confirmed against solutions.hi.pdf p.1). Not a fresh re-run against changed inputs - a correctness fix to the same output before handoff."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-14T11:29:15.468125+00:00",
+    "inputs": {
+      "combined.hi.md": "a558a4a648bdad93",
+      "chapter.hi.pdf": "8f151243b08633a2",
+      "solutions.hi.pdf": "4e1f9535857c80ed"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "corrections_held": 0,
+      "pass": "amendment_2"
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Second follow-up amendment before stage 6: q_14.4 solution had 'निमतम' -> fixed to 'न्यूनतम', confirmed against solutions.hi.pdf p.1. Chapter.verified.hi.md re-scanned in full for further single-word OCR garbles after this fix - none remaining."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-14T11:29:53.863700+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "d3b2bc88e351e230"
+    },
+    "counts": {
+      "items_simplified_flag": 9,
+      "items_total": 9,
+      "items_text_rewritten": 2,
+      "items_text_unchanged_already_clear": 7,
+      "items_restore_failed": 0
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "ex_14.1: question missing a language",
+        "ex_14.1: solution missing a language",
+        "ex_14.2: question missing a language",
+        "ex_14.2: solution missing a language",
+        "ex_14.4: question missing a language",
+        "ex_14.4: solution missing a language",
+        "q_14.1: question missing a language",
+        "q_14.1: solution missing a language",
+        "q_14.2: question missing a language",
+        "q_14.2: solution missing a language",
+        "q_14.3: question missing a language",
+        "q_14.3: solution missing a language",
+        "q_14.4: question missing a language",
+        "q_14.4: solution missing a language",
+        "q_14.5: question missing a language",
+        "q_14.5: solution missing a language",
+        "q_14.6: question missing a language",
+        "q_14.6: solution missing a language"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen_hi",
+      "gate_answers_unchanged_hi",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 9,
+    "notes": "2 of 9 items had their solution prose lightly rewritten (long compound sentences split into short ones, per house style) - ex_14.1 and ex_14.4's item-level intro. The other 7 (ex_14.2 and all 6 MCQ exercises) were reviewed and left unchanged - their solutions were already short, plain-register sentences with nothing to gain from further splitting; per step_6/simplify.md this is a valid outcome, not a skipped review. No question text, figure caption, number, unit, sign or final_answer was touched anywhere. gate_question_text_frozen/gate_answers_unchanged/gate_math_parity all PASS; gate_bilingual fails as expected (Hindi-only chapter, same as every prior stage here)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-14T11:32:22.690594+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "cb3f24893d57d76e"
+    },
+    "counts": {
+      "items": 9,
+      "parts": 2,
+      "figures": 1,
+      "step_blocks": 12,
+      "concept_blocks": 6,
+      "formula_blocks": 1,
+      "structured_hi_chars": 7906
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_hi",
+      "protect_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hand-authored structured.hi.md directly (mdio can't parse nested containers). Applied given/key-formula/substitute/conclusion labelling at sentence boundaries only - no wording changed, no math span altered. ex_14.1's qualitative explanation kept as one unlabelled :::step (single-block -> conclusion by position, no numeric given/formula to separate out). ex_14.2 split into concept(given)+formula(key formula)+step(conclusion, kept the $$\\begin{aligned}...\\end{aligned}$$ block intact as one unit - splitting it further would have broken the display-math span). ex_14.4: item-level concept (given/method) + per-part step(substitute)+step(conclusion). 5 of 6 MCQ exercises split at their own existing sentence boundary into concept(given principle)+step(conclusion); q_14.3 and q_14.5 kept as a single unlabelled step (q_14.3 is one short sentence; q_14.5 is one long sentence with no period boundary to split at without rewording, which is not allowed here). No :::table needed - the ~60 raw table rows flagged at stage 1 all belonged to orphaned logic-gate content, absent from this chapter's actual 9 matched items (see stage 2 report)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-14T11:33:40.878045+00:00",
+    "inputs": {
+      "structured.hi.md": "334bb486208fbe37"
+    },
+    "counts": {
+      "items": 9,
+      "parts": 2,
+      "distinct_figure_srcs": 1,
+      "stage_distribution": {
+        "conclusion": 10,
+        "given": 6,
+        "key_formula": 1,
+        "substitute": 2
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "item_count_match",
+      "part_count_match",
+      "figure_src_count_match"
+    ],
+    "model_calls": 1,
+    "notes": "Serialized 07_format/structured.hi.md to 08_tag/structured.hi.json. Only 3 blocks needed position-based stage inference (ex_14.1, q_14.3, q_14.5 - each a single unlabelled step, inferred as 'conclusion' since each is its solution's only stageable block); every other concept/formula/step already carried an explicit label from stage 7. No duplicate-solution artifact present (ex_14.4's item-level concept is genuine shared setup, kept). No note/table blocks in this chapter's actual item set. Re-parsed the JSON and cross-checked item/part/figure-src counts against a fresh, independent regex count over structured.hi.md directly (not against numbers already in memory) - all three matched exactly."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-14T11:38:04.200139+00:00",
+    "inputs": {
+      "structured.hi.md": "334bb486208fbe37"
+    },
+    "counts": {
+      "items": 9,
+      "parts": 2,
+      "distinct_figure_srcs": 1,
+      "stage_distribution": {
+        "conclusion": 10,
+        "given": 6,
+        "key_formula": 1,
+        "substitute": 2
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "item_count_match",
+      "part_count_match",
+      "figure_src_count_match"
+    ],
+    "model_calls": 1,
+    "notes": "Serialized 07_format/structured.hi.md to 08_tag/structured.hi.json. Only 3 blocks needed position-based stage inference (ex_14.1, q_14.3, q_14.5 - each a single unlabelled step, inferred as 'conclusion' since each is its solution's only stageable block); every other concept/formula/step already carried an explicit label from stage 7. No duplicate-solution artifact present (ex_14.4's item-level concept is genuine shared setup, kept). No note/table blocks in this chapter's actual item set. Re-parsed the JSON and cross-checked item/part/figure-src counts against a fresh, independent regex count over structured.hi.md directly (not against numbers already in memory) - all three matched exactly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-14T11:42:22.392030+00:00",
+    "inputs": {
+      "structured.hi.json": "e9134cc6160f77c4"
+    },
+    "counts": {
+      "html_chars": 17841,
+      "css_chars": 20043
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored 09_design/final.hi.html + final.hi.css, directly modeled on chapters/physics-12-13/09_design (most recently proven reference) which itself started from solutions-chapter-1.css/html. Copied latex.py from physics-12-13 and added ONE new macro: \\sim (used repeatedly in this chapter's own content, e.g. 'n_i ~ 10^16', missing from every prior chapter's inherited table since none of them needed it) - grepped this chapter's own structured.hi.md commands/environments against the converter's table first, per established discipline; every other command used here (\\Delta, \\Omega, \\approx, \\left/\\right, \\mathrm, \\mu, \\times, \\begin{aligned}) was already covered. Copied the one used figure (fig_physics-12-14_16.jpg) into 09_design/images/. Two real bugs found and fixed during the mandatory manual read-back/screenshot pass (not just cosmetic): (1) a stage-8 serialization bug where ex_14.4's bare item-level :::figure was captured BOTH in the item's 'figures' list AND duplicated into its solution_blocks, rendering the same image twice - fixed in the stage-8 script and also strengthened that stage's own gate, which had been comparing a distinct-src SET (silently absorbing the duplicate) rather than a total occurrence COUNT; re-ran stage 8, JSON regenerated, gate now genuinely catches this class of bug. (2) ex_14.4's item-level shared-setup concept ('given'/method) was rendering AFTER its two parts instead of before them, reading backwards (method revealed after the calculations that already used it) - fixed the render script's item ordering. Also improved MCQ prompt readability (q_14.1/14.3/14.4/14.5): their embedded '(a)/(b)/(c)/(d)' options, written on separate source lines, were collapsing into one dense run-on paragraph under plain HTML whitespace rules - converted the source's own blank-line/single-newline breaks to <br><br>/<br> after math conversion so each option now renders on its own line, no text changed. Manual read-back: every numeric token in every question/final_answer field of 06_simplify/chapter.simplified.hi.md (30 tokens across 9 items + 2 parts) confirmed present in the rendered HTML text via a small script, AND the full page was screenshotted (Playwright/Chromium, full_page) and visually reviewed end to end after both fixes - all 9 items, the one figure, all four stage pills, both answer-box styles (organic blob for short answers; plain rounded-rect for q_14.6's longer combined answer, correctly past the 30-char threshold) all render correctly; no :::table anywhere (none exists in this chapter's final item set, as flagged since stage 2)."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-14T11:44:02.039498+00:00",
+    "inputs": {
+      "final.hi.html": "54307a14e0d5aaac"
+    },
+    "counts": {
+      "page_count": 4,
+      "file_size_bytes": 564933,
+      "numeric_tokens_checked": 30,
+      "numeric_tokens_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback"
+    ],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium from 09_design/final.hi.html's own file:// path (images/ folder alongside it, referenced exactly as the HTML already does). page.emulate_media('screen') called immediately before page.pdf() per the standing fix for Chromium's print-media Devanagari pre-base-vowel-reordering bug. prefer_css_page_size=True + print_background=True, no explicit format/width/height passed. All 3 gates pass: page count sane for a 9-item chapter, no blank pages, and all numeric tokens from 06_simplify/chapter.simplified.hi.md's own question/final_answer fields (the same gated source stage 9's read-back used) confirmed present in the PDF's own extracted text (fitz), re-run fresh against the PDF rather than assumed carried over from the HTML check. Checked for (but did not encounter) the documented superscript-merge trap: this converter renders exponents as real HTML <sup> tags, not literal unicode superscript glyphs, so there was no translate-based normalization step to get wrong; verified directly that every expected numeric substring is still findable in the extracted text, merged-adjacent-digit-runs included, since a merged run still contains each of its own parts as a substring."
+  }
+]

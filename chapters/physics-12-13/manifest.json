@@ -1,0 +1,262 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-14T07:44:23.919665+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "842cbfcb63a8cac9",
+      "solutions.hi.pdf": "d095371d2b765de2"
+    },
+    "counts": {
+      "chapter.hi.md_chars": 47161,
+      "solutions.hi.md_chars": 42411,
+      "chapter.hi.md_dollar_spans": 368,
+      "solutions.hi.md_dollar_spans": 672,
+      "chapter.hi.md_image_refs": 1,
+      "solutions.hi.md_image_refs": 1,
+      "images_downloaded": 2
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no chapter.en.pdf / solutions.en.pdf provided, same as physics-12-2 through physics-12-12) - converted chapter.hi.pdf and solutions.hi.pdf via Mathpix. Likely 'Nuclei' (chapter 13). Solutions manual is large and math-dense relative to the chapter (672 vs 368 dollar-spans) - same pattern as physics-12-9/11/12, expect orphaned/interspersed extra questions at stage 2 matching. Only 2 images - low figure count. Nothing else suspicious in the sanity check."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-14T07:53:01.805716+00:00",
+    "inputs": {
+      "chapter.hi.md": "d377a0d983fcea89",
+      "solutions.hi.md": "f95de5d405b33cb8"
+    },
+    "counts": {
+      "examples_hi": 4,
+      "exercises_hi": 10,
+      "raw_solutions_hi": 31,
+      "matched": 10,
+      "orphan_solutions": 21,
+      "needs_review": 0,
+      "total_items": 14
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "ex_13.1: question missing a language",
+        "ex_13.1: solution missing a language",
+        "ex_13.2: question missing a language",
+        "ex_13.2: solution missing a language",
+        "ex_13.3: question missing a language",
+        "ex_13.3: solution missing a language",
+        "ex_13.4: question missing a language",
+        "q_13.1: question missing a language",
+        "q_13.1: solution missing a language",
+        "q_13.2: question missing a language",
+        "q_13.2: solution missing a language",
+        "q_13.3: question missing a language",
+        "q_13.3: solution missing a language",
+        "q_13.4: question missing a language",
+        "q_13.4: solution missing a language",
+        "q_13.5: question missing a language",
+        "q_13.6: question missing a language",
+        "q_13.6: solution missing a language",
+        "q_13.7: question missing a language",
+        "q_13.7: solution missing a language",
+        "q_13.8: question missing a language",
+        "q_13.8: solution missing a language",
+        "q_13.9: question missing a language",
+        "q_13.9: solution missing a language",
+        "q_13.10: question missing a language",
+        "q_13.10: solution missing a language"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 3,
+    "notes": "Hindi-only chapter (Nuclei / नाभिक). Extracted 4 examples (with textbook's own solutions, embedded in chapter.hi.md) and 10 exercises (13.1-13.10) from chapter.hi.md, plus 31 raw numbered entries (प्रश्न 1-31) from solutions.hi.md - the FULL un-rationalised NCERT question set. CONFIRMED the predicted bare-numbering collision by construction: solutions.hi.md numbers its own entries bare (1..31, no chapter prefix), so match.norm_num(raw, chapter=\"13\") prefixes each onto \"13.<n>\" - meaning raw numbers 1-10 collide directly with this chapter's own real exercises 13.1-13.10 (all distinct bare numbers, all present in the solutions manual), attaching an unrelated question's solution with needs_review staying empty throughout (verified conceptually against join_solutions()'s own key-lookup logic, and confirmed live wherever the colliding raw entry had solution text populated in this test). Real example: exercise 13.1 is the Nitrogen-14 binding-energy problem, but bare \"1\" is the Lithium-isotope-abundance problem (this chapter's own real Nitrogen match is raw \"3\", not \"1\"); exercise 13.3 is the coin problem, but bare \"3\" is Nitrogen (the naive join reassigns Nitrogen's solution to the coin question). needs_review would have stayed empty for every one of these, exactly the physics-12-11/12-12 failure mode. Built the real merge by hand instead, content-verified pair by pair against distinctive numeric values (atomic masses, mass numbers, computed energies): exercises 13.1/13.2/13.3/13.4/13.5/13.6/13.7/13.8/13.9/13.10 map to raw solutions-manual प्रश्न 3/4/5/11/15/16/17/19/20/21 respectively - NOT a contiguous or offset range, a scattered subset (this rationalised chapter dropped 21 of the original 31 questions, e.g. isotope-abundance and radioactive-dating problems that used to be exercises 1,2,6-10,12-14,18,22-31). All 10 real exercises + all 4 examples now have a solution attached; 0 unmatched, 0 needs_review (resolved entirely by hand, not left for a later stage). 5 OCR/same-page/cross-document issues spotted and flagged (not fixed) for stage 5 - see match_report.md's 'cross_document_or_ocr_flags_for_stage_5' list: an Au atomic-number OCR slip, a superscript-exponent OCR glue ('1/3' -> '13'), a garbled connector word, an Fe mass-number OCR slip (A=66 vs 56), a same-page MW/MeV unit self-contradiction candidate, and one genuine CROSS-DOCUMENT numeric disagreement (R0=1.2fm in the chapter vs R0=1.1fm used in the solutions manual's own density derivation) that must be left exactly as printed in each source, per standing instructions, not resolved unilaterally. gate_bilingual fails for every item as expected for a Hindi-only chapter (no English source exists at all) - same accepted pattern as physics-12-9's own manifest."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-14T07:54:54.831164+00:00",
+    "inputs": {
+      "chapter.hi.md": "e3dccfaa6c5f2957"
+    },
+    "counts": {
+      "examples_hi_items": 4,
+      "examples_hi_chars": 6476,
+      "qa_hi_items": 10,
+      "qa_hi_chars": 12856
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter, no merge_by_id needed (single language). Split chapter.hi.md's 14 items into examples.hi.md (4 examples) and qa.hi.md (10 exercises). Round-trip verified: both files parse cleanly with tag._parse, and their item counts sum to the merged chapter's 14 - nothing gained or lost in the split."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-14T07:55:13.214520+00:00",
+    "inputs": {
+      "examples.hi.md": "b99ac2133d7272eb",
+      "qa.hi.md": "495f7bfdbea193c2"
+    },
+    "counts": {
+      "combined_hi_items": 14,
+      "combined_hi_chars": 19252
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter. Recombined 03_split/examples.hi.md (4) + qa.hi.md (10) into 04_combined/combined.hi.md (14 items, original order). Round-trip verified: parses cleanly, item count matches stage 3's two files' combined count exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-14T08:02:34.672942+00:00",
+    "inputs": {
+      "combined.hi.md": "e3dccfaa6c5f2957",
+      "chapter.hi.pdf": "842cbfcb63a8cac9",
+      "solutions.hi.pdf": "d095371d2b765de2"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "corrections_held": 0,
+      "items_checked_against_source_pdf": 14,
+      "items_marked_verified": 14,
+      "additional_findings_documented_not_applied": 4
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 1,
+    "notes": "Verified all 4 examples + 10 exercises against the actual source PDFs: chapter.hi.pdf (has a real, non-Unicode-font text layer - cross-checked numerically via extracted text plus rendered page images) and solutions.hi.pdf (image-only scan, no text layer at all - every relevant page rendered to PNG and read directly). Went beyond routine visual compare into a full arithmetic re-derivation of every equation in every item (per the physics-12-12 precedent), which is what caught the one real correction applied here (see corrections.md): q_13.9's Coulomb-barrier derivation had a same-page arithmetic slip (an intermediate value printed as half its correct amount, contradicting both the computation above it and the division right after it on the same line) - confirmed against the actual solutions.hi.pdf page image, fixed under the standing same-page self-contradiction authorisation. Also confirmed (via the same page images) three further same-page issues already flagged during stage 2 extraction had in fact already been resolved upstream during hand-transcription (a garbled OCR exponent '13' -> '1/3' in q_13.4, an Fe mass-number print error '66' -> '56' in q_13.6 never carried into the item at all, and a 'MW' -> 'MeV' unit slip in q_13.7) - documented in corrections.md's prose for the audit trail, no further action needed since the deliverable was never wrong. One genuine CROSS-DOCUMENT disagreement confirmed and deliberately left untouched per standing instructions: q_13.10's R0 (chapter says 1.2 fm, solutions manual's own density derivation uses and is consistent with 1.1 fm) - both left exactly as printed in their own source, flagged prominently in corrections.md and the stage report, not resolved. Also documented (not applied, doesn't affect any rendered value): a cross-document Au atomic-number disagreement (chapter says Z=79, solutions manual's q_13.4 header says Z=78) that never actually enters the rendered solution text either way. Set verified=True on all 14 items - every one was checked against the source PDFs this stage."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-14T08:04:41.912719+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "a7c7cdd2ebd00f5d"
+    },
+    "counts": {
+      "items_total": 14,
+      "parts_simplified_text_changed": 3,
+      "items_left_unchanged": 13,
+      "restore_failed": 0
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "ex_13.1: question missing a language",
+        "ex_13.1: solution missing a language",
+        "ex_13.2: question missing a language",
+        "ex_13.2: solution missing a language",
+        "ex_13.3: question missing a language",
+        "ex_13.3: solution missing a language",
+        "ex_13.4: question missing a language",
+        "q_13.1: question missing a language",
+        "q_13.1: solution missing a language",
+        "q_13.2: question missing a language",
+        "q_13.2: solution missing a language",
+        "q_13.3: question missing a language",
+        "q_13.3: solution missing a language",
+        "q_13.4: question missing a language",
+        "q_13.4: solution missing a language",
+        "q_13.5: question missing a language",
+        "q_13.6: question missing a language",
+        "q_13.6: solution missing a language",
+        "q_13.7: question missing a language",
+        "q_13.7: solution missing a language",
+        "q_13.8: question missing a language",
+        "q_13.8: solution missing a language",
+        "q_13.9: question missing a language",
+        "q_13.9: solution missing a language",
+        "q_13.10: question missing a language",
+        "q_13.10: solution missing a language"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen_hi",
+      "gate_answers_unchanged_hi",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Simplified ex_13.4's three prose parts (a/b/c - a qualitative discussion of mass-energy interconversion in nuclear vs chemical reactions, the only genuinely long/dense prose in this chapter) into shorter sentences with plainer register, preserving meaning (including the exact direction of every left-side/right-side and chemical<<nuclear comparison - double-checked against the ex_2.3 comparative-reversal trap in CLAUDE.md/step_6). Ran protect.freeze()/restore() on these parts regardless (confirmed a no-op round trip - no $...$/table/image/numeric-unit spans exist in this pure-prose passage). Every other item's solution (all 4 examples' core derivations, all 10 exercises) is already a terse numeric derivation with minimal connecting prose - left byte-identical per step_6/simplify.md's 'if a solution is already clear, return it unchanged' guidance, still marked simplified=True (considered, not rewritten). No question text touched anywhere (gate confirms). gate_bilingual fails for every item as expected/accepted for this Hindi-only chapter."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-14T10:48:50.279563+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "b831f1f016213ec6"
+    },
+    "counts": {
+      "structured_hi_chars": 20722,
+      "items_total": 14,
+      "parts_total": 5
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_hi",
+      "protect_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hand-authored 07_format/structured.hi.md from 06_simplify/chapter.simplified.hi.md (exact copy, then targeted insertions only - no wording/digit/symbol changed anywhere, confirmed by protect.parity showing zero drift). Applied the fixed given/key-formula/substitute/conclusion pattern (concept='जानकारी', formula='मुख्य सूत्र', step='मान रखो', step='निष्कर्ष') to all 12 numeric solutions and both parts of q_13.5's Q-value calculation, using position/content judgement per item (not every item has all four stages - e.g. q_13.4/q_13.7 have no separate 'given' block, q_13.7 ends at 'substitute' with no restated conclusion sentence, exactly as step_9's own notes anticipate). q_13.2's two parallel Fe/Bi computations rendered as two sequential :::step{n=1,2} 'मान रखो' blocks sharing one 'जानकारी' concept and one final comparison 'निष्कर्ष'. ex_13.1's supplementary neutron-star remark (not a numeric conclusion) wrapped as :::note{type='tip'} rather than forced into the 4-stage mold. ex_13.4's three qualitative/discursive parts (a/b/c) deliberately left as plain unstructured prose inside their existing :::solution containers - per step_9 guidance, a purely conceptual discussion doesn't fit the given/formula/substitute/conclusion pattern and forcing it would misrepresent the content. Checked ex_13.4 (3 parts) and q_13.5 (2 parts) for the item-level trailing-duplicate-solution edge case flagged in CLAUDE.md point 4: NEITHER exhibits it - neither multi-part item has an item-level :::solution at all (only per-part solutions), so stage 8's duplicate-suppression logic has nothing to suppress here. All existing outer containers/attributes/headings (including verified=\"True\" simplified=\"True\" corrections_applied on q_13.9) preserved byte-identical from 06_simplify - never regenerated. No figures (0 in this chapter, per calibration) so no figure-placement judgement calls needed. Gate: tag._parse succeeded on the full file (14 items, 5 parts, 8 concept/7 formula/26 step/1 note containers); protect.parity(stage6_text, stage7_text) returned zero problems (display math, inline math, table and image counts all unchanged)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-14T10:55:09.732966+00:00",
+    "inputs": {
+      "structured.hi.md": "f38854dadc844ff7"
+    },
+    "counts": {
+      "items": 14,
+      "parts": 5,
+      "figures": 0,
+      "given": 8,
+      "key_formula": 7,
+      "substitute": 15,
+      "conclusion": 14
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "item_count_match",
+      "part_count_match",
+      "figure_src_count_match"
+    ],
+    "model_calls": 1,
+    "notes": "Hand-written chapters/physics-12-13/08_tag/build_json.py parses 07_format/structured.hi.md via pipeline.tag._parse and serializes to 08_tag/structured.hi.json per step_8/PROMPT.md's schema. Since stage 7 already assigned the fixed vocabulary explicitly to every :::concept (always given), :::formula (always key_formula) and :::step (labelled either 'मान रखो'=substitute or 'निष्कर्ष'=conclusion - no step left unlabelled), the stage/label judgement was mostly a direct lookup; the positional-inference fallback (first=given, last=conclusion, single=conclusion) was exercised only for ex_13.4's three qualitative prose parts (a/b/c), each left as plain unwrapped text at stage 7 and here serialized as a single synthetic step block with stage=conclusion (single stageable block per part, per the fallback rule) - correctly reflecting that a purely discursive answer has no separate given/formula/substitute stages to show. q_13.2's two parallel Fe/Bi computations serialized as two sequential step blocks (both stage=substitute, per their explicit 'मान रखो' labels) sharing one given concept and one final conclusion step - not the case-analysis shape step_9/PROMPT.md warns about (that trap is for >2 parallel cases merged into one anonymous block; here each Fe/Bi computation is its own distinct JSON block, not merged). Checked the known duplicate-solution artifact for ex_13.4/q_13.5 (this chapter's only multi-part items): neither has an item-level trailing :::solution at all, so solution_blocks=[] for both at the item level is simply correct (nothing to suppress), not the suppression rule firing. Figure src count is 0/0 (confirmed no :::figure anywhere and no inline image markdown embedded in any solution's raw text, matching stage 2's original finding of 0 figures used in this chapter's real item set). Gate: re-parsed the JSON and cross-checked against a FRESH direct count from structured.hi.md (not reusing build_json.py's own counters) - item count 14=14, part count 5=5, figure src count 0=0. All three match; hard gate passes."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-14T11:02:36.428151+00:00",
+    "inputs": {
+      "structured.hi.json": "f20d13d3baae4e45"
+    },
+    "counts": {
+      "html_bytes": 57773,
+      "items_rendered": 14,
+      "figures_rendered": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored chapters/physics-12-13/09_design/final.hi.html + final.hi.css + render_page.py + latex.py, closely modeled on physics-12-12's proven stage-9 scripts (copied final.hi.css unmodified as the accumulated base+extensions stylesheet - this chapter's content needed no further CSS additions: no tables, no figures, no content shape not already covered). latex.py required three targeted, chapter-specific fixes beyond the inherited converter (documented in its own module docstring): (1) added \\longrightarrow and \\propto to NOARG_SYMBOL - both missing from every prior chapter's table and needed by q_13.6's decay equation and q_13.4's radius proportionality; (2) extended _is_unit_division() to recognize a bare unit symbol with its own exponent (e.g. 'c^{2}') as a valid unit-like right side, so ex_13.3's repeated 'MeV / c^2' unit stays compact/inline instead of becoming a stacked value/value fraction; (3) added \\approx as a depth-0 boundary in the flat-slash rewriter's boundaries(), fixing a real bug where q_13.4's own boxed answer echo 'R_gold/R_silver \\approx 1.23' (no '=' or '\\times' anywhere after the slash) would otherwise have its denominator search run to the end of the string and swallow ' \\approx 1.23' into the fraction. All three verified by direct HTML inspection post-render (grepped for leftover bare command names - zero found - and confirmed the MeV/c^2 and R_gold/R_silver cases render exactly as intended). Checks per step_9/PROMPT.md: (a) numeric read-back - extracted every digit run from every question/final_answer/part field in 06_simplify/chapter.simplified.hi.md via mdio.markdown_to_chapter (136 numbers total) and confirmed each appears in the rendered HTML's plain text (tags stripped with a separating space, avoiding the merged-token trap) - 0 missing; (b) figure src check - os.path.exists n/a, 0 figures in this chapter's real item set (confirmed again at this stage, matching stage 2/8's finding) and 0 <img> tags in the output, consistent; (c) took full-page and per-item Playwright screenshots (device_scale_factor=2) and visually reviewed ex_13.1 (note pill + fraction + exponents), q_13.2 (two parallel Fe/Bi 'मान रखो' pills sharing one 'जानकारी' and one final 'निष्कर्ष', long combined answer correctly using the plain-rectangle box past the 30-char threshold), q_13.4/q_13.10 (propto, stacked fractions, rho, R0 values including the deliberately-unresolved 1.1fm vs 1.2fm cross-document disagreement - confirmed untouched), q_13.5 (both parts' given/formula/substitute/conclusion chain, reaction arrows), q_13.9 (confirmed the corrected 1.152e-13 J value, not the original erroneous 5.76e-14), and ex_13.4 (three plain-prose parts rendering as single 'निष्कर्ष' pills per the positional-inference fallback, no false given/formula/substitute structure forced onto qualitative discussion). All Greek/relation symbols this chapter's own content actually uses (pi, varepsilon/epsilon, rho, Delta, approx, because, therefore, times, cdot, longrightarrow/rightarrow, propto) render as their correct glyphs, italicized where Greek, never as a literal bare command name. lang=hi set; Devanagari font stack loads via the same @import as every prior chapter."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-14T11:09:46.100291+00:00",
+    "inputs": {
+      "final.hi.html": "69c1b69d4e461bf7"
+    },
+    "counts": {
+      "page_count": 8,
+      "file_size_bytes": 776354,
+      "numbers_checked": 136,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback"
+    ],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: page.goto() the file's own file:// path, awaited document.fonts.ready, called page.emulate_media(media='screen') immediately before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base-vowel-reordering bug), and used print_background=True + prefer_css_page_size=True (no explicit format/width/height) so the base CSS's own @page/A4/9mm-margin rules govern pagination. First export attempt produced 9 pages with a genuinely BLANK final page (0 extracted chars) - a real hard-gate failure, not accepted. Root-caused: forcing page.emulate_media('screen') for the Devanagari fix means the @media print rule that normally zeros .sheet's 9mm padding never fires; padding on a fragmented/paginated box only shows at the very start (top of page 1) and very end (bottom of the last page) of the whole flowed box, not on every page. This chapter's total content height happened to land only a little past a clean page boundary (q_13.10, the last item, fills its page almost to the bottom edge, confirmed by direct visual inspection) - the extra ~9mm of otherwise-harmless trailing .sheet padding was just enough to push a near-empty remainder onto a genuinely blank 9th page. Fixed with one added, narrowly-scoped CSS rule in this chapter's own 09_design/final.hi.css (`.sheet { padding-bottom: 0; }`, documented in place) - zeros only the bottom padding (top/left/right untouched, so the on-screen page opens with its normal margin, no visual change anywhere actual content is) and does not touch any content. Re-exported: page count dropped to 8 with zero blank pages; visually re-confirmed both the first page (title/ex_13.1-13.3, unchanged) and the last page (q_13.9/q_13.10, ends cleanly at the boxed answer with a normal bottom margin, nothing cut off or newly overflowing) via fitz-rendered PNGs. This is a genuine, chapter-content-dependent pagination edge case (this chapter's own content height is unluckily close to a page-boundary multiple) - every other chapter's own content happened to fall far enough inside its last page's boundary that this same latent trailing padding never crossed into an extra page, so the underlying CSS gap was never visible before. Gate re-run after the fix (fitz/PyMuPDF): page count 8 for a 14-item chapter (4 examples + 10 exercises across 5 parts) - sane, not 1, not triple digits. Zero blank pages. Numeric read-back re-run directly against the PDF's own extracted text (mdio.markdown_to_chapter against 06_simplify/chapter.simplified.hi.md, same source stage 9 used, not assumed carried over from the HTML check): all 136 numeric tokens from every question/final_answer field (item- and part-level) found - 0 missing. Applied the documented superscript-exponent-glue guard (inserting a separator before a run of unicode superscript characters before normalizing to ASCII, so a base number and its exponent never merge into one token) defensively, though this chapter's own exponents render as ordinary HTML <sup> spans holding plain ASCII digits rather than literal unicode superscript glyphs, so the specific glued-token failure mode wasn't actually triggered here. Known, unresolved, out-of-scope limitation flagged per step_10/PROMPT.md (not a bug in this chapter's own pipeline output, not a gate failure - the numeric gate only checks digits): Chromium's print-to-PDF pipeline drops the pre-base reph 'र्' from the PDF's *extractable* text layer for every 'र्'+consonant sequence while rendering it correctly on-screen. This chapter uses 'निष्कर्ष' (the conclusion-pill label) 14 times, so copy-pasted or re-extracted text from this PDF will read that word one character short each time; visual rendering is completely unaffected. No fix attempted (documented elsewhere in this project as a Chromium-level defect outside this pipeline's control)."
+  }
+]

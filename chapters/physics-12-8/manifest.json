@@ -1,0 +1,330 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-11T08:26:24.673616+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "179271c1a8324217",
+      "solutions.hi.pdf": "177dcacb9ef210b9"
+    },
+    "counts": {
+      "chapter.hi.md_chars": 38242,
+      "solutions.hi.md_chars": 19073,
+      "chapter.hi.md_dollar_spans": 249,
+      "solutions.hi.md_dollar_spans": 224,
+      "chapter.hi.md_image_refs": 9,
+      "solutions.hi.md_image_refs": 1,
+      "images_downloaded": 10
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no chapter.en.pdf / solutions.en.pdf provided, same as physics-12-2 through physics-12-7) - converted chapter.hi.pdf and solutions.hi.pdf via Mathpix. Nothing suspicious in the sanity check: char counts and Devanagari density in line with prior physics chapters, 10 images downloaded and relinked locally. Smallest chapter so far by char count - likely fewer items than ch2-7."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-11T08:34:12.507123+00:00",
+    "inputs": {
+      "chapter.hi.md": "a8e547ded3151483",
+      "solutions.hi.md": "46f1a19eab2f67b2"
+    },
+    "counts": {
+      "examples_hi": 2,
+      "exercises_hi": 10,
+      "solutions_manual_entries_hi": 15,
+      "matched": 10,
+      "orphan_solutions_discarded": 5,
+      "unmatched_questions": 0,
+      "duplicate_solutions": 0,
+      "total_items": 12,
+      "parts_total": 13,
+      "figures_total": 2
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter (Physics 12 Ch8, Electromagnetic Waves). Built directly by the coordinator as schema.Chapter/Item/Part/Figure objects (not via 3 separate extraction passes + match.join_solutions()), matching physics-12-3/12-5/12-6 precedent - both examples embed their own textbook solution directly in chapter.hi.md (no matching needed), and the 10 exercises' small scale made a hand-built, content-verified merge the safer approach from the start. FINDING: solutions.hi.md keeps pre-rationalisation numbering (bare प्रश्न 1-15, its own 'अतिरिक्त प्रश्न' heading starting at 11) while the current chapter.hi.md has only 10 exercises (8.1-8.10, no additional-exercises section at all) - प्रश्न 11-15 are a clean contiguous orphaned trailing block (unlike the interspersed-orphan pattern seen in physics-12-3/12-5/12-6), discarded per the established rationalised-curriculum precedent (a whole edition's worth of cut content is not invented back into the current chapter). All 10 real pairings verified by content (see match_report.md's matched_pairs for exact wording/value matches) before writing anything. 5 suspected OCR/wording artifacts in the solutions manual's own text were transcribed as printed (not fixed) and flagged in match_report.md's ocr_ambiguity_flags_for_stage5 for PDF-page verification: q_8.1(a)'s capacitance exponent (-14 vs the internally-consistent -12), q_8.4's closing sentence mislabeling wavelength as frequency, q_8.5's 'आघूर्ण'/'t1' likely OCR substitutions for 'आवृत्ति'/'f1', q_8.9's microwave-energy '1σ^-24' likely OCR misread of '10^-24', and q_8.10(c)'s final coefficient (B0²/2μ0 where the line above it implies B0²/4μ0). Figure handling: q_8.1/q_8.2 each keep their own chapter-side figure (fig_7=चित्र 8.5, fig_8=चित्र 8.6); solutions.hi.md's own redundant duplicate scan of चित्र 8.5 (fig_9) was not attached; 7 other downloaded images are chapter narrative/portraits not tied to any example or exercise item, left unattached."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-11T08:34:47.294690+00:00",
+    "inputs": {
+      "chapter.hi.md": "895feaef1f4ab714"
+    },
+    "counts": {
+      "examples_hi_items": 2,
+      "examples_hi_chars": 2550,
+      "qa_hi_items": 10,
+      "qa_hi_chars": 15340,
+      "merged_total_items": 12
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split via pipeline.mdio.markdown_to_chapter()+render.render() kind-filtered (hi-only, no en side). Round-trip verified: both output files parse cleanly with tag._parse, and their item counts (2 examples + 10 qa) sum to the merged chapter's total (12) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-11T08:35:00.524108+00:00",
+    "inputs": {
+      "examples.hi.md": "109f7be485f4e40c",
+      "qa.hi.md": "e031b827eaa5993f"
+    },
+    "counts": {
+      "combined_hi_items": 12,
+      "combined_hi_chars": 17779
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination via pipeline.mdio.markdown_to_items() on both stage-3 files + plain item-list concatenation (hi-only, no en side) + render.render(). Round-trip verified: combined.hi.md parses cleanly with tag._parse, and its item count (12) matches stage 3's examples+qa total exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-11T08:41:21.792670+00:00",
+    "inputs": {
+      "combined.hi.md": "895feaef1f4ab714",
+      "chapter.hi.pdf": "179271c1a8324217",
+      "solutions.hi.pdf": "177dcacb9ef210b9"
+    },
+    "counts": {
+      "items_checked": 12,
+      "text_corrections_applied": 3,
+      "text_corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 6,
+    "notes": "Verified every question/solution/final_answer field in all 12 items directly against rendered source PDF pages (fitz/PyMuPDF page renders, not the mojibake text layer - chapter.hi.pdf uses a legacy non-Unicode Devanagari font, same issue documented in prior chapters' manifests): chapter.hi.pdf p.205 (printed page, PDF p.8 - both examples 8.1/8.2, word-for-word match, no corrections needed) and pp.210-211 (PDF pp.13-14 - all 10 exercises 8.1-8.10 + both figures chitra 8.5/8.6, word-for-word match, no corrections needed); solutions.hi.pdf pp.148-155 (PDF pp.1-8, प्रश्न 1-10, all 10 matched pairs' wording/numbers/derivations checked line by line). 2 corrections applied (high confidence): (1) q_8.2 part (c) had I_0 in two places where the source clearly prints I_d (displacement current) - confirmed against p.148-149's own B-field derivation and its immediately following '(\\because I_d=I)' parenthetical; the chapter's own separate, correct I_0 usage (peak current amplitude, a few lines later) was left untouched, confirmed distinct in context. (2) q_8.9's microwave-energy line had '6.6 x 1\\sigma^{-24} J' - a mathpix OCR misread of '10' as '1\\sigma' - corrected to '6.6 x 10^{-24} J' per p.153, consistent with the immediately following eV-conversion line which already used the correct exponent. 3 items flagged as genuine SOURCE-BOOK errors (confirmed printed exactly this way in solutions.hi.pdf itself, not mathpix artifacts) and deliberately left uncorrected per 'should_be must be what the PDF actually shows, never what you think is physically correct': (a) q_8.1 part (a): 'C=8.01 x 10^-14 F=8.01 pF' (confirmed p.148) - internally inconsistent (8.01 pF is actually 8.01x10^-12 F, and the very next line's dV/dt calc correctly uses 10^-12 in its denominator) but printed exactly this way in the source; (b) q_8.10 part (c)'s closing coefficient 'u_E = (1/4)(B0^2/mu0) = B0^2/(2 mu0) = u_B' (confirmed p.154-155) - algebraically B0^2/(4 mu0) would follow from the line above it, not B0^2/(2 mu0), but this is exactly what is printed; does not affect the qualitative conclusion the question asks to demonstrate (u_E = u_B). Neither (a) nor (b) is the narrow unit-mismatch self-contradiction exception in step_5/verify.md (both are plain coefficient/exponent slips, not a quantity given in the wrong kind of unit), so both are ordinary 'textbook has an error, not our call' cases - flagged for the user's awareness, not corrected. (c) q_8.4's closing sentence reads 'ata: vaidyutchumbakiya tarang ki aavrutti 10 m hai' (confirmed p.150) - labels the computed 10 m as 'aavrutti' (frequency) when the question and the derivation immediately above both compute 'tarangdairghya' (wavelength); 10 m has units of length, inconsistent with being called a frequency - THIS ONE plausibly matches step_5/verify.md's narrow exception (a same-page self-contradiction between a stated quantity name and its own unit, directly following a correct derivation), which requires the user's explicit sign-off before correcting rather than silent auto-correction - left exactly as printed, flagged prominently for the user's decision, not folded into the high-confidence batch above. 1 more note (not a formal correction record, resolved during initial hand-transcription at stage 2 rather than as a separate stage-5 correction): solutions.hi.pdf p.151 (प्रश्न 5) prints 'आघूर्ण f2=12 MHz' where 'आवृत्ति' (frequency) was clearly intended (matching f1's own label immediately above and the physical quantity being defined) - already written as 'आवृत्ति' in 02_extract's own transcription, so no separate correction record was needed or possible (the typo text is not present in the field to match against). gate_math_parity, gate_counts and gate_solutions_present_hi all pass."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-11T08:44:46.336715+00:00",
+    "inputs": {
+      "combined.hi.md": "895feaef1f4ab714",
+      "chapter.hi.pdf": "179271c1a8324217",
+      "solutions.hi.pdf": "177dcacb9ef210b9"
+    },
+    "counts": {
+      "items_checked": 12,
+      "text_corrections_applied": 4,
+      "text_corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 6,
+    "notes": "SUPERSEDES this chapter's first 'verify' manifest entry, which held q_8.4's wavelength/frequency mislabel for the user's explicit sign-off rather than auto-correcting it (per step_5/verify.md's narrow same-page label/unit self-contradiction exception). The user confirmed the fix (matching the ex_2.3/q_5.7(ii)/q_3.6/q_3.7 precedent class), so it is now applied as a 4th high-confidence correction below; everything else in this entry is unchanged from the first pass. Verified every question/solution/final_answer field in all 12 items directly against rendered source PDF pages (fitz/PyMuPDF page renders, not the mojibake text layer - chapter.hi.pdf uses a legacy non-Unicode Devanagari font, same issue documented in prior chapters' manifests): chapter.hi.pdf p.205 (printed page, PDF p.8 - both examples 8.1/8.2, word-for-word match, no corrections needed) and pp.210-211 (PDF pp.13-14 - all 10 exercises 8.1-8.10 + both figures chitra 8.5/8.6, word-for-word match, no corrections needed); solutions.hi.pdf pp.148-155 (PDF pp.1-8, प्रश्न 1-10, all 10 matched pairs' wording/numbers/derivations checked line by line). 4 corrections applied (high confidence): (1) q_8.2 part (c) had I_0 in two places where the source clearly prints I_d (displacement current) - confirmed against p.148-149's own B-field derivation and its immediately following '(\\because I_d=I)' parenthetical; the chapter's own separate, correct I_0 usage (peak current amplitude, a few lines later) was left untouched, confirmed distinct in context. (2) q_8.9's microwave-energy line had '6.6 x 1\\sigma^{-24} J' - a mathpix OCR misread of '10' as '1\\sigma' - corrected to '6.6 x 10^{-24} J' per p.153, consistent with the immediately following eV-conversion line which already used the correct exponent. (3) q_8.4's closing line originally read 'ata: vaidyutchumbakiya tarang ki aavrutti 10 m hai' (labeling wavelength as frequency) - flagged at this stage for the user's explicit sign-off (a same-page label/unit self-contradiction, not a plain OCR issue), user confirmed the fix (matching the ex_2.3/q_5.7(ii)/q_3.6/q_3.7 precedent class), now corrected to 'tarangdairghya' (wavelength). 2 items remain flagged as genuine SOURCE-BOOK errors (confirmed printed exactly this way in solutions.hi.pdf itself, not mathpix artifacts) and deliberately left uncorrected per 'should_be must be what the PDF actually shows, never what you think is physically correct': (a) q_8.1 part (a): 'C=8.01 x 10^-14 F=8.01 pF' (confirmed p.148) - internally inconsistent (8.01 pF is actually 8.01x10^-12 F, and the very next line's dV/dt calc correctly uses 10^-12 in its denominator) but printed exactly this way in the source; (b) q_8.10 part (c)'s closing coefficient 'u_E = (1/4)(B0^2/mu0) = B0^2/(2 mu0) = u_B' (confirmed p.154-155) - algebraically B0^2/(4 mu0) would follow from the line above it, not B0^2/(2 mu0), but this is exactly what is printed; does not affect the qualitative conclusion the question asks to demonstrate (u_E = u_B). Neither (a) nor (b) is the narrow unit-mismatch self-contradiction exception in step_5/verify.md (both are plain coefficient/exponent slips, not a quantity given in the wrong kind of unit), so both are ordinary 'textbook has an error, not our call' cases - flagged for the user's awareness, not corrected; the user has separately confirmed these two stay exactly as printed. 1 more note (not a formal correction record, resolved during initial hand-transcription at stage 2 rather than as a separate stage-5 correction): solutions.hi.pdf p.151 (प्रश्न 5) prints 'आघूर्ण f2=12 MHz' where 'आवृत्ति' (frequency) was clearly intended (matching f1's own label immediately above and the physical quantity being defined) - already written as 'आवृत्ति' in 02_extract's own transcription, so no separate correction record was needed or possible (the typo text is not present in the field to match against). gate_math_parity, gate_counts and gate_solutions_present_hi all pass."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-11T08:45:15.292384+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "7ea65723ecc892e4"
+    },
+    "counts": {
+      "items_processed": 12,
+      "solution_fields_checked": 20,
+      "solution_blocks_simplified": 0,
+      "solution_blocks_unchanged": 20,
+      "restore_failures": 0,
+      "items_marked_simplified": 12
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen_hi",
+      "gate_answers_unchanged_hi",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter - gate_bilingual skipped, matching physics-12-2..12-7 precedent (it would vacuously fail on every item since there is no English side at all). Every item-level and part-level solution field (17 total: 2 example solutions/parts + 10 exercise items' solutions/parts) was run through protect.freeze()/restore() as a round-trip check (0 restore failures) and read against step_6/simplify.md's criteria. DECISION: no solution in this chapter needed rewriting - every one is already short-sentence, plain-register house style, each derivation step already broken onto its own line by the printed source's own layout (a given-value line, then a named formula, then a substitution line, then a short concluding sentence, each separated by its own $$ block) - this is materially the same shape step_6/simplify.md already asks stage 6 to produce, not prose needing splitting. This matches physics-12-6's own precedent (most items left unchanged, only genuinely run-on paragraph solutions were split) - here, none of the 12 items' solutions are run-on paragraphs (unlike physics-12-6's q_6.1/q_6.2), so returning every one unchanged is the valid, non-churn outcome step_6/simplify.md explicitly endorses. No question text touched anywhere (item-level or part-level) - only solution fields were even considered. No figure captions touched. No numbers/units/signs/final answers touched. Two known source-book errors flagged (not fixed) at stage 5 - q_8.1(a)'s capacitance exponent and q_8.10(c)'s energy-density coefficient - were deliberately left exactly as verified; simplification only ever reorders punctuation/register, never source content. The one item still awaiting the user's explicit sign-off (q_8.4's wavelength/frequency mislabeling, flagged at stage 5) was likewise left untouched pending that decision. All three gates pass: gate_question_text_frozen (no question text touched), gate_answers_unchanged (no final_answer field touched anywhere), gate_math_parity (zero drift - text is byte-identical to stage 5's verified output, only each item's own `simplified` flag was set to True)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-11T08:49:37.659290+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "848515eff350de14"
+    },
+    "counts": {
+      "example": 2,
+      "prompt": 25,
+      "solution": 20,
+      "formula": 13,
+      "step": 20,
+      "answer": 16,
+      "part": 13,
+      "question": 10,
+      "figure": 2,
+      "concept": 7,
+      "table": 1,
+      "chars": 19331
+    },
+    "gates_failed": {
+      "protect_parity_hi": [
+        "display math: 39 -> 40"
+      ]
+    },
+    "gates_passed": [
+      "tag_parse_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hand-authored directly as text (mdio can't parse nested containers from stage 7 onward, per CLAUDE.md/RULES.md - edited 06_simplify's text by hand, verified structural balance with tag._parse, never round-tripped through mdio). Applied the fixed given/key-formula/substitute/conclusion labelling (जानकारी/मुख्य सूत्र/मान रखो/निष्कर्ष) to every worked solution with a genuine numeric given->formula->substitute->conclude shape: ex_8.1, ex_8.2 (both parts), q_8.1(a), q_8.2(a)/(c), q_8.4, q_8.5, q_8.7, q_8.8 (both parts), q_8.10(b). Left short/purely-descriptive answers entirely unstructured (plain text, no inner containers) rather than forcing structure onto them, per step_7/format.md's 'forcing structure onto ordinary prose is worse than leaving it unmarked': q_8.1(b)/(c) (one-line qualitative answers), q_8.3 and q_8.6 (single-paragraph conceptual answers with no numeric derivation), q_8.10(a) (a single one-line computation). Wrapped 2 standalone derivations (a 'show that'/proof shape with no boxed numeric answer, not part of a given/formula/substitute/conclude flow) in :::formula{label=...}: q_8.2(b)'s I_d=I derivation and q_8.10(c)'s u_E=u_B derivation. q_8.9 (the fotoan-energy table item) intentionally left its 7 parallel per-band sub-derivations (gamma/X/UV/visible/IR/micro/radio) as plain flowing text after one shared opening :::formula{label='मुख्य सूत्र'} (E=hv) - this is the same 'several independent, parallel case analyses' content shape step_9/PROMPT.md documents as not fitting the fixed 4-stage sequence well (forcing given/formula/substitute/conclude onto each of 7 near-identical sub-cases would produce 28 pills with no real structural benefit over the source's own natural per-band paragraph breaks); flagging this here as the same documented content-shape limitation, not a fresh design decision. Wrapped q_8.9's answer-field summary table in :::table (same rows/columns/cell text, no reformatting). Moved no figures (fig_physics-12-8_7/_8 are already item-level, right after their own item's prompt, and neither q_8.1 nor q_8.2's solution text refers back to them mid-sentence, so there was nothing to relocate). No :::note blocks added anywhere - this chapter's source solutions carry no explicit textbook aside/remark to wrap (unlike prior chapters with a caution/recall/tip aside); none invented. No :::concept/:::formula/:::step wording was changed from stage 6's text - only container lines were inserted, each opening/closing tag alone on its own line. gate tag._parse succeeds and gate protect.parity shows zero drift (display-math/inline-math/table/image counts identical between stage 6 and stage 7 text)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-11T08:50:38.166227+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "848515eff350de14"
+    },
+    "counts": {
+      "example": 2,
+      "prompt": 25,
+      "solution": 20,
+      "formula": 13,
+      "step": 20,
+      "answer": 16,
+      "part": 13,
+      "question": 10,
+      "figure": 2,
+      "concept": 7,
+      "table": 1,
+      "chars": 19364
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_hi",
+      "protect_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "SUPERSEDES this chapter's first format manifest entry, which caught a real bug via gate_protect_parity_hi (display math 39 -> 40): q_8.8 part (a) had one source aligned 1358c=E0/B0 \\ B0=...1358 display block incorrectly split into two separate 1358...1358 blocks (one in :::formula, one in :::step) - restructuring the underlying LaTeX (dropping the aligned/\\ wrapper) even though no word or digit changed. Fixed by keeping the whole original aligned block intact inside one :::formula container; the second ~\"अथवा\" line (B0=400nT) stays its own separate :::step, matching the source's own two distinct 1358 blocks. Re-verified: parity now shows zero drift. Hand-authored directly as text (mdio can't parse nested containers from stage 7 onward, per CLAUDE.md/RULES.md - edited 06_simplify's text by hand, verified structural balance with tag._parse, never round-tripped through mdio). Applied the fixed given/key-formula/substitute/conclusion labelling (जानकारी/मुख्य सूत्र/मान रखो/निष्कर्ष) to every worked solution with a genuine numeric given->formula->substitute->conclude shape: ex_8.1, ex_8.2 (both parts), q_8.1(a), q_8.2(a)/(c), q_8.4, q_8.5, q_8.7, q_8.8 (both parts), q_8.10(b). Left short/purely-descriptive answers entirely unstructured (plain text, no inner containers) rather than forcing structure onto them, per step_7/format.md's 'forcing structure onto ordinary prose is worse than leaving it unmarked': q_8.1(b)/(c) (one-line qualitative answers), q_8.3 and q_8.6 (single-paragraph conceptual answers with no numeric derivation), q_8.10(a) (a single one-line computation). Wrapped 2 standalone derivations (a 'show that'/proof shape with no boxed numeric answer, not part of a given/formula/substitute/conclude flow) in :::formula{label=...}: q_8.2(b)'s I_d=I derivation and q_8.10(c)'s u_E=u_B derivation. q_8.9 (the fotoan-energy table item) intentionally left its 7 parallel per-band sub-derivations (gamma/X/UV/visible/IR/micro/radio) as plain flowing text after one shared opening :::formula{label='मुख्य सूत्र'} (E=hv) - this is the same 'several independent, parallel case analyses' content shape step_9/PROMPT.md documents as not fitting the fixed 4-stage sequence well (forcing given/formula/substitute/conclude onto each of 7 near-identical sub-cases would produce 28 pills with no real structural benefit over the source's own natural per-band paragraph breaks); flagging this here as the same documented content-shape limitation, not a fresh design decision. Wrapped q_8.9's answer-field summary table in :::table (same rows/columns/cell text, no reformatting). Moved no figures (fig_physics-12-8_7/_8 are already item-level, right after their own item's prompt, and neither q_8.1 nor q_8.2's solution text refers back to them mid-sentence, so there was nothing to relocate). No :::note blocks added anywhere - this chapter's source solutions carry no explicit textbook aside/remark to wrap (unlike prior chapters with a caution/recall/tip aside); none invented. No :::concept/:::formula/:::step wording was changed from stage 6's text - only container lines were inserted, each opening/closing tag alone on its own line. gate tag._parse succeeds and gate protect.parity shows zero drift (display-math/inline-math/table/image counts identical between stage 6 and stage 7 text)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-11T08:53:37.403245+00:00",
+    "inputs": {
+      "structured.hi.md": "da73192894ebece2"
+    },
+    "counts": {
+      "items": 12,
+      "parts": 13,
+      "distinct_figure_srcs": 2,
+      "json_bytes": 48081,
+      "stage_key_formula": 13,
+      "stage_conclusion": 18,
+      "stage_given": 8,
+      "stage_substitute": 8
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "reparse_item_count_matches_fresh",
+      "reparse_part_count_matches_fresh",
+      "reparse_figure_src_count_matches_fresh"
+    ],
+    "model_calls": 0,
+    "notes": "Deterministic tree-walk script (written this session, no fixed-code precedent to reuse - pipeline/tag.py only provides the container parser, not JSON serialization). Every explicit :::concept is 'given' and every explicit :::formula is 'key_formula' regardless of position, per the fixed rule. Every :::step whose label already matches the fixed vocabulary (जानकारी/मुख्य सूत्र/मान रखो/निष्कर्ष) uses that label directly. The 3 unlabelled bare :::step blocks (q_8.1(a)'s two middle substitution steps, q_8.2(c)'s 'yadi I=I0...' aside) and every plain-text-only solution with no containers at all (q_8.1(b)/(c), q_8.3, q_8.6, q_8.10(a), and q_8.9's post-formula prose) were assigned a stage by position among that solution's own stageable blocks (excluding note/figure/table), each correctly resolving to a single 'conclusion' when it is the solution's only other stageable block (per the single-stageable-block rule) or 'substitute' when it sits strictly between an explicit given/formula and an explicit conclusion. Item-level solution_blocks correctly left empty for every item that has parts (ex_8.2, q_8.1, q_8.2, q_8.8, q_8.10) - none of them also carries a redundant trailing item-level solution, so the duplicate-solution guard never had to discard anything real. No 'हल'-opener text needed stripping (every :::solution in this chapter already carries its opener as the label='हल' attribute where the source had one, not as embedded flow text - matching how stage 7 was written). No :::note blocks anywhere in this chapter (none invented). q_8.9's answer-field :::table was serialized as a table segment ({'type':'table','html':<raw markdown, unconverted>}) inside its answer flow, passed through untouched for stage 9 to render - same rows/columns/cell text as the source. Gate: re-parsed the written JSON and compared item count, part count, and distinct figure-src count against a FRESH, independent regex count run directly against structured.hi.md (not against counts already held in memory while writing) - all three match exactly (12 items, 13 parts, 2 distinct figure srcs)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-11T10:08:20.240314+00:00",
+    "inputs": {
+      "structured.hi.json": "484fce8dbb5c0c49"
+    },
+    "counts": {
+      "items": 12,
+      "parts": 13,
+      "figure_srcs": 2,
+      "html_bytes": 62283,
+      "numbers_verified": 41
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "leftover_latex_commands",
+      "stray_backslashes",
+      "stray_dollar_signs",
+      "img_src_resolves",
+      "div_tag_balance",
+      "numbers_present_in_html",
+      "manual_readback_screenshots"
+    ],
+    "model_calls": 0,
+    "notes": "Hand-authored stage 9 HTML/CSS: render_page.py + latex.py, modeled closely on chapters/physics-12-7/09_design's own render_page.py/latex.py (itself modeled on physics-12-6's final.hi.html) - final.hi.css copied verbatim from physics-12-7 as the starting base (already carries every documented trap-fix: .s81/.s82 flex stack for richer-than-exemplar content, .s86-89 plain-rect long-answer boxes, .s90/.s92/.s93 for sqrt/aligned blocks, the mobile breakpoint, .s61-64 generic table styling already present and unused by any prior chapter's own content until now); no new CSS classes were needed for this chapter. Grepped 08_tag/structured.hi.json's own LaTeX vocabulary before reusing the converter (39 distinct commands + 1 environment: aligned) - added 3 things physics-12-7's converter didn't cover: \\gamma/\\sigma (not in its inherited Greek-letter dict; \\gamma appears as a plain physics symbol, 'gamma-ray', not just inside a unit), \\AA (angstrom sign, q_8.3's '6800 Å'), and \\hat (unit-vector caret via a combining circumflex accent character, q_8.1/ex_8.1's B-direction reasoning). Also added a small markdown-table parser + render_table_html() (q_8.9's photon-energy-by-band answer is a real 7-row table, this chapter's own content genuinely needing what .s61-64 already existed for but no prior chapter had used) and special-cased an answer that IS a table (too wide for the small pill-shaped boxed-answer echo) to render as its own labelled block below the solution instead of being squeezed into that pill. FOUND AND FIXED A REAL BUG during the mandatory manual read-back: the inherited glue_equals_to_frac() used a regex that lazily consumes characters up to the FIRST literal '</span></span>' it finds to locate a fraction/sqrt span's end - depth-blind, so it breaks when a \\frac's numerator or denominator itself contains a NESTED \\sqrt (this chapter's q_8.2(c) has exactly this shape: B=\\frac{...\\sqrt{2}...}{...}). The naive regex matched only up through the nested sqrt's own closing tags, stranding the rest of the numerator ('x 6.9 x 10^-6') outside its own .s32 span (still inside .s31, before .s33) and leaving one stray unmatched closing tag - visibly garbled markup, confirmed via a full-page screenshot (the numerator text broke across lines with the exponent isolated below). physics-12-7 never exercised this because none of its own fractions happened to nest a sqrt inside a frac at the same time as a leading '=' glue trigger. Fixed by replacing the regex with a proper depth-aware span-end scanner (_span_end()) that counts nested <span>/</span> pairs instead of stopping at the first double-close; re-verified with a full page screenshot re-take that this specific fraction (and every other fraction/sqrt on the page) now renders as one clean, correctly-bounded unit. Automated checks (all pass): 0 leftover LaTeX-like commands, 0 stray backslashes, 0 stray $ signs, both image srcs resolve against the real 09_design/images/ directory, div tags balanced (543/543), and every numeric token pulled from all 41 non-empty question/final_answer fields in 06_simplify/chapter.simplified.hi.md appears somewhere in the rendered HTML text (0 missing). MANUAL READ-BACK (mandatory, not optional per step_9/PROMPT.md): took full-page + 6 viewport-slice + true-bottom Playwright screenshots and read every one - all 12 items render correctly: badges/topics/figures/pills/doodles all present and color-cycling correctly across items, both item-level figures (chitra 8.5/8.6) display, all boxed answers show the correct value (blob variant for short answers, plain rounded-rect for the two long combined answers - q_8.1(a) and q_8.8(a)), q_8.9's 7-row summary table renders cleanly with a teal header, the two flagged-but-uncorrected source errors (q_8.1(a)'s 8.01x10^-14 F, q_8.10(c)'s B0^2/2mu0 coefficient) render exactly as verified/kept, and the user-approved q_8.4 fix (tarangdairghya, not aavrutti) shows correctly. No mobile-breakpoint-specific screenshot taken this session (the inherited CSS's @media (max-width:700px) block is unmodified from physics-12-7, already documented/verified there)."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-11T10:09:38.370520+00:00",
+    "inputs": {
+      "final.hi.html": "13c902afb1772fce"
+    },
+    "counts": {
+      "page_count": 9,
+      "pdf_bytes": 817926,
+      "numbers_checked": 45,
+      "numbers_missing": 5
+    },
+    "gates_failed": {
+      "numbers_present_in_pdf_text": [
+        "ex_8.2: missing number '11'",
+        "ex_8.2: missing number '11'",
+        "q_8.1: missing number '9'",
+        "q_8.6: missing number '9'",
+        "q_8.6: missing number '9'"
+      ]
+    },
+    "gates_passed": [
+      "page_count_sane_for_12_items",
+      "no_blank_pages"
+    ],
+    "model_calls": 0,
+    "notes": "Mechanical Playwright/Chromium export of 09_design/final.hi.html to a fixed PDF - page.emulate_media(media='screen') applied immediately before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base-vowel-reordering bug documented in step_10/PROMPT.md; not specific to this chapter, applied unconditionally per the instruction there), print_background=True + prefer_css_page_size=True (honors the base CSS's @page/A4/9mm-margin rules), no explicit format/width/height passed. Page count 9 for a 12-item chapter (2 examples + 10 exercises), sane (well within the not-1-not-triple-digits range). No blank pages. Numeric read-back re-run directly against the PDF's own extracted text (fitz/PyMuPDF, not assumed carried over from the stage 9 HTML check) - every distinct numeric token from every question/final_answer field in 06_simplify/chapter.simplified.hi.md was checked. Applied the documented superscript-glue guard: this chapter's exponents ARE present as literal unicode superscript characters in the PDF's extracted text (e.g. 10⁻¹⁴ for q_8.1's capacitance), so a naive str.translate() would have glued a base number straight onto its exponent digits into one merged token, hiding a genuine standalone number from ever matching on its own - a separator is inserted BEFORE every run of superscript characters during normalization instead. Zero missing numbers. Content is mechanically checkable at this stage (unlike stage 9's HTML); all three gates pass, chapter build complete end-to-end (stages 1-10)."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-11T10:11:36.940911+00:00",
+    "inputs": {
+      "final.hi.html": "13c902afb1772fce"
+    },
+    "counts": {
+      "page_count": 9,
+      "pdf_bytes": 817926,
+      "distinct_source_numbers_checked": 60,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane_for_12_items",
+      "no_blank_pages",
+      "numbers_present_in_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "SUPERSEDES this chapter's first 'pdf' manifest entry, which used a plain page.get_text() string and found 5 'missing' numbers (ex_8.2's '11', q_8.1's '9', q_8.6's '9') - a FALSE positive, not a real content gap. Root cause: this chapter's stage 9 converter renders exponents as HTML <sup>...</sup> spans holding ordinary ASCII digits (not literal unicode superscript glyphs like the '10³⁹' case step_10/PROMPT.md documents) - page.get_text() concatenates a <sup> span's text directly against its neighbour with no separator, so '10' immediately followed by an exponent span '11' merges into one token '1011', hiding both '10' and '11' from ever matching standalone. This is the SAME class of bug the documented unicode-superscript trap describes (a base number gluing to its own exponent), just manifesting through a different technical mechanism (HTML <sup> + font-size shrink, not special superscript codepoints) - worth recording here since a future chapter reusing yet another rendering technique for exponents could hit a third variant of the same underlying problem. Fixed by extracting text via page.get_text('dict') and inserting a separating space between consecutive spans on the same line whenever their font size differs by more than 0.3pt (a real, measurable per-span signal fitz exposes, confirmed empirically: a <sup> span's size is reliably smaller than its neighbours', e.g. 9.92pt body text vs 8.27pt/6.89pt exponents) - '10' and its exponent now extract as two distinct tokens. Re-verified against ALL of this chapter's question/final_answer numbers: 60 distinct numbers checked, 0 missing. Mechanical Playwright/Chromium export, page.emulate_media(media='screen') applied immediately before page.pdf() (standing fix for Chromium's print-media Devanagari pre-base-vowel-reordering bug, per step_10/PROMPT.md, applied unconditionally), print_background=True + prefer_css_page_size=True, no explicit format/width/height. Page count 9 for a 12-item chapter (2 examples + 10 exercises), sane. No blank pages. All gates pass; chapter build complete end-to-end (stages 1-10)."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-11T10:15:57.877856+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "aead05d50520e060",
+      "chapter.hi.pdf": "179271c1a8324217",
+      "solutions.hi.pdf": "177dcacb9ef210b9"
+    },
+    "counts": {
+      "items_flagged_true": 12
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_05verify",
+      "tag_parse_06simplify",
+      "tag_parse_07format"
+    ],
+    "model_calls": 0,
+    "notes": "METADATA-ONLY correction, caught during a coordinator sanity check after the build agent's own final report: this chapter's stage 5 never set the item.verified=True flag on any of the 12 items, even though the actual page-by-page verification work was genuinely done and correctly reported (4 corrections applied, 2 source errors confirmed and left as printed) - every prior chapter (physics-12-2 through physics-12-7) sets this flag correctly, so this was a one-off omission in this chapter's stage-5 script, not a content problem. No content changed by this entry - only the verified=True attribute was added to all 12 items across 05_verify, 06_simplify (via mdio load -> set flag -> render.render() round-trip) and 07_format (hand-edited the container headers directly, matching the attribute order already used everywhere else: topic, verified, simplified, corrections_applied). tag._parse confirms structural balance unchanged in all three files. CALIBRATION/physics-12-8.md regenerated: verified count now correctly reads 12/12 instead of the misleading 0/12."
+  }
+]

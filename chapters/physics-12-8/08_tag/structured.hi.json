@@ -1,0 +1,972 @@
+{
+  "front": {
+    "title": "वैद्युतचुंबकीय तरंगें",
+    "chapter": "8"
+  },
+  "items": [
+    {
+      "id": "ex_8.1",
+      "kind": "example",
+      "number": "8.1",
+      "topic": "दिए गए E से चुंबकीय क्षेत्र B का परिकलन",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$25 \\mathrm{MHz}$ आवृत्ति की एक समतल वैद्युतचुंबकीय तरंग निर्वात में $x$-दिशा के अनुदिश गतिमान है। दिक्काल (space) में किसी विशिष्ट बिंदु पर इसका $\\mathbf{E}=6.3 \\hat{\\mathbf{j}} \\mathrm{~V} / \\mathrm{m}$ है। इस बिंदु पर $\\mathbf{B}$ का मान क्या है?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "मुख्य सूत्र",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathbf{B}$ एवं $\\mathbf{E}$ के परिमाण एक-दूसरे से निम्नलिखित समीकरण द्वारा संबंधित हैं-\n\n$$\n\\begin{aligned}\nB & =\\frac{E}{c} \\\\\n& =\\frac{6.3 \\mathrm{~V} / \\mathrm{m}}{3 \\times 10^{8} \\mathrm{~m} / \\mathrm{s}}=2.1 \\times 10^{-8} \\mathrm{~T}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "इसकी दिशा के संबंध में हम जानते हैं कि $\\mathbf{E}$ $y$-दिशा के अनुदिश है और तरंग $x$-दिशा के अनुदिश गमन कर रही है। अत: $\\mathbf{B}$ $x$- एवं $y$-अक्षों दोनों के लंबवत दिशा में होना चाहिए। सदिश बीजगणित का उपयोग करने पर, $\\mathbf{E} \\times \\mathbf{B}$ को x-दिशा में होना चाहिए। चूँकि $(+\\hat{\\mathbf{j}}) \\times(+\\hat{\\mathbf{k}})=\\hat{\\mathbf{i}}$, $\\mathbf{B}$ $z$-दिशा के अनुदिश है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** $\\mathbf{B}=2.1 \\times 10^{-8} \\hat{\\mathbf{k}} \\mathrm{~T}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_8.2",
+      "kind": "example",
+      "number": "8.2",
+      "topic": "B के व्यंजक से आवृत्ति, तरंगदैर्घ्य व E ज्ञात करना",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "किसी समतल वैद्युतचुंबकीय तरंग में चुंबकीय क्षेत्र $B_{y}=\\left(2 \\times 10^{-7}\\right) \\mathrm{T} \\sin \\left(0.5 \\times 10^{3} x+1.5 \\times 10^{11} t\\right)$ है।"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "तरंग की आवृत्ति तथा तरंगदैर्घ्य क्या है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "मुख्य सूत्र",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "दिए गए समीकरण की निम्न समीकरण\n$$\nB_{y}=B_{0} \\sin \\left[2 \\pi\\left(\\frac{x}{\\lambda}+\\frac{t}{T}\\right)\\right]\n$$\nसे तुलना करने पर"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "label": "निष्कर्ष",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\lambda=\\frac{2 \\pi}{0.5 \\times 10^{3}} \\mathrm{~m}=1.26 \\mathrm{~cm}\n$$\nतथा $\\frac{1}{T}=v=\\left(1.5 \\times 10^{11}\\right) / 2 \\pi=23.9 \\mathrm{GHz}$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $\\lambda=1.26 \\mathrm{~cm}$, $v=23.9 \\mathrm{GHz}$"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "विद्युत क्षेत्र के लिए व्यंजक लिखिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "label": "निष्कर्ष",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$E_{0}=B_{0} c=2 \\times 10^{-7} \\mathrm{~T} \\times 3 \\times 10^{8} \\mathrm{~m} / \\mathrm{s}=6 \\times 10^{1} \\mathrm{~V} / \\mathrm{m}$\nविद्युत क्षेत्र घटक तरंग की गमन दिशा एवं चुंबकीय क्षेत्र की दिशा के लंबवत होता है। अतः, विद्युत क्षेत्र घटक $z$-अक्ष के अनुदिश निम्नलिखित समीकरण द्वारा व्यक्त होगा"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $E_{z}=60 \\sin \\left(0.5 \\times 10^{3} x+1.5 \\times 10^{11} t\\right) \\mathrm{V} / \\mathrm{m}$"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_8.1",
+      "kind": "exercise",
+      "number": "8.1",
+      "topic": "संधारित्र आवेशन: धारिता, विभवांतर परिवर्तन दर व विस्थापन धारा",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "चित्र 8.5 में एक संधारित्र दर्शाया गया है जो $12 \\mathrm{~cm}$ त्रिज्या की दो वृत्ताकार प्लेटों को $5.0 \\mathrm{~cm}$ की दूरी पर रखकर बनाया गया है। संधारित्र को एक बाह्य स्रोत (जो चित्र में नहीं दर्शाया गया है) द्वारा आवेशित किया जा रहा है। आवेशकारी धारा नियत है और इसका मान 0.15A है।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-8_7.jpg",
+          "caption": "चित्र 8.5"
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "धारिता एवं प्लेटों के बीच विभवांतर परिवर्तन की दर का परिकलन कीजिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "label": "जानकारी",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "प्लेट की त्रिज्या $r=12 \\mathrm{~cm}=12 \\times 10^{-2} \\mathrm{~m}$\nदो वृत्तीय प्लेटों के बीच की दूरी\n$$\n\\begin{aligned}\nd & =5 \\mathrm{~cm}=5 \\times 10^{-2} \\mathrm{~m} \\\\\n\\text { धारा } I & =0.15 \\mathrm{~A}\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "मुख्य सूत्र",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "समांतर पट्ट संधारित्र की धारिता\n$$\nC=\\frac{\\varepsilon_{0} A}{d}\n$$\nजहाँ, $A$ प्लेटों का क्षेत्रफल"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "label": null,
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& C=\\frac{8.854 \\times 10^{-12} \\times 3.14\\left(12 \\times 10^{-2}\\right)^{2}}{5 \\times 10^{-2}} \\\\\n& C=\\frac{8.854 \\times 3.14 \\times 144 \\times 10^{-12-4+2}}{5} \\\\\n& C=8.01 \\times 10^{-14} \\mathrm{~F}=8.01 \\mathrm{pF}\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "label": null,
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "संधारित्र की प्लेटों पर आवेश\n$$\n\\begin{aligned}\nq & =C V \\\\\n\\frac{d q}{d t} & =C \\cdot \\frac{d V}{d t} \\\\\nI & =C \\cdot \\frac{d V}{d t} \\\\\n\\frac{d V}{d t}=\\frac{I}{C} & =\\frac{0.15}{8.01 \\times 10^{-12}}=18.7 \\times 10^{9} \\mathrm{~V} / \\mathrm{s} \\quad\\left[\\because \\frac{d q}{d t}=I\\right]\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "label": "निष्कर्ष",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "अत: विभव परिवर्तन की दर $18.7 \\times 10^{9} \\mathrm{~V} / \\mathrm{s}$ है।"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $C=8.01$ pF, विभव परिवर्तन की दर $=18.7 \\times 10^{9}$ V/s"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "प्लेटों के बीच विस्थापन धारा ज्ञात कीजिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "विस्थापन धारा चालन धारा के बराबर है $I_{d}=0.15 \\mathrm{~A}$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $I_{d}=0.15$ A"
+            }
+          ]
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "क्या किरखोफ का प्रथम नियम संधारित्र की प्रत्येक प्लेट पर लागू होता है? स्पष्ट कीजिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "हाँ, किरखोफ का प्रथम नियम वैध है क्योंकि हम संयुक्त धारा विस्थापन धारा तथा चालन धारा के योग के बराबर लेते हैं।"
+                }
+              ]
+            }
+          ],
+          "answer": []
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_8.2",
+      "kind": "exercise",
+      "number": "8.2",
+      "topic": "संधारित्र में चालन धारा, विस्थापन धारा व चुंबकीय क्षेत्र",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "एक समांतर प्लेट संधारित्र (चित्र 8.6), $R=6.0 \\mathrm{~cm}$ त्रिज्या की दो वृत्ताकार प्लेटों से बना है और इसकी धारिता $C=100 \\mathrm{pF}$ है। संधारित्र को $230 \\mathrm{~V}, 300 \\mathrm{rad} \\mathrm{s}^{-1}$ की (कोणीय) आवृत्ति के किसी स्रोत से जोड़ा गया है।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-8_8.jpg",
+          "caption": "चित्र 8.6"
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "चालन धारा का rms मान क्या है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "label": "जानकारी",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "संधारित्र की धारिता\n$$\nC=100 \\mathrm{pF}=100 \\times 10^{-12} \\mathrm{~F}=10^{-10} \\mathrm{~F}\n$$\nसंधारित्र का वोल्टेज $V=230 \\mathrm{~V}$\nसंधारित्र की कोणीय आवृत्ति $\\omega=300 \\mathrm{rad} / \\mathrm{s}$"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "मुख्य सूत्र",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "धारा का rms मान $I_{\\mathrm{rms}}=\\frac{V_{\\mathrm{rms}}}{X_{C}}$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "label": "निष्कर्ष",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\nX_{C} & =\\frac{1}{\\omega C}=\\frac{1}{300 \\times 10^{-10}}=\\frac{10^{10}}{300} \\Omega \\\\\nI_{\\mathrm{rms}} & =\\frac{230 \\times 300}{10^{10}}=3 \\times 23 \\times 1000 \\times 10^{-10} \\\\\n& =69 \\times 10^{-7}=6.9 \\times 10^{-6} \\mathrm{~A} \\\\\nI_{\\mathrm{rms}} & =6.9 \\mu \\mathrm{~A}\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $I_{\\mathrm{rms}}=6.9 \\mu$A"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "क्या चालन धारा विस्थापन धारा के बराबर है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "हाँ, विस्थापन धारा चालन धारा के बराबर है"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "विस्थापन धारा व्युत्पत्ति",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& I_{d}=\\varepsilon_{0} \\frac{d \\phi_{E}}{d t} \\quad \\text { (विस्थापन धारा की परिभाषानुसार) } \\\\\n& I_{d}=\\varepsilon_{0} \\frac{d}{d t}(E A) \\\\\n& I_{d}=\\varepsilon_{0} A \\frac{d E}{d t} \\quad\\left(E=\\frac{\\sigma}{\\varepsilon_{0}}=\\frac{Q}{\\varepsilon_{0} A}\\right) \\\\\n& I_{d}=\\varepsilon_{0} A \\frac{d}{d t}\\left(\\frac{Q}{\\varepsilon_{0} A}\\right) \\\\\n& I_{d}=\\varepsilon_{0} A \\cdot \\frac{1}{\\varepsilon_{0} A} \\cdot \\frac{d Q}{d t}=\\frac{d Q}{d t}=I \\\\\n& I_{d}=I\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "प्लेटों के बीच, अक्ष से $3.0 \\mathrm{~cm}$ की दूरी पर स्थित बिंदु पर $\\mathbf{B}$ का आयाम ज्ञात कीजिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "label": "जानकारी",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "प्लेटों के बीच अक्ष से बिंदु की दूरी\n$$\nr=3 \\mathrm{~cm}=3 \\times 10^{-2} \\mathrm{~m}\n$$\nप्लेटों की त्रिज्या $R=6$ सेमी $=6 \\times 10^{-2}$ मी"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "मुख्य सूत्र",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "प्लेटों के बीच स्थित बिंदु पर चुंबकीय क्षेत्र\n$$\n\\begin{aligned}\n& B=\\frac{\\mu_{0}}{2 \\pi R^{2}} \\cdot r \\cdot I_{d} \\\\\n& B=\\frac{\\mu_{0} r}{2 \\pi R^{2}} I \\quad\\left(\\because I_{d}=I\\right)\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "label": null,
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "यदि $I=I_{0}$ धारा का अधिकतम मान है तब $I=\\sqrt{2} I_{\\mathrm{rms}}$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "label": "निष्कर्ष",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& B=\\frac{\\mu_{0} r}{2 \\pi R^{2}} \\sqrt{2} I \\\\\n& B=\\frac{4 \\pi \\times 10^{-7} \\times 0.03 \\times \\sqrt{2} \\times 6.9 \\times 10^{-6}}{2 \\pi \\times 0.06 \\times 0.06} \\\\\n& B=1.63 \\times 10^{-11} \\mathrm{~T}\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $B=1.63 \\times 10^{-11}$ T"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_8.3",
+      "kind": "exercise",
+      "number": "8.3",
+      "topic": "X-किरण, प्रकाश व रेडियो तरंग की समान भौतिक राशि",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$10^{-10} \\mathrm{~m}$ तरंगदैर्घ्य की X-किरणों, $6800 \\AA$ तरंगदैर्घ्य के प्रकाश, तथा $500 \\mathrm{~m}$ की रेडियो तरंगों के लिए किस भौतिक राशि का मान समान है?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "यहाँ X-किरणें, प्रकाश तथा रेडियो तरंगें सभी वैद्युत चुंबकीय तरंगें हैं। हम जानते हैं कि सभी वैद्युत चुंबकीय तरंगें निर्वात में प्रकाश के वेग $c$ से गति करती हैं, अत: सभी तरंगों की चाल समान है।"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_8.4",
+      "kind": "exercise",
+      "number": "8.4",
+      "topic": "z-अक्ष के अनुदिश तरंग: क्षेत्र दिशा व तरंगदैर्घ्य",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "एक समतल वैद्युतचुंबकीय तरंग निर्वात में $z$-अक्ष के अनुदिश चल रही है। इसके विद्युत तथा चुंबकीय क्षेत्रों के सदिश की दिशा के बारे में आप क्या कहेंगे? यदि तरंग की आवृत्ति $30 \\mathrm{MHz}$ हो तो उसकी तरंगदैर्घ्य कितनी होगी?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "हम जानते हैं कि वैद्युतचुंबकीय तरंगें विद्युत तथा चुंबकीय क्षेत्र के लंबवत् होती हैं। यहाँ वैद्युतचुंबकीय तरंग $z$ दिशा में गतिमान है, तब विद्युत व चुंबकीय क्षेत्र $x$-$y$ दिशा में हैं तथा एक दूसरे के लंबवत् हैं।\nतरंग की आवृत्ति $f=30 \\mathrm{MHz}=30 \\times 10^{6} \\mathrm{~Hz}$\n$$\n\\text { चाल } c=3 \\times 10^{8} \\mathrm{~m} / \\mathrm{s}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "मुख्य सूत्र",
+          "flow": [
+            {
+              "type": "text",
+              "text": "सूत्र\n$$\nc=f \\lambda\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "वैद्युतचुंबकीय तरंग का तरंगदैर्घ्य\n$$\n\\begin{aligned}\n\\lambda & =\\frac{c}{f}=\\frac{3 \\times 10^{8}}{30 \\times 10^{6}} \\\\\n& =\\frac{300}{30}=10 \\mathrm{~m}\n\\end{aligned}\n$$\nअतः वैद्युतचुंबकीय तरंग की तरंगदैर्घ्य $10 \\mathrm{~m}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** $\\lambda=10$ m"
+        }
+      ]
+    },
+    {
+      "id": "q_8.5",
+      "kind": "exercise",
+      "number": "8.5",
+      "topic": "रेडियो बैंड की आवृत्ति से संगत तरंगदैर्घ्य बैंड",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "एक रेडियो $7.5 \\mathrm{MHz}$ से $12 \\mathrm{MHz}$ बैंड के किसी स्टेशन से समस्वरित हो सकता है। संगत तरंगदैर्घ्य बैंड क्या होगा?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "आवृत्ति $f_{1}=7.5 \\mathrm{MHz}$\nआवृत्ति $f_{2}=12 \\mathrm{MHz}$\nEM तरंग की चाल $c=3 \\times 10^{8} \\mathrm{~m} / \\mathrm{s}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "मान रखो",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f_{1}$ के संगत EM तरंग का तरंगदैर्घ्य\n$$\n\\lambda_{1}=\\frac{c}{f_{1}}=\\frac{3 \\times 10^{8}}{7.5 \\times 10^{6}}=3000=40 \\mathrm{~m}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "मान रखो",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f_{2}$ के संगत EM तरंग का तरंगदैर्घ्य\n$$\n\\lambda_{2}=\\frac{c}{f_{2}}=\\frac{3 \\times 10^{8}}{12 \\times 10^{6}}=\\frac{300}{12}=25 \\mathrm{~m}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अत: संगत तरंगदैर्घ्य बैंड $25 \\mathrm{~m}$ से $40 \\mathrm{~m}$ तक है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** $25$ m से $40$ m तक"
+        }
+      ]
+    },
+    {
+      "id": "q_8.6",
+      "kind": "exercise",
+      "number": "8.6",
+      "topic": "दोलक कण की आवृत्ति से उत्पन्न EM तरंग की आवृत्ति",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "एक आवेशित कण अपनी माध्य साम्यावस्था के दोनों ओर $10^{9} \\mathrm{~Hz}$ आवृत्ति से दोलन करता है। दोलक द्वारा जनित वैद्युतचुंबकीय तरंगों की आवृत्ति कितनी है?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "प्रश्नानुसार, EM तरंग की आवृत्ति $=10^{9} \\mathrm{~Hz}$\nदोलक द्वारा जनित वैद्युतचुंबकीय तरंग की आवृत्ति आवेशित कण के दोलनों की आवृत्ति के समान है (संतुलन की अवस्था के सापेक्ष)।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** $10^{9}$ Hz"
+        }
+      ]
+    },
+    {
+      "id": "q_8.7",
+      "kind": "exercise",
+      "number": "8.7",
+      "topic": "चुंबकीय आयाम से विद्युत क्षेत्र आयाम",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निर्वात में एक आवर्त वैद्युतचुंबकीय तरंग के चुंबकीय क्षेत्र वाले भाग का आयाम $B_{0}=510 \\mathrm{nT}$ है। तरंग के विद्युत क्षेत्र वाले भाग का आयाम क्या है?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "वैद्युतचुंबकीय तरंग का चुंबकीय अंश\n$$\nB_{0}=510 \\mathrm{nT}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "मुख्य सूत्र",
+          "flow": [
+            {
+              "type": "text",
+              "text": "निर्वात् में प्रकाश की चाल $c=\\frac{E_{0}}{B_{0}}$\nतरंग का वैद्युत अंश $E_{0}$ है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अथवा\n$$\n\\begin{aligned}\n3 \\times 10^{8} & =\\frac{E_{0}}{510 \\times 10^{-9}} \\\\\nE_{0} & =153 \\mathrm{~N} / \\mathrm{C}\n\\end{aligned}\n$$\nअतः तरंग के विद्युत क्षेत्र का आयाम $153$ N/C है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** $E_{0}=153$ N/C"
+        }
+      ]
+    },
+    {
+      "id": "q_8.8",
+      "kind": "exercise",
+      "number": "8.8",
+      "topic": "E आयाम व आवृत्ति से B0, ω, k, λ तथा E, B के व्यंजक",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "कल्पना कीजिए कि एक वैद्युतचुंबकीय तरंग के विद्युत क्षेत्र का आयाम $E_{0}=120 \\mathrm{~N} / \\mathrm{C}$ है तथा इसकी आवृत्ति $v=50.0 \\mathrm{MHz}$ है।"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$B_{0}, \\omega, k$ तथा $\\lambda$ ज्ञात कीजिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "label": "जानकारी",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "EM तरंग के वैद्युत अंश का आयाम $E_{0}=120 \\mathrm{~N} / \\mathrm{C}$\nतरंग की आवृत्ति $f=50 \\mathrm{MHz}=50 \\times 10^{6} \\mathrm{~Hz}$"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "मुख्य सूत्र",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "निर्वात् में प्रकाश की चाल\n$$\n\\begin{aligned}\nc & =\\frac{E_{0}}{B_{0}} \\\\\nB_{0} & =\\frac{E_{0}}{c}=\\frac{120}{3 \\times 10^{8}}=40 \\times 10^{-8}\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "label": "मान रखो",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "अथवा\n$$\nB_{0}=400 \\times 10^{-9} \\mathrm{~T}=400 \\mathrm{nT}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "label": "मान रखो",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "तरंग की कोणीय आवृत्ति\n$$\n\\begin{aligned}\n& \\omega=2 \\pi f=2 \\times 3.14 \\times 50 \\times 10^{6} \\\\\n& \\omega=3.14 \\times 10^{8} \\mathrm{rad} / \\mathrm{s}\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "label": "मान रखो",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "वैद्युतचुंबकीय तरंग की तरंग संख्या\n$$\nk=\\frac{\\omega}{c}=\\frac{3.14 \\times 10^{8}}{3 \\times 10^{8}}=1.05 \\mathrm{rad} / \\mathrm{m}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "label": "निष्कर्ष",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "वैद्युतचुंबकीय तरंग का तरंगदैर्घ्य\n$$\n\\lambda=\\frac{c}{f}=\\frac{3 \\times 10^{8}}{50 \\times 10^{6}}=6.00 \\mathrm{~m}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $B_{0}=400$ nT, $\\omega=3.14 \\times 10^{8}$ rad/s, $k=1.05$ rad/m, $\\lambda=6.00$ m"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathbf{E}$ तथा $\\mathbf{B}$ के लिए व्यंजक प्राप्त कीजिए।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "मुख्य सूत्र",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "विद्युत क्षेत्र का निगमन $E=E_{0} \\sin (k x-\\omega t)$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "label": "निष्कर्ष",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\nE=120 \\sin \\left(1.05 x-3.14 \\times 10^{8} t\\right)\n$$\nचुंबकीय क्षेत्र $B$ का निगमन\n$$\n\\begin{aligned}\n& B=B_{0} \\sin (k x-\\omega t) \\\\\n& B=4 \\times 10^{-7} \\sin \\left(1.05 x-3.14 \\times 10^{8} t\\right)\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $E=120 \\sin (1.05x-3.14\\times10^{8}t)$ V/m, $B=4\\times10^{-7} \\sin(1.05x-3.14\\times10^{8}t)$ T"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_8.9",
+      "kind": "exercise",
+      "number": "8.9",
+      "topic": "वर्णक्रम के विभिन्न भागों की फोटॉन ऊर्जा (eV में)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "वैद्युतचुंबकीय स्पेक्ट्रम के विभिन्न भागों की पारिभाषिकी पाठ्यपुस्तक में दी गई है। सूत्र $E=h v$ (विकिरण के एक क्वांटम की ऊर्जा के लिए : फोटॉन) का उपयोग कीजिए तथा em वर्णक्रम के विभिन्न भागों के लिए eV के मात्रक में फोटॉन की ऊर्जा निकालिए। फोटॉन ऊर्जा के जो विभिन्न परिमाण आप पाते हैं वे वैद्युतचुंबकीय विकिरण के स्रोतों से किस प्रकार संबंधित हैं?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "मुख्य सूत्र",
+          "flow": [
+            {
+              "type": "text",
+              "text": "फोटॉन की ऊर्जा $E=h v$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\gamma$ किरण हेतु\n$\\gamma$ तरंग की आवृत्ति $v=3 \\times 10^{20} \\mathrm{~Hz}$\n$\\gamma$ तरंग की ऊर्जा $E=h v=6.6 \\times 10^{-34} \\times 3 \\times 10^{20}=19.8 \\times 10^{-14} \\mathrm{~J}$\nअथवा\n$$\nE=\\frac{19.8 \\times 10^{-14}}{1.6 \\times 10^{-19}}=1.24 \\times 10^{6} \\mathrm{eV}\n$$\n$\\gamma$ तरंगें नाभिक से उद्गमित होती हैं।\n\nX-तरंगों हेतु\nX-तरंगों की आवृत्ति $v=3 \\times 10^{18} \\mathrm{~Hz}$\nX-तरंगों की ऊर्जा\n$$\nE=h v=6.6 \\times 10^{-34} \\times 3 \\times 10^{18}=19.8 \\times 10^{-16} \\mathrm{~J}\n$$\nअथवा\n$$\nE=\\frac{19.8 \\times 10^{-16}}{1.6 \\times 10^{-19}}=1.24 \\times 10^{4} \\mathrm{eV}\n$$\nउच्च ऊर्जित इलेक्ट्रॉन X-तरंगें उत्पन्न करते हैं।\n\nअल्ट्रावायलेट तरंग हेतु\nअल्ट्रावायलेट तरंगों की आवृत्ति $v=10^{15} \\mathrm{~Hz}$\nअल्ट्रावायलेट तरंगों की ऊर्जा $E=h v=6.6 \\times 10^{-34} \\times 10^{15}=6.6 \\times 10^{-19} \\mathrm{~J}$\nअथवा\n$$\nE=\\frac{6.6 \\times 10^{-19}}{1.6 \\times 10^{-19}}=4.125 \\mathrm{eV}\n$$\nपरमाणु के उत्तेजन से अल्ट्रावायलेट तरंग उत्पन्न होती है।\n\nदृश्य तरंग हेतु\nदृश्य तरंग की आवृत्ति $v=6 \\times 10^{14} \\mathrm{~Hz}$\nदृश्य तरंगों की ऊर्जा $E=h v=6.6 \\times 10^{-34} \\times 6 \\times 10^{14}=39.6 \\times 10^{-20} \\mathrm{~J}$\nअथवा\n$$\nE=\\frac{39.6 \\times 10^{-20}}{1.6 \\times 10^{-19}}=2.475 \\mathrm{eV}\n$$\nअत: दृश्य तरंगें वेलेंसी इलेक्ट्रॉन के उत्तेजन से उत्पन्न होती हैं।\n\nअवरक्त तरंग हेतु\nअवरक्त तरंग की आवृत्ति $v=10^{13} \\mathrm{~Hz}$\nअवरक्त तरंग की ऊर्जा $E=h v=6.6 \\times 10^{-34} \\times 10^{13}=6.6 \\times 10^{-21} \\mathrm{~J}$\nअथवा\n$$\nE=\\frac{6.6 \\times 10^{-21}}{1.6 \\times 10^{-19}}=4.125 \\times 10^{-2} \\mathrm{eV}\n$$\nपरमाणु के उत्तेजन से इनका उद्गमन होता है।\n\nमाइक्रो तरंगों हेतु\nमाइक्रो तरंगों की आवृत्ति $v=10^{10} \\mathrm{~Hz}$\nमाइक्रो तरंगों की ऊर्जा $E=h v=6.6 \\times 10^{-34} \\times 10^{10}=6.6 \\times 10^{-24} \\mathrm{~J}$\nअथवा\n$$\nE=\\frac{6.6 \\times 10^{-24}}{1.6 \\times 10^{-19}}=4.125 \\times 10^{-5} \\mathrm{eV}\n$$\nये तरंगें निर्वात नलिका में दोलित धारा में उत्पन्न होती हैं।\n\nरेडियो तरंगों हेतु\nरेडियो तरंगों की आवृत्ति $v=3 \\times 10^{8} \\mathrm{~Hz}$\nरेडियो तरंगों की ऊर्जा $E=h v=6.6 \\times 10^{-34} \\times 3 \\times 10^{8}=19.8 \\times 10^{-26} \\mathrm{~J}$\nअथवा\n$$\nE=\\frac{19.8 \\times 10^{-26}}{1.6 \\times 10^{-19}}=1.24 \\times 10^{-6} \\mathrm{eV}\n$$\nये दोलित धारा से उत्पन्न होती हैं।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:**"
+        },
+        {
+          "type": "table",
+          "html": "| विकिरण का प्रकार | फोटॉन ऊर्जा |\n| :--- | :--- |\n| $\\gamma$-किरणें | $1.24 \\times 10^{6} \\mathrm{eV}$ |\n| X-किरणें | $1.24 \\times 10^{4} \\mathrm{eV}$ |\n| पराबैंगनी तरंगें | $4.12 \\mathrm{eV}$ |\n| दृश्य तरंगें | $2.475$ eV |\n| अवरक्त तरंगें | $4.125 \\times 10^{-2} \\mathrm{eV}$ |\n| माइक्रो तरंगें | $4.125 \\times 10^{-5} \\mathrm{eV}$ |\n| रेडियो तरंगें | $1.24 \\times 10^{-6} \\mathrm{eV}$ |"
+        }
+      ]
+    },
+    {
+      "id": "q_8.10",
+      "kind": "exercise",
+      "number": "8.10",
+      "topic": "तरंगदैर्घ्य, B आयाम व औसत ऊर्जा घनत्व की समानता",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "एक समतल em तरंग में विद्युत क्षेत्र, $2.0 \\times 10^{10} \\mathrm{~Hz}$ आवृत्ति तथा $48 \\mathrm{~V} \\mathrm{~m}^{-1}$ आयाम से ज्यावक्रीय रूप से दोलन करता है। [$c=3 \\times 10^{8} \\mathrm{~m} \\mathrm{~s}^{-1}$]"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "तरंग की तरंगदैर्घ्य कितनी है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "तरंगों की तरंगदैर्घ्य $\\lambda=\\frac{c}{f}=\\frac{3 \\times 10^{8}}{2 \\times 10^{10}}=1.5 \\times 10^{-2} \\mathrm{~m}$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $\\lambda=1.5 \\times 10^{-2}$ m"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "दोलनशील चुंबकीय क्षेत्र का आयाम क्या है?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "मुख्य सूत्र",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "सूत्रानुसार $c=\\frac{E_{0}}{B_{0}}$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "label": "निष्कर्ष",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "दोलनकारी चुंबकीय क्षेत्र का आयाम\n$$\nB_{0}=\\frac{E_{0}}{c}=\\frac{48}{3 \\times 10^{8}}=1.6 \\times 10^{-7} \\mathrm{~T}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**उत्तर:** $B_{0}=1.6 \\times 10^{-7}$ T"
+            }
+          ]
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "यह दर्शाइए कि $\\mathbf{E}$ क्षेत्र का औसत ऊर्जा घनत्व, $\\mathbf{B}$ क्षेत्र के औसत ऊर्जा घनत्व के बराबर है।"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "ऊर्जा घनत्व व्युत्पत्ति",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "विद्युत क्षेत्र का औसत ऊर्जा घनत्व\n$$\nu_{E}=\\frac{1}{4} \\varepsilon_{0} E_{0}^{2}\n$$\nहम जानते हैं कि $\\frac{E_{0}}{B_{0}}=c$\nसमी (i) में रखने पर\n$$\n\\therefore \\quad u_{E}=\\frac{1}{4} \\varepsilon_{0} \\cdot c^{2} B_{0}^{2}\n$$\nEM तरंगों की चाल $c=\\frac{1}{\\sqrt{\\mu_{0} \\varepsilon_{0}}}$\nसमी (ii) में रखने पर\n$$\n\\begin{aligned}\n& u_{E}=\\frac{1}{4} \\varepsilon_{0} B_{0}^{2} \\cdot \\frac{1}{\\mu_{0} \\varepsilon_{0}} \\\\\n& u_{E}=\\frac{1}{4} \\cdot \\frac{B_{0}^{2}}{\\mu_{0}}=\\frac{B_{0}^{2}}{2 \\mu_{0}}=u_{B}\n\\end{aligned}\n$$\nअत: विद्युत क्षेत्र की औसत ऊर्जा घनत्व चुंबकीय क्षेत्र की औसत ऊर्जा घनत्व के बराबर होती है।"
+                }
+              ]
+            }
+          ],
+          "answer": []
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    }
+  ]
+}

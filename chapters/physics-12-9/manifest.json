@@ -1,0 +1,343 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-11T10:27:19.883018+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "bacf9acc29929d9a",
+      "solutions.hi.pdf": "2c37c80e2846ce1f"
+    },
+    "counts": {
+      "chapter.hi.md_chars": 73788,
+      "solutions.hi.md_chars": 53908,
+      "chapter.hi.md_dollar_spans": 695,
+      "solutions.hi.md_dollar_spans": 800,
+      "chapter.hi.md_image_refs": 32,
+      "solutions.hi.md_image_refs": 11,
+      "images_downloaded": 43
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no chapter.en.pdf / solutions.en.pdf provided, same as physics-12-2 through physics-12-8) - converted chapter.hi.pdf and solutions.hi.pdf via Mathpix. Largest and most figure-heavy chapter built so far by a wide margin (73.8k chars vs 38-55k for prior chapters, 43 images vs 2-18) - likely Ray Optics given the diagram density. Nothing else suspicious in the sanity check: Devanagari density and dollar-span counts scale proportionally with the larger char count."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-11T10:49:35.497456+00:00",
+    "inputs": {
+      "chapter.hi.md": "23c07ecc0bb87344",
+      "solutions.hi.md": "d076215e4739e428"
+    },
+    "counts": {
+      "examples": 8,
+      "exercises": 31,
+      "raw_solutions_in_solutions_hi_md": 38,
+      "matched": 31,
+      "orphan_solutions_discarded": 7,
+      "aligned": 39,
+      "parts": 39
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "ex_9.1: question missing a language",
+        "ex_9.1: solution missing a language",
+        "ex_9.2: question missing a language",
+        "ex_9.2: solution missing a language",
+        "ex_9.3: question missing a language",
+        "ex_9.3: solution missing a language",
+        "ex_9.4: question missing a language",
+        "ex_9.4: solution missing a language",
+        "ex_9.5: question missing a language",
+        "ex_9.5: solution missing a language",
+        "ex_9.6: question missing a language",
+        "ex_9.6: solution missing a language",
+        "ex_9.7: question missing a language",
+        "ex_9.8: question missing a language",
+        "ex_9.8: solution missing a language",
+        "q_9.1: question missing a language",
+        "q_9.1: solution missing a language",
+        "q_9.2: question missing a language",
+        "q_9.2: solution missing a language",
+        "q_9.3: question missing a language",
+        "q_9.3: solution missing a language",
+        "q_9.4: question missing a language",
+        "q_9.4: solution missing a language",
+        "q_9.5: question missing a language",
+        "q_9.5: solution missing a language",
+        "q_9.6: question missing a language",
+        "q_9.6: solution missing a language",
+        "q_9.7: question missing a language",
+        "q_9.7: solution missing a language",
+        "q_9.8: question missing a language",
+        "q_9.9: question missing a language",
+        "q_9.9: solution missing a language",
+        "q_9.10: question missing a language",
+        "q_9.10: solution missing a language",
+        "q_9.11: question missing a language",
+        "q_9.12: question missing a language",
+        "q_9.12: solution missing a language",
+        "q_9.13: question missing a language",
+        "q_9.13: solution missing a language",
+        "q_9.14: question missing a language",
+        "q_9.15: question missing a language",
+        "q_9.16: question missing a language",
+        "q_9.16: solution missing a language",
+        "q_9.17: question missing a language",
+        "q_9.18: question missing a language",
+        "q_9.18: solution missing a language",
+        "q_9.19: question missing a language",
+        "q_9.19: solution missing a language",
+        "q_9.20: question missing a language",
+        "q_9.21: question missing a language",
+        "q_9.21: solution missing a language",
+        "q_9.22: question missing a language",
+        "q_9.23: question missing a language",
+        "q_9.24: question missing a language",
+        "q_9.24: solution missing a language",
+        "q_9.25: question missing a language",
+        "q_9.26: question missing a language",
+        "q_9.26: solution missing a language",
+        "q_9.27: question missing a language",
+        "q_9.28: question missing a language",
+        "q_9.29: question missing a language",
+        "q_9.29: solution missing a language",
+        "q_9.30: question missing a language",
+        "q_9.30: solution missing a language",
+        "q_9.31: question missing a language",
+        "q_9.31: solution missing a language"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 3,
+    "notes": "Hindi-only chapter (Ray Optics and Optical Instruments / किरण प्रकाशिकी एवं प्रकाशिक यंत्र), 8 examples + 31 exercises (9.1-9.31) built directly (not via join_solutions(), which would have silently mismatched items 9.18-9.31 -- see match_report.md's 'why_not_naive_number_join' for the full analysis: solutions.hi.md is a pre-rationalisation solutions manual numbering 38 raw entries, 7 of which (Human Eye section + achromatic-prism + mirror-real-image conceptual Qs) have no home in the current rationalised chapter and were discarded, not force-matched or invented). Every retained pairing content-verified by hand against distinctive numeric values, not trusted from position alone. Two items flagged for stage 5 attention: q_9.22 has a genuine chapter-vs-solutions value disagreement (9cm vs 10cm focal length) left as printed in each source per standing instruction; q_9.30's matched solution has an internal unit self-contradiction (0.184 m restated as '18.4 m' in the same line) flagged, not silently corrected. ex_9.1 references a figure (चित्र 9.5) with no corresponding image in the mathpix extraction -- left without a figure per Rule 5. All items have solutions (0 empty). gate_bilingual fails all items as expected for a single-language chapter (documented, not silently passed, matching physics-12-1's precedent)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-11T10:50:47.920117+00:00",
+    "inputs": {
+      "chapter.hi.md": "5f1744b3ed9fdfdf"
+    },
+    "counts": {
+      "examples_hi_items": 8,
+      "examples_hi_chars": 10535,
+      "qa_hi_items": 31,
+      "qa_hi_chars": 53301
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure mechanical split (no model call), per step_3/PROMPT.md: chapter.hi.md (39 items, hi-only) read via mdio.markdown_to_chapter, kind-filtered and re-rendered into examples.hi.md (8 examples) and qa.hi.md (31 exercises). Round-trip via tag._parse confirmed both files balance and item counts sum to 39 (nothing gained/lost)."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-11T10:53:04.117484+00:00",
+    "inputs": {
+      "examples.hi.md": "6d3d6eab38522e28",
+      "qa.hi.md": "2482cd5eadc6db99"
+    },
+    "counts": {
+      "combined_hi_items": 39,
+      "combined_hi_chars": 63701
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure mechanical recombination (no model call): examples.hi.md (8 items) + qa.hi.md (31 items) read via mdio.markdown_to_chapter and concatenated into one Chapter (plain reunion by disjoint id sets, not an en/hi merge_by_id() case since this chapter is hi-only), then re-rendered to 04_combined/combined.hi.md. Round-trip via tag._parse confirmed 39 items, matching stage 3's 8+31 exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-11T11:16:11.067337+00:00",
+    "inputs": {
+      "combined.hi.md": "5f1744b3ed9fdfdf",
+      "chapter.hi.pdf": "bacf9acc29929d9a",
+      "solutions.hi.pdf": "2c37c80e2846ce1f"
+    },
+    "counts": {
+      "corrections_applied": 4,
+      "corrections_held": 0,
+      "items_verified": 39,
+      "items_total": 39
+    },
+    "gates_failed": {
+      "gate_math_parity": [
+        "q_9.22 part a.solution: inline math: 9 -> 7",
+        "q_9.30.solution: inline math: 10 -> 7"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts"
+    ],
+    "model_calls": 1,
+    "notes": "Verified against chapters/physics-12-9/00_raw/chapter.hi.pdf (34 pages) and solutions.hi.pdf (26 pages), rendered to PNG via PyMuPDF and read directly (not from the mathpix markdown alone). All 8 examples' questions+solutions and all 31 exercise questions confirmed verbatim-correct against chapter.hi.pdf, including every merge-artifact item resolved at stage 2 (9.1, 9.2, 9.9, 9.12, 9.21, 9.26 -- each spot-checked and the reconstructed split confirmed correct against the source page). Spot-checked a representative sample of solutions.hi.pdf pages (sol1, sol2, sol15, sol29-31, sol37-38) directly. One correction applied (q_9.30 solution: '=18.4 m' -> '=18.4 cm', a same-page self-contradiction confirmed present verbatim in the source PDF itself, not a mathpix artifact -- fixed per the coordinating session's approval, matching the ex_2.3/q_5.7(ii)/etc. precedent for this exact pattern). q_9.22's chapter-vs-solutions value disagreement (9cm question vs 10cm solution) was independently re-confirmed directly against both PDF pages (chapter.hi.pdf p.252 prints '9 cm फ़ोकस दूरी', solutions.hi.pdf p.21/प्रश्न 29 prints '10 cm फोकस दूरी का अभिसारी लेन्स') -- left exactly as printed in each source per standing instruction, not corrected. verified=True set on all 39 items (Item.verified), confirmed via round-trip re-parse, not just reported -- this was the exact miss on physics-12-8's stage 5. gate_math_parity flagged two expected inline-math-span-count drops (q_9.22 part a: 9->7; q_9.30: 10->7) -- these are NOT lost equations. Both drops come entirely from removing stray inline math spans that were part of stage 2's own erroneous inline editorial bracket-notes (e.g. literal \"$9$ cm\", \"$f=+10$\", \"$=18.4$\", \"$0.184$\" tokens inserted as commentary, now cleaned out via the corrections above) -- not a rewrite eating a genuine equation. Reviewed by hand: every real equation/value in both items is still present and unchanged after the corrections; only the erroneous commentary spans are gone. Recorded here rather than silently passed or gated around, per Rule 3 -- this gate failure is a known, reviewed, expected side-effect of cleaning up stage 2's own data-quality issue, not a content-loss defect."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-11T11:18:47.582047+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "632617cbfebbf62a"
+    },
+    "counts": {
+      "items_text_simplified": 2,
+      "items_left_unchanged": 37,
+      "items_simplified_flag_set": 39,
+      "items_total": 39
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "ex_9.1: question missing a language",
+        "ex_9.1: solution missing a language",
+        "ex_9.2: question missing a language",
+        "ex_9.2: solution missing a language",
+        "ex_9.3: question missing a language",
+        "ex_9.3: solution missing a language",
+        "ex_9.4: question missing a language",
+        "ex_9.4: solution missing a language",
+        "ex_9.5: question missing a language",
+        "ex_9.5: solution missing a language",
+        "ex_9.6: question missing a language",
+        "ex_9.6: solution missing a language",
+        "ex_9.7: question missing a language",
+        "ex_9.8: question missing a language",
+        "ex_9.8: solution missing a language",
+        "q_9.1: question missing a language",
+        "q_9.1: solution missing a language",
+        "q_9.2: question missing a language",
+        "q_9.2: solution missing a language",
+        "q_9.3: question missing a language",
+        "q_9.3: solution missing a language",
+        "q_9.4: question missing a language",
+        "q_9.4: solution missing a language",
+        "q_9.5: question missing a language",
+        "q_9.5: solution missing a language",
+        "q_9.6: question missing a language",
+        "q_9.6: solution missing a language",
+        "q_9.7: question missing a language",
+        "q_9.7: solution missing a language",
+        "q_9.8: question missing a language",
+        "q_9.9: question missing a language",
+        "q_9.9: solution missing a language",
+        "q_9.10: question missing a language",
+        "q_9.10: solution missing a language",
+        "q_9.11: question missing a language",
+        "q_9.12: question missing a language",
+        "q_9.12: solution missing a language",
+        "q_9.13: question missing a language",
+        "q_9.13: solution missing a language",
+        "q_9.14: question missing a language",
+        "q_9.15: question missing a language",
+        "q_9.16: question missing a language",
+        "q_9.16: solution missing a language",
+        "q_9.17: question missing a language",
+        "q_9.18: question missing a language",
+        "q_9.18: solution missing a language",
+        "q_9.19: question missing a language",
+        "q_9.19: solution missing a language",
+        "q_9.20: question missing a language",
+        "q_9.21: question missing a language",
+        "q_9.21: solution missing a language",
+        "q_9.22: question missing a language",
+        "q_9.23: question missing a language",
+        "q_9.24: question missing a language",
+        "q_9.24: solution missing a language",
+        "q_9.25: question missing a language",
+        "q_9.26: question missing a language",
+        "q_9.26: solution missing a language",
+        "q_9.27: question missing a language",
+        "q_9.28: question missing a language",
+        "q_9.29: question missing a language",
+        "q_9.29: solution missing a language",
+        "q_9.30: question missing a language",
+        "q_9.30: solution missing a language",
+        "q_9.31: question missing a language",
+        "q_9.31: solution missing a language"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 1,
+    "notes": "Simplified chapters/physics-12-9/05_verify/chapter.verified.hi.md per step_6/simplify.md. Most of this chapter's solutions are already terse, step-by-step numeric derivations ('दिया है ... अतः ...') that already match house style -- left unchanged (37/39 items), a valid documented outcome, not churn for its own sake. Genuine text simplification applied to 2 items whose solutions are prose-heavy rather than formula-heavy: ex_9.1 (split a 'यह मानते हुए कि ... अतः' compound sentence into two plain sentences, dropped the bookish 'तथापि' connective) and ex_9.6 (replaced 'प्रकरण'/'भाँति कार्य करेगा' with plainer 'स्थिति'/'तरह काम करेगा'). Every rewritten field checked via protect.freeze() before/after to confirm no protected span (number/unit/inline-math) present in the original was dropped, before the rewrite was accepted -- both passed clean. No question text (item- or part-level) touched anywhere; no figure caption touched; no final_answer field touched (per rule, answers are copied through unchanged). All four gates clean: gate_question_text_frozen, gate_answers_unchanged and gate_math_parity pass with zero failures; gate_bilingual fails all items as expected for this hi-only chapter (documented, same as every earlier stage). simplified=True set on all 39/39 items, confirmed via round-trip re-parse."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-11T11:23:19.422488+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "f0e623c315a467db"
+    },
+    "counts": {
+      "output_chars": 67286,
+      "solutions_structured": 66,
+      "blocks_emitted": 102
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "protect_parity"
+    ],
+    "model_calls": 1,
+    "notes": "Structured chapters/physics-12-9/06_simplify/chapter.simplified.hi.md into 07_format/structured.hi.md per step_7/PROMPT.md. Since mdio.markdown_to_chapter() cannot parse nested containers (per CLAUDE.md point 3), this stage hand-authored the nested markup directly as text: parsed the flat file with tag._parse(), then for every :::solution node (item-level and part-level, 66 total across the chapter's 39 items) replaced its flat text with nested :::concept{label=जानकारी}/:::step{label=मान रखो}/:::step{label=निष्कर्ष} blocks via a depth-aware sentence-segmentation heuristic (splits on the Devanagari purna viram, never inside a $...$/$$...$$ math span or inside parentheses -- a real bug hit and fixed during development: an early version split a parenthetical aside containing its own purna viram, e.g. q_9.19, stranding a bare ')' as its own 'conclusion' block; fixed by tracking paren depth alongside dollar depth). A leading 'दिया है'/'माना'/'यहाँ' clause becomes the given concept only when short and followed by more content; a trailing sentence matching 'अतः'/'अत:'/'इसलिए'/'अर्थात्' (or a short non-derivation closing line) becomes the concluding step; everything else in between is one 'मान रखो' step -- not every solution gets all stages (many short ones are a single step, or concept+conclusion with no separate substitute step), per the 'not every solution has all four' rule. No :::formula/:::table/:::note/:::concept-standalone blocks were added: this chapter has no standalone tables or textbook remarks separate from each worked solution's own flow, and no free-standing definitions -- wrapping key equations in a separate :::formula tier was skipped in favour of leaving them inline within the 'मान रखो' step (labelling is a convention, not a schema requirement). All 6 figures stay at item level (already positioned before parts/solution by render_item(), matching where each is actually referenced -- none of this chapter's figures are referenced mid-solution). No question text, figure caption, or answer field touched -- only :::solution content was restructured. Gates: tag._parse succeeds on the full output (every container balances, every name in the fixed vocabulary -- verified programmatically, zero violations) and protect.parity(stage6, stage7) shows zero drift in display-math/inline-math/table/image counts (nothing eaten by the restructuring)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-11T11:27:13.938311+00:00",
+    "inputs": {
+      "structured.hi.md": "7ad42827c0a31b79"
+    },
+    "counts": {
+      "items": 39,
+      "parts": 39,
+      "figures": 6,
+      "stage_given": 7,
+      "stage_key_formula": 0,
+      "stage_substitute": 33,
+      "stage_conclusion": 62
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "fresh_recount_match"
+    ],
+    "model_calls": 0,
+    "notes": "Serialized 07_format/structured.hi.md's container tree into 08_tag/structured.hi.json per step_8/PROMPT.md. Every text-bearing field (prompt/answer/a block's flow) is an ordered list of {type:'text'|'figure', ...} segments, never a flat string. Explicit :::concept blocks always stage=given, explicit :::formula always stage=key_formula (none of this chapter's items used a separate :::formula tier -- key equations stayed inline within the 'मान रखो' step per stage 7's notes, so key_formula count is 0, which is expected, not a bug). A :::step already labelled मान रखो/निष्कर्ष from stage 7 keeps that stage (substitute/conclusion) as-is, not re-derived. Any :::step stage 7 left unlabelled (or a bare flat solution stage 7 never split at all) had its stage inferred by position among that SAME solution's own stageable blocks (first=given, last=conclusion, middle=substitute, a lone block=conclusion), done independently per part for every multi-part item, never against the item's other parts. No 'हल'/'हल:'/'हल :' opener text needed stripping (the label was already an attribute on the :::solution container from stage 7's render, never embedded as literal flow text in this chapter's data). No :::note blocks exist in this chapter (no textbook remarks separate from each solution's own flow). Two items (ex_9.3, ex_9.4) have BOTH non-empty parts AND genuine item-level solution_blocks -- this is NOT the 'known duplicate-solution artifact' the prompt warns about (a re-narrated whole-item solution with degraded numbers that should be suppressed): it's real shared setup content each part's own working depends on (e.g. ex_9.3's item-level 'फोकस दूरी f=-7.5cm', which both part (i) and (ii) reference via 'समीकरण (9.7) से') -- kept as item-level solution_blocks (stage given), not dropped. Figure src kept in 'images/fig_...' form throughout, never stripped to a bare filename (verified via the gate below, which checks src strings directly). Gate: re-parsed a FRESH, independent count from structured.hi.md (not the in-memory tally used while building the JSON) for item count, part count, and distinct figure src count (both :::figure containers and any stray inline ![]() image ref) -- all three match the JSON exactly, zero drops/duplicates."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-11T11:43:45.277396+00:00",
+    "inputs": {
+      "structured.hi.json": "53f243dad1905d28"
+    },
+    "counts": {
+      "html_bytes": 200341,
+      "figures_used": 6,
+      "items_rendered": 39
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored 09_design/final.hi.html + final.hi.css + images/ per step_9/PROMPT.md, starting from chapters/physics-12-8/09_design/render_page.py + latex.py + final.hi.css (already incorporating every fix documented in step_9/PROMPT.md: .s23 flex-column, .s81/.s82 flex stack for richer content, .s86-89 plain-rectangle answer variants past the ~30-char threshold, mobile breakpoint, .s3/.s12 Devanagari font-family fix, .s92/.s93 for aligned rows, .s31/.s90/.s14 break-inside:avoid) rather than forking solutions-chapter-1.css directly. Chapter-specific fix needed and applied: latex.py's inherited NOARG_SYMBOL table had no entries for \\Rightarrow/\\rightarrow/\\infty/\\approx/\\geq/\\leq -- this chapter's own derivations use \\Rightarrow as their single most common step-connective and v=\\infty constantly (image at infinity is a recurring situation in lens/mirror/telescope problems), so leaving these unhandled would have printed the literal words 'Rightarrow'/'infty'/etc. on nearly every line -- added all six symbols. Also fixed two chapter-specific bugs caught during the mandatory visual read-back: (1) LaTeX's '\\,' thin-space (used in this chapter's final-answer units, e.g. 'm\\,s^{-1}') fell through unhandled and silently dropped its backslash, gluing a bare comma onto the unit with no space ('m,s^-1') -- added explicit '\\,' -> non-breaking-space handling; (2) this manual's own '... (1)' equation-numbering style (a literal ellipsis) interacted with text_to_lines()'s sentence-splitter, which split at every '.' in the run and produced a string of stray one-character '.' lines on their own -- fixed by never splitting at a '.' immediately adjacent to another '.'. No :::note/:::table content in this chapter (matches 07/08's own findings) so NOTE_CLASS/render_table_html paths are unexercised but left in place unchanged from the reference script. Checks performed before calling this stage done: all 6 figure srcs verified to resolve via os.path.exists against the REAL 09_design/ directory (not a scratch copy); a numeric read-back script pulled every digit token out of every question/final_answer field in 06_simplify/chapter.simplified.hi.md (240 numbers total) and confirmed each appears somewhere in the rendered HTML text -- 0 missing; and the page was rendered with Playwright/Chromium and visually reviewed via 15 screenshots spanning the full page (examples 9.1-9.8, exercises 9.1-9.31, both section dividers, figure placement, pill colors/labels, fraction/sqrt/degree/arrow/inequality rendering, and the organic-blob vs. rectangular answer-box threshold) -- confirmed q_9.30's stage-5 correction (18.4 cm, not the source's self-contradictory 18.4 m) propagated correctly all the way through to the final page."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-11T11:45:27.473291+00:00",
+    "inputs": {
+      "final.hi.html": "5a99d45640a12170"
+    },
+    "counts": {
+      "page_count": 22,
+      "file_bytes": 1521228,
+      "numbers_checked": 240,
+      "numbers_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback"
+    ],
+    "model_calls": 0,
+    "notes": "Exported 09_design/final.hi.html to 10_pdf/final.hi.pdf with Playwright/Chromium per step_10/PROMPT.md: navigated to the file's own file:// path (not a copy), waited on document.fonts.ready before printing, called page.emulate_media(media='screen') immediately before page.pdf() (the standing per-export fix for Chromium's print-media Devanagari pre-base-vowel text-shaping bug -- applied unconditionally, not only when a title/heading visibly needs it), and used print_background=True + prefer_css_page_size=True (never an explicit format/width/height) so the @page/A4/9mm-margin rules already in final.hi.css govern pagination rather than Playwright's own default page size. Gate results: page count 22 (sane for a 39-item, 8-example + 31-exercise chapter -- this chapter's own page count is expected to be the largest of any chapter built so far, given it is the largest/most figure-dense chapter extracted at stage 1); zero blank pages; the numeric read-back re-run directly against the PDF's OWN extracted text (via PyMuPDF/fitz, not assumed carried over from stage 9's HTML-based check) for all 240 numeric tokens across every question/final_answer field in 06_simplify/chapter.simplified.hi.md -- 0 missing. Applied the documented superscript-exponent trap fix: unicode superscript digits are normalized back to ASCII with a '^' separator inserted before each new run of superscript characters, so a base number and its exponent (e.g. this chapter's own 10^6/10^8 orbital-radius figures in q_9.14) normalize to two distinct tokens rather than gluing into one merged digit string that would hide a genuine number from ever matching (this chapter's own content doesn't happen to have a base+exponent combination whose glued form would coincidentally still 'find' a wrong number, but the fix is applied unconditionally per the standing rule, not diagnosed per chapter). This is a purely mechanical stage -- no model judgment, per Rule 2 and step_10/PROMPT.md; the known, unresolved Chromium reph-character (र्) ToUnicode CMap extraction bug documented in step_10/PROMPT.md is orthogonal to this gate (it only affects copy/search of 'र्'+consonant sequences, not the digit-only numeric read-back) and is flagged here for the record, not fixed (no known fix exists from within this pipeline)."
+  }
+]

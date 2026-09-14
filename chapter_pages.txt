@@ -1,0 +1,1001 @@
+=== PAGE 1 ===
+14.1  Hkwfedk
+,slh ;qfDr;k¡ ftuesa bysDVªkWuksa dk fu;af=kr izokg izkIr fd;k tk losQ] lHkh bysDVªkWfud ifjiFkksa
+dh ewyHkwr jpuk [kaM gksrh gSaA lu~ 1948 esa VªkaftLVj dh [kkst ls igys ,slh ;qfDr;k¡
+vfèkdka'kr% fuokZr ufydk,¡ (;k okYo) Fkha] tSls fuokZr Mk;ksM ftlesa nks bysDVªksM_  ,uksM
+(IysV) rFkk oSQFkksM gksrs gSa_ Vªk;ksM ftlesa rhu bysDVªksMµoSQFkksM] IysV rFkk fxzM gksrs gSa_ VsVªksM
+rFkk isaVksM (Øe'k% 4 rFkk 5 bysDVªksMksa osQ lkFk)A fdlh fuokZr ufydk esa bysDVªkWuksa dh vkiwfrZ
+,d rIr oSQFkksM }kjk dh tkrh gS rFkk blosQ fofHkUu bysDVªksMksa osQ chp oksYVrk dks ifjofrZr
+djosQ fuokZr esa bu bysDVªkWuksa dk fu;af=kr izokg izkIr fd;k tkrk gSA varjk&bysDVªksMh LFkku
+(inter-electrode space) esa bysDVªkWuksa osQ izokg osQ fy, fuokZr vko';d gksrk gS] vU;Fkk
+xfreku bysDVªkWu vius iFk esa ok;q osQ v.kqvksa ls Vdjkdj viuh mQtkZ [kks ldrs gSaA bu ;qfDr;ksa
+esa bysDVªkWu osQoy oSQFkksM ls ,uksM dh vksj izokfgr dj ldrs gSa (vFkkZr bysDVªkWu osQoy ,d
+gh fn'kk esa izokfgr gks ldrs gSa)A ;gh dkj.k gS fd ,slh ;qfDr;ksa dks lk/kj.kr;k okYo dgrs
+gSaA fuokZr ufydkvksa ls cuh ;qfDr;k¡ vkdkj esa cM+h gksrh gaS] vf/d 'kfDr dk miHkksx djrh
+gSa rFkk izpkyu esa lkekU;r% mPp oksYVrk (~100 V) dh vko';drk gksrh gSA blosQ lkFk gh
+budk thoudky vis{kko`Qr de rFkk fo'oluh;rk Hkh de gksrh gSA vkèkqfud Bksl&voLFkk
+vèkZpkyd bysDVªkWfudh (Solid State semi-conductor electronics) dk izknqHkkZo lu~
+1930 esa bl vkHkkl ls fd;k x;k fd oqQN Bksl voLFkk vèkZpkyd rFkk mudh lafèk;ksa esa
+;g laHkkouk gksrh gS fd muesa vkos'k okgdksa dh la[;k rFkk muosQ izokg dh fn'kk dks fu;af=kr
+fd;k tk ldrk gSA izdk'k] mQ"ek rFkk vYi vuqiz;qDr oksYVrk tSls mÙkstd fdlh v/Zpkyd
+vè;k; 14
+v/Zpkyd bysDVªkWfudh&
+inkFkZ] ;qfDr;k¡ rFkk
+ljy ifjiFk
+Reprint 2026-27
+
+=== PAGE 2 ===
+324
+HkkSfrdh
+esa xfreku vkos'kksa dh la[;k ifjo£rr dj ldrs gSaA è;ku nsus ;ksX; ckr ;g gS fd v/Zpkyd
+;qfDr;ksa esa vkos'k okgdksa dh vkiw£r rFkk izokg Lo;a Bksl osQ Hkhrj gh gksrk gS] tcfd igys
+iz;ksx gksus okyh fuokZr ufydkvksa@okYoksa esa xfreku bysDVªkWuksa dks rIr oSQFkksM ls izkIr fd;k tkrk
+Fkk rFkk fuokZfrr LFkkuksa vFkok fuokZr esa izokfgr djk;k tkrk FkkA v/Zpkyd ;qfDr;ksa esa ckgjh
+rkiu vFkok vf/d fuokZfrr LFkku dh vko';drk ugha gksrh gSA ;g vkdkj esa NksVh gksrh gSa]
+de 'kfDr dk miHkksx djrh gSa] de oksYVrk ij dke djrh gSa] budk thou yack gksrk gS vkSj
+budh fo'oluh;rk vPNh gksrh gSA vk/qfud ;qfDr;ksa esa rks fuokZfrr ufydkvksa osQ fl¼kar ij
+dk;Z djus okyh oSQFkksM fdj.k V~;wcksa (CRT) ftudk mi;ksx Vsyhfo”ku lsVksa rFkk oaQI;wVj
+ekWuhVjksa esa fd;k tkrk gS] BkslkoLFkk bysDVªkWfudh (Solid State electrons) ifjiFkksa osQ lkFk
+layXu fyDoM fØLVy fMlIys (LCD, nzo fØLVy izn'kZ) ekWuhVjksa }kjk izfrLFkkfir dh tk
+jgh gSaA vèkZpkyd ;qfDr;ksa dks vkSipkfjd :i ls le>s tkus ls Hkh cgqr igys izo`Qfr esa ik,
+tkus okys xSysuk (ySM lYiQkbM PbS) osQ ,d fØLVy ftlosQ lkFk /krq dk ,d laioZQ ¯cnq
+la;ksftr Fkk] dk mi;ksx jsfM;ks rjaxksa osQ lalwpd osQ :i esa fd;k tk pqdk FkkA
+fuEufyf[kr vuqHkkxksa esa ge v/Zpkyd HkkSfrdh dh oqQN ewy vo/kj.kkvksa ls ifjp;
+djk,¡xs rFkk laf/ Mk;ksM (Junction diode) (2-bysDVªksMksa dh ;qfDr) rFkk f}/qzoh; laf/
+(Bipolar junction) VªkaftLVj (3-bysDVªksMksa dh ;qfDr) tSlh oqQN v/Zpkyd ;qfDr;ksa dh
+ppkZ djsaxsA bu ;qfDr;ksa osQ vuqiz;ksxksa dks n'kkZus okys oqQN ifjiFkksa dk o.kZu Hkh djasxsA
+14.2 /krqvksa] pkydksa rFkk v/Zpkydksa dk oxhZdj.k
+pkydrk osQ vk/kj ij
+fo|qr pkydrk (σ) vFkok izfrjksèkdrk (ρ = 1/σ) osQ lkis{k eku osQ vkèkkj ij Bksl inkFkks± dk
+fuEu izdkj ls oxhZdj.k fd;k tkrk gS %
+(i) èkkrq % budh izfrjksèkdrk cgqr de (vFkok pkydrk cgqr vfèkd) gksrh gSA
+ρ ~ 10–2 – 10–8 Ω m
+σ ~ 102 – 108 S m–1
+(ii) vèkZpkyd % budh izfrjksèkdrk ;k pkydrk èkkrqvksa rFkk fo|qrjksèkh inkFkks± osQ chp dh
+gksrh gSA
+ρ ~ 10–5 – 106 Ω m
+σ ~ 105 – 10–6 S m–1
+(iii) fo|qrjksèkh % budh izfrjksèkdrk cgqr vfèkd (vFkok pkydrk cgqr de) gksrh gSA
+ρ ~ 1011 – 1019 Ω m
+σ ~ 10–11 – 10–19 S m–1
+Åij fn, x, ρ rFkk σ osQ eku osQoy dksfV eku osQ lwpd gSa vkSj fn, x, ifjlj osQ ckgj
+Hkh tk ldrs gSaA èkkrq] fo|qrjksèkh inkFkZ rFkk vèkZpkydksa osQ chp Hksn djus osQ fy, izfrjksèkdrk
+dk lkis{k eku gh ek=k ,d ekinaM ugha gSA oqQN nwljs varj Hkh gSa] tks tSls&tSls ge bl vè;k;
+esa vkxs c<+saxs] Li"V gksrs tk,¡xsA
+bl vè;k; esa gekjh #fp vèkZpkydksa osQ vè;;u esa gS tks dbZ izdkj osQ gks ldrs gSaA
+(i) rkfRod v/Zpkyd (Elemental semiconductors) & Si vkSj Ge
+(ii) ;kSfxd v/Zpkyd & mnkgj.k gSa %
+•
+vdkcZfud & CdS, GaAs, CdSe, InP, vkfnA
+•
+dkcZfud & ,aFkzklhu] ekfnr (Doped) FkSyksL;kuhl] vkfnA
+•
+dkcZfud cgqyd (Organic polymers)& ikWyhikbjksy] ikWyh,sfuyhu] ikWyhFkk;ksI+kQhu vkfnA
+Reprint 2026-27
+
+=== PAGE 3 ===
+325
+v/Zpkyd bysDVªkWfudh & inkFkZ]
+;qfDr;k¡ rFkk ljy ifjiFk
+vktdy miyC/ vfèkdka'k vèkZpkyd ;qfDr;k¡ rkfRod vèkZpkyd Si ;k Ge vkSj ;kSfxd
+vdkcZfud vèkZpkydksa ij gh vkèkkfjr gSaA ijarq lu~ 1990 osQ ckn dkcZfud vèkZpkyd vkSj
+vèkZpkydh cgqydksa dk mi;ksx djosQ oqQN vèkZpkydh ;qfDr;ksa dk fodkl gqvk ftlls Hkfo";
+osQ fy, cgqyd bysDVªkWfudh rFkk vkf.od bysDVªkWfudh dh izkS|ksfxdh osQ izknqHkkZo osQ laosQr
+feyrs gSaA bl vè;k; esa ge osQoy vdkcZfud vèkZpkyd] fo'ks"kdj rkfRod v/Zpkydksa Si
+rFkk Ge osQ vè;;u rd gh lhfer jgsaxsA rkfRod v/Zpkydksa dh foospuk osQ fy, ;gk¡ ftu
+lkekU; vo/kj.kkvksa dks izLrkfor fd;k x;k gS os fdlh&u&fdlh :i esa vf/dka'k ;kSfxd
+vèkZpkydksa ij ykxw gksrh gSaA
+ÅtkZ cSaM osQ vk/kj ij
+cksj ijek.kq ekWMy osQ vuqlkj fdlh fo;qDr ijek.kq esa mlosQ fdlh bysDVªkWu dh ÅtkZ ml
+bysDVªkWu dh ifjHkze.k d{kk ij fuHkZj djrh gSA ijarq tc ijek.kq ,d&nwljs osQ fudV vkdj dksbZ
+Bksl cuk ysrs gaS rks os ,d&nwljs osQ vR;f/d fudV gks tkrs gSaA vr% fudVLFk ijek.kqvksa osQ
+bysDVªkWuksa dh cká d{kk,¡ vR;f/d ikl&ikl vk tkrh gSa vkSj ;gk¡ rd fd ,d&nwljs dks <d
+ysrh gSaA blosQ ifj.kkeLo:i fdlh Bksl esa bysDVªkWu dh xfr dh izo`Qfr fdlh fo;qDr ijek.kq
+osQ bysDVªkWu dh xfr ls vR;f/d fHkUu gks tkrh gSA
+fdlh fØLVy osQ Hkhrj izR;sd bysDVªkWu dh viuh vf}rh; fLFkfr gksrh gS rFkk fdUgha nks
+bysDVªkWuksa osQ pkjksa vksj osQ vkos'kksa dk iSVuZ ;FkkFkZ :i esa ,d tSlk ugha gksrkA ;gh dkj.k gS
+fd izR;sd bysDVªkWu osQ ÅtkZ Lrj fHkUu gksrs gSaA ;s fHkUu ÅtkZ Lrj ftuesa ÅtkZ dk larr ifjorZu
+gksrk jgrk gS ÅtkZ cSaMksa dk fuekZ.k djrs gSaA og ÅtkZ Lrj ftlesa la;kstdrk bysDVªkWuksa osQ ÅtkZ
+Lrj lekfo"V gSa] la;kstdrk cSaM (Valance band) dgykrk gSA la;kstdrk cSaM osQ Åij fLFkr
+cSaM dks pkyu cSaM (Conduction band) dgrs gSaA fcuk fdlh vfrfjDr ÅtkZ osQ] lHkh
+la;kstdrk bysDVªkWu la;kstdrk cSaM esa jgrs gSaA ;fn pkyu cSaM esa fuEure Lrj pkyu cSaM osQ
+mPpre Lrj ls Hkh uhps gS rks la;kstdrk cSaM osQ bysDVªkWu vklkuh ls pkyu cSaM esa xeu dj
+ldrs gSaA lkekU;r% pkyu cSaM fjDr gksrk gSA ijarq tc ;g cSaM la;kstdrk cSaM dks vfrO;kfir
+(<drk) djrk gS rks bysDVªkWu Lora=krkiwoZd blosQ Hkhrj tk ldrs gSaA ,slk /kfRod pkydksa
+esa gksrk gSA
+;fn pkyu cSaM rFkk la;kstdrk cSaM osQ chp dksbZ fjfDr (varjky) gS] rks la;kstdrk cSaM
+osQ lHkh bysDVªkWu ifjc¼ gksrs gSa rFkk pkyu cSaM esa dksbZ eqDr bysDVªkWu miyC/ ugha gksrkA ;g
+inkFkZ dks fo|qrjks/h cuk nsrk gSA ijarq la;kstdrk cSaM osQ oqQN bysDVªkWu cká ÅtkZ izkIr djosQ
+la;kstdrk cSaM rFkk pkyu cSaM osQ chp dh fjfDr dks ikj dj ldrs gSaA rc ;s bysDVªkWu pkyu
+cSaM esa igq¡p tkrs gSa rFkk la;kstdrk cSaM esa fjDr ÅtkZ Lrj mRiUu dj nsrs gSa ftuesa vU; bysDVªkWu
+tk ldrs gSaA bl izdkj ;g izfØ;k pkyu cSaM esa bysDVªkWuksa rFkk la;kstdrk cSaM esa fjfDrdk,¡
+gksus osQ dkj.k pkyu dh laHkkouk mRiUu djrh gSA
+vkb,] vc ge ;g fopkj djsa fd N ijek.kqvksa okys Si vFkok Ge fØLVy osQ izdj.k esa
+D;k gksrk gSA Si esa ckáre d{kk] rhljh d{kk (n = 3) gksrh gS] tcfd Ge esa ckáre d{kk pkSFkh
+d{kk (n = 4) gksrh gSA budh ckáre d{kk esa 4 bysDVªkWu (2s vkSj 2p bysDVªkWu) gksrs gSaA vr%
+bl fØLVy esa cká bysDVªkWuksa dh oqQy la[;k 4N gqbZA fdlh ckáre d{kk esa vf/dre
+bysDVªkWuksa dh la[;k 8 (2s + 6p bysDVªkWu) gksrh gSA vr% 4N la;kstdrk bysDVªkWuksa osQ fy,
+miyC/ ÅtkZ Lrj 8N gSA ;s 8N fofoDr ÅtkZ Lrj ;k rks dksbZ larr cSaM cuk ldrs gSa vFkok
+budk fHkUu cSaMksa esa lewgu gks ldrk gS] tks fØLVy esa ijek.kqvksa osQ chp nwfj;ksa ij fuHkZj
+djrk gSA
+Si rFkk Ge osQ fØLVy tkydksa esa ijek.kqvksa osQ chp dh nwfj;ksa ij] bu 8N Lrjksa dk ÅtkZ
+cSaM nks Hkkxksa esa VwV tkrk gS] ftuosQ chp ÅtkZ varjky Eg (fp=k 14.1) dk i`Fkdu gksrk gSA
+Reprint 2026-27
+
+=== PAGE 4 ===
+326
+HkkSfrdh
+rkiØe osQ ije 'kwU; ij 4N  la;kstdrk bysDVªkWuksa ls
+iw.kZr% f?kjk fuEu cSaM la;kstdrk cSaM gksrk gSA vU; cSaM
+ftuesa 4N ÅtkZ Lrj gksrs gSa mUgsa pkyu cSaM dgrs gSa]
+rFkk ;g ije 'kwU; ij iw.kZr% fjDr gksrk gSA
+fp=k 14.1 nsf[k,A blesa pkyu cSaM esa fuEure
+ÅtkZ Lrj dks EC osQ :i esa rFkk la;kstdrk cSaM esa
+mPpre ÅtkZ Lrj dks EV  osQ :i esa n'kkZ;k x;k gSA
+EC osQ Åij rFkk EV osQ uhps blesa ,d&nwljs osQ
+vR;f/d fudV cgqr ls ÅtkZ Lrj n'kkZ, x, gSaA
+la;kstdrk cSaM osQ 'kh"kZ rFkk pkyu cSaM dh ryh
+osQ chp osQ varjky dks ÅtkZ cSaM varjky (vFkok
+ÅtkZ varjky] Eg ) dgrs gSaA ;g varjky inkFkZ dh
+izo`Qfr ij fuHkZj djrk gSA ;g vf/d] de vFkok
+'kwU; gks ldrk gSA bu fofHkUu fLFkfr;ksa dks fp=k 14.2
+esa n'kkZ;k x;k gS rFkk uhps budh foospuk dh xbZ gSA
+izdj.k I :
+ I :
+ I :
+ I :
+ I : ;g fp=k 14.2(a) esa n'kkZ;h xbZ
+fLFkfr osQ lanHkZ esa gSA ;g ,d /krq dh fLFkfr gS ftlesa pkyu cSaM vkaf'kd :i ls Hkjk gS rFkk
+la;kstdrk cSaM vkaf'kd :i ls fjDr gS vFkok pkyu cSaM rFkk la;kstdrk cSaM vfrO;kIr gaSA tc
+vfrO;kiu gksrk gS rks la;kstdrk cSaM ls bysDVªkWu ljyrk ls pkyu cSaM esa tk ldrs gSaA ;g fLFkfr
+fo|qr pkyu osQ fy, vR;f/d la[;k esa bysDVªkWu miyC/ djk nsrh gSA tc la;kstdrk cSaM
+vkaf'kd :i ls fjDr gksrk gS rks bysDVªkWu blosQ fuEu Lrj ls mPp Lrj rd xfr djosQ
+fo|qr pkyu dks laHko cuk nsrs gSaA blhfy, bl izdkj osQ inkFkks± dk izfrjks/ de vFkok
+pkydrk mPp gksrh gSA
+fp=k 14.2  (a) /krqvksa]
+(b) fo|qrjks/h rFkk (c) v/Zpkydksa osQ ÅtkZ cSaMksa osQ chp varjA
+fp=k 14.1  0 K ij fdlh v/Zpkyd esa ÅtkZ cSaM dh fLFkfr;k¡]
+Åijh cSaM ftls pkyu cSaM dgrs gSa] esa vuarr% fo'kky la[;k esa]
+vR;fèkd fudV ÅtkZ voLFkk,¡ gksrh gSaA fupyk cSaM ftls la;kstdrk
+cSaM dgrs gSa] esa vR;f/d fudV iw.kZr% Hkjh ÅtkZ voLFkk,¡ gksrh gSaA
+Reprint 2026-27
+
+=== PAGE 5 ===
+327
+v/Zpkyd bysDVªkWfudh & inkFkZ]
+;qfDr;k¡ rFkk ljy ifjiFk
+izdj.k II 
+ II 
+ II 
+ II 
+ II % bl izdj.k esa tSlk fd fp=k 14.2(b) esa n'kkZ;k x;k gS] bl fLFkfr esa cSaM
+varjky Eg vf/d gksrk gS (Eg > 3 eV) A pkyu cSaM esa dksbZ bysDVªkWu ugha gksrsA vr% dksbZ fo|qr
+pkyu laHko ugha gksrkA è;ku nsus ;ksX; ckr ;g gS fd ÅtkZ varjky bruk vf/d gksrk gS fd
+fdlh Hkh rkih; mÙkstu ls bysDVªkWuksa dks la;kstdrk cSaM ls pkyu cSaM dh vksj mÙksftr ugha
+fd;k tk ldrkA ;g fo|qrjks/h inkFkks± dk mnkgj.k gSA
+izdj.k III 
+ III 
+ III 
+ III 
+ III % ;g fLFkfr 14.2(c) esa n'kkZ;h xbZ gSA blesa ,d ifjfer ijarq y?kq cSaM varjky
+(Eg < 3 eV) gksrk gSA y?kq cSaM varjky gksus osQ dkj.k] dejs osQ rki ij] oqQN bysDVªkWu la;kstdrk
+cSaM esa bruh ÅtkZ v£tr dj ysrs gSa fd ÅtkZ varjky dks ikj djosQ pkyu cSaM esa igq¡p ldrs gSaA
+;s bysDVªkWu (;|fi la[;k esa de gksrs gSa) pkyu cSaM esa xfr dj ldrs gSaA vr% v/Zpkydksa dk izfrjks/
+mruk vf/d ugha gksrk ftruk fo|qrjks/h inkFkks± dk gksrk gSA
+bl vuqHkkx esa geus /krqvksa] pkydksa rFkk v/Zpkydksa dk O;kid oxhZdj.k fd;k gSA vxys
+vuqHkkx esa ge v/Zpkydksa esa pkyu izfØ;k osQ fo"k; esa lh[ksaxsA
+14.3  uSt v/Zpkyd
+ge Ge vkSj Si dk lcls lkèkkj.k mnkgj.k ysaxs ftudh tkyd (Lattice) jpuk fp=k 14.3
+esa fn[kkbZ xbZ gSA bu jpukvksa dks ghjs tSlh jpuk dgrs gSaA izR;sd ijek.kq pkj vU; fudVre
+ijek.kqvksa }kjk f?kjk gksrk gSA ge tkurs gSa fd Si vkSj Ge esa pkj la;kstdrk bysDVªkWu gksrs
+gSaA bldh fØLVyh; jpuk esa izR;sd Si ;k Ge ijek.kq vius pkj la;kstdrk bysDVªkWuksa esa
+ls ,d&,d bysDVªkWu dks vius pkj fudVre ijek.kqvksa osQ lkFk lgHkkfxrk djkus dh izo`fÙk
+j[krk gS rFkk ,sls izR;sd fudVorhZ ijek.kq osQ ,d bysDVªkWu dk lgHkkx Hkh djrk gSA ;gh
+lgHkkxh bysDVªkWu ;qxy lgla;ksth caèk (Covalent bond) ;k la;kstdrk vkcaèk (Valence
+bond) dgykrs gSaA ,slk ekuk tk ldrk gS fd nksuksa lgHkkftr bysDVªkWu mu lacafèkr ijek.kqvksa
+osQ chp vkxs&ihNs xfr djrs jgrs gSa] ftlls os n`<+rk ls c¡èks gksrs gSaA
+fp=k 14.3 esa fn[kkbZ xbZ Si ;k Ge dh lajpuk dk 2-foeh; fu:i.k
+fp=k 14.4 esa O;oLFkkRed :i ls fn[kk;k x;k gS] tks lgla;ksth caèk ij
+vR;fèkd cy nsrk gSA fp=k 14.4 ,d vkn'kZ fp=k.k gS ftlesa c¡èk VwVs
+ugha gSa (lHkh c¡èk cus gq, gSa)A ,slh fLFkfr fuEu rki ij gh curh gSA
+tSls&tSls rki c<+rk gS] bu bysDVªkWuksa dks vkSj mQ"eh; mQtkZ izkIr gksus
+yxrh gS ftlls buesa ls oqQN bysDVªkWu VwV dj vyx gks ldrs gSa
+(eqDr bysDVªkWu cudj pkyu esa ;ksxnku djrs gSa)A mQ"eh; mQtkZ
+fØLVyh; tkyd osQ oqQN ijek.kqvksa dks izHkkoh :i ls vk;uhÑr dj
+nsrh gS rFkk c¡èk esa ,d fjDr LFkku cuk nsrh gS] tSlk fp=k 14.5 (a)
+esa fn[kk;k x;k gSA eqDr bysDVªkWu (vkos'k – q) tgk¡ ls fudydj
+vk;k gS] ogk¡ og izHkkoh vkos'k (+ q) dk ,d fjDr LFkku NksM+ nsrk
+gSA izHkkoh èkukRed vkos'k okyk ;g fjDr LFkku ,d gksy (hole)
+dgykrk gSA gksy izHkkoh èkukRed vkos'k okys ,d vkHkklh eqDr d.k
+dh rjg O;ogkj djrk gSA
+uSt v/Zpkydksa (Intrinsic semiconductor) esa eqDr bysDVªkWuksa
+dh la[;k ne  gksyksa dh la[;k] nh osQ cjkcj gksrh gS] vFkkZr
+ne = nh = ni
+(14.1)
+;gk¡ ni dks uSt okgd lkanzrk dgrs gSaA
+vèkZpkydksa esa ;g vf}rh; xq.k gksrk gS fd muesa bysDVªkWuksa osQ lkFk&lkFk gksy Hkh xfr djrs gSaA
+eku ysa fd LFkku 1 ij ,d gksy gS tSlk fp=k 14.5 (a) esa fn[kk;k x;k gSA gksyksa dh xfr dks fp=k
+14.5 (b) esa fn[kk, <ax ls n`f"Vr fd;k tk ldrk gSA uhps okys ckb± vksj osQ lgla;ksth caèk
+a
+lgla;ksth vkca/
+C,Si
+Ge
+;k
+fp=k 14.3 dkcZu] flfydkWu ;k Tkjesfu;e osQ fy,
+rhu&foeh; ghjs tSlh fØLVy lajpuk ftlesa tkyd
+varjky a Øe'k% 3.56, 5.43 vkSj 5.66 Å gSA
+Reprint 2026-27
+
+=== PAGE 6 ===
+328
+HkkSfrdh
+LFkku 2 ls ,d bysDVªkWu fjDr LFkku 1 (gksy) esa owQn dj
+tk ldrk gSA bl izdkj] ,slh ,d owQn osQ ckn] gksy LFkku
+2 ij gks x;k rFkk LFkku 1 esa ,d bysDVªkWu vk x;kA blfy,
+vkHkklh :i esa rks gksy LFkku 1 ls LFkku 2 ij pyk x;kA è;ku
+nhft, fd tks bysDVªkWu izkjaHk esa eqDr gqvk Fkk [fp=k 14.5 (a)
+nsf[k, ]] og gksy dh xfr dh bl fØ;k esa lfEefyr ugha
+gSA eqDr bysDVªkWu iw.kZr% Lora=krkiwoZd pkyu bysDVªkWu osQ
+:i esa xfr djrk gS vkSj ,d fo|qr {ks=k yxkus ij ,d
+bysDVªkWu èkkjk (Ie) nsrk gSA Lej.k jgs fd tc dHkh fØLVy
+esa dgha Hkh ,d viwfjr caèk gksxk rc cafèkr bysDVªkWuksa dh
+okLrfod xfr gksxh vkSj bldk o.kZu djus osQ fy, gksyksa
+dh xfr osQoy ,d lgt mik; gSA fdlh okLrfod
+fØLVy esa fo|qr {ks=k dh fØ;k osQ iQyLo:i ;g gksy
+½.kkRed foHko dh vksj xfr djrs gSaA bl izdkj ,d gksy
+èkkjk Ih feyrh gSA mQ"ek ls mRiUu pkyu bysDVªkWuksa osQ
+dkj.k bysDVªkWu èkkjk Ie rFkk gksy èkkjk Ih dk ;ksx laiw.kZ èkkjk I gksxh &
+I = Ie + Ih
+(14.2)
+;gk¡ è;ku nsus ;ksX; ckr ;g gS fd pkyu bysDVªkWuksa rFkk gksyksa osQ mRiUu gksus osQ lkFk&lkFk
+iqu%la;kstu dk izØe gksrk gS ftlesa bysDVªkWu gksy osQ lkFk iqu%la;ksftr gksrs gSaA lkE;koLFkk esa
+vkos'k okgdksa osQ mRiUu gksus dh nj muosQ iqu%la;kstu dh nj osQ cjkcj gksrh gSA bl iqu%la;kstu
+dk dkj.k bysDVªkWuksa dk gksyksa ls la?k^ djuk gSA
+fp=k 14.4 Si ;k Ge dh lajpuk dk nks&foeh; O;oLFkkRed
+fu:i.k ftlesa fuEu rki ij lgla;ksth vkca/ fn[kk, x, gSa
+(lHkh ca/ cus gq,] dksbZ VwVk ca/ ugha)A +4 fpÉ Si ;k Ge dh
+Hkhrjh ØksM+ dks bafxr djrk gSA
+Si
+Ge
+vFkok
+bysDVªkWu
+gksy
+LFkku 1
++
++
++
++
++
++
++
++
++
+4
+4
+4
+4
+4
+4
+4
+4
+4
+LFkku 2
+4
++
+fp=k 14.5 (a) eè;e rki ij Å"eh; ÅtkZ osQ dkj.k LFkku 1 ij gksy rFkk pkyu bysDVªkWu osQ mRiUu gksus dk O;oLFkkid
+izk:iA (b) fdlh gksy dh laHkkfor Å"eh; xfr dk ljyho`Qr fu:i.kA uhps okys ck,¡ gkFk osQ lgla;ksth ca/ (LFkku 2) ls ,d
+bysDVªkWu izkjafHkd gksy LFkku 1 ij pyk tkrk gS vkSj vius LFkku ij ,d gksy NksM+rk gSA
+bl izdkj LFkku 1 ls LFkku 2 rd gksy dk vkHkklh LFkkukarj.k bafxr gksrk gSA
+(a)
+(b)
+Reprint 2026-27
+
+=== PAGE 7 ===
+329
+v/Zpkyd bysDVªkWfudh & inkFkZ]
+;qfDr;k¡ rFkk ljy ifjiFk
+ mnkgj.k 14.1
+fp=k 14.6(a) esa n'kkZ, vuqlkj
+T = 0 K ij dksbZ uSt v/Zpkyd fdlh
+fo|qrjksèkh dh Hkk¡fr O;ogkj djrk gSA
+;g rkih; ÅtkZ gh gS ftlosQ dkj.k
+mPp rkiksa (T > 0 K) ij oqQN bysDVªkWu
+mÙksftr gksdj la;ksth cSaM ls pkyu cSaM
+esa ig¡qprs gSaA T > 0 K ij rkih; mÙksftr
+bysDVªkWu pkyu cSaM esa vkaf'kd :i ls
+LFkku xzg.k dj ysrs gSaA blhfy, fdlh
+uSt v/Zpkyd dk ÅtkZ cSaM vkjs[k
+fp=k 14.6(b) esa n'kkZ, vuqlkj gksrk
+gSA blesa oqQN bysDVªkWu pkyu cSaM esa
+n'kkZ, x, gSaA ;s ;gk¡ ij la;ksth cSaM
+ls vk, gSa rFkk leku la[;k esa ogk¡
+gksy NksM+ vk, gSaA
+mnkgj.k 14.1 C, Si rFkk Ge dh tkyd (Lattice) lajpuk leku gksrh gSA fiQj Hkh D;ksa
+C fo|qrjks/h gS tcfd Si o Ge uSt v/Zpkyd (intrinsic semiconductor) gSa\
+gy  C, Si rFkk Ge osQ ijek.kqvksa osQ pkj caf/r bysDVªkWu Øe'k% f}rh;] r`rh; rFkk prqFkZ d{kk
+esa gksrs gSaA vr% bu ijek.kqvksa ls ,d bysDVªkWu dks ckgj fudkyus osQ fy, vko';d ÅtkZ
+(vk;fud ÅtkZ Eg) lcls de Ge osQ fy,] blls vf/d Si osQ fy, vkSj lcls vf/d C
+osQ fy, gksxhA bl izdkj Ge o Si esa fo|qr pkyu osQ fy, Lora=k bysDVªkWuksa dh la[;k lkFkZd
+gksrh gS tcfd C esa ;g ux.; gksrh gSA
+14.4  vinzO;h v/Zpkyd
+fdlh uSt v/Zpkyd dh pkydrk mlosQ rki ij fuHkZj djrh gS] ijarq d{k&rki ij bldh
+pkydrk cgqr de gksrh gSA blh :i esa] dksbZ Hkh egRoiw.kZ bysDVªkWfud ;qfDr mu v/Zpkydksa
+}kjk fodflr ugha dh tk ldrh gSA vr% budh pkydrk esa lq/kj djuk vko';d gksrk gSA
+;g mu v/Zpkydksa esa v'kqf¼;ksa dk mi;ksx djosQ fd;k tkrk gSA
+tc fdlh 'kq¼ v/Zpkyd esa dksbZ mi;qDr v'kqf¼ vR;Yi ek=kk esa tSls oqQN Hkkx izfr
+fefy;u (ppm) esa feykbZ tkrh gS rks mldh pkydrk esa dbZ xquk o`f¼ gks tkrh gSA bl izdkj
+osQ inkFkks± dks vinzO;h v/Zpkyd (Extrinsic semiconductor) vFkok v'kqf¼ v/Zpkyd
+(Impurity semiconductor) dgrs gSaA okafNr v'kqf¼ dks lkoèkkuhiwoZd fefJr djuk eknu
+(Doping) ;k vifeJ.k dgykrk gS rFkk v'kqf¼ ijek.kq vifeJd (Dopants) dgykrs gSaA
+bl izdkj osQ inkFkZ dks ekfnr (Doped) v/Zpkyd dgrs gSaA vifeJd ,slk gksuk pkfg, tks
+ewy v/Zpkyd inkFkZ osQ tkyd dks foo`Qr u djsA mls osQoy fØLVy esa cgqr de ewy
+vèkZpkyd ijek.kq fLFkfr;ksa dks gh ?ksjuk pkfg,A bls izkIr djus osQ fy, ,d vko';d 'krZ ;g
+gS fd vifeJd osQ v.kq rFkk v/Zpkyd inkFkZ osQ v.kqvksa dk lkb”k yxHkx leku gksA
+prq% la;kstd Si vFkok Ge osQ eknu osQ fy, nks izdkj osQ vifeJd mi;ksx fd, tkrs gSaA
+(i) iap la;kstd (la;kstdrk 5)_ tSls vklsZfud (As), ,saVheuh (Sb), I+kQkWLiQksjl (P), vkfnA
+(ii) f=k la;kstd (la;kstdrk 3)_ tSls bafM;e (In), cksjkWu (B), ,syqfefu;e (Al), vkfnA
+(a)
+bysDVªkWu ÅtkZ
+EC
+EV
+Eg
+(b)
+EC
+Eg
+EV
+fp=k 14.6 (a)  T = 0 K ij dksbZ uSt v/Zpkyd fo|qrjks/h dh Hkk¡fr O;ogkj
+djrk gSA (b)  T > 0 K ij pkj rkih; mRiUu bysDVªkWu&gksy ;qxy Hkjs o`Ùk ( )
+bysDVªkWuksa dks fu:fir djrs gSa rFkk fjDr o`r (
+) gksyksa dks fu:fir djrs gSaA
+Reprint 2026-27
+
+=== PAGE 8 ===
+330
+HkkSfrdh
+vc ge ;g foospuk djsaxs fd vifeJ.k }kjk
+fdl izdkj v/Zpkydksa esa vkos'k okgdksa dh la[;k
+esa ifjorZu gksrk gS ftlosQ dkj.k ml v/Zpkyd dh
+pkydrk ifjo£rr gks tkrh gSA Si vFkok Ge vkorZ
+lkj.kh osQ prqFkZ lewg (oxZ) osQ lnL; gSa blhfy,
+ge vifeJ.k osQ fy, fudV osQ rhljs vFkok ik¡posa
+oxZ osQ rRo dk p;u ;g vis{kk djrs gq, rFkk
+lko/kuh cjrrs gq, djrs gSa fd vifeJ.k fd, tkus
+okys rRo osQ ijek.kq dk lkb”k Si vFkok Ge osQ
+ijek.kq osQ lkb”k osQ yxHkx cjkcj gSA jkspd rF;
+;g gS fd eknu osQ fy, mi;ksx gksus okys f=kla;kstd
+rFkk iapla;kstd rRo vifeJ.k osQ i'pkr ,d&nwljs
+ls iw.kZr% fHkUu izdkj osQ nks v/Zpkyd inkFkks± dk
+fuekZ.k djrs gSa ftudk o.kZu uhps fn;k x;k gSA
+(i)  n-
+(i)  n-
+(i)  n-
+(i)  n-
+(i)  n-izdkj dk v/Zpkyd
+eku yhft, fd ge Si ;k Ge (la;kstdrk 4) dks
+,d iapla;kstd (la;kstdrk 5) rRo ls vifefJr
+djsa tSlk fp=k 14.7 esa fn[kk;k x;k gSA tc +5
+la;kstdrk okyk rRo Si osQ ,d ijek.kq dks izfrLFkkfir
+djosQ viuk LFkku xzg.k djrk gS rks blosQ bysDVªkWuksa
+esa ls pkj] fudVorhZ pkj flfydkWu ijek.kqvksa ls
+ca/ cukrs gSa] tcfd ik¡pok¡ bysDVªkWu tud ijek.kq
+ls nqcZy ca/ }kjk tqM+k jgrk gSA ,slk blfy, gS fd
+ik¡posa bysDVªkWu osQ fy, ca/ esa Hkkx ysus okys pkjksa
+bysDVªkWu ijek.kq osQ izHkkoh ØksM+ osQ Hkkx gSaA blosQ
+ifj.kkeLo:i bl bysDVªkWu dks eqDr djus osQ fy,
+vko';d vk;uu ÅtkZ cgqr de gksrh gS vkSj
+lkekU; d{k rki ij ;g vèkZpkyd osQ tkyd esa eqDr xfr djus osQ fy, eqDr gksrk gSA mnkgj.k
+osQ fy,] bl bysDVªkWu dks ijek.kq ls eqDr djus osQ fy, teZsfu;e esa ~ 0.01 eV rFkk flfydkWu
+esa yxHkx 0.05 eV ÅtkZ pkfg,A blosQ foijhr fdlh uSt v/Zpkyd esa d{k rki ij fdlh
+bysDVªkWu dks o£tr cSaM ls LFkkukarj.k osQ fy, (tesZfu;e esa yxHkx 0.72 eV rFkk flfydkWu
+esa yxHkx 1.1 eV) ÅtkZ pkfg,A bl izdkj iapla;kstd vifeJd fo|qr pkyu osQ fy, ,d
+vfrfjDr bysDVªkWu iznku djrk gS vkSj blhfy, bls nkrk v'kqf¼ (donor impurity) dgrs gSaA
+vifeJd ijek.kq }kjk fo|qr pkyu osQ fy, miyC/ djk, x, bysDVªkWu dh la[;k izcy :i
+ls vifeJ.k ij fuHkZj djrh gSA ;g vklikl osQ rki ij fuHkZj ugha djrhA blosQ foijhr Si
+ijek.kq }kjk mRiUu eqDr bysDVªkWuksa dh la[;k (leku la[;k esa gksyksa osQ lkFk) esa rki osQ lkFk
+cgqr de o`f¼ gksrh gSA
+fdlh vifefJr v/Zpkyd esa pkyd bysDVªkWuksa dh oqQy la[;k ne nkrkvksa osQ ;ksxnku rFkk
+futh dkj.kksa (Å"ek }kjk) ls mRiUu bysDVªkWuksa osQ dkj.k rFkk gksyksa dh oqQy la[;k nh osQoy
+futh lzksr }kjk mRiUu gksyksa osQ dkj.k gksrh gSA ijarq gksyksa osQ iqu%la;kstu dh nj esa o`f¼ bysDVªkWuksa
+dh la[;k esa o`f¼ osQ dkj.k gks tkrh gSA blosQ ifj.kkeLo:i gksyksa dh la[;k esa vkSj deh
+gks tkrh gSA
+fp=k 14.7 (a) prqFkZ la;ksth Si ;k Ge esa iapla;ksth nkrk ijek.kq
+(As, Sb, P, vkfn) osQ vifeJ.k ls cuk n-v/ZpkydA
+(b) n-izdkj osQ inkFkZ dk lk/kj.kr;k iz;qDr O;oLFkkRed
+fu:i.k ftlesa izfrLFkkih nkrk osQ fLFkj ØksM+ dks osQoy ,d
+vfrfjDr izHkkoh /ukRed vkos'k vkSj blls lac¼ bysDVªkWu osQ
+lkFk fn[kk;k x;k gSA
+Reprint 2026-27
+
+=== PAGE 9 ===
+331
+v/Zpkyd bysDVªkWfudh & inkFkZ]
+;qfDr;k¡ rFkk ljy ifjiFk
+bl izdkj vifeJ.k osQ mfpr Lrj ls pkyd bysDVªkWuksa dh la[;k esa gksyksa dh
+la[;k dh rqyuk esa o`f¼ dh tk ldrh gSA vr% iapla;kstd vifeJd osQ lkFk
+vifeJ.k gksus ij fdlh uSt v/Zpkyd esa bysDVªkWu cgqla[;d vkos'k okgd rFkk
+gksy vYika'k vkos'k okgd cu tkrs gSaA blhfy, bl izdkj osQ v/Zpkydksa dks n-
+izdkj osQ vèkZpkyd dgrs gSaA fdlh n-izdkj osQ v/Zpkyd osQ fy,
+ne >> nh
+(14.3)
+(ii)  p-izdkj osQ v/Zpkyd
+p-izdkj dk v/Zpkyd rc curk gS tc Si ;k Ge (prqFkZla;ksth) esa xzqi-III dh
+f=kla;ksth v'kqf¼;k¡_ tSls& Al, B, In vkfn vifefJr dh tkrh gSa] tSlk
+fp=k 14.8 esa fn[kk;k x;k gSA vifeJd esa Si ;k Ge dh vis{kk ,d ckgjh
+bysDVªkWu de gksrk gS vkSj blfy, ;g ijek.kq rhu vksj ls Si ijek.kqvksa ls caèk
+cuk ldrk gS] ysfdu pkSFkh vksj caèk cukus osQ fy, vko';d bysDVªkWu miyC/
+u gksus osQ dkj.k pkSFkk ca/ cukus esa liQy ugha gks ikrkA vr% f=kla;kstd ijek.kq
+rFkk pkSFks fudVLFk ijek.kq osQ chp ca/ esa ,d fjfDr vFkok gksy gksrk gS ftls fp=k
+14.8 esa n'kkZ;k x;k gSA D;ksafd tkyd esa iM+kslh Si ijek.kq gksy osQ LFkku ij ,d
+bysDVªkWu pkgrk gS] fudV osQ ijek.kq osQ cká d{k dk dksbZ bysDVªkWu bl fjfDr dks
+Hkjus osQ fy, owQnku Hkj ldrk gS ftlls mlosQ vius LFkku ij ,d gksy cu tkrk
+gSA ;gh gksy pkyu osQ fy, miyC/ jgrk gSA è;ku nsus ;ksX; ckr ;g gS fd]
+f=kla;ksth fotkrh; ijek.kq iM+kslh Si ijek.kq osQ lkFk bysDVªkWu dh lk>snkjh djosQ
+izHkkor% ½.kkRed vkosf'kr gks tkrk gS] rFkk blosQ lHkh la;ksth caèk iwjs gks tkrs
+gSaA blfy, lkèkkj.k Hkk"kk esa izk;% p –inkFkZ osQ vifeJd ijek.kq dks vius lac¼
+gksy osQ lkFk ,d ½.kkRed vkos'k dk ØksM+ dgk tkrk gS] tSlk fp=k 14.8(b)
+esa fn[kk;k x;k gSA ;g Li"V gS fd ,d xzkgh ijek.kq (NA) ,d gksy nsrk gSA ;g
+gksy uSt tfur gksyksa osQ vfrfjDr gS tcfd pkyu bysDVªkWuksa dk Ïksr osQoy uSt
+tuu gh gSA bl izdkj] ,sls inkFkZ osQ fy,] gksy cgqla[;d okgd rFkk bysDVªkWu
+vYila[;d okgd gSaA blhfy, f=kla;kstd v'kqf¼ ls vifefJr uSt v/Zpkyd
+p-izdkj osQ v/Zpkyd dgykrs gSaA p-izdkj osQ v/Zpkydksa esa iqu%la;kstu izfØ;k]
+uSt tfur bysDVªkWuksa dh la[;k ni ?kV dj ne  gks tkrh gSA vr% p-izdkj osQ
+vèkZpkydksa osQ fy,
+nh >> ne
+(14.4)
+è;ku nsus ;ksX; ckr ;g gS fd fØLVy ,d lexz ½.kkRed mnklhurk cuk, j[krk
+gS D;ksafd vfrfjDr vkos'k okgdksa ij vkos'k dh ek=kk tkyd esa vk;uho`Qr ØksM+ksa
+ij vkos'k dh ek=kk osQ gh leku ,oa foijhr gksrh gSA
+vinzO;h v/Zpkydksa esa cgqla[;d /kjk okgdksa dh izpqjrk osQ dkj.k rkiu }kjk mRiUu
+vYika'k okgdksa osQ fy, cgqla[;d okgdksa ls feyus osQ vf/d volj gksrs gSa vkSj bl izdkj
+os u"V gks tkrs gSaA blhfy, vifeJd ,d izdkj osQ vf/d /kjk okgdksa dks feykus ls] tks
+cgqla[;d okgd cu tkrs gSa] vizR;{k :i esa vYika'k okgdksa dh uSt lkanzrk dks ?kVkus esa lgk;rk
+djrs gSaA
+vifeJ.k }kjk v/Zpkydksa dh ÅtkZ cSaM lajpuk izHkkfor gksrh gSA cká v/Zpkydksa osQ
+izdj.k esa nkrk v'kqf¼;ksa osQ dkj.k vfrfjDr ÅtkZ voLFkk (ED) rFkk xzkgh v'kqf¼;ksa osQ dkj.k
+vfrfjDr ÅtkZ voLFkk (EA) Hkh gksrh gSA n-izdkj osQ Si v/Zpkydksa osQ ÅtkZ cSaM vkjs[k esa nkrk
+ÅtkZ Lrj ED pkyd cSaM dh ryh EC ls oqQN uhps gksrk gS rFkk bl Lrj ls oqQN bysDVªkWu cgqr
+de ÅtkZ dh vkiw£r gksus ij pkyu cSaM esa izos'k dj tkrs gSaA d{k rki ij vf/dka'k nkrk ijek.kq
+fp=k 14.8 (a) prqFkZla;ksth Si ;k
+Ge osQ tkyd esa f=kla;ksth xzkgh
+ijek.kq (In, Al, B vkfn) osQ
+vifeJ.k ls cuk p - izdkj dk
+vèkZpkydA (b) p - izdkj osQ inkFkZ
+dk lkèkkj.kr;k iz;qDr gksus okyk
+O;oLFkkRed fu:i.k tks ,d izHkkoh
+vfrfjDr ½.kkRed vkos'k osQ lkFk
+izfrLFkkih xzkgh ijek.kq dh fLFkj ØksM+
+rFkk mlls lac¼ gksy dks fn[kkrk gSA
+Reprint 2026-27
+
+=== PAGE 10 ===
+332
+HkkSfrdh
+ mnkgj.k 14.2
+vk;uho`Qr gks tkrs gSa] ijarq Si osQ vfr vYi  (~1012) ijek.kq gh vk;uho`Qr gksrs gSaA vr% fp=k
+14.9(a) esa n'kkZ, vuqlkj pkyu cSaM esa vf/dka'k bysDVªkWu nkrk v'kqf¼;ksa ls gh vkrs gSaA blh
+izdkj p-izdkj osQ v/Zpkydksa esa xzkgh ÅtkZ Lrj EA la;ksth cSaM osQ 'kh"kZ ls oqQN Åij gksrk gS
+[fp=k 14.9(b) nsf[k, ]A cgqr de ÅtkZ vkiw£r gksus ij Hkh la;ksth cSaM ls dksbZ bysDVªkWu EA
+osQ Lrj ij owQnku Hkj ysrk gS vkSj mls xzkgh dks ½.kkRed vk;fur dj nsrk gSA ¹fodYi osQ
+:i esa ge bl izdkj Hkh dg ldrs gSa fd cgqr de ÅtkZ dh vkiw£r ls gksy ÅtkZ Lrj EA
+ls la;ksth cSaM esa xeu dj ldrk gSA ÅtkZ izkIr djus ij bysDVªkWu Åij dh vksj vkrs gSa tcfd
+gksy uhps dh vksj vkrs gSaAº lkekU; d{k rki ij vf/dka'k xzkgh ijek.kq vk;uho`Qr gks tkrs gSa
+rFkk la;ksth cSaM esa gksy cp tkrs gSaA bl izdkj d{k rki ij la;ksth cSaM esa gksyksa dk ?kuRo
+izeq[k :i esa vinzO;h v/Zpkydksa esa v'kqf¼ osQ dkj.k gksrk gSA rkih; lkE; esa v/Zpkydksa esa
+bysDVªkWuksa rFkk gksyksa dh lkanzrk bl izdkj O;Dr dh tkrh gS
+nenh = ni
+2
+(14.5)
+;|fi mijksDr fooj.k lexz :i ls lfUudV rFkk ifjdfYir gS ijarq ;g ljy <ax ls
+èkkrqvksa] fo|qrjksf/;ksa rFkk v/Zpkydksa (uSt rFkk vinzO;h) esa varj dks le>us esa lgk;d gSA
+C, Si rFkk Ge dh izfrjks/drkvksa esa varj buosQ pkyu rFkk la;ksth cSaMksa osQ chp ÅtkZ varjky
+ij fuHkZj djrk gSA dkcZu (Mk;eaM)] Si rFkk Ge osQ fy, ÅtkZ varjky Øe'k%  5.4 eV,
+1.1 eV rFkk 0.7 eV gSA Sn Hkh pkSFks xzqi dk rRo gS ijarq ;g /krq gS D;ksafd blosQ izdj.k esa
+ÅtkZ varjky 0 eV gSA
+fp=k 14.9 T > 0 K ij (a) n-izdkj osQ v/Zpkyd rFkk
+(b) p-izdkj osQ v/Zpkyd dk ÅtkZ cSaMA
+mnkgj.k 14.2 eku yhft, fdlh 'kq¼ Si fØLVy esa 5 × 1028 ijek.kq m–3 gSA bls
+iapla;ksth As ls 1 ppm lkaærk ij vifefJr fd;k tkrk gSA bysDVªkWuksa rFkk gksyksa dh la[;k
+ifjdfyr dhft,] fn;k gS fd ni =1.5 × 1016 m–3A
+gy  è;ku nhft,] ;gk¡ rkih; tfur dh mQ"ek ls mRiUu bysDVªkWu (ni ~1016m–3) vifeJ.k
+ls mRiUu bysDVªkWuksa dh rqyuk esa ux.; gSaA
+blfy,, ne ≈ ND
+pw¡fd nenh = ni
+2, blfy, gksyksa dh la[;k
+nh = (2.25 × 1032)/(5 ×1022)
+          ~ 4.5 × 109 m–3
+bysDVªkWu ÅtkZ
+,d rkih; tfur bysDVªkWu&gksy ;qXe
+rFkk nkrk ijek.kqvksa osQ 9 bysDVªkWu
+Reprint 2026-27
+
+=== PAGE 11 ===
+333
+v/Zpkyd bysDVªkWfudh & inkFkZ]
+;qfDr;k¡ rFkk ljy ifjiFk
+14.5  p-n laf/
+p-n laf/ (p-n junction) cgqr lh v/Zpkyd ;qfDr;ksa tSls Mk;ksM] VªkaftLVj vkfn dh ewy
+bdkbZ gSA vU; vèkZpkyd ;qfDr;ksa osQ fo'ys"k.k osQ fy, laf/ osQ O;ogkj dks le>uk vR;ar
+egRoiw.kZ gSA vc ge ;g le>us dk iz;kl djsaxs fd fdlh laf/ dk fuekZ.k oSQls gksrk gS rFkk
+cká vuqiz;qDr oksYVrkvksa (ftUgsa ck;l Hkh dgrs gSa) osQ izHkko esa dksbZ laf/ fdl izdkj O;ogkj
+djrh gSA
+14.5.1  p-n laf/ dk fuekZ.k
+p-izdkj osQ flfydkWu (p-Si) v/Zpkyd dh iryh iVfydk (osI+kQj) ij fopkj dhft,A
+ifj'kq¼ :i esa iapla;kstd v'kqf¼ dh vYi ek=kk feykdj fdlh p-Si iVfydk osQ oqQN Hkkx
+dks n-Si esa ifjo£rr fd;k tk ldrk gSA fdlh v/Zpkyd dk fuekZ.k djus dh cgqr&lh
+izfØ;k,¡ gSaA vc iVfydk esa p-{ks=k ,oa n-{ks=k rFkk p- rFkk n- {ks=kksa osQ chp ,d /krqdehZ lafèk gSA
+fdlh p-n laf/ osQ fuekZ.k osQ le; nks egRoiw.kZ izfØ;k,¡ gksrh gSa µ folj.k (Diffusion)
+rFkk viokg (Drift)A ge ;g tkurs gSa fd fdlh n-izdkj osQ v/Zpkyd esa bysDVªkWuksa dh lkanzrk
+(izfr ,dkad vk;ru esa bysDVªkWuksa dh la[;k) gksyksa dh lkanzrk dh rqyuk esa vf/d gksrh gSA blh
+izdkj p-izdkj osQ v/Zpkyd esa gksyksa dh lkanzrk bysDVªkWuksa dh lkanzrk dh rqyuk esa vf/d gksrh
+gSA p-n laf/ osQ fuekZ.k osQ le;] rFkk p- ,oa n- iQydksa osQ fljksa ij lkanzrk izo.krk
+(Concentration gradient) osQ dkj.k gksy p-iQyd ls n-iQyd (p → n) dks folfjr gksrs
+gSa rFkk bysDVªkWu n-iQyd ls p-iQyd (n → p) dh vksj folfjr gksrs gSaA vkos'k okgdksa dh bl
+xfr osQ dkj.k laf/ ls ,d folj.k /kjk izokfgr gksrh gSA
+tc dksbZ bysDVªkWu p ls n dh vksj folfjr gksrk gS rks og vius ihNs ,d vk;fur nkrk
+n-iQyd ij NksM+ nsrk gSA ;g vk;fur nkrk (/u vkos'k) pkjksa vksj osQ ijek.kqvksa }kjk c¡/k gksus
+osQ dkj.k fu'py gksrk gSA tSls&tSls bysDVªkWu n → p dh vksj folfjr gksrs tkrs gSa] laf/ osQ n-
+iQyd ij /ukos'k dh (;k /ukRed Lisl&pk”kZ {ks=k) ,d ijr fodflr gks tkrh gSA
+blh izdkj] tc dksbZ gksy lkanzrk izo.krk osQ dkj.k p → n dh vksj folfjr gksrk gS rks og
+vius ihNs ,d vk;fur xzkgh (½.kkRed vkos'k) NksM+ nsrk gS tks fu'py gksrk gSA tSls&tSls gksy
+folfjr gksrs gSa] ½.kkRed vkos'k (½.kkRed Lisl&pk”kZ {ks=k) dh ,d ijr laf/ osQ
+p-iQyd ij fodflr gksrh tkrh gSA laf/ osQ nksuksa iQydksa ij fodflr bl Lisl&pk”kZ {ks=k dks
+ßklh {ks=k (Depletion region) dgrs gSaA ;g blfy, gS D;ksafd bysDVªkWu rFkk gksy tks laf/
+osQ vkj&ikj vkjafHkd xfr esa Hkkx ysrs gSa os blosQ eqDr vkos'kksa osQ {ks=k dk ßkl dj nsrs gSa (fp=k
+14.10)A bl ßklh {ks=k dh eksVkbZ ekbØksehVj osQ nlosa Hkkx dh dksfV
+dh gksrh gSA laf/ osQ n-iQyd ij /ukRed Lisl&pk”kZ {ks=k rFkk p-
+iQyd ij ½.kkRed Lisl&pktZ {ks=k gksus osQ dkj.k laf/ ij /ukRed
+vkos'k ls ½.kkRed vkos'k dh vksj ,d fo|qr {ks=k mRiUu gks tkrk gSA
+bl {ks=k osQ dkj.k laf/ osQ p-iQyd dk bysDVªkWu n-iQyd dh vksj
+rFkk laf/ osQ n-iQyd dk gksy p-iQyd dh vksj xfr djrk gSA bl
+fo|qr {ks=k osQ dkj.k vkos'k okgdksa dh bl xfr dks viokg dgrs gSaA
+bl izdkj ,d viokg èkkjk tks fd folj.k /kjk osQ foijhr gksrh gS]
+izokfgr gksuk vkjaHk dj nsrh gS (fp=k 14.10)A
+vkjaHk esa] folj.k /kjk mPp gksrh gS rFkk viokg /kjk fuEu gksrh gSA
+tSls&tSls folj.k izfØ;k gksrh tkrh gS] laf/ osQ nksuksa iQydksa ij varjkdk'kh vkos'k {ks=k foLrkfjr
+fp=k 14.10 p-n laf/ cuus dh izfØ;k
+p-n lafèk Mk;ksM dk fuekZ.k rFkk dk;Z
+http://hyperphysics.phy-astr.gsu.edu/hbase/solids/pnjun.html
+HkkSfrdh
+Reprint 2026-27
+
+=== PAGE 12 ===
+334
+HkkSfrdh
+ mnkgj.k  14.3
+gksrs tkrs gSaA blls fo|qr {ks=k dh rhozrk esa o`f¼ gksrh gS ftlosQ iQyLo:i viokg
+/kjk esa Hkh o`f¼ gksrh gSA ;g izØe ml le; rd pyrk jgrk gS tc rd fd
+;s nksuksa /kjk,¡ (folj.k /kjk rFkk viokg /kjk) ifjek.k esa leku ugha gks tkrhaA
+bl izdkj ,d p-n laf/ cu tkrh gSA lkE;okLFkk esa p-n laf/ ij dksbZ usV fo|qr
+/kjk ugha gksrhA
+n-{ks=k ls bysDVªkWuksa dh gkfu rFkk p-{ks=k esa gksyksa dh izkfIr osQ dkj.k nksuksa
+{ks=kksa dh laf/ osQ vkj&ikj ,d foHkokarj mRiUu gks tkrk gSA bl foHko dh /zqork
+bl izdkj gksrh gS fd ;g vkos'k okgdksa osQ vkSj izokg dk fojks/ djrk gS ftlosQ
+iQyLo:i lkE;koLFkk dh fLFkfr mRiUu gks tkrh gSA fp=k 14.11 esa laf/ dks
+lkE;koLFkk esa rFkk blosQ fljksa osQ chp foHkokarj n'kkZ;k x;k gSA n-inkFkZ us bysDVªkWu
+[kks, gSa rFkk p-inkFkZ us bysDVªkWu v£tr fd, gSaA bl izdkj p-inkFkZ osQ lkis{k
+n-inkFkZ /ukRed gSA pw¡fd foHko n-{ks=k ls p-{ks=k dh vksj bysDVªkWuksa dh xfr
+dks jksdus dk iz;kl djrk gS vr% bl foHko dks izk;% jksf/dk foHko (Barrier
+potential) dgrs gSaA
+mnkgj.k 14.3  D;k p-n lafèk cukus osQ fy, ge p-izdkj osQ vèkZpkyd dh ,d iêðh dks
+n–izdkj osQ vèkZpkyd ls HkkSfrd :i ls la;ksftr dj p-n laf/ izkIr dj ldrs gSa\
+gy ugha! dksbZ Hkh i^h] pkgs fdruh gh lery gks] varj-ijek.oh; fØLVy varjky (~ 2 ls
+3 Å) ls dgha ”;knk [kqjnjh gksxh vkSj blfy, ijek.oh; Lrj ij vfofPNUu laioZQ (vFkok
+larr laioZQ) laHko ugha gksxkA izokfgr gksus okys vkos'k okgdksa osQ fy, lafèk ,d fofPNUurk
+dh rjg O;ogkj djsxhA
+14.6  v/Zpkyd Mk;ksM
+v/Zpkyd Mk;ksM ¹fp=k 14.12(a)º ewy :i esa ,d p-n laf/
+gksrh gS ftlosQ fljksa ij /kfRod laioZQ tqM+s gksrs gSa rkfd bl lafèk
+ij dksbZ cká oksYVrk vuqiz;qDr dh tk losQA bl ;qfDr osQ nks VfeZuy
+gksrs gSaA v/Zpkyd Mk;ksM dks izrhdkRed :i esa fp=k 14.12(b) esa
+fu:fir fd;k x;k gSA
+rhjksa dh fn'kk ifjikVh osQ vuqlkj fo|qr /kjk dh fn'kk lkE;k
+jksf/dk (Equilibrium barrier) dks n'kkZrh gSA (tcfd Mk;ksM
+vxzfnf'kd ck;flr (Forward bias) gS)  foHko dks Mk;ksM osQ
+fljksa ij cká oksYVrk V vuqiz;qDr djosQ ifjo£rr fd;k tk ldrk gSA
+p-n laf/ Mk;ksM dh fcuk fdlh ck;l osQ lkE;koLFkk esa fLFkfr fp=k
+14.11(a) rFkk (b) esa n'kkZ;h xbZ gSA
+14.6.1  vxzfnf'kd ck;l esa p-n laf/ Mk;ksM
+tc fdlh v/Zpkyd Mk;ksM osQ nks fljksa osQ chp dksbZ cká oksYVrk V bl izdkj vuqiz;qDr dh tkrh
+gS fd cSVjh dk /u V£euy p-iQyd ls rFkk ½.k V£euy n-iQyd ls la;ksftr djrs gSa ¹fp=k
+14.13(a) rFkk (b)º rks bls vxzfnf'kd ck;flr dgrs gSaA
+vuqiz;qDr vf/dka'k oksYVrk ikr v/Zpkyd Mk;ksM osQ ßklh {ks=k osQ fljksa ij gksrk gS rFkk
+laf/ osQ p-iQyd rFkk n-iQyd ij foHkoikr ux.; gksrk gS (bldk dkj.k ;g gS fd ßklh
+{ks=k] og {ks=k tgk¡ dksbZ vkos'k ugha gS] dk izfrjks/ n-iQyd vFkok p-iQyd osQ izfrjks/ksa dh
+rqyuk esa vR;f/d gksrk gS)A vuqiz;qDr oksYVrk (V) dh fn'kk var%fufeZr (built-in) foHko V0
+fp=k 14.11 (a) Mk;ksM lkE; esa
+(V = 0), (b) fcuk fdlh ck;l osQ laf/
+dk foHkoA
+fp=k 14.12 (a) v/Zpkyd Mk;ksM] (b) p-n laf/
+Mk;ksM dk izrhdA
+p          n
+Reprint 2026-27
+
+=== PAGE 13 ===
+335
+v/Zpkyd bysDVªkWfudh & inkFkZ]
+;qfDr;k¡ rFkk ljy ifjiFk
+osQ foijhr gksrh gSA blosQ ifj.kkeLo:i] ßklh Lrj dh eksVkbZ ?kV tkrh gS rFkk
+jksfèkdk Å¡pkbZ de gks tkrh gS [fp=k 14.13(b)]A vxzfnf'kd ck;l esa izHkkoh jksf/
+dk Å¡pkbZ (V0 – V) gksrh gSA
+;fn vuqiz;qDr oksYVrk y?kq gS rks jksf/dk foHko lkE; eku ls osQoy oqQN de
+gks tk,xk] rFkk osQoy os gh vkos'k okgd tks mPpre ÅtkZ Lrj ij Fks] cgqr de
+la[;k esa laf/ dks ikj djus osQ fy, vko';d ÅtkZ izkIr dj ik,¡xs] vr% de fo|qr
+èkkjk izokfgr gksxhA ;fn ge vuqiz;qDr oksYVrk esa dkI+kQh o`f¼ dj nsa rks jksfèkdk Å¡pkbZ
+dkI+kQh ?kV tk,xh rFkk vf/d la[;k esa okgdksa dks laf/ ikj djus osQ fy, vko';d
+ÅtkZ izkIr gks tk,xhA bl izdkj fo|qr /kjk esa o`f¼ gks tk,xhA
+vuqiz;qDr oksYVrk osQ dkj.k] bysDVªkWu n-iQyd ßklh {ks=k dks ikj dj
+p-iQyd ij igq¡prs gSa (tgk¡ os vYika'k okgd gSa)A blh izdkj p-iQyd osQ gksy
+laf/ dks ikj djosQ n-iQyd ij igq¡prs gSa (tgk¡ os vYika'k okgd gSa)A vxzfnf'kd
+ck;l esa gksus okys bl izØe dks vYika'k okgd var%{ksi.k (Minority carrier
+injection) dgrs gSaA laf/ dh lhek ij gj iQyd ij] laf/ ls nwj vofLFkr vYika'k
+okgdksa dh lkaærk dh rqyuk esa] vYika'k okgd lkaærk esa egRoiw.kZ o`f¼ gks tkrh gSA
+bl lkaærk izo.krk osQ dkj.k p-iQyd dh laf/ osQ fdukjs folfjr gksdj
+p-iQyd osQ nwljs fdukjs ij igq¡p tkrs gaSA blh izdkj n-iQyd dh laf/ osQ fdukjs
+ls folfjr gksdj n-iQyd osQ nwljs fljs ij igq¡prs gSa (fp=k 14.14)A nksuksa iQydksa ij
+vkos'k okgdksa dh bl xfr osQ dkj.k fo|qr /kjk izokfgr gksus yxrh gSA oqQy
+vxzfnf'kd Mk;ksM /kjk dk eku gksy folj.k /kjk rFkk bysDVªkWu folj.k osQ dkj.k
+ikjaifjd /kjk dk ;ksx gksrk gSA bl /kjk dk ifjek.k izk;% feyh,sfEi;j esa gksrk gSA
+14.6.2  i'pfnf'kd ck;l esa p-n laf/ Mk;ksM
+tc fdlh v/Zpkyd Mk;ksM osQ nks fljksa osQ chp dksbZ cká oksYVrk (V) bl
+izdkj vuqiz;qDr djrs gSa fd cSVjh osQ /u VfeZuy dks n-iQyd ls rFkk ½.k
+VfeZuy dks p-iQyd ls tksM+rs gSa [fp=k 14.15(a)]] rks Mk;ksM dks i'pfnf'kd
+ck;flr (Reverse bias) dgrs gSaA vuqiz;qDr oksYVrk dk vf/dka'k foHkoikr
+v/Zpkyd osQ ßklh {ks=k osQ fljksa ij gksrk gSA ;gk¡ vuqiz;qDr oksYVrk dh fn'kk
+jksf/dk foHko dh fn'kk osQ leku gksrh gSA blosQ ifj.kkeLo:i jksf/dk dh
+Å¡pkbZ c<+ tkrh gS rFkk ßklh {ks=k dh pkSM+kbZ esa fo|qr esa ifjorZu gksus osQ dkj.k o`f¼ gks
+tkrh gSA i'pfnf'kd ck;lu~ esa izHkkoh jksf/dk Å¡pkbZ (V0 + V) gksrh gS [fp=k 14.15(b)]A
+;g n → p dh vksj bysDVªkWuksa osQ izokg rFkk p → n dh vksj gksyksa osQ izokg dk neu djrh
+gSA bl izdkj] Mk;ksM osQ vxzfnf'kd ck;lu~ dh rqyuk esa bl fLFkfr esa folj.k /kjk vR;f/
+d de gks tkrh gSA
+laf/ osQ fo|qr {ks=k dh fn'kk ,slh gksrh gS fd ;fn p-iQyd ij bysDVªkWu vFkok n-iQyd
+ij gksy viuh ;kn`fPNd xfr djrs le; laf/ osQ fudV vk tk,¡] rks mUgsa muosQ cgqla[;d
+{ks=k esa Hkst fn;k tk,xkA vkos'k okgdksa osQ bl viokg osQ dkj.k fo|qr /kjk mRiUu gksxhA ;g
+viokg /kjk oqQN µA dksfV dh gksrh gSA blosQ vR;Yi eku gksus dk dkj.k ;g gS fd vkos'k okgdksa
+dh xfr muosQ vYika'k iQyd ls laf/ osQ nwljh vksj cgqla[;d iQyd dh vksj gksrh gSA vxzfnf'kd
+ck;lu~ esa viokg /kjk (lkekU;r% µA esa) Hkh gksrh gS ijarq ;g var%f{kIr okgdksa osQ dkj.k èkkjk
+(mA esa)] dh rqyuk esa ux.; gksrh gSA
+Mk;ksM izrhi /kjk (Reverse current) vuqiz;qDr oksYVrk ij vR;f/d fuHkZj ugha gksrhA
+vYika'k okgdksa dks laf/ osQ ,d iQyd ls nwljs iQyd rd igq¡pkus osQ fy, y?kq oksYVrk gh
+fp=k 14.13 (a) vxzfnf'kd ck;l esa
+p-n taD'ku Mk;ksM] (b) jksèkd foHko
+(1) fcuk cSVjh esa] (2) fuEu cSVjh
+oksYVrk osQ fy,] rFkk (3) mPp cSVjh
+oksYVrk osQ fy,A
+fp=k 14.14 vxzfnf'kd ck;l esa vYika'k
+okgd var%{ksi.k (Minority current
+injection)A
+Reprint 2026-27
+
+=== PAGE 14 ===
+336
+HkkSfrdh
+p
+n
+_
++
+fLop
+feyh,sehVj
+(mA)
+oksYVehVj (V)
+(a)
+p
+n
+(b)
+_
++
+fLop
+ekbØks,sehVj
+(   A )
+oksYVehVj (V)
+0.2 0.4 0.6 0.8 1.0
+20
+40
+60
+80
+100
+30
+20
+10
+100 80
+20
+60
+40
+V (V)
+I (mA)
+I ( A)
+m
+Vbr
+(c)
+i;kZIr gksrh gSA /kjk vuqiz;qDr oksYVrk osQ ifj.kke }kjk lhfer ugha gksrh ijarq ;g laf/
+osQ nksuksa iQydksa ij vYika'k okgdksa dh lkaærk osQ dkj.k lhfer gksrh gSA
+i'pfnf'kd ck;l esa fdlh Økafrd i'pfnf'kd (Critical reverse) oksYVrk
+rd fo|qr/kjk lkjHkwr :i esa oksYVrk ij fuHkZj ugha djrh gSA bl oksYVrk dks Hkatu
+oksYVrk (Breakdown voltage, Vbr) dgrs gSaA tc V = Vbr rc Mk;ksM i'pfnf'kd
+/kjk esa rs”kh ls o`f¼ gksrh gSA ;gk¡ rd fd ck;l oksYVrk esa vYi o`f¼ djus ij
+Hkh /kjk esa vR;f/d ifjorZu gks tkrk gSA ;fn i'pfnf'kd /kjk dks fdlh cká
+ifjiFk }kjk vuqer eku (ftls mRiknd }kjk fufnZ"V fd;k x;k gS) ls uhps lhfer
+u fd;k tk, rks p-n laf/ u"V gks tk,xhA ;fn ,d ckj Hkh ;g vuqer eku ls vfèkd
+gks tk, rks vfrrIr gksus osQ dkj.k Mk;ksM u"V gks tkrk gSA ,slk rc Hkh gks ldrk gS]
+tc Mk;ksM vxzfnf'kd ck;flr gksrk gS rFkk vxzfnf'kd /kjk vuqer eku ls vf/d gksA
+fdlh Mk;ksM osQ V-I vfHkyk{kf.kd (vuqiz;qDr dh xbZ oksYVrk osQ iQyu osQ
+:i esa èkkjk dk fopj.k) dk vè;;u djus osQ fy, ifjiFk vkjs[k fp=k 14.16 (a)
+rFkk (b) esa fn[kk;k x;k gSA Mk;ksM ls oksYVrk dks ,d iksVasf'k;ksehVj (;k èkkjk
+fu;a=kd) ls gksdj tksM+k tkrk gS ftlls Mk;ksM ij vuqiz;qDr dh xbZ oksYVrk dks
+ifjofrZr fd;k tk ldrk gSA oksYVrk osQ fofHkUu ekuksa osQ fy, èkkjk dk eku uksV
+fd;k tkrk gSA V vkSj I osQ chp ,d xzkI+kQ] tSlk fp=k 14.16(c) esa fn[kk;k x;k gS]
+izkIr gksrk gSA è;ku nhft,] vxzfnf'kd ck;l ekiu osQ fy, ge feyhehVj dk mi;ksx djrs
+gSa D;ksafd (tSlk fiNys vuqHkkx esa le>k;k x;k Fkk) visf{kr èkkjk vfèkd gS tcfd
+foijhr ck;l esa de èkkjk dks ukius osQ fy, ,d ekbØks,sehVj dk mi;ksx fd;k tkrk gSA
+fp=k 14.15 (a) i'pfnf'kd ck;l
+esa Mk;ksM  (b) i'pfnf'kd ck;l esa
+jksf/dk foHkoA
+fp=k 14.16 fdlh p-n laf/ Mk;ksM dk (a) vxzfnf'kd ck;l] (b) i'pfnf'kd ck;l esa V-I vfHkyk{kf.kd osQ
+vè;;u osQ iz;ksfxd ifjiFk] (c) fdlh flfydkWu Mk;ksM osQ izfr:ih V-I vfHkyk{kf.kdA
+Reprint 2026-27
+
+=== PAGE 15 ===
+337
+v/Zpkyd bysDVªkWfudh & inkFkZ]
+;qfDr;k¡ rFkk ljy ifjiFk
+  mnkgj.k  14.4
+vki fp=k (14.16) esa ns[k ldrs gSa fd vxzfnf'kd ck;l esa vkjaHk esa /kjk ml le; rd cgqr
+èkhjs&èkhjs] yxHkx ux.;] c<+rh gS tc rd fd Mk;ksM ij oksYVrk ,d fuf'pr eku ls vfèkd
+u gks tk,A bl vfHkyk{kf.kd oksYVrk osQ ckn Mk;ksM ck;l oksYVrk esa cgqr FkksM+h&lh gh o`f¼
+djus ls Mk;ksM èkkjk esa lkFkZd (pj?kkrkadh) o`f¼ gks tkrh gSA ;g oksYVrk nsgyh oksYVrk
+(Threshold voltage) ;k dV&bu oksYVrk dgykrh gSA bl oksYVrk dk eku tjesfu;e
+Mk;ksM osQ fy, ~ 0.2 oksYV rFkk flfydkWu Mk;ksM osQ fy, ~ 0.7 oksYV gSA
+i'pfnf'kd ck;l esa Mk;ksM osQ fy, èkkjk cgqr de (~µA) gksrh gS rFkk ck;l esa ifjorZu
+osQ lkFk yxHkx fLFkj cuh jgrh gSA bls izrhi lar`Ir èkkjk (Reverse saturation current)
+dgrs gSA ijarq oqQN fo'ks"k izdj.kksa esa] cgqr vfèkd i'pfnf'kd ck;l (Hkatu oksYVrk) ij èkkjk
+esa vpkud o`f¼ gks tkrh gSA Mk;ksM dh bl fo'ks"k fØ;k dh foospuk vkxs vuqHkkx 14.8 esa dh
+xbZ gSA lkèkkj.k mís'; okys Mk;ksM izrhi lar`Ir èkkjk {ks=k osQ vkxs mi;ksx ugha fd, tkrs gSaA
+mQij nh xbZ foospuk ;g fn[kkrh gS fd p-n Mk;ksM ewy :i ls èkkjk osQ izokg dks osQoy
+,d gh fn'kk esa (vxzfnf'kd ck;l) izfrcafèkr djrk gSA i'pfnf'kd ck;l izfrjksèk dh rqyuk
+esa vxzfnf'kd ck;l izfrjksèk de gksrk gSA bl xq.k dk mi;ksx izR;korhZ (ac) oksYVrk osQ
+fn"Vdj.k osQ fy, fd;k x;k gS] ftls vxys vuqHkkx esa le>k;k x;k gSA Mk;ksMksa osQ fy, ge
+,d vU; HkkSfrd jkf'k ftls xfrd izfrjks/ dgrs gSa] dks ^^oksYVrk esa y?kq ifjorZu ∆V rFkk
+fo|qr /kjk esa y?kq ifjorZu ∆I osQ vuqikr** osQ :i esa ifjHkkf"kr djrs gSa%
+d
+V
+r
+I
+∆
+= ∆
+(14.6)
+mnkgj.k 14.4 fdlh flfydkWu Mk;ksM dk V-I vfHkyk{kf.kd fp=k 14.17 esa n'kkZ;k x;k gSA
+Mk;ksM dk izfrjks/ (a) ID = 15 mA rFkk (b) VD  = –10 V ij ifjdfyr dhft,A
+fp=k 14.17
+gy  Mk;ksM vfHkyk{kf.kd dks I = 10 mA ls I = 20 mA osQ chp ljy js[kk dh Hkk¡fr ekurs
+gq, tks ewy ¯cnq ls xq”kjrh gS] ge vkse osQ fu;e dk ikyu djrs gq, izfrjks/ dk ifjdyu
+dj ldrs gSaA
+(a) oØ ls I = 20 mA, V = 0.8 V; I = 10 mA, V = 0.7 V ij
+rfb = ∆V/∆I = 0.1V/10 mA = 10 Ω
+(b) oØ ls V = –10 V, I = –1 µA gS
+vr%
+rrb = 10 V/1µA= 1.0 × 107 Ω
+Reprint 2026-27
+
+=== PAGE 16 ===
+338
+HkkSfrdh
+14.7  laf/ Mk;ksM dk fn"Vdkjh osQ :i esa vuqiz;ksx
+fdlh laf/ Mk;ksM osQ V-I vfHkyk{kf.kd esa ge ;g ns[krs gSa fd og osQoy rHkh fo|qr /kjk
+izokfgr gksus nsrk gS tc og vxzfnf'kd ck;flr gksrk gSA vr% ;fn fdlh Mk;ksM osQ fljksa ij
+dksbZ izR;korhZ oksYVrk vuqiz;qDr dh tk, rks pØ osQ osQoy mlh Hkkx esa ifjiFk esa /kjk izokfgr
+gksxh tc Mk;ksM vxzfnf'kd ck;flr gSA Mk;ksM osQ bl xq.k dk
+mi;ksx izR;korhZ oksYVrk dk fn"Vdj.k djus esa fd;k tkrk gS
+rFkk bl dk;Z osQ fy, ftl ifjiFk dk mi;ksx djrs gSa mls
+fn"Vdkjh dgrs gSaA
+;fn Mk;ksM osQ fljksa ij dksbZ izR;korhZ (ac) oksYVrk Js.khØe
+esa la;ksftr yksM izfrjks/ RL osQ lkFk vuqiz;qDr dh tk, rks yksM
+osQ fljksa ij osQoy ac fuos'k osQ ml v/ZpØ esa ftlesa Mk;ksM
+vxzfnf'kd ck;flr gS] ,d Lianeku oksYVrk n`f"Vxkspj gksxhA bl
+izdkj dk fo|qr ifjiFk fp=k 14.18 osQ fo|qr ifjiFk esa n'kkZ;k
+x;k gS ftls v/Z&rjax fn"Vdkjh ifjiFk dgrs gSaA VªkalI+kQkeZj dh
+f}rh;d oqaQMyh VfeZuy A rFkk B ij okafNr ac oksYVrk dh
+vkiwfrZ djrh gSA tc A ij oksYVrk /ukRed gksrh gS rks Mk;ksM
+vxzfnf'kd ck;flr gksrk gS rFkk ;g fo|qr /kjk dk pkyu djrk gSA
+tc A ij oksYVrk ½.kkRed gksrh gS rks Mk;ksM i'pfnf'kd
+ck;flr gksrk gS vkSj og fo|qr pkyu ugha djrkA i'pfnf'kd
+ck;l esa Mk;ksM dh lar`Ir izrhi /kjk ux.; gksrh gS rFkk bls
+O;kogkfjd dk;ks± osQ fy, 'kwU; ekuk tk ldrk gSA (Mk;ksM dh
+izrhi Hkatu oksYVrk dk eku VªkalI+kQkeZj dh f}rh;d oqaQMyh ij
+f'k[kj ac oksYVrk dh rqyuk esa dkI+kQh vf/d gksuk pkfg, rkfd
+Mk;ksM izrhi Hkatu ls lqjf{kr jg losQA)
+blfy, ac oksYVrk osQ /ukRed v/ZpØ esa yksM izfrjks/ RL
+ls fo|qr /kjk izokfgr gksxh  vkSj gesa fp=k 14.18(b) esa n'kkZ, vuqlkj fuxZr oksYVrk izkIr gksxhA
+ijarq ½.kkRed vèkZpØ esa fo|qr /kjk izkIr ugha gksxhA vxys /ukRed v/ZpØ esa gesa fiQj fuxZr
+oksYVrk izkIr gksxhA bl izdkj] fuxZr oksYVrk ;|fi vHkh Hkh ifjorZuh; gS ijarq ;g osQoy ,d
+gh fn'kk esa izfrcafèkr gksus osQ dkj.k fn"Vdkjh dgykrh gSA pw¡fd gesa ac rjax osQ osQoy ,d
+gh v/ZpØ esa fuxZr oksYVrk izkIr gks jgh gS] vr% bl ifjiFk dks v/Z&rjax fn"Vdkjh dgrs gSaA
+fp=k 14.19(a) esa n'kkZ, x, ifjiFk esa nks Mk;ksMksa dk mi;ksx djosQ ,d ,slh ifjiFk
+O;oLFkk dh xbZ gS ftlls ac pØ osQ /ukRed ,oa ½.kkRed nksuksa gh v/ZpØksa esa rnuq:ih
+fn"VÑr fuxZr oksYVrk izkIr gksrh gSA blhfy, bl ifjiFk dks iw.kZ rjax fn"Vdkjh dgrs gSaA blesa
+nksuksa Mk;ksMksa osQ n-iQydksa dks ,d lkFk la;ksftr dj nsrs gSa rFkk fuxZr dks Mk;ksMksa osQ bl
+mHk;fu"B ¯cnq rFkk VªkalI+kQkeZj dh f}rh;d oqaQMyh osQ eè; ¯cnq osQ chp izkIr fd;k tkrk gSA
+vr% fdlh iw.kZ rjax fn"Vdkjh osQ fy, VªkaliQkZej dh f}rh;d oqaQMyh osQ eè; esa ,d
+va'kfu"dklh ¯cnq (Tapping point) iznku fd;k tkrk gS vkSj blhfy, bl VªkalI+kQkeZj dks eè;
+fu"dklh VªkalI+kQkeZj (centre-tap transformer) dgrs gSaA tSlk fd fp=k 14.19(c) ls Li"V
+gS fd izR;sd Mk;ksM }kjk fn"VÑr oksYVrk oqQy f}rh;d oqaQMyh ls izkIr oksYVrk dh osQoy
+vk/h gh gSA izR;sd Mk;ksM osQoy vk/s pØ dk fn"Vdj.k djrk gS] ijarq nks Mk;ksM izR;korhZ
+pØksa dk fn"Vdj.k djrs gSaA bl izdkj Mk;ksMkas osQ mHk;fu"B ¯cnq rFkk eè; fu"dklh VªkalI+kQkeZj
+fp=k 14.18 (a) vèkZrjax fn"Vdkjh ifjiFk] (b) fn"Vdkjh
+ifjiFk ls fuos'kh ac vkSj fuxZr oksYVrk osQ
+rjax :iA
+izkFkfed
+f}rh;d
+VªkaliQkeZj
+A
+B
+RL
+Y
+(a)
+fuxZr oksYVrk
+fuos'kh ac
+A ij oksYVrk
+RLosQ ifjr% oksYVrk
+(b)
+t
+X
+t
+Reprint 2026-27
+
+=== PAGE 17 ===
+339
+v/Zpkyd bysDVªkWfudh & inkFkZ]
+;qfDr;k¡ rFkk ljy ifjiFk
+osQ va'k fu"dklh ¯cnq osQ chp izkIr fuxZr oksYVrk iw.kZ rjax
+fn"Vdkjh oksYVrk gksrh gSA (è;ku nhft, fd iw.kZ rjax
+fn"Vdkjh osQ fy, ,d vU; ifjiFk Hkh gksrk gS ftlosQ fy,
+eè; fu"dklh VªkalI+kQkeZj dh vko';drk ugha gksxh ijarq mls
+pkj Mk;ksM pkfg,)A eku yhft, fdlh {k.k eè; fu"dklh
+osQ A ij fuos'k oksYVrk /ukRed gSA ;g Li"V gS fd bl {k.k
+ij dyk vlaxr gksus osQ dkj.k B ij oksYVrk ½.kkRed gksrh
+gS tSlk fd fp=k 14.19(b) esa n'kkZ;k x;k gSA vr% Mk;ksM
+D1 vxzfnf'kd ck;l gksdj fo|qr pkyu djrk gS (tcfd
+D2 i'pfnf'kd ck;l gksus osQ dkj.k pkyu ugha djrk)A
+vr% bl /ukRed v/ZpØ esa gesa fp=k 14.19(c) esa n'kkZ,
+vuqlkj ,d fuxZr /kjk (rFkk yksM izfrjks/ RL osQ fljksa ij
+fuxZr oksYVrk) izkIr gksrh gSA blh izdkj fdlh vU; {k.k ij]
+tc A ij oksYVrk ½.kkRed gks tkrh gS rc B ij oksYVrk
+èkukRed gksxhA blfy, Mk;ksM D1 pkyu ugha djrk] ysfdu
+Mk;ksM D2 pkyu djrk gSA bl izdkj fuos'kh ac osQ
+½.kkRed vèkZ pØ esa Hkh fuxZr èkkjk (rFkk RL ij fuxZr
+oksYVrk) feyrh gSA bl izdkj] gesa èkukRed rFkk ½.kkRed
+nksuksa gh vèkZ pØ esa (vFkkZr] nwljs 'kCnksa esa] iw.kZ rjax osQ
+le; esa) fuxZr oksYVrk feyrh gSA Li"Vr;k] fn"V oksYVrk ;k
+èkkjk izkIr djus osQ fy, ;g vèkZ rjax fn"Vdkjh ls vfèkd
+n{k ifjiFk gSA
+bl izdkj izkIr fn"VÑr oksYVrk v/Z T;koØh; (Half
+sinusoid) vkÑfr dh gksrh gSA ;|fi ;g ,dfnf'kd gksrh
+gS ijarq bldk eku LFkk;h ugha gksrkA Lianeku oksYVrk ls dc
+fuxZr izkIr djus osQ fy, fuxZr VfeZuyksa osQ fljksa ij (RL osQ
+ik'oZ esa) lkekU;r% dksbZ laèkkfj=k la;ksftr dj nsrs gSaA blh
+dk;Z dks djus osQ fy, yksM izfrjks/ RL osQ Js.khØe esa dksbZ
+izsjd Hkh la;ksftr fd;k tk ldrk gSA pw¡fd ;s vfrfjDr ac
+mfeZdkvksa dks ckgj fiQYVju djosQ 'kq¼ dc oksYVrk iznku
+djrs izrhr gksrs gSa] vr% bUgsa fiQYVj dgrs gSaA
+vc ge fiQYVju esa la/kfj=k dh Hkwfedk dh foospuk
+djsaxsA tc la/kfj=k osQ fljksa ij oksYVrk esa o`f¼ gks jgh gksrh gS rks og vkosf'kr gks tkrk gSA ;fn
+ifjiFk esa dksbZ cká yksM ugha gS rks ;g fn"VÑr fuxZr dh f'k[kj oksYVrk rd vkosf'kr jgrk
+gSA ;fn ifjiFk esa dksbZ yksM gS rks ;g yksM ls gksdj folftZr gksus yxrk gS rFkk blosQ fljksa
+ij oksYVrk de gksus yxrh gSA fn"VÑr fuxZr osQ vxys v/Z pØ esa ;g fiQj viuh f'k[kj
+oksYVrk rd vkosf'kr gksrk gS (fp=k 14.20)A la/kfj=k osQ fljksa ij oksYVrk esa deh gksus dh nj
+la/kfj=k dh /kfjrk C rFkk ifjiFk esa yxs izHkkoh izfrjks/d RL osQ izfrjks/ xq.kuiQy ftls
+dkykad dgrs gSa] ij fuHkZj djrk gSA dkykad dk eku vf/d gksus osQ fy, C dk eku vfèkd
+gksuk pkfg,A vr% la/kfj=k fuos'k fiQYVjksa dk mi;ksx djus ij izkIr fuxZr oksYVrk fn"VÑr
+oksYVrk osQ f'k[kj eku osQ fudV gksrh gSA fo|qr iznk;ksa esa O;kid :i esa blh izdkj osQ fiQYVj
+mi;ksx fd, tkrs gSaA
+fp=k 14.19 (a) iw.kZ rjax fn"Vdkjh ifjiFk_ (b) A ij
+Mk;ksM D1 osQ vkSj B ij Mk;ksM D2 osQ
+fn, x, fuos'k osQ rjax :i_ (c) iw.kZ rjax
+fn"Vdkjh ifjiFk esa tksM+s x, yksM RL ij
+fuxZr oksYVrk dk rjax:iA
+Reprint 2026-27
+
+=== PAGE 18 ===
+340
+HkkSfrdh
+fp=k 14.20 (a) la/kfj=k fiQYVj osQ lkFk iw.kZ rajx fn"Vdkjh] (b) esa fn"Vdkjh dh fuos'k rFkk fuxZr oksYVrkA
+lkjka'k
+1. vèkZpkyd orZeku Bksl voLFkk vèkZpkyd bysDVªkWfud ;qfDr;ksa_ tSlsµ Mk;ksM] Vªkaf”kLVj]
+,dhÑr ifjiFk bR;kfn esa iz;qDr ewy inkFkZ gSaA
+2. vo;o rRoksa dh tkyd lajpuk ,oa ijek.kq lajpuk lqfuf'pr djrh gS fd fn;k x;k fo'ks"k
+inkFkZ fo|qrjksèkh] èkkrq vFkok vèkZpkyd gksxkA
+3. èkkrqvksa dh izfrjksèkdrk cgqr de (10–2 ls 10–8 Ωm) gS] fo|qrjksèkh inkFkks± dh izfrjksèkdrk
+cgqr vfèkd (>108 Ωm–1) gS] tcfd vèkZpkydksa dh izfrjksèkdrk èkkrqvksa vkSj fo|qrjksèkh
+inkFkks± osQ eè; gksrh gSA
+4. vèkZpkyd rkfRod (Si, Ge) lkFk gh lkFk ;kSfxd (GaAs, CdS bR;kfn) gSaA
+5. 'kq¼ vèkZpkyd ^uSt vèkZpkyd* dgykrs gSaA vkos'k okgdksa (bysDVªkWu vkSj gksy) dh
+mifLFkfr inkFkZ dk ^uSt* xq.k gS vkSj ;s mQ"eh; mÙkstu osQ ifj.kkeLo:i izkIr gksrs gSaA uSt
+vèkZpkydksa esa bysDVªkWuksa dh la[;k (ne) gksyksa dh la[;k nh leku gksrh gSA gksy vko';d
+:i ls izHkkoh èkukos'k ;qDr bysDVªkWu fjfDr;k¡ gSaA
+6. 'kq¼ vèkZpkydksa esa mi;qDr vinzO; osQ ^vifeJ.k* ls vkos'k okgdksa dh la[;k ifjofrZr dh
+tk ldrh gSA ,sls vèkZpkydksa dks vinzO;h vèkZpkyd dgrs gSaA ;s nks izdkj (n- izdkj vkSj
+p- izdkj) osQ gksrs gSaA
+7.
+n- izdkj osQ vèkZpkyd esa ne >> nh tcfd p- izdkj osQ vèkZpkyd esa nh >> ne
+gksrk gSA
+8.
+n- izdkj osQ vèkZpkyd esa Si vFkok Ge dks iapla;ksth ijek.kq (nkrk) tSls As, Sb, P
+bR;kfn osQ lkFk vifeJ.k ls izkIr fd;k tkrk gS] tcfd p- izdkj dk vèkZpkyd Si vFkok
+Ge dks f=kla;ksth ijek.kq (xzkgh) tSls B, Al, In bR;kfn osQ vifeJ.k ls izkIr fd;k
+tkrk gSA
+9. lHkh n'kkvksa esa nenn = ni
+2A blosQ vfrfjDr inkFkZ iw.kZr;k fo|qr mnklhu gksrk gSA
+10. inkFkZ osQ nks fHkUu mQtkZ cSaM (la;kstdrk cSaM vkSj pkyu cSaM) gksrs gSa] ftuesa bysDVªkWu
+jgrs gSaA la;kstdrk cSaM dh mQtkZ pkyu cSaM dh mQtkZ dh vis{kk de gSA la;kstdrk cSaM
+Reprint 2026-27
+
+=== PAGE 19 ===
+341
+v/Zpkyd bysDVªkWfudh & inkFkZ]
+;qfDr;k¡ rFkk ljy ifjiFk
+esa lHkh mQtkZ Lrj iw.kZ gSa tcfd pkyu cSaM iw.kZr;k fjDr vFkok vkaf'kd :i ls iwfjr gks
+ldrs gSaA fdlh Bksl osQ pkyu cSaM esa bysDVªkWu xfr djus osQ fy, eqDr gksrs gSa vkSj
+pkydrk osQ fy, mÙkjnk;h gksrs gSaA pkydrk dh lhek la;kstdrk cSaM (Ev) osQ 'kh"kZ vkSj
+pkyu cSaM (Ec) osQ ry osQ eè; mQtkZ&varjky Eg ij fuHkZj djrh gSA la;kstdrk cSaM ls
+bysDVªkWu mQ"ek] izdk'k vFkok fo|qr mQtkZ }kjk pkyu cSaM esa mÙksftr fd, tk ldrs gSa]
+tks vèkZpkyd esa izokfgr èkkjk esa ifjorZu mRiUu djrs gSaA
+11. fo|qr&jksèkh gsrq Eg > 3 eV] vèkZpkyd gsrq Eg = 0.2 eV ls 3 eV, tcfd èkkrqvksa osQ fy,
+Eg ≈ 0 gSA
+12.
+p-n lafèk lHkh vèkZpkyd ;qfDr;ksa dh ewy gSA tc ,slh lafèk curh gS rks bysDVªkWu vFkok
+gksy jfgr vpy vk;u ØksM+ dh ,d ^ßklh Lrj* cu tkrk gS tks ^lafèk foHko jks/d* gsrq
+mÙkjnk;h gSA
+13. ckg~; vuqiz;qDr oksYVrk dks ifjofrZr djosQ lafèk foHko jks/d dks ifjofrZr fd;k tk ldrk
+gSA vxzfnf'kd ck;l (n- iQyd cSVjh osQ ½.kkRed fljs ls vkSj p- iQyd cSVjh osQ èkukRed
+fljs ls lac¼ gS) esa jksfèkdk de gks tkrh gS] tcfd i'pfnf'kd ck;l esa o`f¼ gks tkrh gSA
+vr% fdlh p-n lafèk Mk;ksM esa vxzfnf'kd ck;l èkkjk dk eku vfèkd (mA esa) gksrk gS
+tcfd i'pfnf'kd ck;l èkkjk dk eku cgqr de (µA esa) gksrk gSA
+14. Mk;ksM dks izR;korhZ (ac) oksYVrk osQ fn"Vdj.k (izR;korhZ èkkjk dks ,d fn'kk esa izfrcafèkr
+djus) gsrq iz;ksx esa yk;k tk ldrk gSA laèkkfj=k vFkok mi;qDr fiQYVj osQ iz;ksx ls fn"V èkkjk
+dc oksYVrk izkIr dh tk ldrh gSA
+vH;kl
+14.1
+fdlh n- izdkj osQ flfydkWu esa fuEufyf[kr esa ls dkSu&lk izdFku lR; gS\
+(a) bysDVªkWu cgqla[;d okgd gSa vkSj f=kla;ksth ijek.kq vifeJd gSaA
+(b) bysDVªkWu vYila[;d okgd gSa vkSj iapla;ksth ijek.kq vifeJd gSaA
+fopkj.kh; fo"k;
+1. vèkZpkydksa esa mQtkZ cSaM (EC vFkok EV) fno~QfoLFkkfur gSa] ftldk rkRi;Z gS fd ;s Bksl esa
+fdlh fof'k"V LFkku esa fLFkr ugha gSaA mQtkZ,¡ lexz ekè; gSaA tc vki ,d fp=k ns[krs gSa ftlesa
+EC vFkok EV ljy js[kk,¡ [khaph xbZ gSa rc mUgsa Øe'k% pkyu cSaM mQtkZ Lrj osQ ry ij vkSj
+la;kstdrk cSaM mQtkZ Lrj osQ 'kh"kZ ij ysuk pkfg,A
+2. rkfRod vèkZpkydksa (Si vFkok Ge) esa vkSj p- vèkZpkydksa esa vifeJdksa dks nks"k osQ :i
+esa lfUufo"V djosQ izkIr djrs gSaA ;kSfxd vèkZpkydksa esa lkis{k jllehdj.kferh; vuqikr esa
+ifjorZu vèkZpkyd osQ izdkj esa Hkh ifjorZu dj ldrk gSA mnkgj.kkFkZ] vkn'kZ GaAs esa Ga
+vkSj As dk vuqikr 1 : 1 gS] ijarq GaAs esa Ga&izpqj okyk vFkok As-izpqj okyk Øe'k%
+Ga1.1 As0.9 vFkok Ga0.9 As1.1 gks ldrk gSA lkekU;r% nks"kksa dh mifLFkfr vèkZpkydksa osQ
+xq.kksa dks dbZ izdkj ls fu;af=kr djrh gSA
+Reprint 2026-27
+
+=== PAGE 20 ===
+342
+HkkSfrdh
+(c) gksy (fooj) vYila[;d okgd gSa vkSj iapla;ksth ijek.kq vifeJd gSaA
+(d) gksy (fooj) cgqla[;d okgd gSa vkSj f=kla;ksth ijek.kq vifeJd gSaA
+14.2
+vH;kl 14.1 esa fn, x, dFkuksa esa ls dkSu&lk p-izdkj osQ vèkZpkydksa osQ fy, lR; gS\
+14.3
+dkcZu] flfydkWu vkSj tesZfu;e] izR;sd esa pkj la;kstd bysDVªkWu gSaA budh fo'ks"krk mQtkZ
+cSaM varjky }kjk i`FkDÑr la;kstdrk vkSj pkyu cSaM }kjk nh xbZ gSa] tks Øe'k% (Eg)C, (Eg)Si
+rFkk (Eg)Ge osQ cjkcj gSaA fuEufyf[kr esa ls dkSu&lk izdFku lR; gS\
+(a) (Eg)Si < (Eg)Ge  < (Eg)C
+(b) (Eg)C < (Eg)Ge > (Eg)Si
+(c) (Eg)C > (Eg)Si > (Eg)Ge
+(d) (Eg)C = (Eg)Si = (Eg)Ge
+14.4
+fcuk ck;l p-n lafèk ls] gksy p- {ks=k esa n- {ks=k dh vksj folfjr gksrs gSa] D;ksafd
+(a) n- {ks=k esa eqDr bysDVªkWu mUgsa vkdf"kZr djrs gSaA
+(b) ;s foHkokarj osQ dkj.k lafèk osQ ikj xfr djrs gSaA
+(c) p- {ks=k esa gksy&lakærk] n- {ks=k esa budh lkaærk ls vfèkd gSA
+(d) mijksDr lHkhA
+14.5 tc p-n lafèk ij vxzfnf'kd ck;l vuqiz;qDr fd;k tkrk gS] rc ;g
+(a) foHko jks/d c<+krk gSA
+(b) cgqla[;d okgd èkkjk dks 'kwU; dj nsrk gSA
+(c) foHko jks/d dks de dj nsrk gSA
+(d) mijksDr esa ls dksbZ ughaA
+14.6 vèkZ&rjaxh fn"Vdj.k esa] ;fn fuos'k vko`fÙk 50 Hz gS rks fuxZe vko`fÙk D;k gS\ leku fuos'k
+vko`fÙk gsrq iw.kZ rjax fn"Vdkjh dh fuxZe vko`fÙk D;k gS\
+Reprint 2026-27
+
