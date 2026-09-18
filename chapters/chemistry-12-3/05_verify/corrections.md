@@ -208,3 +208,227 @@
   > $E_a=232.792 \mathrm{~kJ}^{-1} \mathrm{~mol}^{-1}$ (unit as printed in source, likely OCR error for $\mathrm{kJ}\ \mathrm{mol}^{-1}$)
 - **Should be:**
   > $E_a=232.792 \mathrm{~kJ} \mathrm{~mol}^{-1}$
+
+### q_3.20 — solution (hi)
+- **Confidence:** high
+- **Reason:** The question's own table gives pressure in mm Hg (confirmed via mathpix and the item's own :::prompt), but the k1/k2 derivation labelled the same 35/54/63/70 values as 'atm'. Traced to a genuine error in solutions.hi.pdf page 107 (confirmed by direct 200dpi render - the source itself prints 'atm'). Does not change the numeric k value (a ratio of same-unit pressures), but the unit label is factually wrong and could mislead a student checking units. Corrected to mm Hg throughout.
+- **Found:**
+  > हल $\left(\mathrm{CH}_{3}\right)_{2} \mathrm{CHN}=\mathrm{NCH}\left(\mathrm{CH}_{3}\right)_{2}(g) \longrightarrow \mathrm{N}_{2}(g)+\mathrm{C}_{6} \mathrm{H}_{14}(g)$
+  > 
+  > | प्रारम्भिक दाब | $p_{i}$ | $0$ | $0$ |
+  > | :--- | :--- | :--- | :--- |
+  > | $t$ समय पश्चात् | $p_{i}-p$ | $p$ | $p$ |
+  > 
+  > $t$ समय पश्चात् कुल दाब अर्थात् $\left(p_{i}\right)=\left(p_{i}-p\right)+p+p=p_{i}+p$
+  > अथवा
+  > 
+  > $$
+  > p=p_{t}-p_{i}
+  > $$
+  > 
+  > $a=p_{i} ;(a-x)=p_{i}-p$;समी (i) से $p$ का मान रखने पर
+  > 
+  > $$
+  > (a-x)=p_{i}-\left(p_{t}-p_{i}\right), \text { i.e., }(a-x)=2 p_{i}-p_{t}
+  > $$
+  > 
+  > अपघटन अभिक्रिया गैसीय प्रकृति की है अतः वेग स्थिरांक $k$ की निम्न प्रकार गणना कर सकते हैं
+  > 
+  > $$
+  > k=\frac{2.303}{t} \log \frac{a}{a-x}
+  > $$
+  > 
+  > $a$ तथा $(a-x)$ का मान रखने पर
+  > 
+  > $$
+  > k=\frac{2.303}{t} \log \left(\frac{p_{i}}{2 p_{i}-p_{t}}\right)
+  > $$
+  > 
+  > (i) माना $360 \mathrm{~s}$ के पश्चात् वेग स्थिरांक $=k_{1}$
+  > $$
+  > \begin{aligned}
+  > k_{1} & =-\frac{2.303}{(360 \mathrm{~s})} \log \frac{(35 \mathrm{~atm})}{(70-54) \mathrm{atm}} \\
+  > & =\frac{2.303}{(360 \mathrm{~s})} \log \frac{35}{16} \\
+  > & =\frac{2.303}{(360 \mathrm{~s})} \log 2.1875 \\
+  > & =\frac{2.303 \times 0.33995}{(360 \mathrm{~s})} \\
+  > & =2.17 \times 10^{-3} \mathrm{~s}^{-1}
+  > \end{aligned}
+  > $$
+  > (ii) माना $720 \mathrm{~s}$ के पश्चात् वेग स्थिरांक $=k_{2}$
+  > $$
+  > \begin{aligned}
+  > k_{2} & =-\frac{2.303}{(720 \mathrm{~s})} \log \frac{(35 \mathrm{~atm})}{(70-63) \mathrm{atm}} \\
+  > & =-\frac{2.303}{(720 \mathrm{~s})} \log 5=\frac{2.303 \times 0.6990}{(720 \mathrm{~s})} \\
+  > & =2.24 \times 10^{-3} \mathrm{~s}^{-1}
+  > \end{aligned}
+  > $$
+  > अत: औसत वेग स्थिरांक, $k=\frac{(2.17+2.24) \times 10^{-3} \mathrm{~s}^{-1}}{2}$.
+  > $$
+  > k=2.21 \times 10^{-3} \mathrm{~s}^{-1}
+  > $$
+- **Should be:**
+  > हल $\left(\mathrm{CH}_{3}\right)_{2} \mathrm{CHN}=\mathrm{NCH}\left(\mathrm{CH}_{3}\right)_{2}(g) \longrightarrow \mathrm{N}_{2}(g)+\mathrm{C}_{6} \mathrm{H}_{14}(g)$
+  > 
+  > | प्रारम्भिक दाब | $p_{i}$ | $0$ | $0$ |
+  > | :--- | :--- | :--- | :--- |
+  > | $t$ समय पश्चात् | $p_{i}-p$ | $p$ | $p$ |
+  > 
+  > $t$ समय पश्चात् कुल दाब अर्थात् $\left(p_{i}\right)=\left(p_{i}-p\right)+p+p=p_{i}+p$
+  > अथवा
+  > 
+  > $$
+  > p=p_{t}-p_{i}
+  > $$
+  > 
+  > $a=p_{i} ;(a-x)=p_{i}-p$;समी (i) से $p$ का मान रखने पर
+  > 
+  > $$
+  > (a-x)=p_{i}-\left(p_{t}-p_{i}\right), \text { i.e., }(a-x)=2 p_{i}-p_{t}
+  > $$
+  > 
+  > अपघटन अभिक्रिया गैसीय प्रकृति की है अतः वेग स्थिरांक $k$ की निम्न प्रकार गणना कर सकते हैं
+  > 
+  > $$
+  > k=\frac{2.303}{t} \log \frac{a}{a-x}
+  > $$
+  > 
+  > $a$ तथा $(a-x)$ का मान रखने पर
+  > 
+  > $$
+  > k=\frac{2.303}{t} \log \left(\frac{p_{i}}{2 p_{i}-p_{t}}\right)
+  > $$
+  > 
+  > (i) माना $360 \mathrm{~s}$ के पश्चात् वेग स्थिरांक $=k_{1}$
+  > $$
+  > \begin{aligned}
+  > k_{1} & =-\frac{2.303}{(360 \mathrm{~s})} \log \frac{(35 \mathrm{~mm} \mathrm{Hg})}{(70-54) \mathrm{mm} \mathrm{Hg}} \\
+  > & =\frac{2.303}{(360 \mathrm{~s})} \log \frac{35}{16} \\
+  > & =\frac{2.303}{(360 \mathrm{~s})} \log 2.1875 \\
+  > & =\frac{2.303 \times 0.33995}{(360 \mathrm{~s})} \\
+  > & =2.17 \times 10^{-3} \mathrm{~s}^{-1}
+  > \end{aligned}
+  > $$
+  > (ii) माना $720 \mathrm{~s}$ के पश्चात् वेग स्थिरांक $=k_{2}$
+  > $$
+  > \begin{aligned}
+  > k_{2} & =-\frac{2.303}{(720 \mathrm{~s})} \log \frac{(35 \mathrm{~mm} \mathrm{Hg})}{(70-63) \mathrm{mm} \mathrm{Hg}} \\
+  > & =-\frac{2.303}{(720 \mathrm{~s})} \log 5=\frac{2.303 \times 0.6990}{(720 \mathrm{~s})} \\
+  > & =2.24 \times 10^{-3} \mathrm{~s}^{-1}
+  > \end{aligned}
+  > $$
+  > अत: औसत वेग स्थिरांक, $k=\frac{(2.17+2.24) \times 10^{-3} \mathrm{~s}^{-1}}{2}$.
+  > $$
+  > k=2.21 \times 10^{-3} \mathrm{~s}^{-1}
+  > $$
+
+### q_3.22 — solution (hi)
+- **Confidence:** high
+- **Reason:** The second, duplicate 'A = 1.585 x 10^6 ...' line dropped the 's' unit ('collisions^-1' instead of 'collisions s^-1') - an extraction-stage artifact, since solutions.hi.pdf page 110 (confirmed by direct 200dpi render) shows 'collisions s^-1' on BOTH the first and duplicate lines. Corrected to match.
+- **Found:**
+  > हल (a) $\log k$ एवं $1 / T$ के मध्य ग्राफ खींचने के लिए हम आँकड़ों को निम्नलिखित रूप में दोबारा लिखते हैं
+  > 
+  > | T(K) | $273$ | $293$ | $313$ | $333$ | $353$ |
+  > | :--- | :--- | :--- | :--- | :--- | :--- |
+  > | $1 / T$ | $0.003663$ | $0.003413$ | $0.003213$ | $0.003003$ | $0.002833$ |
+  > | logk | - $6.1040$ | - $4.7696$ | - $3.5900$ | -2.7496 | - $1.6996$ |
+  > 
+  > 
+  >     (b) ग्राफ की सहायता से ढाल को ज्ञात करते हैं।
+  > $$
+  > \text { ढाल }=\frac{-2.4}{0.00047}=\frac{-E_{\mathrm{a}}}{2.303 R}
+  > $$
+  >     ∴
+  > $$
+  > \text { सक्रियण ऊर्जा } \begin{aligned}
+  > \left(E_{a}\right) & =\frac{2.4 \times 2.303 \times 8.314 \mathrm{~J} \mathrm{~mol}^{-1}}{0.00047} \\
+  > & =97875 \mathrm{~J} \mathrm{~mol}^{-1} \\
+  > & =97.875 \mathrm{~kJ} \mathrm{~mol}^{-1}
+  > \end{aligned}
+  > $$
+  >     (c) हम जानते हैं कि
+  > $$
+  > \log k=\log A-\frac{E_{a}}{2.303 R T}
+  > $$
+  > 
+  > इसकी $y=m x+c$ से तुलना करने पर, चूँकि यह अंतःखण्ड रूप में रेखा की समीकरण है।
+  > 
+  > $$
+  > \log k=\left(-\frac{E_{a}}{2.303 R T}\right) \frac{1}{T}+\log A
+  > $$
+  > 
+  > $\log A=$ रुअक्ष अर्थात् $\log k$ अक्ष पर अंतःखण्ड का मान
+  > 
+  > $$
+  > \begin{aligned}
+  > &=(-1+7.2) \\
+  > &=6.2\left[y_{2}-y_{1}=-1-(7.2)\right] \\
+  > & \text { आवृत्ति गुणक, } A=\text { Antilog } 6.2=1585000 \\
+  > &=1.585 \times 10^{6} \mathrm{collisions} \mathrm{~s}^{-1} \\
+  > & A=1.585 \times 10^{6} \text { collisions }^{-1}
+  > \end{aligned}
+  > $$
+  > 
+  > (d) ग्राफ के अध्ययन द्वारा वेग नियतांक $k$ का मान ज्ञात करते हैं।
+  > 
+  > | T(K) | 1/T | ग्राफ से $\log k$ का मान | $k$ का मान |
+  > | :--- | :--- | :--- | :--- |
+  > | $303$ | $0.003300$ | - $4.2$ | $6.31 \times 10^{-5} \mathrm{~s}^{-1}$ |
+  > | $323$ | $0.003096$ | -2.8 | $1.585 \times 10^{-3} \mathrm{~s}^{-1}$ |
+- **Should be:**
+  > हल (a) $\log k$ एवं $1 / T$ के मध्य ग्राफ खींचने के लिए हम आँकड़ों को निम्नलिखित रूप में दोबारा लिखते हैं
+  > 
+  > | T(K) | $273$ | $293$ | $313$ | $333$ | $353$ |
+  > | :--- | :--- | :--- | :--- | :--- | :--- |
+  > | $1 / T$ | $0.003663$ | $0.003413$ | $0.003213$ | $0.003003$ | $0.002833$ |
+  > | logk | - $6.1040$ | - $4.7696$ | - $3.5900$ | -2.7496 | - $1.6996$ |
+  > 
+  > 
+  >     (b) ग्राफ की सहायता से ढाल को ज्ञात करते हैं।
+  > $$
+  > \text { ढाल }=\frac{-2.4}{0.00047}=\frac{-E_{\mathrm{a}}}{2.303 R}
+  > $$
+  >     ∴
+  > $$
+  > \text { सक्रियण ऊर्जा } \begin{aligned}
+  > \left(E_{a}\right) & =\frac{2.4 \times 2.303 \times 8.314 \mathrm{~J} \mathrm{~mol}^{-1}}{0.00047} \\
+  > & =97875 \mathrm{~J} \mathrm{~mol}^{-1} \\
+  > & =97.875 \mathrm{~kJ} \mathrm{~mol}^{-1}
+  > \end{aligned}
+  > $$
+  >     (c) हम जानते हैं कि
+  > $$
+  > \log k=\log A-\frac{E_{a}}{2.303 R T}
+  > $$
+  > 
+  > इसकी $y=m x+c$ से तुलना करने पर, चूँकि यह अंतःखण्ड रूप में रेखा की समीकरण है।
+  > 
+  > $$
+  > \log k=\left(-\frac{E_{a}}{2.303 R T}\right) \frac{1}{T}+\log A
+  > $$
+  > 
+  > $\log A=$ रुअक्ष अर्थात् $\log k$ अक्ष पर अंतःखण्ड का मान
+  > 
+  > $$
+  > \begin{aligned}
+  > &=(-1+7.2) \\
+  > &=6.2\left[y_{2}-y_{1}=-1-(7.2)\right] \\
+  > & \text { आवृत्ति गुणक, } A=\text { Antilog } 6.2=1585000 \\
+  > &=1.585 \times 10^{6} \mathrm{collisions} \mathrm{~s}^{-1} \\
+  > & A=1.585 \times 10^{6} \text { collisions } \mathrm{~s}^{-1}
+  > \end{aligned}
+  > $$
+  > 
+  > (d) ग्राफ के अध्ययन द्वारा वेग नियतांक $k$ का मान ज्ञात करते हैं।
+  > 
+  > | T(K) | 1/T | ग्राफ से $\log k$ का मान | $k$ का मान |
+  > | :--- | :--- | :--- | :--- |
+  > | $303$ | $0.003300$ | - $4.2$ | $6.31 \times 10^{-5} \mathrm{~s}^{-1}$ |
+  > | $323$ | $0.003096$ | -2.8 | $1.585 \times 10^{-3} \mathrm{~s}^{-1}$ |
+
+### q_3.22 — final_answer (hi)
+- **Confidence:** high
+- **Reason:** Contains a stray internal QC/proofreading annotation ('(as printed, "collisions")') that does not exist anywhere in solutions.hi.pdf (confirmed absent from both the mathpix text and a direct page render) and has no place in a clean answer key. Replaced with the clean 'collisions s^-1' unit, matching the source.
+- **Found:**
+  > $E_a=97.875 \mathrm{~kJ} \mathrm{~mol}^{-1}$; $A=1.585 \times 10^{6}$ (as printed, "collisions"); $30^{\circ}\mathrm{C}$ (303 K) पर $k=6.31 \times 10^{-5} \mathrm{~s}^{-1}$; $50^{\circ}\mathrm{C}$ (323 K) पर $k=1.585 \times 10^{-3} \mathrm{~s}^{-1}$
+- **Should be:**
+  > $E_a=97.875 \mathrm{~kJ} \mathrm{~mol}^{-1}$; $A=1.585 \times 10^{6} \text { collisions } \mathrm{s}^{-1}$; $30^{\circ}\mathrm{C}$ (303 K) पर $k=6.31 \times 10^{-5} \mathrm{~s}^{-1}$; $50^{\circ}\mathrm{C}$ (323 K) पर $k=1.585 \times 10^{-3} \mathrm{~s}^{-1}$

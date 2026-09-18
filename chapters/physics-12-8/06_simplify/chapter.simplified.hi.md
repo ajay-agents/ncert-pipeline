@@ -120,7 +120,7 @@ $$
 \begin{aligned}
 & C=\frac{8.854 \times 10^{-12} \times 3.14\left(12 \times 10^{-2}\right)^{2}}{5 \times 10^{-2}} \\
 & C=\frac{8.854 \times 3.14 \times 144 \times 10^{-12-4+2}}{5} \\
-& C=8.01 \times 10^{-14} \mathrm{~F}=8.01 \mathrm{pF}
+& C=8.01 \times 10^{-12} \mathrm{~F}=8.01 \mathrm{pF}
 \end{aligned}
 $$
 संधारित्र की प्लेटों पर आवेश
@@ -616,7 +616,7 @@ EM तरंगों की चाल $c=\frac{1}{\sqrt{\mu_{0} \varepsilon_{0}
 $$
 \begin{aligned}
 & u_{E}=\frac{1}{4} \varepsilon_{0} B_{0}^{2} \cdot \frac{1}{\mu_{0} \varepsilon_{0}} \\
-& u_{E}=\frac{1}{4} \cdot \frac{B_{0}^{2}}{\mu_{0}}=\frac{B_{0}^{2}}{2 \mu_{0}}=u_{B}
+& u_{E}=\frac{1}{4} \cdot \frac{B_{0}^{2}}{\mu_{0}}=\frac{B_{0}^{2}}{4 \mu_{0}}=u_{B}
 \end{aligned}
 $$
 अत: विद्युत क्षेत्र की औसत ऊर्जा घनत्व चुंबकीय क्षेत्र की औसत ऊर्जा घनत्व के बराबर होती है।

@@ -602,16 +602,16 @@ $$
 सेल का emf
 $$
 \begin{aligned}
-E_{\text {सेल }} & =[0-1.08]-\frac{0.0591}{2} \log \frac{1}{(0.01)^{2} \times(0.03)^{2}} \\
-& =-1.08-\frac{0.0591}{2} \log \left(1.111 \times 10^{7}\right) \\
-& =-1.08-\frac{0.0591}{2}(7.0457) \\
-& =-1.08-0.208 \\
-& =-1.288 \mathrm{~V}
+E_{\text {सेल }} & =[0-1.09]-\frac{0.0591}{2} \log \frac{1}{(0.01)^{2} \times(0.03)^{2}} \\
+& =-1.09-\frac{0.0591}{2} \log \left(1.111 \times 10^{7}\right) \\
+& =-1.09-\frac{0.0591}{2}(7.0457) \\
+& =-1.09-0.208 \\
+& =-1.298 \mathrm{~V}
 \end{aligned}
 $$
 अत:
 $$
-e m f=-1.288 \mathrm{~V}
+e m f=-1.298 \mathrm{~V}
 $$
 :::
 :::
@@ -1057,7 +1057,7 @@ $\because$ धारा $(i)=1.5 \mathrm{~A}$
 $$
 \begin{aligned}
 \therefore \text { समय }(t)=\frac{Q}{i}=\frac{(1295.6 \mathrm{C})}{(1.5 \mathrm{~A})} & =863.7 \mathrm{~s} \\
-& =14 \mathrm{~min} 39 \mathrm{~s}
+& =14 \mathrm{~min} 23.7 \mathrm{~s} \approx 14 \mathrm{~min} 24 \mathrm{~s}
 \end{aligned}
 $$
 :::
@@ -1083,7 +1083,7 @@ $$
 :::
 
 :::answer
-**उत्तर:** समय = 863.7 s (14 min 39 s); निक्षेपित Cu = 0.426 g; निक्षेपित Zn = 0.438 g
+**उत्तर:** समय = 863.7 s (≈ 14 min 24 s); निक्षेपित Cu = 0.426 g; निक्षेपित Zn = 0.438 g
 :::
 
 :::

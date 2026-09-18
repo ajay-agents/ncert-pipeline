@@ -324,5 +324,32 @@
     ],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium from 09_design/final.hi.html's own file:// path (images/ folder alongside it, referenced exactly as the HTML already does). page.emulate_media('screen') called immediately before page.pdf() per the standing fix for Chromium's print-media Devanagari pre-base-vowel-reordering bug. prefer_css_page_size=True + print_background=True, no explicit format/width/height passed. All 3 gates pass: page count sane for a 9-item chapter, no blank pages, and all numeric tokens from 06_simplify/chapter.simplified.hi.md's own question/final_answer fields (the same gated source stage 9's read-back used) confirmed present in the PDF's own extracted text (fitz), re-run fresh against the PDF rather than assumed carried over from the HTML check. Checked for (but did not encounter) the documented superscript-merge trap: this converter renders exponents as real HTML <sup> tags, not literal unicode superscript glyphs, so there was no translate-based normalization step to get wrong; verified directly that every expected numeric substring is still findable in the extracted text, merged-adjacent-digit-runs included, since a merged run still contains each of its own parts as a substring."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-16T06:06:49.609279+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "8cb5fb71e9c345e8",
+      "chapter.hi.pdf": "8f151243b08633a2",
+      "solutions.hi.pdf": "4e1f9535857c80ed"
+    },
+    "counts": {
+      "items_added": 1,
+      "corrections_applied": 1,
+      "items_affected": 2,
+      "stages_touched": 5,
+      "items_before": 9,
+      "items_after": 10
+    },
+    "gate_results": {
+      "tag_parse_05verify": [],
+      "tag_parse_06simplify": [],
+      "tag_parse_07format": [],
+      "json_reparse_counts_match": [],
+      "stage9_leftover_latex_check": [],
+      "stage10_gates": []
+    },
+    "model_calls": 1,
+    "notes": "POST-COMPLETION correction round, from a detailed user cross-check of final.hi.pdf against chapter.hi.pdf (pp.327-342), solutions.hi.pdf (old pp.99-110) and the 2026-27 reprint's exercise cut (19 old numbered problems + full विविध प्रश्नावली down to just 6 MCQs) -- confirmed the भाग 2 (Q14.1-Q14.6) mapping is fully correct against the surviving new-textbook questions, no missing/misplaced items, all other old problems (transistor action, gain-vs-frequency, amplifier numericals, photodiode, विविध प्रश्नावली) correctly absent as a genuine syllabus cut. Two errors found, both confirmed directly against source pages. (1) उदाहरण 14.3 (textbook p.334, a purely conceptual/non-numerical worked example) was missing ENTIRELY from भाग 1 -- final_hi jumped straight from ex_14.2 to ex_14.4 with no indication anything had been skipped, confirmed by grepping this chapter's own 05_verify/06_simplify/07_format and 08_tag/structured.hi.json (only ex_14.1/14.2/14.4 existed under '## उदाहरण', no ex_14.3 anywhere) -- an extraction-stage omission, not a content error, likely dropped because it is qualitative rather than numerical. Transcribed verbatim from chapter.hi.pdf p.334 (rendered to PNG and read directly, since this raw PDF's legacy font makes plain PyMuPDF text extraction garbled/unusable) and inserted as a new item ex_14.3 ('क्या p-n संधि बनाने के लिए हम...भौतिक रूप से संयोजित कर p-n संधि प्राप्त कर सकते हैं?' / 'नहीं! कोई भी पट्टी...') into all five downstream stages (05_verify, 06_simplify, 07_format -- as a single unlabelled :::step, matching ex_14.1's own shape for a purely qualitative example with no given/formula split -- and 08_tag/structured.hi.json, inserted at the correct list position between ex_14.2 and ex_14.4) and stage 9 re-rendered. Item count rose from 9 to 10 chapter-wide; verified against a fresh tag._parse of structured.hi.md (10 items/2 parts/1 figure, matching the JSON exactly) and visually confirmed via Playwright screenshot that the new card renders correctly in sequence between ex_14.2 and ex_14.4, in the same house style as its sibling examples. (2) q_14.2 (भाग 2, p-type MCQ reusing q_14.1's four lettered options): both solutions.hi.pdf and final_hi state the correct descriptive answer (holes majority, trivalent dopant) but never cite the option letter -- confirmed the source itself omits it (solutions.hi.pdf p.99, प्रश्न 2's हल has no leading '(c)'/'(d)' unlike प्रश्न 1's and प्रश्न 3's हल, which both open with their letter), unlike every other MCQ in this chapter (14.1, 14.3, 14.4, 14.5 all explicitly cite theirs) and unlike q_14.2 itself, which previously had no :::answer block at all. The correct letter is unambiguous: q_14.1's own option (d) reads 'होल (विवर) बहुसंख्यक वाहक हैं और त्रिसंयोजी परमाणु अपमिश्रक हैं' -- an exact match to q_14.2's already-correct reasoning. Added '(d)' to the solution's opening and added a new :::answer block ('(d)') across 05_verify, 06_simplify, 07_format and 08_tag/structured.hi.json. No stage-10 export.py existed for this chapter yet (only final.hi.pdf, no script) -- wrote one following the identical standard pattern used by every other chapter (page.emulate_media/prefer_css_page_size), not a new convention. Stage 9 re-rendered via render_page.py; stage 10 PDF (re-)exported via the new export.py. Both fixes visually confirmed via Playwright screenshot. PDF numeric read-back: 17 distinct multi-digit numbers checked across all 10 items, only '16'/'22'/'28' 'missing' -- all three are exponent digits inside ex_14.2's own pre-existing 10^28/10^22/10^16 scientific notation merging with their base number in extracted text, the same documented false-positive pattern already accepted in prior chapters, not a real content gap and not introduced by this round's edits. Page count unchanged at 4 (the added qualitative example fit within existing page whitespace), zero blank pages."
   }
 ]

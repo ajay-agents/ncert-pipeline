@@ -539,7 +539,7 @@ $$
 :::concept{label="जानकारी"}
 हल प्रतिरोध $R=100 \Omega$
 $$
-V_{\mathrm{ms}}=220 \mathrm{~V}
+V_{\mathrm{rms}}=220 \mathrm{~V}
 $$
 जब कभी सप्लाई दी होती है, इसका अर्थ है कि वह वर्ग माध्य मूल मान है।
 $$
@@ -550,7 +550,7 @@ $$
 :::step{label="निष्कर्ष"}
 परिपथ में धारा
 $$
-l_{\mathrm{rms}}=\frac{V_{\mathrm{ms}}}{R}=\frac{220}{100}=2.2 \mathrm{~A}
+I_{\mathrm{rms}}=\frac{V_{\mathrm{rms}}}{R}=\frac{220}{100}=2.2 \mathrm{~A}
 $$
 :::
 :::
@@ -604,7 +604,7 @@ ac आपूर्ति का शिखर मान $300$ V है। rms व
 
 :::solution
 :::concept{label="जानकारी"}
-हल दिया है, वोल्टेज का उच्चतम मान $V_{0}=300 \mathrm{~V}$, धारा का वर्ग माध्य मूल मान $I_{\mathrm{ms}}=10 \mathrm{~A}$
+हल दिया है, वोल्टेज का उच्चतम मान $V_{0}=300 \mathrm{~V}$, धारा का वर्ग माध्य मूल मान $I_{\mathrm{rms}}=10 \mathrm{~A}$
 :::
 
 :::step{label="निष्कर्ष"}
@@ -625,11 +625,11 @@ ac परिपथ में धारा का rms मान $10$ A है। 
 
 :::solution
 :::formula{label="मुख्य सूत्र"}
-सूत्र $l_{\mathrm{ms}}=\frac{l_{0}}{\sqrt{2}}$ प्रयुक्त करने पर
+सूत्र $I_{\mathrm{rms}}=\frac{I_{0}}{\sqrt{2}}$ प्रयुक्त करने पर
 :::
 
 :::step{label="निष्कर्ष"}
-धारा का उच्चतम मान $l_{0}=\sqrt{2} l_{\text {mrs }}=\sqrt{2} \times 10=14.14 \mathrm{~A}$
+धारा का उच्चतम मान $I_{0}=\sqrt{2} I_{\mathrm{rms}}=\sqrt{2} \times 10=14.14 \mathrm{~A}$
 :::
 :::
 
@@ -712,7 +712,7 @@ $$
 परिपथ में धारा का वर्ग माघ्य मूल मान
 $$
 \begin{aligned}
-I_{\mathrm{ms}} & =\frac{V_{\mathrm{rms}}}{X_{c}} \\
+I_{\mathrm{rms}} & =\frac{V_{\mathrm{rms}}}{X_{c}} \\
 & =\frac{110}{44.23}=2.49 \mathrm{~A}
 \end{aligned}
 $$
@@ -742,7 +742,7 @@ $$
 :::
 
 :::step{label="प्रश्न 7.4 के परिपथ में"}
-प्रश्न $4$ में औसत शक्ति $P=V_{\mathrm{ms}} \cdot I_{\mathrm{ms}} \cos \phi$
+प्रश्न $4$ में औसत शक्ति $P=V_{\mathrm{rms}} \cdot I_{\mathrm{rms}} \cos \phi$
 हम जानते हैं कि धारा तथा वोल्टेज के बीच कलान्तर $90^{\circ}$ है।
 $$
 P=V_{\mathrm{rms}} I_{\mathrm{rms}} \cos 90^{\circ}=0
@@ -799,7 +799,7 @@ $$
 
 :::solution{label="हल"}
 :::concept{label="जानकारी"}
-हल दिया है, प्रतिरोध $R=20 \Omega$, प्रेरकत्व $L=1.5 \mathrm{H}$, धारिता $C=35 \mu \mathrm{~F}=35 \times 10^{-6} \mathrm{~F}$ तथा वोल्टेज $V_{\mathrm{ms}}=200 \mathrm{~V}$
+हल दिया है, प्रतिरोध $R=20 \Omega$, प्रेरकत्व $L=1.5 \mathrm{H}$, धारिता $C=35 \mu \mathrm{~F}=35 \times 10^{-6} \mathrm{~F}$ तथा वोल्टेज $V_{\mathrm{rms}}=200 \mathrm{~V}$
 जब परिपथ की आवृति आरोपित वोल्टेज की आवृत्ति के बराबर है तब यह अवस्था अनुनाद की अवस्था कहलाती है।
 :::
 
@@ -811,7 +811,7 @@ $$
 परिपथ में धारा का rms मान
 $$
 \begin{aligned}
-l_{\mathrm{ms}}=\frac{V_{\mathrm{rms}}}{Z} & =\frac{200}{20}=10 \mathrm{~A} \\
+I_{\mathrm{rms}}=\frac{V_{\mathrm{rms}}}{Z} & =\frac{200}{20}=10 \mathrm{~A} \\
 \phi & =0^{\circ}
 \end{aligned}
 $$
@@ -822,7 +822,7 @@ $$
 एक चक्र में परिपथ में स्थानान्तरित शक्ति
 $$
 \begin{aligned}
-P=I_{\mathrm{ms}} \cdot V_{\mathrm{ms}} \cos \phi & =10 \times 200 \times \cos 0^{\circ}=2000 \mathrm{~W} \\
+P=I_{\mathrm{rms}} \cdot V_{\mathrm{rms}} \cos \phi & =10 \times 200 \times \cos 0^{\circ}=2000 \mathrm{~W} \\
 & =2 \mathrm{~kW}
 \end{aligned}
 $$
@@ -853,7 +853,7 @@ $$
 
 :::solution
 :::concept{label="जानकारी"}
-हल दिया है, वोल्टेज का rms मान $V_{\mathrm{ms}}=230 \mathrm{~V}$, प्रेरकत्व $L=5 \mathrm{H}$, धारिता $C=80 \mu \mathrm{~F}=80 \times 10^{-6} \mathrm{~F}$, प्रतिरोध $R=40 \Omega$
+हल दिया है, वोल्टेज का rms मान $V_{\mathrm{rms}}=230 \mathrm{~V}$, प्रेरकत्व $L=5 \mathrm{H}$, धारिता $C=80 \mu \mathrm{~F}=80 \times 10^{-6} \mathrm{~F}$, प्रतिरोध $R=40 \Omega$
 :::
 
 :::formula{label="मुख्य सूत्र"}
@@ -868,14 +868,14 @@ $$
 $$
 \begin{aligned}
 v_{0}=\frac{\omega_{0}}{2 \pi} & =\frac{50}{2 \times 3.14} \\
-& =7.76 \mathrm{~Hz}
+& =7.96 \mathrm{~Hz}
 \end{aligned}
 $$
 :::
 :::
 
 :::answer
-**उत्तर:** $v_0=7.76\ \mathrm{Hz}$
+**उत्तर:** $v_0=7.96\ \mathrm{Hz}$
 :::
 
 :::
@@ -897,9 +897,9 @@ $$
 :::step{label="निष्कर्ष"}
 परिपथ में धारा का rms मान
 $$
-l_{\mathrm{ms}}=\frac{V_{\mathrm{rms}}}{Z}=\frac{230}{40}=5.75 \mathrm{~A}
+I_{\mathrm{rms}}=\frac{V_{\mathrm{rms}}}{Z}=\frac{230}{40}=5.75 \mathrm{~A}
 $$
-धारा का आयाम $I_{0}=I_{\mathrm{ms}} \sqrt{2}$
+धारा का आयाम $I_{0}=I_{\mathrm{rms}} \sqrt{2}$
 $$
 =5.75 \times \sqrt{2}=8.13 \mathrm{~A}
 $$
@@ -933,7 +933,7 @@ $$
 C में rms विभव पतन
 $$
 \begin{aligned}
-V_{C} & =I_{\mathrm{rms}} \times X_{C}=I_{\mathrm{rms}} \times \frac{1}{\omega_{r}} \\
+V_{C} & =I_{\mathrm{rms}} \times X_{C}=I_{\mathrm{rms}} \times \frac{1}{\omega_{r} C} \\
 & =5.75 \times \frac{1}{50 \times 80 \times 10^{-6}} \\
 & =1437.5 \mathrm{~V}
 \end{aligned}

@@ -800,7 +800,7 @@ $\mathrm{Sc}^{3+}$ तथा $\mathrm{Cu}^{+}$के संयोजकता �
 
 :::
 
-:::question{number="4.20" kind="exercise" id="q_4.20" topic="Comparison of lanthanoid and actinoid chemistry" corrections_applied="4"}
+:::question{number="4.20" kind="exercise" id="q_4.20" topic="Comparison of lanthanoid and actinoid chemistry" corrections_applied="5"}
 #### प्रश्न 4.20
 
 :::prompt
@@ -839,7 +839,7 @@ $\mathrm{Sc}^{3+}$ तथा $\mathrm{Cu}^{+}$के संयोजकता �
 | क्र.सं. | लैन्येंनॉयड | ऐक्टिनॉयड |
 | :--- | :--- | :--- |
 | (i) | इलेक्ट्रॉनिक विन्यास $\begin{aligned} & {[\mathrm{Xe}]_{54} 4 f^{1-14} 5 d^{0-1} 6 s^{2} } \\ & \text { उदाहरण, }{ }_{57 \mathrm{La}}=[\mathrm{Xe}] 5 d^{1} 6 s^{2} \\ & 58 \mathrm{Ce}=[\mathrm{Xe}] 4 f^{1} 5 d^{1} 6 s^{2} \end{aligned}$ | इलेक्ट्रॉनिक विन्यास $\begin{aligned} & {[\mathrm{Rn}]_{86} 5 f^{1-14} 6 d^{0-1} 7 s^{2} } \\ & \text { उदाहरण, }{ }_{89} \mathrm{Ac}=[\mathrm{Rn}] 6 d^{1} 7 s^{2} \\ & 90 \mathrm{Th}=[\mathrm{Rn}] 6 d^{2} 7 s^{2} \end{aligned}$ |
-| (ii) | ऑक्सीकरण अवस्थाएँ <br> सामान्य ऑक्सीरण अवस्थाएँ $=+3$ <br> अन्य ऑक्सीकरण अवस्थाएँ $=+2,+4$. | ऑक्सीकरण अवस्थाएँ <br> सामान्य ऑक्सीरण अवस्थाएँ $=+3$ <br> अन्य ऑक्सीकरण अवस्थाएँ $=+4,+5$, +6. |
+| (ii) | ऑक्सीकरण अवस्थाएँ <br> सामान्य ऑक्सीरण अवस्थाएँ $=+3$ <br> अन्य ऑक्सीकरण अवस्थाएँ $=+2,+4$. | ऑक्सीकरण अवस्थाएँ <br> सामान्य ऑक्सीरण अवस्थाएँ $=+3$ <br> अन्य ऑक्सीकरण अवस्थाएँ $=+4,+5,+6$, +7. |
 | (iii) | परमाण्वीय एवं आयनिक आकार <br> परमाणु/आयन का आकार आवर्त में (बाएँ से दाएँ) घटता है। <br> अपने वर्ग में लैन्थेंनॉयड तत्व का आकार ऐक्टिनॉयड से छोटा होता है। | परमाण्वीय एवं आयनिक आकार <br> परमाणु/आयन का आकार आवर्त में (बाएँ से दाएँ) घटता है। <br> अपने वर्ग में एक्टिनॉयड का आकार सबसे बड़ा है। |
 | (iv) | रांसायनिक अभिक्रियाशीलता<br>(a) संकुल बनाने की प्रवृत्ति कम।<br>(b) केवल प्रोमिथियम रेडियोऐक्टिव है।<br>(c) ये ऑक्सोधनायन नहीं बनाते।<br> <br> (d) इनके ऑक्साइड तथा हाइड्रॉक्साइड कम क्षारीय हैं। | रासायनिक अभिक्रियाशीलता<br>(a) संकुल बनाने की प्रवृति प्रबल<br>(b) सभी ऐक्टिनॉयड रेडियोधर्मी हैं।<br>(c) ये ऑक्सोधनायन बनाते हैं जैसे $\mathrm{UO}_{2}^{2+}, \mathrm{PuO}_{2}^{2+}, \mathrm{UO}^{+}$, आदि।<br>(d) ऑक्साइड तथा हाइड्रॉक्साइड अधिक क्षारीय हैं।<br> |
 :::
@@ -882,7 +882,7 @@ $\mathrm{d}^{4}$ स्पीशीज़ में से $\mathrm{Cr}^{2+}$ �
 
 :::
 
-:::question{number="4.22" kind="exercise" id="q_4.22" topic="Examples of disproportionation reactions" corrections_applied="1"}
+:::question{number="4.22" kind="exercise" id="q_4.22" topic="Examples of disproportionation reactions" corrections_applied="2"}
 #### प्रश्न 4.22
 
 :::prompt
@@ -895,7 +895,7 @@ $\mathrm{d}^{4}$ स्पीशीज़ में से $\mathrm{Cr}^{2+}$ �
 उदाहरण
 
 (i) $3 \mathrm{MnO}_{4}^{2-}+4 \mathrm{H}^{+} \longrightarrow \stackrel{(+7)}{2 \mathrm{MnO}_{4}^{-}}+\stackrel{(+4)}{\mathrm{MnO}_{2}}+2 \mathrm{H}_{2} \mathrm{O}$
-(ii) $3 \mathrm{CrO}_{4}^{3-}+8 \mathrm{H}^{+} \longrightarrow 2 \mathrm{CrO}_{4}^{+62-}+\mathrm{Cr}^{3+}+4 \mathrm{H}_{2} \mathrm{O}$
+(ii) $3 \mathrm{CrO}_{4}^{3-}+8 \mathrm{H}^{+} \longrightarrow \stackrel{(+6)}{2 \mathrm{CrO}_{4}^{2-}}+\mathrm{Cr}^{3+}+4 \mathrm{H}_{2} \mathrm{O}$
 विशेष छात्र पिछले एकक से सबंधित उदाहरण भी दे सकते है।
     (i) $4 \mathrm{H}_{3} \mathrm{PO}_{3} \longrightarrow 3 \mathrm{H}_{3} \mathrm{PO}_{4}+\mathrm{PH}_{3}$
     (ii) $3 \mathrm{HNO}_{2} \longrightarrow \mathrm{HNO}_{3}+\mathrm{H}_{2} \mathrm{O}+2 \mathrm{NO}$
@@ -1125,7 +1125,7 @@ $$
 
 :::
 
-:::question{number="4.32" kind="exercise" id="q_4.32" topic="Lanthanoids showing +4 and +2 oxidation states" corrections_applied="1"}
+:::question{number="4.32" kind="exercise" id="q_4.32" topic="Lanthanoids showing +4 and +2 oxidation states" corrections_applied="2"}
 #### प्रश्न 4.32
 
 :::prompt
@@ -1133,7 +1133,7 @@ $$
 :::
 
 :::solution{label="हल"}
-$+4$ ऑक्सीकरण अवस्था ${ }_{58} \mathrm{Ce},{ }_{59} \mathrm{Pr}$ तथा ${ }_{65} \mathrm{~Tb}$ में पायी जाती है। $+2$ ऑक्सीकरण अवस्था ${ }_{60} \mathrm{Nd},{ }_{62} \mathrm{Sm}{ }_{63} \mathrm{Fu}_{69} \mathrm{Tm}$ तथा ${ }_{70} \mathrm{Yb}$ में पायी जाती है।
+$+4$ ऑक्सीकरण अवस्था ${ }_{58} \mathrm{Ce}, { }_{59} \mathrm{Pr}, { }_{60} \mathrm{Nd}, { }_{65} \mathrm{Tb}$ तथा ${ }_{66} \mathrm{Dy}$ में पायी जाती है। $+2$ ऑक्सीकरण अवस्था ${ }_{62} \mathrm{Sm}, { }_{63} \mathrm{Eu}, { }_{69} \mathrm{Tm}$ तथा ${ }_{70} \mathrm{Yb}$ में पायी जाती है।
 
 सामान्यतः $5 d^{0} 6 s^{2}$ विन्यास वाले तत्व आसानी से दो इलेक्ट्रॉन खोकर $+2$ ऑक्सीकरण अवस्था दर्शाते हैं। इसी प्रकार वे तत्व जो चार इलेक्ट्रॉन खोकर अपेक्षाकृत स्थाईविन्यास $4 f^{0}$ या $4 f^{7}$ ग्रहण कर सकते हैं, $+4$ ऑक्सीकरण अवस्था दर्शाते हैं।
 :::
@@ -1348,7 +1348,7 @@ $\mathrm{K}_{2}\left[\mathrm{MnCl}_{4}\right]$ इस यौगिक में 
 
 :::
 
-:::question{number="4.2" kind="additional_exercise" id="it_4.2" topic="Zinc's lowest enthalpy of atomisation in 3d series" corrections_applied="3"}
+:::question{number="4.2" kind="additional_exercise" id="it_4.2" topic="Zinc's lowest enthalpy of atomisation in 3d series" corrections_applied="4"}
 #### अतिरिक्त प्रश्न 4.2
 
 :::prompt
@@ -1356,7 +1356,7 @@ $\mathrm{K}_{2}\left[\mathrm{MnCl}_{4}\right]$ इस यौगिक में 
 :::
 
 :::solution{label="हल"}
-जिंक $\left(3 d^{10} 4 s^{1}\right)$ में $d$-कक्षक पूर्ण भरित है अतः $d$-कक्षक के इलेक्ट्रॉन धात्विक बंधन में भागीदारी नहीं करते हैं। अतः श्रेणी के दूसरे तत्वों, जिनमें धात्विक बन्ध बनाने में $d$-कक्षक के इलेक्ट्रॉन भागीदारी करतें हैं की अपेक्षाकृत जिंक में अधात्विक बंध दुर्बल है। यही कारण है कि जिंक की कणन एन्थैल्पी अपनी संक्रमण श्रेणी में सबसे कम है।
+जिंक $\left(3 d^{10} 4 s^{2}\right)$ में $d$-कक्षक पूर्ण भरित है अतः $d$-कक्षक के इलेक्ट्रॉन धात्विक बंधन में भागीदारी नहीं करते हैं। अतः श्रेणी के दूसरे तत्वों, जिनमें धात्विक बन्ध बनाने में $d$-कक्षक के इलेक्ट्रॉन भागीदारी करतें हैं की अपेक्षाकृत जिंक में अधात्विक बंध दुर्बल है। यही कारण है कि जिंक की कणन एन्थैल्पी अपनी संक्रमण श्रेणी में सबसे कम है।
 :::
 
 :::

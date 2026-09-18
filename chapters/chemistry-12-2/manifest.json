@@ -299,5 +299,108 @@
     },
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium of 09_design/final.hi.html, with emulate_media(screen) applied before page.pdf() per the standing Devanagari pre-base vowel-reordering fix, and prefer_css_page_size+print_background so the base CSS's @page/@media print rules (A4, 9mm margins, colored backgrounds) apply. Known unresolved limitation carried over from step_10/PROMPT.md, not specific to this chapter: Chromium's print-to-PDF pipeline generates an incorrect ToUnicode CMap for Devanagari pre-base reph ('र्' + consonant), dropping that character from the PDF's extractable text layer while visual rendering stays correct - does not affect this stage's numeric read-back gate, but flagged in case copy-paste/search of the exported PDF matters for this chapter's use."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-18T08:41:38.518615+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "3e3111fcddbce865"
+    },
+    "counts": {
+      "corrections_applied": 3,
+      "items": [
+        "q_2.5",
+        "q_2.16"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Post-hoc corrections from an independent user cross-check against both source PDFs, each confirmed by direct visual inspection (200dpi page renders) before applying: (1) q_2.5 part (iv): chapter.hi.pdf page 37 (Table 2.1) confirms E deg(Br2/Br-) = 1.09 V. solutions.hi.pdf page 76 (confirmed by direct render, not an OCR artifact - the printed digit is genuinely '08') uses 1.08 V instead and carries it through the whole working - an error in the official solutions manual. This pipeline's own q_2.5 solution had inherited the 1.08 V, while its own q_2.17 solution (same chapter) already correctly used 1.09 V for the identical half-cell - an internal self-contradiction. Corrected to 1.09 V throughout, giving emf = -1.298 V (was -1.288 V). (2) q_2.16: solutions.hi.pdf page 84 (confirmed by direct render) converts 863.7 s to '14 min 39 s' - a genuine arithmetic error (863.7/60 = 14.395 min = 14 min 23.7 s, not 39 s). This pipeline's own solution had inherited the same error. Corrected to 14 min 23.7 s (~14 min 24 s); the downstream Cu/Zn mass calculations (which use 1295.6 C directly, not the mis-converted time) were already correct and unaffected. A third reported item (q_2.4, Cd2+/Cd standard potential not traceable to the printed Table 2.1) was investigated and confirmed as a genuine textbook-level omission (Table 2.1 on page 37, directly rendered and read, jumps from Cu2+/Cu straight through the list with no Cd entry at all) - not an error in this pipeline's own content, since the -0.40 V value used and the resulting math (E_cell=0.34V, dG=-196.86kJ, Kc=3.17e34) are already correct. No change made; flagged for awareness only, matching the user's own conclusion."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-18T08:41:38.521722+00:00",
+    "inputs": {
+      "structured.hi.md": "8044654fa61b7c1a"
+    },
+    "counts": {
+      "items": [
+        "q_2.5",
+        "q_2.16"
+      ]
+    },
+    "gates_failed": {
+      "tag_parse": "OK, 43 items"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the q_2.5/q_2.16 verify_correction numbers into 06_simplify (direct copy - both fields were confirmed byte-identical between 05_verify and 06_simplify before the fix) and into 07_format/structured.hi.md directly (edited the :::step blocks in place, preserving stage 7's existing structure - q_2.5's part (iv) :::step/:::formula unchanged in shape, only the 1.08->1.09 and -1.288->-1.298 numbers changed; q_2.16's (a) :::step and the item's :::answer block similarly number-only changes). Verified 43/43 items parse cleanly after the edit."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T08:41:38.524625+00:00",
+    "inputs": {
+      "structured.hi.md": "8044654fa61b7c1a"
+    },
+    "counts": {
+      "item_count": 43,
+      "items_updated": [
+        "q_2.5",
+        "q_2.16"
+      ]
+    },
+    "gates_failed": {
+      "item_count_match": true,
+      "front_unchanged": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Surgically updated q_2.5 (solution_blocks[12], the part (iv) conclusion block) and q_2.16 (solution_blocks[1]'s flow text, and the item's own answer field) in 08_tag/structured.hi.json via direct string substitution, rather than a full regeneration (same rationale as chemistry-12-1/-2's earlier fixes - this chapter's JSON predates the later regeneration script and uses a leaner, flat-block schema with no nested concept-in-step issue this time). Confirmed via diff against a pre-fix backup that only these two items differ, all 43 item ids/order preserved, 'front' unchanged."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-18T08:41:38.526647+00:00",
+    "inputs": {
+      "structured.hi.json": "12eaf2bd6dca8bae"
+    },
+    "counts": {
+      "html_bytes": 122587,
+      "items_updated": [
+        "q_2.5",
+        "q_2.16"
+      ]
+    },
+    "gates_failed": {
+      "visual_spot_check": "OK (Playwright screenshots of both items)"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "This chapter's original render script was not preserved (same situation as chemistry-12-1), so directly hand-edited the affected regions of the already-published 09_design/final.hi.html. Noted this chapter's HTML mixes NBSP-spaced inline math (the s31/s32/s33 fraction spans) with plain-spaced answer/prose text within the same file - matched each region's own existing spacing convention exactly rather than assuming one convention throughout (an initial attempt using the wrong convention for the answer line silently failed to match and was caught before writing). Verified via exact count assertions (=1 for each of 3 substitutions) before writing, and visually via Playwright screenshots of both items - both render cleanly with correct numbers and intact structure. Noted, but not fixed (pre-existing, unrelated to this fix, out of scope): a literal unconverted '**उत्तर:**' markdown-bold marker in q_2.16's answer box - a design-stage cosmetic issue predating this session's edits."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-18T08:41:38.528451+00:00",
+    "inputs": {
+      "final.hi.html": "a80541bb0c96481b"
+    },
+    "counts": {
+      "page_count": 21,
+      "file_size_bytes": 1726104,
+      "numeric_tokens_checked": 394,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {
+      "page_count_sane": true,
+      "no_blank_pages": true,
+      "numeric_readback_vs_pdf_text": "OK, 0 missing"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Re-exported via Playwright/Chromium from the corrected 09_design/final.hi.html, following step_10/PROMPT.md exactly. 21 pages, 0 blank, 0/394 numeric tokens missing. Directly confirmed via fitz text extraction that '1.09'/'1.298'/'23.7' are present and '1.08'/'1.288' are absent anywhere in the exported PDF text. Visually confirmed both corrected items (q_2.5 page 7-8, q_2.16 page 13 of the exported PDF) render cleanly with the corrected numbers and full structure intact."
   }
 ]

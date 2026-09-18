@@ -212,5 +212,104 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.hi.html file:// path (not a copy), waited for document.fonts.ready, called emulate_media('screen') before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base vowel-reordering bug), exported with print_background=True and prefer_css_page_size=True (no explicit format/width/height). Gate: 32 pages (sane for 49 items), 0 blank pages, numeric read-back re-run against the PDF's own fitz-extracted text (not assumed carried over from stage 9's HTML check) using the same question/final_answer-field scope as stage 9, with the documented superscript-merge-separator fix applied when normalizing unicode exponents - 10 distinct numbers checked (low but expected: most of this chapter's question/final_answer fields are qualitative - IUPAC names, isomer structures, ligand classification - not numeric calculations; the chapter's real numeric content, e.g. oxidation-state/magnetic-moment derivations, lives in solution text, outside this gate's documented scope), 0 missing. Not independently re-verified: the known, currently-unresolved Chromium reph ('र्'+consonant) ToUnicode CMap bug documented in step_10/PROMPT.md - visual rendering is unaffected, only copy-paste/text-extraction of words containing that exact sequence; flagged to the user, not silently shipped around, consistent with how prior chapters handled the same known limitation."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-18T10:20:26.806572+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "62c3f473fbff9898"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "items": [
+        "q_5.8"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Post-hoc correction from an independent user cross-check against both source PDFs (2 issues reported; 1 confirmed genuine and fixed, 1 investigated and NOT changed - see below). q_5.8: the isomerism classification list self-contradicted (group 2's lettering jumped (b)->(d), skipping (c) entirely). Root-caused via a direct 200dpi render of solutions.hi.pdf page 17: the source prints this as a TWO-COLUMN table (col 1 = group 1 items a/b/c, col 2 = group 2 items a/b), and item '(d) विलायकयोजन समावयवता' sits at a 4th table ROW in the column-2 horizontal position purely because column 1 had already ended at (c) - not because it's semantically a third item of group 2. Both this pipeline's mathpix extraction of that page AND a reconstructed OCR read the two-column table in raster (row-then-column) order, misattributing (d) to group 2 - a table-layout extraction artifact. The self-contradiction is provable without even consulting the source: this same item's own worked-examples list two lines below (already correct) shows (d) belongs under group 1, and group 2 never has more than (a)/(b) anywhere in either the worked examples or solutions.hi.pdf's own worked-example page (page 18). Moved '(d) विलायकयोजन समावयवता' into group 1, right after (c). SECOND REPORTED ITEM INVESTIGATED AND NOT CHANGED: q_5.14 (Cu2+ + excess KCN -> K2[Cu(CN)4], omitting the Cu2+ -> Cu+ redox step via cyanogen gas that gives the chemically fuller K3[Cu(CN)4] answer): confirmed this pipeline's answer is word-for-word identical to solutions.hi.pdf's own answer (mathpix offset ~119413) - this is an exercise question with no independent textbook body-text statement about the mechanism to check against (unlike q_5.8, which had an unambiguous, self-contained internal contradiction to resolve). Per Rule 1 (solutions PDF is the source of truth for solution content) and Rule 5 (nothing invented), did not substitute the more complete redox mechanism, since doing so would mean overriding a faithful reproduction of the official answer with external chemistry knowledge rather than resolving a source-vs-source contradiction - the same principle already applied consistently to similar cases in chapters 1 and 4 this session."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-18T10:20:26.808744+00:00",
+    "inputs": {
+      "structured.hi.md": "70f0148655d15c77"
+    },
+    "counts": {
+      "items": [
+        "q_5.8"
+      ]
+    },
+    "gates_failed": {
+      "tag_parse": "OK, 49 items"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the q_5.8 verify_correction into 06_simplify (direct copy - field confirmed byte-identical between 05_verify and 06_simplify before the fix) and into 07_format/structured.hi.md directly (reordered the (d) line within the existing :::concept block, no structural change). Verified 49/49 items parse cleanly."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T10:20:26.810644+00:00",
+    "inputs": {
+      "structured.hi.md": "70f0148655d15c77"
+    },
+    "counts": {
+      "item_count": 49,
+      "items_updated": [
+        "q_5.8"
+      ]
+    },
+    "gates_failed": {
+      "item_count_match": true,
+      "front_unchanged": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Surgically updated q_5.8 in 08_tag/structured.hi.json via direct string substitution. Confirmed via diff against a pre-fix backup that only this item differs, all 49 item ids/order preserved, 'front' unchanged."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-18T10:20:26.812511+00:00",
+    "inputs": {
+      "structured.hi.json": "b7e91d95a0535a85"
+    },
+    "counts": {
+      "html_bytes": 173190,
+      "items_updated": [
+        "q_5.8"
+      ]
+    },
+    "gates_failed": {
+      "visual_spot_check": "OK (Playwright screenshot)"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Directly hand-edited the affected region of the already-published 09_design/final.hi.html (original render script not preserved). Only the classification-list block was touched, not the worked-examples block below it (which was already correct - confirmed both blocks are separate DOM regions before editing, so the fix could not accidentally duplicate or corrupt the already-correct example list). Verified the substitution matched exactly once before writing, and visually via a Playwright screenshot."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-18T10:20:26.814924+00:00",
+    "inputs": {
+      "final.hi.html": "6f39a7696d9aa0a7"
+    },
+    "counts": {
+      "page_count": 32,
+      "file_size_bytes": 2718245,
+      "numeric_tokens_checked": 299,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {
+      "page_count_sane": true,
+      "no_blank_pages": true,
+      "numeric_readback_vs_pdf_text": "OK, 0 missing"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Re-exported via Playwright/Chromium from the corrected 09_design/final.hi.html, following step_10/PROMPT.md exactly. 32 pages, 0 blank, 0/299 numeric tokens missing. Directly confirmed via fitz text extraction that the '(b)...(d)' numbering gap is gone and the classification list now reads (a)(b)(c)(d) then (a)(b), visually confirmed on PDF page 8."
   }
 ]

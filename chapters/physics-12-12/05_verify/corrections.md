@@ -14,7 +14,7 @@
 - **Should be:**
   > अतः लाइमन श्रेणी में तरंग परास $912 \AA$ से $1216 \AA$ है। अतः लाइमन श्रेणी $993 \AA$ की तरंगदैर्ध्य का प्रकाश उत्सर्जित करेगा।
 
-### q_12.9 — solution (hi)
+### q_12.9 — solution (hi) [SUPERSEDED — see post-completion round below]
 - **Confidence:** high
 - **Reason:** Extraction-completeness fix, not a content correction: confirmed against solutions.hi.pdf page 72 that this trailing remark (about an unrelated electron transition n=1->n=3 landing in the Lyman series) IS genuinely printed as part of प्रश्न 10's own solution in the source (not a page-bleed/OCR artifact) -- stage 2 had prematurely omitted it as an apparent non-sequitur. Restoring it verbatim per Rule 5 (nothing invented -- but also nothing of the source silently dropped): it still does not logically follow from the earth-orbital-quantum-number question actually asked, and reads as a genuine authoring error in this (non-official, guide-book-style) solutions manual, which is not stage 5's call to fix -- flagged prominently rather than silently corrected or silently kept dropped.
 - **Found:**
@@ -29,6 +29,31 @@
   > $$
   > 
   > अतः यह लाइमन श्रेणी से सम्बन्धित है।
+- **Superseded by:** the post-completion round below re-examined this and found it is not a non-sequitur authoring error at all -- it is genuinely प्रश्न 9's (q_12.8's) own continuation, misattached to q_12.9 by a page-break reading-order artifact. Moved back to q_12.8 and used to correct q_12.8's method (see below); removed from q_12.9 entirely.
+
+### q_12.1(a) — solution + answer (hi) [post-completion round]
+- **Confidence:** high
+- **Reason:** Confirmed against solutions.hi.pdf page 67: the question is a 3-option fill-in-the-blank (अपेक्षाकृत काफ़ी अधिक / भिन्न नहीं / अपेक्षाकृत काफ़ी कम), but the printed answer is "इनमें से कोई नहीं" (none of these) -- not one of the three options offered, a structural self-contradiction within the item itself. Physics: Thomson's model atomic size and Rutherford's model atomic-orbit size are both ~1e-10 m (only the nucleus, ~1e-15 m, is different in Rutherford's model), and the question asks about atomic (not nuclear) size, so the two models are not different at this scale.
+- **Found:**
+  > इनमें से कोई नहीं
+- **Should be:**
+  > भिन्न नहीं
+
+### q_12.8 — solution + answer (hi) [post-completion round]
+- **Confidence:** high
+- **Reason:** Confirmed against solutions.hi.pdf pp.71-72: the source computes lambda=hc/E=993 Angstrom by treating the 12.5 eV impact energy as converting directly into one emitted photon, then separately (a few lines later, printed as the top of page 72, extracted into q_12.9 by the artifact noted above) correctly finds the electron is excited only to n=3 -- two incompatible methods in the same solution reaching different conclusions. Correct physics: excitation energy to n=3 is 13.6(1-1/9)=12.09 eV (within the 12.5 eV budget); to n=4 is 13.6(1-1/16)=12.75 eV (exceeds it, not reachable). So the electron reaches n=3 and can de-excite via three transitions, emitting three lines: 3->1 (1028 Å, Lyman), 3->2 (6581 Å, Balmer), 2->1 (1219 Å, Lyman) -- computed with this chapter's own h=6.63e-34 J-s, c=3e8 m/s for internal consistency with the rest of the manual.
+- **Found:**
+  > सम्बन्ध का प्रयोग करने पर, $E=\frac{hc}{\lambda}=\frac{6.62\times10^{-34}\times3\times10^{8}}{12.5\times1.6\times10^{-19}}=993\ \text{Å}$। अतः लाइमन श्रेणी में तरंग परास 912 Å से 1216 Å है। अतः लाइमन श्रेणी 993 Å की तरंगदैर्ध्य का प्रकाश उत्सर्जित करेगा।
+- **Should be:**
+  > (full re-derivation via excitation-energy budget and three-transition cascade — see 07_format/structured.hi.md's q_12.8 for the exact text)
+
+### q_12.9 — मुख्य सूत्र (hi) [post-completion round]
+- **Confidence:** high
+- **Reason:** Confirmed against solutions.hi.pdf page 71 at 8x zoom: the boxed formula reads n=2(pi)vm/h, omitting r, even though the line directly above (mvr=nh/2pi) and the substitution two lines below (which uses r=1.5e11 m) both correctly include it, and the final answer (n=2.6e74) was already right.
+- **Found:**
+  > $n=\frac{2 \pi v m}{h}$
+- **Should be:**
+  > $n=\frac{2 \pi m v r}{h}$
 
 ### q_12.4 — solution (hi)
 - **Confidence:** high

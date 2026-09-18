@@ -289,5 +289,116 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium: document.fonts.ready wait, emulate_media('screen') before pdf() (the standing Devanagari pre-base-vowel-reordering fix), prefer_css_page_size + print_background, no explicit format/width/height. Gate: 22 pages, no blank pages, numeric read-back of every question+final_answer field (item and part level) against 06_simplify/chapter.simplified.hi.md re-run directly against the PDF's own extracted text (superscript-aware normalization, inserting a separator before a run of superscript digits so a base number and its exponent don't merge into one token) - 46/46 found. Known unresolved limitation carried over from step_10/PROMPT.md, not specific to this chapter: Chromium's print-to-PDF pipeline drops the 'र्' (reph) character from the *extractable* text layer for any 'र्'+consonant sequence, while the visual rendering stays correct - affects copy-paste/search/re-extraction of words like 'निष्कर्ष'/'कार्य' in this PDF, not the numeric read-back gate (digits only) or how the page looks."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-18T10:11:38.404195+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "f11acdd10dbf2d24"
+    },
+    "counts": {
+      "corrections_applied": 4,
+      "items": [
+        "it_4.2",
+        "q_4.32",
+        "q_4.20",
+        "q_4.22"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Post-hoc corrections from an independent user cross-check against both source PDFs (7 issues reported total; 4 confirmed as genuine defects and fixed here, 3 investigated and NOT changed - see below). Each fixed item confirmed by direct visual inspection before applying: (1) it_4.2: chapter.hi.pdf's Table 4.1/4.2 lists Zn as [Ar]3d^10 4s^2 (the standard, non-exceptional pattern). solutions.hi.pdf page 168 (confirmed by direct 200dpi render) says 4s^1, an error in the official manual (4s^1 belongs to Cu/Cr's exception pattern, not Zn). Corrected to 4s^2. (2) q_4.32: chapter.hi.pdf's own body text (section 4.5.3, confirmed via mathpix) explicitly states 'Pr, Nd, Tb तथा Dy भी +4 ऑक्सीकरण अवस्था दर्शाते हैं' - Nd and Dy both belong in +4. solutions.hi.pdf's own answer wrongly places Nd in +2 and omits Dy from +4 - contradicts the textbook's own explicit statement. Corrected to +4={Ce,Pr,Nd,Tb,Dy}, +2={Sm,Eu,Tm,Yb} (also fixed a pre-existing 'Eu'->'Fu' OCR-extraction typo as part of the same rewrite). (3) q_4.20: chapter.hi.pdf's own body text explicitly states 'Pa, U तथा Np में क्रमशः +5, +6 तथा +7 तक पहुँच जाती है' - Np reaches +7. solutions.hi.pdf's own answer only lists +4,+5,+6, omitting +7 - contradicts the textbook. Corrected to add +7. (4) q_4.22: a direct 250dpi render of solutions.hi.pdf page 14 shows the source prints '2CrO4^{2-}' with a small '(+6)' oxidation-state label positioned above it, exactly matching the adjacent example (i)'s own stackrel(+7)/(+4) style - mathpix had merged the two annotations into one garbled superscript '+62-' during this pipeline's own extraction. Corrected to the same stackrel style already used correctly one line above. THREE REPORTED ITEMS INVESTIGATED AND NOT CHANGED: q_4.21(i) and it_4.7 (both flagged as 'reasoning substitution' - using E-deg values as the stated justification instead of a d-configuration/exchange-energy explanation): confirmed via direct text comparison that this pipeline's answers are WORD-FOR-WORD IDENTICAL to solutions.hi.pdf's own answers for these exact questions (mathpix offsets ~29203 and ~3216) - faithfully mirrors the official source's own pedagogical approach. Per Rule 1 (solutions PDF is the source of truth for solution content) and Rule 5 (nothing invented), did not substitute a different explanation than what is officially published for these specific exercise/in-text questions (the CFSE-style explanation the user expected belongs to a different question, उदाहरण 4.4, not these two). q_4.35(i) (W listed as a 3rd-series configuration 'exception' alongside Pt/Au): confirmed the value itself (W=4f14 5d4 6s2) is correct and matches solutions.hi.pdf's own text exactly - the dispute is only over the 'exception' classification label, a pedagogical/classification judgment not clearly contradicted by any explicit textbook body-text statement (unlike items 2/3 above, which had an unambiguous textbook sentence to check against). Left as-is rather than substitute an editorial reclassification of the source's own framing."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-18T10:11:38.406924+00:00",
+    "inputs": {
+      "structured.hi.md": "a2db243a393e507a"
+    },
+    "counts": {
+      "items": [
+        "it_4.2",
+        "q_4.32",
+        "q_4.20",
+        "q_4.22"
+      ]
+    },
+    "gates_failed": {
+      "tag_parse": "OK, 58 items"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated all 4 verify_correction changes into 06_simplify (direct copy - fields confirmed byte-identical between 05_verify and 06_simplify before the fix) and into 07_format/structured.hi.md directly (number/text-only edits, no structural change - q_4.20's table stayed a :::table, q_4.22's equation (ii) now uses the same LaTeX \\stackrel{} syntax equation (i) already used). Verified 58/58 items parse cleanly."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T10:11:38.409003+00:00",
+    "inputs": {
+      "structured.hi.md": "a2db243a393e507a"
+    },
+    "counts": {
+      "item_count": 58,
+      "items_updated": [
+        "it_4.2",
+        "q_4.32",
+        "q_4.20",
+        "q_4.22"
+      ]
+    },
+    "gates_failed": {
+      "item_count_match": true,
+      "front_unchanged": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Surgically updated all 4 items in 08_tag/structured.hi.json via direct string substitution (q_4.20's table lives in a solution_blocks[0]['html'] field, not a flow text segment - checked its actual key shape before patching). Confirmed via diff against a pre-fix backup that only these 4 items differ, all 58 item ids/order preserved, 'front' unchanged."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-18T10:11:38.410766+00:00",
+    "inputs": {
+      "structured.hi.json": "300ecbdcbe90cdc7"
+    },
+    "counts": {
+      "html_bytes": 170405,
+      "items_updated": [
+        "it_4.2",
+        "q_4.32",
+        "q_4.20",
+        "q_4.22"
+      ]
+    },
+    "gates_failed": {
+      "visual_spot_check": "OK (Playwright screenshots of all 4 items)"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Directly hand-edited the 4 affected regions of the already-published 09_design/final.hi.html (original render script not preserved). Found this file's own \\stackrel{} LaTeX construct already has a matching HTML pattern (<span class=\"s-stackrel\"> with -top/-main children) from example (i)'s own oxidation-state annotations - reused that exact pattern for q_4.22's fix rather than inventing new markup. One substitution initially failed to match due to a single NBSP character hidden mid-string (the same class of issue caught in the chemistry-12-2/-3 fixes this session) - caught by the exact-match-count assertion before writing, corrected by re-reading the exact bytes. Verified all 4 substitutions matched exactly once before writing, and visually confirmed via Playwright screenshots of all 4 items."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-18T10:11:38.412624+00:00",
+    "inputs": {
+      "final.hi.html": "77a23ca078bfb20d"
+    },
+    "counts": {
+      "page_count": 22,
+      "file_size_bytes": 1779741,
+      "numeric_tokens_checked": 168,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {
+      "page_count_sane": true,
+      "no_blank_pages": true,
+      "numeric_readback_vs_pdf_text": "OK, 0 missing"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Re-exported via Playwright/Chromium from the corrected 09_design/final.hi.html, following step_10/PROMPT.md exactly. 22 pages, 0 blank, 0/168 numeric tokens missing. Directly confirmed via fitz text extraction that '+62-' is absent, and 'Dy'/'+7' are present anywhere in the exported PDF text."
   }
 ]

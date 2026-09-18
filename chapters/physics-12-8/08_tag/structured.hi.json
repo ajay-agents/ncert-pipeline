@@ -188,7 +188,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "$$\n\\begin{aligned}\n& C=\\frac{8.854 \\times 10^{-12} \\times 3.14\\left(12 \\times 10^{-2}\\right)^{2}}{5 \\times 10^{-2}} \\\\\n& C=\\frac{8.854 \\times 3.14 \\times 144 \\times 10^{-12-4+2}}{5} \\\\\n& C=8.01 \\times 10^{-14} \\mathrm{~F}=8.01 \\mathrm{pF}\n\\end{aligned}\n$$"
+                  "text": "$$\n\\begin{aligned}\n& C=\\frac{8.854 \\times 10^{-12} \\times 3.14\\left(12 \\times 10^{-2}\\right)^{2}}{5 \\times 10^{-2}} \\\\\n& C=\\frac{8.854 \\times 3.14 \\times 144 \\times 10^{-12-4+2}}{5} \\\\\n& C=8.01 \\times 10^{-12} \\mathrm{~F}=8.01 \\mathrm{pF}\n\\end{aligned}\n$$"
                 }
               ]
             },
@@ -957,7 +957,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "विद्युत क्षेत्र का औसत ऊर्जा घनत्व\n$$\nu_{E}=\\frac{1}{4} \\varepsilon_{0} E_{0}^{2}\n$$\nहम जानते हैं कि $\\frac{E_{0}}{B_{0}}=c$\nसमी (i) में रखने पर\n$$\n\\therefore \\quad u_{E}=\\frac{1}{4} \\varepsilon_{0} \\cdot c^{2} B_{0}^{2}\n$$\nEM तरंगों की चाल $c=\\frac{1}{\\sqrt{\\mu_{0} \\varepsilon_{0}}}$\nसमी (ii) में रखने पर\n$$\n\\begin{aligned}\n& u_{E}=\\frac{1}{4} \\varepsilon_{0} B_{0}^{2} \\cdot \\frac{1}{\\mu_{0} \\varepsilon_{0}} \\\\\n& u_{E}=\\frac{1}{4} \\cdot \\frac{B_{0}^{2}}{\\mu_{0}}=\\frac{B_{0}^{2}}{2 \\mu_{0}}=u_{B}\n\\end{aligned}\n$$\nअत: विद्युत क्षेत्र की औसत ऊर्जा घनत्व चुंबकीय क्षेत्र की औसत ऊर्जा घनत्व के बराबर होती है।"
+                  "text": "विद्युत क्षेत्र का औसत ऊर्जा घनत्व\n$$\nu_{E}=\\frac{1}{4} \\varepsilon_{0} E_{0}^{2}\n$$\nहम जानते हैं कि $\\frac{E_{0}}{B_{0}}=c$\nसमी (i) में रखने पर\n$$\n\\therefore \\quad u_{E}=\\frac{1}{4} \\varepsilon_{0} \\cdot c^{2} B_{0}^{2}\n$$\nEM तरंगों की चाल $c=\\frac{1}{\\sqrt{\\mu_{0} \\varepsilon_{0}}}$\nसमी (ii) में रखने पर\n$$\n\\begin{aligned}\n& u_{E}=\\frac{1}{4} \\varepsilon_{0} B_{0}^{2} \\cdot \\frac{1}{\\mu_{0} \\varepsilon_{0}} \\\\\n& u_{E}=\\frac{1}{4} \\cdot \\frac{B_{0}^{2}}{\\mu_{0}}=\\frac{B_{0}^{2}}{4 \\mu_{0}}=u_{B}\n\\end{aligned}\n$$\nअत: विद्युत क्षेत्र की औसत ऊर्जा घनत्व चुंबकीय क्षेत्र की औसत ऊर्जा घनत्व के बराबर होती है।"
                 }
               ]
             }

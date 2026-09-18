@@ -1,0 +1,2067 @@
+{
+  "front": {
+    "title": "प्रतिलोम त्रिकोणमितीय फलन",
+    "chapter": "2"
+  },
+  "items": [
+    {
+      "id": "ex_2.1",
+      "kind": "example",
+      "number": "2.1",
+      "topic": "sin⁻¹(1/√2) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\sin ^{-1}\\left(\\frac{1}{\\sqrt{2}}\\right)$ का मुख्य मान ज्ञात कीजिए।"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "मान लीजिए कि $\\sin ^{-1}\\left(\\frac{1}{\\sqrt{2}}\\right)=y$. अतः $\\sin y=\\frac{1}{\\sqrt{2}}$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "हमें ज्ञात है कि $\\sin ^{-1}$ की मुख्य शाखा का परिसर $\\left(\\frac{-\\pi}{2}, \\frac{\\pi}{2}\\right)$ होता है और $\\sin \\left(\\frac{\\pi}{4}\\right)=\\frac{1}{\\sqrt{2}}$ है। इसलिए $\\sin ^{-1}\\left(\\frac{1}{\\sqrt{2}}\\right)$ का मुख्य मान $\\frac{\\pi}{4}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.2",
+      "kind": "example",
+      "number": "2.2",
+      "topic": "cot⁻¹(-1/√3) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\cot ^{-1}\\left(\\frac{-1}{\\sqrt{3}}\\right)$ का मुख्य मान ज्ञात कीजिए।"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "मान लीजिए कि $\\cot ^{-1}\\left(\\frac{-1}{\\sqrt{3}}\\right)=y$. अतएव"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "मान रखो",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\cot y=\\frac{-1}{\\sqrt{3}}=-\\cot \\left(\\frac{\\pi}{3}\\right)=\\cot \\left(\\pi-\\frac{\\pi}{3}\\right)=\\cot \\left(\\frac{2 \\pi}{3}\\right) \\text { है। }\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "हमें ज्ञात है कि $\\cot ^{-1}$ की मुख्य शाखा का परिसर $(0, \\pi)$ होता है और $\\cot \\left(\\frac{2 \\pi}{3}\\right)=\\frac{-1}{\\sqrt{3}}$ है। अत: $\\cot ^{-1}\\left(\\frac{-1}{\\sqrt{3}}\\right)$ का मुख्य मान $\\frac{2 \\pi}{3}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{2 \\pi}{3}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.3",
+      "kind": "example",
+      "number": "2.3",
+      "topic": "sin⁻¹(2x√(1-x²)) के दो रूपांतरण सिद्ध करना",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "दर्शाइए कि"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "i",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\sin ^{-1}\\left(2 x \\sqrt{1-x^{2}}\\right)=2 \\sin ^{-1} x,-\\frac{1}{\\sqrt{2}} \\leq x \\leq \\frac{1}{\\sqrt{2}}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "label": "जानकारी",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "मान लीजिए कि $x=\\sin \\theta$ तो $\\sin ^{-1} x=\\theta$ इस प्रकार"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "label": "मान रखो",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n\\sin ^{-1}\\left(2 x \\sqrt{1-x^{2}}\\right) & =\\sin ^{-1}\\left(2 \\sin \\theta \\sqrt{1-\\sin ^{2} \\theta}\\right) \\\\\n& =\\sin ^{-1}(2 \\sin \\theta \\cos \\theta)=\\sin ^{-1}(\\sin 2 \\theta)=2 \\theta \\\\\n& =2 \\sin ^{-1} x\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": []
+        },
+        {
+          "label": "ii",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\sin ^{-1}\\left(2 x \\sqrt{1-x^{2}}\\right)=2 \\cos ^{-1} x, \\frac{1}{\\sqrt{2}} \\leq x \\leq 1$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "label": null,
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "मान लीजिए कि $x=\\cos \\theta$ है। उसी विधि से $\\sin ^{-1}\\left(2 x \\sqrt{1-x^{2}}\\right)=2 \\cos ^{-1} x$ मिलता है।"
+                }
+              ]
+            }
+          ],
+          "answer": []
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.4",
+      "kind": "example",
+      "number": "2.4",
+      "topic": "tan⁻¹(cosx/(1-sinx)) को सरलतम रूप में व्यक्त करना",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1} \\frac{\\cos x}{1-\\sin x},-\\frac{-3 \\pi}{2}<x<\\frac{\\pi}{2}$ को सरलतम रूप में व्यक्त कीजिए।"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "हम लिख सकते हैं कि\n\n$$\n\\begin{aligned}\n\\tan ^{-1}\\left(\\frac{\\cos x}{1-\\sin x}\\right) & =\\tan ^{-1}\\left[\\frac{\\cos ^{2} \\frac{x}{2}-\\sin ^{2} \\frac{x}{2}}{\\cos ^{2} \\frac{x}{2}+\\sin ^{2} \\frac{x}{2}-2 \\sin \\frac{x}{2} \\cos \\frac{x}{2}}\\right] \\\\\n& =\\tan ^{-1}\\left[\\frac{\\left(\\cos \\frac{x}{2}+\\sin \\frac{x}{2}\\right)\\left(\\cos \\frac{x}{2}-\\sin \\frac{x}{2}\\right)}{\\left(\\cos \\frac{x}{2}-\\sin \\frac{x}{2}\\right)^{2}}\\right] \\\\\n& =\\tan ^{-1}\\left[\\frac{\\cos \\frac{x}{2}+\\sin \\frac{x}{2}}{\\cos \\frac{x}{2}-\\sin \\frac{x}{2}}\\right]=\\tan ^{-1}\\left[\\frac{1+\\tan \\frac{x}{2}}{1-\\tan \\frac{x}{2}}\\right] \\\\\n& =\\tan ^{-1}\\left[\\tan \\left(\\frac{\\pi}{4}+\\frac{x}{2}\\right)\\right]=\\frac{\\pi}{4}+\\frac{x}{2}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{4}+\\frac{x}{2}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.5",
+      "kind": "example",
+      "number": "2.5",
+      "topic": "cot⁻¹(1/√(x²-1)) को सरलतम रूप में लिखना",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\cot ^{-1}\\left(\\frac{1}{\\sqrt{x^{2}-1}}\\right), x>1$ को सरलतम रूप में लिखिए।"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "मान लीजिए कि $x=\\sec \\theta$, then $\\sqrt{x^{2}-1}=\\sqrt{\\sec ^{2} \\theta-1}=\\tan \\theta$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "इसलिए $\\cot ^{-1} \\frac{1}{\\sqrt{x^{2}-1}}=\\cot ^{-1}(\\cot \\theta)=\\theta=\\sec ^{-1} x$ जो अभीष्ट सरलतम रूप है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\sec ^{-1} x$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.6",
+      "kind": "example",
+      "number": "2.6",
+      "topic": "sin⁻¹(sin(3π/5)) का मान (विविध उदाहरण)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\sin ^{-1}\\left(\\sin \\frac{3 \\pi}{5}\\right)$ का मान ज्ञात कीजिए।"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "हमें ज्ञात है कि $\\sin ^{-1}(\\sin x)=x$ होता है। इसलिए $\\sin ^{-1}\\left(\\sin \\frac{3 \\pi}{5}\\right)=\\frac{3 \\pi}{5}$\nकिंतु $\\frac{3 \\pi}{5} \\notin\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$, जो $\\sin ^{-1} x$ की मुख्य शाखा है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "मान रखो",
+          "flow": [
+            {
+              "type": "text",
+              "text": "फिर भी $\\sin \\left(\\frac{3 \\pi}{5}\\right)=\\sin \\left(\\pi-\\frac{3 \\pi}{5}\\right)=\\sin \\frac{2 \\pi}{5}$ तथा $\\frac{2 \\pi}{5} \\in\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$\nअत:"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\sin ^{-1}\\left(\\sin \\frac{3 \\pi}{5}\\right)=\\sin ^{-1}\\left(\\sin \\frac{2 \\pi}{5}\\right)=\\frac{2 \\pi}{5}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{2 \\pi}{5}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.1",
+      "kind": "exercise",
+      "number": "2.1.1",
+      "topic": "sin⁻¹(-1/2) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\sin ^{-1}\\left(-\\frac{1}{2}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\sin ^{-1}\\left(-\\frac{1}{2}\\right)=y$, इसलिए, $\\sin y=-\\frac{1}{2}=-\\sin \\left(\\frac{\\pi}{6}\\right)=\\sin \\left(-\\frac{\\pi}{6}\\right)$\nहम जानते हैं कि $\\sin ^{-1}$ की मुख्य शाखा का परिसर $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$ होता है और $\\sin \\left(-\\frac{\\pi}{6}\\right)=-\\frac{1}{2}$ है। अतः, $\\sin ^{-1}\\left(-\\frac{1}{2}\\right)$ का मुख्य मान $-\\frac{\\pi}{6}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$-\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.2",
+      "kind": "exercise",
+      "number": "2.1.2",
+      "topic": "cos⁻¹(√3/2) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\cos ^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\cos ^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)=y$, इसलिए, $\\cos y=\\frac{\\sqrt{3}}{2}=\\cos \\left(\\frac{\\pi}{6}\\right)$\nहम जानते हैं कि $\\cos ^{-1}$ की मुख्य शाखा का परिसर $[0, \\pi]$ होता है और $\\cos \\left(\\frac{\\pi}{6}\\right)=\\frac{\\sqrt{3}}{2}$ है। अतः, $\\cos ^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)$ का मुख्य मान $\\frac{\\pi}{6}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.3",
+      "kind": "exercise",
+      "number": "2.1.3",
+      "topic": "cosec⁻¹(2) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\operatorname{cosec}^{-1}(2)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\operatorname{cosec}^{-1}(2)=y$. इसलिए,, $\\operatorname{cosec} \\mathrm{y}=2=\\operatorname{cosec}\\left(\\frac{\\pi}{6}\\right)$\nहम जानते हैं कि $\\operatorname{cosec}^{-1}$ की मुख्य शाखा का परिसर $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]-\\{0\\}$ होता है और $\\operatorname{cosec}\\left(\\frac{\\pi}{6}\\right)=$ $2$ है। अतः, $\\operatorname{cosec}^{-1}(2)$ का मुख्य मान $\\frac{\\pi}{6}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.4",
+      "kind": "exercise",
+      "number": "2.1.4",
+      "topic": "tan⁻¹(-√3) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}(-\\sqrt{3})$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\tan ^{-1}(-\\sqrt{3})=\\mathrm{y}$, इसलिए, $\\tan \\mathrm{y}=-\\sqrt{3}=-\\tan \\frac{\\pi}{3}=\\tan \\left(-\\frac{\\pi}{3}\\right)$\nहम जानते हैं कि $\\tan ^{-1}$ की मुख्य शाखा का परिसर $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$ होता है और $\\tan \\left(-\\frac{\\pi}{3}\\right)=-\\sqrt{3}$ है। अतः, $\\tan ^{-1}(-\\sqrt{3})$ का मुख्य मान $-\\frac{\\pi}{3}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$-\\frac{\\pi}{3}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.5",
+      "kind": "exercise",
+      "number": "2.1.5",
+      "topic": "cos⁻¹(-1/2) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\cos ^{-1}\\left(-\\frac{1}{2}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\cos ^{-1}\\left(-\\frac{1}{2}\\right)=\\mathrm{y}$, इसलिए, $\\cos \\mathrm{y}=-\\frac{1}{2}=-\\cos \\frac{\\pi}{3}=\\cos \\left(\\pi-\\frac{\\pi}{3}\\right)=\\cos \\left(\\frac{2 \\pi}{3}\\right)$\nहम जानते हैं कि $\\cos ^{-1}$ की मुख्य शाखा का परिसर $[0, \\pi]$ होता है और $\\cos \\left(\\frac{2 \\pi}{3}\\right)=-\\frac{1}{2}$ है। अतः, $\\cos ^{-1}\\left(-\\frac{1}{2}\\right)$ का मुख्य मान $\\frac{2 \\pi}{3}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{2 \\pi}{3}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.6",
+      "kind": "exercise",
+      "number": "2.1.6",
+      "topic": "tan⁻¹(-1) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}(-1)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\tan ^{-1}(-1)=\\mathrm{y}$. इसलिए, $\\tan \\mathrm{y}=-1=-\\tan \\left(\\frac{\\pi}{4}\\right)=\\tan \\left(-\\frac{\\pi}{4}\\right)$\nहम जानते हैं कि $\\tan ^{-1}$ की मुख्य शाखा का परिसर $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$ होता है और $\\tan \\left(-\\frac{\\pi}{4}\\right)=-1$ है। अतः, $\\tan ^{-1}(-1)$ का मुख्य मान $-\\frac{\\pi}{4}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$-\\frac{\\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.7",
+      "kind": "exercise",
+      "number": "2.1.7",
+      "topic": "sec⁻¹(2/√3) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\sec ^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\sec ^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right)=y$, इसलिए, $\\sec y=\\frac{2}{\\sqrt{3}}=\\sec \\left(\\frac{\\pi}{6}\\right)$\nहम जानते हैं कि $\\sec ^{-1}$ की मुख्य शाखा का परिसर $[0, \\pi]-\\left\\{\\frac{\\pi}{2}\\right\\}$ होता है और $\\sec \\left(\\frac{\\pi}{6}\\right)=\\frac{2}{\\sqrt{3}}$ है। अतः, $\\sec ^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right)$ का मुख्य मान $\\frac{\\pi}{6}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.8",
+      "kind": "exercise",
+      "number": "2.1.8",
+      "topic": "cot⁻¹(√3) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\cot ^{-1}(\\sqrt{3})$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\cot ^{-1} \\sqrt{3}=\\mathrm{y}$, इसलिए, $\\cot \\mathrm{y}=\\sqrt{3}=\\cot \\left(\\frac{\\pi}{6}\\right)$.\nहम जानते हैं कि $\\cot ^{-1}$ की मुख्य शाखा का परिसर $(0, \\pi)$ होता है और $\\cot \\left(\\frac{\\pi}{6}\\right)=\\sqrt{3}$ है। अतः, $\\cot ^{-1} \\sqrt{3}$ का मुख्य मान $\\frac{\\pi}{6}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.9",
+      "kind": "exercise",
+      "number": "2.1.9",
+      "topic": "cos⁻¹(-1/√2) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\cos ^{-1}\\left(-\\frac{1}{\\sqrt{2}}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\cos ^{-1}\\left(-\\frac{1}{\\sqrt{2}}\\right)=\\mathrm{y}$, इसलिए, $\\cos \\mathrm{y}=-\\frac{1}{\\sqrt{2}}=-\\cos \\left(\\frac{\\pi}{4}\\right)=\\cos \\left(\\pi-\\frac{\\pi}{4}\\right)=\\cos \\left(\\frac{3 \\pi}{4}\\right)$.\nहम जानते हैं कि $\\cos ^{-1}$ की मुख्य शाखा का परिसर $[0, \\pi]$ होता है और $\\cos \\left(\\frac{3 \\pi}{4}\\right)=-\\frac{1}{\\sqrt{2}}$ है। अतः, $\\cos ^{-1}\\left(-\\frac{1}{\\sqrt{2}}\\right)$ का मुख्य मान $\\frac{3 \\pi}{4}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{3 \\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.10",
+      "kind": "exercise",
+      "number": "2.1.10",
+      "topic": "cosec⁻¹(-√2) का मुख्य मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\operatorname{cosec}^{-1}(-\\sqrt{2})$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\operatorname{cosec}^{-1}(-\\sqrt{2})=y$, इसलिए, $\\operatorname{cosec} y=-\\sqrt{2}=-\\operatorname{cosec}\\left(\\frac{\\pi}{4}\\right)=\\operatorname{cosec}\\left(-\\frac{\\pi}{4}\\right)$\nहम जानते हैं कि $\\operatorname{cosec}^{-1}$ की मुख्य शाखा का परिसर $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]-\\{0\\}$ होता है और $\\operatorname{cosec}\\left(-\\frac{\\pi}{4}\\right)=-\\sqrt{2}$ है। अतः, $\\operatorname{cosec}^{-1}(-\\sqrt{2})$ का मुख्य मान $-\\frac{\\pi}{4}$ है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$-\\frac{\\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.11",
+      "kind": "exercise",
+      "number": "2.1.11",
+      "topic": "tan⁻¹1+cos⁻¹(-1/2)+sin⁻¹(-1/2) का मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}(1)+\\cos ^{-1}\\left(-\\frac{1}{2}\\right)+\\sin ^{-1}\\left(-\\frac{1}{2}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\tan ^{-1}(1)=x$, इसलिए, $\\tan x=1=\\tan \\frac{\\pi}{4}$\nहम जानते हैं कि $\\tan ^{-1}$ की मुख्य शाखा का परिसर $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$ होता है। $\\therefore \\tan ^{-1}(1)=\\frac{\\pi}{4}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\cos ^{-1}\\left(-\\frac{1}{2}\\right)=y$, इसलिए,\n\n$$\n\\cos y=-\\frac{1}{2}=-\\cos \\frac{\\pi}{3}=\\cos \\left(\\pi-\\frac{\\pi}{3}\\right)=\\cos \\left(\\frac{2 \\pi}{3}\\right)\n$$\n\nहम जानते हैं कि $\\cos ^{-1}$ की मुख्य शाखा का परिसर $[0, \\pi]$ होता है। $\\therefore \\cos ^{-1}\\left(-\\frac{1}{2}\\right)=\\frac{2 \\pi}{3}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\sin ^{-1}\\left(-\\frac{1}{2}\\right)=z$, इसलिए,\n\n$$\n\\sin z=-\\frac{1}{2}=-\\sin \\frac{\\pi}{6}=\\sin \\left(-\\frac{\\pi}{6}\\right)\n$$\n\nहम जानते हैं कि $\\sin ^{-1}$ की मुख्य शाखा का परिसर $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$ होता है। $\\therefore \\sin ^{-1}\\left(-\\frac{1}{2}\\right)=-\\frac{\\pi}{6}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अब, $\\tan ^{-1}(1)+\\cos ^{-1}\\left(-\\frac{1}{2}\\right)+\\sin ^{-1}\\left(-\\frac{1}{2}\\right)$\n\n$$\n=\\frac{\\pi}{4}+\\frac{2 \\pi}{3}-\\frac{\\pi}{6}=\\frac{3 \\pi+8 \\pi-2 \\pi}{12}=\\frac{9 \\pi}{12}=\\frac{3 \\pi}{4}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{3 \\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.12",
+      "kind": "exercise",
+      "number": "2.1.12",
+      "topic": "cos⁻¹(1/2)+2sin⁻¹(1/2) का मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\cos ^{-1}\\left(\\frac{1}{2}\\right)+2 \\sin ^{-1}\\left(\\frac{1}{2}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\cos ^{-1}\\left(\\frac{1}{2}\\right)=x$, इसलिए,\n\n$$\n\\cos x=\\frac{1}{2}=\\cos \\frac{\\pi}{3}\n$$\n\nहम जानते हैं कि $\\cos ^{-1}$ की मुख्य शाखा का परिसर $[0, \\pi]$ होता है। $\\therefore \\cos ^{-1}\\left(\\frac{1}{2}\\right)=\\frac{\\pi}{3}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\sin ^{-1}\\left(\\frac{1}{2}\\right)=\\mathrm{y}$, इसलिए,\n\n$$\n\\sin y=\\frac{1}{2}=\\sin \\frac{\\pi}{6}\n$$\n\nहम जानते हैं कि $\\sin ^{-1}$ की मुख्य शाखा का परिसर $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$ होता है। $\\therefore \\sin ^{-1}\\left(\\frac{1}{2}\\right)=\\frac{\\pi}{6}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अब, $\\cos ^{-1}\\left(\\frac{1}{2}\\right)+2 \\sin ^{-1}\\left(\\frac{1}{2}\\right)=\\frac{\\pi}{3}+2 \\times \\frac{\\pi}{6}=\\frac{\\pi}{3}+\\frac{\\pi}{3}=\\frac{2 \\pi}{3}$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{2 \\pi}{3}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.13",
+      "kind": "exercise",
+      "number": "2.1.13",
+      "topic": "MCQ — sin⁻¹x=y का परिसर",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "यदि $\\sin ^{-1} x=y$, तो\n(A) $0 \\leq y \\leq \\pi$\n(B) $-\\frac{\\pi}{2} \\leq y \\leq \\frac{\\pi}{2}$\n(C) $0<y<\\pi$\n(D) $-\\frac{\\pi}{2}<y<\\frac{\\pi}{2}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\sin ^{-1} x=y$\nहम जानते हैं कि $\\sin ^{-1}$ की मुख्य शाखा का परिसर $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$ होता है। इसलिए, $-\\frac{\\pi}{2} \\leq \\mathrm{y} \\leq \\frac{\\pi}{2}$. अतः, विकल्प (B) सही है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(B)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.14",
+      "kind": "exercise",
+      "number": "2.1.14",
+      "topic": "MCQ — tan⁻¹√3-sec⁻¹(-2) का मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1} \\sqrt{3}-\\sec ^{-1}(-2)$ का मान बराबर है\n(A) $\\pi$\n(B) $-\\frac{\\pi}{3}$\n(C) $\\frac{\\pi}{3}$\n(D) $\\frac{2 \\pi}{3}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\tan ^{-1} \\sqrt{3}=x$, इसलिए,\n\n$$\n\\tan x=\\sqrt{3}=\\tan \\frac{\\pi}{3}\n$$\n\nहम जानते हैं कि $\\tan ^{-1}$ की मुख्य शाखा का परिसर $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$ होता है। $\\therefore \\tan ^{-1} \\sqrt{3}=\\frac{\\pi}{3}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\sec ^{-1}(-2)=\\mathrm{y}$, इसलिए,\n\n$$\n\\sec y=-2=-\\sec \\frac{\\pi}{3}=\\sec \\left(\\pi-\\frac{\\pi}{3}\\right)=\\sec \\left(\\frac{2 \\pi}{3}\\right)\n$$\n\nहम जानते हैं कि $\\sec ^{-1}$ की मुख्य शाखा का परिसर $[0, \\pi]-\\left\\{\\frac{\\pi}{2}\\right\\}$ होता है। $\\therefore \\sec ^{-1}(-2)=\\frac{2 \\pi}{3}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अब,\n\n$$\n\\tan ^{-1} \\sqrt{3}-\\sec ^{-1}(-2)=\\frac{\\pi}{3}-\\frac{2 \\pi}{3}=-\\frac{\\pi}{3}\n$$\n\nअतः, विकल्प (B) सही है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(B)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.1",
+      "kind": "exercise",
+      "number": "2.2.1",
+      "topic": "सिद्ध — 3sin⁻¹x=sin⁻¹(3x-4x³)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$3 \\sin ^{-1} x=\\sin ^{-1}\\left(3 x-4 x^{3}\\right), x \\in\\left[-\\frac{1}{2}, \\frac{1}{2}\\right]$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\sin ^{-1} x=\\theta$, तब $x=\\sin \\theta$ है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः,\n\n$$\n\\begin{aligned}\n\\mathrm{RHS} & =\\sin ^{-1}\\left(3 x-4 x^{3}\\right)=\\sin ^{-1}\\left(3 \\sin \\theta-4 \\sin ^{3} \\theta\\right) \\\\\n& =\\sin ^{-1}(\\sin 3 \\theta)=3 \\theta=3 \\sin ^{-1} x=\\mathrm{LHS}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_2.2.2",
+      "kind": "exercise",
+      "number": "2.2.2",
+      "topic": "सिद्ध — 3cos⁻¹x=cos⁻¹(4x³-3x)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$3 \\cos ^{-1} x=\\cos ^{-1}\\left(4 x^{3}-3 x\\right), x \\in\\left[\\frac{1}{2}, 1\\right]$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना, $\\cos ^{-1} x=\\theta$, तब $x=\\cos \\theta$ है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः,\n\n$$\n\\begin{aligned}\n\\mathrm{RHS} & =\\cos ^{-1}\\left(4 x^{3}-3 x\\right)=\\cos ^{-1}\\left(4 \\cos ^{3} \\theta-3 \\cos \\theta\\right) \\\\\n& =\\cos ^{-1}(\\cos 3 \\theta)=3 \\theta=3 \\cos ^{-1} x=\\mathrm{LHS}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_2.2.3",
+      "kind": "exercise",
+      "number": "2.2.3",
+      "topic": "सरलतम रूप — tan⁻¹((√(1+x²)-1)/x)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1} \\frac{\\sqrt{1+x^{2}}-1}{x}, x \\neq 0$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan ^{-1} \\frac{\\sqrt{1+x^{2}}-1}{x}$\nमाना, $x=\\tan \\theta$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\tan ^{-1} \\frac{\\sqrt{1+x^{2}}-1}{x}=\\tan ^{-1} \\frac{\\sqrt{1+\\tan ^{2} \\theta}-1}{\\tan \\theta} \\\\\n& =\\tan ^{-1}\\left(\\frac{\\sec \\theta-1}{\\tan \\theta}\\right)=\\tan ^{-1}\\left(\\frac{1-\\cos \\theta}{\\sin \\theta}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{2 \\sin ^{2} \\frac{\\theta}{2}}{2 \\sin \\frac{\\theta}{2} \\cos \\frac{\\theta}{2}}\\right)=\\tan ^{-1}\\left(\\tan \\frac{\\theta}{2}\\right) \\\\\n& =\\frac{\\theta}{2}=\\frac{1}{2} \\tan ^{-1} x\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{2} \\tan ^{-1} x$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.4",
+      "kind": "exercise",
+      "number": "2.2.4",
+      "topic": "सरलतम रूप — tan⁻¹(√((1-cosx)/(1+cosx)))",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}\\left(\\sqrt{\\frac{1-\\cos x}{1+\\cos x}}\\right), 0<x<\\pi$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan ^{-1}\\left(\\sqrt{\\frac{1-\\cos x}{1+\\cos x}}\\right)=\\tan ^{-1}\\left(\\sqrt{\\frac{2 \\sin ^{2} \\frac{x}{2}}{2 \\cos ^{2} \\frac{x}{2}}}\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n=\\tan ^{-1}\\left(\\sqrt{\\tan ^{2} \\frac{x}{2}}\\right)=\\tan ^{-1}\\left(\\tan \\frac{x}{2}\\right)=\\frac{x}{2}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{x}{2}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.5",
+      "kind": "exercise",
+      "number": "2.2.5",
+      "topic": "सरलतम रूप — tan⁻¹((cosx-sinx)/(cosx+sinx))",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}\\left(\\frac{\\cos x-\\sin x}{\\cos x+\\sin x}\\right), \\frac{-\\pi}{4}<x<\\frac{3 \\pi}{4}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan ^{-1}\\left(\\frac{\\cos x-\\sin x}{\\cos x+\\sin x}\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\tan ^{-1}\\left(\\frac{\\cos x-\\sin x}{\\cos x+\\sin x}\\right)=\\tan ^{-1}\\left(\\frac{1-\\frac{\\sin x}{\\cos x}}{1+\\frac{\\sin x}{\\cos x}}\\right)=\\tan ^{-1}\\left(\\frac{1-\\tan x}{1+\\tan x}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{1-\\tan x}{1+1 \\cdot \\tan x}\\right)=\\tan ^{-1}\\left(\\frac{\\tan \\frac{\\pi}{4}-\\tan x}{1+\\tan \\frac{\\pi}{4} \\cdot \\tan x}\\right) \\\\\n& =\\tan ^{-1}\\left[\\tan \\left(\\frac{\\pi}{4}-x\\right)\\right]=\\frac{\\pi}{4}-x\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{4}-x$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.6",
+      "kind": "exercise",
+      "number": "2.2.6",
+      "topic": "सरलतम रूप — tan⁻¹(x/√(a²-x²))",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1} \\frac{x}{\\sqrt{a^{2}-x^{2}}},|x|<a$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan ^{-1} \\frac{x}{\\sqrt{a^{2}-x^{2}}}$.\nमाना, $x=\\mathrm{a} \\sin \\theta$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\tan ^{-1} \\frac{x}{\\sqrt{a^{2}-x^{2}}}=\\tan ^{-1}\\left(\\frac{a \\sin \\theta}{\\sqrt{a^{2}-a^{2} \\sin ^{2} \\theta}}\\right)=\\tan ^{-1}\\left(\\frac{a \\sin \\theta}{a \\sqrt{1-\\sin ^{2} \\theta}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{a \\sin \\theta}{a \\sin \\theta}\\right)=\\tan ^{-1}(\\tan \\theta)=\\bar{\\theta}=\\sin ^{-1} \\frac{x}{a}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\sin ^{-1} \\frac{x}{a}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.7",
+      "kind": "exercise",
+      "number": "2.2.7",
+      "topic": "सरलतम रूप — tan⁻¹((3a²x-x³)/(a³-3ax²))",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}\\left(\\frac{3 a^{2} x-x^{3}}{a^{3}-3 a x^{2}}\\right), a>0 ; \\frac{-a}{\\sqrt{3}}<x<\\frac{a}{\\sqrt{3}}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan ^{-1}\\left(\\frac{3 a^{2} x-x^{3}}{a^{3}-3 a x^{2}}\\right)$\nमाना, $x=a \\tan \\theta$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\tan ^{-1}\\left(\\frac{3 a^{2} x-x^{3}}{a^{3}-3 a x^{2}}\\right)=\\tan ^{-1}\\left(\\frac{3 a^{2} \\cdot a \\tan \\theta-a^{3} \\tan ^{3} \\theta}{a^{3}-3 a \\cdot a^{2} \\tan ^{2} \\theta}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{3 a^{3} \\tan \\theta-a^{3} \\tan ^{3} \\theta}{a^{3}-3 a^{3} \\tan ^{2} \\theta}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{3 \\tan \\theta-\\tan ^{3} \\theta}{1-3 \\tan ^{2} \\theta}\\right) \\\\\n& =\\tan ^{-1}(\\tan 3 \\theta)=3 \\theta \\\\\n& =3 \\tan ^{-1} \\frac{x}{a}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$3 \\tan ^{-1} \\frac{x}{a}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.8",
+      "kind": "exercise",
+      "number": "2.2.8",
+      "topic": "मान — tan⁻¹[2cos(2sin⁻¹(1/2))]",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{1}\\left[2 \\cos \\left(2 \\sin ^{1} \\frac{1}{2}\\right)\\right]$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan ^{-1}\\left[2 \\cos \\left(2 \\sin ^{-1} \\frac{1}{2}\\right)\\right]$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\tan ^{-1}\\left[2 \\cos \\left(2 \\sin ^{-1} \\frac{1}{2}\\right)\\right]=\\tan ^{-1}\\left[2 \\cos \\left(2 \\sin ^{-1}\\left(\\sin \\frac{\\pi}{6}\\right)\\right)\\right] \\\\\n& =\\tan ^{-1}\\left[2 \\cos \\left(2 \\times \\frac{\\pi}{6}\\right)\\right]=\\tan ^{-1}\\left[2 \\cos \\left(\\frac{\\pi}{3}\\right)\\right]=\\tan ^{-1}\\left[2 \\times \\frac{1}{2}\\right] \\\\\n& =\\tan ^{-1}[1]=\\frac{\\pi}{4}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.9",
+      "kind": "exercise",
+      "number": "2.2.9",
+      "topic": "मान — tan(1/2)[sin⁻¹(2x/(1+x²))+cos⁻¹((1-y²)/(1+y²))]",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan \\frac{1}{2}\\left[\\sin ^{-1} \\frac{2 x}{1+x^{2}}+\\cos ^{-1} \\frac{1-y^{2}}{1+y^{2}}\\right],|x|<1, y>0$ तथा $x y<1$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan \\frac{1}{2}\\left[\\sin ^{-1} \\frac{2 x}{1+x^{2}}+\\cos ^{-1} \\frac{1-y^{2}}{1+y^{2}}\\right]$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\tan \\frac{1}{2}\\left[2 \\tan ^{-1} x+2 \\tan ^{-1} y\\right] \\quad\\left[\\because 2 \\tan ^{-1} x=\\sin ^{-1} \\frac{2 x}{1+x^{2}}=\\cos ^{-1} \\frac{1-x^{2}}{1+x^{2}}\\right] \\\\\n& =\\tan \\frac{1}{2}\\left[2\\left(\\tan ^{-1} x+\\tan ^{-1} y\\right)\\right]=\\tan \\left[\\tan ^{-1} x+\\tan ^{-1} y\\right] \\\\\n& =\\tan \\left[\\tan ^{-1} \\frac{x+y}{1-x y}\\right]=\\frac{x+y}{1-x y}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{x+y}{1-x y}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.10",
+      "kind": "exercise",
+      "number": "2.2.10",
+      "topic": "मान — sin⁻¹(sin(2π/3))",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\sin ^{-1}\\left(\\sin \\frac{2 \\pi}{3}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\sin ^{-1}\\left(\\sin \\frac{2 \\pi}{3}\\right)$."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "मुख्य सूत्र",
+          "flow": [
+            {
+              "type": "text",
+              "text": "हम जानते हैं कि $\\sin ^{-1}$ की मुख्य शाखा का परिसर $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$ होता है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\therefore \\sin ^{-1}\\left(\\sin \\frac{2 \\pi}{3}\\right)=\\sin ^{-1}\\left(\\sin \\left\\{\\pi-\\frac{\\pi}{3}\\right\\}\\right)=\\sin ^{-1}\\left(\\sin \\frac{\\pi}{3}\\right)=\\frac{\\pi}{3} \\in\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\n$$\n\nअतः, $\\sin ^{-1}\\left(\\sin \\frac{2 \\pi}{3}\\right)=\\frac{\\pi}{3}$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{3}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.11",
+      "kind": "exercise",
+      "number": "2.2.11",
+      "topic": "मान — tan⁻¹(tan(3π/4))",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}\\left(\\tan \\frac{3 \\pi}{4}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan ^{-1}\\left(\\tan \\frac{3 \\pi}{4}\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "मुख्य सूत्र",
+          "flow": [
+            {
+              "type": "text",
+              "text": "हम जानते हैं कि $\\tan ^{-1}$ की मुख्य शाखा का परिसर $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$ होता है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\tan ^{-1}\\left(\\tan \\frac{3 \\pi}{4}\\right)=\\tan ^{-1}\\left(\\tan \\left\\{\\pi-\\frac{\\pi}{4}\\right\\}\\right)=\\tan ^{-1}\\left(-\\tan \\frac{\\pi}{4}\\right) \\\\\n& =\\tan ^{-1}\\left(\\tan \\left\\{-\\frac{\\pi}{4}\\right\\}\\right)=-\\frac{\\pi}{4} \\in\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)\n\\end{aligned}\n$$\n\nअतः, $\\tan ^{-1}\\left(\\tan \\frac{3 \\pi}{4}\\right)=-\\frac{\\pi}{4}$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$-\\frac{\\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.12",
+      "kind": "exercise",
+      "number": "2.2.12",
+      "topic": "मान — tan(sin⁻¹(3/5)+cot⁻¹(3/2))",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan \\left(\\sin ^{-1} \\frac{3}{5}+\\cot ^{-1} \\frac{3}{2}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan \\left(\\sin ^{-1} \\frac{3}{5}+\\cot ^{-1} \\frac{3}{2}\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\tan \\left(\\sin ^{-1} \\frac{3}{5}+\\cot ^{-1} \\frac{3}{2}\\right)=\\tan \\left(\\tan ^{-1} \\frac{3}{\\sqrt{5^{2}-3^{2}}}+\\tan ^{-1} \\frac{2}{3}\\right) \\\\\n& \\quad\\left[\\because \\sin ^{-1} \\frac{a}{b}=\\tan ^{-1} \\frac{a}{\\sqrt{b^{2}-a^{2}}} \\text { तथा } \\cot ^{-1} \\frac{a}{b}=\\tan ^{-1} \\frac{b}{a}\\right] \\\\\n& =\\tan \\left(\\tan ^{-1} \\frac{3}{4}+\\tan ^{-1} \\frac{2}{3}\\right) \\\\\n& =\\tan \\left[\\tan ^{-1}\\left(\\frac{\\frac{3}{4}+\\frac{2}{3}}{1-\\frac{3}{4} \\times \\frac{2}{3}}\\right)\\right] \\\\\n& =\\tan \\left[\\tan ^{-1}\\left(\\frac{\\frac{9+8}{4 \\times 3}}{\\frac{4 \\times 3-3 \\times 2}{4 \\times 3}}\\right)\\right] \\\\\n& =\\tan \\left(\\tan ^{-1} \\frac{17}{6}\\right)=\\frac{17}{6}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{17}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.13",
+      "kind": "exercise",
+      "number": "2.2.13",
+      "topic": "MCQ — cos⁻¹(cos(7π/6)) का मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\cos ^{-1}\\left(\\cos \\frac{7 \\pi}{6}\\right)$ का मान बराबर है\n(A) $\\frac{7 \\pi}{6}$\n(B) $\\frac{5 \\pi}{6}$\n(C) $\\frac{\\pi}{3}$\n(D) $\\frac{\\pi}{6}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\cos ^{-1}\\left(\\cos \\frac{7 \\pi}{6}\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "मुख्य सूत्र",
+          "flow": [
+            {
+              "type": "text",
+              "text": "हम जानते हैं कि $\\cos ^{-1}$ की मुख्य शाखा का परिसर $[0, \\pi]$ होता है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\cos ^{-1}\\left(\\cos \\frac{7 \\pi}{6}\\right) \\\\\n& =\\cos ^{-1}\\left[\\cos \\left(2 \\pi-\\frac{5 \\pi}{6}\\right)\\right] \\\\\n& =\\cos ^{-1}\\left(\\cos \\frac{5 \\pi}{6}\\right) \\\\\n& =\\frac{5 \\pi}{6} \\in[0, \\pi]\n\\end{aligned}\n$$\n\nइसलिए, $\\cos ^{-1}\\left(\\cos \\frac{7 \\pi}{6}\\right)=\\frac{5 \\pi}{6}$\nअतः, विकल्प (B) सही है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(B)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.14",
+      "kind": "exercise",
+      "number": "2.2.14",
+      "topic": "MCQ — sin(π/3-sin⁻¹(-1/2)) का मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\sin \\left(\\frac{\\pi}{3}-\\sin ^{-1}\\left(-\\frac{1}{2}\\right)\\right)$ का मान है\n(A) $\\frac{1}{2}$ है\n(B) $\\frac{1}{3}$ है\n(C) $\\frac{1}{4}$ है\n(D) $1$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\sin \\left(\\frac{\\pi}{3}-\\sin ^{-1}\\left(-\\frac{1}{2}\\right)\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "मुख्य सूत्र",
+          "flow": [
+            {
+              "type": "text",
+              "text": "हम जानते हैं कि $\\sin ^{-1}$ की मुख्य शाखा का परिसर $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$ होता है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\sin \\left(\\frac{\\pi}{3}-\\sin ^{-1}\\left(-\\frac{1}{2}\\right)\\right) \\\\\n& =\\sin \\left[\\frac{\\pi}{3}-\\sin ^{-1}\\left(-\\sin \\frac{\\pi}{6}\\right)\\right] \\\\\n& =\\sin \\left[\\frac{\\pi}{3}-\\sin ^{-1}\\left\\{\\sin \\left(-\\frac{\\pi}{6}\\right)\\right\\}\\right] \\\\\n& =\\sin \\left(\\frac{\\pi}{3}+\\frac{\\pi}{6}\\right)=\\sin \\left(\\frac{3 \\pi}{6}\\right) \\\\\n& =\\sin \\frac{\\pi}{2}=1\n\\end{aligned}\n$$\n\nइसलिए, $\\sin \\left(\\frac{\\pi}{3}-\\sin ^{-1}\\left(-\\frac{1}{2}\\right)\\right)=1$\nअतः, विकल्प (D) सही है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(D)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.15",
+      "kind": "exercise",
+      "number": "2.2.15",
+      "topic": "MCQ — tan⁻¹√3-cot⁻¹(-√3) का मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1} \\sqrt{3}-\\cot ^{-1}(-\\sqrt{3})$ का मान\n(A) $\\pi$ है\n(B) $-\\frac{\\pi}{2}$ है\n(C) $0$ है\n(D) $2 \\sqrt{3}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan ^{-1} \\sqrt{3}-\\cot ^{-1}(-\\sqrt{3})$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "मुख्य सूत्र",
+          "flow": [
+            {
+              "type": "text",
+              "text": "हम जानते हैं कि $\\tan ^{-1}$ की मुख्य शाखा का परिसर $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$ तथा $\\cot ^{-1}$ की मुख्य शाखा का परिसर $(0, \\pi)$ होता है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\tan ^{-1} \\sqrt{3}-\\cot ^{-1}(-\\sqrt{3}) \\\\\n& =\\tan ^{-1}\\left(\\tan \\frac{\\pi}{3}\\right)-\\cot ^{-1}\\left(-\\cot \\frac{\\pi}{6}\\right) \\\\\n& =\\frac{\\pi}{3}-\\cot ^{-1}\\left[\\cot \\left(\\pi-\\frac{\\pi}{6}\\right)\\right] \\\\\n& =\\frac{\\pi}{3}-\\cot ^{-1}\\left(\\cot \\frac{5 \\pi}{6}\\right) \\\\\n& =\\frac{\\pi}{3}-\\frac{5 \\pi}{6}=\\frac{2 \\pi-5 \\pi}{6}=-\\frac{3 \\pi}{6}=-\\frac{\\pi}{2}\n\\end{aligned}\n$$\n\nइसलिए, $\\tan ^{-1} \\sqrt{3}-\\cot ^{-1}(-\\sqrt{3})=-\\frac{\\pi}{2}$\nअतः, विकल्प (B) सही है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(B)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.5.1",
+      "kind": "additional_exercise",
+      "number": "2.5.1",
+      "topic": "मान — cos⁻¹(cos(13π/6))",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\cos ^{-1}\\left(\\cos \\frac{13 \\pi}{6}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\cos ^{-1}\\left(\\cos \\frac{13 \\pi}{6}\\right)$\nहम जानते हैं कि $\\cos ^{-1}$ की मुख्य शाखा का परिसर $[0, \\pi]$ होता है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\cos ^{-1}\\left(\\cos \\frac{13 \\pi}{6}\\right)=\\cos ^{-1}\\left[\\cos \\left(2 \\pi+\\frac{\\pi}{6}\\right)\\right] \\\\\n& =\\cos ^{-1}\\left(\\cos \\frac{\\pi}{6}\\right)=\\frac{\\pi}{6} \\in[0, \\pi]\n\\end{aligned}\n$$\n\nइसलिए, $\\cos ^{-1}\\left(\\cos \\frac{13 \\pi}{6}\\right)=\\frac{\\pi}{6}$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.5.2",
+      "kind": "additional_exercise",
+      "number": "2.5.2",
+      "topic": "मान — tan⁻¹(tan(7π/6))",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}\\left(\\tan \\frac{7 \\pi}{6}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan ^{-1}\\left(\\tan \\frac{7 \\pi}{6}\\right)$\nहम जानते हैं कि $\\tan ^{-1}$ की मुख्य शाखा का परिसर $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$ होता है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\tan ^{-1}\\left(\\tan \\frac{7 \\pi}{6}\\right)=\\tan ^{-1}\\left[\\tan \\left(\\pi+\\frac{\\pi}{6}\\right)\\right] \\\\\n& =\\tan ^{-1}\\left(\\tan \\frac{\\pi}{6}\\right)=\\frac{\\pi}{6}\n\\end{aligned}\n$$\n\nइसलिए, $\\tan ^{-1}\\left(\\tan \\frac{7 \\pi}{6}\\right)=\\frac{\\pi}{6}$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.5.3",
+      "kind": "additional_exercise",
+      "number": "2.5.3",
+      "topic": "सिद्ध — 2sin⁻¹(3/5)=tan⁻¹(24/7)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "सिद्ध कीजिए: $2 \\sin ^{-1} \\frac{3}{5}=\\tan ^{-1} \\frac{24}{7}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{array}{ll}\n\\text { LHS }=2 \\sin ^{-1} \\frac{3}{5}=2 \\tan ^{-1} \\frac{3}{\\sqrt{5^{2-3^{2}}}} & {\\left[\\because \\sin ^{-1} \\frac{a}{b}=\\tan ^{-1} \\frac{a}{\\sqrt{b^{2}-a^{2}}}\\right]} \\\\\n=2 \\tan ^{-1} \\frac{3}{4}=\\tan ^{-1}\\left[\\frac{2 \\times \\frac{3}{4}}{1-\\left(\\frac{3}{4}\\right)^{2}}\\right] & {\\left[\\because 2 \\tan ^{-1} x=\\tan ^{-1} \\frac{2 x}{1-x^{2}}\\right]} \\\\\n=\\tan ^{-1}\\left[\\frac{\\frac{3}{2}}{\\frac{16-9}{16}}\\right] & \\\\\n=\\tan ^{-1}\\left(\\frac{3}{2} \\times \\frac{16}{7}\\right) & \\\\\n=\\tan ^{-1} \\frac{24}{7} & \\\\\n=\\text { RHS } &\n\\end{array}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_2.5.4",
+      "kind": "additional_exercise",
+      "number": "2.5.4",
+      "topic": "सिद्ध — sin⁻¹(8/17)+sin⁻¹(3/5)=tan⁻¹(77/36)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "सिद्ध कीजिए: $\\sin ^{-1} \\frac{8}{17}+\\sin ^{-1} \\frac{3}{5}=\\tan ^{-1} \\frac{77}{36}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\mathrm{LHS}=\\sin ^{-1} \\frac{8}{17}+\\sin ^{-1} \\frac{3}{5} \\\\\n& =\\tan ^{-1} \\frac{8}{\\sqrt{17^{2}-8^{2}}}+\\tan ^{-1} \\frac{3}{\\sqrt{5^{2}-3^{2}}} \\quad\\left[\\because \\sin ^{-1} \\frac{a}{b}=\\tan ^{-1} \\frac{a}{\\sqrt{b^{2}-a^{2}}}\\right] \\\\\n& =\\tan ^{-1} \\frac{8}{15}+\\tan ^{-1} \\frac{3}{4} \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{8}{15}+\\frac{3}{4}}{1-\\frac{8}{15} \\times \\frac{3}{4}}\\right] \\quad\\left[\\because \\tan ^{-1} x+\\tan ^{-1} y=\\tan ^{-1}\\left(\\frac{x+y}{1-x y}\\right)\\right] \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{32+45}{15 \\times 4}}{\\frac{15 \\times 4-8 \\times 3}{15 \\times 4}}\\right]=\\tan ^{-1}\\left[\\frac{\\frac{77}{60}}{\\frac{36}{60}}\\right] \\\\\n& =\\tan ^{-1} \\frac{77}{36}=\\text { RHS }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_2.5.5",
+      "kind": "additional_exercise",
+      "number": "2.5.5",
+      "topic": "सिद्ध — cos⁻¹(4/5)+cos⁻¹(12/13)=cos⁻¹(33/65)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "सिद्ध कीजिए: $\\cos ^{-1} \\frac{4}{5}+\\cos ^{-1} \\frac{12}{13}=\\cos ^{-1} \\frac{33}{65}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\text { LHS }=\\cos ^{-1} \\frac{4}{5}+\\cos ^{-1} \\frac{12}{13} \\\\\n& =\\tan ^{-1} \\frac{\\sqrt{5^{2}-4^{2}}}{4}+\\tan ^{-1} \\frac{\\sqrt{13^{2}-12^{2}}}{12} \\quad\\left[\\because \\cos ^{-1} \\frac{a}{b}=\\tan ^{-1} \\frac{\\sqrt{b^{2}-a^{2}}}{a}\\right] \\\\\n& =\\tan ^{-1} \\frac{3}{4}+\\tan ^{-1} \\frac{5}{12} \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{3}{4}+\\frac{5}{12}}{1-\\frac{3}{4} \\times \\frac{5}{12}}\\right] \\quad\\left[\\because \\tan ^{-1} x+\\tan ^{-1} y=\\tan ^{-1}\\left(\\frac{x+y}{1-x y}\\right)\\right] \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{36+20}{4 \\times 12}}{\\frac{4 \\times 12-3 \\times 5}{4 \\times 12}}\\right]=\\tan ^{-1} \\frac{56}{33} \\\\\n& =\\cos ^{-1} \\frac{33}{\\sqrt{56^{2}+33^{2}}} \\quad\\left[\\because \\tan ^{-1} \\frac{a}{b}=\\cos ^{-1} \\frac{b}{\\sqrt{a^{2}+b^{2}}}\\right] \\\\\n& =\\cos ^{-1} \\frac{33}{\\sqrt{4225}}=\\cos ^{-1} \\frac{33}{65}=\\text { RHS }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_2.5.6",
+      "kind": "additional_exercise",
+      "number": "2.5.6",
+      "topic": "सिद्ध — cos⁻¹(12/13)+sin⁻¹(3/5)=sin⁻¹(56/65)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "सिद्ध कीजिए: $\\cos ^{-1} \\frac{12}{13}+\\sin ^{-1} \\frac{3}{5}=\\sin ^{-1} \\frac{56}{65}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\mathrm{LHS}=\\cos ^{-1} \\frac{12}{13}+\\sin ^{-1} \\frac{3}{5}\n$$\n\n$$\n\\begin{aligned}\n& =\\tan ^{-1} \\frac{\\sqrt{13^{2}-12^{2}}}{12}+\\tan ^{-1} \\frac{3}{\\sqrt{5^{2}-3^{2}}} \\\\\n& =\\tan ^{-1} \\frac{5}{12}+\\tan ^{-1} \\frac{3}{4} \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{5}{12}+\\frac{3}{4}}{1-\\frac{5}{12} \\times \\frac{3}{4}}\\right] \\quad\\left[\\because \\tan ^{-1} \\frac{a}{b}=\\tan ^{-1} \\frac{\\sqrt{b^{2}-a^{2}}}{a} \\text { तथा } \\sin ^{-1} \\frac{a}{b}=\\tan ^{-1} \\frac{a}{\\sqrt{b^{2}-a^{2}}}\\right] \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{20+36}{12 \\times 4}}{\\frac{12 \\times 4-5 \\times 3}{12 \\times 4}}\\right]=\\tan ^{-1} \\frac{56}{33} \\\\\n& =\\sin ^{-1} \\frac{56}{\\sqrt{56^{2}+33^{2}}} \\quad\\left[\\because \\tan ^{-1} \\frac{a}{b}=\\sin ^{-1} \\frac{a}{\\sqrt{a^{2}+b^{2}}}\\right] \\\\\n& =\\sin ^{-1} \\frac{56}{\\sqrt{4225}}=\\sin ^{-1} \\frac{56}{65}=\\text { RHS }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_2.5.7",
+      "kind": "additional_exercise",
+      "number": "2.5.7",
+      "topic": "सिद्ध — tan⁻¹(63/16)=sin⁻¹(5/13)+cos⁻¹(3/5)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "सिद्ध कीजिए: $\\tan ^{-1} \\frac{63}{16}=\\sin ^{-1} \\frac{5}{13}+\\cos ^{-1} \\frac{3}{5}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\mathrm{RHS}=\\sin ^{-1} \\frac{5}{13}+\\cos ^{-1} \\frac{3}{5} \\\\\n& =\\tan ^{-1} \\frac{5}{\\sqrt{13^{2}-5^{2}}}+\\tan ^{-1} \\frac{\\sqrt{5^{2}-3^{2}}}{3}\\left[\\because \\cos ^{-1} \\frac{a}{b}=\\tan ^{-1} \\frac{\\sqrt{b^{2}-a^{2}}}{a} \\text { तथा } \\sin ^{-1} \\frac{a}{b}=\\tan ^{-1} \\frac{a}{\\sqrt{b^{2}-a^{2}}}\\right] \\\\\n& =\\tan ^{-1} \\frac{5}{12}+\\tan ^{-1} \\frac{4}{3} \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{5}{12}+\\frac{4}{3}}{1-\\frac{5}{12} \\times \\frac{4}{3}}\\right] \\quad\\left[\\because \\tan ^{-1} x+\\tan ^{-1} y=\\tan ^{-1}\\left(\\frac{x+y}{1-x y}\\right)\\right] \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{15+48}{12 \\times 3}}{\\frac{12 \\times 3-5 \\times 4}{12 \\times 3}}\\right]=\\tan ^{-1} \\frac{63}{16}=\\mathrm{RHS}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_2.5.8",
+      "kind": "additional_exercise",
+      "number": "2.5.8",
+      "topic": "सिद्ध — tan⁻¹√x=(1/2)cos⁻¹((1-x)/(1+x))",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "सिद्ध कीजिए: $\\tan ^{1} \\sqrt{x}=\\frac{1}{2} \\cos ^{1}\\left(\\frac{1-x}{1+x}\\right), x \\in[0,1]$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\text { LHS }=\\tan ^{-1} \\sqrt{x}=\\frac{1}{2} \\times 2 \\tan ^{-1} \\sqrt{x}=\\frac{1}{2} \\times 2 \\tan ^{-1} \\sqrt{x} \\\\\n& =\\frac{1}{2} \\cos ^{-1}\\left[\\frac{1-(\\sqrt{x})^{2}}{1+(\\sqrt{x})^{2}}\\right] \\quad \\quad\\left[\\because 2 \\tan ^{-1} x=\\cos ^{-1}\\left[\\frac{1-x^{2}}{1+x^{2}}\\right]\\right] \\\\\n& =\\frac{1}{2} \\cos ^{-1}\\left(\\frac{1-x}{1+x}\\right)=\\text { RHS }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_2.5.9",
+      "kind": "additional_exercise",
+      "number": "2.5.9",
+      "topic": "सिद्ध — cot⁻¹((√(1+sinx)+√(1-sinx))/(√(1+sinx)-√(1-sinx)))=x/2",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "सिद्ध कीजिए: $\\cot ^{1}\\left(\\frac{\\sqrt{1+\\sin x}+\\sqrt{1-\\sin x}}{\\sqrt{1+\\sin x}-\\sqrt{1-\\sin x}}\\right)=\\frac{x}{2}, x \\in\\left(0, \\frac{\\pi}{4}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\mathrm{LHS}=\\cot ^{-1}\\left(\\frac{\\sqrt{1+\\sin x}+\\sqrt{1-\\sin x}}{\\sqrt{1+\\sin x}-\\sqrt{1-\\sin x}}\\right)=\\cot ^{-1}\\left(\\frac{\\sqrt{1+\\cos \\left(\\frac{\\pi}{2}-x\\right)}+\\sqrt{1-\\cos \\left(\\frac{\\pi}{2}-x\\right)}}{\\sqrt{1+\\cos \\left(\\frac{\\pi}{2}-x\\right)}-\\sqrt{1-\\cos \\left(\\frac{\\pi}{2}-x\\right)}}\\right) \\\\\n& =\\cot ^{-1}\\left(\\frac{\\sqrt{1+\\cos y}+\\sqrt{1-\\cos y}}{\\sqrt{1+\\cos y}-\\sqrt{1-\\cos y}}\\right) \\quad\\left[\\text { माना } \\frac{\\pi}{2}-x=y\\right] \\\\\n& =\\cot ^{-1}\\left(\\frac{\\sqrt{2 \\cos ^{2} \\frac{y}{2}}+\\sqrt{2 \\sin ^{2} \\frac{y}{2}}}{\\sqrt{2 \\cos ^{2} \\frac{y}{2}}-\\sqrt{2 \\sin ^{2} \\frac{y}{2}}}\\right) \\quad\\left[\\because 1+\\cos y=2 \\cos ^{2} \\frac{y}{2} \\text { तथा } 1-\\cos y=2 \\sin ^{2} \\frac{y}{2}\\right] \\\\\n& =\\cot ^{-1}\\left(\\frac{\\sqrt{2} \\cos \\frac{y}{2}+\\sqrt{2} \\sin \\frac{y}{2}}{\\sqrt{2} \\cos \\frac{y}{2}-\\sqrt{2} \\sin \\frac{y}{2}}\\right) \\\\\n& =\\cot ^{-1}\\left(\\frac{1+\\tan \\frac{y}{2}}{1-\\tan ^{\\frac{y}{2}}}\\right) \\quad \\text { [प्रत्येक पद को } \\sqrt{2} \\cos \\frac{y}{2} \\text { से भाग देने पर] }\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& =\\cot ^{-1}\\left(\\frac{\\tan \\frac{\\pi}{4}+\\tan \\frac{y}{2}}{1-\\tan \\frac{\\pi}{4} \\cdot \\tan \\frac{y}{2}}\\right)=\\cot ^{-1}\\left[\\tan \\left(\\frac{\\pi}{4}+\\frac{y}{2}\\right)\\right] \\\\\n& =\\cot ^{-1}\\left[\\cot \\left\\{\\frac{\\pi}{2}-\\left(\\frac{\\pi}{4}+\\frac{y}{2}\\right)\\right\\}\\right]=\\frac{\\pi}{2}-\\left(\\frac{\\pi}{4}+\\frac{y}{2}\\right)=\\frac{\\pi}{4}-\\frac{y}{2} \\\\\n& =\\frac{\\pi}{4}-\\frac{1}{2}\\left(\\frac{\\pi}{2}-x\\right) \\quad \\quad\\left[\\because \\frac{\\pi}{2}-x=y\\right] \\\\\n& =\\frac{x}{2}=\\text { RHS }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_2.5.10",
+      "kind": "additional_exercise",
+      "number": "2.5.10",
+      "topic": "सिद्ध — tan⁻¹((√(1+x)-√(1-x))/(√(1+x)+√(1-x)))=π/4-(1/2)cos⁻¹x",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "सिद्ध कीजिए: $\\tan ^{1}\\left(\\frac{\\sqrt{1+x}-\\sqrt{1-x}}{\\sqrt{1+x}+\\sqrt{1-x}}\\right)=\\frac{\\pi}{4}-\\frac{1}{2} \\cos ^{1} x,-\\frac{1}{\\sqrt{2}} \\leq x \\leq 1$ [संकेत: $x=\\cos 2 \\theta$ रखिए]"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": null,
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\mathrm{LHS} & =\\tan ^{-1}\\left(\\frac{\\sqrt{1+x}-\\sqrt{1-x}}{\\sqrt{1+x}+\\sqrt{1-x}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{\\sqrt{1+\\cos y}-\\sqrt{1-\\cos y}}{\\sqrt{1+\\cos y}+\\sqrt{1-\\cos y}}\\right) \\quad[\\text { माना } x=\\cos y] \\\\\n& =\\tan ^{-1}\\left(\\frac{\\sqrt{2 \\cos ^{2} \\frac{y}{2}}-\\sqrt{2 \\sin ^{2} \\frac{y}{2}}}{\\sqrt{2 \\cos ^{2} \\frac{y}{2}}+\\sqrt{2 \\sin ^{2} \\frac{y}{2}}}\\right) \\quad\\left[\\because 1+\\cos y=2 \\cos ^{2} \\frac{y}{2} \\text { तथा } 1-\\cos y=2 \\sin ^{2} \\frac{y}{2}\\right] \\\\\n& =\\tan ^{-1}\\left(\\frac{\\sqrt{2} \\cos \\frac{y}{2}-\\sqrt{2} \\sin \\frac{y}{2}}{\\sqrt{2} \\cos \\frac{y}{2}+\\sqrt{2} \\sin \\frac{y}{2}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{1-\\tan \\frac{y}{2}}{1+\\tan \\frac{y}{2}}\\right) \\quad \\text { [प्रत्येक पद को } \\sqrt{2} \\cos \\frac{y}{2} \\text { से भाग देने पर] } \\\\\n& =\\tan ^{-1}\\left(\\frac{\\tan \\frac{\\pi}{4}-\\tan \\frac{y}{2}}{1+\\tan \\frac{\\pi}{4} \\cdot \\tan \\frac{y}{2}}\\right)=\\tan ^{-1}\\left[\\tan \\left(\\frac{\\pi}{4}-\\frac{y}{2}\\right)\\right] \\\\\n& =\\frac{\\pi}{4}-\\frac{y}{2}=\\frac{\\pi}{4}-\\frac{1}{2} \\cos ^{-1} x=\\mathrm{RHS}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_2.5.11",
+      "kind": "additional_exercise",
+      "number": "2.5.11",
+      "topic": "हल — 2tan⁻¹(cosx)=tan⁻¹(2cosecx)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$2 \\tan ^{-1}(\\cos x)=\\tan ^{-1}(2 \\operatorname{cosec} x)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $2 \\tan ^{-1}(\\cos x)=\\tan ^{-1}(2 \\operatorname{cosec} x)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "मान रखो",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\Rightarrow \\tan ^{-1}\\left(\\frac{2 \\cos x}{1-\\cos ^{2} x}\\right)=\\tan ^{-1}(2 \\operatorname{cosec} x) \\quad\\left[\\because 2 \\tan ^{-1} x=\\tan ^{-1} \\frac{2 x}{1-x^{2}}\\right] \\\\\n& \\Rightarrow \\frac{2 \\cos x}{1-\\cos ^{2} x}=2 \\operatorname{cosec} x \\\\\n& \\Rightarrow \\frac{2 \\cos x}{\\sin ^{2} x}=\\frac{2}{\\sin x} \\Rightarrow 2 \\sin x \\cdot \\cos x=2 \\sin ^{2} x \\\\\n& \\Rightarrow 2 \\sin x \\cdot \\cos x-2 \\sin ^{2} x=0 \\quad \\Rightarrow 2 \\sin x(\\cos x-\\sin x)=0 \\\\\n& \\Rightarrow 2 \\sin x=0 \\quad \\text { या } \\quad \\cos x-\\sin x=0\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "परन्तु $\\sin x \\neq 0$ क्योंकि यह समीकरण को संतुष्ट नहीं करता है। $\\therefore \\cos x-\\sin x=0$\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\cos x=\\sin x \\\\\n& \\Rightarrow \\tan x=1 \\\\\n& \\therefore x=\\frac{\\pi}{4}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$x=\\frac{\\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.5.12",
+      "kind": "additional_exercise",
+      "number": "2.5.12",
+      "topic": "हल — tan⁻¹((1-x)/(1+x))=(1/2)tan⁻¹x",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1} \\frac{1-x}{1+x}=\\frac{1}{2} \\tan ^{-1} x,(x>0)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\tan ^{-1} \\frac{1-x}{1+x}=\\frac{1}{2} \\tan ^{-1} x$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\Rightarrow \\tan ^{-1} 1-\\tan ^{-1} x=\\frac{1}{2} \\tan ^{-1} x \\quad\\left[\\because \\tan ^{-1} x-\\tan ^{-1} y=\\tan ^{-1}\\left(\\frac{x-y}{1+x y}\\right)\\right] \\\\\n& \\Rightarrow \\frac{\\pi}{4}=\\frac{3}{2} \\tan ^{-1} x \\\\\n& \\Rightarrow \\frac{\\pi}{6}=\\tan ^{-1} x \\\\\n& \\Rightarrow \\tan \\left(\\frac{\\pi}{6}\\right)=x \\\\\n& \\therefore x=\\frac{1}{\\sqrt{3}}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$x=\\frac{1}{\\sqrt{3}}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.5.13",
+      "kind": "additional_exercise",
+      "number": "2.5.13",
+      "topic": "MCQ — sin(tan⁻¹x), |x|<1 का मान",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\sin \\left(\\tan ^{-1} x\\right),|x|<1$ बराबर होता है:\n(A) $\\frac{x}{\\sqrt{1-x^{2}}}$\n(B) $\\frac{1}{\\sqrt{1-x^{2}}}$\n(C) $\\frac{1}{\\sqrt{1+x^{2}}}$\n(D) $\\frac{x}{\\sqrt{1+x^{2}}}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\sin \\left(\\tan ^{-1} x\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\sin \\left(\\sin ^{-1} \\frac{x}{\\sqrt{1+x^{2}}}\\right) \\quad\\left[\\because \\tan ^{-1} \\frac{a}{b}=\\sin ^{-1} \\frac{a}{\\sqrt{a^{2}+b^{2}}}\\right] \\\\\n& =\\frac{x}{\\sqrt{1+x^{2}}}\n\\end{aligned}\n$$\n\nअतः, विकल्प (D) सही है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(D)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.5.14",
+      "kind": "additional_exercise",
+      "number": "2.5.14",
+      "topic": "MCQ — sin⁻¹(1-x)-2sin⁻¹x=π/2 का हल",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "यदि $\\sin ^{-1}(1-x)-2 \\sin ^{-1} x=\\frac{\\pi}{2}$, तो $x$ का मान बराबर है:\n(A) $0, \\frac{1}{2}$\n(B) $1, \\frac{1}{2}$\n(C) $0$\n(D) $\\frac{1}{2}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "जानकारी",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिया है: $\\sin ^{-1}(1-x)-2 \\sin ^{-1} x=\\frac{\\pi}{2}$\nमाना, $x=\\sin y$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "मान रखो",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{array}{ll}\n\\therefore \\sin ^{-1}(1-\\sin y)-2 y=\\frac{\\pi}{2} & \\\\\n\\Rightarrow \\sin ^{-1}(1-\\sin y)=\\frac{\\pi}{2}+2 y & \\\\\n\\Rightarrow 1-\\sin y=\\sin \\left(\\frac{\\pi}{2}+2 y\\right) & \\\\\n\\Rightarrow 1-\\sin y=\\cos 2 y & \\\\\n\\Rightarrow 1-\\sin y=1-2 \\sin ^{2} y & {\\left[\\because \\cos 2 y=1-2 \\sin ^{2} y\\right]} \\\\\n\\Rightarrow 2 \\sin ^{2} y-\\sin y=0 & {[\\because x=\\sin y]} \\\\\n\\Rightarrow 2 x^{2}-x=0 & \\\\\n\\Rightarrow x(2 x-1)=0 & \\\\\n\\Rightarrow x=0 \\quad \\text { या } x=\\frac{1}{2} &\n\\end{array}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "निष्कर्ष",
+          "flow": [
+            {
+              "type": "text",
+              "text": "परन्तु $x \\neq \\frac{1}{2}$ क्योंकि यह समीकरण को संतुष्ट नहीं करता है।\n$\\therefore x=0$ दी गई समीकरण का हल है।\nअतः, विकल्प (C) सही है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(C)"
+        }
+      ]
+    }
+  ]
+}

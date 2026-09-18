@@ -2533,7 +2533,7 @@ $$
 :::concept{label="जानकारी"}
 हल विलयन की मोललता $=0.25 \mathrm{~m}=0.25 \mathrm{~mol} \mathrm{~kg}^{-1}$
 यूरिया $\left(\mathrm{NH}_{2} \mathrm{CONH}_{2}\right)$ का मोलर द्रव्यमान $=(14 \times 2)+(1 \times 4)+12+16=60 \mathrm{~g} \mathrm{~mol}^{-1}$
-विलायक (जल) का द्रव्यमान $=2.5 \mathrm{~kg}$
+यहाँ, $2.5 \mathrm{~kg}$ जलीय विलयन का द्रव्यमान है (यूरिया $+$ जल), न कि केवल जल का द्रव्यमान। माना यूरिया का द्रव्यमान $W$ ग्राम है, तब जल का द्रव्यमान $=(2500-W) \mathrm{~g}=\frac{(2500-W)}{1000} \mathrm{~kg}$ होगा।
 :::
 
 :::formula{label="मुख्य सूत्र"}
@@ -2543,13 +2543,21 @@ $$
 :::
 
 :::step{label="मान रखो"}
-$\left(0.25 \mathrm{~mol} \mathrm{~kg}^{-1}\right)=\frac{\text { यूरिया का द्रव्यमान }}{\left(60 \mathrm{~g} \mathrm{~mol}^{-1}\right) \times(2.5 \mathrm{~kg})}$
-यूरिया का द्रव्यमान $=\left(0.25 \mathrm{~mol} \mathrm{~kg}^{-1}\right) \times\left(60 \mathrm{~g} \mathrm{~mol}^{-1}\right) \times(2.5 \mathrm{~kg})=37.5 \mathrm{~g}$
+$$
+\begin{aligned}
+\left(0.25 \mathrm{~mol} \mathrm{~kg}^{-1}\right) & =\frac{W / 60}{(2500-W) / 1000} \\
+1000 \mathrm{~W} & =0.25 \times 60 \times(2500-W)=15(2500-W)=37500-15 W \\
+1015 \mathrm{~W} & =37500 \\
+W & =36.95 \mathrm{~g}
+\end{aligned}
+$$
+
+अतः यूरिया का द्रव्यमान $\approx 36.95 \mathrm{~g}$ है (पाठ्यपुस्तक की उत्तरमाला में यह मान $36.964 \mathrm{~g}$ दिया गया है)।
 :::
 :::
 
 :::answer
-**उत्तर:** यूरिया का द्रव्यमान $=37.5 \mathrm{~g}$
+**उत्तर:** यूरिया का द्रव्यमान $\approx 36.95 \mathrm{~g}$ (पाठ्यपुस्तक की उत्तरमाला: $36.964 \mathrm{~g}$)
 :::
 
 :::
@@ -2739,7 +2747,7 @@ $350 \mathrm{~K}$ पर शुद्ध द्रवों A एवं B के
 
 :::concept{label="जानकारी"}
 शुद्ध द्रव $A$ का वाष्प दाब $\left(p_{A}^{\circ}\right)=450 \mathrm{~mm}$
-शुद्ध द्रव $B$ का वाष्प दाब $\left(p_{B}^{\circ}\right)=700 \mathrm{~mm}$
+शुद्ध द्रव $B$ का वाष्प दाब $\left(p_{B}^{\circ}\right)=750 \mathrm{~mm}$
 विलयन का कुल वाष्प दाब $(p)=600 \mathrm{~mm}$
 :::
 
@@ -2748,15 +2756,15 @@ $350 \mathrm{~K}$ पर शुद्ध द्रवों A एवं B के
 $$
 \begin{aligned}
 \rho & =\rho_{A}^{\circ} x_{A}+\rho_{A}^{\circ} x_{B}=\rho_{A}^{\circ} x_{A}+\rho_{B}^{\circ}\left(1-x_{A}\right) \\
-(600 \mathrm{~mm}) & =450 \mathrm{~mm} \times x_{A}+700 \mathrm{~mm}\left(1-x_{A}\right) \\
-& =700 \mathrm{~mm}+x_{A}(450-700) \mathrm{mm} \\
-& =700-x_{A}(250 \mathrm{~mm}) \\
-x_{A} & =\frac{(700-600) \mathrm{mm}}{(250) \mathrm{mm}}=0.40
+(600 \mathrm{~mm}) & =450 \mathrm{~mm} \times x_{A}+750 \mathrm{~mm}\left(1-x_{A}\right) \\
+& =750 \mathrm{~mm}+x_{A}(450-750) \mathrm{mm} \\
+& =750-x_{A}(300 \mathrm{~mm}) \\
+x_{A} & =\frac{(750-600) \mathrm{mm}}{(300) \mathrm{mm}}=0.50
 \end{aligned}
 $$
 
-अत:, $A$ का मोल अंश $\left(x_{A}\right)=0.40$
-तथा, $B$ का मोल-अंश $\left(x_{B}\right)=1-0.40=0.60$
+अत:, $A$ का मोल अंश $\left(x_{A}\right)=0.50$
+तथा, $B$ का मोल-अंश $\left(x_{B}\right)=1-0.50=0.50$
 :::
 
 :::step{n="2"}
@@ -2764,18 +2772,18 @@ $$
 
 $$
 \begin{aligned}
-& \rho_{A}=\rho_{A}^{\circ} x_{A}=(450 \mathrm{~mm}) \times 0.40=180 \mathrm{~mm} \\
-& \rho_{B}=\rho_{B}^{\circ} x_{B}=(700 \mathrm{~mm}) \times 0.60=420 \mathrm{~mm}
+& \rho_{A}=\rho_{A}^{\circ} x_{A}=(450 \mathrm{~mm}) \times 0.50=225 \mathrm{~mm} \\
+& \rho_{B}=\rho_{B}^{\circ} x_{B}=(750 \mathrm{~mm}) \times 0.50=375 \mathrm{~mm}
 \end{aligned}
 $$
 
-वाष्प अवस्था में, $A$ का मोल-अंश $=\frac{\rho_{A}}{\rho_{A}+\rho_{B}}=\frac{(180) \mathrm{mm}}{(180+420) \mathrm{mm}}=0.30$
-वाष्प अवस्था में, $B$ का मोल-अंश $=\frac{\rho_{B}}{\rho_{A}+\rho_{B}}=\frac{(420) \mathrm{mm}}{(180+420) \mathrm{mm}}=0.70$
+वाष्प अवस्था में, $A$ का मोल-अंश $=\frac{\rho_{A}}{\rho_{A}+\rho_{B}}=\frac{(225) \mathrm{mm}}{(225+375) \mathrm{mm}}=0.375$
+वाष्प अवस्था में, $B$ का मोल-अंश $=\frac{\rho_{B}}{\rho_{A}+\rho_{B}}=\frac{(375) \mathrm{mm}}{(225+375) \mathrm{mm}}=0.625$
 :::
 :::
 
 :::answer
-**उत्तर:** द्रव अवस्था में संघटन: $x_{A}=0.40$, $x_{B}=0.60$; वाष्प अवस्था में संघटन: $A=0.30$, $B=0.70$
+**उत्तर:** द्रव अवस्था में संघटन: $x_{A}=0.50$, $x_{B}=0.50$; वाष्प अवस्था में संघटन: $A=0.375$, $B=0.625$
 :::
 
 :::

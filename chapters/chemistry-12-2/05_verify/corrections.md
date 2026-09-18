@@ -307,3 +307,211 @@
   > =1.09-0.77=+0.32 \mathrm{~V}
   > $$
   > अतः अभिक्रिया सम्भव नहीं है।
+
+### q_2.5 — solution (hi)
+- **Confidence:** high
+- **Reason:** Part (iv) used E deg(Br2/Br-) = 1.08 V, but chapter.hi.pdf's own Table 2.1 (page 37, confirmed by direct 200dpi render) states 1.09 V for this exact half-cell, and this same chapter's own q_2.17 solution already correctly uses 1.09 V for the identical couple - an internal self-contradiction. The 1.08 V value traces to a genuine error in solutions.hi.pdf page 76 (confirmed by direct render, not an OCR artifact). Corrected to 1.09 V throughout, giving emf = -1.298 V (was -1.288 V).
+- **Found:**
+  > हल (i) सेल समीकरण $\mathrm{Mg}(s)+\mathrm{Cu}^{2+}(\mathrm{aq}) \longrightarrow \mathrm{Mg}^{2+}(\mathrm{aq})+\mathrm{Cu}(\mathrm{s}) \quad(n=2)$
+  > नेर्न्स्ट समीकरण
+  > $$
+  > E_{\text {सेल }}=E_{\text {सेल }}^{\circ}-\frac{0.0591}{2} \log \frac{\left[\mathrm{Mg}^{2+}\right]}{\left[\mathrm{Cu}^{2+}\right]}
+  > $$
+  > सेल का emf,
+  > $$
+  > \begin{aligned}
+  > E_{\text {सेल }} & =[0.34-(-2.37)]-\frac{0.0591}{2} \log \frac{\left[10^{-3}\right]}{\left[10^{-4}\right]} \\
+  > & =2.71-0.02955=2.68 \mathrm{~V}
+  > \end{aligned}
+  > $$
+  > अत:
+  > $$
+  > \text { emf }=2.68 \mathrm{~V}
+  > $$
+  > (ii) सेल समीकरण $\mathrm{Fe}(\mathrm{s})+2 \mathrm{H}^{+}(\mathrm{aq}) \longrightarrow \mathrm{Fe}^{2+}(\mathrm{aq})+\mathrm{H}_{2}(\mathrm{~g}) \quad(n=2)$
+  > नेर्न्स्ट समीकरण $E_{\text {सेल }}=E_{\text {सेल }}^{\circ}-\frac{0.0591}{2} \log \frac{\left[\mathrm{Fe}^{2+}\right]}{\left[\mathrm{H}^{+}\right]^{2}}$
+  > सेल का emf,
+  > $$
+  > \begin{aligned}
+  > E_{\text {सेल }} & =[0-(-0.44)]-\frac{0.0591}{2} \log \frac{\left[10^{-3}\right]}{[1]^{2}} \\
+  > & =0.44-\frac{0.591}{2} \times(-3) \\
+  > & =0.44+0.0887 \\
+  > & =0.5287 \mathrm{~V} \\
+  > & \approx 0.53 \mathrm{~V}
+  > \end{aligned}
+  > $$
+  > अत:
+  > $$
+  > \text { emf }=0.53 \mathrm{~V}
+  > $$
+  > (iii) सेल समीकरण $\mathrm{Sn}(s)+2 \mathrm{H}^{+}(a q) \longrightarrow \mathrm{Sn}^{2+}(a q)+\mathrm{H}_{2}(g) \quad(n=2)$
+  > नेर्न्स्ट समीकरण $E_{\text {सेल }}=E_{\text {सेल }}^{\circ}-\frac{0.0591}{2} \log \frac{\left[\mathrm{Sn}^{2+}\right]}{\left[\mathrm{H}^{+}\right]^{2}}$
+  > सेल का emf
+  > $$
+  > \begin{aligned}
+  > E_{\text {सेल }} & =[0-(-0.14)]-\frac{0.0591}{2} \log \frac{[0.05]}{[0.02]^{2}} \\
+  > & =0.14-\frac{0.0591}{2} \times(2.097) \\
+  > & =0.14-0.0620=0.08 \mathrm{~V}
+  > \end{aligned}
+  > $$
+  > अत:
+  > $$
+  > \text { emf }=0.08 \mathrm{~V}
+  > $$
+  > (iv) सेल समीकरण $2 \mathrm{Br}^{-}(l)+2 \mathrm{H}^{+}(\mathrm{aq}) \longrightarrow \mathrm{Br}_{2}(l)+\mathrm{H}_{2}(g)$ $(n=2)$
+  > नेर्न्स्ट समीकरण
+  > $$
+  > E_{\text {सेल }}=E_{\text {सेल }}^{\circ}-\frac{0.0591}{2} \log \frac{1}{\left[\mathrm{Br}^{-}\right]^{2}\left[\mathrm{H}^{+}\right]^{2}}
+  > $$
+  > सेल का emf
+  > $$
+  > \begin{aligned}
+  > E_{\text {सेल }} & =[0-1.08]-\frac{0.0591}{2} \log \frac{1}{(0.01)^{2} \times(0.03)^{2}} \\
+  > & =-1.08-\frac{0.0591}{2} \log \left(1.111 \times 10^{7}\right) \\
+  > & =-1.08-\frac{0.0591}{2}(7.0457) \\
+  > & =-1.08-0.208 \\
+  > & =-1.288 \mathrm{~V}
+  > \end{aligned}
+  > $$
+  > अत:
+  > $$
+  > e m f=-1.288 \mathrm{~V}
+  > $$
+- **Should be:**
+  > हल (i) सेल समीकरण $\mathrm{Mg}(s)+\mathrm{Cu}^{2+}(\mathrm{aq}) \longrightarrow \mathrm{Mg}^{2+}(\mathrm{aq})+\mathrm{Cu}(\mathrm{s}) \quad(n=2)$
+  > नेर्न्स्ट समीकरण
+  > $$
+  > E_{\text {सेल }}=E_{\text {सेल }}^{\circ}-\frac{0.0591}{2} \log \frac{\left[\mathrm{Mg}^{2+}\right]}{\left[\mathrm{Cu}^{2+}\right]}
+  > $$
+  > सेल का emf,
+  > $$
+  > \begin{aligned}
+  > E_{\text {सेल }} & =[0.34-(-2.37)]-\frac{0.0591}{2} \log \frac{\left[10^{-3}\right]}{\left[10^{-4}\right]} \\
+  > & =2.71-0.02955=2.68 \mathrm{~V}
+  > \end{aligned}
+  > $$
+  > अत:
+  > $$
+  > \text { emf }=2.68 \mathrm{~V}
+  > $$
+  > (ii) सेल समीकरण $\mathrm{Fe}(\mathrm{s})+2 \mathrm{H}^{+}(\mathrm{aq}) \longrightarrow \mathrm{Fe}^{2+}(\mathrm{aq})+\mathrm{H}_{2}(\mathrm{~g}) \quad(n=2)$
+  > नेर्न्स्ट समीकरण $E_{\text {सेल }}=E_{\text {सेल }}^{\circ}-\frac{0.0591}{2} \log \frac{\left[\mathrm{Fe}^{2+}\right]}{\left[\mathrm{H}^{+}\right]^{2}}$
+  > सेल का emf,
+  > $$
+  > \begin{aligned}
+  > E_{\text {सेल }} & =[0-(-0.44)]-\frac{0.0591}{2} \log \frac{\left[10^{-3}\right]}{[1]^{2}} \\
+  > & =0.44-\frac{0.591}{2} \times(-3) \\
+  > & =0.44+0.0887 \\
+  > & =0.5287 \mathrm{~V} \\
+  > & \approx 0.53 \mathrm{~V}
+  > \end{aligned}
+  > $$
+  > अत:
+  > $$
+  > \text { emf }=0.53 \mathrm{~V}
+  > $$
+  > (iii) सेल समीकरण $\mathrm{Sn}(s)+2 \mathrm{H}^{+}(a q) \longrightarrow \mathrm{Sn}^{2+}(a q)+\mathrm{H}_{2}(g) \quad(n=2)$
+  > नेर्न्स्ट समीकरण $E_{\text {सेल }}=E_{\text {सेल }}^{\circ}-\frac{0.0591}{2} \log \frac{\left[\mathrm{Sn}^{2+}\right]}{\left[\mathrm{H}^{+}\right]^{2}}$
+  > सेल का emf
+  > $$
+  > \begin{aligned}
+  > E_{\text {सेल }} & =[0-(-0.14)]-\frac{0.0591}{2} \log \frac{[0.05]}{[0.02]^{2}} \\
+  > & =0.14-\frac{0.0591}{2} \times(2.097) \\
+  > & =0.14-0.0620=0.08 \mathrm{~V}
+  > \end{aligned}
+  > $$
+  > अत:
+  > $$
+  > \text { emf }=0.08 \mathrm{~V}
+  > $$
+  > (iv) सेल समीकरण $2 \mathrm{Br}^{-}(l)+2 \mathrm{H}^{+}(\mathrm{aq}) \longrightarrow \mathrm{Br}_{2}(l)+\mathrm{H}_{2}(g)$ $(n=2)$
+  > नेर्न्स्ट समीकरण
+  > $$
+  > E_{\text {सेल }}=E_{\text {सेल }}^{\circ}-\frac{0.0591}{2} \log \frac{1}{\left[\mathrm{Br}^{-}\right]^{2}\left[\mathrm{H}^{+}\right]^{2}}
+  > $$
+  > सेल का emf
+  > $$
+  > \begin{aligned}
+  > E_{\text {सेल }} & =[0-1.09]-\frac{0.0591}{2} \log \frac{1}{(0.01)^{2} \times(0.03)^{2}} \\
+  > & =-1.09-\frac{0.0591}{2} \log \left(1.111 \times 10^{7}\right) \\
+  > & =-1.09-\frac{0.0591}{2}(7.0457) \\
+  > & =-1.09-0.208 \\
+  > & =-1.298 \mathrm{~V}
+  > \end{aligned}
+  > $$
+  > अत:
+  > $$
+  > e m f=-1.298 \mathrm{~V}
+  > $$
+
+### q_2.16 — solution (hi)
+- **Confidence:** high
+- **Reason:** 863.7 s / 60 = 14.395 min = 14 min 23.7 s, not '14 min 39 s' as both solutions.hi.pdf page 84 (confirmed by direct render) and this pipeline's own solution stated - a genuine arithmetic error in the official solutions manual, not an OCR artifact. The charge/current-derived 863.7 s figure itself, and the downstream Cu/Zn mass calculations (which use 1295.6 C directly, not the time), are unaffected.
+- **Found:**
+  > हल (a)
+  > $$
+  > \mathrm{Ag}^{+}(\mathrm{aq})+\underset{1 \mathrm{~mol}}{\mathrm{e}^{-}} \longrightarrow \underset{\substack{1 \mathrm{~mol} \\(108 \mathrm{~g})}}{\mathrm{Ag}(\mathrm{~s})}
+  > $$
+  > $\because 108 \mathrm{~g}$ वैद्युत द्वारा सिल्वर निक्षेपित होता है $=96500 \mathrm{C}$ वैद्युत द्वारा
+  > $\therefore 1.45 \mathrm{~g}$ वैद्युत द्वारा सिल्वर निक्षेपित होता है $=\frac{(96500 \mathrm{C}) \times(1.45 \mathrm{~g})}{(108 \mathrm{~g})}$ $=1295.6 \mathrm{C}$ वैद्युत द्वारा
+  > $\because$ धारा $(i)=1.5 \mathrm{~A}$
+  > $$
+  > \begin{aligned}
+  > \therefore \text { समय }(t)=\frac{Q}{i}=\frac{(1295.6 \mathrm{C})}{(1.5 \mathrm{~A})} & =863.7 \mathrm{~s} \\
+  > & =14 \mathrm{~min} 39 \mathrm{~s}
+  > \end{aligned}
+  > $$
+  > (b)
+  > $$
+  > \mathrm{Cu}^{2+}(\mathrm{aq})+\underset{(2 \times 96500 \mathrm{C})}{2 \mathrm{e}^{-}} \longrightarrow \underset{63.5 \mathrm{~g}}{\mathrm{Cu}(\mathrm{~s})}
+  > $$
+  > $\because(2 \times 96500 \mathrm{C})$ वैद्युत प्रवाहित करने पर निक्षेपित $\mathrm{Cu}=63.5 \mathrm{~g}$
+  > $\therefore 1295.6 \mathrm{C}$ वैद्युत प्रवाहित करने पर निक्षेपित $\mathrm{Cu}=\frac{(63.5) \times(1295.6 \mathrm{C})}{(2 \times 96500 \mathrm{C})}=0.426 \mathrm{~g}$
+  > $$
+  > \mathrm{Zn}^{2+}(\mathrm{aq})+\underset{(2 \times 96500 \mathrm{C})}{2 \mathrm{e}^{-}} \longrightarrow \underset{65.3 \mathrm{~g}}{\mathrm{Zn}(\mathrm{~s})}
+  > $$
+  > $\because(2 \times 96500) \mathrm{C}$ वैद्युत प्रवाहित करने पर निक्षेपित $\mathrm{Zn}=65.3 \mathrm{~g}$
+  > $\therefore 1295.6 \mathrm{C}$ वैद्युत प्रवाहित करने पर निक्षेपित $\mathrm{Zn}=\frac{(65.3 \mathrm{~g}) \times(12956 \mathrm{C})}{(2 \times 96500 \mathrm{C})}$
+  > $$
+  > =0.438 \mathrm{~g}
+  > $$
+  > अतः निक्षेपित Cu की मात्रा $=0.426 \mathrm{~g}$
+  > तथा निक्षेपित Zn की मात्रा = $0.438 \mathrm{~g}$
+- **Should be:**
+  > हल (a)
+  > $$
+  > \mathrm{Ag}^{+}(\mathrm{aq})+\underset{1 \mathrm{~mol}}{\mathrm{e}^{-}} \longrightarrow \underset{\substack{1 \mathrm{~mol} \\(108 \mathrm{~g})}}{\mathrm{Ag}(\mathrm{~s})}
+  > $$
+  > $\because 108 \mathrm{~g}$ वैद्युत द्वारा सिल्वर निक्षेपित होता है $=96500 \mathrm{C}$ वैद्युत द्वारा
+  > $\therefore 1.45 \mathrm{~g}$ वैद्युत द्वारा सिल्वर निक्षेपित होता है $=\frac{(96500 \mathrm{C}) \times(1.45 \mathrm{~g})}{(108 \mathrm{~g})}$ $=1295.6 \mathrm{C}$ वैद्युत द्वारा
+  > $\because$ धारा $(i)=1.5 \mathrm{~A}$
+  > $$
+  > \begin{aligned}
+  > \therefore \text { समय }(t)=\frac{Q}{i}=\frac{(1295.6 \mathrm{C})}{(1.5 \mathrm{~A})} & =863.7 \mathrm{~s} \\
+  > & =14 \mathrm{~min} 23.7 \mathrm{~s} \approx 14 \mathrm{~min} 24 \mathrm{~s}
+  > \end{aligned}
+  > $$
+  > (b)
+  > $$
+  > \mathrm{Cu}^{2+}(\mathrm{aq})+\underset{(2 \times 96500 \mathrm{C})}{2 \mathrm{e}^{-}} \longrightarrow \underset{63.5 \mathrm{~g}}{\mathrm{Cu}(\mathrm{~s})}
+  > $$
+  > $\because(2 \times 96500 \mathrm{C})$ वैद्युत प्रवाहित करने पर निक्षेपित $\mathrm{Cu}=63.5 \mathrm{~g}$
+  > $\therefore 1295.6 \mathrm{C}$ वैद्युत प्रवाहित करने पर निक्षेपित $\mathrm{Cu}=\frac{(63.5) \times(1295.6 \mathrm{C})}{(2 \times 96500 \mathrm{C})}=0.426 \mathrm{~g}$
+  > $$
+  > \mathrm{Zn}^{2+}(\mathrm{aq})+\underset{(2 \times 96500 \mathrm{C})}{2 \mathrm{e}^{-}} \longrightarrow \underset{65.3 \mathrm{~g}}{\mathrm{Zn}(\mathrm{~s})}
+  > $$
+  > $\because(2 \times 96500) \mathrm{C}$ वैद्युत प्रवाहित करने पर निक्षेपित $\mathrm{Zn}=65.3 \mathrm{~g}$
+  > $\therefore 1295.6 \mathrm{C}$ वैद्युत प्रवाहित करने पर निक्षेपित $\mathrm{Zn}=\frac{(65.3 \mathrm{~g}) \times(12956 \mathrm{C})}{(2 \times 96500 \mathrm{C})}$
+  > $$
+  > =0.438 \mathrm{~g}
+  > $$
+  > अतः निक्षेपित Cu की मात्रा $=0.426 \mathrm{~g}$
+  > तथा निक्षेपित Zn की मात्रा = $0.438 \mathrm{~g}$
+
+### q_2.16 — final_answer (hi)
+- **Confidence:** high
+- **Reason:** Propagates the seconds-to-minutes correction above into the final answer line.
+- **Found:**
+  > समय = 863.7 s (14 min 39 s); निक्षेपित Cu = 0.426 g; निक्षेपित Zn = 0.438 g
+- **Should be:**
+  > समय = 863.7 s (≈ 14 min 24 s); निक्षेपित Cu = 0.426 g; निक्षेपित Zn = 0.438 g

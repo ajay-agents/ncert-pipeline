@@ -589,7 +589,7 @@ $\left[\mathrm{Ni}(\mathrm{CO})_{4}\right]$
 
 :::
 
-:::question{number="5.8" kind="exercise" id="q_5.8" topic="Types of isomerism in coordination compounds" corrections_applied="3"}
+:::question{number="5.8" kind="exercise" id="q_5.8" topic="Types of isomerism in coordination compounds" corrections_applied="4"}
 #### प्रश्न 5.8
 
 :::prompt
@@ -614,10 +614,10 @@ $\left[\mathrm{Ni}(\mathrm{CO})_{4}\right]$
 (a) बंधनी समावयवता
 (b) उपसहसंयोजन समावयवता
 (c) आयनन समावयवता
+(d) विलायकयोजन समावयवता
 2. त्रिविम समावयवता
 (a) ज्यामितीय समावयवता
 (b) ध्रुवण समावयवता
-(d) विलायकयोजन समावयवता
 
 उदाहरण
 
