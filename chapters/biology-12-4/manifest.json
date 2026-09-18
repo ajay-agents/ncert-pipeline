@@ -1,0 +1,259 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-17T13:44:17.351775+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "9aa8f53a06ab8c88",
+      "solutions.hi.pdf": "6300c8e9f1ec1188"
+    },
+    "counts": {
+      "chapter_hi_pages": 28,
+      "chapter_hi_chars": 54133,
+      "solutions_hi_pages": 8,
+      "solutions_hi_chars": 16745
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-17T13:51:57.301976+00:00",
+    "inputs": {
+      "chapter.hi.md": "cf859c948ddded9b",
+      "solutions.hi.md": "b1477dbe555e78cf"
+    },
+    "counts": {
+      "exercises_hi": 16,
+      "solutions_hi": 16,
+      "matched": 16,
+      "needs_review": 0,
+      "final_items": 16,
+      "gate_counts_issues": 0,
+      "gate_solutions_present_issues": 0,
+      "total_figures": 10
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "3 sub-agent extraction batches dispatched per step_2/extract.md, given this chapter's much richer content than biology-12-2/3 (27 tables, 25 images in the chapter PDF; 8 tables, 11 images in the solutions PDF, per stage 1) - unlike the prior two chapters, built via direct Python-object construction, this one used real extraction sub-agents: 1 batch for all 16 exercise questions (chapter.hi.md, straightforward transcription, no images/tables in question text itself), 2 batches for the 16 solutions (solutions.hi.md, Q1-8 and Q9-16, handling genuine tables - a dominance/recessiveness comparison table in sol_4.2(क), a blood-group Punnett-square table in sol_4.12 - and 11 figure references across the chapter). Clean 1:1 numeric correspondence between chapter (1-16) and solutions manual (1-16) - 0 needs_review. As with biology-12-2/3, the solutions manual labels this chapter its own 'अध्याय 5' while the textbook calls it 'अध्याय 4' - flagged at stage 1, distinct from the clean exercise-numbering match. q_4.7's 2 labelled parts ((क) लंबे-हरे, (ख) बौने हरे) have no per-part solution split in the solutions manual itself (sol_4.7 gives one combined answer covering both), so its parts carry no individual solution after the join - matching the established chemistry-12-4/5 pattern for this content shape; the combined answer lives at item level. Genuine source OCR noise transcribed as-is, not fixed (per Rule 4): 'गगयुग्मजी' for 'समयुग्मजी' in sol_4.6, several garbled words in sol_4.8/sol_4.10 - flagged for stage 5 verification against the source PDF."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-17T13:53:35.135762+00:00",
+    "inputs": {
+      "chapter.hi.md": "cf859c948ddded9b",
+      "solutions.hi.md": "b1477dbe555e78cf"
+    },
+    "counts": {
+      "exercises_hi": 16,
+      "solutions_hi": 16,
+      "matched": 16,
+      "needs_review": 0,
+      "final_items": 16,
+      "gate_counts_issues": 0,
+      "gate_solutions_present_issues": 0,
+      "total_figures": 11
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "3 sub-agent extraction batches dispatched per step_2/extract.md, given this chapter's much richer content than biology-12-2/3 (27 tables, 25 images in the chapter PDF; 8 tables, 11 images in the solutions PDF, per stage 1) - unlike the prior two chapters, built via direct Python-object construction, this one used real extraction sub-agents: 1 batch for all 16 exercise questions (chapter.hi.md, straightforward transcription, no images/tables in question text itself), 2 batches for the 16 solutions (solutions.hi.md, Q1-8 and Q9-16, handling genuine tables - a dominance/recessiveness comparison table in sol_4.2(क), a blood-group Punnett-square table in sol_4.12 - and 11 figure references across the chapter). Clean 1:1 numeric correspondence between chapter (1-16) and solutions manual (1-16) - 0 needs_review. As with biology-12-2/3, the solutions manual labels this chapter its own 'अध्याय 5' while the textbook calls it 'अध्याय 4' - flagged at stage 1, distinct from the clean exercise-numbering match. q_4.7's 2 labelled parts ((क) लंबे-हरे, (ख) बौने हरे) have no per-part solution split in the solutions manual itself (sol_4.7 gives one combined answer covering both), so its parts carry no individual solution after the join - matching the established chemistry-12-4/5 pattern for this content shape; the combined answer lives at item level. Genuine source OCR noise transcribed as-is, not fixed (per Rule 4): 'गगयुग्मजी' for 'समयुग्मजी' in sol_4.6, several garbled words in sol_4.8/sol_4.10 - flagged for stage 5 verification against the source PDF."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-17T13:54:44.775187+00:00",
+    "inputs": {
+      "chapter.hi.md": "b9b2dd637b118159"
+    },
+    "counts": {
+      "total_items": 16,
+      "examples_items": 0,
+      "examples_bytes": 248,
+      "qa_items": 16,
+      "qa_bytes": 41339
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-17T13:56:21.966740+00:00",
+    "inputs": {
+      "examples.hi.md": "3480e9eceb8a16af",
+      "qa.hi.md": "b9b2dd637b118159"
+    },
+    "counts": {
+      "examples_items": 0,
+      "qa_items": 16,
+      "combined_items": 16,
+      "combined_bytes": 41339
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-18T05:52:55.558535+00:00",
+    "inputs": {
+      "combined.hi.md": "b9b2dd637b118159",
+      "chapter.hi.pdf": "9aa8f53a06ab8c88",
+      "solutions.hi.pdf": "6300c8e9f1ec1188"
+    },
+    "counts": {
+      "corrections_total": 13,
+      "applied_high": 13,
+      "held": 0,
+      "structural_fixes": 1,
+      "gate_math_parity_issues": 0,
+      "gate_counts_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "3 sub-agent verification batches dispatched per step_5/verify.md (q_4.1-8, and q_4.9-16 which needed one retry - the first attempt stalled with no progress for 600s and was killed by the harness watchdog, re-dispatched successfully with narrower page-range guidance). 13 high-confidence corrections found and applied, all OCR-grade letter/matra/ conjunct corruptions (e.g. मकता->सकता, मोंटी->मीठी, नोला->नीला, सहलन्नता->सहलग्नता) plus two nested-exponent OCR artifacts in q_4.12's blood-group genotypes (I^{A_i} -> proper I^A + i as separate elements, matching the same pattern already used correctly elsewhere in the same item). One hand-applied structural fix: fig_4_25's caption had 3 OCR errors (युद्ध->शुद्ध, पौर्यों->पौधों, प्रवर्शन->प्रदर्शन) with no addressable Correction field (figure captions aren't covered by the schema's found/should_be mechanism). One genuine source defect confirmed NOT to be corrected, per the rule that should_be must reflect what the PDF actually shows: q_4.6's 'गगयुग्मजी' is independently confirmed to be exactly how the solutions PDF itself prints it (a damaged/clipped word right at the page's left margin, probably meant to be 'समयुग्मजी') - left as-is, faithfully reproducing the source defect. q_4.2's own internal inconsistent spelling (विपर्यासी vs विपयासी, द्विसंकर vs द्विसकर) was independently confirmed to be genuinely how the solutions PDF is printed both ways, not an extraction error - correctly left untouched. q_4.13's fig_4_33 is attached at item level (not nested inside part (ब), where it more naturally belongs content-wise) because pipeline/schema.py's Part model has no figures field at all - this is a hard schema limitation already discovered and worked around during stage 2, not a placement choice; item-level attachment is the only structurally valid option. All gates clean throughout (gate_math_parity, gate_counts). NOTE ON A FILESYSTEM INCIDENT during this stage: midway through the verify batch A sub-agent's run, this chapter's own working directory (chapters/biology-12-4/) was found renamed to a garbled, non-ASCII-looking name (chapters/`1r5=/) with fully intact contents underneath - not caused by any command this session issued deliberately, and not a git-recoverable event since this chapter's work-in-progress was never committed. Diagnosed and fixed with a plain directory rename back to the correct name; verified byte-for-byte size/content match against previously recorded values (combined.hi.md's exact byte count, manifest.json's exact entry count) before continuing - reported to the user directly, not silently absorbed."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-18T06:01:41.602396+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "712eff576dca6cf9"
+    },
+    "counts": {
+      "late_corrections_applied": 4,
+      "gate_math_parity_issues": 0,
+      "gate_counts_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "4 additional high-confidence corrections caught late, during stage 6 review, not during stage 5's own verification batches (a genuine gap in that stage's coverage - the batch B verify sub-agent explicitly reported q_4.10 as 'clean, word-for-word match' when it actually wasn't). Surfaced when the stage 6 simplify sub-agent for q_4.9-16 independently 'fixed' 4 apparent typos on its own initiative while simplifying prose (एण्टोजन->एण्टीजन, पीदियों->पीढ़ियों, मनुम्य...क्ट्रोल->मनुष्य...कन्ट्रोल, फीनोटाइए->फीनोटाइप) - flagged as a process concern (content correction is stage 5's job, with PDF verification, never stage 6's, regardless of how 'obvious' the typo looks), so before accepting any of it each word was independently re-verified against the actual source PDF pages (solutions.hi.pdf pages 5 and 7) rather than trusting the sub-agent's own judgment. All 4 confirmed as genuine extraction errors (not source-printed defects) and applied here via the proper found/should_be mechanism against chapter.verified.hi.md, restoring the correct stage-5-verify audit trail, rather than letting stage 6 quietly absorb an unauthorized content fix."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-18T06:02:46.696703+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "712eff576dca6cf9"
+    },
+    "counts": {
+      "items_total": 16,
+      "solution_fields_simplified": 11,
+      "solution_fields_unchanged": 12,
+      "restore_failed_batches": 0,
+      "gate_question_text_frozen_issues": 0,
+      "gate_answers_unchanged_issues": 0,
+      "gate_math_parity_issues": 0,
+      "gate_bilingual_issues_before": 30,
+      "gate_bilingual_issues_after": 30,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 2,
+    "notes": "2 sub-agent batches (q_4.1-8, q_4.9-16) dispatched per step_6/simplify.md, each on protect.freeze()'d text (chapter.verified.hi.md), restored via protect.restore() and merged by item id before gating. q_4.5's test-cross genotype conclusions (WW vs Ww) and q_4.11/q_4.12/q_4.16's 'which allele/parent is which' claims were simplified with extra care per the comparative-reordering risk documented in step_6/simplify.md - re-checked each rewrite against its own stated conclusion, none reversed. Genetics ratios (3:1, 9:3:3:1, 1:2:1) and genotype/allele notation were frozen tokens throughout, untouched by construction. One process concern caught and handled properly rather than either accepted or reverted: batch B's sub-agent independently 'fixed' 4 apparent typos while simplifying (एण्टोजन->एण्टीजन, पीदियों->पीढ़ियों, मनुम्य...क्ट्रोल->मनुष्य...कन्ट्रोल, फीनोटाइए->फीनोटाइप) - content correction is stage 5's job, with PDF verification, never stage 6's, regardless of how obvious a typo looks. Rather than trust the sub-agent's judgment (as happened with biology-12-3's stage 6, where two 'fixes' turned out to be genuine source-printed inconsistencies and had to be reverted), each of these 4 words was independently re-checked against the actual source PDF pages first. All 4 confirmed as genuine extraction errors this chapter's own stage-5 verification batches had missed (a real gap - the verify sub-agent explicitly called q_4.10 clean when it wasn't) - applied via a proper found/should_be correction pass against chapter.verified.hi.md (see the separate stage 5 manifest entry for that pass) before this merge, so the correct audit trail is stage 5 fixing content and stage 6 only rewording, never the other way around."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-18T06:10:40.265980+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "f54c6010c812a47b"
+    },
+    "counts": {
+      "items_total": 16,
+      "output_bytes": 42406,
+      "tag_parse_ok": true,
+      "protect_parity_issues": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 2,
+    "notes": "2 sub-agent batches (q_4.1-8, q_4.9-16) dispatched per step_7/format.md, adding :::concept for standalone named definitions (प्रभाविता का नियम in q_4.4, परीक्षार्थ संकरण in q_4.5, समयुग्मजी/विषमयुग्मजी and एकसंकर/द्विसंकर in q_4.2, मोर्गन का योगदान in q_4.9, वंशावली विश्लेषण and महत्त्व in q_4.10, XY विधि in q_4.11, सहप्रभाविता and अपूर्ण प्रभाविता in q_4.13's two parts, दात्र कोशिका अरक्तता and फिनाइलकीटोन्यूरिया in q_4.16) and :::table for the two genuine markdown tables (q_4.2(क)'s dominance/recessiveness comparison, q_4.12's blood-group Punnett-square cross), wrapped exactly as-is with no cell changes. 11 figures relocated to their first genuine textual reference point across both batches. The fixed given/formula/substitute/conclusion vocabulary was correctly never used - this chapter's content is genetics definitions/derivations, not numeric physics/chemistry-style calculations, and even q_4.3's short gamete-count calculation and q_4.5's test-cross genotype conclusions were left as plain text rather than forced into that pattern. q_4.5's WW/Ww genotype conclusions and q_4.7/q_4.8's trailing boxed ratio lines were left completely untouched as plain text, per explicit instruction not to alter or wrap them. q_4.13's fig_4_33 stays attached at item level, not moved into part (ब) - a hard schema limitation (Part has no figures field) discovered at stage 2, not a placement choice. No redundant trailing whole-item solutions found in any multi-part item this chapter. Merged by slicing exact raw top-level item blocks (mdio.markdown_to_items() cannot round-trip post-format nested structure - that's stage 8's job)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T06:16:41.488462+00:00",
+    "inputs": {
+      "structured.hi.md": "aecc932228df73bf"
+    },
+    "counts": {
+      "items": 16,
+      "parts": 7,
+      "distinct_figure_srcs": 11,
+      "gate_passed": true,
+      "given": 24,
+      "key_formula": 0,
+      "substitute": 1,
+      "conclusion": 12,
+      "other": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "given/key_formula/substitute/conclusion inference is fully mechanical per step_8/PROMPT.md (pipeline/serialize.py), so no model call was needed - stage 7's own labelling was taken as authoritative and unlabelled steps were inferred by position. This chapter has no :::step blocks (entirely :::concept/:::table plus plain prose), so the given/key_formula/substitute/conclusion stage distribution is driven purely by :::concept always mapping to 'given' and plain unlabelled solution text inferred by position - same mechanical logic as every prior chapter. This is the first chapter to carry real :::table blocks through this stage (q_4.2(क)'s dominance/recessiveness comparison, q_4.12's blood-group Punnett-square cross) - confirmed both serialize cleanly as table-type blocks with their markdown content preserved verbatim, no special-casing needed. Gate: fresh direct count from structured.hi.md (16 items, parts, 11 distinct figure srcs) matched the JSON's own count exactly."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T06:19:26.176385+00:00",
+    "inputs": {
+      "structured.hi.md": "aecc932228df73bf"
+    },
+    "counts": {
+      "items": 16,
+      "parts": 7,
+      "distinct_figure_srcs": 11,
+      "gate_passed": true,
+      "given": 24,
+      "key_formula": 0,
+      "substitute": 1,
+      "conclusion": 12,
+      "other": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "given/key_formula/substitute/conclusion inference is fully mechanical per step_8/PROMPT.md (pipeline/serialize.py), so no model call was needed - stage 7's own labelling was taken as authoritative and unlabelled steps were inferred by position. This chapter has no :::step blocks (entirely :::concept/:::table plus plain prose), so the given/key_formula/substitute/conclusion stage distribution is driven purely by :::concept always mapping to 'given' and plain unlabelled solution text inferred by position - same mechanical logic as every prior chapter. This is the first chapter to carry real :::table blocks through this stage (q_4.2(क)'s dominance/recessiveness comparison, q_4.12's blood-group Punnett-square cross) - confirmed both serialize cleanly as table-type blocks with their markdown content preserved verbatim, no special-casing needed. Gate: fresh direct count from structured.hi.md (16 items, parts, 11 distinct figure srcs) matched the JSON's own count exactly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-18T06:39:28.528407+00:00",
+    "inputs": {
+      "structured.hi.json": "7b47af0b0e8ba02f"
+    },
+    "counts": {
+      "html_bytes": 53340,
+      "distinct_figure_srcs_resolved": 11,
+      "figure_srcs_missing": 0,
+      "numeric_readback_fields_checked": 23,
+      "numeric_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored final.hi.html + final.hi.css, reusing biology-12-3's own build_page/latex2html template. Surveyed this chapter's own math spans (a real step up from biology-12-2/3 - genotype/allele notation with nested sub/superscripts, ratio notation, \\left/\\right delimiters) and found only one genuinely new command needed: \\varphi, mapped to the same phi glyph \\phi already used (a stylistic LaTeX variant of the same Greek letter, not a different one). Two Greek-letter symbols ($\\boldsymbol{\\sigma}$, $\\boldsymbol{\\varphi}$ in q_4.8) that probably represent OCR'd male/female (♂/♀) biological symbols were rendered exactly as extracted (literal Greek glyphs), not reinterpreted - stage 9 templates the JSON's own judgment calls, it doesn't make new ones about what an ambiguous symbol 'really' means. This chapter's mixed multi-part content shape (q_4.2/q_4.13 with per-part solutions, q_4.7 without) was confirmed to already work correctly via the existing per-item parts_have_content branch, no code change needed. First chapter to exercise render_table() for real content (dominance/recessiveness comparison, blood-group Punnett-square cross) - both serialized and rendered correctly, cell content verbatim. Two real rendering bugs caught and fixed during pre-finish checks, both now fixed in build_page_bio4.py for future reuse: (1) a literal backslash-escaped '\\&'/'\\%' sitting in PLAIN prose (outside any $...$ math span, e.g. '(Dominance \\& Recessiveness)', 'जनकीय अनुपात 100\\%') leaked the raw backslash onto the page, since the plain-text esc() path only HTML-escapes and never runs the LaTeX converter that would otherwise consume that backslash - fixed by un-escaping '\\&'/'\\%' back to plain characters before HTML-escaping. (2) the sentence-per-line splitter's decimal-point guard didn't protect an abbreviation dot between capital letters (e.g. 'I.Q.', 'T.H.') from being treated as a sentence boundary - 'इनका I.Q. स्तर...' tore into three separate lines ('इनका I.' / 'Q.' / 'स्तर...') before the fix; added a guard for a '.' immediately preceded by a single uppercase ASCII letter, verified it also correctly fixes 'T.H. Morgan' elsewhere in the same chapter without introducing any new page-count/line-count regression. Pre-finish checks: all 11 figure srcs resolve; lang=hi present; zero leaked raw LaTeX text; zero literal backslashes; 23 question/final_answer fields read back against the rendered HTML, 0 missing; manually spot-read q_4.2 (table + mixed concept labels), q_4.12 (table + corrected genotype notation), q_4.16 (two-disorder figure placement), and q_4.8 (the sigma/varphi symbols) directly in the rendered output - all correct."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-18T06:42:02.416641+00:00",
+    "inputs": {
+      "final.hi.html": "27958717b379b23a"
+    },
+    "counts": {
+      "page_count": 9,
+      "blank_pages": 0,
+      "pdf_bytes": 1439974,
+      "numeric_readback_checked": 2,
+      "numeric_readback_missing": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.hi.html file:// path (not a copy), waited for document.fonts.ready, called emulate_media('screen') before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base vowel-reordering bug), exported with print_background=True and prefer_css_page_size=True (no explicit format/width/height). Gate: 9 pages (sane for 16 items with 11 figures and 2 tables), 0 blank pages, numeric read-back re-run against the PDF's own fitz-extracted text using the same question/final_answer-field scope as stage 9. 2 distinct numeric tokens checked ('1' and '6', both from question text - e.g. q_4.3's '6 स्थलों') - this chapter's question text is almost entirely descriptive/definitional with no other embedded digits, and its rich numeric content (genotype ratios, dates, allele notation) lives in solution text, outside this gate's documented scope - both found correctly. Not independently re-verified: the known, currently-unresolved Chromium reph ('र्'+consonant) ToUnicode CMap bug documented in step_10/PROMPT.md - visual rendering is unaffected, only copy-paste/text-extraction of words containing that exact sequence; flagged to the user, not silently shipped around, consistent with how prior chapters handled the same known limitation."
+  }
+]

@@ -101,7 +101,7 @@ def calibrate(chapter_dir: Path) -> str:
 
     # --- Rule 5 (nothing invented): empty solutions must stay visible ---
     def _is_empty_solution(item) -> bool:
-        if item.parts:
+        if not item.solution.en and not item.solution.hi and item.parts:
             return all(not p.solution.en and not p.solution.hi for p in item.parts)
         return not item.solution.en and not item.solution.hi
 

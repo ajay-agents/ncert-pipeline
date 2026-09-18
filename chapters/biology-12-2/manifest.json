@@ -1,0 +1,251 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-17T08:35:45.300597+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "6fc09ccf85c68eb3",
+      "solutions.hi.pdf": "3e38bff63a987f03"
+    },
+    "counts": {
+      "chapter_hi_pages": 18,
+      "chapter_hi_chars": 33915,
+      "solutions_hi_pages": 9,
+      "solutions_hi_chars": 17849
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-17T08:43:37.334941+00:00",
+    "inputs": {
+      "chapter.hi.md": "e532875ba01efa6d",
+      "solutions.hi.md": "dfb2a00c038243f1"
+    },
+    "counts": {
+      "exercises_hi": 21,
+      "solutions_hi": 21,
+      "matched": 21,
+      "needs_review": 0,
+      "final_items": 21,
+      "gate_counts_issues": 0,
+      "gate_solutions_present_issues": 6
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Built directly as Python Item objects (not via sub-agent markdown extraction) given this chapter's small size (21 exercise items total; confirmed by reading both full 01_mathpix files: no उदाहरण/examples section and no अतिरिक्त प्रश्न/additional-exercises section exist in this chapter - only अभ्यास with 21 numbered questions). Still run through match.join_solutions() as mandated - only the two input lists' construction skipped an intermediate markdown round-trip. Clean 1:1 numeric correspondence between chapter and solutions manual (both use bare numbers 1-21, norm_num(chapter='2') prefixes both identically) - 0 needs_review, spot-checked several matched pairs by content (distinctive terms: LH/FSH hormones in Q7, XX/XY sex determination in Q19, twin types in Q20) to rule out the Rationalised-edition silent-mismatch failure mode documented in step_2/PROMPT.md, since a clean join alone isn't sufficient evidence. Two pre-existing source quirks transcribed as-is (Rule 4: do not fix): (1) chapter.hi.md's own Q1 part (च) is missing its blank marker ('...प्रक्रिया को कहते हैं।' with no $\\_\\_\\_\\_$) where the solutions manual's corresponding question restates it WITH the blank present - a Mathpix OCR loss on the chapter side specifically, flagged for stage 5 to verify against the source PDF page. (2) Q1's own part labels repeat '(ज)' twice (skipping fully sequential lettering after (झ)) in the chapter, and the solutions manual's answer key independently mislabels the same position '(ग)' (reusing a label already used earlier) instead of '(ज)' - both transcribed exactly as printed; join_solutions() zips parts positionally (by index, not by label) so this labelling drift does not affect which answer lands on which blank. Q15 has an analogous label quirk: chapter's own part labels are (क)(ख)(ग)(घ)(च) (skipping ङ) while the solutions manual's are (क)(ख)(ग)(घ)(ङ) (not skipping) - again positional, not label-based, matching keeps this correct. Figures: the 15 images embedded in the chapter body's own expository sections 2.1-2.7 (fig_2_0 through fig_2_14) are not tied to any extracted item (this chapter has no worked examples referencing them, and the अभ्यास section itself has zero inline image references) and are out of this pipeline's scope, which only extracts examples/exercises - not the full chapter body. The solutions manual's own 9 figures (fig_2_15 through fig_2_23) are each tied to one specific diagram question (Q2,3,5,6,9,12,13,14,20) and were attached at the solution-item level so join_solutions()'s own figure-merge logic carries them onto the matched exercise item. Chapter-level title 'मानव जनन' matches the textbook heading; note the solutions manual labels this same content its own 'अध्याय 3' (a chapter-numbering mismatch already flagged at stage 1, distinct from the exercise-numbering match itself, which is clean)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-17T08:45:25.884193+00:00",
+    "inputs": {
+      "chapter.hi.md": "9746b1e34b65ce4b"
+    },
+    "counts": {
+      "total_items": 21,
+      "examples_items": 0,
+      "examples_bytes": 122,
+      "qa_items": 21,
+      "qa_bytes": 46235
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-17T09:46:28.680932+00:00",
+    "inputs": {
+      "examples.hi.md": "9e18913013ee8c69",
+      "qa.hi.md": "9746b1e34b65ce4b"
+    },
+    "counts": {
+      "examples_items": 0,
+      "qa_items": 21,
+      "combined_items": 21,
+      "combined_bytes": 46235
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-17T10:06:32.406349+00:00",
+    "inputs": {
+      "combined.hi.md": "9746b1e34b65ce4b",
+      "chapter.hi.pdf": "6fc09ccf85c68eb3",
+      "solutions.hi.pdf": "3e38bff63a987f03"
+    },
+    "counts": {
+      "corrections_total": 18,
+      "applied_high": 16,
+      "held": 2,
+      "gate_math_parity_issues": 1,
+      "gate_counts_issues": 0,
+      "gate_passed": false
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "GATE FAILURE - see counts, discarded."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-17T10:08:28.775000+00:00",
+    "inputs": {
+      "combined.hi.md": "9746b1e34b65ce4b",
+      "chapter.hi.pdf": "6fc09ccf85c68eb3",
+      "solutions.hi.pdf": "3e38bff63a987f03"
+    },
+    "counts": {
+      "corrections_total": 17,
+      "applied_high": 15,
+      "held_medium": 2,
+      "gate_math_parity_issues": 0,
+      "gate_counts_issues": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "3 sub-agent verification batches (q_2.1-7, q_2.8-14, q_2.15-21) dispatched per step_5/verify.md, each reading the raw chapter.hi.pdf and solutions.hi.pdf directly (rendered via PyMuPDF since pdftoppm was unavailable; source PDFs use a legacy non-Unicode Devanagari font so raw text extraction is mojibake - images were the only reliable read path). 17 ordinary correction-block items found (excluding the blank-marker fix, handled separately below): 15 high-confidence applied, 2 medium-confidence held for user approval (q_2.12's हॉर्मोंन->हॉर्मोन extra-anusvara spelling; q_2.19's समयुंग्मकी->समयुग्मकी, ambiguous scan mark vs genuine diacritic, cross-checked against a clean second occurrence of the same term on the same page). All applied fixes were OCR-grade letter/conjunct corruptions (dropped or inserted matras/conjuncts, e.g. यूरेश->यूरेथ्रा, प्राफियन->ग्राफियन, ऋतुत्राव->ऋतुस्राव, धुवीय->ध्रुवीय) - gate_math_parity and gate_counts both clean for this pass, as expected for pure spelling fixes."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-17T10:08:28.776473+00:00",
+    "inputs": {
+      "combined.hi.md": "9746b1e34b65ce4b"
+    },
+    "counts": {
+      "structural_fixes": 3,
+      "gate_counts_issues": 0,
+      "gate_math_parity_explained_deltas": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "3 structural fixes applied by hand on top of the correction-block pass, none expressible as an ordinary found/should_be correction: (1) q_2.1 part (च) was missing its fill-in-the-blank marker entirely (chapter PDF's own printed text shows a dotted blank line before 'कहते हैं', matching every other part of this same question; confirmed independently by two separate sub-agent reads of the actual PDF page) - restoring it changes this field's own inline-math count 0->1, which gate_math_parity would otherwise flag as a parity violation against the correction-block pass's own before-snapshot; this is a verified restoration of source content, not a rewrite eating an equation, so it was applied directly and the resulting single gate_math_parity delta (checked against a fresh pre-structural-fix snapshot, not the original stage-4 file) is explained here rather than silently absorbed - matching chemistry-12-5's own precedent for this kind of structural gap. (2) q_2.9's figure caption read 'संरधना' (a non-word) where both source PDFs show 'संरचना' (structure) - figure captions have no Correction-addressable field in pipeline/schema.py. (3) q_2.3 was missing the short answer-heading line 'स्त्री जनन तन्त्र (Female Reproductive System)' that its sibling q_2.2 has for the identical diagram-question pattern, confirmed present on the source solutions-manual page - q_2.3's solution field was entirely empty, so no found/should_be correction could create it. All three verified against the source PDF pages directly, not from biology knowledge. Re-checked after applying: item count unchanged (21), gate_counts clean, round-trip parse clean."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-17T10:15:33.068312+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "93da98758f739bcd"
+    },
+    "counts": {
+      "medium_confidence_applied_after_user_approval": 2,
+      "gate_math_parity_issues": 0,
+      "gate_counts_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "User explicitly approved applying the 2 medium-confidence corrections held back from the earlier correction-block pass (q_2.12's हॉर्मोंन->हॉर्मोन, q_2.19's समयुंग्मकी->समयुग्मकी) via AskUserQuestion ('Yes, apply both'). Applied with min_confidence='medium' against the already-verified chapter.verified.hi.md (which already reflects the 15 auto-applied high-confidence corrections and the 3 hand-applied structural fixes). Both applied cleanly, gate_math_parity and gate_counts both zero issues, round-trip parse clean (21 items unchanged)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-17T10:28:33.167314+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "93da98758f739bcd"
+    },
+    "counts": {
+      "items_total": 21,
+      "solution_fields_simplified": 11,
+      "solution_fields_unchanged": 33,
+      "restore_failed_batches": 0,
+      "gate_question_text_frozen_issues": 0,
+      "gate_answers_unchanged_issues": 0,
+      "gate_math_parity_issues": 0,
+      "gate_bilingual_issues_before": 36,
+      "gate_bilingual_issues_after": 36,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "3 sub-agent batches (q_2.1-7, q_2.8-14, q_2.15-21) dispatched per step_6/simplify.md, each on protect.freeze()'d text (chapter.verified.hi.md), restored via protect.restore() and merged by item id before gating. q_2.19 (sex determination) was deliberately handled conservatively by its sub-agent - only the chromosome-description paragraph was lightly split at existing comma boundaries, while the causal 'father determines sex' conclusion paragraph was left verbatim to avoid the comparative-reordering risk documented in step_6/simplify.md (the physics-12-2 precedent). Several items had no real :::solution prose to simplify (q_2.1, q_2.16 - answers live entirely in per-part final_answer fields; q_2.9/q_2.13/q_2.14 - diagram-only, no solution block at all) and were correctly left untouched."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-17T10:34:52.449581+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "818218119813e586"
+    },
+    "counts": {
+      "items_total": 21,
+      "output_bytes": 48141,
+      "tag_parse_ok": true,
+      "protect_parity_issues": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "3 sub-agent batches (q_2.1-7, q_2.8-14, q_2.15-21) dispatched per step_7/format.md, each adding structure to this chapter's mostly definitional/descriptive content - almost entirely :::concept for standalone definitions (e.g. testis/ovary functions in q_2.4, corpus luteum/endometrium/acrosome/sperm-tail/fimbriae in q_2.15) and :::step for the two explicitly three-lettered-phase biological processes (spermatogenesis in q_2.6, oogenesis in q_2.12 - both use the same गुणन/वृद्धि/परिपक्वन phase structure in the source; normalised to the same :::step{n=...} treatment across both items after merging, since the two independent sub-agent batches had initially picked different containers - concept for q_2.6, step for q_2.12 - for what is structurally the same pattern). No genuine given/formula/substitute/conclusion numeric derivations exist in this chapter (confirmed: it's entirely descriptive/definitional biology content, no worked calculations), so that fixed vocabulary was correctly never used. Diagram-only items (q_2.9, q_2.13, q_2.14) and items whose whole content lives in :::part/:::answer (q_2.1 fill-in-blanks, q_2.16 true/false) were correctly left untouched - nothing to structure. No redundant trailing whole-item solutions found in any multi-part item this chapter. Merged by slicing exact raw top-level item blocks (mdio.markdown_to_items() cannot round-trip post-format nested structure - that's stage 8's job)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-17T10:36:00.822230+00:00",
+    "inputs": {
+      "structured.hi.md": "0e1447c2c198fa00"
+    },
+    "counts": {
+      "items": 21,
+      "parts": 23,
+      "distinct_figure_srcs": 9,
+      "gate_passed": true,
+      "given": 18,
+      "key_formula": 0,
+      "substitute": 6,
+      "conclusion": 10,
+      "other": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "given/key_formula/substitute/conclusion inference is fully mechanical per step_8/PROMPT.md (pipeline/serialize.py), so no model call was needed - stage 7's own labelling was taken as authoritative and unlabelled steps were inferred by position. This chapter has no genuine numeric derivations, so the fixed given/key_formula/substitute/conclusion vocabulary maps loosely onto q_2.6/q_2.12's three-phase :::step sequences (step1=given, step2=substitute, step3=conclusion by position) rather than a real formula-based calculation - an accepted, mechanical outcome of reusing the same stage-inference logic for descriptive process content, not a content error. Gate: fresh direct count from structured.hi.md (21 items, parts, distinct figure srcs) matched the JSON's own count exactly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-17T10:41:59.076133+00:00",
+    "inputs": {
+      "structured.hi.json": "f69a2a946db597ac"
+    },
+    "counts": {
+      "html_bytes": 60944,
+      "distinct_figure_srcs_resolved": 9,
+      "figure_srcs_missing": 0,
+      "numeric_readback_fields_checked": 62,
+      "numeric_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored final.hi.html + final.hi.css, reusing chemistry-12-5's own build_page/latex2html template. Surveyed this chapter's own math spans (a cross-subject reuse, Chemistry to Biology - the most different jump this pipeline has made) and found the existing converter's generic fallback paths already cover everything used here (bare integers, \\mathrm{}, a literal \\%, and \\_\\_\\_\\_ as this chapter's own fill-in-the-blank marker) - zero code changes needed, confirming RULES.md's own subject note that Biology content is figure-heavy and low on math. Unlike chemistry-12-4/12-5, this chapter's multi-part items (q_2.1, q_2.15, q_2.16) genuinely carry their own solution/final_answer content per :::part (parts_have_content=True for all three) - matching the ORIGINAL exemplar chapter's content shape, so the existing 'भाग (label)' per-part rendering path was used unchanged rather than chem4/5's special-cased fallback. Pre-finish checks: all 9 figure srcs resolve against the real 09_design/ directory; lang=hi present; zero leaked raw LaTeX text; 62 question/final_answer fields read back against the rendered HTML, 0 missing; manually spot-read q_2.1 (11-part fill-in-blanks), q_2.15 (5-part definitions), q_2.16 (7-part true/false) and q_2.3 (diagram-only, carrying the stage-5 hand-added answer heading) directly in the rendered output - all correct."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-17T10:47:14.076427+00:00",
+    "inputs": {
+      "final.hi.html": "c8afb1af36dd5086"
+    },
+    "counts": {
+      "page_count": 10,
+      "blank_pages": 0,
+      "pdf_bytes": 2052488,
+      "numeric_readback_checked": 1,
+      "numeric_readback_missing": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.hi.html file:// path (not a copy), waited for document.fonts.ready, called emulate_media('screen') before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base vowel-reordering bug), exported with print_background=True and prefer_css_page_size=True (no explicit format/width/height). Gate: 10 pages (sane for 21 items), 0 blank pages, numeric read-back re-run against the PDF's own fitz-extracted text (not assumed carried over from stage 9's HTML check) using the same question/final_answer-field scope as stage 9. Only 1 numeric token checked - this chapter's fill-in-the-blank (q_2.1) and true/false (q_2.16) final_answer fields are all words ('लैंगिक', 'सही', 'गलत', etc.), not numbers, and the chapter's own real numeric content (chromosome counts in q_2.19's solution, an ovulation-day figure in q_2.17's solution) lives in solution text, outside this gate's documented question/final_answer-only scope - q_2.21's question ('6 बच्चों को जन्म दिया है') is the sole numeric token in scope, found correctly. Not independently re-verified: the known, currently-unresolved Chromium reph ('र्'+consonant) ToUnicode CMap bug documented in step_10/PROMPT.md - visual rendering is unaffected, only copy-paste/text-extraction of words containing that exact sequence; flagged to the user, not silently shipped around, consistent with how prior chapters handled the same known limitation."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "chapter.hi.md": {
+    "chars": 100058,
+    "dollar_spans": 1718,
+    "table_rows": 41,
+    "image_refs": 11,
+    "devanagari_ratio": 0.409
+  },
+  "solutions.hi.md": {
+    "chars": 66445,
+    "dollar_spans": 1716,
+    "table_rows": 23,
+    "image_refs": 3,
+    "devanagari_ratio": 0.267
+  }
+}

@@ -1,0 +1,3830 @@
+{
+  "front": {
+    "title": "उपसहसंयोजन यौगिक",
+    "chapter": "5"
+  },
+  "items": [
+    {
+      "id": "ex_5.1",
+      "kind": "example",
+      "number": "5.1",
+      "topic": "Secondary valency from AgCl precipitation data",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "जलीय विलयनों में किए गए निम्नलिखित प्रेक्षणों के आधार पर निम्नलिखित यौगिकों में धातुओं की द्वितीयक संयोजकता बतलाइए।\n\nसूत्र\nआधिक्य में $\\mathrm{AgNO}_{3}$ मिलाने पर एक मोल यौगिक से अवक्षेपित $\\mathbf{A g C l}$ के मोलों की संख्या\n\n(i) $\\mathrm{PdCl}_{2} \\cdot 4 \\mathrm{NH}_{3}$ — $2$\n(ii) $\\mathrm{NiCl}_{2} \\cdot 6 \\mathrm{H}_{2} \\mathrm{O}$ — $2$\n(iii) $\\mathrm{PtCl}_{4} \\cdot 2 \\mathrm{HCl}$ — $0$\n(iv) $\\mathrm{CoCl}_{3} \\cdot 4 \\mathrm{NH}_{3}$ — $1$\n(v) $\\mathrm{PtCl}_{2} \\cdot 2 \\mathrm{NH}_{3}$ — $0$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) द्वितीयक संयोजकता $4$\n(ii) द्वितीयक संयोजकता $6$\n(iii) द्वितीयक संयोजकता $6$\n(iv) द्वितीयक संयोजकता $6$\n(v) द्वितीयक संयोजकता $4$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_5.2",
+      "kind": "example",
+      "number": "5.2",
+      "topic": "Formulas of coordination compounds from names",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्नलिखित उपसहसंयोजन यौगिकों के सूत्र लिखिए-\n\n(i) टेट्राऐम्मीनएक्वाक्लोरिडोकोबाल्ट(III)क्लोराइड\n(ii) पोटैशियम टेट्राहाइड्रॉक्सिडोजिंकेट(II)\n(iii) पोटैशियम ट्राइऑक्सैलेटोऐलुमिनेट(III)\n(iv) डाइक्लोरिडोबिस(एथेन-1, 2-डाइऐमीन)कोबाल्ट(III)\n(v) टेट्राकार्बोनिलनिकल(0)"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{4}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right) \\mathrm{Cl}\\right] \\mathrm{Cl}_{2}$\n(ii) $\\mathrm{K}_{2}\\left[\\mathrm{Zn}(\\mathrm{OH})_{4}\\right]$\n(iii) $\\mathrm{K}_{3}\\left[\\mathrm{Al}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$\n(iv) $\\left[\\mathrm{CoCl}_{2}(\\mathrm{en})_{2}\\right]^{+}$\n(v) $\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_5.3",
+      "kind": "example",
+      "number": "5.3",
+      "topic": "IUPAC names of coordination compounds",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्नलिखित उपसहसंयोजन यौगिकों के IUPAC नाम लिखिए-\n\n(i) $\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}\\left(\\mathrm{NO}_{2}\\right)\\right]$\n(ii) $\\mathrm{K}_{3}\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$\n(iii) $\\left[\\mathrm{CoCl}_{2}(\\text { en })_{2}\\right] \\mathrm{Cl}$\n(iv) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{CO}_{3}\\right)\\right] \\mathrm{Cl}$\n(v) $\\mathrm{Hg}\\left[\\mathrm{Co}(\\mathrm{SCN})_{4}\\right]$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) डाइऐम्मीनक्लोरिडोनाइट्रिटो-N-प्लैटिनम (II)\n(ii) पोटैशियम ट्राइऑक्सैलेटोक्रोमेट (III)\n(iii) डाइक्लोरिडोबिस(एथेन-1, 2-डाइऐमीन)कोबाल्ट (III)क्लोराइड\n(iv) पेन्टाऐम्मीनकार्बोनेटोकोबाल्ट (III) क्लोराइड\n(v) मर्क्यूरी (I) टेट्राथायोसायनेटो-S-कोबाल्टेट (III)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_5.4",
+      "kind": "example",
+      "number": "5.4",
+      "topic": "No geometrical isomerism in tetrahedral complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "वे चतुष्फलकीय संकुल जिनमें दो भिन्न प्रकार के एकदंतुर लिगन्ड केंद्रीय धातु आयन से जुड़े हों, ज्यामितीय समावयवता क्यों नहीं दर्शाते?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "चतुष्फलकीय संकुल ज्यामितीय समावयवता नहीं दर्शाते। इसका कारण यह है कि इनमें केंद्रीय धातु परमाणु से जुड़े एकदंतुर लिगन्डों की सापेक्ष स्थितियाँ आपस में एक जैसी होती हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_5.5",
+      "kind": "example",
+      "number": "5.5",
+      "topic": "Geometric isomers of [Fe(NH3)2(CN)4]-",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\left[\\mathrm{Fe}\\left(\\mathrm{NH}_{3}\\right)_{2}(\\mathrm{CN})_{4}\\right]^{-}$के ज्यामितीय समावयवों की संरचनाएं दर्शाइए।"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "समपक्ष समावयव"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_84.svg",
+          "caption": ""
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "विपक्ष समावयव"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_85.svg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "ex_5.6",
+      "kind": "example",
+      "number": "5.6",
+      "topic": "Chirality of cis and trans [CrCl2(ox)2]3-",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्नलिखित दो उपसहसंयोजन सत्ता में से कौन-सा काइरल (ध्रुवण घूर्णक) है?\n\n(क) समपक्ष $-\\left[\\mathrm{CrCl}_{2}(\\mathrm{ox})_{2}\\right]^{3-}$\n(ख) विपक्ष $-\\left[\\mathrm{CrCl}_{2}(\\mathrm{ox})_{2}\\right]^{3-}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ये दो उपसहसंयोजन सत्ता निम्न प्रकार से प्रदर्शित की जा सकती हैं -\n\n(क) समपक्ष $\\left[\\mathrm{CrCl}_{2}(\\mathrm{ox})_{2}\\right]^{3-}$"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_86.svg",
+          "caption": ""
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ख) विपक्ष $\\left[\\mathrm{CrCl}_{2}(\\mathrm{ox})_{2}\\right]^{3-}$"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_87.svg",
+          "caption": ""
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** इन दोनों में से (क) समपक्ष- $\\left[\\mathrm{CrCl}_{2}(\\mathrm{ox})_{2}\\right]^{3-}$ काइरल (ध्रुवण घूर्णक) है।"
+        }
+      ]
+    },
+    {
+      "id": "ex_5.7",
+      "kind": "example",
+      "number": "5.7",
+      "topic": "Geometry of [MnBr4]2- from magnetic moment",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\left[\\mathrm{MnBr}_{4}\\right]^{2-}$ के 'केवल-प्रचक्रण' चुंबकीय आघूर्ण का मान 5.9 BM है। संकुल आयन की ज्यामिति बतलाइए।"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "संकुल आयन में $\\mathrm{Mn}^{2+}$ आयन की समन्वय संख्या $4$ है। इसलिए यह या तो चतुष्फलकीय ( $s p^{3}$ संकरण ) होगा या वर्गसमतल ( $d s p^{2}$ संकरण )। परंतु इस संकुल आयन का चुंबकीय आघूर्ण 5.9 BM है, और इसका कारण $d$ कक्षकों में पाँच अयुगलित इलेक्ट्रॉनों की उपस्थिति है। इसलिए इसकी आकृति चतुष्फलकीय होनी चाहिए, वर्ग समतलीय नहीं।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.1",
+      "kind": "exercise",
+      "number": "5.1",
+      "topic": "Werner's postulates for bonding",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "वर्नर की अभिधारणाओं के आधार पर उपसहसंयोजन यौगिकों में आबंधन को समझाइए।"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "वर्नर के सिद्धान्त की मुख्य अभिधारणाएँ निम्न हैं।\n\n1. उपसहसंयोजन यौगिकों में धातुएँ दो प्रकार की संयोजकताएँ दर्शाती हैं - प्राथमिक तथा द्वितीयक।\n2. प्राथमिक संयोजकताएँ सामान्यतः आयननीय होती हैं। ये ऋणात्मक आयनों द्वारा संतुष्ट होती हैं।\n\n3. द्वितीयक संयोजकताएँ अन-आयननीय होती हैं। ये उदासीन अणुओं अथवा ऋणात्मक आयनों द्वारा संतुष्ट होती हैं। द्वितीयक संयोजकता उपसहसंयोजन संख्या के बराबर होती है। किसी धातु के लिए इसका मान सामान्यतः निश्चित होता है।\n4. धातु से द्वितीयक संयोजकता द्वारा जुड़े आयन/समूह एक निश्चित दिक्स्थान व्यवस्था में रहते हैं। यह व्यवस्था उपसहसंयोजन संख्या के अनुसार बदलती है। उदाहरण के लिए, $\\left[\\mathrm{CoCl}_{2}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right]^{+} \\mathrm{Cl}^{-}$ की संरचना निम्न प्रकार है।"
+            }
+          ],
+          "label": "वर्नर की अभिधारणाएँ"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_88.svg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "q_5.2",
+      "kind": "exercise",
+      "number": "5.2",
+      "topic": "Testing metal ions in coordination vs simple salts",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\mathrm{FeSO}_{4}$ विलयन तथा $\\left(\\mathrm{NH}_{4}\\right)_{2} \\mathrm{SO}_{4}$ विलयन का $1: 1$ मोलर अनुपात में मिश्रण $\\mathrm{Fe}^{2+}$ आयन का परीक्षण देता है परंतु $\\mathrm{CuSO}_{4}$ व जलीय अमोनिया का $1: 4$ मोलर अनुपात में मिश्रण $\\mathrm{Cu}^{2+}$ आयनो का परीक्षण नहीं देता। समझाइए क्यों?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{FeSO}_{4}(\\mathrm{aq})+\\left(\\mathrm{NH}_{4}\\right)_{2} \\mathrm{SO}_{4}(\\mathrm{aq}) \\longrightarrow \\mathrm{FeSO}_{4} \\cdot \\underset{\\text { मोहर लवण }}{\\left(\\mathrm{NH}_{4}\\right)_{2} \\mathrm{SO}_{4} \\cdot 6 \\mathrm{H}_{2} \\mathrm{O}}$"
+            }
+          ],
+          "label": "मोहर लवण बनना"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\mathrm{FeSO}_{4} \\cdot\\left(\\mathrm{NH}_{4}\\right)_{2} \\mathrm{SO}_{4} \\cdot 6 \\mathrm{H}_{2} \\mathrm{O} \\stackrel{(a q)}{\\rightleftharpoons} \\mathrm{Fe}^{2+}(\\mathrm{aq})+2 \\mathrm{NH}_{4}^{+}(\\mathrm{aq}) \\\\\n+2 \\mathrm{SO}_{4}^{2-}(\\mathrm{aq})+6 \\mathrm{H}_{2} \\mathrm{O}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मोहर लवण का आयनन"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "मोहर लवण जल में घुलकर $\\mathrm{Fe}^{2+}$ आयन देता है। इसलिए इसका जलीय विलयन $\\mathrm{Fe}^{2+}$ आयनों का परीक्षण देता है।\nलेकिन जब $\\mathrm{CuSO}_{4}(\\mathrm{aq})$ को $\\mathrm{NH}_{3}(\\mathrm{aq})$ में मिलाया जाता है, तो एक संकुल बनता है।"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\mathrm{CuSO}_{4}(\\mathrm{aq})+\\mathrm{NH}_{3}(\\mathrm{aq}) \\longrightarrow\\left[\\mathrm{Cu}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right] \\mathrm{SO}_{4}\n$$"
+            }
+          ],
+          "label": "संकुल का बनना"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "यह संकुल जल में घुलकर $\\mathrm{Cu}^{2+}$ आयन नहीं देता, क्योंकि यह संकुल आयन $\\left[\\mathrm{Cu}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right]^{2+}$ का भाग है। इसलिए $\\mathrm{CuSO}_{4}$ और $\\mathrm{NH}_{3}$ का विलयन $\\mathrm{Cu}^{2+}$ आयनों का परीक्षण नहीं देता।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.3",
+      "kind": "exercise",
+      "number": "5.3",
+      "topic": "Basic coordination terminology with examples",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "प्रत्येक के दो उदाहरण देते हुए निम्नलिखित को समझाइए- समन्वय समूह, लिगन्ड, उपसहसंयोजन संख्या, उपसहसंयोजन बहुफलक, होमोलेप्टिक तथा हेट्रोरोलेप्टिक।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_92.svg",
+          "caption": "त्रिकोणीय पिरैमिडी"
+        },
+        {
+          "src": "images/fig_5_93.svg",
+          "caption": "वर्ग पिरैमिडी"
+        },
+        {
+          "src": "images/fig_5_94.svg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) समन्वय सत्ता जब एक निश्चित संख्या में आयन अथवा अणु किसी केन्द्रीय धातु परमाणु या आयन से आबंधित होते हैं, तो वे मिलकर एक उपसहसंयोजन सत्ता अथवा समन्वय सत्ता बनाते हैं। उदाहरण $\\left[\\mathrm{CoCl}_{3}\\left(\\mathrm{NH}_{3}\\right)_{3}\\right]$, $\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$ आदि।"
+            }
+          ],
+          "label": "समन्वय सत्ता"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) लिगेण्ड उपसहसंयोजन सत्ता में केन्द्रीय परमाणु/आयन से जुड़े आयन अथवा अणु लिगेण्ड कहलाते हैं। ये (i) सामान्य आयन हो सकते हैं, जैसे $\\mathrm{Cl}^{-}$; (ii) छोटे अणु हो सकते हैं, जैसे $\\mathrm{H}_{2} \\mathrm{O}$ या $\\mathrm{NH}_{3}$; (iii) बड़े अणु हो सकते हैं, जैसे $\\mathrm{H}_{2} \\mathrm{NCH}_{2} \\mathrm{CH}_{2} \\mathrm{NH}_{2}$ या $\\mathrm{N}\\left(\\mathrm{CH}_{2} \\mathrm{CH}_{2} \\mathrm{NH}_{2}\\right)_{3}$; अथवा (iv) बृहदणु भी हो सकते हैं, जैसे प्रोटीन। उपसहसंयोजन के लिए उपलब्ध दाता परमाणुओं की संख्या के आधार पर लिगेण्डों को निम्न प्रकार बाँटा जा सकता है।\n    (a) एकदंतुर एक दाता परमाणु, उदाहरण $\\mathrm{NH}_{3}, \\bullet \\mathrm{Cl}$ आदि।\n    (b) द्विदंतुर दो दाता परमाणु, उदाहरण $\\mathrm{H}_{2} \\mathrm{NCH}_{2} \\mathrm{CH}_{2} \\mathrm{NH}_{2}$ (एथेन-1 . 2-डाइऐमीन) तथा $\\mathrm{C}_{2} \\mathrm{O}_{4}^{2-}$ (ऑक्सेलेट आयन आदि)।\n    (c) बहुदंतुर दो से अधिक दाता परमाणु, उदाहरण $\\mathrm{N}\\left(\\mathrm{CH}_{2} \\mathrm{CH}_{2} \\mathrm{NH}_{2}\\right)_{3}$, EDTA आदि।"
+            }
+          ],
+          "label": "लिगेण्ड"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) उपसहसंयोजन संख्या किसी संकुल में धातु आयन की उपसहसंयोजन संख्या (CN) उन दाता परमाणुओं की संख्या के बराबर होती है, जो लिगेण्डों में से सीधे धातु आयन से जुड़े होते हैं। उदाहरण के लिए, संकुल आयनों $\\left[\\mathrm{PtCl}_{6}\\right]^{2-}$ तथा $\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right]^{2+}$ में Pt तथा Ni की उपसहसंयोजन संख्या क्रमशः $6$ तथा $4$ है।"
+            }
+          ],
+          "label": "उपसहसंयोजन संख्या"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) उपसहसंयोजन बहुफलक केन्द्रीय परमाणु/आयन से सीधे जुड़े लिगेण्ड परमाणुओं की दिक्स्थान व्यवस्था को उपसहसंयोजन बहुफलक कहते हैं। इनमें अष्टफलकीय, वर्ग समतलीय तथा चतुष्फलकीय मुख्य हैं।\nउदाहरण के लिए, $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$ अष्टफलकीय है, $\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$ चतुष्फलकीय है तथा\n$\\left[\\mathrm{PtCl}_{4}\\right]^{2-}$ वर्ग समतली है।"
+            }
+          ],
+          "label": "उपसहसंयोजन बहुफलक"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_89.svg",
+          "caption": "अष्टफलकीय"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_90.svg",
+          "caption": "चतुष्फलकीय"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_91.svg",
+          "caption": "वर्ग समतली"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "यहाँ $M$ धातु परमाणु तथा $L$ लिगेण्डों को दर्शाता है।"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(v) होमोलेप्टिक संकुल इन संकुलों में धातु परमाणु केवल एक ही प्रकार के दाता समूह से जुड़ा रहता है। उदाहरण $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$"
+            }
+          ],
+          "label": "होमोलेप्टिक संकुल"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(vi) हेट्रोलेप्टिक संकुल इन संकुलों में धातु परमाणु एक से अधिक प्रकार के दाता समूहों से जुड़ा रहता है। उदाहरण, $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{4} \\mathrm{Cl}_{2}\\right]$"
+            }
+          ],
+          "label": "हेट्रोलेप्टिक संकुल"
+        }
+      ]
+    },
+    {
+      "id": "q_5.4",
+      "kind": "exercise",
+      "number": "5.4",
+      "topic": "Unidentate, bidentate, ambidentate ligands",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "एकदंतुर, द्विदंतुर तथा उभयदंतुर लिगन्ड से क्या तात्पर्य है? प्रत्येक के दो उदाहरण दीजिए।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_95.svg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_96.svg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) एकदंतुर जिन ऋणायनों/उदासीन अणुओं में केवल एक दाता परमाणु होता है, वे एकदंतुर लिगेण्ड कहलाते हैं।\nउदाहरण $\\mathrm{NH}_{3}, \\mathrm{Cl}^{-}, \\mathrm{H}_{2} \\mathrm{O}$ आदि।"
+            }
+          ],
+          "label": "एकदंतुर लिगेण्ड"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) द्विदंतुर जिन आयनों या अणुओं में दो दाता परमाणु होते हैं, वे द्विदंतुर लिगेण्ड कहलाते हैं।\nउदाहरण ऑक्सेलेट आयन; एथिलीन डाइऐमीन (en)"
+            }
+          ],
+          "label": "द्विदंतुर लिगेण्ड"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_97.svg",
+          "caption": "एथिलीन डाइऐमीन (en)"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) उभयदंतुर जो लिगेण्ड दो भिन्न परमाणुओं में से किसी एक द्वारा जुड़ सकता है, उसे उभयदंती संलग्नी या उभयदंतुर लिगेण्ड कहते हैं। उदाहरण $\\mathrm{NO}_{2}^{-}, \\mathrm{SCN}^{-}$ आयन।\n$\\mathrm{NO}_{2}^{-}$ आयन केन्द्रीय धातु परमाणु/आयन से या तो नाइट्रोजन द्वारा अथवा ऑक्सीजन द्वारा जुड़ सकता है। इसी प्रकार, $\\mathrm{SCN}^{-}$ आयन सल्फर अथवा नाइट्रोजन परमाणु द्वारा जुड़ सकता है।"
+            }
+          ],
+          "label": "उभयदंतुर लिगेण्ड"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_98.svg",
+          "caption": "नाइट्राइटों-N"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$M \\leftarrow \\mathrm{N}(=\\mathrm{O})(=\\mathrm{O})$ नाइट्राइटो-N $\\left(\\mathrm{NO}_{2}^{-}\\right)$\n$M \\leftarrow \\mathrm{O}-\\mathrm{N}=\\mathrm{O}$ नाइट्राइटो-O $\\left(\\mathrm{NO}_{2}^{-}\\right)$\n$M \\leftarrow \\mathrm{SCN}$ थायोसायनेटो $\\left(\\mathrm{SCN}^{-}\\right)$\n$M \\leftarrow \\mathrm{NCS}$ आइसो थायोसायनेटो $\\left(\\mathrm{SCN}^{-}\\right)$\n(जहाँ, $M=$ धातु परमाणु)"
+            }
+          ],
+          "label": "बंधन विधियाँ"
+        }
+      ]
+    },
+    {
+      "id": "q_5.5",
+      "kind": "exercise",
+      "number": "5.5",
+      "topic": "Oxidation number of metals in coordination entities",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्नलिखित उपसहसंयोजन सत्ता में धातुओं के ऑक्सीकरण अंक का उल्लेख कीजिए-"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)(\\mathrm{CN})(\\text { en })_{2}\\right]^{2+}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{CoBr}_{2}(\\mathrm{en})_{2}\\right]^{+}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{PtCl}_{4}\\right]^{2-}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_{3}\\right)_{3} \\mathrm{Cl}_{3}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना कि धातु की ऑक्सीकरण संख्या $x$ है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\left[\\mathrm{Co}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)(\\mathrm{CN})(\\text { en })_{2}\\right]^{2+}$\n$$\n\\begin{aligned}\nx+0+(-1)+(2 \\times 0) & =+2 \\\\\nx & =2+1=+3\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) $\\left[\\mathrm{CoBr}_{2}\\left(\\mathrm{en}_{2}\\right]^{+}\\right.$\n$$\n\\begin{aligned}\nx+2 \\times(-1)+(2 \\times 0) & =+1 \\\\\nx & =1+2=+3\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) $\\left[\\mathrm{PtCl}_{4}\\right]^{2-}$\n$$\n\\begin{aligned}\nx+(-1) 4 & =-2 \\\\\nx-4 & =-2 \\\\\nx & =-2+4=+2\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) $\\mathbf{K}_{\\mathbf{3}} \\mathbf{F e}(\\mathbf{C N})_{\\mathbf{6}}$\n$$\n\\begin{aligned}\n(+1) \\times 3+x+(-1) \\times 6 & =0 \\\\\n3+x-6 & =0 \\\\\nx-3 & =0 \\\\\nx & =+3\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(v) $\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_{3}\\right)_{3} \\mathrm{Cl}_{3}\\right]$\n$$\n\\begin{aligned}\nx+(3 \\times 0)+(3 \\times(-1)) & =0 \\\\\nx & =+3\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** (i) $+3$\n(ii) $+3$\n(iii) $+2$\n(iv) $+3$\n(v) $+3$"
+        }
+      ]
+    },
+    {
+      "id": "q_5.6",
+      "kind": "exercise",
+      "number": "5.6",
+      "topic": "IUPAC formulas from names",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "IUPAC नियमों के आधार पर निम्नलिखित के लिये सूत्र लिखिए-"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "टेट्राहाइड्रॉक्सिडोजिंकेट(II)"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "पोटैशियम टेट्राक्लोरिडोपैलेडेट(II)"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "डाइऐम्मीनडाइक्लोरिडो प्लेटिनम(II)"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "पोटैशियम टेट्रासायनिडोनिकैलेट(II)"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "पेन्टाऐम्मीननाइट्रिटो-O-कोबाल्ट(III)"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(vi)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "हेक्साऐम्मीनकोबाल्ट(III)सल्फेट"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(vii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "पोटैशियम ट्राइआक्सैलेटोक्रोमेट(III)"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(viii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "हेक्साऐम्मीनप्लैटिनम(IV)"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ix)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "टेट्राब्रोमिडो क्यूप्रेट(II)"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(x)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "पेन्टाऐम्मीननाइट्रिटो-N-कोबाल्ट(III)"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\left[\\mathrm{Zn}(\\mathrm{OH})_{4}\\right]^{2-}$\n(ii) $\\mathrm{K}_{2}\\left[\\mathrm{PdCl}_{4}\\right]$\n(iii) $\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}_{2}\\right]$\n(iv) $\\mathrm{K}_{2}\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]$\n\n(v) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}(\\mathrm{ONO})\\right]^{2+}$"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "note_type": "tip",
+          "label": "संकेतन का अर्थ",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(O यह दर्शाता है कि $\\mathrm{NO}_{2}$ समूह धातु परमाणु से ऑक्सीजन द्वारा जुड़ा है।)"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(vi) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]_{2}\\left(\\mathrm{SO}_{4}\\right)_{3}$\n(vii) $\\mathrm{K}_{3}\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$\n(viii) $\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{4+}$\n(ix) $\\left[\\mathrm{CuBr}_{4}\\right]^{2-}$\n(x) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right]^{2+}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.7",
+      "kind": "exercise",
+      "number": "5.7",
+      "topic": "IUPAC names of coordination compounds",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "IUPAC नियमों के आधार पर निम्नलिखित के सुव्यवस्थित नाम लिखिए-"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right] \\mathrm{Cl}_{3}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}\\left(\\mathrm{NH}_{2} \\mathrm{CH}_{3}\\right)\\right] \\mathrm{Cl}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Ti}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{4} \\mathrm{Cl}\\left(\\mathrm{NO}_{2}\\right)\\right] \\mathrm{Cl}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Mn}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(vi)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{NiCl}_{4}\\right]^{2-}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(vii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right] \\mathrm{Cl}_{2}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(viii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}(\\mathrm{en})_{3}\\right]^{3+}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ix)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) हेक्साऐमीनकोबाल्ट (III) क्लोराइड\n(ii) डाइऐमीनक्लोरोडो (मिथाइल ऐमीन) प्लेटिनम (II) क्लोराइड\n(iii) हेक्साएक्वाटाइटेनियम (III) आयन\n(iv) टेट्राऐमीनक्लोरोडोनाइट्राइटो-N-कोबाल्ट (III) क्लोराइड\n(v) हेक्साएक्वामैंगनीज (II) आयन\n(vi) टेट्राक्लोरोडोनिकैलेट (II) आयन\n(vii) हेक्साऐमीननिकैल (II) क्लोराइड\n(viii) ट्रिस(एथेन-1, 2-डाइऐमीन) कोबाल्ट (III) आयन\n(ix) टेट्राकार्बोनिल निकैल (0)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.8",
+      "kind": "exercise",
+      "number": "5.8",
+      "topic": "Types of isomerism in coordination compounds",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "उपसहसंयोजन यौगिकों के लिए संभावित विभिन्न प्रकार की समावयवताओं को सूचीबद्ध कीजिए तथा प्रत्येक का एक उदाहरण दीजिए।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_51.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "उपसहसंयोजक यौगिकों में समावयवता मुख्यतः दो प्रकार की होती है।\n\n1. संरचनात्मक समावयवता\n(a) बंधनी समावयवता\n(b) उपसहसंयोजन समावयवता\n(c) आयनन समावयवता\n2. त्रिविम समावयवता\n(a) ज्यामितीय समावयवता\n(b) ध्रुवण समावयवता\n(d) विलायकयोजन समावयवता"
+            }
+          ],
+          "label": "समावयवता के प्रकार"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "उदाहरण\n\n1. (a) बंधनी समावयवता\n    (i) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{NO}_{2}\\right] \\mathrm{Cl}_{2}$ तथा $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{ONO}\\right] \\mathrm{Cl}_{2}$\n    (ii) $\\left[\\mathrm{Mn}(\\mathrm{CO})_{5} \\mathrm{SCN}\\right]$ तथा $\\left[\\mathrm{Mn}(\\mathrm{CO})_{5} \\mathrm{NCS}\\right]$\n    (b) उपसहसंयोजन समावयवता\n    (i) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]\\left[\\mathrm{Cr}(\\mathrm{CN})_{6}\\right]$ तथा $\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]\\left[\\mathrm{Co}(\\mathrm{CN})_{6}\\right]$\n    (c) आयनन समावयवता\n        (i) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{SO}_{4}\\right] \\mathrm{Br}$ तथा $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Br}\\right] \\mathrm{SO}_{4}$\n    (d) विलायकयोजन समावयवता\n    (i) $\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right] \\mathrm{Cl}_{3}$ (बैंगनी) तथा $\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{Cl}_{2} \\cdot \\mathrm{H}_{2} \\mathrm{O}$ (स्लेटी हरा)\n2. (a) ज्यामितीय समावयवता\n    (i) $\\left[\\mathrm{CoCl}_{2}(\\mathrm{en})_{2}\\right]$ के समपक्ष तथा विपक्ष समावयव\n\n    (b)ध्रुवण समावयवता\n(i) $\\left[\\mathrm{Co}(\\mathrm{en})_{3}\\right]^{3+}$ के दो रूप दक्षिणावर्त ($d$) और वामावर्त ($l$) हैं।"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_52.jpg",
+          "caption": "दक्षिणावर्त ( $d$-)"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_53.jpg",
+          "caption": "वामावर्त ( $l$-)"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "विपक्ष रूप\n\n\nदर्पण"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.9",
+      "kind": "exercise",
+      "number": "5.9",
+      "topic": "Number of geometrical isomers possible",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्नलिखित उपसहसंयोजन सत्ता में कितने ज्यामितीय समावयव संभव हैं?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_54.jpg",
+          "caption": ""
+        }
+      ],
+      "parts": [
+        {
+          "label": "(क)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ख)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{3} \\mathrm{Cl}_{3}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) ज्यामितीय समावयव संभव नहीं\n(ii) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{3} \\mathrm{Cl}_{3}\\right]$ के लिए दो ज्यामितीय समावयव संभव हैं।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** (i) ज्यामितीय समावयव संभव नहीं\n(ii) दो ज्यामितीय समावयव संभव हैं"
+        }
+      ]
+    },
+    {
+      "id": "q_5.10",
+      "kind": "exercise",
+      "number": "5.10",
+      "topic": "Structures of optical isomers",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्न के प्रकाशित समावयवों की संरचनाएं बनाइए-"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_55.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_56.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_57.jpg",
+          "caption": ""
+        }
+      ],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{PtCl}_{2}(\\mathrm{en})_{2}\\right]^{2+}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}_{2}(\\mathrm{en})\\right]^{+}$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$\n\n(ii) $\\mathbf{C i s}-\\left[\\mathbf{P t C l}_{\\mathbf{2}}\\left(\\mathbf{e n}\\right)_{\\mathbf{2}}\\right]^{\\mathbf{2}+}$\n\n\n(iii) $\\mathbf{C i s}-\\left[\\mathbf{C r}\\left(\\mathbf{N H}_{\\mathbf{3}}\\right)_{\\mathbf{2}} \\mathbf{C l}_{\\mathbf{2}}(\\mathbf{e n})\\right]^{+}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.11",
+      "kind": "exercise",
+      "number": "5.11",
+      "topic": "All geometrical and optical isomer structures",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्नलिखित के सभी समायवों (ज्यामितीय व ध्रुवण) की संरचनाएं बनाइए-"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_58.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_59.jpg",
+          "caption": ""
+        }
+      ],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{CoCl}_{2}(\\mathrm{en})_{2}\\right]^{+}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right) \\mathrm{Cl}(\\text { en })_{2}\\right]^{2+}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}_{2}(\\text { en })\\right]^{+}$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\left[\\mathrm{CoCl}_{2}(\\mathrm{en})_{2}\\right]^{+}$इस आयन के दो ज्यामितीय समावयव हैं। समपक्ष रूप ध्रुवण समावयवता भी दर्शाता है।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.12",
+      "kind": "exercise",
+      "number": "5.12",
+      "topic": "Geometrical isomers of a Pt complex",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)(\\mathrm{Br})(\\mathrm{Cl})(\\mathrm{py})\\right]$ के सभी ज्यामितीय समावयव लिखिए। इनमें से कितने ध्रुवण समावयवता दर्शाएंगे?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_60.jpg",
+          "caption": "[I]"
+        },
+        {
+          "src": "images/fig_5_61.jpg",
+          "caption": "[II]"
+        },
+        {
+          "src": "images/fig_5_62.jpg",
+          "caption": "[III]"
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)(\\mathrm{Br})(\\mathrm{Cl})(\\mathrm{py})\\right]$ इस संकुल के लिए तीन ज्यामितीय समावयव संभव हैं।\n\n\nयह यौगिक $\\mathrm{CN}=4$ है और इसकी ज्यामिति वर्गसमतली है। यह ध्रुवण समावयवता नहीं दर्शाता है क्योंकि इसमें सममिति तल उपस्थित है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** तीन ज्यामितीय समावयवी संभव हैं। यह यौगिक ध्रुवण समावयवता नहीं दर्शाता है क्योंकि इसमें सममिति तल उपस्थित है।"
+        }
+      ]
+    },
+    {
+      "id": "q_5.13",
+      "kind": "exercise",
+      "number": "5.13",
+      "topic": "Colour changes of aqueous copper sulfate",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "जलीय कॉपर सल्फेट विलयन (नीले रंग का), निम्नलिखित प्रेक्षण दर्शाता है-\n\n\nउपरोक्त प्रायोगिक परिणामों को समझाइए।"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "जलीय पोटैशियम फ्लुओराइड के साथ हरा रंग"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "जलीय पोटैशियम क्लोराइड के साथ चमकीला हरा रंग"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "जलीय कॉपर सल्फेट (नीला) $\\left[\\mathrm{Cu}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{4}\\right] \\mathrm{SO}_{4}$ है।"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\left[\\mathrm{Cu}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{4}\\right] \\mathrm{SO}_{4} \\stackrel{a q}{\\rightleftharpoons} \\underset{[\\text { नीला }]}{\\left[\\mathrm{Cu}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{4}\\right]^{2+}}+\\mathrm{SO}_{4}^{2-}\n$$"
+            }
+          ],
+          "label": "मुख्य सूत्र"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Cu}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{4}\\right]^{2+}$ एक ऐसा संकुल है जिसमें दुर्बल $\\mathrm{H}_{2} \\mathrm{O}$ लिगेण्ड उपस्थित है। जब यह $\\mathrm{F}^{-}$लिगेण्डों द्वारा प्रतिस्थापित होता है, तो $\\left[\\mathrm{CuF}_{4}\\right]^{2+}$ (हरा) संकुल आयन बनता है। जब यह $\\mathrm{Cl}^{-}$लिगेण्डों द्वारा प्रतिस्थापित होता है, तो संकुल आयन $\\left[\\mathrm{CuCl}_{4}\\right]^{2-}$ (चमकीला हरा) बनता है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\left[\\mathrm{Cu}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{4}\\right]^{2+}(\\mathrm{aq})+4 \\mathrm{~F}^{-}(\\mathrm{aq}) \\longrightarrow \\underset{\\text { हरा अवक्षेप }}{\\left[\\mathrm{CuF}_{4}\\right]^{2-}}+4 \\mathrm{H}_{2} \\mathrm{O}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) $\\left[\\mathrm{Cu}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{4}\\right]^{2+}(\\mathrm{aq})+4 \\mathrm{Cl}^{-}(\\mathrm{aq}) \\longrightarrow \\underset{\\text { चमकीला हरा विलयन }}{\\left[\\mathrm{CuCl}_{4}\\right]^{2-}(\\mathrm{aq})}+4 \\mathrm{H}_{2} \\mathrm{O}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.14",
+      "kind": "exercise",
+      "number": "5.14",
+      "topic": "Copper-cyanide complex and absence of CuS precipitate",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "कॉपर सल्फेट के जलीय विलयन में जलीय KCN को आधिक्य में मिलाने पर बनने वाली उपसहसंयोजन सत्ता क्या होगी? इस विलयन में जब $\\mathrm{H}_{2} \\mathrm{~S}$ गैस प्रवाहित की जाती है तो कॉपर सल्फाइड का अवक्षेप क्यों नहीं प्राप्त होता?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "जब KCN (aq) के आधिक्य में $\\mathrm{CuSO}_{4}(\\mathrm{aq})$ मिलाते हैं तो पोटैशियम टेट्रासायनो क्यूपरेट (II) बनता है। $\\mathrm{CN}^{-}$आयन प्रबल क्षेत्र लिगेण्ड हैं अतः प्राप्त संकुल पर्याप्त स्थाई होता है। स्थायित्व स्थिरांक का मान $\\left(K=2.0 \\times 10^{27}\\right)$ भी इसकी पुष्टि करता है।"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{gathered}\n\\underset{\\text { (आधिक्य) }}{4 \\mathrm{KCN}(a q)}+\\mathrm{CuSO}_{4}(a q) \\longrightarrow \\underset{\\text { (विलेय) }}{\\mathrm{K}_{2}\\left[\\mathrm{Cu}(\\mathrm{CN})_{4}\\right](a q)+\\mathrm{K}_{2} \\mathrm{SO}_{4}(a q)} \\\\\n\\downarrow+\\mathrm{H}_{2} \\mathrm{~S}\n\\end{gathered}\n$$"
+            }
+          ],
+          "label": "मुख्य सूत्र"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "कोई वियोजन नहीं अतः $\\mathrm{Cu}^{2+}$ आयन उत्पन्न नहीं होते"
+            }
+          ],
+          "label": "निष्कर्ष"
+        }
+      ]
+    },
+    {
+      "id": "q_5.15",
+      "kind": "exercise",
+      "number": "5.15",
+      "topic": "Nature of bonding by valence bond theory",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "संयोजकता आबंध सिद्धांत के आधार पर निम्नलिखित उपसहसंयोजन सत्ता में आबंध की प्रकृति की विवेचना कीजिए-"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_63.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_64.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_65.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_66.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_67.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_68.jpg",
+          "caption": ""
+        }
+      ],
+      "parts": [
+        {
+          "label": "(क)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{4-}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ख)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{FeF}_{6}\\right]^{3-}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ग)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(घ)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{CoF}_{6}\\right]^{3-}$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{4-}$ इस संकुल में $\\mathrm{Fe}, \\mathrm{Fe}^{2+}$ रूप में है\n\n$$\n\\mathrm{Fe}=[\\mathrm{Ar}] 3 d^{6} 4 s^{2}\n$$\n\n$\\mathrm{Fe}^{2+}$ का बाहरी विन्यास $=3 d^{6} 4 \\mathrm{~s}^{0}$\n\n$$\n\\mathrm{Fe}^{2+}=\\begin{array}{|l|l|l|l|l|}\n\\hline ് ബ & \\frac{3 d^{6}}{4 s^{0}} & & & \\\\\n\\hline\n\\end{array} \\begin{array}{|l|l|l|}\n\\hline 4 \\rho^{0} \\\\\n\\hline\n\\end{array}\n$$"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{CN}^{-}$ एक प्रबल क्षेत्र लिगेण्ड है। यह अयुग्मित $d$-इलेक्ट्रॉनों को युग्मित कर देता है। इस प्रकार $\\mathrm{CN}^{-}$आयनों को दो $3 d$-कक्षक उपलब्ध हो जाती हैं।"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{4-}=\\underbrace{\\begin{array}{|l|l|l|l|}\n\\hline 1 & 1 l & 1 l & \\times x \\\\\n\\hline\n\\end{array}}_{\\substack{\\text { कोई अयुग्मित } \\\\\n\\text { इलेक्ट्रॉन नहीं }}} \\underbrace{\\begin{array}{|l|}\n\\hline \\times- \\\\\n\\hline\n\\end{array}}_{d^{2} s p^{3} \\text { संकरण }} \\underbrace{\\begin{array}{|l|l|}\n\\hline 4 s & \\\\\n\\hline\n\\end{array}}_{\\begin{array}{|l|}\n\\hline \\times x \\\\\n\\hline\n\\end{array}}\n$$"
+            }
+          ],
+          "label": "मुख्य सूत्र"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "सभी इलेक्ट्रॉन युग्मित हैं, इसलिए यह संकुल प्रतिचुम्बकीय होगा। आबंधन में $(n-1) d$-कक्षक भाग लेते हैं, इसलिए यह आन्तरिक कक्षक तथा निम्न प्रचक्रण संकुल होगा।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) $\\left[\\mathrm{Fe} \\mathrm{F}_{6}\\right]^{3-}$ इस संकुल में Fe की ऑक्सीकरण अवस्था $+3$ है।\n$$\n\\mathrm{Fe}^{3+}=3 d^{5} 4 s^{0}\n$$"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{F}^{-}$ प्रबल क्षेत्र लिगेण्ड नहीं है। यह एक दुर्बल क्षेत्र लिगेण्ड है। अतः इलेक्ट्रॉनों का युग्मन नहीं होगा। इस प्रकार $d$-कक्षक आबंधन के लिए उपलब्ध नहीं है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "पाँच अयुग्मित इलेक्ट्रॉन उपस्थित हैं, इसलिए यह संकुल अनुचुम्बकीय है। इसके आबंधन में $n d$-कक्षक भाग लेते हैं, इसलिए यह बाह्य कक्षक तथा उच्च प्रचक्रण संकुल है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) $\\left[\\mathrm{Co}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$ इस संकुल में Co की ऑक्सीकरण अवस्था $+3$ है।\nCo का बाहरी विन्यास $=3 d^{7} 4 s^{2}$\n$$\n\\mathrm{Co}^{3+}=3 d^{6} 4 s^{0}\n$$"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ऑक्सेलेट आयन एक प्रबल क्षेत्र लिगेण्ड है। यह $3 d$-इलेक्ट्रॉनों को युग्मित कर देता है। इस प्रकार पाँच में से दो $3 d$-कक्षक ऑक्सेलेट आयनों के लिए उपलब्ध हो जाती हैं।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "सभी इलेक्ट्रॉन युग्मित हैं, इसलिए यह संकुल प्रतिचुम्बकीय होगा। इसके आबंधन में $(n-1) d$-कक्षक भाग लेते हैं, इसलिए यह आन्तरिक कक्षक संकुल है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) $\\left[\\mathrm{CoF}_{6}\\right]^{3-}$ इस संकुल में Co की ऑक्सीकरण अवस्था $+3$ है।\nCo का बाहरी विन्यास $=3 d^{6} 4 s^{0}$"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{F}^{-}$ एक दुर्बल क्षेत्र लिगेण्ड है। अतः इलेक्ट्रॉनों का युग्मन नहीं होगा। इस प्रकार $F^{-}$के लिए $n d$-कक्षक उपलब्ध है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "चार अयुग्मित इलेक्ट्रॉन उपस्थित हैं, इसलिए संकुल अनुचुम्बकीय है। $n d$-कक्षक आबंधन में भाग लेते हैं, इसलिए यह बाहरी कक्षक तथा उच्च प्रचक्रण संकुल है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        }
+      ]
+    },
+    {
+      "id": "q_5.16",
+      "kind": "exercise",
+      "number": "5.16",
+      "topic": "d-orbital splitting diagram in octahedral field",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "अष्टफलकीय क्रिस्टल क्षेत्र में $d$ कक्षकों के विपाटन को दर्शाने के लिए चित्र बनाइए।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_69.jpg",
+          "caption": "अष्टफलकीय क्रिस्टल क्षेत्र में $d$ कक्षकों का विपाटन"
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.17",
+      "kind": "exercise",
+      "number": "5.17",
+      "topic": "Spectrochemical series",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "स्पेक्ट्रमीरासायनिक श्रेणी क्या है? दुर्बल क्षेत्र लिगन्ड तथा प्रबल क्षेत्र लिगन्ड में अंतर स्पष्ट कीजिए।"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "लिगेण्डों को उनकी बढ़ती हुई क्षेत्र प्रबलता के क्रम में एक श्रेणी में व्यवस्थित किया जाता है। क्रिस्टल क्षेत्र विपाटन ऊर्जा के मानों को बढ़ते क्रम में रखने पर जो श्रेणी मिलती है, उसे स्पेक्ट्रमी रासायनिक श्रेणी कहते हैं।"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\mathrm{I}^{-}<\\mathrm{Br}^{-}<\\mathrm{SCN}^{-} & <\\mathrm{Cl}^{-}<\\mathrm{F}^{-}<\\mathrm{OH}^{-}<\\mathrm{ox}<\\mathrm{H}_{2} \\mathrm{O} \\\\\n& <\\mathrm{EDTA}^{4-}<\\mathrm{NH}_{3}<\\mathrm{en}<\\mathrm{CN}^{-}<\\mathrm{CO}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "स्पेक्ट्रमी रासायनिक श्रेणी"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "स्पेक्ट्रमी रासायनिक श्रेणी\nनिम्न क्रिस्टल क्षेत्र विपाटन ऊर्जा CFSE $\\left(\\Delta_{0}\\right)$ मान वाले लिगेण्ड दुर्बल क्षेत्र लिगेण्ड कहलाते हैं। इनके लिए $\\Delta_{0}<P$ होता है, जहाँ $P$ युग्मन ऊर्जा है। इसके विपरीत, उच्च $\\operatorname{CFSE}\\left(\\Delta_{0}\\right)$ मान वाले लिगेण्ड प्रबल क्षेत्र लिगेण्ड कहलाते हैं। इनके लिए $\\Delta_{0}>P$ होता है।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.18",
+      "kind": "exercise",
+      "number": "5.18",
+      "topic": "Crystal field splitting energy",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "क्रिस्टल क्षेत्र विपाटन ऊर्जा क्या है? उपसहसंयोजन सत्ता में $d$ कक्षकों का वास्तविक विन्यास $\\Delta_{o}$ के मान के आधार पर कैसे निर्धारित किया जाता है?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "जब लिगेण्ड किसी धातु आयन की ओर जाता है, तो $d$-कक्षकों का विपाटन दो समुच्चयों ( $t_{2 g}$ तथा $e_{g}$ ) में हो जाता है। $t_{2 g}$ निम्न ऊर्जा वाला समुच्चय है और $e_{g}$ उच्च ऊर्जा वाला समुच्चय है। दोनों समुच्चयों के कक्षकों के बीच ऊर्जा के अंतर को क्रिस्टल क्षेत्र विपाटन ऊर्जा ( $\\Delta_{0}$ ) कहते हैं। ( $\\Delta_{0}=$ अष्टफलकीय क्षेत्र के लिए है तथा $\\Delta_{t}=$ चतुष्फलकीय क्षेत्र के लिए है।)\n\nयदि $\\Delta_{0}<P$ (युग्मन ऊर्जा) है, तो चौथा इलेक्ट्रॉन किसी एक $e_{g}$ कक्षक में प्रवेश करेगा। तब विन्यास $t_{2 g}^{3} e_{g}^{1}$ होगा, अर्थात् उच्च प्रचक्रण संकुल बनेगा। जिन लिगेण्डों के लिए $\\Delta_{0}<P$ है, वे दुर्बल क्षेत्र लिगेण्ड कहलाते हैं।\n\nयदि $\\Delta_{0}>P$ है, तो चौथा इलेक्ट्रॉन $t_{2 g}$ कक्षकों में से किसी एक कक्षक में प्रवेश करेगा। तब $t_{2 g}^{4} e_{g}^{0}$ विन्यास के साथ निम्न क्षेत्र संकुल बनेंगे। जिन लिगेण्डों के लिए $\\Delta_{0}>P$ है, वे प्रबल क्षेत्र लिगेण्ड कहलाते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.19",
+      "kind": "exercise",
+      "number": "5.19",
+      "topic": "Paramagnetism vs diamagnetism explanation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$ अनुचुंबकीय है जबकि $\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-}$ प्रतिचुंबकीय, समझाइए क्यों?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_70.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "हेक्साऐमीनक्रोमियम (III) आयन $\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$ आयन है।\nCr की ऑक्सीकरण अवस्था $=+3$ है।\n\n$$\n\\begin{aligned}\n& 24 \\mathrm{Cr}=[\\mathrm{Ar}] 3 d^{5} 4 s^{1} \\\\\n& \\mathrm{Cr}^{3+}=[\\mathrm{Ar}] 3 d^{3}\n\\end{aligned}\n$$\n\n$\\mathrm{Cr}^{3+}$, छह $\\mathrm{NH}_{3}$ अणुओं से मिलने वाले छः युग्मित इलेक्ट्रॉनों के लिए छ: रिक्त कोश उपलब्ध कराता है। यह $d^{2} s p^{3}$ संकरित तथा अष्टफलकीय है।\n\nइसमें तीन अयुग्मित इलेक्ट्रॉन उपस्थित हैं, इसलिए यह अनुचुम्बकीय है।\n\n\nटेट्रासायनोनिकलेट (II) आयन $\\left[\\mathrm{Ni}\\left(\\mathrm{CN}_{4}\\right)^{2-}\\right.$ है।\n\n$$\n\\begin{aligned}\n\\mathrm{Ni} & =[\\mathrm{Ar}] 3 d^{8} 4 s^{2} \\\\\n\\mathrm{Ni}^{2+} & =[\\mathrm{Ar}] 3 d^{8}\n\\end{aligned}\n$$\n\n$$\n\\mathrm{Ni}^{2+}=\\begin{array}{|l|l|l|l|l|}\n\\hline 1 \\mathrm{l} & 1 \\mathrm{l} & 1 \\mathrm{l} & 1 & 1 \\\\\n\\hline\n\\end{array} \\quad \\begin{array}{|l|l|}\n4 \\mathrm{~s} \\\\\n\\hline\n\\end{array} \\quad \\begin{array}{|l|}\n\\hline \\\\\n\\hline\n\\end{array}\n$$\n\n$\\mathrm{CN}^{-}$ प्रबल क्षेत्र लिगेण्ड है, इसलिए यह $3 d$-कक्षकों में इलेक्ट्रॉनों को युग्मित कर देता है। इसके कारण इन $3 d$-कक्षकों में से एक कक्षक $\\mathrm{CN}^{-}$आयन के लिए रिक्त हो जाता है।\n\n$$\n\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-}=\\underbrace{\\begin{array}{|l|l|l|l|l|}\n\\hline 1 l & 1 l & 1 l & 1 l & \\times \\infty \\\\\n\\hline\n\\end{array}}_{\\substack{\\text { सभी इलेक्ट्रॉन } \\\\\n\\text { युग्मित हैं }}}\n$$\n\nइसमें कोई अयुग्मित इलेक्ट्रॉन उपस्थित नहीं है, अतः यह प्रतिचुम्बकीय है।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.20",
+      "kind": "exercise",
+      "number": "5.20",
+      "topic": "Colour difference in nickel complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\left[\\mathrm{Ni}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$ का विलयन हरा है परंतु $\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-}$ का विलयन रंगहीन है। समझाइए।"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Ni}^{2+}$ आयन का विन्यास इस प्रकार है:\n\n$$\n\\mathrm{Ni}^{2+}=[\\mathrm{Ar}] 3 d^{8}\n$$\n\n$$\n\\mathrm{Ni}^{2+}=\\begin{array}{|l|l|l|l|l|}\n\\hline ് ഡ & \\frac{3 d^{8}}{1 l} & 1 l & 1 & 1 \\\\\n\\hline\n\\end{array} \\quad \\begin{array}{|l|}\n\\hline \\\\\n\\hline\n\\end{array} \\quad \\begin{array}{|l|l|}\n\\hline 4 s & \\\\\n\\hline\n\\end{array}\n$$\n\n$\\left[\\mathrm{Ni}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$ संकुल आयन में $\\mathrm{H}_{2} \\mathrm{O}$ अणु दुर्बल क्षेत्र लिगेण्ड हैं, इसलिए ये इलेक्ट्रॉनों का युग्मन नहीं करते। परिणामस्वरूप संकुल में दो अयुग्मित इलेक्ट्रॉन उपस्थित रहते हैं। $d-d$ संक्रमण के कारण संकुल लाल क्षेत्र की ऊर्जा के संगत प्रकाश का अवशोषण करता है और हरे क्षेत्र की ऊर्जा के संगत प्रकाश का उत्सर्जन करता है। इसलिए यह हरा है।\n\n$\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-}$ संकुल आयन में $\\mathrm{CN}^{-}$आयन प्रबल क्षेत्र लिगेण्ड है। इसके कारण, $\\mathrm{CN}^{-}$आयनों की उपस्थिति में 3d-कक्षकों में उपस्थित दो अयुग्मित इलेक्ट्रॉन युग्मित हो जाते हैं। अब कोई अयुग्मित इलेक्ट्रॉन नहीं बचता, इसलिए $d-d$ संक्रमण नहीं होता है। अतः यह रंगहीन है।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.21",
+      "kind": "exercise",
+      "number": "5.21",
+      "topic": "Colour difference in iron complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{4-}$ तथा $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$ के तनु विलयनों के रंग भिन्न होते हैं। क्यों?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दोनों संकुल यौगिकों में Fe की ऑक्सीकरण अवस्था $+2$ तथा विन्यास $3 d^{6}$ है, अर्थात् इनमें चार अयुग्मित इलेक्ट्रॉन हैं। दुर्बल क्षेत्र लिगेण्ड $\\mathrm{H}_{2} \\mathrm{O}$ की उपस्थिति में अयुग्मित इलेक्ट्रॉनों का युग्मन नहीं हो पाता। इसके विपरीत, प्रबल क्षेत्र लिगेण्ड $\\mathrm{CN}^{-}$ की उपस्थिति में इलेक्ट्रॉनों का युग्मन हो जाता है, इसलिए कोई अयुग्मित इलेक्ट्रॉन नहीं बचता। अयुग्मित इलेक्ट्रॉनों की संख्या में इस अंतर के कारण दोनों संकुल आयन भिन्न रंग दिखाते हैं।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.22",
+      "kind": "exercise",
+      "number": "5.22",
+      "topic": "Bonding in metal carbonyls",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "धातु कार्बोनिलों में आबंध की प्रकृति की विवेचना कीजिए।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_71.jpg",
+          "caption": "कार्बोनिल संकुल में सहक्रियाशीलता आबंघन अन्योन्य क्रिया का उदाहरण"
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "धातु कार्बोनिलों के धातु-कार्बन आबंध में $s$- तथा $p$-दोनों प्रकार के गुण पाए जाते हैं। $M-C\\sigma$ आबंध तब बनता है जब कार्बोनिल समूह के कार्बन पर उपस्थित इलेक्ट्रॉन युग्म धातु के रिक्त कक्षक में दान होता है। $M-C \\pi$ आबंध तब बनता है जब धातु के पूरित $d$-कक्षकों में से एक इलेक्ट्रॉन युग्म कार्बन मोनोऑक्साइड के रिक्त प्रतिआबंधन $\\pi$ कक्षक में दान होता है। इस प्रकार धातु से लिगेण्ड की ओर बना आबंध एक सहक्रियाशीलता प्रभाव उत्पन्न करता है, जो CO और धातु के मध्य आबंध को मजबूत बनाता है।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.23",
+      "kind": "exercise",
+      "number": "5.23",
+      "topic": "Oxidation state and coordination number",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्न संकुलों में केंद्रीय धातु आयन की ऑक्सीकरण अवस्था, $d$ कक्षकों का अधिग्रहण एवं उपसहसंयोजन संख्या बतलाइए-"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Co}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "cis- $\\left[\\mathrm{CrCl}_{2}(\\text { en })_{2}\\right] \\mathrm{Cl}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left(\\mathrm{NH}_{4}\\right)_{2}\\left[\\mathrm{CoF}_{4}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Mn}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right] \\mathrm{SO}_{4}$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\mathrm{K}_{3}\\left[\\mathrm{Co}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना Co की ऑक्सीकरण अवस्था $x$ है।"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n(+1) 3+x+(-2) \\times 3 & =0 \\\\\n+3+x-6 & =0 \\\\\nx & =+3\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः Co की ऑक्सीकरण अवस्था $+3$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& 2{ }^{27} \\mathrm{Co}=[\\mathrm{Ar}] 3 d^{7} 4 s^{2} \\\\\n& \\mathrm{Co}^{3+}=[\\mathrm{Ar}] 3 d^{6}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "इलेक्ट्रॉनिक विन्यास"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः $d$-कक्षक का विन्यास $d^{6}$ या $t_{2 g}^{6} e_{g}^{0}$ है।\n( $\\because \\mathrm{C}_{2} \\mathrm{O}_{4}^{2-}$ प्रबल क्षेत्र लिगेण्ड है।)"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Co की उपसहसंयोजन संख्या $=3 \\times \\mathrm{C}_{2} \\mathrm{O}_{4}$ है। इसकी दंतुरता\n\n$$\n=3 \\times 2 \\quad\\left(\\because \\mathrm{C}_{2} \\mathrm{O}_{4}^{2-}\\right. \\text { एक द्विदंतुर लिगेण्ड है।) }\n$$"
+            }
+          ],
+          "label": "उपसहसंयोजन संख्या"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) $\\mathbf{c i s}-\\left[\\mathbf{C r}(\\mathbf{e n})_{\\mathbf{2}} \\mathbf{C l}_{\\mathbf{2}}\\right] \\mathbf{C l}$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना Cr की ऑक्सीकरण अवस्था $x$ है।"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nx+(0) \\times 2+(-1) \\times 2+(-1) & =0 \\\\\nx+0-2-1 & =0 \\\\\nx & =+3\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः Cr की ऑक्सीकरण अवस्था $+3$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\mathrm{Cr} & =[\\mathrm{Ar}] 3 d^{5} 4 s^{1} \\\\\n\\mathrm{Cr}^{3+} & =[\\mathrm{Ar}] 3 d^{3}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "इलेक्ट्रॉनिक विन्यास"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः $d$-कक्षकों का विन्यास $d^{3}$ या $t_{2 g}^{3}, e_{g}^{0}$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Cr की उपसहसंयोजन संख्या $=2 \\times$ है। en की दंतुरता $+2=2 \\times 2+2=6$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) $\\left(\\mathrm{NH}_{4}\\right)_{2}\\left[\\mathrm{CoF}_{4}\\right]$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना Co की ऑक्सीकरण अवस्था $x$ है।"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n(+1) \\times 2+x+(-1) \\times 4 & =0 \\\\\n2+x-4 & =0 \\\\\nx & =+2\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः Co की ऑक्सीकरण अवस्था $+2$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& 27 \\mathrm{Co}=[\\mathrm{Ar}] 3 d^{7} 4 s^{2} \\\\\n& \\mathrm{Co}^{2+}=[\\mathrm{Ar}] 3 d^{7}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "इलेक्ट्रॉनिक विन्यास"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः $d$-कक्षकों का विन्यास $d^{7}$ या $t_{2 g}^{5} e_{g}^{2}$ है।\n( ∵ F ${ }^{-}$ एक दुर्बल क्षेत्र लिगेण्ड है।)"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Co की उपसहसंयोजन संख्या $=4$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) $\\left[\\mathrm{Mn}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right] \\mathrm{SO}_{4}$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना Mn की ऑक्सीकरण अवस्था $x$ है।"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nx+(0) \\times 6+(-2) & =0 \\\\\nx & =+2\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः Mn की ऑक्सीकरण अवस्था $+2$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\mathrm{Mn} & =[\\mathrm{Ar}] 3 d^{5} 4 s^{2} \\\\\n\\mathrm{Mn}^{2+} & =[\\mathrm{Ar}] 3 d^{5}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "इलेक्ट्रॉनिक विन्यास"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः $d$-कक्षकों का विन्यास $d^{5}$ या $t_{2 g}^{3} e_{g}^{2}$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Mn की उपसहसंयोजन संख्या $=6$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        }
+      ]
+    },
+    {
+      "id": "q_5.24",
+      "kind": "exercise",
+      "number": "5.24",
+      "topic": "IUPAC names and complex properties",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्न संकुलों के IUPAC नाम लिखिए तथा ऑक्सीकरण अवस्था, इलेक्ट्रॉनिक विन्यास और उपसहसंयोजन संख्या दर्शाइए। संकुल का त्रिविम रसायन तथा चुंबकीय आघूर्ण भी बतलाइए:"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_99.svg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_74.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_100.svg",
+          "caption": "दर्पण"
+        },
+        {
+          "src": "images/fig_5_75.jpg",
+          "caption": ""
+        }
+      ],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{2}\\right] \\cdot 3 \\mathrm{H}_{2} \\mathrm{O}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{CrCl}_{3}(\\mathrm{py})_{3}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}_{-}\\right] \\mathrm{Cl}_{2}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Cs}\\left[\\mathrm{FeCl}_{4}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{4}\\left[\\mathrm{Mn}(\\mathrm{CN})_{6}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\mathrm{K}\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{2}\\right] \\cdot 3 \\mathrm{H}_{2} \\mathrm{O}$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "IUPAC नाम: पोटैशियमडाइएक्वाडाइऑक्सेलेटोक्रोमेट (III) हाइड्रेट\nउपसहसंयोजन संख्या $(\\mathrm{CN})=6$ है।\nआकार अष्टफलकीय है।"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Cr की ऑक्सीकरण अवस्था इस प्रकार ज्ञात करते हैं:"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n+1+x+(0) \\times 2+(-2) \\times 2+3(0) & =0 \\\\\n+1+x-4 & =0 \\\\\nx & =+3\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Cr}^{3+}$ का इलेक्ट्रॉनिक विन्यास $=3 d^{3}=t_{2 g}^{3} \\cdot e_{g}^{0}$ है।\nअयुग्मित इलेक्ट्रॉनों की संख्या $(n)=3$ है।\nचुम्बकीय आघूर्ण $(\\mu)=\\sqrt{n(n+2)}=\\sqrt{3(3+2)}=3.87 \\mathrm{BM}$ है।"
+            }
+          ],
+          "label": "चुम्बकीय आघूर्ण"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "यह संकुल ज्यामितीय समावयवता दर्शाता है। इसके समपक्ष और विपक्ष रूप नीचे दिए गए हैं।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_72.jpg",
+          "caption": "समपक्ष रूप"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_73.jpg",
+          "caption": "विपक्ष रूप"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "समपक्ष रूप $d$- तथा $l$-रूप भी दर्शाता है, अर्थात् ध्रुवण समावयवता भी दर्शाता है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) $\\mathrm{CrCl}_{3}(\\mathrm{py})_{3}$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "IUPAC नाम: ट्राइक्लोरोडो पिरीडीन क्रोमियम (III)"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Cr की ऑक्सीकरण अवस्था:"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nx+(-1) \\times 3+(0) \\times 3 & =0 \\\\\nx & =+3\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "उपसहसंयोजन संख्या $(\\mathrm{CN})=6$ है।\n$\\mathrm{Cr}^{3+}$ का बाह्य इलेक्ट्रॉनिक विन्यास $=3 d^{3}\\left(t_{2 g}^{3} e_{g}^{0}\\right)$ है।\nअयुग्मित इलेक्ट्रॉनों की संख्या $=3$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः चुम्बकीय आघूर्ण $\\mu=\\sqrt{n(n+2)}$ BM है।"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\sqrt{3(3+2)} \\\\\n& =\\sqrt{15} \\\\\n& =3.87 \\mathrm{BM}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "चुम्बकीय आघूर्ण"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "यह संकुल फलकीय (fac) तथा रेखांशिक (mer) ज्यामितीय समावयवता दर्शाता है। फलकीय रूप में एक जैसे समूह पास-पास होते हैं, जबकि रेखांशिक रूप में ऐसा नहीं होता।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_101.svg",
+          "caption": "fac-nq\n(फलकीय रूप)"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_102.svg",
+          "caption": "mer-रूप\n(रेखाशिक रूप)"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{Cl}_{2}$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "IUPAC नाम: पेन्टाऐमीनक्लोरोकोबाल्ट (III) क्लोराइड"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Co की ऑक्सीकरण अवस्था इस प्रकार ज्ञात कर सकते हैं:"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nx+0 \\times 5+(-1)+(-1) \\times 2 & =0 \\\\\nx-3 & =0 \\\\\nx & =+3\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "उपसहसंयोजन संख्या $(\\mathrm{CN})=5+1=6$ है (एकदंतुर लिगेण्डों की संख्या के बराबर)।\n$\\mathrm{Co}^{3+}$ का बाह्य इलेक्ट्रॉनिक विन्यास $=3 d^{6}=t_{2 g}^{6} e_{g}^{0}$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः चुम्बकीय आघूर्ण $\\mu=\\sqrt{n(n+2)} B M$ है।"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n=\\sqrt{0(0+2)} \\mathrm{BM}=0 \\mathrm{BM}\n$$"
+            }
+          ],
+          "label": "चुम्बकीय आघूर्ण"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "यह संकुल ज्यामितीय समावयवता और ध्रुवण समावयवता, दोनों नहीं दर्शाता है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) $\\mathbf{C s}\\left[\\mathrm{FeCl}_{4}\\right]$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "IUPAC नाम: सीजियम टेट्राक्लोरोफैरेट (III)"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Fe की ऑक्सीकरण अवस्था:"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n+1+x+(-1) \\times 4 & =0 \\\\\nx-3 & =0 \\\\\nx & =+3\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "उपसहसंयोजन संख्या $(\\mathrm{CN})=4$ है।\nFe का बाह्य इलेक्ट्रॉनिक विन्यास $=3 d^{5}\\left(t_{2 g}^{3} e_{g}^{2}\\right)$ है।\nअयुग्मित इलेक्ट्रॉनों की संख्या $=5$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "∴ चुम्बकीय आघूर्ण $\\mu=\\sqrt{n(n+2)}$ BM है।"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n=\\sqrt{5(5+2)}=\\sqrt{35}=5.92 \\mathrm{BM}\n$$"
+            }
+          ],
+          "label": "चुम्बकीय आघूर्ण"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "यह चतुष्फलकीय संकुल है, इसलिए यह ज्यामितीय या ध्रुवण समावयवता नहीं दर्शाता है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(v) $\\mathrm{K}_{4}\\left[\\mathrm{Mn}(\\mathrm{CN})_{6}\\right]$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "IUPAC नाम: पोटैशियम हेक्सासायनोमैंग्नेट (II)"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{4}\\left[\\mathrm{Mn}(\\mathrm{CN})_{6}\\right]$ में Mn की ऑक्सीकरण अवस्था:"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n(+1) \\times 4+x+(-1) \\times 6 & =0 \\\\\nx-2 & =0 \\\\\nx & =+2\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "उपसहसंयोजन संख्या $(\\mathrm{CN})=6$ है।\nMn का बाह्य इलेक्ट्रॉनिक विन्यास $=3 d^{5}\\left[t_{2 g}^{5} e_{g}^{0}\\right]$ है।\n( $\\because \\mathrm{CN}^{-}$ प्रबल क्षेत्र लिगेण्ड है।)\nअयुग्मित इलेक्ट्रॉनों की संख्या $=1$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "चुम्बकीय आघूर्ण $\\mu=\\sqrt{n(n+2)} B M=\\sqrt{1(1+2)} B M$ है।"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n=\\sqrt{3}=1.73 \\mathrm{BM} .\n$$"
+            }
+          ],
+          "label": "चुम्बकीय आघूर्ण"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "यह संकुल त्रिविम समावयवता नहीं दर्शाता है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        }
+      ]
+    },
+    {
+      "id": "q_5.25",
+      "kind": "exercise",
+      "number": "5.25",
+      "topic": "Colour of titanium complex",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "क्रिस्टल क्षेत्र सिद्धांत के आधार पर संकुल $\\left[\\mathrm{Ti}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$ के बैंगनी रंग की व्याख्या कीजिए।"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.26",
+      "kind": "exercise",
+      "number": "5.26",
+      "topic": "Chelate effect",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "कीलेट प्रभाव से क्या तात्पर्य है? एक उदाहरण दीजिए।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_103.svg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "जब एक द्विदंतुर अथवा बहुदंतुर लिगेण्ड अपने दो या अधिक दाता परमाणुओं का प्रयोग एक ही धातु आयन से आबंधन के लिए करता है, तब $5$ तथा $6$ सदस्यों वाली शृंखला बनती है। इस प्रभाव को कीलेट प्रभाव कहते हैं।"
+            }
+          ],
+          "label": "कीलेट प्रभाव"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "उदाहरण"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "या $\\left[\\mathrm{PtCl}_{2}(\\right.$ en $\\left.)\\right]$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.27",
+      "kind": "exercise",
+      "number": "5.27",
+      "topic": "Applications of coordination compounds",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "प्रत्येक का एक उदाहरण देते हुए निम्नलिखित में उपसहसंयोजन यौगिकों की भूमिका की संक्षिप्त विवेचना कीजिए-"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "जैव प्रणालियाँ"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "औषध रसायन"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "विश्लेषणात्मक रसायन"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "धातुओं का निष्कर्षण/धातु कर्म।"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) जैव प्रणालियों में उपसहसंयोजन यौगिकों की भूमिका\n\n(a) रक्त का लाल वर्णक हीमोग्लोबिन ऑक्सीजन का वाहक है। यह पोरफाइरिन के साथ $\\mathrm{Fe}^{2+}$ का संकुल है।\n(b) क्लोरोफिल प्रकाश संश्लेषण के लिए उत्तरदायी वर्णक है। यह मैग्नीशियम $\\left(\\mathrm{Mg}^{2+}\\right)$ का पोरफाइरिन के साथ संकुल है।\n(c) विटामिन $\\mathrm{B}_{12}$ सायनाकोबाल एमीन है, जो प्रति प्रणाली अरक्तता कारक है। यह कोबाल्ट का एक उपसहसंयोजक यौगिक है।"
+            }
+          ],
+          "label": "जैव प्रणालियों में भूमिका"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) औषध रसायन में उपसहसंयोजक यौगिकों की भूमिका\n    (a) प्लेटिनम का संकुल समपक्ष $\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}_{2}\\right]$ (समपक्ष प्लेटिन) है। इसका उपयोग ट्यूमर वृद्धि को प्रभावी रूप से रोकने में किया जाता है।\n    (b) कैल्सियम के संकुल EDTA को लेड की विषाक्तता के उपचार में प्रयुक्त किया जाता है। Ca-EDTA एक दुर्बल संकुल है। शरीर में संकुल का कैल्सियम, शरीर में उपस्थित लैड से प्रतिस्थापित हो जाता है तथा मूत्र के साथ बाहर आ जाता है।\n    (c) जीव-जन्तु निकायों में कॉपर तथा आयरन की मात्रा अधिक हो सकती है। इसे D-पेनिसिलऐमीन तथा डेसफेरीऑक्सिम B लिगेण्डों के साथ उपसहसंयोजन यौगिक बनाकर दूर किया जाता है।"
+            }
+          ],
+          "label": "औषध रसायन में भूमिका"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) विश्लेषणात्मक रसायन में उपसहसंयोजक यौगिकों की भूमिका महत्वपूर्ण है। गुणात्मक तथा मात्रात्मक रासायनिक विश्लेषणों में उपसहसंयोजन यौगिकों के अनेक उपयोग हैं।\n\n(a) गुणात्मक रासायनिक विश्लेषण\n$\\mathrm{Cu}^{2+}$ आयन की जाँच नीले रंग के संकुल टेट्राऐमीनकॉपर (II) आयन के बनने पर निर्भर है।\n\n$$\n\\mathrm{Cu}^{2+}+4 \\mathrm{NH}_{3} \\longrightarrow \\underset{\\text { गहरा नीला }}{\\left[\\mathrm{Cu}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right]^{2+}}\n$$\n\n$\\mathrm{Ni}^{2+}$ आयन की जाँच लाल रंग के संकुल डाइमेथिल ग्लाइऑक्सिम के बनने से की जाती है।\n\n$$\n\\mathrm{NiCl}_{2}+2 \\mathrm{DMG}+2 \\mathrm{NH}_{4} \\mathrm{OH} \\longrightarrow \\underset{\\substack{\\text { निकल बिस डाइमेथिल } \\\\ \\text { ग्लाइऑक्सिमेट }}}{\\left[\\mathrm{Ni}(\\mathrm{DMG})_{2}\\right]}+2 \\mathrm{NH}_{4} \\mathrm{Cl}+2 \\mathrm{H}_{2} \\mathrm{O}\n$$\n\nसमूह I में $\\mathrm{Ag}^{+}$तथा $\\mathrm{Hg}^{2+}$ में अन्तर इस तथ्य पर आधारित है। AgCl अमोनिया में घुलकर घुलनशील संकुल बनाता है, जबकि $\\mathrm{Hg}_{2} \\mathrm{Cl}_{2}$ अघुलनशील (अविलेय) पदार्थ बनाता है।\n\n$$\n\\begin{aligned}\n\\mathrm{AgCl}(s)+2 \\mathrm{NH}_{3}(\\mathrm{aq}) & \\longrightarrow \\underset{\\text { विलेय संकुल }}{\\left[\\mathrm{Ag}\\left(\\mathrm{NH}_{3}\\right)_{2}\\right] \\mathrm{Cl}(\\mathrm{aq})} \\\\\n. \\mathrm{Hg}_{2} \\mathrm{Cl}_{2}(s)+\\mathrm{NH}_{3} & \\longrightarrow \\underset{\\text { काला अविलेय पदार्थ }}{\\mathrm{Hg}\\left(\\mathrm{NH}_{2}\\right) \\mathrm{Cl} \\cdot \\mathrm{Hg}}+\\mathrm{Cl}^{-}\n\\end{aligned}\n$$\n\n(b) मात्रात्मक रासायनिक विश्लेषण में\n$\\mathrm{Ni}^{2+}$ का आकलन किया जाता है। इसके लिए $\\mathrm{Ni}^{2+}$ को अमोनिया की उपस्थिति में लेकर निकैल डाइमेथिल ग्लाइऑक्सिम संकुल का लाल अवक्षेप प्राप्त किया जाता है।\n$$\n\\mathrm{Ni}^{2+}+2 \\mathrm{DMG} \\xrightarrow{\\mathrm{NH}_{3}} \\underset{\\text { लाल अवक्षेप }}{\\left[\\mathrm{Ni}(\\mathrm{DMG})_{2}\\right]}\n$$\n$\\mathrm{Ca}^{2+}, \\mathrm{Zn}^{2+}, \\mathrm{Fe}^{2+}, \\mathrm{Co}^{2+}, \\mathrm{Ni}^{2+}$ आदि आयनों के आकलन में EDTA का उपयोग किया जाता है।"
+            }
+          ],
+          "label": "विश्लेषणात्मक रसायन में भूमिका"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) धातुओं के निष्कर्षण/धातुकर्म में उपसहसंयोजन यौगिकों की भूमिका\nविभिन्न धातुओं की कुछ प्रमुख निष्कर्षण विधियों में संकुल विरचन का उपयोग होता है, जैसे सिल्वर तथा गोल्ड के निष्कर्षण में।\n\n$$\n4 \\mathrm{Au}+8 \\mathrm{KCN}+2 \\mathrm{H}_{2} \\mathrm{O}+\\mathrm{O}_{2} \\longrightarrow 4 \\mathrm{~K}\\left[\\mathrm{Au}(\\mathrm{CN})_{2}\\right]+4 \\mathrm{KOH}\n$$\n\nपोटैशियम डाइसायनो ऑरेट\n\n$$\n2 \\mathrm{~K}\\left[\\mathrm{Au}(\\mathrm{CN})_{2}\\right]+\\mathrm{Zn} \\longrightarrow \\mathrm{~K}_{2}\\left[\\mathrm{Zn}(\\mathrm{CN})_{4}\\right]+2 \\mathrm{Au} \\downarrow\n$$\n\nकुछ धातुओं के शुद्धिकरण में भी संकुल विरचन का उपयोग होता है।\nउदाहरण के लिए, मॉन्ड प्रक्रम में अशुद्ध निकेल को पहले संकुल $\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$ में बदला जाता है,\nफिर इसका अपघटन करके शुद्ध निकेल प्राप्त किया जाता है।"
+            }
+          ],
+          "label": "धातुओं के निष्कर्षण में भूमिका"
+        }
+      ]
+    },
+    {
+      "id": "q_5.28",
+      "kind": "exercise",
+      "number": "5.28",
+      "topic": "Ions produced in solution",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "संकुल $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right] \\mathrm{Cl}_{2}$ से विलयन में कितने आयन उत्पन्न होंगे-\n(i) $6$\n(ii) $4$\n(iii) $3$\n(iv) $2$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "संकुल $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right] \\mathrm{Cl}_{2}$, जलीय विलयन में वियोजित होकर $3$ आयन देगा।"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6} \\mathrm{Cl}_{2} \\longrightarrow\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{2+}+2 \\mathrm{Cl}^{-}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** अतः सही उत्तर (c) है।"
+        }
+      ]
+    },
+    {
+      "id": "q_5.29",
+      "kind": "exercise",
+      "number": "5.29",
+      "topic": "Highest magnetic moment ion",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्नलिखित आयनों में से किसके चुंबकीय आघूर्ण का मान सर्वाधिक होगा?\n(i) $\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$\n(ii) $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$\n(iii) $\\left[\\mathrm{Zn}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दिए गए संकुलों में धातुओं की ऑक्सीकरण अवस्थाएँ और इनके इलेक्ट्रॉनिक विन्यास इस प्रकार हैं।"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\mathrm{Cr}^{3+}: 3 d^{3}$ विन्यास, अयुग्मित इलेक्ट्रॉनों की संख्या $(n)=3$\n(ii) $\\mathrm{Fe}^{2+}: 3 d^{6}$ विन्यास, $n=4$\n(iii) $\\mathrm{Zn}^{2+}: 3 d^{10}$ विन्यास, $n=0$"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "संकुल $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$ में अधिकतम अयुग्मित इलेक्ट्रॉन हैं। इसलिए इसके चुम्बकीय आघूर्ण का मान सर्वाधिक होगा।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** अतः सही उत्तर (b) है।"
+        }
+      ]
+    },
+    {
+      "id": "q_5.30",
+      "kind": "exercise",
+      "number": "5.30",
+      "topic": "Oxidation number of cobalt",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "K[Co(CO) ${ }_{4}$ ] में कोबाल्ट की ऑक्सीकरण संख्या है-\n(i) +1\n(ii) +3\n(iii) -1\n(iv) -3"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना Co की ऑक्सीकरण संख्या $=x$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n+.1+x+4 \\times 0 & =0 \\\\\nx & =-1\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** अतः सही उत्तर (c) है।"
+        }
+      ]
+    },
+    {
+      "id": "q_5.31",
+      "kind": "exercise",
+      "number": "5.31",
+      "topic": "Most stable complex",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्न में सर्वाधिक स्थायी संकुल है-\n(i) $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$\n(ii) $\\left[\\mathrm{Fe}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$\n(iii) $\\left[\\mathrm{Fe}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$\n(iv) $\\left[\\mathrm{FeCl}_{6}\\right]^{3-}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "इन सभी संकुलों में Fe की ऑक्सीकरण अवस्था $+3$ है। परन्तु संकुल (c) एक कीलेट है, क्योंकि इसमें तीन ऑक्सेलेट आयन कीलेट लिगेण्ड का कार्य करते हैं। इसलिए $\\left[\\mathrm{Fe}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$ सर्वाधिक स्थायी संकुल है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** इस प्रकार सही उत्तर (c) है।"
+        }
+      ]
+    },
+    {
+      "id": "q_5.32",
+      "kind": "exercise",
+      "number": "5.32",
+      "topic": "Order of absorption wavelength",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्नलिखित के लिए दृश्य प्रकाश में अवशोषण की तरंगदैर्ध्य का सही क्रम क्या होगा?\n$\\left[\\mathrm{Ni}\\left(\\mathrm{NO}_{2}\\right)_{6}\\right]^{4-},\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{2+},\\left[\\mathrm{Ni}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "सभी दिए गए संकुलों में Ni धातु $+2$ ऑक्सीकरण अवस्था में है।"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "स्पेक्ट्रमी रासायनिक श्रेणी के अनुसार, लिगेण्डों की प्रबलता का क्रम निम्नानुसार है।\n\n$$\n\\mathrm{H}_{2} \\mathrm{O}<\\mathrm{NH}_{3}<\\mathrm{NO}_{2}^{-}\n$$"
+            }
+          ],
+          "label": "जानकारी"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "उत्तेजन के लिए ऊर्जा के अवशोषण का क्रम निम्न प्रकार होगा।\n\n$$\n\\left[\\mathrm{Ni}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}<\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{2+}<\\left[\\mathrm{Ni}\\left(\\mathrm{NO}_{2}\\right)_{6}\\right]^{4-} \\quad \\because E=\\frac{h \\mathrm{c}}{\\lambda} \\text { या } E \\propto \\frac{1}{\\lambda} ;\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः तरंगदैर्ध्यों का क्रम इससे विपरीत होगा, यह इस प्रकार है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** $$\n\\left[\\mathrm{Ni}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}>\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{2+}>\\left[\\mathrm{Ni}\\left(\\mathrm{NO}_{2}\\right)_{6}\\right]^{4-}\n$$"
+        }
+      ]
+    },
+    {
+      "id": "it_5.1",
+      "kind": "additional_exercise",
+      "number": "5.1",
+      "topic": "Formulas of coordination compounds",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्नलिखित उपसहसंयोजन यौगिकों के सूत्र लिखिए-\n\n(i) टेट्राऐम्मीनडाइएक्वाकोबाल्ट (III) क्लोराइड\n(ii) पोटैशियम टेट्रासायनिडोनिकैलेट (II)\n(iii) ट्रिस(एथेन-1, 2-डाइऐमीन)क्रोमियम (III) क्लोराइड\n(iv) ऐम्मीनब्रोमिडोक्लोरिडोनाइट्रिटो-N-प्लैटिनेट (II)\n(v) डाइक्लोरोबिस(एथेन-1, 2-डाइऐमीन) प्लैटिनम (IV) नाइट्रेट\n(vi) आयरन (III) हेक्सासायनिडोफेरेट(II)"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) टेट्राऐमीनडाइएक्वा कोबाल्ट (III) क्लोराइड\nलिगेण्ड धातु प्रतिआयन\nIII\n$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{4}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}\\right] \\mathrm{Cl}_{\\mathrm{x}}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$x$ का मान ज्ञात करने के लिए हम संकुल पर आवेश ज्ञात करेंगे।\n\n$$\n\\begin{aligned}\n{\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{4}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}\\right]^{x+} } & \\\\\n+3+4 \\times 0+2 \\times 0 & =x \\\\\nx & =+3\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः संकुल का सूत्र $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{4}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}\\right] \\mathrm{Cl}_{3}$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) पोटैशियम टेट्रासायनो निकेलेट (II)\nप्रतिआयन लिगेण्ड धातु\n$$\n\\mathrm{K}_{x}\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$x$ का मान ज्ञात करने के लिए पहले संकुल पर आवेश ज्ञात करेंगे।\n\n$\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{\\mathrm{x}-}$ (जैसा कि $\\mathrm{K}^{+}$घनायन है)\nया\n\n$$\n\\begin{aligned}\n+2+(-1) \\times 4 & =-x \\\\\n-x & =-2 \\\\\nx & =+2\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः संकुल का सूत्र $\\mathrm{K}_{2}\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]$ है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "इसी प्रकार\n\n(iii) $\\left[\\mathrm{Cr}(\\mathrm{en})_{3}\\right] \\mathrm{Cl}_{3}$\n(iv) $\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right) \\mathrm{BrCl}\\left(\\mathrm{NO}_{2}\\right)\\right]^{-}$\n(v) $\\left[\\mathrm{PtCl}_{2}(\\mathrm{en})_{2}\\right]\\left(\\mathrm{NO}_{3}\\right)_{2}$\n(vi) $\\mathrm{Fe}_{4}\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]_{3}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.2",
+      "kind": "additional_exercise",
+      "number": "5.2",
+      "topic": "IUPAC names of coordination compounds",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्नलिखित उपसहसंयोजन यौगिकों के IUPAC नाम लिखिए-\n(i) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right] \\mathrm{Cl}_{3}$\n(ii) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{Cl}_{2}$\n(iii) $\\mathrm{K}_{3}\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]$\n(iv) $\\mathrm{K}_{3}\\left[\\mathrm{Fe}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$\n(v) $\\mathrm{K}_{2}\\left[\\mathrm{PdCl}_{4}\\right]$\n(vi) $\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}\\left(\\mathrm{NH}_{2} \\mathrm{CH}_{3}\\right)\\right] \\mathrm{Cl}$"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_29.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_30.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_31.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_32.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_33.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_34.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i)"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना कि Co की ऑक्सीकरण अवस्था $x$ है\n\n$$\n\\begin{gathered}\nx+(0) 6+(-1) \\times 3=0 \\\\\nx+0-3=0 \\Rightarrow x=+3\n\\end{gathered}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः इस संकुल का नाम हेक्साऐमीनकोबाल्ट (III) क्लोराइड है"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii)"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{gathered}\nx+(0) \\times 5+(-1) \\times 1+(-1) \\times 2=0 \\\\\nx+0-3=0 \\\\\nx=+3\n\\end{gathered}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अत: संकुल का नाम पेन्टाऐमीनक्लोराइडोकोबाल्ट (III) क्लोराइड है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii)"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना कि Fe की ऑक्सीकरण अवस्था $x$ है।\n\n$$\n\\begin{gathered}\n(+1) 3+x+(-1) 6=0 \\\\\n+3+x-6=0 \\\\\nx=+3\n\\end{gathered}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः संकुल का नाम पोटैशियमहेक्सासायनोफेरेट (III) है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv)"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना कि Fe की ऑक्सीकरण अवस्था $x$ है।\n\n$$\n(+1) 3+x+(-2) 3=0\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "note",
+          "note_type": "recall",
+          "label": "याद रखें",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\left[\\because\\right.$ ऑक्सेलेट आयन पर $\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}^{2-}\\right)-2$ आवेश है। $]$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n3+x-6 & =0 \\\\\nx & =+3\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः संकुल का नाम पोटैशियमट्राइआक्सैलेटोफेरेट (III) है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(v)"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना कि Pd की ऑक्सीकरण अवस्था $x$ है।\n\n$$\n\\begin{aligned}\n(+1) 2+x+(-1) 4 & =0 \\\\\n2+x-4 & =0 \\\\\nx & =+2\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अत: संकुल का नाम पोटैशियमटेट्राक्लोरोडोपैलेडेट (II) है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(vi)"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "माना कि Pt की ऑक्सीकरण अवस्था $x$ है।\n\n$$\n\\begin{aligned}\nx+(0) 2+(-1) \\times 1+0 & +(-1) \\times 1=0 \\\\\nx+0-1+0-1 & =0 \\\\\nx-2 & =0 \\\\\nx & =+2\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "मान रखो"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "अतः संकुल का नाम डाइऐमीनक्लोरोडो (मेथिल ऐमीन) प्लैटिनम (II) क्लोराइड है।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        }
+      ]
+    },
+    {
+      "id": "it_5.3",
+      "kind": "additional_exercise",
+      "number": "5.3",
+      "topic": "Isomerism in coordination complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "निम्नलिखित संकुलों द्वारा प्रदर्शित समावयवता का प्रकार बतलाइए तथा इन समावयवों की संरचनाएं बनाइए।\n(i) $\\mathrm{K}\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{2}\\right]$\n(ii) $\\left[\\mathrm{Co}(\\text { en })_{3}\\right] \\mathrm{Cl}_{3}$\n(iii) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right]\\left(\\mathrm{NO}_{3}\\right)_{2}$\n(iv) $\\quad\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)\\left(\\mathrm{H}_{2} \\mathrm{O}\\right) \\mathrm{Cl}_{2}\\right]$"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_35.jpg",
+          "caption": "(समपक्ष समावयव में समान लिग्रेण्ड पास-पास जुड़े रहते हैं जबकि विपक्ष समावयव में एक-दूसरे के विपरीत स्थान पर उपस्थित होते हैं)।"
+        },
+        {
+          "src": "images/fig_5_36.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_37.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_38.jpg",
+          "caption": "समपक्ष"
+        },
+        {
+          "src": "images/fig_5_39.jpg",
+          "caption": "विपक्ष"
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\mathrm{K}\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{2}\\right]$ या $\\mathrm{K}\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}(\\mathrm{OX})_{2}\\right]$ ( जहाँ, $\\mathrm{ox}=$ ऑक्सेलेट आयन)\n\n(a) यह ज्यामितीय समावयवता दर्शाता है। इसके दो समावयव होते हैं, समपक्ष तथा विपक्ष।\n\n\n(b) समपक्ष समावयव में समतिति तल नहीं होता है, इसलिए यह ध्रुवण समावयवता भी दर्शाता है, अर्थात् इसके $d$- तथा $1$-रूप होते हैं।\n\n\n(ii) $\\left[\\mathrm{Co}(\\mathrm{en})_{3}\\right] \\mathrm{Cl}_{3}$ इसके दो धुवण समावयव ( $d$-तथा $t$-रूप) हैं। अर्थात्\n\n(iii) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right]\\left(\\mathrm{NO}_{3}\\right)_{2}$\nइसके निम्नलिखित आयनिक समावयव तथा बंधनी समावयव अस्तित्व में होंगे।"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "आयनन समावयव\n$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right]\\left(\\mathrm{NO}_{3}\\right)_{2}$ तथा $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{3}\\right)\\right]\\left(\\mathrm{NO}_{2}\\right)\\left(\\mathrm{NO}_{3}\\right)$\nक्योंकि ये आयनित होकर विभिन्न आयन देते हैं।\n\n$$\n\\begin{aligned}\n{\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right]\\left(\\mathrm{NO}_{3}\\right)_{2} \\xrightarrow{\\text { आयनन }}\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right]^{2+} } & \\\\\n& +2 \\mathrm{NO}_{3}^{-}\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n{\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{3}\\right)\\right]\\left(\\mathrm{NO}_{2}\\right)\\left(\\mathrm{NO}_{3}\\right) \\xrightarrow{\\text { आयनन }} } & {\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{NO}_{3}\\right]^{2+} } \\\\\n+ & \\mathrm{NO}_{2}^{-}+\\mathrm{NO}_{3}^{-}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "आयनन समावयव"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "बंघनी समावयव\n$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right]\\left(\\mathrm{NO}_{3}\\right)_{2}$ तथा $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{ONO}\\right]\\left(\\mathrm{NO}_{3}\\right)_{2}$"
+            }
+          ],
+          "label": "बंधनी समावयव"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) $\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)\\left(\\mathrm{H}_{2} \\mathrm{O}\\right) \\mathrm{Cl}_{2}\\right]$ इसके निम्नलिखित दो ज्यामितीय समावयवी अस्तित्व में होगें।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.4",
+      "kind": "additional_exercise",
+      "number": "5.4",
+      "topic": "Ionisation isomerism",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "इसका प्रमाण दीजिए कि $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{SO}_{4}$ तथा $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{SO}_{4}\\right)\\right] \\mathrm{Cl}$ आयनन समावय हैं।"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "दोनों यौगिकों को दो अलग-अलग परखनली में जल में घोलेंगे। फिर दोनों के लिए निम्न परीक्षण करेंगे।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "परीक्षण I: परखनलियों में $\\mathrm{BaCl}_{2}$ विलयन डालने पर, एक यौगिक सफेद अवक्षेप बनाता है। यह उस यौगिक में $\\mathrm{SO}_{4}^{2-}$ आयनों की उपस्थिति दर्शाता है। दूसरा यौगिक सफेद अवक्षेप नहीं देता है। यह उस यौगिक में $\\mathrm{SO}_{4}^{2-}$ आयनों की अनुपस्थिति दर्शाता है।\n\n$$\n\\underset{\\text { [I] }}{\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{SO}_{4}}+\\mathrm{BaCl}_{2}(\\mathrm{aq}) \\longrightarrow\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{Cl}_{2}+\\underset{\\text { सफेद अवक्षेप }}{\\mathrm{BaSO}_{4}(s)}\n$$"
+            }
+          ],
+          "label": "परीक्षण I"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "परीक्षण II: दोनों परखनलियों में $\\mathrm{AgNO}_{3}$ विलयन मिलाने पर, केवल यौगिक (II) सफेद अवक्षेप देता है। यौगिक (I) में प्रति-आयन $\\mathrm{Cl}^{-}$ आयनों की अनुपस्थिति के कारण, यह सफेद अवक्षेप नहीं देता है।\n\n$$\n\\begin{aligned}\n& {\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{SO}_{4}\\right] \\mathrm{Cl}+\\mathrm{AgNO}_{3}(\\mathrm{aq}) \\longrightarrow\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{SO}_{4}\\right] \\mathrm{NO}_{3}+\\underset{\\text { सफेद अवक्षेप }}{\\mathrm{AgCl}(\\mathrm{~s})}} \\\\\n& {\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{SO}_{4}+\\mathrm{AgNO}_{3}(\\mathrm{aq}) \\longrightarrow \\text { कोई अभिक्रिया नहीं }}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "परीक्षण II"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "यह दोनों परीक्षण पुष्टि करते हैं कि दिये गये दोनों यौगिक एक युगल आयनन समावयव हैं।"
+            }
+          ],
+          "label": "निष्कर्ष"
+        }
+      ]
+    },
+    {
+      "id": "it_5.5",
+      "kind": "additional_exercise",
+      "number": "5.5",
+      "topic": "Valence bond theory and magnetism",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "संयोजकता आबंध सिद्धांत के आधार पर समझाइए कि वर्ग समतलीय संरचना वाला $\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-}$ आयन प्रतिचुंबकीय है तथा चतुष्फलकीय ज्यामिति वाला $\\left[\\mathrm{NiCl}_{4}\\right]^{2-}$ आयन अनुचुंबकीय है।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_40.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Ni}\\left(\\mathrm{CN}_{4}\\right]^{2-}\\right.$ आयन ${ }_{28} \\mathrm{Ni}$ परमाणु का बाहरी विन्यास $=3 d^{8} 4 s^{2}$"
+            }
+          ],
+          "label": "वर्ग समतलीय [Ni(CN)₄]²⁻"
+        },
+        {
+          "type": "note",
+          "note_type": "recall",
+          "label": "याद रखें",
+          "flow": [
+            {
+              "type": "text",
+              "text": "( $\\mathrm{CN}^{-}$प्रबल क्षेत्र लिगेण्ड होने के कारण घातु आयन के $d$-इलेक्ट्रॉनों का युग्मन कर देता है।)"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-} \\text { आयन }=\\begin{array}{|l|l|l|l|l|}\n\\hline 1 \\mathrm{l} & 1 \\mathrm{l} & 1 \\mathrm{l} & 1 \\mathrm{l} & \\times \\mathrm{x} \\\\\n\\hline & \\underbrace{\\mathrm{CN}^{-}} & \\underbrace{\\begin{array}{|c|}\n\\hline \\times \\mathrm{x} \\\\\n\\hline\n\\end{array}} \\begin{array}{|c|l|}\n\\hline \\times \\mathrm{x} & \\times \\times \\\\\n\\hline\n\\end{array} \\\\\n\\hline\n\\end{array}\n$$\n$d s p^{2}$ संकरण\n⇒ वर्ग समतली संरचना\n\nयह संकुल आयन प्रतिचुम्बकीय है क्योंकि इसमें अयुग्मित इलेक्ट्रॉन नहीं है।"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "${ }_{28} \\mathrm{Ni}$ परमाणु का बाहरी विन्यास $=3 d^{8} 4 s^{2}$\n\n$$\n\\begin{aligned}\n&{ }_{28} \\mathrm{Ni} \\text { का बाहरी विन्यास }=\\begin{array}{|l|l|l|l|l|}\n\\hline 1 l & 1 l & 1 l & 1 & 1 \\\\\n\\hline\n\\end{array} \\begin{array}{|l|l|}\n4 s^{2} \\\\\n\\hline\n\\end{array}{ }^{\\frac{3 d^{8}}{4 d^{8}}} \\\\\n& \\mathrm{Ni}^{2+} \\text { आयन }=\\begin{array}{|l|l|l|l|}\n\\hline 1 l & 1 l & 1 l & 1 \\\\\n\\hline\n\\end{array} \\\\\n& \\hline\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "चतुष्फलकीय [NiCl₄]²⁻"
+        },
+        {
+          "type": "note",
+          "note_type": "recall",
+          "label": "याद रखें",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\left(\\mathrm{Cl}^{-}\\right.$दुर्बल क्षेत्र लिगेण्ड होने के कारण इलेक्ट्रॉनों का युग्मन नहीं कर सकता है।)"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\left[\\mathrm{NiCl}_{4}\\right]^{2-}=\\begin{array}{|l|l|l|l|l|}\n\\hline 1 \\mathrm{l} & 1 \\mathrm{l} & 1 \\mathrm{l} & 1 & 1 \\\\\n\\hline\n\\end{array} \\underbrace{\\begin{array}{|c|}\n\\hline \\times \\mathrm{x} \\\\\n\\hline \\mathrm{Cl}^{-} \\\\\n\\hline\n\\end{array} \\begin{array}{|c|c|}\n\\hline \\times \\times & \\mathrm{Cl}^{-} \\mathrm{Cl}^{-} \\mathrm{Cl}^{-} \\\\\n\\hline \\times \\times & \\times \\times \\\\\n\\hline\n\\end{array}}\n$$\n$s p^{3}$ संकरण\nयह संकुल आयन अनुचुम्बकीय है क्योंकि इसमें दो अयुग्मित इलेक्ट्रॉन हैं। ⇒ चतुष्फलकीय संरचना"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.6",
+      "kind": "additional_exercise",
+      "number": "5.6",
+      "topic": "Paramagnetism of tetrahedral complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\left[\\mathrm{NiCl}_{4}\\right]^{2-}$ अनुचुंबकीय है जबकि $\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$ प्रतिचुंबकीय है यद्यपि दोनों चतुष्फलकीय है। क्यों?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_41.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_42.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Ni परमाणु का बाहरी विन्यास $=3 d^{8} 4 s^{2}$\n$\\left[\\mathrm{NiCl}_{4}\\right]^{2-}$ संकुल में $\\mathrm{Ni}^{2+}$ आयन का विन्यास $3 d^{8}$ है ($\\mathrm{Cl}^{-}$ दुर्बल क्षेत्र लिगेण्ड है, इसलिए यह इलेक्ट्रॉनों का युग्मन नहीं कर सकता)। इसलिए इसमें दो अयुग्मित इलेक्ट्रॉन रहते हैं, जिसके कारण यह अनुचुम्बकीय है। संकरण $s p^{3}$ है, इसलिए संकुल चतुष्फलकीय है।"
+            }
+          ],
+          "label": "[NiCl₄]²⁻ — चतुष्फलकीय, अनुचुम्बकीय"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Ni}\\left(\\mathrm{CO}_{4}\\right.$ संकुल में Ni की ऑक्सीकरण अवस्था शून्य है तथा इलेक्ट्रॉनिक विन्यास $3 d^{8} 4 \\mathrm{~s}^{2}$ है। CO प्रबल क्षेत्र लिगेण्ड है। इसकी उपस्थिति में $4 s$ इलेक्ट्रॉन $3 d$ कक्षक में चले जाते हैं। इससे 3d-कक्षक में सभी इलेक्ट्रॉनों का युग्मन हो जाता है। संकरण में $4 s$ तथा $4 p$-कक्षक भाग लेते हैं। इसलिए संकुल चतुष्फलकीय लेकिन प्रतिचुम्बकीय है।\nNi परमाणु का बाहरी विन्यास $=3 d^{8} 4 s^{2}$"
+            }
+          ],
+          "label": "[Ni(CO)₄] — चतुष्फलकीय, प्रतिचुम्बकीय"
+        }
+      ]
+    },
+    {
+      "id": "it_5.7",
+      "kind": "additional_exercise",
+      "number": "5.7",
+      "topic": "Magnetism of iron complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$ प्रबल अनुचुंबकीय है जबकि $\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{3-}$ दुर्बल अनुचुंबकीय। समझाइए।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_43.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_44.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_45.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$26 \\mathrm{Fe}$ का बाहरी विन्यास $=3 d^{6}, 4 s^{2}$\nदोनों संकुलों में $\\mathrm{Fe}, \\mathrm{Fe}^{3+}$ आयन के रूप में है।\nअतः, $\\mathrm{Fe}^{3+}$ आयन का विन्यास $=3 d^{5} 4 s^{0}$\n$\\mathrm{CN}^{-}$ लिगेण्ड (प्रबल क्षेत्र लिगेण्ड) की उपस्थिति में, $3 d$ कक्षक में इलेक्ट्रॉनों का युग्मन होने के बाद एक इलेक्ट्रॉन अयुग्मित रहता है। $d^{2} s p^{3}$ संकरण होने के साथ आन्तरिक कक्षक संकुल बनता है।\n$\\mathrm{H}_{2} \\mathrm{O}$ (दुर्बल क्षेत्र लिगेण्ड) की उपस्थिति में $3 d$-इलेक्ट्रॉन युग्मित नहीं हो पाते हैं। अतः\n$s p^{3} d^{2}$ संकरण के साथ बाह्य कक्षक संकुल बनता है। इसमें पाँच अयुग्मित इलेक्ट्रॉन होते हैं, जिससे यह प्रबल अनुचुम्बकीय है।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.8",
+      "kind": "additional_exercise",
+      "number": "5.8",
+      "topic": "Inner and outer orbital complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "समझाइए कि $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$ एक आंतरिक कक्षक संकुल है जबकि $\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{2+}$ एक बाह्य कक्षक संकुल है।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_46.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_47.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$ में, $\\mathrm{Co}+3$ ऑक्सीकरण अवस्था में है तथा इसका विन्यास $3 d^{6}$ है।\n$\\mathrm{NH}_{3}$ की उपस्थिति में $3 d$-कक्षकों में इलेक्ट्रॉन युग्मित हो जाते हैं। शेष दो रिक्त $3 d$-कक्षक $d^{2} s p^{3}$ संकरण में भाग लेकर आन्तरिक कक्षक संकुल बनाते हैं।\n$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$ संकुल आयन में"
+            }
+          ],
+          "label": "[Co(NH₃)₆]³⁺ — आंतरिक कक्षक संकुल"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{2+}$ में Ni की ऑक्सीकरण अवस्था $+2$ तथा विन्यास $d^{8}$ है।\nचूँकि यहाँ $(n-1) d$ कक्षक उपलब्ध नहीं है, इसलिए $n d$-कक्षक संकरण में भाग लेते हैं। इस प्रकार बना संकुल, बाह्य कक्षक संकुल कहलाता है।"
+            }
+          ],
+          "label": "[Ni(NH₃)₆]²⁺ — बाह्य कक्षक संकुल"
+        }
+      ]
+    },
+    {
+      "id": "it_5.9",
+      "kind": "additional_exercise",
+      "number": "5.9",
+      "topic": "Unpaired electrons in square planar complex",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "वर्ग समतली $\\left[\\mathrm{Pt}(\\mathrm{CN})_{4}\\right]^{2-}$ आयन में अयुग्मित इलेक्ट्रॉनों की संख्या बतलाइए।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_48.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "${ }_{78} \\mathrm{Pt}$ आवर्त सारणी के वर्ग-10 में उपस्थित है। इसका बाह्य विन्यास $5 d^{9} 6 s^{1}$ है।\nवर्ग समतली संरचना के लिए, इस आयन में $d s p^{2}$ संकरण होगा। $5 d$ कक्षकों में इलेक्ट्रॉनों का युग्मन होने से एक $d$-कक्षक रिक्त रहता है। यह रिक्त कक्षक $d s p^{2}$ संकरण में भाग लेता है। इस प्रकार इस आयन में एक भी अयुग्मित इलेक्ट्रॉन नहीं है।"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**उत्तर:** इस आयन में एक भी अयुग्मित इलेक्ट्रॉन नहीं है (अयुग्मित इलेक्ट्रॉनों की संख्या शून्य है)।"
+        }
+      ]
+    },
+    {
+      "id": "it_5.10",
+      "kind": "additional_exercise",
+      "number": "5.10",
+      "topic": "Crystal field theory and unpaired electrons",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "क्रिस्टल क्षेत्र सिद्धांत को प्रयुक्त करते हुए समझाइए कि कैसे हेक्साएक्वा मैंगनीज (II) आयन में पाँच अयुगलित इलैक्ट्रॉन हैं जबकि हेक्सासायनो आयन में केवल एक ही अयुगलित इलेक्ट्रॉन हैं।"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_49.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_50.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Mn}(\\mathrm{II})$ आयन का विन्यास $3 d^{5}$ है। $\\mathrm{H}_{2} \\mathrm{O}$ लिगेण्ड (दुर्बल क्षेत्र लिगेण्ड) की उपस्थिति में इन पाँच इलेक्ट्रॉनों का वितरण $t_{2 g}^{3} e_{g}^{2}$ है। अर्थात् पाँचों इलेक्ट्रॉन अयुग्मित रहकर उच्च प्रचक्रण संकुल बनाते हैं।"
+            }
+          ],
+          "label": "हेक्साएक्वा — दुर्बल क्षेत्र लिगेण्ड"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "हालांकि, $\\mathrm{CN}^{-}$ लिगेण्ड की उपस्थिति में (जोकि प्रबल क्षेत्र लिगेण्ड है), इन इलेक्ट्रॉनों का वितरण $t_{2 \\mathrm{~g}}^{5} e_{\\mathrm{g}}^{0}$ है। अर्थात्, दो $t_{2 \\mathrm{~g}}$ कक्षकों में अयुग्मित इलेक्ट्रॉन हैं तथा एक $t_{2 \\mathrm{~g}}$-कक्षक में $1$ अयुग्मित इलेक्ट्रॉन है। इस प्रकार निम्न प्रचक्रण संकुल बनता है।"
+            }
+          ],
+          "label": "हेक्सासायनो — प्रबल क्षेत्र लिगेण्ड"
+        }
+      ]
+    }
+  ]
+}

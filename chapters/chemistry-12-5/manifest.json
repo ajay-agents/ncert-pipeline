@@ -1,0 +1,216 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-17T04:58:40.589697+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "45a59d27bcbbf401",
+      "solutions.hi.pdf": "e7f74cd6c9a739b9"
+    },
+    "counts": {
+      "chapter_hi_chars": 254631,
+      "solutions_hi_chars": 218559
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-17T05:36:41.184860+00:00",
+    "inputs": {
+      "chapter.hi.md": "bc665a24dbf3b407",
+      "solutions.hi.md": "8248eece482dc8f4"
+    },
+    "counts": {
+      "examples": 7,
+      "intext_questions": 10,
+      "exercise_questions": 32,
+      "intext_solutions": 11,
+      "exercise_solutions": 32,
+      "intext_matched": 10,
+      "exercise_matched": 32,
+      "needs_review_resolved": 1,
+      "manual_content_mismatch_fixes": 1,
+      "total_items": 49,
+      "items_with_empty_solution": 2
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 7,
+    "notes": "7 extraction passes (examples; in-text questions; 2x exercise-question batches; in-text solutions; 2x exercise-solution batches) dispatched per step_2/extract.md. Chapter has a known chapter-numbering discrepancy: the solutions manual's own title page reads 'अध्याय 9' (an older, pre-rationalisation chapter number for Coordination Compounds; the current rationalised textbook numbers it Chapter 5) - individual question numbers inside are bare/local either way, so this did not by itself cause any join errors. Two extraction-structure bugs found and fixed before matching, both purely structural (no content changed): (1) several batches nested :::figure blocks inside :::solution, which stage 2's own parser doesn't support (that nesting is stage 7's job) - hoisted every such figure to be an item-level sibling; (2) the two exercise-question batches nested :::part blocks inside the item's shared :::prompt instead of as item-level siblings each with their own :::prompt - restructured all 51 affected parts. Also fixed 3 stray over-closed ':::' lines in the in-text-solutions batch (a bookkeeping slip, not content) that broke the container parser. 28 inline base64 SVG structural diagrams (cis/trans/fac/mer isomers, coordination polyhedra, chelate examples) found across both source documents - decoded and saved as real files (fig_5_76.svg through fig_5_103.svg, continuing past the 76 already-downloaded real images so no filename collision) rather than left as raw base64 blobs or given fabricated placeholder filenames; only the 6 that belong to extracted items (ex_5.5, ex_5.6, sol_5.1, sol_5.3, sol_5.4, sol_5.24 x4, sol_5.26) were wired into :::figure references, the rest sit in general chapter prose between items and were left alone. Content-mismatch spot-check (per step_2/PROMPT.md's explicit warning about 'Rationalised'-edition drift even when needs_review is empty): systematically diffed all 32 exercise topics between chapter and solutions manual by number, not just the ones needs_review flagged - found exactly one silent wrong-number match (q_5.25/sol_5.25, detailed above) that join_solutions() paired successfully by number despite unrelated content; fixed by hand. it_sol_5.11 (a genuine orphan, no chapter-side counterpart) was correctly caught by needs_review and discarded. q_5.16 ('draw a diagram showing d-orbital splitting') and its solutions-manual answer are both figure-only with no text - gate_solutions_present flags this as 'no solution (hi)' since it checks the text field, but a real answer (fig_5_69, the octahedral CFT splitting diagram) is present; not a gap, just a non-textual answer. q_5.25 is the only item with a genuinely EMPTY solution (Rule 5 - no source answer exists, nothing invented)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-17T05:48:11.340277+00:00",
+    "inputs": {
+      "chapter.hi.md": "a915b0f7e4ccf229"
+    },
+    "counts": {
+      "total_items": 49,
+      "examples_items": 7,
+      "examples_bytes": 8085,
+      "qa_items": 42,
+      "qa_bytes": 104464
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-17T05:50:49.858967+00:00",
+    "inputs": {
+      "examples.hi.md": "4163f26a2d967848",
+      "qa.hi.md": "553584ad6b34f023"
+    },
+    "counts": {
+      "examples_items": 7,
+      "qa_items": 42,
+      "combined_items": 49,
+      "combined_bytes": 112377
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-17T06:49:29.879087+00:00",
+    "inputs": {
+      "combined.hi.md": "a915b0f7e4ccf229",
+      "corrections_merged.md": "89729b9bd001b893"
+    },
+    "counts": {
+      "corrections_parsed": 71,
+      "corrections_applied": 71,
+      "corrections_held": 0,
+      "min_confidence": "medium",
+      "gate_math_parity_issues": 5,
+      "gate_answers_unchanged_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 6,
+    "notes": "6 verification sub-agent batches (examples; in-text questions; 4x exercise batches of 8) dispatched per step_5/verify.md against page-mapped PDF images (chapter.hi.pdf offset +119, solutions.hi.pdf offset +2). See stage report for the ~9 structural issues handled by hand outside the correction-block mechanism (missing table column in ex_5.1, missing content in q_5.4/q_5.24(ii)/it_5.6, a mismatched answer-order in q_5.5, swapped part-solutions in q_5.23, and two figure-caption OCR fixes)."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-17T07:02:04.687376+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "6b6d887895b85303"
+    },
+    "counts": {
+      "structural_fixes": 9,
+      "items": 49,
+      "gate_counts_issues": 0,
+      "gate_solutions_present_issues": 2
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "9 structural fixes applied by hand on top of the 71 correction-block fixes, none expressible as an ordinary found/should_be correction (missing content, mismatched ordering, or a figure caption - not one of the addressable question/solution/final_answer fields): (1) ex_5.1's data table was missing its entire second column (moles of AgCl precipitated per compound) - recovered verbatim from the source PDF (values 2,2,0,1,0) and added inline per formula, since the table was never extracted as a real markdown table to begin with. (2) q_5.4's solution was missing the actual ligand examples for all three parts (NH3/Cl-/H2O for unidentate; the ethylenediamine example for bidentate; all four nitrito-N/nitrito-O/thiocyanato/isothiocyanato bonding-mode lines for ambidentate) - recovered verbatim from the source page. (3) q_5.5's boxed answer values were listed in the SOLUTION's own internal derivation order, which does not match the question's own part order (a mismatch invisible to join_solutions()-style number matching since this is entirely within one already-matched item) - re-associated each computed oxidation number to its correct question part by matching the compound formula (unambiguous, since each part's compound is explicitly named in both the question and the solution's own derivation), and relabelled/reordered the solution's own (ii)-(v) markers to match. (4) q_5.23's parts (ii) and (iii) solutions were swapped the same way (cis-[CrCl2(en)2]Cl and (NH4)2[CoF4] answered under each other's labels) - fixed identically by compound-identity matching. (5) q_5.24 part (ii) was missing its IUPAC name and full oxidation-state derivation entirely (jumped straight to the coordination-number line) - recovered verbatim from the source page. (6) it_5.6's solution only explained [Ni(CO)4]'s diamagnetism, entirely omitting the parallel [NiCl4]2- paramagnetism explanation the question explicitly asks for - recovered from source and added as prose (the source shows this via an orbital-box diagram, transcribed as text consistent with how the rest of this solution's own Ni(CO)4 half was already handled). (7)-(9) Three figure-caption OCR fixes (not correctable via the correction-block mechanism, since captions aren't an addressable field): fig_5_69's caption read 'alpha कक्षकों' where the source shows 'd कक्षकों'; a caption read 'বक्षिणावर्त' (Bengali ব) where the source shows 'दक्षिणावर्त'; and a companion caption's '(l-)' label was entirely lost, replaced with an empty '(-)' - restored from the same source page. Also normalised 'पिरेमिडी'->'पिरैमिडी' (trigonal/square pyramidal) to match the source spelling in q_5.3's figure captions. All fixes verified against the source PDF page images directly (not from chemistry knowledge) and re-checked: file re-parses cleanly, item count unchanged (49), gate_counts clean, and gate_solutions_present shows only the two already-expected genuinely-empty items (q_5.16 figure-only, q_5.25 no source answer per the Rationalised-edition mismatch documented at stage 2)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-17T07:11:56.678077+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "6b6d887895b85303"
+    },
+    "counts": {
+      "items_total": 49,
+      "solution_fields_simplified": 30,
+      "solution_fields_unchanged": 70,
+      "restore_failed_batches": 0,
+      "gate_question_text_frozen_issues": 0,
+      "gate_answers_unchanged_issues": 0,
+      "gate_math_parity_issues": 0,
+      "gate_bilingual_issues_before": 96,
+      "gate_bilingual_issues_after": 96,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 6,
+    "notes": "6 sub-agent batches (examples; in-text questions; 4x exercise batches of 8) dispatched per step_6/simplify.md, each on protect.freeze()'d text (chapter.verified.hi.md, including the 9 structural fixes from stage 5), restored via protect.restore() and merged by item id before gating. Sub-agents were briefed on the recent stage-5 structural changes (q_5.5/q_5.23 part reordering, q_5.4/q_5.24/it_5.6 content recovery, q_5.16/q_5.25's deliberate empty solutions) so they treated the fixed content as ordinary prose rather than re-flagging it."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-17T07:30:29.009638+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "85c9d27739d97d98"
+    },
+    "counts": {
+      "items_total": 49,
+      "output_bytes": 123239,
+      "tag_parse_ok": true,
+      "protect_parity_issues": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 6,
+    "notes": "6 sub-agent batches (examples ex_5.1-7; in-text questions it_5.1-10; 4x exercise batches q_5.1-8/9-16/17-24/25-32) dispatched per step_7/format.md, each adding :::step/:::formula/:::table/:::concept/:::note structure and relocating pre-existing :::figure blocks (including the 28 recovered inline SVG diagrams from stage 2) to their first textual reference point. Merged by slicing exact raw top-level item blocks (mdio.markdown_to_items() cannot round-trip post-format nested structure - that's stage 8's job). q_5.16 (figure-only answer) and q_5.25 (deliberately empty solution, Rationalised -edition gap) left untouched. No redundant trailing whole-item solutions found in any multi-part item this chapter. One new content-pairing bug caught during stage-7 review: q_5.24's solution had its (ii)/(iii) inline sub-answers transposed relative to the question's own part (ii)/(iii) labels (part (ii)=CrCl3(py)3, part (iii)=[Co(NH3)5Cl]Cl2, but the solution answered them in the opposite order/label) - same defect category as the q_5.23 swap already fixed at stage 5. Fixed by relabelling/reordering the two blocks to match compound identity (unambiguous, since each block explicitly names its own compound formula), applied retroactively to 05_verify/chapter.verified.hi.md and 06_simplify/chapter.simplified.hi.md for consistency, and to this stage's own merged output."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-17T07:33:35.029687+00:00",
+    "inputs": {
+      "structured.hi.md": "d0a071cf5f433cce"
+    },
+    "counts": {
+      "items": 49,
+      "parts": 51,
+      "distinct_figure_srcs": 67,
+      "gate_passed": true,
+      "given": 53,
+      "key_formula": 22,
+      "substitute": 87,
+      "conclusion": 41,
+      "other": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "given/key_formula/substitute/conclusion inference is fully mechanical per step_8/PROMPT.md (pipeline/serialize.py), so no model call was needed for this chapter - stage 7's own labelling was taken as authoritative and unlabelled steps were inferred by position. Gate: fresh direct count from structured.hi.md (49 items, parts, distinct figure srcs including the 28 recovered inline SVG diagrams) matched the JSON's own count exactly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-17T07:54:58.364603+00:00",
+    "inputs": {
+      "structured.hi.json": "2fc5622efefb544e"
+    },
+    "counts": {
+      "html_bytes": 173190,
+      "distinct_figure_srcs_resolved": 67,
+      "figure_srcs_missing": 0,
+      "numeric_readback_fields_checked": 110,
+      "numeric_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored final.hi.html + final.hi.css, adapted from chemistry-12-4's own build_page_chem4.py/latex2html_chem4.py (same base template, same content shape - every multi-part item's :::part holds only its own prompt, all solution content lives at item level, confirmed against this chapter's own JSON before reuse). Surveyed this chapter's own 06_simplify/chapter.simplified.hi.md for LaTeX command/environment coverage per step_9/PROMPT.md's mandatory re-survey rule: found 4 commands not in chem4's converter table - \\downarrow, \\bullet, \\propto (simple symbol additions) and \\underbrace{main}_{label} (7 occurrences, all inside q_5.15/q_5.19/it_5.5's VBT/CFT orbital-box diagrams; handled the same way \\underset already was - label stacked below main content, new s-underbrace/-main/-brace/-label CSS classes). Also found and fixed a real structural bug surfaced by this chapter's content (not present in chem3/chem4): convert_aligned_rows()'s row/column splitting was a naive re.split on literal '\\\\'/'&' with no nesting awareness, which corrupted (ValueError: unbalanced braces) whenever an orbital-box array was nested inside an \\underbrace inside an outer array's own row - a shape unique to this chapter's VBT/CFT content. Fixed by making both splits depth-aware via \\begin/\\end token tracking (_split_env_depth0), not ordinary {}-brace counting. Pre-finish checks per step_9/PROMPT.md: all 67 distinct figure srcs resolve against the real 09_design/ output directory (not a scratch copy); lang=hi present; zero leaked raw LaTeX command-name text in visible page content; 110 question/final_answer fields from chapter.simplified.hi.md numeric-read-back checked against the rendered HTML, 0 missing; manually spot-read q_5.24 (the stage-5/7 (ii)/(iii) swap fix) and it_5.5 (orbital-box diagrams) directly in the rendered output to confirm correctness beyond the automated checks. The orbital-box diagrams (it_5.5/q_5.15/q_5.19) render as best-effort stacked text lines, not literal bordered boxes - the underlying Mathpix OCR of these hand-drawn diagrams is itself lossy/approximate (e.g. electron arrows transcribed as '1', '1l', 'xx' text tokens, and one genuinely garbled nested-fraction-in-superscript artifact in it_5.5's Ni configuration line) - rendered faithfully as-is per Rule 5 (nothing invented), not reinterpreted or corrected from chemistry knowledge."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-17T08:05:52.389511+00:00",
+    "inputs": {
+      "final.hi.html": "8126be4fbd2af295"
+    },
+    "counts": {
+      "page_count": 32,
+      "blank_pages": 0,
+      "pdf_bytes": 2718248,
+      "numeric_readback_checked": 10,
+      "numeric_readback_missing": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.hi.html file:// path (not a copy), waited for document.fonts.ready, called emulate_media('screen') before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base vowel-reordering bug), exported with print_background=True and prefer_css_page_size=True (no explicit format/width/height). Gate: 32 pages (sane for 49 items), 0 blank pages, numeric read-back re-run against the PDF's own fitz-extracted text (not assumed carried over from stage 9's HTML check) using the same question/final_answer-field scope as stage 9, with the documented superscript-merge-separator fix applied when normalizing unicode exponents - 10 distinct numbers checked (low but expected: most of this chapter's question/final_answer fields are qualitative - IUPAC names, isomer structures, ligand classification - not numeric calculations; the chapter's real numeric content, e.g. oxidation-state/magnetic-moment derivations, lives in solution text, outside this gate's documented scope), 0 missing. Not independently re-verified: the known, currently-unresolved Chromium reph ('र्'+consonant) ToUnicode CMap bug documented in step_10/PROMPT.md - visual rendering is unaffected, only copy-paste/text-extraction of words containing that exact sequence; flagged to the user, not silently shipped around, consistent with how prior chapters handled the same known limitation."
+  }
+]
