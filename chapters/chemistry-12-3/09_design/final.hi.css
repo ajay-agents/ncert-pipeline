@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap');
+
+/* ---- base ---- */
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body { margin: 0; background: #ffffff; }
+body { font-family: 'Noto Serif Devanagari', 'STIX Two Text', serif; color: #1b1b1b; }
+sub, sup { padding: 0 1.5px; }
+a { color: #10989e; text-decoration: none; }
+a:hover { color: #0c6b70; text-decoration: underline; }
+img, figure, svg { break-inside: avoid; }
+table { break-inside: auto; }
+
+/* page sheet */
+.sheet { display: block; max-width: 210mm; margin: 0 auto; padding: 9mm; box-sizing: border-box; background: #ffffff; }
+
+@page { size: A4; margin: 9mm; }
+@media print { .sheet { max-width: none; margin: 0; padding: 0; } }
+
+/* ---- generated from the design's inline styles ---- */
+.s1 { font-family:'Noto Serif Devanagari','STIX Two Text',serif; color:#1b1b1b; font-size:12.5px; zoom:0.63; width:1080px; padding-right:30px; box-sizing:border-box; overflow-wrap:break-word; }
+.s2 { text-align:center; margin:0 0 30px; }
+.s3 { font-family:'STIX Two Text',serif; font-weight:700; font-size:38px; line-height:1.2; }
+.s4 { font-size:17px; color:#0c5b5e; margin-top:4px; }
+.s5 { display:flex; justify-content:center; gap:8px; margin-top:12px; }
+.s6 { width:9px; height:9px; border-radius:50%; background:#10989e; }
+.s7 { width:9px; height:9px; border-radius:50%; background:#f5820b; }
+.s8 { width:9px; height:9px; border-radius:50%; background:#e42a63; }
+.s9 { width:9px; height:9px; border-radius:50%; background:#7a3df0; }
+.s10 { display:flex; align-items:center; gap:16px; margin:4px 0 30px; break-before:auto; }
+.s11 { flex:1; border-top:2.4px dashed #10989e; }
+.s12 { font-family:'STIX Two Text',serif; font-weight:700; font-size:23px; color:#10989e; }
+.s13 { display:grid; grid-template-columns:150px 1fr; gap:26px; align-items:start; }
+.s14 { justify-self:center; text-align:center; padding-top:14px; }
+.s15 { position:relative; width:118px; border:1.7px dashed #10989e; border-radius:16px; padding:30px 10px 12px; background:#ffffff; }
+.s16 { position:absolute; top:-23px; left:50%; transform:translateX(-50%); width:46px; height:46px; border-radius:50%; background:#10989e; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; font-family:'STIX Two Text',serif; box-shadow:0 2px 0 rgba(0,0,0,0.08); }
+.s17 { position:relative; background:#10989e; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:44px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s18 { position:absolute; right:-1px; bottom:-1px; width:0; height:0; border-style:solid; border-width:0 0 16px 16px; border-color:transparent transparent #ffffff transparent; }
+.s19 { margin-top:10px; font-size:17px; font-weight:700; color:#0c5b5e; line-height:1.35; }
+.s20 { margin-top:14px; }
+.s21 { margin:0; font-size:21px; font-weight:700; line-height:1.7; text-wrap:pretty; }
+.s22 { display:grid; grid-template-columns:135px 1fr; column-gap:24px; row-gap:16px; align-items:start; margin-top:24px; }
+.s23 { text-align:center; }
+.s24 { display:inline-block; background:#c9f0ec; color:#0d4f52; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s25 { margin-top:12px; }
+.s26 { font-size:17.5px; line-height:1.85; }
+.s27 { margin-bottom:8px; }
+.s28 { display:inline-block; background:#cfe3fb; color:#1d3f6e; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s29 { margin-top:10px; }
+.s30 { display:inline-block; background:#eef4fd; border-radius:10px; padding:6px 14px; }
+.s31 { display:inline-flex; flex-direction:column; align-items:stretch; text-align:center; vertical-align:middle; margin:0 7px; line-height:1.45; font-size:16.5px; }
+.s32 { padding:0 16px 3px; border-bottom:1.8px solid #1b1b1b; white-space:nowrap; }
+.s33 { padding:5px 16px 0; white-space:nowrap; }
+.s34 { display:inline-block; background:#d6efc8; color:#2c5a17; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s35 { display:inline-block; background:#ded4f8; color:#43287d; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s36 { font-size:20px; font-weight:700; line-height:1.6; display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+.s37 { display:inline-block; border:2.6px solid #10989e; border-radius:45% 55% 50% 50% / 60% 55% 45% 50%; padding:4px 20px; font-weight:700; }
+.s38 { transform:translateY(-14px); }
+.s39 { border-top:2.6px dashed #f5820b; margin:32px 0 28px; }
+.s40 { position:relative; width:118px; border:1.7px dashed #f5820b; border-radius:16px; padding:30px 10px 12px; background:#ffffff; }
+.s41 { position:absolute; top:-23px; left:50%; transform:translateX(-50%); width:46px; height:46px; border-radius:50%; background:#f5820b; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; font-family:'STIX Two Text',serif; box-shadow:0 2px 0 rgba(0,0,0,0.08); }
+.s42 { position:relative; background:#f5820b; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:44px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s43 { margin-top:10px; font-size:17px; font-weight:700; color:#9a4e02; line-height:1.35; }
+.s44 { display:inline-block; border:2.6px solid #f5820b; border-radius:45% 55% 50% 50% / 60% 55% 45% 50%; padding:4px 20px; font-weight:700; }
+.s45 { width:100%; height:12px; display:block; margin:30px 0 26px; }
+.s46 { position:relative; width:118px; border:1.7px dashed #e42a63; border-radius:16px; padding:30px 10px 12px; background:#ffffff; }
+.s47 { position:absolute; top:-23px; left:50%; transform:translateX(-50%); width:46px; height:46px; border-radius:50%; background:#e42a63; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; font-family:'STIX Two Text',serif; box-shadow:0 2px 0 rgba(0,0,0,0.08); }
+.s48 { position:relative; background:#e42a63; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:44px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s49 { margin-top:10px; font-size:17px; font-weight:700; color:#a3103f; line-height:1.35; }
+.s50 { display:inline-block; border:2.6px solid #e42a63; border-radius:45% 55% 50% 50% / 60% 55% 45% 50%; padding:4px 20px; font-weight:700; }
+.s51 { border-top:2.6px dashed #7a3df0; margin:32px 0 28px; }
+.s52 { position:relative; width:118px; border:1.7px dashed #7a3df0; border-radius:16px; padding:30px 10px 12px; background:#ffffff; }
+.s53 { position:absolute; top:-23px; left:50%; transform:translateX(-50%); width:46px; height:46px; border-radius:50%; background:#7a3df0; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; font-family:'STIX Two Text',serif; box-shadow:0 2px 0 rgba(0,0,0,0.08); }
+.s54 { position:relative; background:#7a3df0; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:44px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s55 { margin-top:10px; font-size:17px; font-weight:700; color:#4a1fa8; line-height:1.35; }
+.s56 { display:inline-block; border:2.6px solid #7a3df0; border-radius:45% 55% 50% 50% / 60% 55% 45% 50%; padding:4px 20px; font-weight:700; }
+.s57 { border-top:2.6px dashed #10989e; margin:32px 0 28px; }
+.s58 { border-top:2.6px dashed #e42a63; margin:32px 0 28px; }
+.s59 { font-weight:700; margin:6px 0 8px; }
+.s60 { overflow-x:auto; }
+.s61 { width:100%; border-collapse:collapse; font-size:15.5px; background:#fff; border-radius:10px; overflow:hidden; }
+.s62 { background:#c9f0ec; color:#0d4f52; font-weight:700; }
+.s63 { text-align:left; padding:8px 11px; }
+.s64 { padding:8px 11px; border-top:1px solid #e6ecec; }
+.s65 { position:relative; background:#f5820b; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:38px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s66 { position:relative; background:#e42a63; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:38px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s67 { position:relative; background:#7a3df0; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:38px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s68 { position:relative; background:#10989e; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:38px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s69 { display:flex; align-items:center; gap:16px; margin:44px 0 30px; break-before:page; }
+.s70 { flex:1; border-top:2.4px dashed #f5820b; }
+.s71 { font-family:'STIX Two Text',serif; font-weight:700; font-size:23px; color:#f5820b; }
+.s72 { flex:1; border-top:2.4px dashed #e42a63; }
+.s73 { font-family:'STIX Two Text',serif; font-weight:700; font-size:23px; color:#e42a63; }
+.s74 { display:inline-block; background:#fdeec2; color:#7a5200; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s75 { display:inline-block; background:#fbd6dd; color:#8f1236; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s76 { display:flex; flex-wrap:wrap; gap:18px; margin:10px 0; }
+.s77 { margin:0; max-width:290px; }
+.s78 { max-width:100%; border-radius:10px; background:#fff; }
+.s79 { font-size:15px; color:#666; margin-top:6px; }
+.s80 { margin:12px 0; }
+
+/* ---- chapter-specific additions (this chapter has no pre-existing exemplar
+   to copy from - built fresh for chemistry-12-2's own electrode-reaction
+   and equilibrium notation, not present in the base exemplar chapter) ---- */
+
+/* .s22 is a fixed 2-column CSS grid built for the exemplar's own content,
+   which only ever paired one label cell with one content cell, alternating.
+   This chapter's content is richer (numbered concepts, notes, tables) - a
+   safe flex-column stack for the whole solution's sequence of blocks
+   (.s81), and one self-contained flex row per actual label+content pair
+   (.s82, label fixed-width + content flex:1), used instead of .s22 itself. */
+.s81 { display:flex; flex-direction:column; gap:16px; margin-top:24px; }
+.s82 { display:flex; gap:24px; align-items:flex-start; }
+.s82 > .s23 { width:135px; flex:0 0 135px; }
+.s82 > .s26 { flex:1; min-width:0; }
+
+/* A multi-part item's own combined answer text for one part, indented under
+   a plain "भाग (label)" heading - this chapter never uses :::part, so this
+   path is not exercised today, kept only for forward compatibility. */
+.s80 > .s21 { margin-top:6px; }
+.s80 { margin:8px 0 8px 8px; border-left:2px solid #e6ecec; padding-left:14px; }
+
+.s-display { margin:6px 0; }
+
+/* \text{...} inside math: plain upright prose, not italic math variables. */
+.s-text { font-style:normal; }
+
+/* \underset{bottom}{main}: an electrode-reaction species with its own mol/
+   charge annotation stacked below it (e.g. a coefficient under 2e^-). */
+.s-underset { display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle; margin:0 2px; line-height:1.25; }
+.s-underset-main { }
+.s-underset-label { font-size:0.68em; color:#555; }
+
+/* \stackrel{top}{main}: a symbol (usually an arrow) with a condition/label
+   stacked above it, e.g. an equilibrium arrow labelled "जल". */
+.s-stackrel { display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle; margin:0 2px; line-height:1.15; }
+.s-stackrel-top { font-size:0.68em; color:#555; }
+.s-stackrel-main { }
+
+/* \xrightarrow{label}: a reaction arrow with a process name above it
+   (ऑक्सीकरण/अपचयन). */
+.s-xrightarrow { display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle; margin:0 4px; line-height:1.15; }
+.s-xrightarrow-label { font-size:0.68em; color:#555; white-space:nowrap; }
+
+/* \substack{a \\ b}: a multi-line stacked annotation, e.g. under an
+   \underset (a species name over its molar mass on the next line). */
+.s-substack { display:inline-flex; flex-direction:column; align-items:center; line-height:1.1; }
+.s-substack-row { }
+
+/* .s23 trap: a short pill + tall doodle sharing one inline line pushes the
+   pill to the line's baseline instead of its top. Stack them in a column so
+   the pill always renders first regardless of doodle height. */
+.s23 { display:flex; flex-direction:column; align-items:center; gap:4px; }
+
+/* Plain rounded-rectangle variants of the boxed final-answer echo (.s37/
+   .s44/.s50/.s56): the organic blob border-radius only looks right on a
+   short single-line value - a longer combined answer that wraps to two
+   lines has the same percentage radius scale up and cut into the wrapped
+   text at the corners. Same border colors, fixed-pixel radius, safe at any
+   height. */
+.s37p { display:inline-block; border:2.6px solid #10989e; border-radius:10px; padding:4px 20px; font-weight:700; }
+.s44p { display:inline-block; border:2.6px solid #f5820b; border-radius:10px; padding:4px 20px; font-weight:700; }
+.s50p { display:inline-block; border:2.6px solid #e42a63; border-radius:10px; padding:4px 20px; font-weight:700; }
+.s56p { display:inline-block; border:2.6px solid #7a3df0; border-radius:10px; padding:4px 20px; font-weight:700; }
+
+/* .s1's page-wide overflow-wrap:break-word (a safety net against a very
+   long unbroken token overflowing the page) is inherited into the boxed
+   answer text too, where it does real damage: once a long combined answer
+   needs to wrap, the browser can break BETWEEN a number and its own
+   immediately-following <sup> exponent (no space sits there to break at
+   otherwise) rather than at an actual word boundary - caught for real on
+   q_3.22's combined answer, "10⁻³" torn into "10⁻" / "3" across two lines.
+   Reset it back to normal (break only at real spaces/hyphens) on every
+   boxed-answer variant - these already wrap at the ordinary "; " segment
+   separators between sub-results, which is the only place they should. */
+.s37, .s44, .s50, .s56, .s37p, .s44p, .s50p, .s56p { overflow-wrap:normal; }
+
+/* Never split a fraction, a badge/topic column, or a figure across a
+   printed/exported page. */
+.s31, .s14 { break-inside: avoid; }
+
+/* No mobile breakpoint existed at all in the base CSS - only @media print.
+   .s1 is a fixed-width desktop/print simulation (width:1080px; zoom:0.63);
+   on a phone that gets squeezed on top of the already-reduced zoom, making
+   every s-class's literal pixel font-size unreadably small. Below 700px:
+   let .s1 use the viewport at its own literal (un-zoomed) sizes, reflow the
+   two-column item grid (.s13) and the label+content row (.s22) to a single
+   stacked column, and let an overflowing fraction/derivation line scroll
+   within itself rather than overflow the page. */
+@media (max-width: 700px) {
+  .s1 { width:100%; zoom:1; }
+  .s13 { grid-template-columns:1fr; }
+  .s82 { flex-direction:column; gap:6px; }
+  .s82 > .s23 { width:auto; flex:none; }
+  .s26, .s36 { overflow-x:auto; }
+}
+
+/* ---- chemistry-12-3 additions (Chemical Kinetics: no electrode-couple
+   notation, no \sqrt at all - but very heavy \frac use, almost always
+   directly after "=") ---- */
+
+/* '=' immediately followed by a \frac{}{} (or a chain of them, "a = X = Y")
+   glued into one nowrap unit - a non-breaking space on '=' alone doesn't
+   stop the browser breaking right at the boundary between plain text and
+   the fraction's own inline-block-like span. overflow-x:auto is a safety
+   net for the rare case the whole glued unit still doesn't fit one line;
+   break-inside:avoid keeps it from tearing across an exported PDF page,
+   same reasoning as .s31 below. */
+.s90 { display:inline-flex; align-items:baseline; flex-wrap:nowrap; white-space:nowrap; overflow-x:auto; max-width:100%; break-inside:avoid; }
+
+/* \overline{...}: log-table mantissa/characteristic notation (e.g. the
+   antilog step's "2̄.0151"), a bar over one digit - not decorative, the
+   sign of the characteristic. */
+.s-overline { text-decoration:overline; }
+
+/* A base token glued to its own immediately-following <sup>/<sub> (e.g.
+   "10" + its own "-4" exponent, "L" + its own "-1" exponent) - confirmed
+   empirically that Chromium treats the boundary between plain text and an
+   adjacent sup/sub as a valid line-break point on its own, independent of
+   overflow-wrap/white-space on any ancestor (a non-breaking space alone,
+   as already used around every operator, does not cover this case since
+   there is no space there to begin with). Caught for real: a long boxed
+   answer tore "10⁻³" into "10⁻" / "3" across two lines even with
+   overflow-wrap:normal set directly on the box. */
+.s91 { white-space:nowrap; }

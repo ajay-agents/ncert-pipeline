@@ -73,6 +73,9 @@ def join_solutions(questions: list[Item], solutions: list[Item],
         used.add(norm_num(hit.number, chapter))
         setattr(q.solution, lang, hit.solution.get(lang) or None)
         setattr(q.final_answer, lang, hit.final_answer.get(lang) or None)
+        if hit.figures:
+            existing_ids = {f.id for f in q.figures}
+            q.figures.extend(f for f in hit.figures if f.id not in existing_ids)
         if hit.parts and len(hit.parts) == len(q.parts):
             for qp, sp in zip(q.parts, hit.parts):
                 setattr(qp.solution, lang, sp.solution.get(lang) or None)

@@ -1,0 +1,337 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-14T12:56:52.287853+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "af1c86e188db79cb",
+      "solutions.hi.pdf": "408e1b2e7ef371d5"
+    },
+    "counts": {
+      "pages_chapter_hi": 25,
+      "pages_solutions_hi": 6,
+      "chars_chapter_hi": 47675,
+      "chars_solutions_hi": 16403,
+      "dollar_spans_chapter_hi": 152,
+      "dollar_spans_solutions_hi": 38,
+      "table_rows_chapter_hi": 0,
+      "table_rows_solutions_hi": 21,
+      "image_refs_chapter_hi": 19,
+      "image_refs_solutions_hi": 3,
+      "images_downloaded": 22
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no English source PDFs provided). Page counts are approximate (regex scan of /Type /Page in raw PDF bytes, not a real PDF parser)."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-14T13:15:45.451532+00:00",
+    "inputs": {
+      "chapter.hi.md": "f175a80882ccb82c",
+      "solutions.hi.md": "728ba5a0e43d2f52"
+    },
+    "counts": {
+      "examples": 0,
+      "exercises": 18,
+      "raw_solutions": 18,
+      "matched": 18,
+      "needs_review": 0,
+      "aligned": 18,
+      "parts": 4,
+      "figures": 3
+    },
+    "gates_failed": {
+      "gate_solutions_present_hi": [
+        "q_1.4: no solution (hi) - expected, answer is diagram-only (fig_1_19), no answer text exists in the solutions manual"
+      ],
+      "gate_bilingual": [
+        "all items - expected, single-language (Hindi-only) chapter, no English source exists"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter (biology-12-1). No worked examples in this chapter (Biology exercise-only format). All 18 exercise questions matched cleanly 1:1 to solutions-manual entries by number, no NCERT numbering drift observed (spot-checked by content during extraction, not just number match). Q13 has 4 labelled sub-parts (क,ख,ग,घ) each with its own comparison table, matched positionally. Fixed a gap in pipeline/match.py join_solutions(): it previously merged solution/final_answer/parts from a matched solution into the question item but never merged figures, silently dropping diagram-only answers (caught here on q_1.4, whose entire solutions-manual answer is a single figure)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-14T13:20:55.795427+00:00",
+    "inputs": {
+      "chapter.hi.md": "0a8fdeb0f6505bfd"
+    },
+    "counts": {
+      "hi_examples_items": 0,
+      "hi_qa_items": 18,
+      "hi_examples_bytes": 230,
+      "hi_qa_bytes": 42091
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter; no examples.en.md/qa.en.md produced (no English source). 0 worked examples in this chapter (Biology exercise-only format) - examples.hi.md has front matter only, no item blocks."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-14T13:28:23.470639+00:00",
+    "inputs": {
+      "examples.hi.md": "25bede9ff4d7ba77",
+      "qa.hi.md": "0a8fdeb0f6505bfd"
+    },
+    "counts": {
+      "hi_examples_items": 0,
+      "hi_qa_items": 18,
+      "hi_combined_items": 18,
+      "hi_combined_bytes": 42091
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "item_count_matches_stage3_sum"
+    ],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter, no combined.en.md (no English source). step_4/PROMPT.md names mdio.merge_by_id() for this reunion, but that function only enriches items sharing an id across its two args (its actual design use: stage 3's same-id en/hi reunion) - it would silently drop qa.hi.md's 18 items here since examples.hi.md and qa.hi.md have disjoint ids (ex_ vs q_ prefixes) by construction. Implemented the reunion as a direct concatenation of the two files' parsed item lists instead, matching the 12+23=35 item precedent already on record for physics-12-1's stage-4 combine. Did not modify merge_by_id() itself - its existing behavior is correct for stage 3's actual (same-id) use case."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-14T13:48:13.368681+00:00",
+    "inputs": {
+      "combined.hi.md": "0a8fdeb0f6505bfd",
+      "chapter.hi.pdf": "af1c86e188db79cb",
+      "solutions.hi.pdf": "408e1b2e7ef371d5"
+    },
+    "counts": {
+      "corrections_returned": 8,
+      "corrections_applied_high": 7,
+      "corrections_held": 1,
+      "ocr_digit_ligature": 1,
+      "ocr_dropped_conjunct": 3,
+      "ocr_misread_word": 2,
+      "ocr_truncation": 1,
+      "figure_caption_fixes_applied_directly": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter. Verified all 18 exercise questions against chapter.hi.pdf (pages 24-25 of the PDF, textbook pages 26-27) - transcription was already exact, zero question-text corrections needed. Verified all 18 solutions against solutions.hi.pdf (6 pages) - 7 high-confidence OCR corrections applied (0 held): q_1.2 decussate transliteration, q_1.5 x2 + q_1.6 + q_1.12 dropped conjunct in bhrunkosh/bhrunposh, q_1.9 vartikaagra misread, q_1.11 truncated closing word, q_1.16 parthenocarpic garbled. Additionally found and fixed 3 figure-caption issues NOT via the Correction mechanism (step_5/verify.md: figure captions have no addressable field name) but applied directly against the Chapter object per CLAUDE.md Rule 1: q_1.4/fig_1_19 was missing its caption entirely (PDF page 2 has 'चित्र-2.1 : प्रारूपी आवृतबीजी बीजाण्ड।'); q_1.6/fig_1_20's caption had the same dropped-conjunct OCR error (bhrunkosh) x2; q_1.7/fig_1_21's caption had 'anunmisya' for 'anunmeelya'. One borderline spelling ('bahya-bhitti' vs 'bahya-abhitti' in q_1.17) was left uncorrected - the PDF print is compressed/blurry at that exact word and I could not read it with high confidence either way; noted here rather than guessed at."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-14T13:49:36.758236+00:00",
+    "inputs": {
+      "combined.hi.md": "0a8fdeb0f6505bfd",
+      "chapter.hi.pdf": "af1c86e188db79cb",
+      "solutions.hi.pdf": "408e1b2e7ef371d5"
+    },
+    "counts": {
+      "corrections_returned": 8,
+      "corrections_applied_high": 8,
+      "corrections_held": 0,
+      "ocr_digit_ligature": 1,
+      "ocr_dropped_conjunct": 3,
+      "ocr_misread_word": 2,
+      "ocr_truncation": 1,
+      "figure_caption_fixes_applied_directly": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter. Verified all 18 exercise questions against chapter.hi.pdf (pages 24-25 of the PDF, textbook pages 26-27) - transcription was already exact, zero question-text corrections needed. Verified all 18 solutions against solutions.hi.pdf (6 pages) - 7 high-confidence OCR corrections applied (0 held): q_1.2 decussate transliteration, q_1.5 x2 + q_1.6 + q_1.12 dropped conjunct in bhrunkosh/bhrunposh, q_1.9 vartikaagra misread, q_1.11 truncated closing word, q_1.16 parthenocarpic garbled. Additionally found and fixed 3 figure-caption issues NOT via the Correction mechanism (step_5/verify.md: figure captions have no addressable field name) but applied directly against the Chapter object per CLAUDE.md Rule 1: q_1.4/fig_1_19 was missing its caption entirely (PDF page 2 has 'चित्र-2.1 : प्रारूपी आवृतबीजी बीजाण्ड।'); q_1.6/fig_1_20's caption had the same dropped-conjunct OCR error (bhrunkosh) x2; q_1.7/fig_1_21's caption had 'anunmisya' for 'anunmeelya'. One borderline spelling ('bahya-bhitti' vs 'bahya-abhitti' in q_1.17) was left uncorrected - the PDF print is compressed/blurry at that exact word and I could not read it with high confidence either way; noted here rather than guessed at."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-14T13:52:11.005127+00:00",
+    "inputs": {
+      "combined.hi.md": "0a8fdeb0f6505bfd",
+      "chapter.hi.pdf": "af1c86e188db79cb",
+      "solutions.hi.pdf": "408e1b2e7ef371d5"
+    },
+    "counts": {
+      "corrections_returned": 8,
+      "corrections_applied_high": 8,
+      "corrections_held": 0,
+      "items_marked_verified": 18,
+      "figure_caption_fixes_applied_directly": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Supersedes the two prior verify entries in this file, which were interim states from the same single verification pass while a self-caught formatting bug (a hBcwrapped number in one correction found-text) was fixed and the verified=True flag was added to match the physics-12-1 precedent (35/35 verified there) - not three separate verification passes against the PDFs. This entry is the accurate final record: all 18 exercise questions verified against chapter.hi.pdf (exact match, 0 corrections needed on question text); all 18 solutions verified against solutions.hi.pdf, 8 high-confidence OCR corrections applied (0 held) - q_1.2 decussate transliteration, q_1.5 (x2) + q_1.6 + q_1.12 dropped conjunct in bhrunkosh/bhrunposh, q_1.9 vartikaagra misread, q_1.11 truncated closing word, q_1.16 parthenocarpic garbled. Also fixed 3 figure-caption issues directly against the Chapter object (not via Correction - step_5/verify.md: captions have no addressable field name): q_1.4/fig_1_19 was missing its caption entirely; q_1.6/fig_1_20 and q_1.7/fig_1_21 captions had the same class of OCR errors as their solution text. One borderline spelling in q_1.17 (bahya-bhitti vs bahya-abhitti) was left uncorrected - PDF print too compressed to read with confidence either way. model_calls recorded as 0 here since the actual reading/verification work (1 batch, all 18 items read directly against 31 rendered PDF pages) was already logged in the superseded entries; not double-counting it a third time."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-14T13:58:04.773177+00:00",
+    "inputs": {
+      "combined.hi.md": "0a8fdeb0f6505bfd",
+      "chapter.hi.pdf": "af1c86e188db79cb",
+      "solutions.hi.pdf": "408e1b2e7ef371d5"
+    },
+    "counts": {
+      "corrections_returned": 10,
+      "corrections_applied_high": 10,
+      "corrections_held": 0,
+      "items_marked_verified": 18,
+      "figure_caption_fixes_applied_directly": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "FINAL, accurate record for stage 5 - supersedes the three prior verify entries in this file. Those were interim states from the same overall verification effort: entry 1 (7 corrections, 1 held) had a hBcwrapping formatting bug in one found-text; entry 2 (8 corrections, 0 held) fixed that but predated the verified=True flag and a second, more thorough re-read of all 6 solutions-manual pages at higher resolution; that re-read caught 2 more genuine misses - q_1.1 (bhrunkosh OCR-misread as shrunkosh) and q_1.17 (bahya-bhitti missing one of its doubled ta) - neither of which had been caught in the first pass. This entry reflects that complete, re-verified state: all 18 exercise questions verified against chapter.hi.pdf (exact match, 0 corrections needed on question text); all 18 solutions verified against solutions.hi.pdf at 250-500dpi re-renders, 10 high-confidence OCR corrections applied (0 held) - q_1.1 and q_1.2 misread words, q_1.5 (x2)/q_1.6/q_1.12 dropped conjunct in bhrunkosh/bhrunposh, q_1.9 vartikaagra misread, q_1.11 truncated closing word, q_1.16 parthenocarpic garbled, q_1.17 doubled-consonant drop. Also fixed 3 figure-caption issues directly against the Chapter object (not via Correction - step_5/verify.md: captions have no addressable field name): q_1.4/fig_1_19 was missing its caption entirely; q_1.6/fig_1_20 and q_1.7/fig_1_21 captions had the same class of OCR errors as their solution text. All 18 items marked verified=True. model_calls recorded as 0 here since the reading/verification work itself (2 read passes over 31 rendered PDF pages, all 18 items) is already logged across the superseded entries; not counting it a fourth time."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-14T14:03:25.249128+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "9a98ee7a8bbc1575"
+    },
+    "counts": {
+      "items_total": 18,
+      "fields_simplified_text_changed": 13,
+      "fields_returned_unchanged": 7,
+      "fields_restore_failed": 0,
+      "items_marked_simplified": 18
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "all items - expected, single-language (Hindi-only) chapter, no English source exists"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter. Simplified 14 of 20 solution fields (item-level + part-level) for readability: shorter sentences, plain register (e.g. \"अत:\" -> \"इसलिए\"), merged redundant clauses, removed presentational hyphens used as list-markers (\"जैसे-X\" -> \"जैसे X\"). Left 6 fields unchanged as a valid outcome per step_6/simplify.md - q_1.7, q_1.14, q_1.15 were already short and plain; all four q_1.13 parts are almost entirely a comparison table (frozen as a single token) with only a one-line heading as free text, nothing meaningful to simplify. Kept existing hyphens in fixed technical compounds that also appear in the immutable question text (स्व-परागण, पर-परागण, स्व-अयोग्यता, त्रि-संलयन) rather than de-hyphenating only the solution side and creating a spelling mismatch against the question. All protected spans (inline math, the two tables) restored cleanly - 0 restore failures. Question text, figure captions, and all numbers/units/final answers left untouched throughout."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-14T14:03:46.445200+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "9a98ee7a8bbc1575"
+    },
+    "counts": {
+      "items_total": 18,
+      "fields_simplified_text_changed": 13,
+      "fields_returned_unchanged": 7,
+      "fields_restore_failed": 0,
+      "items_marked_simplified": 18
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "all items - expected, single-language (Hindi-only) chapter, no English source exists"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 0,
+    "notes": "Correction-only entry: the prior verify entry for this stage said \"14 of 20\" fields simplified and \"6 unchanged\" in its prose notes - an arithmetic slip. The actual, correct counts (13 simplified, 7 unchanged) were already right there in that entry's own counts dict; only the prose text was off. No new work was done, no data changed, chapter.simplified.hi.md is unchanged - this entry exists solely so the audit trail is not left carrying a wrong prose count. The 7 unchanged fields are: q_1.7, q_1.14, q_1.15 (already short and plain), and all four q_1.13 parts (almost entirely a frozen comparison table with nothing else to simplify)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-15T05:10:13.799210+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "e4b916d482e60410"
+    },
+    "counts": {
+      "items_total": 18,
+      "fields_structured": 14,
+      "fields_left_plain": 6,
+      "concept_blocks_added": 11,
+      "table_blocks_added": 5,
+      "output_chars_hi": 19417
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "protect_parity"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter. This chapter has almost no numeric/worked-solution content (Biology exercise-only format, low on math per _shared/RULES.md's subject notes), so :::step, :::formula and :::note were not used anywhere - no genuine multi-stage derivations, no standalone equations worth flagging, and no distinct textbook remarks to mark as notes in this chapter's solutions. Added :::table around the 5 existing comparison tables (q_1.2, and all four q_1.13 parts) - wrapper only, same rows/columns/cells. Added :::concept{label=...} around solutions that open by naming a single term and then defining it (q_1.5, q_1.6, q_1.9, q_1.10, q_1.11 first paragraph only, q_1.15, q_1.18 first paragraph only); q_1.7 and q_1.8 each name two distinct terms in an (i)/(ii) list, so each got two nested concept blocks instead of one. All labels are Hindi noun phrases naming what the block IS (e.g. \"स्वअयोग्यता\", \"बैगिंग\"), never a paraphrase of its content. Left q_1.1, q_1.3, q_1.4 (no solution text), q_1.12, q_1.14, q_1.16, q_1.17 as plain paragraph text - no term-first definitional pattern, already short/clear, forcing structure would add nothing. No duplicate whole-item solution after labelled parts exists for q_1.13 (all its content already lives in the four parts). No wording, numbers, table cells or figure positions were changed anywhere - confirmed by protect.parity showing zero drift between stage 6 and stage 7 text, and tag._parse succeeding on the output."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-15T05:16:47.036616+00:00",
+    "inputs": {
+      "structured.hi.md": "87be365c2de6c757"
+    },
+    "counts": {
+      "items": 18,
+      "parts": 4,
+      "figures": 3,
+      "stage_conclusion": 13,
+      "stage_given": 14
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "fresh_count_parity"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter. Wrote pipeline/serialize.py (new, reusable) to walk 07_format/structured.hi.md's container tree into 08_tag/structured.hi.json per step_8/PROMPT.md's schema. The given/key_formula/substitute/conclusion rule is documented there as a fully mechanical positional rule once stage 7's own labelling is taken as authoritative (explicit :::concept always 'given', explicit :::formula always 'key_formula' regardless of position; an unlabelled bare block is 'given' if first among the solution's stageable blocks, 'conclusion' if last, 'substitute' otherwise, 'conclusion' if it's the solo block) - implemented as code rather than re-judged per chapter, since this chapter's stage 7 pass already made every real structural call (what to wrap in :::concept/:::table and what to leave plain); no :::step/:::formula/:::note exist in this chapter so those code paths are untested by this run but implemented per spec for reuse by later chapters. No known duplicate-solution artifact in this chapter (q_1.13 has no leftover item-level solution after its parts). No हल-opener text or empty-label notes present to strip. Figure src kept exactly as 'images/fig_1_N.jpg' throughout, verified by the fresh count gate matching the JSON's own figure-src set exactly (both derived independently - one from a JSON walk, one from a raw regex scan of the source text)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-15T05:31:52.894352+00:00",
+    "inputs": {
+      "structured.hi.json": "9288e8b11b3dbdfa"
+    },
+    "counts": {
+      "html_bytes": 62604,
+      "css_bytes": 12886,
+      "items_rendered": 18,
+      "figures_rendered": 3,
+      "given_pills": 14,
+      "conclusion_pills": 13,
+      "tables_rendered": 5
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "read_back_questions_and_final_answers",
+      "figure_src_resolves_on_disk"
+    ],
+    "model_calls": 1,
+    "notes": "Hindi-only chapter. Hand-authored 09_design/final.hi.html + final.hi.css directly (no design-skill canvas), starting final.hi.css from solutions-chapter-1.css unforked and adding only what it did not already cover: .s81/.s82 (safe flex-column stack + label+content pair, replacing the exemplar .s22 grid which assumes strict alternating pairs - this chapter has up to 3 solution blocks per item), the .s23 flex-column fix for the given-stage pill+arrow-doodle ordering trap, .s14 break-inside:avoid, and a @media(max-width:700px) mobile breakpoint - all per step_9/PROMPT.md's documented traps. Did NOT add the boxed-final-answer classes (.s37/.44/.50/.56 or their long-answer plain-rectangle variants), the stacked-fraction classes (.s31/.32/.33), or the glued =+frac/sqrt class (.s90): this chapter has zero :::formula blocks, zero :::note blocks, zero LaTeX beyond bare digit tokens ($8$/$7$/$1$/$+2$, stripped to plain digits), and - critically - zero items with a final_answer field at all (all 18 answers are descriptive Biology prose per the extraction stage's own decision not to invent a boxed numeric result where the source has none), so the boxed-answer echo never fires anywhere on this page; none of that machinery is dead-code risk here, it is simply unneeded content. Rendered 14 given-stage pills (11 from explicit :::concept blocks using their own freeform label, e.g. Sva-ayogyata, Bagging - matching the exemplar's own precedent of a freeform label inside a fixed-color pill, e.g. its Vargikaran pill - plus 3 positional-first bare-text blocks using the fixed word Jaankaari) and 13 conclusion-stage pills (all fixed word Nishkarsh, no boxed echo). Multi-part item q_1.13's four bare Devanagari-letter labels (label=\"k\" etc, not pre-parenthesized) are wrapped once as 'Bhaag (k)'; its item-level prompt is genuinely distinct shared context (not a duplicate of any part prompt) so was kept, per the item-level-prompt-duplication check. One presentational quirk worth flagging: q_1.13's four parts each have a bare heading line like '(Differences between Hypocotyl and Epicotyl)' that stage 8's purely positional given/conclusion rule tags 'conclusion' (solo stageable block) - so it renders as a Nishkarsh pill immediately above its own table, which is a mechanically correct but semantically loose fit for a plain sub-heading; not re-judged at this stage per 'templating, not re-deciding structure.' Automated read-back: wrote and ran a script (via pipeline.mdio.markdown_to_chapter against 06_simplify's file, the gated source of truth) confirming all 18 question texts + 4 part-question texts appear verbatim in the rendered HTML (0 final_answer fields exist to check). All 3 figure srcs verified with os.path.exists against the real 09_design/images/ output directory, not a scratch copy. No mismatch on any check."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-15T05:41:50.062264+00:00",
+    "inputs": {
+      "final.hi.html": "10d975aa30db8c5f"
+    },
+    "counts": {
+      "pdf_bytes": 1095192,
+      "page_count": 7,
+      "blank_pages": 0,
+      "numeric_tokens_checked": 2,
+      "numeric_tokens_missing": 0,
+      "fulltext_questions_checked": 22,
+      "fulltext_exact_match": 16,
+      "fulltext_matched_after_known_cmap_artifact_stripped": 6,
+      "fulltext_genuinely_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback"
+    ],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter. Exported 09_design/final.hi.html to PDF via Playwright/Chromium (page.goto the file's own file:// path, waited on document.fonts.ready, called page.emulate_media(media='screen') before page.pdf(), print_background=True + prefer_css_page_size=True, no explicit format/width/height) per step_10/PROMPT.md. Gates: 7 pages (sane for 18 items), 0 blank pages, and the mandated numeric read-back (digits from every question/final_answer in 06_simplify/chapter.simplified.hi.md via mdio.markdown_to_chapter, re-run against the PDF's own extracted text with the superscript-run separator fix) found both of this chapter's 2 distinct numeric tokens (7, 8 - from q_1.6's '7-koshiya, 8-nyukilyet') with none missing. Went further than the mandated check and also ran a full verbatim-text read-back (all 18 questions + 4 part questions as exact substrings of the PDF's extracted text, since this chapter's content is almost entirely non-numeric prose and the digit-only check alone would have been very weak evidence here) - 16 of 22 matched exactly; the other 6 initially looked missing but all 6 turned out to be the SAME known category of Chromium PDF-export bug already documented in step_10/PROMPT.md for the 'reph' (र्) case, just a different conjunct pattern: 3 were resolved by that exact documented reph-stripping workaround, and a NEW pattern was found and confirmed for the other 3 - a doubled vowel-sign matra in the extracted text layer for a conjunct ('्व' or '्र') immediately followed by a matra, e.g. 'द्वारा' (dwara) extracts as 'द्वाारा' (10/10 occurrences chapter-wide) and 'भ्रूण' (bhrun) extracts as 'भ्रूूण' (38/38 occurrences chapter-wide) - always the same doubling, never a one-off. Rendered both PDF pages containing these words at 300-400dpi and confirmed the VISUAL text is completely correct in both cases - this is an extraction/CMap-layer-only artifact, the same category as the already-documented reph bug, not a content defect and not something this chapter's own HTML/CSS caused. The mandated numeric-only gate is correctly unaffected by this (digits are never part of the affected conjunct+matra sequences), so it is not a stage-blocking failure; flagging it here per the reph bug's own precedent ('flag this to the user rather than silently shipping around it') since it affects copy-paste/search/re-extraction of this specific PDF, same as the reph case, just a different trigger pattern. No hand-edit was made to the PDF or its export call to work around this - a real fix means either post-processing the exported ToUnicode CMap directly or a different PDF-generation pipeline, neither attempted here."
+  }
+]

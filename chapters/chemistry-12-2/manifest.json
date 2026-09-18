@@ -1,0 +1,303 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-15T11:45:50.693649+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "317f12ed713a24de",
+      "solutions.hi.pdf": "76bfc7811edd57bb"
+    },
+    "counts": {
+      "chapter.hi.pdf_chars": 86129,
+      "chapter.hi.pdf_dollar_spans": 807,
+      "chapter.hi.pdf_table_lines": 77,
+      "chapter.hi.pdf_image_refs": 14,
+      "chapter.hi.pdf_devanagari_chars": 38494,
+      "solutions.hi.pdf_chars": 41816,
+      "solutions.hi.pdf_dollar_spans": 492,
+      "solutions.hi.pdf_table_lines": 0,
+      "solutions.hi.pdf_image_refs": 3,
+      "solutions.hi.pdf_devanagari_chars": 10168
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (NCERT Chemistry 12 Ch.2, 'Electrochemistry' / वैद्युतरसायन - the textbook's own front matter calls it \"एकक 2\" (Unit 2) but the solutions manual's own header reads \"अध्याय 3\" (Chapter 3); using chemistry-12-2 per this repo's own chapter-number convention, matching the user's own ch2 filenames). No chapter.en.pdf/solutions.en.pdf present in 00_raw/, same Hindi-only configuration as chemistry-12-1."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-15T12:10:06.851814+00:00",
+    "inputs": {
+      "chapter.hi.md": "059e1774d36d1a82",
+      "solutions.hi.md": "fd5302b32a490170"
+    },
+    "counts": {
+      "examples": 10,
+      "intext_questions": 15,
+      "intext_solutions": 15,
+      "exercises": 18,
+      "exercise_solutions": 18,
+      "intext_matched": 15,
+      "intext_needs_review": 0,
+      "exercises_matched": 18,
+      "exercises_needs_review": 0,
+      "total_items": 43
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "all items - expected, single-language (Hindi-only) chapter, no English source exists"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (NCERT Chemistry 12 'Electrochemistry' / वैद्युतरसायन - the textbook's own front matter calls it एकक 2 (Unit 2) but the solutions manual's own header reads अध्याय 3 (Chapter 3); named chemistry-12-2 per this repo's own convention, matching the source filenames). Extracted directly (no sub-agent dispatch - at ~130K total raw chars / 43 items this chapter is roughly half chemistry-12-1's scale, so read and transcribed the full chapter.hi.md + solutions.hi.md myself for tighter control over the chapter's OCR quirks) into structured Item data, then ran the deterministic match/gate code exactly as documented. A genuine numbering-collision risk (step_2/PROMPT.md's physics-12-5 warning) is present here in an unusually direct form: solutions.hi.md numbers BOTH its in-text-question solutions and its exercise solutions with bare \"प्रश्न 1\".. restarting at 1 for each section - so a single merged join would have collided item-for-item across all 15 in-text/18 exercise solutions, not just a scattered few. Avoided by running TWO separate match.join_solutions() calls (in-text questions against in-text solutions; exercises against exercise solutions), mirroring the it_/q_ id-prefix separation already used during extraction - never merging the two bare sequences into one list. Both joins matched every item with 0 needs_review (15/15 in-text, 18/18 exercises), verified item-by-item against the source by transcription (not sampled) rather than taken on faith, per the same-shaped physics-12-5 precedent. OCR-glued example/exercise numbers (Mathpix ran the item number directly into the following digit with no space, e.g. \"उदाहरण $2.40.1 \\mathrm{~mol}$...\" for example 2.4, \"$2.8298$ K\" for exercise 2.8) were split at the correct number/question boundary during extraction rather than preserved glued - this is boundary recognition, not content correction, and every character of the actual question text is unchanged. One figure (fig_2_14, captioned \"वातावरण में लोहे पर जंग लगना\") exists only in the solutions manual's own it_2.15 answer, not in the chapter text itself - kept attached to that solution via match.join_solutions()'s figure-merge (the fix made in pipeline/match.py during biology-12-1's run this session). A genuine textbook/solutions-manual error, not an OCR artifact, was found and left untouched per Rule 4/5 (not stage 2's job to fix): q_2.17 part (ii) (Cu(s) + 2Ag+(aq)) computes E°cell = +0.80-0.34 = +0.46 V (positive, by the solution's OWN stated rule 'कोई भी अभिक्रिया तभी सम्भव होगी जबकि E° का मान धनात्मक है' meaning positive => feasible) yet concludes मसमभव नहीं है (not feasible) - the arithmetic and the stated rule directly contradict the printed conclusion; flagged here for stage 5's awareness, left exactly as printed. Also flagged for stage 5: exercise 2.10's own solutions-manual answer is genuinely incomplete in the source (only a unit-conversion note plus a reference graph, fig_2_16, with no explicit numeric Λₘ° value ever stated in text) - extracted as-is, nothing invented to fill the gap, per Rule 5."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-15T12:11:31.300264+00:00",
+    "inputs": {
+      "chapter.hi.md": "059e1774d36d1a82",
+      "solutions.hi.md": "fd5302b32a490170"
+    },
+    "counts": {
+      "examples": 10,
+      "intext_questions": 15,
+      "intext_solutions": 15,
+      "exercises": 18,
+      "exercise_solutions": 18,
+      "intext_matched": 15,
+      "intext_needs_review": 0,
+      "exercises_matched": 18,
+      "exercises_needs_review": 0,
+      "total_items": 43
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "all items - expected, single-language (Hindi-only) chapter, no English source exists"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (NCERT Chemistry 12 'Electrochemistry' / वैद्युतरसायन - the textbook's own front matter calls it एकक 2 (Unit 2) but the solutions manual's own header reads अध्याय 3 (Chapter 3); named chemistry-12-2 per this repo's own convention, matching the source filenames). Extracted directly (no sub-agent dispatch - at ~130K total raw chars / 43 items this chapter is roughly half chemistry-12-1's scale, so read and transcribed the full chapter.hi.md + solutions.hi.md myself for tighter control over the chapter's OCR quirks) into structured Item data, then ran the deterministic match/gate code exactly as documented. A genuine numbering-collision risk (step_2/PROMPT.md's physics-12-5 warning) is present here in an unusually direct form: solutions.hi.md numbers BOTH its in-text-question solutions and its exercise solutions with bare \"प्रश्न 1\".. restarting at 1 for each section - so a single merged join would have collided item-for-item across all 15 in-text/18 exercise solutions, not just a scattered few. Avoided by running TWO separate match.join_solutions() calls (in-text questions against in-text solutions; exercises against exercise solutions), mirroring the it_/q_ id-prefix separation already used during extraction - never merging the two bare sequences into one list. Both joins matched every item with 0 needs_review (15/15 in-text, 18/18 exercises), verified item-by-item against the source by transcription (not sampled) rather than taken on faith, per the same-shaped physics-12-5 precedent. OCR-glued example/exercise numbers (Mathpix ran the item number directly into the following digit with no space, e.g. \"उदाहरण $2.40.1 \\mathrm{~mol}$...\" for example 2.4, \"$2.8298$ K\" for exercise 2.8) were split at the correct number/question boundary during extraction rather than preserved glued - this is boundary recognition, not content correction, and every character of the actual question text is unchanged. One figure (fig_2_14, captioned \"वातावरण में लोहे पर जंग लगना\") exists only in the solutions manual's own it_2.15 answer, not in the chapter text itself - kept attached to that solution via match.join_solutions()'s figure-merge (the fix made in pipeline/match.py during biology-12-1's run this session). A genuine textbook/solutions-manual error, not an OCR artifact, was found and left untouched per Rule 4/5 (not stage 2's job to fix): q_2.17 part (ii) (Cu(s) + 2Ag+(aq)) computes E°cell = +0.80-0.34 = +0.46 V (positive, by the solution's OWN stated rule 'कोई भी अभिक्रिया तभी सम्भव होगी जबकि E° का मान धनात्मक है' meaning positive => feasible) yet concludes मसमभव नहीं है (not feasible) - the arithmetic and the stated rule directly contradict the printed conclusion; flagged here for stage 5's awareness, left exactly as printed. Also flagged for stage 5: exercise 2.10's own solutions-manual answer is genuinely incomplete in the source (only a unit-conversion note plus a reference graph, fig_2_16, with no explicit numeric Λₘ° value ever stated in text) - extracted as-is, nothing invented to fill the gap, per Rule 5."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-15T12:12:17.273930+00:00",
+    "inputs": {},
+    "counts": {
+      "note_only": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Bookkeeping note: this stage has two prior entries above - the first run attached each exercise's hand-transcribed final_answer to the EXERCISES (question-side) dict rather than EXERCISE_SOLUTIONS, and match.join_solutions() unconditionally overwrites final_answer from the solution side (even with an empty value), silently wiping all 9 of them to empty. Caught via calibration (\"items with no final answer: 43\" - every item, an implausible result for a chapter where 9 solutions end in a clear boxed value). Fixed by moving those 9 final_answer values to the exercise_sol items instead and re-running the same script; the second extract_match entry above is the corrected, authoritative run - its own chapter.hi.md/match_report.md are the real stage-2 output."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-15T12:13:57.933628+00:00",
+    "inputs": {
+      "chapter.hi.md": "bf0f24c1017da5b1"
+    },
+    "counts": {
+      "hi_examples_items": 10,
+      "hi_qa_items": 33,
+      "hi_examples_bytes": 14803,
+      "hi_qa_bytes": 72995
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter; no examples.en.md/qa.en.md produced (no English source). qa.hi.md carries both exercise (18) and additional_exercise (15, the in-text questions) kinds together, per render()'s default section grouping."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-15T12:15:54.214901+00:00",
+    "inputs": {
+      "examples.hi.md": "24878032016704a0",
+      "qa.hi.md": "143838e588730731"
+    },
+    "counts": {
+      "hi_examples_items": 10,
+      "hi_qa_items": 33,
+      "hi_combined_items": 43,
+      "hi_combined_bytes": 87646
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "item_count_matches_stage3_sum"
+    ],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter, no combined.en.md. Same merge_by_id() substitution as chemistry-12-1's and biology-12-1's own stage 4 (see those chapters' manifest notes for the full reasoning) - direct concatenation of examples.hi.md's 10 items + qa.hi.md's 33 items (18 exercise + 15 additional_exercise) into one combined.hi.md, 43 total."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-15T12:44:19.081694+00:00",
+    "inputs": {
+      "combined.hi.md": "bf0f24c1017da5b1",
+      "chapter.hi.pdf": "317f12ed713a24de",
+      "solutions.hi.pdf": "76bfc7811edd57bb"
+    },
+    "counts": {
+      "corrections_returned": 31,
+      "corrections_applied_high": 28,
+      "corrections_held_medium": 3,
+      "batches_dispatched": 6,
+      "batches_with_zero_corrections": 1,
+      "direct_fixes_not_via_correction": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 6,
+    "notes": "Hindi-only chapter. Verified all 43 items (10 examples, 15 in-text questions, 18 exercises) against chapter.hi.pdf/solutions.hi.pdf page renders (pymupdf PNGs at 200dpi) via 6 dispatched sub-agents (batches A-F), each given only step_5/verify.md (never step_5/PROMPT.md) with an exact item range and exact scratch output path, per _shared/RULES.md's dispatch-scope rule. 30 corrections returned overall (2 in examples, 0 in examples batch B, 9 across in-text solutions, 19 across exercise solutions/questions), dominated by single-character Devanagari OCR misreads (dha/gha, da/dha, tha/ya confusions) and a recurring corrupted-font \"कैथोड\"->\"कैयोड\" misread (3 occurrences, 2 medium-confidence since the glyph is genuinely ambiguous under zoom, 1 high-confidence from a differently-rendered instance) plus a systematic \"सम्भव\"->\"सम्मव\" misread across all 5 parts of q_2.17. 29 of 30 corrections were high-confidence and applied automatically; 1 held back (medium confidence, per min_confidence='high'). Fixed 2 corrections' field addressing before applying: batch E returned q_2.3/q_2.4 with 'parts[N].solution' and q_2.5 with 'parts[1].question' field paths, but none of this chapter's items use :::part structure (multi-clause (i)/(ii)/... items are single combined items with the labels embedded as plain text, matching chemistry-12-1's own established precedent) - retargeted all three to the item's own 'solution'/'question' field, verified each 'found' text still matched exactly once before applying. One extraction gap found and fixed directly (not via Correction, since there was no text substitution - the whole content was structurally present but under-described): q_2.10's solution appeared severely truncated in the original stage-2 extraction (only a one-line unit-conversion note), but its own attached fig_2_16.jpg turned out to already be a Mathpix crop of the FULL worked table + graph + final answer as one image (confirmed by reading the image file directly) - added the missing caption describing the table/graph and populated the item's own final_answer field (Λₘ° = 124.05 S cm² mol⁻¹, read directly off the image), since neither existed before. Three genuine NCERT-source discrepancies were found and deliberately left untouched (Rule 4/Rule 5 - not stage 5's call to \"fix\" the textbook): (1) q_2.17 part (ii) (Cu(s)+2Ag+(aq) reaction) computes E°cell = 0.80-0.34 = +0.46 V (positive) yet its own printed conclusion states the reaction is NOT feasible - directly contradicting the solution's own stated rule one line earlier that positive E° means feasible; (2) q_2.17 part (v) has the identical contradiction (E°cell = +0.32 V, positive, yet concludes not feasible) - a second instance of the same error pattern, confirmed genuinely printed; (3) q_2.16 part (b)'s intermediate Zn-mass calculation prints \"1295.6 C\" as \"12956\" (a dropped decimal point) in the solutions manual itself - confirmed present in the source PDF, doesn't affect the final correctly-computed answer (0.438 g), left as extracted. All three are reported here as known NCERT solutions-manual issues, not pipeline corrections."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-15T13:08:26.689627+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "730d5231ed5a6dff"
+    },
+    "counts": {
+      "corrections_applied_high": 5,
+      "bugfix_only": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 0,
+    "notes": "Bugfix-only follow-up to the main verify-stage entry above: 5 of q_2.17's corrections (from corrections_F.md) silently degraded to no-ops - their multi-line Found/Should-be blocks only had a '>' blockquote prefix on the first line, so mdio.markdown_to_corrections() dropped the unprefixed continuation lines, making found==should_be for all 5 (the exact same bug already caught once this session in chemistry-12-1's own stage 5, for a different sub-agent's output - not caught here until a stage-6 sub-agent's simplification report mentioned fixing 'सम्मव'->'सम्भव' in q_2.17, which shouldn't have been necessary if stage 5's own fix had actually landed; grepping chapter.verified.hi.md directly confirmed 5 of 6 occurrences were still unfixed). Reconstructed all 5 corrections directly in Python (each anchored by its part's own unique computed E-cell value, verified to match exactly once before applying), re-ran gate_math_parity against a fresh snapshot - clean. corrections.md and chapter.verified.hi.md above are now the corrected, authoritative stage-5 output; the q_2.17 entries in the main corrections.md record reflect the ORIGINAL (bugged) sub-agent text, superseded by the 5 entries appended at the end of that same file."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-15T13:09:49.916191+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "730d5231ed5a6dff"
+    },
+    "counts": {
+      "items_total": 43,
+      "fields_simplified_text_changed": 21,
+      "fields_returned_unchanged": 22,
+      "fields_restore_failed": 0,
+      "items_marked_simplified": 43,
+      "batches_dispatched": 5
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "all items - expected, single-language (Hindi-only) chapter, no English source exists"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity_hi"
+    ],
+    "model_calls": 5,
+    "notes": "Hindi-only chapter. Simplified via 5 dispatched sub-agents (batches A-E, covering all 43 items: 10 examples, 15 in-text questions, 18 exercises), each given only step_6/simplify.md (never step_6/PROMPT.md) and pre-frozen (protect.freeze()) masked text for its own items only. 21 of 43 solution fields were reworded (shorter sentences, plainer register, de-hyphenation per house style, standardized variant spellings); 22 returned unchanged as a valid outcome. Multiple batches explicitly declined to touch comparative sentences despite otherwise-eligible run-on structure, citing the documented physics-12-2 reordering-reversal incident (it_2.2's zinc-vs-copper reduction-potential comparison was the one flagged case here). One dispatched batch (E, exercises 10-18) incidentally fixed a 'सम्मव'->'सम्भव' spelling repeated 5 times in q_2.17 as part of its own simplification pass - this text was still the uncorrected OCR typo when the batch was dispatched, because a stage-5 sub-agent's multi-line correction blocks had silently degraded to no-ops (caught and separately fixed via a dedicated bugfix pass, documented in this chapter's own stage-5 manifest entries, before this stage's merge ran) - harmless overlap since the typo is plain prose, never a protect.freeze() token, so both the corrected source and the sub-agent's own independent fix agree on the same correct spelling; no conflict at merge time. All protected spans (inline/display math, tables, units) restored cleanly across all 43 items - 0 restore failures, all four gates pass (gate_bilingual fails for all items as expected/documented for a Hindi-only chapter). Question text, figure captions, and every number/unit/sign/final answer left untouched throughout."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-15T13:21:33.230269+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "0702f6b72efc76a7"
+    },
+    "counts": {
+      "items_total": 43,
+      "output_chars_hi": 67358,
+      "batches_dispatched": 5
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "protect_parity"
+    ],
+    "model_calls": 5,
+    "notes": "Hindi-only chapter. Structured via 5 dispatched sub-agents (batches A-E, all 43 items), each given only step_7/format.md + _shared/RULES.md's container-vocabulary section (never step_7/PROMPT.md), working on fully self-contained per-item rendered blocks (render.render_item() output), per _shared/RULES.md's dispatch-scope rule. 30 of 43 items received genuine inner structure (:::step/:::formula/:::concept/:::table); the rest correctly left as plain paragraph text where the source solution was a single fused LaTeX derivation, too short, or purely descriptive/definitional (e.g. q_2.7). This chapter has no :::part usage anywhere (multi-clause (i)/(ii)/... items are single combined items with :::step per part instead, using the part's own marker as a freeform label rather than the fixed given/formula/substitute/conclusion vocabulary, since each part has its own separate flow) - all 5 batches confirmed this and none invented :::part structure. The fixed Hindi vocabulary (जानकारी/मुख्य सूत्र/मान रखो/निष्कर्ष) was used only where a block genuinely fit that given->conclusion flow. ex_2.6's fig_2_7 and it_2.15's fig_2_14 were both moved to their explicit mid-solution reference points ('चित्र 2.7 में...', figure named inline); q_2.10's fig_2_16 (the table+graph+answer crop) and ex_2.7/2.8/2.9's absence of any figure were correctly left/handled as-is. q_2.17's two genuine self-contradicting feasibility verdicts (parts ii and v) were preserved exactly as printed while adding structure around them. tag._parse succeeds and protect.parity shows zero drift (display math, inline math, tables, images all unchanged in count) between stage 6 and stage 7 text - no wording, digit, symbol or table cell was altered anywhere."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-15T13:23:30.035631+00:00",
+    "inputs": {
+      "structured.hi.md": "eae4d45e37c19d49"
+    },
+    "counts": {
+      "items": 43,
+      "parts": 0,
+      "distinct_figure_srcs": 4,
+      "stage_given": 34,
+      "stage_key_formula": 15,
+      "stage_substitute": 50,
+      "stage_conclusion": 40,
+      "blocktype_step": 118,
+      "blocktype_formula": 15,
+      "blocktype_table": 1,
+      "blocktype_figure": 2,
+      "blocktype_concept": 6
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "count_parity"
+    ],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter. Serialized via pipeline/serialize.py (pure code, no model call). This chapter has no :::part usage anywhere (confirmed by fresh regex count = 0, matching all 5 stage-7 batch reports), so the duplicate-solution-after-parts code path was never exercised. serialize.py's nested-container flattening fix (added during chemistry-12-1's own stage 8, for a step/concept wrapping a further nested formula/concept/note/table/figure) was exercised again here without needing further changes. Gate passed: item count, part count (0), and distinct figure src count all match between the written JSON and a fresh direct count from structured.hi.md."
+  },
+  {
+    "stage": "design",
+    "timestamp": "2026-09-15T16:44:50.117309Z",
+    "inputs": {
+      "08_tag/structured.hi.json": "630b5370b8ce099f"
+    },
+    "outputs": {
+      "09_design/final.hi.html": {
+        "hash": "57b87d7c2f79def0",
+        "bytes": 122561
+      },
+      "09_design/final.hi.css": {
+        "hash": "bef53d84d9e952f3",
+        "bytes": 15090
+      }
+    },
+    "counts": {
+      "items": 43
+    },
+    "gates": {
+      "tag_balance": "pass (div 951/951, span 707/707, sub 363/363, sup 779/779, table/tr/td/th/p/figure/figcaption balanced)",
+      "figure_paths_exist": "pass (4/4)",
+      "numeric_readback_vs_06_simplify": "pass (278/278 distinct numeric tokens found)",
+      "leaked_latex_commands": "pass (0 after fix; log/ln literal text are expected, not leaks)"
+    },
+    "model_calls": 0,
+    "notes": "No pre-existing hand-built exemplar for this chapter (unlike chemistry-12-1); built a from-scratch latex2html.py converter (surveyed via chem2_latex_survey.txt) and a JSON-to-HTML template renderer (build_page_chem2.py), reusing solutions-chapter-1.css as the base stylesheet per CLAUDE.md. This was code-generated rather than manual per-item design judgement, since the fixed pill/badge/fraction template from chemistry-12-1 covers this chapter's notation once the converter itself is correct; RULES.md frames stage 9 as 'almost entirely model judgement' precisely because there is usually no existing template to drive from - noting the deviation here for the record. Bug found and fixed during this stage: _rewrite_divisions incorrectly promoted paren-wrapped electrode-couple notation (e.g. E_{(Fe^3+/Fe^2+)}, meaning 'the Fe3+/Fe2+ couple') into a stacked math fraction, and had a separate indexing bug in its \right) match check that additionally leaked literal \\left/\right text. Chapter survey showed zero genuine paren-wrapped fractions exist in this chapter (~21/21 such spans are couple notation) so the promotion rule was removed entirely rather than narrowed further."
+  },
+  {
+    "stage": "pdf",
+    "timestamp": "2026-09-15T16:54:36.094983+00:00",
+    "inputs": {
+      "09_design/final.hi.html": "57b87d7c2f79def0"
+    },
+    "outputs": {
+      "10_pdf/final.hi.pdf": {
+        "hash": "9d74b06910813167",
+        "bytes": 1725612
+      }
+    },
+    "counts": {
+      "pages": 21
+    },
+    "gates": {
+      "page_count_sane": "pass (21 pages for 43 items)",
+      "no_blank_pages": "pass (0 blank)",
+      "numeric_readback_vs_06_simplify": "pass (261/261 numeric tokens found in extracted PDF text)"
+    },
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium of 09_design/final.hi.html, with emulate_media(screen) applied before page.pdf() per the standing Devanagari pre-base vowel-reordering fix, and prefer_css_page_size+print_background so the base CSS's @page/@media print rules (A4, 9mm margins, colored backgrounds) apply. Known unresolved limitation carried over from step_10/PROMPT.md, not specific to this chapter: Chromium's print-to-PDF pipeline generates an incorrect ToUnicode CMap for Devanagari pre-base reph ('र्' + consonant), dropping that character from the PDF's extractable text layer while visual rendering stays correct - does not affect this stage's numeric read-back gate, but flagged in case copy-paste/search of the exported PDF matters for this chapter's use."
+  }
+]

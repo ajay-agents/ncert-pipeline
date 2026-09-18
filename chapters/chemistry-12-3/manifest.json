@@ -1,0 +1,483 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-16T05:00:50.834376+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "1552e408d023fcc2",
+      "solutions.hi.pdf": "502ea4c31fe96624"
+    },
+    "counts": {
+      "chapter_hi_chars": 67006,
+      "solutions_hi_chars": 43304
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-16T05:21:19.808405+00:00",
+    "inputs": {
+      "chapter.hi.md": "a8f96f4640bfe24c",
+      "solutions.hi.md": "50d9f5b0a549e4f4"
+    },
+    "counts": {
+      "examples": 10,
+      "intext_questions": 9,
+      "exercise_questions": 30,
+      "intext_solutions": 9,
+      "exercise_solutions": 30,
+      "intext_matched": 9,
+      "exercise_matched": 30,
+      "needs_review": 0,
+      "total_items": 49
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "3 extraction passes (examples, questions [intext+exercise], solutions [intext+exercise]) dispatched to sub-agents per step_2/extract.md, verified against source by direct read before merging. it_3.3 has no solution in the source solutions manual (genuine gap, left empty per Rule 5). Also fixed: 3 figures (fig_3_12/13/14, referenced inline in q_3.15/q_3.22 solutions) were re-extracted as proper :::figure blocks instead of bare markdown image links, so they attach to item.figures via the solution-side join, matching the schema convention. Also fixed a bug in CALIBRATION/calibrate.py: _is_empty_solution ignored the item-level solution field whenever an item had parts, wrongly flagging q_3.1/q_3.6/q_3.9/q_3.13/q_3.15 as having no solution when they actually carry one combined solution at the item level (the source never split it by part) - now checks item-level OR any part, matching gate_solutions_present-s own logic. Follow-up fix (discovered during stage 5 verification, applied retroactively before continuing stage 5): the questions-extraction sub-agent wrote 18 sub-part prompts (q_3.1 x4, q_3.6 x2, q_3.9 x3, q_3.13 x3, q_3.15 x6) as bare body text directly under :::part{...} instead of wrapping them in a nested :::prompt block, which mdio._node_to_item only reads from - all 18 parsed as empty question text. Fixed in the extract_questions.md scratch source and re-ran stages 2-4 (see their own manifest entries just below for the resulting counts); this entry's own counts (49 items, 9/30 matched) are unaffected since the fix only changed how existing part text renders, not what was extracted."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-16T05:28:31.630822+00:00",
+    "inputs": {
+      "chapter.hi.md": "d46837ea26383c49"
+    },
+    "counts": {
+      "total_items": 49,
+      "examples_items": 10,
+      "examples_bytes": 17647,
+      "qa_items": 39,
+      "qa_bytes": 74929
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-16T05:31:13.908142+00:00",
+    "inputs": {
+      "examples.hi.md": "1ad3cf0c85f7758b",
+      "qa.hi.md": "99e02a9702690dea"
+    },
+    "counts": {
+      "examples_items": 10,
+      "qa_items": 39,
+      "combined_items": 49,
+      "combined_bytes": 92404
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-16T05:42:09.644076+00:00",
+    "inputs": {
+      "chapter.hi.md": "e004ae28597c78a1"
+    },
+    "counts": {
+      "total_items": 49,
+      "examples_items": 10,
+      "examples_bytes": 17647,
+      "qa_items": 39,
+      "qa_bytes": 77201
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-16T05:42:09.873282+00:00",
+    "inputs": {
+      "examples.hi.md": "1ad3cf0c85f7758b",
+      "qa.hi.md": "3dcf04ceebddc26e"
+    },
+    "counts": {
+      "examples_items": 10,
+      "qa_items": 39,
+      "combined_items": 49,
+      "combined_bytes": 94676
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-16T05:49:04.746922+00:00",
+    "inputs": {
+      "combined.hi.md": "e004ae28597c78a1",
+      "chapter.hi.pdf": "1552e408d023fcc2",
+      "solutions.hi.pdf": "502ea4c31fe96624"
+    },
+    "counts": {
+      "corrections_total": 24,
+      "applied_high": 21,
+      "held": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 7,
+    "notes": "7 verification batches dispatched to sub-agents per step_5/verify.md, covering all 49 items against original PDF pages."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-16T06:01:29.099302+00:00",
+    "inputs": {
+      "combined.hi.md": "e004ae28597c78a1",
+      "chapter.hi.pdf": "1552e408d023fcc2",
+      "solutions.hi.pdf": "502ea4c31fe96624"
+    },
+    "counts": {
+      "corrections_total": 26,
+      "applied_high": 24,
+      "held": 0,
+      "applied_after_user_approval": 2
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 7,
+    "notes": "7 verification batches dispatched to sub-agents per step_5/verify.md, covering all 49 items against original PDF pages. Second pass after user sign-off: applied the 3 medium-confidence held corrections plus 2 additional corrections for q_3.26 (a same-page unit self-contradiction - kJ mol^-1 vs kJ^-1 mol^-1 - per step_5 verify.md special rule, fixed only after explicit user approval). Also flagged (not corrected, per Rule 4): it_3.8 solution uses T1=295K/T2=305K while the question states 298K+10K rise; verified this is the source solutions manual's own internal inconsistency, not an extraction error - left as printed."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-16T06:11:35.102307+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "dade4bb25f27813d"
+    },
+    "counts": {
+      "fields_total": 50,
+      "simplified": 18,
+      "unchanged": 32,
+      "restore_failed": 0
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "ex_3.1: question missing a language",
+        "ex_3.1: solution missing a language",
+        "ex_3.2: question missing a language",
+        "ex_3.2: solution missing a language",
+        "ex_3.3: question missing a language",
+        "ex_3.4: question missing a language",
+        "ex_3.5: question missing a language",
+        "ex_3.5: solution missing a language",
+        "ex_3.6: question missing a language",
+        "ex_3.6: solution missing a language",
+        "ex_3.7: question missing a language",
+        "ex_3.7: solution missing a language",
+        "ex_3.8: question missing a language",
+        "ex_3.8: solution missing a language",
+        "ex_3.10: question missing a language",
+        "ex_3.10: solution missing a language",
+        "ex_3.11: question missing a language",
+        "ex_3.11: solution missing a language",
+        "q_3.1: question missing a language",
+        "q_3.1: solution missing a language",
+        "q_3.2: question missing a language",
+        "q_3.2: solution missing a language",
+        "q_3.3: question missing a language",
+        "q_3.3: solution missing a language",
+        "q_3.4: question missing a language",
+        "q_3.4: solution missing a language",
+        "q_3.5: question missing a language",
+        "q_3.5: solution missing a language",
+        "q_3.6: question missing a language",
+        "q_3.6: solution missing a language",
+        "q_3.7: question missing a language",
+        "q_3.7: solution missing a language",
+        "q_3.8: question missing a language",
+        "q_3.8: solution missing a language",
+        "q_3.9: question missing a language",
+        "q_3.9: solution missing a language",
+        "q_3.10: question missing a language",
+        "q_3.10: solution missing a language",
+        "q_3.11: question missing a language",
+        "q_3.11: solution missing a language",
+        "q_3.12: question missing a language",
+        "q_3.12: solution missing a language",
+        "q_3.13: question missing a language",
+        "q_3.13: solution missing a language",
+        "q_3.14: question missing a language",
+        "q_3.14: solution missing a language",
+        "q_3.15: question missing a language",
+        "q_3.15: solution missing a language",
+        "q_3.16: question missing a language",
+        "q_3.16: solution missing a language",
+        "q_3.17: question missing a language",
+        "q_3.17: solution missing a language",
+        "q_3.18: question missing a language",
+        "q_3.18: solution missing a language",
+        "q_3.19: question missing a language",
+        "q_3.19: solution missing a language",
+        "q_3.20: question missing a language",
+        "q_3.20: solution missing a language",
+        "q_3.21: question missing a language",
+        "q_3.21: solution missing a language",
+        "q_3.22: question missing a language",
+        "q_3.22: solution missing a language",
+        "q_3.23: question missing a language",
+        "q_3.23: solution missing a language",
+        "q_3.24: question missing a language",
+        "q_3.24: solution missing a language",
+        "q_3.25: question missing a language",
+        "q_3.25: solution missing a language",
+        "q_3.26: question missing a language",
+        "q_3.26: solution missing a language",
+        "q_3.27: question missing a language",
+        "q_3.27: solution missing a language",
+        "q_3.28: question missing a language",
+        "q_3.28: solution missing a language",
+        "q_3.29: question missing a language",
+        "q_3.29: solution missing a language",
+        "q_3.30: question missing a language",
+        "q_3.30: solution missing a language",
+        "it_3.1: question missing a language",
+        "it_3.1: solution missing a language",
+        "it_3.2: question missing a language",
+        "it_3.2: solution missing a language",
+        "it_3.3: question missing a language",
+        "it_3.4: question missing a language",
+        "it_3.4: solution missing a language",
+        "it_3.5: question missing a language",
+        "it_3.5: solution missing a language",
+        "it_3.6: question missing a language",
+        "it_3.6: solution missing a language",
+        "it_3.7: question missing a language",
+        "it_3.7: solution missing a language",
+        "it_3.8: question missing a language",
+        "it_3.8: solution missing a language",
+        "it_3.9: question missing a language",
+        "it_3.9: solution missing a language"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 5,
+    "notes": "5 simplification batches dispatched to sub-agents per step_6/simplify.md, covering all 50 non-empty solution fields (item-level + part-level)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-16T06:46:04.641395+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "4a460fdbd7ab7e92"
+    },
+    "counts": {
+      "items": 49,
+      "bytes": 101299
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "protect_parity"
+    ],
+    "model_calls": 5,
+    "notes": "5 formatting batches dispatched to sub-agents per step_7/format.md. Fixed 3 label/container mismatches post-hoc (a sub-agent convention slip): 'जानकारी' was placed on :::step in q_3.11/q_3.30/it_3.5 instead of :::concept - corrected to :::concept and renumbered the following :::step n= values."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-16T06:49:18.677929+00:00",
+    "inputs": {
+      "structured.hi.md": "00abba29d53947e0"
+    },
+    "counts": {
+      "items": 49,
+      "parts": 22,
+      "figures": 3,
+      "stage_distribution": {
+        "conclusion": 50,
+        "given": 43,
+        "substitute": 39,
+        "key_formula": 31
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "count_reconciliation"
+    ],
+    "model_calls": 0,
+    "notes": "Serialization via pipeline/serialize.py (already implements the given/key_formula/substitute/conclusion mechanical rule per step_8/PROMPT.md, built during an earlier chapter's stage 8) - no model judgment call needed since stage 7 already made all labelling decisions."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-16T07:08:48.532681+00:00",
+    "inputs": {
+      "structured.hi.md": "00abba29d53947e0"
+    },
+    "counts": {
+      "items": 49,
+      "parts": 22,
+      "figures": 3,
+      "stage_distribution": {
+        "conclusion": 50,
+        "given": 43,
+        "substitute": 39,
+        "key_formula": 31
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "count_reconciliation"
+    ],
+    "model_calls": 0,
+    "notes": "Serialization via pipeline/serialize.py (already implements the given/key_formula/substitute/conclusion mechanical rule per step_8/PROMPT.md, built during an earlier chapter's stage 8) - no model judgment call needed since stage 7 already made all labelling decisions."
+  },
+  {
+    "stage": "design",
+    "timestamp": "2026-09-16T09:59:17.363291+00:00",
+    "inputs": {
+      "08_tag/structured.hi.json": "621754d670e62e45"
+    },
+    "outputs": {
+      "09_design/final.hi.html": {
+        "hash": "9f3085a4573d5300",
+        "bytes": 185857
+      },
+      "09_design/final.hi.css": {
+        "hash": "cae657c2115bafb7",
+        "bytes": 17643
+      }
+    },
+    "counts": {
+      "items": 49
+    },
+    "checks": {
+      "tag_balance": "pass (div/span/sub/sup/table/tr/td/th/p/figure/figcaption/thead/tbody all balanced)",
+      "leaked_latex_commands": "pass (0 after fixes; log/ln literal text expected)",
+      "figure_paths_exist": "pass (3/3, verified against 09_design/ itself)",
+      "numeric_readback_vs_06_simplify": "pass (372/372 distinct numeric tokens found)",
+      "lang_attr": "pass (lang=hi)"
+    },
+    "model_calls": 0,
+    "notes": "Adapted chemistry-12-2's own from-scratch latex2html.py converter and build_page.py template (same subject, no pre-existing exemplar for this specific chapter's content) after surveying this chapter's own LaTeX usage (chem3_latex_survey.txt) - added boldsymbol/dfrac/overline support, and the general '=' + \frac gluing (step_9 trap, documented as not yet implemented when chemistry-12-2 shipped). Code-generated rather than manual per-item design judgement, same reconciliation note as chemistry-12-2's own stage 9 entry. Six real bugs found and fixed during this build, all now fixed in the shared latex2html/serialize.py pipeline code (not just chapter-specific patches) except the first: (1) figure captions were only esc()-escaped, never LaTeX-converted, leaking raw $...$ math onto the page - fixed in build_page_chem3.py (template-specific, not yet ported to pipeline/); (2) pipeline/serialize.py's build_flow() silently dropped a :::table nested inside :::prompt (q_3.20, q_3.22 both have a data table alongside their own question) - only handled table/figure inside a solution's own flow, not a prompt's; fixed in pipeline/serialize.py; (3) pipeline/serialize.py's duplicate-whole-item-solution heuristic assumed ANY multi-part item's trailing item-level :::solution is redundant - wrong for q_3.15, whose 6 parts carry no solution of their own at all (the item-level solution, with its 2 figures, is the only real content); fixed to only suppress when at least one part actually has its own solution_blocks; (4) render.py bakes a literal '**उत्तर:**' markdown-bold prefix into every :::answer block for the plain-markdown path, which the boxed-answer pill was rendering as literal asterisks - stripped in the template; (5) convert_display_block's row-splitting regex required the block to START with \begin{...}, missing a real case with a \text{label} prefix before \begin{aligned} - the '&' column separators leaked as literal text; fixed to allow (and render) a prefix before the environment, and extended to gathered too; (6) the SAME '&' leak occurred separately for any INLINE (single $) occurrence of \begin{aligned}, which never reaches convert_display_block at all (a table header cell's own two-row label) - added a proper inline backstop in the tokenizer's own begin/end dispatch, with real row/column splitting; (7, found alongside #6) \\left\\{...\right\\} - a matched brace-delimiter pair, not set-builder notation - rendered as literal backslash-brace text since _read_group's 2-char escaped-brace token was passed to a single-character escaper; fixed; (8) confirmed empirically that Chromium treats the boundary between plain text and an adjacent <sup>/<sub> as a valid line-break point independent of overflow-wrap/white-space - a boxed answer's own '10^{-3}' tore across two lines even with overflow-wrap:normal set directly on the box; fixed generally by gluing a short trailing base token to its own immediately-following exponent/subscript in one nowrap span (new .s91 class), not just chapter-specific manual patching."
+  },
+  {
+    "stage": "pdf",
+    "timestamp": "2026-09-16T10:02:56.225647+00:00",
+    "inputs": {
+      "09_design/final.hi.html": "9f3085a4573d5300"
+    },
+    "outputs": {
+      "10_pdf/final.hi.pdf": {
+        "hash": "052f6764a21017af",
+        "bytes": 1661495
+      }
+    },
+    "counts": {
+      "pages": 33
+    },
+    "gates": {
+      "page_count_sane": "pass (33 pages for 49 items)",
+      "no_blank_pages": "pass (0 blank)",
+      "numeric_readback_vs_06_simplify": "pass (345/345 numeric tokens found in extracted PDF text)"
+    },
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium of 09_design/final.hi.html, with emulate_media(screen) applied before page.pdf() per the standing Devanagari pre-base vowel-reordering fix, and prefer_css_page_size+print_background so the base CSS's @page/@media print rules apply. Known unresolved limitation carried over from step_10/PROMPT.md, not specific to this chapter: Chromium's print-to-PDF pipeline generates an incorrect ToUnicode CMap for Devanagari pre-base reph, dropping that character from the PDF's extractable text layer while visual rendering stays correct - does not affect this stage's numeric read-back gate."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-16T13:32:16.186053+00:00",
+    "inputs": {
+      "structured.hi.md": "2825b32a496a7129"
+    },
+    "counts": {
+      "items": 49,
+      "parts": 22,
+      "figures": 3,
+      "stage_distribution": {
+        "conclusion": 50,
+        "key_formula": 31,
+        "substitute": 39,
+        "given": 43
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "count_reconciliation"
+    ],
+    "model_calls": 0,
+    "notes": "Serialization via pipeline/serialize.py (already implements the given/key_formula/substitute/conclusion mechanical rule per step_8/PROMPT.md, built during an earlier chapter's stage 8) - no model judgment call needed since stage 7 already made all labelling decisions."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-16T13:37:29.245376+00:00",
+    "inputs": {
+      "structured.hi.md": "2825b32a496a7129"
+    },
+    "counts": {
+      "items_reordered": 49,
+      "content_changed": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Bug fix, found by the user reviewing the delivered final.hi.pdf: this stage's original 5-batch merge (from earlier in this chapter's own session) concatenated batch outputs in batch order instead of restoring the chapter's own numeric item order - confirmed by diffing against 04_combined/05_verify/06_simplify (all three correctly ordered: 1,2,3,4,5...), while 07_format/structured.hi.md had examples in the order 1,6,2,7,3,8,4,10,5,11 and exercises in stride-5 blocks (1,6,11,16,21,26, then 2,7,12,17,22,27, ...). No gate in this pipeline checks item order (tag._parse validates structure, protect.parity checks content counts, stage 8's gate checks item/part/figure counts) - only visual review catches a wrong sequence, which is exactly how this was found, well after the chapter had already gone through stage 10. Fixed by re-sorting the file's own top-level item blocks by (kind, chapter, item-number) - parsed the number attribute as two integers, not a single float, since float('3.10')==float('3.1') silently collides item 10 with item 1. Pure reordering: no wording, digit, or block content touched - verified via protect.parity showing zero drift between the pre- and post-reorder text."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-16T13:37:29.248189+00:00",
+    "inputs": {
+      "structured.hi.json": "83e290dce13c3afc"
+    },
+    "counts": {
+      "items": 49,
+      "parts": 22,
+      "figures": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Regenerated after stage 7's item-order fix (see that stage's own manifest entry) - same content, correct sequence now. Gate re-run and passed with identical item/part/figure counts as before the fix (49/22/3), confirming this was a pure reorder."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-16T13:37:29.250138+00:00",
+    "inputs": {
+      "final.hi.html": "ba838129582539fb"
+    },
+    "counts": {
+      "items": 49,
+      "parts": 22,
+      "figures": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Regenerated after stage 7's item-order fix (see that stage's own manifest entry) - same content, correct sequence now. Gate re-run and passed with identical item/part/figure counts as before the fix (49/22/3), confirming this was a pure reorder."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-16T13:37:29.252118+00:00",
+    "inputs": {
+      "final.hi.html": "ba838129582539fb"
+    },
+    "counts": {
+      "page_count": 33,
+      "file_bytes": 1660575,
+      "blank_pages": 0,
+      "numbers_checked": 345,
+      "numbers_missing": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Regenerated after stage 7's item-order fix (see that stage's own manifest entry) - same content, correct sequence now. Gate re-run and passed with identical item/part/figure counts as before the fix (49/22/3), confirming this was a pure reorder. Re-exported PDF: 33 pages (same as before the fix), no blank pages, 345/345 numbers found in the PDF's own extracted text."
+  }
+]

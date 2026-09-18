@@ -1,4 +1,4 @@
-Stage 1 — convert chapter and solutions PDFs to markdown via Mathpix.
+ Stage 1 — convert chapter and solutions PDFs to markdown via Mathpix.
 
 Convert the PDFs in `chapters/$ARGUMENTS/00_raw/` to markdown.
 

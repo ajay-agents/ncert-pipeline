@@ -1,0 +1,293 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-16T10:15:32.459846+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "a964070502b8a475",
+      "solutions.hi.pdf": "931bc554036c55af"
+    },
+    "counts": {
+      "chapter_hi_chars": 97208,
+      "solutions_hi_chars": 44296
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-16T10:47:55.947924+00:00",
+    "inputs": {
+      "chapter.hi.md": "c6995dc2a3082623",
+      "solutions.hi.md": "d60db46059676f44"
+    },
+    "counts": {
+      "examples": 10,
+      "intext_questions": 10,
+      "exercise_questions": 38,
+      "intext_solutions": 10,
+      "exercise_solutions": 38,
+      "intext_matched": 10,
+      "exercise_matched": 38,
+      "needs_review": 0,
+      "total_items": 58
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 7,
+    "notes": "7 extraction passes (examples, intext questions, 2x exercise-question batches, intext solutions, 2x exercise-solution batches) dispatched to sub-agents per step_2/extract.md, verified against source and each other before merging. Fixed post-hoc: examples batch omitted id= attrs entirely on all 10 blocks (my own dispatch-prompt ambiguity) - patched programmatically; one exercise-questions batch (4.20-4.38) used Hindi topic= labels instead of the established English convention - translated to English for consistency with every other chapter. A spurious Mathpix in-text-question heading around chapter.hi.md line 415 (actually alloy narrative, not a question) was correctly identified and skipped by the intext sub-agent. Extensive genuine OCR corruption flagged by sub-agents for stage 5 verification against the source PDFs, not fixed here per Rule 1: solutions.hi.md Q3 table header shows uranium symbol/atomic-number-23 where vanadium is meant; Q15 sub-answer labels (i)/(ii) appear swapped relative to which reaction each answers; Q18 concluding sentence says listed ions are colorless while the table above assigns each a color (likely a colored/colorless OCR flip); Q20 and Q36 have significant script corruption (stray non-Devanagari characters); a recurring 3d -> 30 OCR substitution pattern across several exercise solutions; the intext solutions document has a Bengali-script substitution in the word for lanthanoid (it_sol Q10) and a likely Cu+/Cu2+ mixup in it_sol Q9's own explanation. None of these were corrected during extraction, per Rule 1 (chapter markdown fixed via stage 5's verify.md workflow, not by hand here)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-16T10:55:07.588579+00:00",
+    "inputs": {
+      "chapter.hi.md": "03811d2ae408a435"
+    },
+    "counts": {
+      "total_items": 58,
+      "examples_items": 10,
+      "examples_bytes": 9416,
+      "qa_items": 48,
+      "qa_bytes": 98167
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-16T10:57:29.063788+00:00",
+    "inputs": {
+      "examples.hi.md": "5caf4eb9e5c01709",
+      "qa.hi.md": "0e9e699453c9a9a5"
+    },
+    "counts": {
+      "examples_items": 10,
+      "qa_items": 48,
+      "combined_items": 58,
+      "combined_bytes": 107401
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-16T11:40:20.053538+00:00",
+    "inputs": {
+      "combined.hi.md": "03811d2ae408a435",
+      "corrections_merged.md": "58c3c3e85e7fbf60"
+    },
+    "counts": {
+      "corrections_parsed": 39,
+      "corrections_applied": 39,
+      "corrections_held": 0,
+      "min_confidence": "medium",
+      "gate_math_parity_issues": 4,
+      "gate_answers_unchanged_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 6,
+    "notes": "6 verification sub-agent batches (examples; in-text/additional_exercise questions; 4x exercise-question batches of ~10 items each) dispatched per step_5/verify.md, each with exact page-mapped PDF images (chapter.hi.pdf offset +90, solutions.hi.pdf offset +167). Notable non-mechanical findings, reported to user, not auto-corrected: q_4.3 solution table prints uranium (23U) where vanadium is meant - a pre-existing NCERT solutions-book error, left as printed per Rule 3; q_4.15's (i)/(ii) sub-answer labels are swapped in the source book itself (faithfully reproduced, left untouched); q_4.18's concluding sentence calls several ions 'colorless' directly contradicting its own table two lines above (same-page self-contradiction, held for explicit user sign-off per step_5/verify.md's exception clause, not applied here); q_4.38 has a Mn2+/Fe2+ mixup in the source's own text for [Fe(H2O)6]2+, left untouched (source error); q_4.33 and q_4.34's solutions were swapped in the source booklet's own answer-page labelling (booklet's 'प्रश्न 33' page answers exercise 4.34's question and vice versa) - corrected here as ordinary high-confidence corrections since this is a question-numbering/attribution fix matching Rule per verify.md item 3, not a content judgment call."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-16T11:53:44.210758+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "e1cca5a15452a872"
+    },
+    "counts": {
+      "items_total": 58,
+      "solution_fields_simplified": 37,
+      "solution_fields_unchanged": 60,
+      "restore_failed_batches": 0,
+      "gate_question_text_frozen_issues": 0,
+      "gate_answers_unchanged_issues": 0,
+      "gate_math_parity_issues": 0,
+      "gate_bilingual_issues_before": 116,
+      "gate_bilingual_issues_after": 116,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 6,
+    "notes": "6 sub-agent batches (examples; in-text/additional_exercise questions; 4x exercise batches of ~10 items) dispatched per step_6/simplify.md, each on protect.freeze()'d text (chapter.verified.hi.md), restored via protect.restore() and merged by item id before gating."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-16T12:03:09.243524+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "c42f7b037b20c0dd"
+    },
+    "counts": {
+      "items_total": 58,
+      "output_bytes": 111793,
+      "tag_parse_ok": true,
+      "protect_parity_issues": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 6,
+    "notes": "6 sub-agent batches (examples; in-text/additional_exercise questions; 4x exercise batches) dispatched per step_7/format.md, each adding :::step/:::formula/:::table/:::concept/:::note structure. Merged by slicing exact raw top-level item blocks (mdio.markdown_to_items() cannot round-trip post-format nested structure - that's stage 8's job). Three images (fig_4_10/it_4.7, fig_4_11/it_4.8, fig_4_12/q_4.24) were newly wrapped in :::figure{src=...} blocks at stage 7 since no :::figure container existed from stage 2/4 for this chapter (0 tracked figures). q_4.38's prompt magnetic-moment data correctly left unwrapped (not real table markdown; question text immutable). No redundant trailing whole-item solutions found in any multi-part item this chapter."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-16T12:05:58.249092+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "c42f7b037b20c0dd"
+    },
+    "counts": {
+      "items_total": 58,
+      "output_bytes": 0,
+      "tag_parse_ok": true,
+      "protect_parity_issues": 1,
+      "gate_passed": false
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 6,
+    "notes": "GATE FAILURE - see counts, discarded."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-16T12:07:12.166821+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "c42f7b037b20c0dd"
+    },
+    "counts": {
+      "items_total": 58,
+      "output_bytes": 111622,
+      "tag_parse_ok": true,
+      "protect_parity_issues": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 6,
+    "notes": "6 sub-agent batches (examples; in-text/additional_exercise questions; 4x exercise batches) dispatched per step_7/format.md, each adding :::step/:::formula/:::table/:::concept/:::note structure. Merged by slicing exact raw top-level item blocks (mdio.markdown_to_items() cannot round-trip post-format nested structure - that's stage 8's job). Three images (fig_4_10/it_4.7, fig_4_11/it_4.8, fig_4_12/q_4.24) were newly wrapped in :::figure{src=...} blocks at stage 7 since no :::figure container existed from stage 2/4 for this chapter (0 tracked figures). q_4.38's prompt magnetic-moment data correctly left unwrapped (not real table markdown; question text immutable). No redundant trailing whole-item solutions found in any multi-part item this chapter."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-16T12:07:59.397339+00:00",
+    "inputs": {
+      "structured.hi.md": "cd128b6051888dc7"
+    },
+    "counts": {
+      "items": 58,
+      "parts": 39,
+      "distinct_figure_srcs": 16,
+      "gate_passed": true,
+      "given": 42,
+      "key_formula": 36,
+      "substitute": 29,
+      "conclusion": 46,
+      "other": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "given/key_formula/substitute/conclusion inference is fully mechanical per step_8/PROMPT.md (pipeline/serialize.py), so no model call was needed for this chapter - stage 7's own labelling was taken as authoritative and unlabelled steps were inferred by position. Gate: fresh direct count from structured.hi.md (58 items, parts, distinct figure srcs including inline markdown images not wrapped in :::figure, e.g. the q_4.36 table's 10 images and q_4.38's 3) matched the JSON's own count exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-16T12:46:19.683998+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "a0d9c44740f10c94"
+    },
+    "counts": {
+      "late_correction": 1,
+      "item": "q_4.38"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Late correction, found only during stage 9's mandatory manual read-back (not caught by stage 5's own batch F, whose scope covered q_4.31-4.38 and was explicitly told to watch for this exact '3d'->'30' OCR pattern): q_4.38's [Fe(H2O)6]2+ paragraph read '$30$-इलेक्ट्रॉनों' where the source reads '3d-electrons'. Confirmed against the source solutions PDF page (sol_21.png) read directly during stage 5's own page-mapping reconnaissance - the '0' is a genuine OCR misread of 'd'. Applied as a one-token fix to chapter.verified.hi.md; appended to corrections.md."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-16T12:46:19.685563+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "e5dd1bd37bb79c51"
+    },
+    "counts": {
+      "late_correction_propagated": 1,
+      "item": "q_4.38"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the q_4.38 '30'->'3d' OCR fix (see stage 5's late-correction manifest entry) into this stage's own already-produced output, since it is the identical, unambiguous, already-source-verified single-token substitution and does not change or need to re-run any of this stage's own judgment work."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-16T12:46:19.686642+00:00",
+    "inputs": {
+      "structured.hi.md": "318608e2c50ac7f3"
+    },
+    "counts": {
+      "late_correction_propagated": 1,
+      "item": "q_4.38"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the q_4.38 '30'->'3d' OCR fix (see stage 5's late-correction manifest entry) into this stage's own already-produced output, since it is the identical, unambiguous, already-source-verified single-token substitution and does not change or need to re-run any of this stage's own judgment work."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-16T12:46:19.687982+00:00",
+    "inputs": {
+      "structured.hi.json": "6f175b0677c8723c"
+    },
+    "counts": {
+      "late_correction_propagated": 1,
+      "item": "q_4.38"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the q_4.38 '30'->'3d' OCR fix (see stage 5's late-correction manifest entry) into this stage's own already-produced output, since it is the identical, unambiguous, already-source-verified single-token substitution and does not change or need to re-run any of this stage's own judgment work."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-16T12:52:38.320996+00:00",
+    "inputs": {
+      "structured.hi.json": "6f175b0677c8723c"
+    },
+    "counts": {
+      "items": 58,
+      "html_bytes": 170300,
+      "figures_resolved": 16,
+      "numeric_readback_checked": 115,
+      "numeric_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored final.hi.html/.css adapted from chemistry-12-3's own build (latex2html_chem3.py, build_page_chem3.py), after surveying this chapter's own 06_simplify text for LaTeX usage per step_9/PROMPT.md's standing rule. Found and added: \\sqrt handling (new for this chapter - the spin-only magnetic-moment formula mu=sqrt(n(n+2)) recurs throughout, including chained '= sqrt(..) = sqrt(..) = value' sequences), rendered as the established '√(...)' + .s90 glue convention (matching physics-12-1's own precedent) and extended the '=' chain-gluing logic to chain through \\sqrt as well as \\frac. Confirmed electrode-couple slash notation (M2+/M etc, heavy in this chapter) is label-only, not genuine division, matching chem3's own survey conclusion - no change to the division-rewrite no-op. Added bare markdown image handling (q_4.36's table cells - compact thumbnail; q_4.38's inline diagram references - full figure-row) since this chapter's extraction never wrapped 3 of its 16 images in :::figure at all (0 tracked figures in the schema sense). Two real render-script bugs found and fixed during the mandatory manual read-back: (1) a literal <br> already embedded in q_4.20's own table-cell source text was being HTML-escaped to visible '<br>' text instead of rendering as a line break - fixed by protecting recognized <br> tags in esc(). (2) all 11 multi-part items in this chapter have :::part containers holding only each sub-question's own label+prompt with zero solution content of their own (the full worked answer lives entirely in the item's own combined solution_blocks, which already restates each part inline) - the exemplar's 'भाग (label)' treatment assumed a part always has its own solution to show, so rendering it produced an empty-looking heading once per part; added a compact 'here is what was asked' list (.s83/.s84/.s85, new classes) as a preamble instead, used whenever no single part in an item carries its own solution_blocks/answer. Also caught and fixed one leftover OCR error stage 5 missed (q_4.38's '30'->'3d', see stage 5/6/7/8's own manifest entries for that late correction). Left uncorrected per Rule 3 (pre-existing source errors, not this pipeline's call): q_4.3's solution table prints uranium where vanadium is meant; it_4.7's own source LaTeX for its two E-value labels is genuinely garbled (\\left/\\right mismatch) yet still renders its actual values (-0.41V, 0.77V) legibly; and a newly-noticed one - it_4.7's own diagram image (fig_4_10.jpg, a scanned/hand-drawn textbook figure) itself reads 'Fe2+(3d6) -> Fe2+(3d5)' where the product should read Fe3+ - this is baked into the source image itself, not text, and not something this pipeline edits. Verification: numeric read-back of every question+final_answer field (item and part level) against 06_simplify/chapter.simplified.hi.md - 115/115 tokens found in the rendered HTML. Figure-src check against the REAL 09_design/ output directory (images/ copied in) - all 16 distinct srcs resolve on disk and appear in the rendered HTML, matching 07_format's own raw-text count exactly. No leaked LaTeX command names found. Full manual visual read-back done via Playwright screenshots: a full-page capture reviewed in 9 slices covering every one of the 58 items, plus 15 additional targeted close-up captures of every item flagged as a risk (sqrt chains, the two comparison tables, both solution-swap items, the two bare-image items, the big data table, and the previously-empty-parts items after the fix)."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-16T13:17:18.809328+00:00",
+    "inputs": {
+      "final.hi.html": "6fa04339917d29be"
+    },
+    "counts": {
+      "page_count": 22,
+      "file_bytes": 1776400,
+      "blank_pages": 0,
+      "numbers_checked": 46,
+      "numbers_missing": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium: document.fonts.ready wait, emulate_media('screen') before pdf() (the standing Devanagari pre-base-vowel-reordering fix), prefer_css_page_size + print_background, no explicit format/width/height. Gate: 22 pages, no blank pages, numeric read-back of every question+final_answer field (item and part level) against 06_simplify/chapter.simplified.hi.md re-run directly against the PDF's own extracted text (superscript-aware normalization, inserting a separator before a run of superscript digits so a base number and its exponent don't merge into one token) - 46/46 found. Known unresolved limitation carried over from step_10/PROMPT.md, not specific to this chapter: Chromium's print-to-PDF pipeline drops the 'र्' (reph) character from the *extractable* text layer for any 'र्'+consonant sequence, while the visual rendering stays correct - affects copy-paste/search/re-extraction of words like 'निष्कर्ष'/'कार्य' in this PDF, not the numeric read-back gate (digits only) or how the page looks."
+  }
+]

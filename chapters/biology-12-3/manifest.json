@@ -1,0 +1,198 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-17T11:27:15.168486+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "d526d9e959d4bb9b",
+      "solutions.hi.pdf": "2ac0dee919444202"
+    },
+    "counts": {
+      "chapter_hi_pages": 12,
+      "chapter_hi_chars": 28558,
+      "solutions_hi_pages": 4,
+      "solutions_hi_chars": 14252
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-17T11:30:11.376848+00:00",
+    "inputs": {
+      "chapter.hi.md": "0cd2efd8872d3908",
+      "solutions.hi.md": "75733e1634d3357d"
+    },
+    "counts": {
+      "exercises_hi": 12,
+      "solutions_hi": 12,
+      "matched": 12,
+      "needs_review": 0,
+      "final_items": 12,
+      "gate_counts_issues": 0,
+      "gate_solutions_present_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Built directly as Python Item objects (not via sub-agent markdown extraction) given this chapter's small size (12 exercise items total; confirmed by reading both full 01_mathpix files: no उदाहरण/examples section and no अतिरिक्त प्रश्न/additional-exercises section exist - only अभ्यास with 12 numbered questions, no figures anywhere in either document). Still run through match.join_solutions() as mandated. Clean 1:1 numeric correspondence between chapter and solutions manual (both use bare numbers 1-12) - 0 needs_review, spot-checked several matched pairs by distinctive content (RCH programme history in Q4, amniocentesis/MTP in Q8, ART/IVF/GIFT/ZIFT terminology in Q9) to rule out the Rationalised-edition silent-mismatch failure mode. As with biology-12-2, the solutions manual labels this same chapter its own 'अध्याय 4' while the textbook calls it 'अध्याय 3' - a chapter-numbering mismatch already flagged at stage 1, distinct from the clean exercise-numbering match. No figures in this chapter at all (0 in both source documents, confirmed at stage 1)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-17T12:21:48.300518+00:00",
+    "inputs": {
+      "chapter.hi.md": "f5bc04d72a1fac0b"
+    },
+    "counts": {
+      "total_items": 12,
+      "examples_items": 0,
+      "examples_bytes": 152,
+      "qa_items": 12,
+      "qa_bytes": 37173
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-17T12:23:24.772676+00:00",
+    "inputs": {
+      "examples.hi.md": "bb987f0d441d941b",
+      "qa.hi.md": "f5bc04d72a1fac0b"
+    },
+    "counts": {
+      "examples_items": 0,
+      "qa_items": 12,
+      "combined_items": 12,
+      "combined_bytes": 37173
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-17T12:32:30.470859+00:00",
+    "inputs": {
+      "combined.hi.md": "f5bc04d72a1fac0b",
+      "chapter.hi.pdf": "d526d9e959d4bb9b",
+      "solutions.hi.pdf": "2ac0dee919444202"
+    },
+    "counts": {
+      "corrections_total": 11,
+      "applied_high": 11,
+      "held": 0,
+      "gate_math_parity_issues": 0,
+      "gate_counts_issues": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 2,
+    "notes": "2 sub-agent verification batches (q_3.1-6, q_3.7-12) dispatched per step_5/verify.md, each reading the raw chapter.hi.pdf and solutions.hi.pdf directly (rendered via PyMuPDF since pdftoppm was unavailable; legacy non-Unicode Devanagari font PDFs, images the only reliable read path). 11 corrections found, all high-confidence and all applied cleanly - no medium/low confidence items, no user sign-off needed this time. All corrections were OCR-grade letter/conjunct/anusvara corruptions (e.g. अष्ययन->अध्ययन, प्रान्तियों->भ्रान्तियों, भूण->भ्रूण, इन्टूा->इन्ट्रा), no missing sub-parts, no figure-reference issues (this chapter has zero figures in either source document, confirmed at stage 1/2). One item flagged for awareness, not correctable: q_3.6's solution paragraph (justifying contraceptive use as a situational necessity) ends with a concluding sentence that arguably contradicts that argument ('यह जनन स्वास्थ्य के रखरखाव व स्वास्थ्य की आवश्यकता कदापि नहीं है') - this text is identical in both the source PDF and the extraction, so it is not a transcription error to fix; it is a potential self-contradiction already present in the solutions manual's own reasoning, reported to the user for awareness rather than treated as a correction (no PDF-accurate alternative text exists to substitute, since 'should_be' must reflect what the PDF actually shows)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-17T12:46:17.701836+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "c4ed24773c1389a0"
+    },
+    "counts": {
+      "items_total": 12,
+      "solution_fields_simplified": 12,
+      "solution_fields_unchanged": 8,
+      "restore_failed_batches": 0,
+      "gate_question_text_frozen_issues": 0,
+      "gate_answers_unchanged_issues": 0,
+      "gate_math_parity_issues": 0,
+      "gate_bilingual_issues_before": 22,
+      "gate_bilingual_issues_after": 22,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 2,
+    "notes": "2 sub-agent batches (q_3.1-6, q_3.7-12) dispatched per step_6/simplify.md, each on protect.freeze()'d text (chapter.verified.hi.md), restored via protect.restore() and merged by item id before gating. q_3.6's flagged same-page tension (see stage 5) was deliberately preserved verbatim by its sub-agent, not smoothed over - only its opening sentence was lightly split, per explicit instruction. q_3.5's causal (i)-(viii) list was left entirely unchanged by its sub-agent to avoid any risk of reordering causally-significant list items. One overreach caught and manually reverted before merging: batch B's sub-agent 'corrected' two apparent typos in q_3.7 ('goands'->'gonads', 'जनदों'->'जनन अंगों') that are not extraction errors but the source solutions manual's own inconsistent spelling (confirmed against 05_verify/chapter.verified.hi.md, which already reflects the PDF-verified text) - correcting content, even an obvious typo, is stage 5's job with an explicit PDF-checked found/should_be, never stage 6's; reverted those two word choices back to the original spelling while keeping the sub-agent's legitimate sentence-restructuring in the same paragraphs."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-17T12:52:33.833277+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "b78915349dd11488"
+    },
+    "counts": {
+      "items_total": 12,
+      "output_bytes": 37653,
+      "tag_parse_ok": true,
+      "protect_parity_issues": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 2,
+    "notes": "2 sub-agent batches (q_3.1-6, q_3.7-12) dispatched per step_7/format.md, adding :::concept for standalone definitions/named terms the source sets apart (जनसंख्या विस्फोट in q_3.5, उल्बवेधन/amniocentesis in q_3.8, ART technique names IVF/ET/IUT/GIFT in q_3.9 and ET/ZIFT/IUT in q_3.12(घ), miscarriage and lactational-amenorrhea definitions in q_3.11) and one :::note{type=\"tip\"} for q_3.10's actionable STD-avoidance precaution list. This chapter is entirely discursive/essay-style prose with no figures and no numeric derivations anywhere (confirmed at stages 1-2), so the given/formula/substitute/conclusion vocabulary was correctly never used. Most items (q_3.2, q_3.3, q_3.4, q_3.6, q_3.7, and most parts of q_3.11/q_3.12) were correctly left as plain argumentative paragraphs with no clean definitional boundary - forcing structure onto flowing discursive prose would be worse than leaving it unmarked, per the guidance. q_3.6's already-flagged apparent self-contradiction (see stage 5) was deliberately left completely unstructured, in original order, so as not to appear to take a side on it by singling out one part with a container. No redundant trailing whole-item solutions found in any multi-part item this chapter. Merged by slicing exact raw top-level item blocks (mdio.markdown_to_items() cannot round-trip post-format nested structure - that's stage 8's job)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-17T12:56:22.371018+00:00",
+    "inputs": {
+      "structured.hi.md": "4a53a5b513ff597b"
+    },
+    "counts": {
+      "items": 12,
+      "parts": 8,
+      "distinct_figure_srcs": 0,
+      "gate_passed": true,
+      "given": 10,
+      "key_formula": 0,
+      "substitute": 1,
+      "conclusion": 14,
+      "other": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "given/key_formula/substitute/conclusion inference is fully mechanical per step_8/PROMPT.md (pipeline/serialize.py), so no model call was needed - stage 7's own labelling was taken as authoritative and unlabelled steps were inferred by position. This chapter has no :::step blocks at all (entirely :::concept/:::note plus plain prose - no sequential-phase content like biology-12-2's spermatogenesis/oogenesis), so the given/key_formula/substitute/conclusion stage distribution is driven purely by :::concept always mapping to 'given' and plain unlabelled solution text being inferred by position, same mechanical logic as every prior chapter. Gate: fresh direct count from structured.hi.md (12 items, parts, distinct figure srcs - 0 figures, confirmed at stage 1) matched the JSON's own count exactly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-17T13:00:17.385497+00:00",
+    "inputs": {
+      "structured.hi.json": "1fba643d95a26077"
+    },
+    "counts": {
+      "html_bytes": 44336,
+      "distinct_figure_srcs_resolved": 0,
+      "figure_srcs_missing": 0,
+      "numeric_readback_fields_checked": 20,
+      "numeric_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored final.hi.html + final.hi.css, reusing biology-12-2's own build_page/latex2html template. Surveyed this chapter's own math spans (even simpler than biology-12-2 - bare integers only, no \\mathrm{}, no escaped %/_ ) and confirmed zero code changes needed. Zero figures in either source document (confirmed at stages 1-2), so the figure-row rendering path is unexercised here - nothing to verify beyond the 0-figure count matching exactly. Same multi-part content shape as biology-12-2: q_3.11 and q_3.12 genuinely carry their own per-part solution content, rendered via the existing 'भाग (label)' path unchanged. Pre-finish checks: lang=hi present; zero leaked raw LaTeX text; 20 question/final_answer fields read back against the rendered HTML, 0 missing; manually spot-read q_3.11 (4-part true/false), q_3.12 (4-part corrections), and specifically q_3.6 (the stage-5-flagged apparent self-contradiction) directly in the rendered output - confirmed it renders both the argument and its concluding sentence faithfully, in original order, under one plain pill with no editorializing or visual cue suggesting either side is correct."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-17T13:03:06.194683+00:00",
+    "inputs": {
+      "final.hi.html": "438cafd01a71d40a"
+    },
+    "counts": {
+      "page_count": 6,
+      "blank_pages": 0,
+      "pdf_bytes": 510687,
+      "numeric_readback_checked": 1,
+      "numeric_readback_missing": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.hi.html file:// path (not a copy), waited for document.fonts.ready, called emulate_media('screen') before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base vowel-reordering bug), exported with print_background=True and prefer_css_page_size=True (no explicit format/width/height). Gate: 6 pages (sane for 12 discursive items with zero figures - the smallest export yet), 0 blank pages, numeric read-back re-run against the PDF's own fitz-extracted text using the same question/final_answer-field scope as stage 9. Only 1 numeric token checked - '50' from q_3.4's own question text ('पिछले 50 वर्षों के दौरान...') - since this chapter's question/final_answer fields are almost entirely discursive prose with no boxed numeric answers (true/false answers are words; the chapter's own real numeric content - population growth rates in q_3.5's solution, dates/percentages in q_3.4/q_3.9's solutions - lives in solution text, outside this gate's documented scope) - found correctly. Not independently re-verified: the known, currently-unresolved Chromium reph ('र्'+consonant) ToUnicode CMap bug documented in step_10/PROMPT.md - visual rendering is unaffected, only copy-paste/text-extraction of words containing that exact sequence; flagged to the user, not silently shipped around, consistent with how prior chapters handled the same known limitation."
+  }
+]
