@@ -769,7 +769,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "$\\mathrm{H}_{2}$ परमाणु का वेग,\n\n$$\n\\begin{aligned}\nv=\\frac{\\rho}{m}=\\frac{1.05 \\times 10^{-27}}{1.66 \\times 10^{-27}} & =0.63 \\mathrm{~m} / \\mathrm{s} \\\\\n{[\\because m} & \\left.=1.66 \\times 10^{-27} \\mathrm{~kg} \\text { (इलेक्ट्रॉन का द्रव्यमान) }\\right]\n\\end{aligned}\n$$"
+                  "text": "$\\mathrm{H}_{2}$ परमाणु का वेग,\n\n$$\n\\begin{aligned}\nv=\\frac{\\rho}{m}=\\frac{1.05 \\times 10^{-27}}{1.66 \\times 10^{-27}} & =0.63 \\mathrm{~m} / \\mathrm{s} \\\\\n{[\\because m} & \\left.=1.66 \\times 10^{-27} \\mathrm{~kg} \\text { (हाइड्रोजन परमाणु का द्रव्यमान) }\\right]\n\\end{aligned}\n$$"
                 }
               ]
             }
@@ -1043,7 +1043,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "दिया है, प्रकाश का तरंगदैर्घ्य, $\\lambda=488 \\mathrm{~nm}=488 \\times 10^{-9} \\mathrm{~m}$\nनिरोधी विभव $V_{0}=0.38 \\mathrm{~V}, \\quad e=1.6 \\times 10^{-19} \\mathrm{C}$\nप्लांक नियतांक $h=6.62 \\times 10^{-34} \\mathrm{~J}-\\mathrm{s}$\nप्रकाश की चाल $c=3 \\times 10^{8} \\mathrm{~m} / \\mathrm{s}$\nमाना $\\phi_{0}$ कार्य-फलन है।"
+              "text": "दिया है, प्रकाश का तरंगदैर्घ्य, $\\lambda=488 \\mathrm{~nm}=488 \\times 10^{-9} \\mathrm{~m}$\nनिरोधी विभव $V_{0}=0.38 \\mathrm{~V}, \\quad e=1.6 \\times 10^{-19} \\mathrm{C}$\nप्लांक नियतांक $h=6.63 \\times 10^{-34} \\mathrm{~J}-\\mathrm{s}$\nप्रकाश की चाल $c=3 \\times 10^{8} \\mathrm{~m} / \\mathrm{s}$\nमाना $\\phi_{0}$ कार्य-फलन है।"
             }
           ]
         },

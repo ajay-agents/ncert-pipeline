@@ -796,7 +796,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "प्रतिरोध $R=100 \\Omega$\n$$\nV_{\\mathrm{ms}}=220 \\mathrm{~V}\n$$\nजब कभी सप्लाई दी होती है, इसका अर्थ है कि वह वर्ग माध्य मूल मान है।\n$$\n\\text { आवृत्ति }(f)=50 \\mathrm{~Hz}\n$$"
+                  "text": "प्रतिरोध $R=100 \\Omega$\n$$\nV_{\\mathrm{rms}}=220 \\mathrm{~V}\n$$\nजब कभी सप्लाई दी होती है, इसका अर्थ है कि वह वर्ग माध्य मूल मान है।\n$$\n\\text { आवृत्ति }(f)=50 \\mathrm{~Hz}\n$$"
                 }
               ],
               "stage": "given"
@@ -807,7 +807,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "परिपथ में धारा\n$$\nl_{\\mathrm{rms}}=\\frac{V_{\\mathrm{ms}}}{R}=\\frac{220}{100}=2.2 \\mathrm{~A}\n$$"
+                  "text": "परिपथ में धारा\n$$\nI_{\\mathrm{rms}}=\\frac{V_{\\mathrm{rms}}}{R}=\\frac{220}{100}=2.2 \\mathrm{~A}\n$$"
                 }
               ],
               "stage": "conclusion"
@@ -885,7 +885,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "दिया है, वोल्टेज का उच्चतम मान $V_{0}=300 \\mathrm{~V}$, धारा का वर्ग माध्य मूल मान $I_{\\mathrm{ms}}=10 \\mathrm{~A}$"
+                  "text": "दिया है, वोल्टेज का उच्चतम मान $V_{0}=300 \\mathrm{~V}$, धारा का वर्ग माध्य मूल मान $I_{\\mathrm{rms}}=10 \\mathrm{~A}$"
                 }
               ],
               "stage": "given"
@@ -924,7 +924,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "सूत्र $l_{\\mathrm{ms}}=\\frac{l_{0}}{\\sqrt{2}}$ प्रयुक्त करने पर"
+                  "text": "सूत्र $I_{\\mathrm{rms}}=\\frac{I_{0}}{\\sqrt{2}}$ प्रयुक्त करने पर"
                 }
               ],
               "stage": "key_formula"
@@ -935,7 +935,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "धारा का उच्चतम मान $l_{0}=\\sqrt{2} l_{\\text {mrs }}=\\sqrt{2} \\times 10=14.14 \\mathrm{~A}$"
+                  "text": "धारा का उच्चतम मान $I_{0}=\\sqrt{2} I_{\\mathrm{rms}}=\\sqrt{2} \\times 10=14.14 \\mathrm{~A}$"
                 }
               ],
               "stage": "conclusion"
@@ -1054,7 +1054,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "परिपथ में धारा का वर्ग माघ्य मूल मान\n$$\n\\begin{aligned}\nI_{\\mathrm{ms}} & =\\frac{V_{\\mathrm{rms}}}{X_{c}} \\\\\n& =\\frac{110}{44.23}=2.49 \\mathrm{~A}\n\\end{aligned}\n$$"
+              "text": "परिपथ में धारा का वर्ग माघ्य मूल मान\n$$\n\\begin{aligned}\nI_{\\mathrm{rms}} & =\\frac{V_{\\mathrm{rms}}}{X_{c}} \\\\\n& =\\frac{110}{44.23}=2.49 \\mathrm{~A}\n\\end{aligned}\n$$"
             }
           ],
           "stage": "conclusion"
@@ -1098,7 +1098,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "प्रश्न $4$ में औसत शक्ति $P=V_{\\mathrm{ms}} \\cdot I_{\\mathrm{ms}} \\cos \\phi$\nहम जानते हैं कि धारा तथा वोल्टेज के बीच कलान्तर $90^{\\circ}$ है।\n$$\nP=V_{\\mathrm{rms}} I_{\\mathrm{rms}} \\cos 90^{\\circ}=0\n$$"
+              "text": "प्रश्न $4$ में औसत शक्ति $P=V_{\\mathrm{rms}} \\cdot I_{\\mathrm{rms}} \\cos \\phi$\nहम जानते हैं कि धारा तथा वोल्टेज के बीच कलान्तर $90^{\\circ}$ है।\n$$\nP=V_{\\mathrm{rms}} I_{\\mathrm{rms}} \\cos 90^{\\circ}=0\n$$"
             }
           ],
           "stage": "conclusion"
@@ -1186,7 +1186,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "दिया है, प्रतिरोध $R=20 \\Omega$, प्रेरकत्व $L=1.5 \\mathrm{H}$, धारिता $C=35 \\mu \\mathrm{~F}=35 \\times 10^{-6} \\mathrm{~F}$ तथा वोल्टेज $V_{\\mathrm{ms}}=200 \\mathrm{~V}$\nजब परिपथ की आवृति आरोपित वोल्टेज की आवृत्ति के बराबर है तब यह अवस्था अनुनाद की अवस्था कहलाती है।"
+              "text": "दिया है, प्रतिरोध $R=20 \\Omega$, प्रेरकत्व $L=1.5 \\mathrm{H}$, धारिता $C=35 \\mu \\mathrm{~F}=35 \\times 10^{-6} \\mathrm{~F}$ तथा वोल्टेज $V_{\\mathrm{rms}}=200 \\mathrm{~V}$\nजब परिपथ की आवृति आरोपित वोल्टेज की आवृत्ति के बराबर है तब यह अवस्था अनुनाद की अवस्था कहलाती है।"
             }
           ],
           "stage": "given"
@@ -1208,7 +1208,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "परिपथ में धारा का rms मान\n$$\n\\begin{aligned}\nl_{\\mathrm{ms}}=\\frac{V_{\\mathrm{rms}}}{Z} & =\\frac{200}{20}=10 \\mathrm{~A} \\\\\n\\phi & =0^{\\circ}\n\\end{aligned}\n$$\n(अनुनाद हेतु)"
+              "text": "परिपथ में धारा का rms मान\n$$\n\\begin{aligned}\nI_{\\mathrm{rms}}=\\frac{V_{\\mathrm{rms}}}{Z} & =\\frac{200}{20}=10 \\mathrm{~A} \\\\\n\\phi & =0^{\\circ}\n\\end{aligned}\n$$\n(अनुनाद हेतु)"
             }
           ],
           "stage": "substitute"
@@ -1219,7 +1219,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "एक चक्र में परिपथ में स्थानान्तरित शक्ति\n$$\n\\begin{aligned}\nP=I_{\\mathrm{ms}} \\cdot V_{\\mathrm{ms}} \\cos \\phi & =10 \\times 200 \\times \\cos 0^{\\circ}=2000 \\mathrm{~W} \\\\\n& =2 \\mathrm{~kW}\n\\end{aligned}\n$$"
+              "text": "एक चक्र में परिपथ में स्थानान्तरित शक्ति\n$$\n\\begin{aligned}\nP=I_{\\mathrm{rms}} \\cdot V_{\\mathrm{rms}} \\cos \\phi & =10 \\times 200 \\times \\cos 0^{\\circ}=2000 \\mathrm{~W} \\\\\n& =2 \\mathrm{~kW}\n\\end{aligned}\n$$"
             }
           ],
           "stage": "conclusion"
@@ -1265,7 +1265,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "दिया है, वोल्टेज का rms मान $V_{\\mathrm{ms}}=230 \\mathrm{~V}$, प्रेरकत्व $L=5 \\mathrm{H}$, धारिता $C=80 \\mu \\mathrm{~F}=80 \\times 10^{-6} \\mathrm{~F}$, प्रतिरोध $R=40 \\Omega$"
+                  "text": "दिया है, वोल्टेज का rms मान $V_{\\mathrm{rms}}=230 \\mathrm{~V}$, प्रेरकत्व $L=5 \\mathrm{H}$, धारिता $C=80 \\mu \\mathrm{~F}=80 \\times 10^{-6} \\mathrm{~F}$, प्रतिरोध $R=40 \\Omega$"
                 }
               ],
               "stage": "given"
@@ -1287,7 +1287,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "अनुनाद में स्रोत की आवृत्ति\n$$\n\\begin{aligned}\nv_{0}=\\frac{\\omega_{0}}{2 \\pi} & =\\frac{50}{2 \\times 3.14} \\\\\n& =7.76 \\mathrm{~Hz}\n\\end{aligned}\n$$"
+                  "text": "अनुनाद में स्रोत की आवृत्ति\n$$\n\\begin{aligned}\nv_{0}=\\frac{\\omega_{0}}{2 \\pi} & =\\frac{50}{2 \\times 3.14} \\\\\n& =7.96 \\mathrm{~Hz}\n\\end{aligned}\n$$"
                 }
               ],
               "stage": "conclusion"
@@ -1296,7 +1296,7 @@
           "answer": [
             {
               "type": "text",
-              "text": "**उत्तर:** $v_0=7.76\\ \\mathrm{Hz}$"
+              "text": "**उत्तर:** $v_0=7.96\\ \\mathrm{Hz}$"
             }
           ]
         },
@@ -1326,7 +1326,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "परिपथ में धारा का rms मान\n$$\nl_{\\mathrm{ms}}=\\frac{V_{\\mathrm{rms}}}{Z}=\\frac{230}{40}=5.75 \\mathrm{~A}\n$$\nधारा का आयाम $I_{0}=I_{\\mathrm{ms}} \\sqrt{2}$\n$$\n=5.75 \\times \\sqrt{2}=8.13 \\mathrm{~A}\n$$"
+                  "text": "परिपथ में धारा का rms मान\n$$\nI_{\\mathrm{rms}}=\\frac{V_{\\mathrm{rms}}}{Z}=\\frac{230}{40}=5.75 \\mathrm{~A}\n$$\nधारा का आयाम $I_{0}=I_{\\mathrm{rms}} \\sqrt{2}$\n$$\n=5.75 \\times \\sqrt{2}=8.13 \\mathrm{~A}\n$$"
                 }
               ],
               "stage": "conclusion"
@@ -1354,7 +1354,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "$L$ में rms विभव पतन\n$$\n\\begin{aligned}\nV_{L} & =I_{\\mathrm{rms}} \\times X_{L}=I_{\\mathrm{rms}} \\times \\omega_{r} L \\\\\n& =5.75 \\times 50 \\times 5=1437.5 \\mathrm{~V}\n\\end{aligned}\n$$\n$R$ में rms विभव पतन\n$$\nV_{R}=I_{\\mathrm{rms}} R=5.75 \\times 40=230 \\mathrm{~V}\n$$\nC में rms विभव पतन\n$$\n\\begin{aligned}\nV_{C} & =I_{\\mathrm{rms}} \\times X_{C}=I_{\\mathrm{rms}} \\times \\frac{1}{\\omega_{r}} \\\\\n& =5.75 \\times \\frac{1}{50 \\times 80 \\times 10^{-6}} \\\\\n& =1437.5 \\mathrm{~V}\n\\end{aligned}\n$$"
+                  "text": "$L$ में rms विभव पतन\n$$\n\\begin{aligned}\nV_{L} & =I_{\\mathrm{rms}} \\times X_{L}=I_{\\mathrm{rms}} \\times \\omega_{r} L \\\\\n& =5.75 \\times 50 \\times 5=1437.5 \\mathrm{~V}\n\\end{aligned}\n$$\n$R$ में rms विभव पतन\n$$\nV_{R}=I_{\\mathrm{rms}} R=5.75 \\times 40=230 \\mathrm{~V}\n$$\nC में rms विभव पतन\n$$\n\\begin{aligned}\nV_{C} & =I_{\\mathrm{rms}} \\times X_{C}=I_{\\mathrm{rms}} \\times \\frac{1}{\\omega_{r} C} \\\\\n& =5.75 \\times \\frac{1}{50 \\times 80 \\times 10^{-6}} \\\\\n& =1437.5 \\mathrm{~V}\n\\end{aligned}\n$$"
                 }
               ],
               "stage": "key_formula"

@@ -132,7 +132,7 @@ $$
 
 ## प्रश्न और हल
 
-:::question{number="12.1" kind="exercise" id="q_12.1" topic="थॉमसन व रदरफोर्ड मॉडल में अंतर (रिक्त स्थान भरिए)" verified="True" simplified="True"}
+:::question{number="12.1" kind="exercise" id="q_12.1" topic="थॉमसन व रदरफोर्ड मॉडल में अंतर (रिक्त स्थान भरिए)" verified="True" simplified="True" corrections_applied="1"}
 #### प्रश्न 12.1
 
 :::prompt
@@ -145,11 +145,11 @@ $$
 :::
 
 :::solution
-इनमें से कोई नहीं
+भिन्न नहीं
 :::
 
 :::answer
-**उत्तर:** इनमें से कोई नहीं
+**उत्तर:** भिन्न नहीं
 :::
 
 :::
@@ -492,7 +492,7 @@ $$
 
 :::
 
-:::question{number="12.8" kind="exercise" id="q_12.8" topic="इलेक्ट्रॉन-बमबारी से उत्सर्जित तरंगदैर्घ्य श्रेणी" verified="True" simplified="True" corrections_applied="1"}
+:::question{number="12.8" kind="exercise" id="q_12.8" topic="इलेक्ट्रॉन-बमबारी से उत्सर्जित तरंगदैर्घ्य श्रेणी" verified="True" simplified="True" corrections_applied="2"}
 #### प्रश्न 12.8
 
 :::prompt
@@ -500,29 +500,32 @@ $$
 :::
 
 :::solution{label="हल"}
-इलेक्ट्रॉन पुंज की ऊर्जा, $E=12.5 \mathrm{eV}=12.5 \times 1.6 \times 10^{-19} \mathrm{~J}$
-प्लांक नियतांक, $h=6.63 \times 10^{-34} \mathrm{~J}-\mathrm{s}$
-प्रकाश का वेग, $c=3 \times 10^{8} \mathrm{~m} / \mathrm{s}$
-सम्बन्ध का प्रयोग करने पर,
+इलेक्ट्रॉन पुंज की ऊर्जा, $E=12.5 \mathrm{eV}$
+हाइड्रोजन परमाणु के ऊर्जा स्तर, $E_{n}=-\frac{13.6}{n^{2}} \mathrm{eV}$
+
+$n=3$ तक उत्तेजना हेतु आवश्यक ऊर्जा, $\Delta E_{13}=13.6\left(1-\frac{1}{9}\right)=12.09 \mathrm{eV}$ (उपलब्ध $12.5 \mathrm{eV}$ से कम, अतः संभव)
+$n=4$ तक उत्तेजना हेतु आवश्यक ऊर्जा, $\Delta E_{14}=13.6\left(1-\frac{1}{16}\right)=12.75 \mathrm{eV}$ (उपलब्ध $12.5 \mathrm{eV}$ से अधिक, अतः संभव नहीं)
+
+अतः इलेक्ट्रॉन केवल $n=3$ स्तर तक ही उत्तेजित होगा। वहाँ से परमाणु तीन संभावित संक्रमणों द्वारा अवसादित हो सकता है, प्रत्येक भिन्न तरंगदैर्घ्य का फोटॉन उत्सर्जित करते हुए:
 
 $$
 \begin{aligned}
-E=\frac{h c}{\lambda} & =\frac{6.62 \times 10^{-34} \times 3 \times 10^{8}}{12.5 \times 1.6 \times 10^{-19}} \\
-& =0.993 \times 10^{-7} \mathrm{~m}=993 \times 10^{-10} \mathrm{~m} \\
-& =993 \AA
+3 \rightarrow 1: \quad \Delta E=12.09 \mathrm{eV}, & \quad \lambda=\frac{h c}{\Delta E}=1028 \AA \ \text { (लाइमन श्रेणी) } \\
+3 \rightarrow 2: \quad \Delta E=1.89 \mathrm{eV}, & \quad \lambda=\frac{h c}{\Delta E}=6581 \AA \ \text { (बामर श्रेणी) } \\
+2 \rightarrow 1: \quad \Delta E=10.2 \mathrm{eV}, & \quad \lambda=\frac{h c}{\Delta E}=1219 \AA \ \text { (लाइमन श्रेणी) }
 \end{aligned}
 $$
 
-अतः लाइमन श्रेणी में तरंग परास $912 \AA$ से $1216 \AA$ है। अतः लाइमन श्रेणी $993 \AA$ की तरंगदैर्ध्य का प्रकाश उत्सर्जित करेगा।
+अतः इलेक्ट्रॉन $n=3$ स्तर तक उत्तेजित होगा तथा अवसादन पर लाइमन श्रेणी ($1219 \AA$, $1028 \AA$) एवं बामर श्रेणी ($6581 \AA$) की तरंगदैर्घ्यों का प्रकाश उत्सर्जित होगा।
 :::
 
 :::answer
-**उत्तर:** लाइमन श्रेणी में $993 \AA$ तरंगदैर्घ्य का प्रकाश उत्सर्जित होगा
+**उत्तर:** इलेक्ट्रॉन $n=3$ स्तर तक उत्तेजित होगा; लाइमन श्रेणी ($\approx 1219 \AA$, $\approx 1028 \AA$) तथा बामर श्रेणी ($\approx 6581 \AA$) की तरंगदैर्घ्यों का प्रकाश उत्सर्जित होगा।
 :::
 
 :::
 
-:::question{number="12.9" kind="exercise" id="q_12.9" topic="पृथ्वी की कक्षा की बोर-क्वांटम संख्या" verified="True" simplified="True" corrections_applied="1"}
+:::question{number="12.9" kind="exercise" id="q_12.9" topic="पृथ्वी की कक्षा की बोर-क्वांटम संख्या" verified="True" simplified="True" corrections_applied="2"}
 #### प्रश्न 12.9
 
 :::prompt
@@ -538,7 +541,7 @@ $$
 
 $$
 \begin{aligned}
-n & =\frac{2 \pi v m}{h} \quad \text { [जहाँ, } n \text { कक्षा की क्वांटम संख्या है] } \\
+n & =\frac{2 \pi m v r}{h} \quad \text { [जहाँ, } n \text { कक्षा की क्वांटम संख्या है] } \\
 & =\frac{2 \times 3.14 \times 3 \times 10^{4} \times 1.5 \times 10^{11} \times 6 \times 10^{24}}{6.63 \times 10^{-34}} \\
 & =2.57 \times 10^{74}
 \end{aligned}
@@ -551,14 +554,6 @@ n=2.6 \times 10^{74}
 $$
 
 अतः क्वांटम संख्या $2.6 \times 10^{74}$ बहुत अधिक है।
-
-अतः इलेक्ट्रॉन $n=1$ से $n=3$ में उदेलित होगा।
-
-$$
-E_{3}=\frac{-13.6}{3^{2}}=-1.5 \mathrm{eV}
-$$
-
-अतः यह लाइमन श्रेणी से सम्बन्धित है।
 :::
 
 :::answer

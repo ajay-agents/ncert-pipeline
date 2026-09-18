@@ -27,8 +27,8 @@ measured, never typed. Re-run after any stage whose output changed.
 
 ## Stage history (`manifest.json`)
 
-- entries: 15
+- entries: 16
 - stages run at least once: combine, design, extract_match, format, mathpix, pdf, simplify, split, tag, verify
-- total model calls across all entries: 24
+- total model calls across all entries: 25
 - gates that have failed at some point: gate_bilingual
 

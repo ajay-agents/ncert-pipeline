@@ -1,0 +1,282 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-17T06:01:47.871897+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "2aae8e7d0e8a308c",
+      "solutions.hi.pdf": "409195f3eec91c4b"
+    },
+    "counts": {
+      "chapter_hi_pdf_pages": 31,
+      "solutions_hi_pdf_pages": 44,
+      "chapter.hi.md_chars": 56512,
+      "solutions.hi.md_chars": 102768,
+      "chapter.hi.md_dollar_spans": 709,
+      "solutions.hi.md_dollar_spans": 1034,
+      "chapter.hi.md_image_refs": 2,
+      "solutions.hi.md_image_refs": 0,
+      "images_downloaded": 2
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no chapter.en.pdf / solutions.en.pdf supplied), same pattern as every prior Maths/Hindi-only chapter in this pipeline - converted the two raw PDFs supplied at the repo root (ch4_maths.pdf -> 00_raw/chapter.hi.pdf, ch4_maths_Soln.pdf -> 00_raw/solutions.hi.pdf) via Mathpix. Maths class 12 chapter 4, सारणिक (Determinants) - the natural sequel to chapter 3 (आव्यूह/Matrices), confirmed by rendering page 1 of each source PDF before conversion (chapter.hi.pdf's cover page + QR code '12081CH04' + P.S. Laplace portrait, solutions.hi.pdf's header '(पाठ - 4) (सारणिक) / (कक्षा 12) / प्रश्नावली 4.1'). Both files converted cleanly and spot-checked against a rendered PNG of each source's own page 1 - exact text match, including the boxed-equation system and the a1b2-a2b1 determinant-value discussion. Two images downloaded (chapter.hi.pdf only): fig_maths-12-4_0.jpg (the P.S. Laplace portrait, purely decorative, sits in the chapter's introductory भूमिका prose before any extractable item) and fig_maths-12-4_1.jpg (a genuine illustrative diagram showing the 2x2 adjugate swap-and-sign-change rule with crossing arrows - verified by viewing the image directly - but it sits in the '4.3 सहखंडज' theory subsection's own टिप्पणी/remark prose, immediately before a numbered theorem statement, NOT inside any उदाहरण or exercise item's own text). Both images are therefore theory-section content outside this pipeline's extraction scope (stage 2 only captures worked examples and प्रश्नावली/exercise items, never general chapter theory prose) - same pattern as maths-12-3's own 3 downloaded-but-unused images; flagging this explicitly for stage 2 so neither image is mistakenly treated as a missing item-level figure. Determinant-bar notation ($|A| = \\left|\\begin{array}{cc}...\\end{array}\\right|$, bare pipe delimiters instead of matrix brackets) confirmed heavily used throughout both files (96 occurrences in chapter.hi.md, 241 in solutions.hi.md, via a rough vmatrix/\\left| grep) - noted for stage 9: this will need its own rendering treatment (reusing the matrix-grid technique built for maths-12-3, but with plain vertical-bar flanks instead of drawn bracket corners), a new content shape distinct from both maths-12-1/12-2 (no matrices) and maths-12-3 (matrices but no determinants). Nothing suspicious: both files well above the 5000-char floor, no Devanagari-in-English-file concern (no English file exists), image count matches figure-reference count exactly (2 downloaded, 2 referenced, both accounted for above)."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-17T06:15:49.040964+00:00",
+    "inputs": {
+      "chapter.hi.md": "684115b69da4153e",
+      "solutions.hi.md": "dc4b9a9b02512246"
+    },
+    "counts": {
+      "examples": 19,
+      "prashnavali_4.1": 8,
+      "prashnavali_4.2": 5,
+      "prashnavali_4.3": 5,
+      "prashnavali_4.4": 18,
+      "prashnavali_4.5": 16,
+      "solutions_prashnavali_4.2_orphaned_whole_exercise": 16,
+      "misc_exercise_kept": 9,
+      "misc_exercise_orphaned": 10,
+      "total_items": 80,
+      "matched": 71,
+      "needs_review_resolved_by_hand": 9
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "N/A - expected, Hindi-only chapter, no English source exists"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 6,
+    "notes": "Hindi-only chapter (no chapter.en.pdf / solutions.en.pdf supplied). Extraction split across 6 parallel sub-agent batches (examples 1-10, examples 11-19, प्रश्नावली 4.1+4.2, प्रश्नावली 4.3+4.4 items 1-9, प्रश्नावली 4.4 items 10-18, misc exercise) plus one section (प्रश्नावली 4.5, 16 items) built directly by the coordinator rather than delegated, since its items 10-14 required OCR-scrambling reconstruction work (see below) already completed during the structural survey. Each dispatched batch scoped narrowly per _shared/RULES.md's sub-agent dispatch rules (given step_2/extract.md only, told to write only its own report/file, never touch chapters/, gates, or manifest.json). MAJOR FINDING: solutions.hi.md contains an ENTIRE ORPHANED OLD-EDITION EXERCISE, its own 'प्रश्नावली 4.2' (16 items on determinant properties/identities proved without expansion), sitting between the solutions for current-chapter 4.1 and current-chapter 4.2 - this topic does not exist anywhere in the current rationalized chapter (whose own प्रश्नावली 4.2 is त्रिभुज-क्षेत्रफल/triangle-area, an entirely different topic). This shifts every SUBSEQUENT exercise's solutions-side label by exactly +1 (item numbers within each shifted exercise are unaffected): current 4.2 <-> solutions 4.3 (both 5 items, त्रिभुज क्षेत्रफल), current 4.3 <-> solutions 4.4 (both 5 items, उपसारणिक-सहखंड), current 4.4 <-> solutions 4.5 (both 18 items, सहखंडज-व्युत्क्रम), current 4.5 <-> solutions 4.6 (both 16 items, equation systems) - confirmed not just by count-matching but by each section's own opening instruction line matching exactly. solutions' own 'प्रश्नावली 4.2' (16 items) discarded wholesale per Rule 5, the same treatment as maths-12-3's प्रश्नावली 3.4. Once this whole-exercise shift is accounted for, every item number within each of 4.1-4.5 matched cleanly with no further within-exercise drift (individually content-verified during transcription by each batch). SECOND FINDING: प्रश्नावली 4.5 (equation systems, current chapter/solutions-shifted-4.6) items 10-14 were badly scrambled by mathpix's own linearization of the source's 3-items-per-row, multi-line-per-item printed layout - reading across a page/column break glued the wrong equation lines to the wrong item numbers (item 10 appeared to have only ONE equation instead of two). Caught and fixed BEFORE extraction by rendering chapter.hi.pdf pages 24-25 directly and reading the true column layout by eye, cross-confirmed against solutions.hi.md's own correctly-linearized versions of the same 5 systems (both agree exactly on the reconstructed text now used) - documented in full in match_report.md. THIRD FINDING (misc exercise): solutions.hi.md's own misc section has 19 items (प्रश्न 1-19) vs. chapter.hi.md's 9, with old items removed non-contiguously throughout the section (not just trailing) - all 9 kept pairings hand-verified by direct content comparison (chapter 1->sol 1, 2->3, 3->7, 4->8, 5->9, 6->10, 7->16, 8->18, 9->19), 10 orphans (sol प्रश्न 2,4,5,6,11,12,13,14,15,17, all determinant-identity proofs with no current counterpart) discarded per Rule 5, full mapping table in match_report.md. Used id slot q_4.9.<n> (kind=additional_exercise) for misc - deliberately unused since this chapter's content sections run 4.1-4.6 and its exercises are 4.1-4.5, avoiding collision with any real number, following the established 'deliberately unused slot' convention (maths-12-1's 1.5, maths-12-2's 2.5, maths-12-3's 3.9). Several genuine cross-document sign/value discrepancies (q_4.1.6, q_4.3.5, q_4.9.3, q_4.9.4 - each source's own matrix transcribed verbatim into its own field, not reconciled) and known source-side OCR artifacts (ex_4.5's tripled connector word, ex_4.19's likely dropped superscript minus sign, q_4.4.11's back-derived cofactor values due to corrupted solutions.hi.md glyphs, q_4.9.7's incomplete cofactor listing vs. its own adjugate matrix) were transcribed exactly as printed per Rule 5/extract.md's 'transcribe, don't fix' rule and flagged in match_report.md for stage 5 to evaluate against the source PDF images. Final validation: gate_counts clean (0 duplicate ids among 80, exact expected per-kind counts: 19 example + 52 exercise + 9 additional_exercise), gate_solutions_present(hi) clean (every item has a non-empty solution, item-level or in parts), gate_bilingual reports all 80 as expected (Hindi-only chapter, no English source), and a round-trip render->re-parse reproduces exactly 80 items - all on the FIRST assembly attempt (no post-hoc fixes needed, unlike maths-12-3's part-label bug). model_calls: 6 dispatched extraction batches (प्रश्नावली 4.5 built directly by the coordinator, not counted as a separate batch call since its content was already fully derived during the pre-extraction structural survey)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-17T06:17:00.661544+00:00",
+    "inputs": {
+      "chapter.hi.md": "67c949bb0a220fc0"
+    },
+    "counts": {
+      "examples.hi.md_chars": 22734,
+      "examples.hi.md_items": 19,
+      "qa.hi.md_chars": 85184,
+      "qa.hi.md_items": 61,
+      "total_items": 80
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure mechanical split via pipeline.render.render() on kind-filtered item subsets - no model call. Hindi-only chapter (no chapter.en.md exists at 02_extract). examples.hi.md holds all 19 worked examples (ex_4.1-ex_4.19); qa.hi.md holds all 61 exercise/additional_exercise items (8+5+5+18+16 across प्रश्नावली 4.1/4.2/4.3/4.4/4.5, plus 9 misc items under q_4.9.<n>). 19+61=80 matches the merged chapter's total item count exactly - nothing gained or lost in the split. Round-trip verified: both output files re-parse via tag._parse with no TagError and via mdio.markdown_to_chapter with exactly the expected item counts."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-17T06:33:35.999740+00:00",
+    "inputs": {
+      "examples.hi.md": "11f222c181279585",
+      "qa.hi.md": "3f9dfe1334f4eb9f"
+    },
+    "counts": {
+      "combined.hi.md_chars": 107839,
+      "combined.hi.md_items": 80,
+      "examples_items": 19,
+      "qa_items": 61
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure mechanical reunion via pipeline.mdio.markdown_to_chapter() on each of stage 3's two files, concatenated (examples then qa, matching stage 2's original order) and re-rendered via pipeline.render.render() - no model call. Hindi-only chapter (no examples.en.md/qa.en.md exist), matching maths-12-1/2/3 precedent. 19 example items + 61 qa items = 80, matching stage 3's combined count exactly - nothing gained or lost recombining. Round-trip verified: combined.hi.md re-parses via tag._parse with no TagError and via mdio.markdown_to_chapter with exactly 80 items, and reparsed id set equals the disjoint union of examples/qa ids with zero overlap."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-17T06:47:22.975342+00:00",
+    "inputs": {
+      "combined.hi.md": "541fdbb8721fa37b",
+      "chapter.hi.pdf": "2aae8e7d0e8a308c",
+      "solutions.hi.pdf": "409195f3eec91c4b"
+    },
+    "counts": {
+      "total_items": 80,
+      "corrections_returned": 2,
+      "corrections_applied_high": 2,
+      "corrections_held": 0,
+      "corrections_by_type": {
+        "solutions_manual_source_typo_silently_over_corrected_during_extraction": 2
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 9,
+    "notes": "Verified all 80 items against the original PDF page images (chapter.hi.pdf, 31 pages; solutions.hi.pdf, 44 pages - the latter has NO extractable text layer at all, fully image-based; the former has a non-standard legacy font encoding making its own text layer unreadable too - both required rendering to PNG via PyMuPDF and direct visual inspection, never trusting page.get_text()). Split across 9 dispatched fork sub-agents (given step_5/verify.md only, never step_5/PROMPT.md), each scoped to 7-10 items with explicit page ranges for both sources: ex_4.1-10, ex_4.11-19, q_4.1.1-8, q_4.2+q_4.3 (10 items), q_4.4.1-9, q_4.4.10-18, q_4.5.1-9, q_4.5.10-16, q_4.9.1-9 (misc). Only 2 genuine corrections surfaced out of 80 items (q_4.4.12, q_4.9.2) - both cases where stage-2 extraction had silently 'corrected' a verbatim printed typo in solutions.hi.pdf (|B| mislabeled as |A|; sin^2 typo'd twice instead of sin^2+cos^2) instead of transcribing it as printed, violating stage 5's own transcription-fidelity rule. Both restored to verbatim source text. Every other previously-flagged issue from match_report.md was independently re-verified against the actual page images and confirmed as a genuine SOURCE-SIDE artifact already correctly transcribed verbatim (not an extraction error, so no correction applies): ex_4.19's problem/solution sign contradiction and ^{1} typo (confirmed at 400dpi - both genuinely printed as-is), ex_4.5's tripled 'अर्थात्' (confirmed as printed, not a duplication artifact), ex_4.10's 'उदाहरण 21' self-reference (confirmed genuinely printed - likely a stale cross-reference from before the chapter was rationalized down to 19 examples; flagged for user awareness, not correctable since there's no wrong field to fix), q_4.1.6/q_4.9.3/q_4.9.4's chapter-vs-solutions sign discrepancies (each source's own matrix confirmed independently, verbatim per-source transcription is correct), q_4.3.5's MCQ option wording difference (chapter's own printed option confirmed correct as extracted), q_4.4.11's previously-reconstructed cofactor line (confirmed PERFECTLY legible in the actual page image, matching the reconstruction exactly), q_4.5.10-14's OCR-scrambled column-layout reconstruction (independently re-derived from scratch against the page images and confirmed exactly correct, item for item). Two NEW source-side self-inconsistencies found and left as-is per Rule 5 (genuinely printed in the solutions manual, not extraction errors, and not this stage's place to silently fix per the 'transcribe what's printed' rule): q_4.5.4's question RHS=4 vs solution's own B-vector using 3, and q_4.5.5's intermediate '+16' vs the derivation needing '+18' (though the final stated answer is correct) - both confirmed present in the actual solutions.hi.pdf page image, not OCR noise. gate_math_parity(hi) and gate_counts both pass clean after applying the 2 high-confidence corrections. Round-trip verified: chapter.verified.hi.md re-parses to exactly 80 items."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-17T06:52:03.384144+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "2d99beeec3a0d1e5"
+    },
+    "counts": {
+      "total_solution_fields": 92,
+      "fields_simplified": 18,
+      "fields_left_unchanged": 74,
+      "restore_failures": 0
+    },
+    "gates_failed": {
+      "gate_bilingual": "N/A - expected, Hindi-only chapter, no English source exists"
+    },
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_answers_unchanged_hi",
+      "gate_question_text_frozen_hi"
+    ],
+    "model_calls": 9,
+    "notes": "Simplified all 92 solution fields (item-level + part-level) across 80 items, split into 9 dispatched fork sub-agent batches (given step_6/simplify.md only, never step_6/PROMPT.md), each following the freeze-before/restore-after discipline via pipeline.protect. Only 18 of 92 fields (20%) received a real text change - mostly sentence-boundary fixes (missing space after \"है।\" running two sentences together, e.g. q_4.5.1/2/7/8/9/10), comma-splice cleanup after अतः/इसलिए (q_4.4.10/14/17/18), and textbook-register swaps (\"प्राप्त होता है\"->\"मिलता है\" in ex_4.14/16/18, \"व्यक्त किया जाता है\"->\"लिखा जा सकता है\" in q_4.3.5). The remaining 74 fields were already terse, formula-driven NCERT-style solutions (often near-entirely protected math tokens joined by minimal connective Hindi) with nothing to simplify without churn - explicitly the correct outcome per step_6/simplify.md's own guidance that leaving a clear field unchanged beats forced rewriting. Zero restore failures across all 92 fields (every protection token reproduced exactly once by every batch). Fields with known stage-5-flagged source-side discrepancies (ex_4.19, q_4.1.6, q_4.4.11/12, q_4.5.4/5, q_4.9.2/3/4) were explicitly instructed to have their numbers/signs left untouched - prose-only simplification where applied, confirmed via gate_math_parity/gate_answers_unchanged. All four gates pass: gate_math_parity(hi), gate_answers_unchanged(hi), and gate_question_text_frozen(hi) all clean; gate_bilingual reports all 80 items as expected for this Hindi-only chapter (no English source exists). Round-trip verified: chapter.simplified.hi.md re-parses to exactly 80 items."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-17T07:16:18.178764+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "1645eb989cadda45"
+    },
+    "counts": {
+      "structured.hi.md_chars": 109313,
+      "total_items": 80
+    },
+    "gates_failed": {
+      "tag_parse": "OK"
+    },
+    "gates_passed": [
+      "protect_parity_stage6_to_stage7"
+    ],
+    "model_calls": 9,
+    "notes": "Applied inner component structure (step_7/format.md) to all 80 items across 9 batches. Of the 9, only the q41 batch (praśnāvalī 4.1) was completed by a dispatched fork sub-agent before the org's monthly spend limit was hit (rate_limit 429 on all 8 remaining fork dispatches). The coordinator completed the remaining 8 batches (ex1, ex2, q42_q43, q44a, q44b, q45a, q45b, misc) directly in-session rather than retrying failed dispatches. Structure added where genuinely multi-stage: ex_4.7/4.9/4.10 (:::step split + ex_4.10's genuine टिप्पणी wrapped as :::note), ex_4.11/4.13/4.14/4.15/4.17/4.18/4.19 (:::step split at natural given/formula -> apply-and-conclude boundaries), ex_4.6/4.16 and q_4.4.5-9 (the reusable A^-1=(1/|A|)adjA formula wrapped in :::formula{label='मुख्य सूत्र'} where stated as its own standalone line), q_4.4.13/4.4.15/4.4.16 (:::step split at the 'दोनों ओर A^-1 से उत्तर गुणन करने पर' transition between verifying the polynomial identity and deriving A^-1 from it). ex_4.3/ex_4.4 got a light :::concept{label='जानकारी'} wrap around their opening observation. Batches q42_q43, q44a (items 1-4), q45a, q45b, and misc were left structurally unchanged - each item in these batches is a single continuous derivation with no genuine multi-stage break, matching step_7/format.md's own guidance that forcing structure onto ordinary prose is worse than leaving it unmarked (mirrors q41's own dispatched-agent outcome: all 13 fields left unchanged for the same reason). No note was invented anywhere - the only :::note added (ex_4.10) wraps a remark that was already literally printed as 'टिप्पणी:' in the source. No second whole-item duplicate-solution artifact was found in any multi-part item checked (q_4.9.4 specifically verified clean). Gates: tag._parse succeeds on the full assembled file (80 items, 0 duplicates), and protect.parity(stage6, stage7) shows zero drift across the whole file, confirming inner-structure-only insertion with no wording, number, or symbol changed anywhere."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-17T07:18:18.708287+00:00",
+    "inputs": {
+      "structured.hi.md": "744ff77133ae96fc"
+    },
+    "counts": {
+      "item_count": 80,
+      "part_count": 21,
+      "figure_count": 0,
+      "stage_distribution": {
+        "conclusion": 86,
+        "given": 19,
+        "key_formula": 7,
+        "substitute": 6
+      },
+      "kind_distribution": {
+        "example": 19,
+        "exercise": 52,
+        "additional_exercise": 9
+      }
+    },
+    "gates_failed": {
+      "fresh_recount_item_id_match": "PASS",
+      "fresh_recount_part_count_match": "PASS",
+      "fresh_recount_figure_src_match": "PASS (0 figures - both extracted images are in theory sections, never inside an item, per match_report.md)"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Built via a hand-rolled tree-walker script (pipeline.tag._parse output), not pipeline.mdio, since mdio cannot parse stage 7-onward nested structure (:::step/:::concept/:::formula inside :::solution) - same approach proven for maths-12-3. The given/key-formula/substitute/conclusion judgment is mechanical rule application (explicit :::concept/:::formula always map directly; a fixed-vocabulary label on a :::step is read as-is; an unlabelled :::step is inferred by position among stageable blocks - first= given, last=conclusion, middle=substitute, single-block=conclusion), applied independently per part for the one item with multi-part solutions. Given this session hit the org monthly spend limit mid-pipeline (see stage 7 manifest note), this was done as a direct Python script rather than dispatching any judgment batches - zero model calls needed since every rule in step_8/PROMPT.md is deterministic given stage 7s own explicit container/label choices. Noise-stripping applied: leading हल/हल:/हल : opener stripped from the very first text segment of each solution flow (0 remaining after strip, verified by direct scan); the **उत्तर:** markdown prefix that pipeline.render.render_item() bakes into every :::answer block was stripped from all answer flows (0 leaks after strip, verified by direct scan) - this exact bug bit maths-12-3 stage 8 (71 leaked instances) and was proactively guarded against here from the start. No duplicate-whole-item-solution artifact applied to any item: no batch flagged one during stage 7, and the one multi-part item checked directly (q_4.9.4) was confirmed to have no trailing whole-item :::solution. Figure paths: 0 figures ended up inside any item (both of this chapters extracted images - the Laplace portrait and the adjugate swap-rule diagram - sit in theory/intro sections per match_report.mds stage-1 note, never inside an उदाहरण or exercise), so the bare-filename bug class from earlier chapters does not apply here; confirmed by the fresh figure-src recount matching (0 == 0). Gate: a fresh, independent regex-based recount directly from structured.hi.md (not reused from the walker) confirms exact match on item count (80), item id order/set, part count (21), and figure src set (both empty) - all PASS. Stage distribution across 118 stageable blocks: 19 given, 7 key_formula, 6 substitute, 86 conclusion (the high conclusion count reflects how many of this chapters short, single-flow exercise solutions collapse to a single stageable block, which is always tagged conclusion per the single-block rule)."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-17T07:23:35.042627+00:00",
+    "inputs": {
+      "structured.hi.md": "082282aeb0302c88"
+    },
+    "counts": {
+      "part_labels_restored": 21,
+      "items_affected": 9
+    },
+    "gates_failed": {
+      "tag_parse": "PASS",
+      "item_id_order_unchanged": "PASS",
+      "part_label_matches_extraction_source": "PASS (all 21)"
+    },
+    "gates_passed": [
+      "protect_parity_stage6_to_stage7"
+    ],
+    "model_calls": 0,
+    "notes": "Discovered while starting stage 9: all 21 :::part containers across 9 multi-part items rendered as bare :::part with NO label attribute at all in 07_format/structured.hi.md - identical bug to maths-12-3s Bug 1. Root cause: 02_extract/chapter.hi.md used :::part{number=\"(i)\"} instead of :::part{label=\"(i)\"} for every part in this chapter (100% of parts, not a partial miss), and pipeline.mdio Part-parsing only ever reads label, never number (schema.Part has no number field at all) - so every part label was silently dropped the moment stage 4 (combine) first ran the extraction text through mdio.markdown_to_chapter -> render.render(), and stayed dropped through verify/simplify/format since none of those stages gates check part labels. Fixed by rebuilding the item+position -> label mapping directly from 02_extract/chapter.hi.md (which still has the original number= values, untouched by this bug since mdio never round-tripped it) and patching each bare :::part line in structured.hi.md in place - a pure attribute addition, not a content rewrite, so protect.parity(stage6, stage7) stays clean (re-verified: zero problems) and item id order/set is unchanged. All 21 restored labels ((i)/(ii)/(iii)/(iv) across 9 items) verified to match the extraction sources own number= values exactly."
+  },
+  {
+    "stage": "tag_correction",
+    "at": "2026-09-17T07:23:35.047113+00:00",
+    "inputs": {
+      "structured.hi.md": "082282aeb0302c88"
+    },
+    "counts": {
+      "item_count": 80,
+      "part_count": 21,
+      "figure_count": 0,
+      "part_labels_now_populated": 21
+    },
+    "gates_failed": {
+      "fresh_recount_item_id_match": "PASS",
+      "fresh_recount_part_count_match": "PASS",
+      "fresh_recount_figure_src_match": "PASS (0 figures)"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Regenerated 08_tag/structured.hi.json from the format_correction-fixed structured.hi.md (same hand-rolled walker script as the original tag stage) so every parts label field now carries its real (i)/(ii)/(iii)/(iv) value instead of an empty string - the original tag entrys JSON would otherwise have shipped all 21 part labels blank straight through to stage 9 rendering (भाग () instead of भाग (i)). All gate checks pass identically to the original tag run (counts unaffected - this only changes a label attribute, not item/part/figure counts)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-17T07:47:37.496907+00:00",
+    "inputs": {
+      "structured.hi.json": "4f42be83e479649b"
+    },
+    "counts": {
+      "html_bytes": 426963,
+      "item_cards_rendered": 80,
+      "determinant_grids_rendered": 124,
+      "matrix_grids_rendered": 487,
+      "figures": 0,
+      "numeric_readback_tokens_checked": 997,
+      "numeric_readback_missing": 0
+    },
+    "gates_failed": {
+      "numeric_readback_vs_chapter_simplified_hi": "PASS (997/997 tokens found)",
+      "manual_visual_readback": "PASS (spot-checked across every section: examples, प्रश्नावली 4.1-4.5, misc; MCQ, multi-part, note-block, nested nested-array edge case, missing-end{aligned} source defect)",
+      "no_leaked_latex_commands": "PASS (0 bare backslash-commands anywhere in output)",
+      "no_stray_dollar_signs": "PASS (0)",
+      "no_leaked_amp_or_colspec_text": "PASS (0 &amp;, 0 lll/ccc leaks)"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hand-authored HTML/CSS built directly (no design-skill canvas), adapted from maths-12-3s proven working latex.py/render_page.py (itself descended from maths-12-2). Built without sub-agent dispatch throughout, since the orgs monthly spend limit was hit mid-pipeline at stage 7 (see that stages manifest note) and never confirmed reset during this session. New engineering for this chapter: genuine determinant-bar rendering (.sD1-.sD3, reusing .s97/.s98s grid machinery from m3s bracketed-matrix work but with plain vertical-line flanks instead of drawn bracket corners) for \\left|\begin{array}...\right| spans - 124 occurrences, this chapters own dominant content shape, distinct from the 487 inherited bracketed-matrix spans this chapter also has in heavy use (both verified by exact count match between source LaTeX spans and rendered .sD1/.s94 elements). Hardened _render_matrix to use the same nested-env-aware row split _render_matrix originally lacked (proactive, before it could bite). PRE-EXISTING BUG FOUND AND FIXED before design work started: all 21 part labels across 9 multi-part items were silently empty in 07_format/structured.hi.md (identical root cause to maths-12-3s Bug 1 - stage 2 used :::part{number=\"(i)\"} instead of label=, which mdio never reads) - fixed via a format_correction/tag_correction pair of manifest entries before this design stage began (see those entries for detail). TWO NEW BUGS FOUND AND FIXED during this stages own manual read-back (not caught by any earlier gate, exactly as step_9/PROMPT.md warns this stage has none): (1) a bare (non-bracketed) \begin{array}{lll}...\\end{array} column-grid nested inside an outer \begin{aligned} rows own cell (q_4.9.4s D_11/D_12/D_13 listing) had its cells scrambled together with the colspec leaking as literal text, because the generic \begin{env} handlers cell-split (row.split(\"&\")) was nesting-blind - fixed by adding _split_cells_respecting_nested_env (same depth-tracking technique already used for row-splitting) and giving multi-cell rows a real visible gap instead of joining with nothing. (2) q_4.9.4s part (ii) solution text itself has a genuine SOURCE-SIDE defect - a 1281\begin{aligned}...1281 block that is missing its own \\end{aligned} closer before the block ends (likely an upstream mathpix/extraction artifact, present since stage 1/2 and never caught by any gate since none validate LaTeX balance) - the converters begin-handler was silently dropping the whole \begin{aligned} token and falling through to raw per-character conversion once its search for \\end{aligned} failed, turning every bare & in the rest of that block into a literal \"&amp;\" on the page (5 separate leaks, one per row). Fixed by making the generic \begin{env} handler fail-safe: when no matching \\end{envname} is found, treat everything to the end of the string as the implicit body instead of abandoning the whole block - verified this generalizes correctly (0 &amp; anywhere in the final 399KB page, not just in the one item where it was caught). Manual read-back per step_9/PROMPT.md: spot-checked rendered items across every section (examples of increasing complexity, an MCQ, multi-part items with the now-restored (i)/(ii) labels, the chapters one genuine :::note block from ex_4.10, both trap cases above) via Playwright screenshots, side by side with source. Numeric read-back script (997 tokens pulled from chapter.simplified.hi.md - not the JSON - via mdio.markdown_to_chapter) found 0 missing. No figures in this chapter (both extracted images sit in theory sections, confirmed 0==0 at stage 8), so no image-path check was needed. English-language item topics (set at stage 2 extraction) match the same established convention already shipped in every prior maths chapter - not a new inconsistency introduced here."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-17T07:52:15.654041+00:00",
+    "inputs": {
+      "final.hi.html": "2a8235b740d7cc0c"
+    },
+    "counts": {
+      "page_count": 44,
+      "blank_pages": 0,
+      "file_bytes": 1691399,
+      "numeric_readback_tokens_checked": 997,
+      "numeric_readback_missing": 0
+    },
+    "gates_failed": {
+      "page_count_sane": "PASS (44 pages for an 80-item chapter)",
+      "no_blank_pages": "PASS",
+      "numeric_readback_vs_pdf_extracted_text": "PASS (997/997, superscript-merge-guard normalizer used)"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium from 09_design/final.hi.html, per step_10/PROMPT.md exactly: networkidle + document.fonts.ready wait, emulate_media(screen) immediately before pdf() (the standing Devanagari pre-base vowel-reordering fix), prefer_css_page_size + print_background, no explicit format/width/height. All 3 gates pass: page count (44) sane for 80 items, zero blank pages, numeric read-back (997 tokens from 06_simplify/chapter.simplified.hi.md via mdio.markdown_to_chapter, same source of truth stage 9 used) all found in the PDFs own extracted text using the superscript-merge-guard normalizer (inserts a separator before a fresh run of superscript characters so a base number and its exponent normalize to two distinct tokens, not one glued one). Known pre-existing Chromium limitation flagged (not a gate failure, not fixable from within this pipeline per step_10/PROMPT.md - visual rendering is correct, only the extractable text layer is affected): this chapters 32 र्-bearing source tokens (mostly वर्ग/वर्गीकरण) lose the reph (रेफ़) in the PDFs extracted text layer - confirmed 15 of वर्गs 6 rendered instances (some words contain it twice or the count includes other र्-words) come back as वग when re-extracted via fitz. Same limitation already flagged for maths-12-3 (117 occurrences there); this chapter is affected far more lightly (32 source tokens vs 117)."
+  }
+]

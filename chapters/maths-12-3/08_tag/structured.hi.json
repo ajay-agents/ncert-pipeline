@@ -1,0 +1,4495 @@
+{
+ "front": {
+  "title": "आव्यूह",
+  "chapter": "3"
+ },
+ "items": [
+  {
+   "id": "ex_3.1",
+   "kind": "example",
+   "number": "3.1",
+   "topic": "Matrix representation of data",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "तीन फैक्ट्रियों I, II तथा III में पुरुष तथा महिला कर्मियों से संबंधित निम्नलिखित सूचना पर विचार कीजिए:\n\n|  | पुरुष कर्मी | महिला कर्मी |\n| :--- | :--- | :--- |\n| I | $30$ | $25$ |\n| II | $25$ | $31$ |\n| III | $27$ | $26$ |\n\nउपर्युक्त सूचना को एक $3 \\times 2$ आव्यूह में निरूपित कीजिए। तीसरी पंक्ति और दूसरे स्तंभ वाली प्रविष्टि क्या प्रकट करती है?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "प्रदत्त सूचना को $3 \\times 2$ आव्यूह के रूप में निम्नलिखित प्रकार से निरूपित किया जा सकता है:\n\n$$\nA=\\left[\\begin{array}{ll}\n30 & 25 \\\\\n25 & 31 \\\\\n27 & 26\n\\end{array}\\right]\n$$\n\nतीसरी पंक्ति और दूसरे स्तंभ की प्रविष्टि फैक्ट्री-III कारखाने में महिला कार्यकर्ताओं की संख्या प्रकट करती है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "तीसरी पंक्ति और दूसरे स्तंभ की प्रविष्टि फैक्ट्री-III में महिला कार्यकर्ताओं की संख्या प्रकट करती है।"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.2",
+   "kind": "example",
+   "number": "3.2",
+   "topic": "Possible orders of a matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि किसी आव्यूह में $8$ अवयव हैं, तो इसकी संभव कोटियाँ क्या हो सकती हैं?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "हमें ज्ञात है कि, यदि किसी आव्यूह की कोटि $m \\times n$ है तो इसमें $m n$ अवयव होते हैं। अतएव $8$ अवयवों वाले किसी आव्यूह के सभी संभव कोटियाँ ज्ञात करने के लिए हम प्राकृत संख्याओं के उन सभी क्रमित युग्मों को ज्ञात करेंगे जिनका गुणनफल $8$ है।\n\nअतः सभी संभव क्रमित युग्म $(1,8),(8,1),(4,2),(2,4)$ हैं।\n\nअतएव संभव कोटियाँ $1 \\times 8,8 \\times 1,4 \\times 2,2 \\times 4$ हैं।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "संभव कोटियाँ $1 \\times 8, 8 \\times 1, 4 \\times 2, 2 \\times 4$ हैं।"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.3",
+   "kind": "example",
+   "number": "3.3",
+   "topic": "Constructing a matrix from a formula",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "एक ऐसे $3 \\times 2$ आव्यूह की रचना कीजिए, जिसके अवयव $a_{i j}=\\frac{1}{2}|i-3 j|$ द्वारा प्रदत्त हैं।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "concept",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "एक $3 \\times 2$ आव्यूह, सामान्यतः इस प्रकार होता है: $\\mathrm{A}=\\left[\\begin{array}{ll}a_{11} & a_{12} \\\\ a_{21} & a_{22} \\\\ a_{31} & a_{32}\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "मुख्य सूत्र",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\na_{i j}=\\frac{1}{2}|i-3 j|, i=1,2,3 \\text { तथा } j=1,2\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "इसलिए\n\n$$\na_{11}=\\frac{1}{2}|1-3.1|=1\n$$\n\n$$\na_{12}=\\frac{1}{2}|1-3.2|=\\frac{5}{2}\n$$\n\n$$\n\\begin{aligned}\n& a_{21}=\\frac{1}{2}|2-3.1|=\\frac{1}{2} \\\\\n& a_{31}=\\frac{1}{2}|3-3.1|=0\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& a_{22}=\\frac{1}{2}|2-3.2|=2 \\\\\n& a_{32}=\\frac{1}{2}|3-3.2|=\\frac{3}{2}\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अतः अभीष्ट आव्यूह $\\mathrm{A}=\\left[\\begin{array}{cc}1 & \\frac{5}{2} \\\\ \\frac{1}{2} & 2 \\\\ 0 & \\frac{3}{2}\\end{array}\\right]$ है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\mathrm{A}=\\left[\\begin{array}{cc}1 & \\frac{5}{2} \\\\ \\frac{1}{2} & 2 \\\\ 0 & \\frac{3}{2}\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.4",
+   "kind": "example",
+   "number": "3.4",
+   "topic": "Equality of matrices - solving unknowns",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\left[\\begin{array}{ccc}x+3 & z+4 & 2 y-7 \\\\ -6 & a-1 & 0 \\\\ b-3 & -21 & 0\\end{array}\\right]=\\left[\\begin{array}{ccc}0 & 6 & 3 y-2 \\\\ -6 & -3 & 2 c+2 \\\\ 2 b+4 & -21 & 0\\end{array}\\right]$\nहो तो $a, b, c, x, y$ तथा $z$ के मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "चूँकि प्रदत्त आव्यूह समान हैं, इसलिए इनके संगत अवयव भी समान होंगे। संगत अवयवों की तुलना करने पर हमें निम्नलिखित परिणाम प्राप्त होता है:\n\n$$\n\\begin{array}{llr}\nx+3=0, & z+4=6, & 2 y-7=3 y-2 \\\\\na-1=-3, & 0=2 c+2 & b-3=2 b+4,\n\\end{array}\n$$\n\nइन्हें सरल करने पर हमें प्राप्त होता है कि\n\n$$\na=-2, b=-7, c=-1, x=-3, y=-5, z=2\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$a=-2, b=-7, c=-1, x=-3, y=-5, z=2$"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.5",
+   "kind": "example",
+   "number": "3.5",
+   "topic": "Equality of matrices - solving unknowns",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\left[\\begin{array}{cc}2 a+b & a-2 b \\\\ 5 c-d & 4 c+3 d\\end{array}\\right]=\\left[\\begin{array}{cc}4 & -3 \\\\ 11 & 24\\end{array}\\right]$ हो तो $a, b, c$, तथा $d$ के मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दो आव्यूहों की समानता की परिभाषा द्वारा, संगत अवयवों को समान रखने पर हमें प्राप्त होता है कि\n\n$$\n\\begin{array}{rlrl}\n2 a+b & =4 & 5 c-d & =11 \\\\\na-2 b & =-3 & 4 c+3 d & =24\n\\end{array}\n$$\n\nइन समीकरणों को सरल करने पर $a=1, b=2, c=3$ तथा $d=4$ प्राप्त होता है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$a=1, b=2, c=3, d=4$"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.6",
+   "kind": "example",
+   "number": "3.6",
+   "topic": "Addition of matrices",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$\\mathrm{A}=\\left[\\begin{array}{ccc}\\sqrt{3} & 1 & -1 \\\\ 2 & 3 & 0\\end{array}\\right]$ तथा $\\mathrm{B}=\\left[\\begin{array}{ccc}2 & \\sqrt{5} & 1 \\\\ -2 & 3 & \\frac{1}{2}\\end{array}\\right]$ है तो $\\mathrm{A}+\\mathrm{B}$ ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "क्योंकि A तथा B समान कोटि $2 \\times 3$ वाले आव्यूह हैं, इसलिए A तथा B का योग परिभाषित है, और\n$\\mathrm{A}+\\mathrm{B}=\\left[\\begin{array}{lll}2+\\sqrt{3} & 1+\\sqrt{5} & 1-1 \\\\ 2-2 & 3+3 & 0+\\frac{1}{2}\\end{array}\\right]=\\left[\\begin{array}{ccc}2+\\sqrt{3} & 1+\\sqrt{5} & 0 \\\\ 0 & 6 & \\frac{1}{2}\\end{array}\\right]$ द्वारा प्राप्त होता है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\mathrm{A}+\\mathrm{B}=\\left[\\begin{array}{ccc}2+\\sqrt{3} & 1+\\sqrt{5} & 0 \\\\ 0 & 6 & \\frac{1}{2}\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.7",
+   "kind": "example",
+   "number": "3.7",
+   "topic": "Scalar multiplication and subtraction",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 2 & 3 & 1\\end{array}\\right]$ तथा $\\mathrm{B}=\\left[\\begin{array}{rrr}3 & -1 & 3 \\\\ -1 & 0 & 2\\end{array}\\right]$ हैं तो $2 \\mathrm{~A}-\\mathrm{B}$ ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "हम पाते हैं\n\n$$\n\\begin{aligned}\n2 A-B & =2\\left[\\begin{array}{lll}\n1 & 2 & 3 \\\\\n2 & 3 & 1\n\\end{array}\\right]-\\left[\\begin{array}{lrl}\n3 & -1 & 3 \\\\\n-1 & 0 & 2\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{lll}\n2 & 4 & 6 \\\\\n4 & 6 & 2\n\\end{array}\\right]+\\left[\\begin{array}{rrr}\n-3 & 1 & -3 \\\\\n1 & 0 & -2\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{lll}\n2-3 & 4+1 & 6-3 \\\\\n4+1 & 6+0 & 2-2\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-1 & 5 & 3 \\\\\n5 & 6 & 0\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$2 A-B=\\left[\\begin{array}{ccc}-1 & 5 & 3 \\\\ 5 & 6 & 0\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.8",
+   "kind": "example",
+   "number": "3.8",
+   "topic": "Solving a matrix equation",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{rr}8 & 0 \\\\ 4 & -2 \\\\ 3 & 6\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{cc}2 & -2 \\\\ 4 & 2 \\\\ -5 & 1\\end{array}\\right]$ तथा $2 \\mathrm{~A}+3 \\mathrm{X}=5 \\mathrm{~B}$ दिया हो तो आव्यूह X ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "concept",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है $2 \\mathrm{~A}+3 \\mathrm{X}=5 \\mathrm{~B}$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "या\n\n$$\n2 A+3 X-2 A=5 B-2 A\n$$\n\nया\n\n$$\n2 A-2 A+3 X=5 B-2 A\n$$\n\n(आव्यूह योग क्रम-विनिमेय है)\n\nया\n\n$$\nO+3 X=5 B-2 A\n$$\n\n(-2A, आव्यूह 2A का योग प्रतिलोम है)\n\nया\n\n$$\n3 X=5 B-2 A\n$$\n\n(O, योग का तत्समक है)\n\nया\n\n$$\nX=\\frac{1}{3}(5 B-2 A)\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "या\n\n$$\n\\mathrm{X}=\\frac{1}{3}\\left(5\\left[\\begin{array}{cc}\n2 & -2 \\\\\n4 & 2 \\\\\n-5 & 1\n\\end{array}\\right]-2\\left[\\begin{array}{cc}\n8 & 0 \\\\\n4 & -2 \\\\\n3 & 6\n\\end{array}\\right]\\right)=\\frac{1}{3}\\left(\\left[\\begin{array}{cc}\n10 & -10 \\\\\n20 & 10 \\\\\n-25 & 5\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n-16 & 0 \\\\\n-8 & 4 \\\\\n-6 & -12\n\\end{array}\\right]\\right)\n$$\n\n$$\n=\\frac{1}{3}\\left[\\begin{array}{cc}\n10-16 & -10+0 \\\\\n20-8 & 10+4 \\\\\n-25-6 & 5-12\n\\end{array}\\right]=\\frac{1}{3}\\left[\\begin{array}{cc}\n-6 & -10 \\\\\n12 & 14 \\\\\n-31 & -7\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n-2 & \\frac{-10}{3} \\\\\n4 & \\frac{14}{3} \\\\\n\\frac{-31}{3} & \\frac{-7}{3}\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\mathrm{X}=\\left[\\begin{array}{cc}-2 & \\frac{-10}{3} \\\\ 4 & \\frac{14}{3} \\\\ \\frac{-31}{3} & \\frac{-7}{3}\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.9",
+   "kind": "example",
+   "number": "3.9",
+   "topic": "Solving simultaneous matrix equations",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "X तथा Y , ज्ञात कीजिए, यदि $\\mathrm{X}+\\mathrm{Y}=\\left[\\begin{array}{ll}5 & 2 \\\\ 0 & 9\\end{array}\\right]$ तथा $\\mathrm{X}-\\mathrm{Y}=\\left[\\begin{array}{cc}3 & 6 \\\\ 0 & -1\\end{array}\\right]$ है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "X ज्ञात करना",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ पर $(\\mathrm{X}+\\mathrm{Y})+(\\mathrm{X}-\\mathrm{Y})=\\left[\\begin{array}{cc}5 & 2 \\\\ 0 & 9\\end{array}\\right]+\\left[\\begin{array}{cc}3 & 6 \\\\ 0 & -1\\end{array}\\right]$\n\nया\n\n$$\n(\\mathrm{X}+\\mathrm{X})+(\\mathrm{Y}-\\mathrm{Y})=\\left[\\begin{array}{ll}\n8 & 8 \\\\\n0 & 8\n\\end{array}\\right] \\Rightarrow 2 \\mathrm{X}=\\left[\\begin{array}{ll}\n8 & 8 \\\\\n0 & 8\n\\end{array}\\right]\n$$\n\nया\n\n$$\n\\mathrm{X}=\\frac{1}{2}\\left[\\begin{array}{ll}\n8 & 8 \\\\\n0 & 8\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n4 & 4 \\\\\n0 & 4\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "Y ज्ञात करना",
+     "flow": [
+      {
+       "type": "text",
+       "text": "साथ ही\n\n$$\n(X+Y)-(X-Y)=\\left[\\begin{array}{ll}\n5 & 2 \\\\\n0 & 9\n\\end{array}\\right]-\\left[\\begin{array}{rr}\n3 & 6 \\\\\n0 & -1\n\\end{array}\\right]\n$$\n\nया\n\n$$\n(\\mathrm{X}-\\mathrm{X})+(\\mathrm{Y}+\\mathrm{Y})=\\left[\\begin{array}{cc}\n5-3 & 2-6 \\\\\n0 & 9+1\n\\end{array}\\right] \\Rightarrow 2 \\mathrm{Y}=\\left[\\begin{array}{cc}\n2 & -4 \\\\\n0 & 10\n\\end{array}\\right]\n$$\n\nया\n\n$$\n\\mathrm{Y}=\\frac{1}{2}\\left[\\begin{array}{rr}\n2 & -4 \\\\\n0 & 10\n\\end{array}\\right]=\\left[\\begin{array}{rr}\n1 & -2 \\\\\n0 & 5\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\mathrm{X}=\\left[\\begin{array}{ll}4 & 4 \\\\ 0 & 4\\end{array}\\right], \\mathrm{Y}=\\left[\\begin{array}{rr}1 & -2 \\\\ 0 & 5\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.10",
+   "kind": "example",
+   "number": "3.10",
+   "topic": "Solving for unknowns in a matrix equation",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण से $x$ तथा $y$ के मानों को ज्ञात कीजिए:\n\n$$\n2\\left[\\begin{array}{lc}\nx & 5 \\\\\n7 & y-3\n\\end{array}\\right]+\\left[\\begin{array}{rr}\n3 & -4 \\\\\n1 & 2\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n7 & 6 \\\\\n15 & 14\n\\end{array}\\right]\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है\n\n$$\n2\\left[\\begin{array}{cc}\nx & 5 \\\\\n7 & y-3\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n3 & -4 \\\\\n1 & 2\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n7 & 6 \\\\\n15 & 14\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{cc}\n2 x & 10 \\\\\n14 & 2 y-6\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n3 & -4 \\\\\n1 & 2\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n7 & 6 \\\\\n15 & 14\n\\end{array}\\right]\n$$\n\nया\n\n$$\n\\left[\\begin{array}{cc}\n2 x+3 & 10-4 \\\\\n14+1 & 2 y-6+2\n\\end{array}\\right]=\\begin{array}{cc}\n7 & 6 \\\\\n15 & 14\n\\end{array} \\Rightarrow\\left[\\begin{array}{cc}\n2 x+3 & 6 \\\\\n15 & 2 y-4\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n7 & 6 \\\\\n15 & 14\n\\end{array}\\right]\n$$\n\nया\n\n$$\n2 x+3=7 \\quad \\text { तथा } \\quad 2 y-4=14 \\text { (क्यों?) }\n$$\n\nया\n\n$$\n2 x=7-3 \\quad \\text { तथा } \\quad 2 y=18\n$$\n\nया\n\n$$\nx=\\frac{4}{2} \\quad \\text { तथा } \\quad y=\\frac{18}{2}\n$$\n\nअर्थात्\n\n$$\nx=2 \\quad \\text { तथा } \\quad y=9\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=2, y=9$"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.11",
+   "kind": "example",
+   "number": "3.11",
+   "topic": "Matrix application - farmers' rice sales",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "दो किसान रामकिशन और गुरचरन सिंह केवल तीन प्रकार के चावल जैसे बासमती, परमल तथा नउरा की खेती करते हैं। दोनों किसानों द्वारा, सितंबर तथा अक्तूबर माह में, इस प्रकार के चावल की बिक्री (रुपयों में) को, निम्नलिखित A त था B आव्यूहों में व्यक्त किया गया है:\n\nसितंबर माह की बिक्री (Rs में)\nबासमती परमल नउरा\n$\\mathrm{A}=\\left[\\begin{array}{lll}10,000 & 20,000 & 30,000 \\\\ 50,000 & 30,000 & 10,000\\end{array}\\right] \\begin{aligned} & \\text { रामकिशन } \\\\ & \\text { गुरुचरण सिंह }\\end{aligned}$\n\nअक्तूबर माह की बिक्री (Rs में)\nबासमती परमल नउरा\n$\\mathrm{A}-\\mathrm{B}=\\left[\\begin{array}{ccc}5000 & 10,000 & 24,000 \\\\ 30,000 & 20,000 & 0\\end{array}\\right] \\begin{aligned} & \\text { रामकिशन } \\\\ & \\text { गुरुचरण सिंह }\\end{aligned}$"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "प्रत्येक किसान की प्रत्येक प्रकार के चावल की सितंबर तथा अक्तूबर की सम्मिलित बिक्री ज्ञात कीजिए।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "प्रत्येक किसान की प्रत्येक प्रकार के चावल की सितंबर तथा अक्तूबर में प्रत्येक प्रकार के चावल की बिक्री अगले पृष्ठ पर दी गई है:\n\n$$\n\\mathrm{A}+\\mathrm{B}=\\left[\\begin{array}{ccc}\n\\text { बासमती } & \\text { परमल } & \\text { नउरा } \\\\\n15,000 & 30,000 & 36,000 \\\\\n70,000 & 40,000 & 20,000\n\\end{array}\\right] \\begin{aligned}\n& \\text { रामकिशन } \\\\\n& \\text { गुरुचरण सिंह }\n\\end{aligned}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "सितंबर की अपेक्षा अक्तूबर में हुई बिक्री में कमी ज्ञात कीजिए।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "सितंबर की अपेक्षा अक्तूबर में हुई बिक्री में कमी नीचे दी गई है,\n$$\n\\mathrm{A}-\\mathrm{B}=\\left[\\begin{array}{ccc}\n\\text { बासमती } & \\text { परमल } & \\text { नउरा } \\\\\n5000 & 10,000 & 24,000 \\\\\n30,000 & 20,000 & 0\n\\end{array}\\right] \\begin{aligned}\n& \\text { रामकिशन } \\\\\n& \\text { गुरुचरण सिंह }\n\\end{aligned}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "यदि दोनों किसानों को कुल बिक्री पर $2 \\%$ लाभ मिलता है, तो अक्तूबर में प्रत्येक प्रकार के चावल की बिक्री पर प्रत्येक किसान को मिलने वाला लाभ ज्ञात कीजिए।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& \\mathrm{B} \\text { का } 2 \\%=\\frac{2}{100} \\times \\mathrm{B}=0.02 \\times \\mathrm{B} \\\\\n&=0.02\\left[\\begin{array}{ccc}\n\\text { बासमती } & \\text { परमल } & \\text { नउरा } \\\\\n5000 & 10,000 & 6000 \\\\\n20,000 & 10,000 & 10,000\n\\end{array}\\right] \\begin{array}{cc}\n\\text { रामकिशन } \\\\\n\\text { गुरुचरण सिंह }\n\\end{array} \\\\\n&=\\left[\\begin{array}{ccc}\n\\text { बासमती } & \\text { परमल } & \\text { नउरा } \\\\\n100 & 200 & 120 \\\\\n400 & 200 & 200\n\\end{array}\\right] \\text { रामकिशन } \\\\\n& \\text { गुरुचरण सिंह }\n\\end{aligned}\n$$\n\nअतः अक्तूबर माह में, रामकिशन, प्रत्येक प्रकार के चावल की बिक्री पर क्रमशः ₹ $100$, ₹200, तथा ₹120 लाभ प्राप्त करता है और गुरचरन सिंह, प्रत्येक प्रकार के चावल की बिक्री पर क्रमशः ₹ $400$, ₹ $200$ तथा ₹ $200$ लाभ अर्जित करता है।"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "ex_3.12",
+   "kind": "example",
+   "number": "3.12",
+   "topic": "Multiplication of matrices",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{ll}6 & 9 \\\\ 2 & 3\\end{array}\\right]$ तथा $\\mathrm{B}=\\left[\\begin{array}{lll}2 & 6 & 0 \\\\ 7 & 9 & 8\\end{array}\\right]$ है तो AB ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "आव्यूह A में $2$ स्तंभ हैं जो आव्यूह B की पंक्तियों के समान हैं। अतएव AB परिभाषित है। अब\n\n$$\n\\begin{aligned}\nA B & =\\left[\\begin{array}{lll}\n6(2)+9(7) & 6(6)+9(9) & 6(0)+9(8) \\\\\n2(2)+3(7) & 2(6)+3(9) & 2(0)+3(8)\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{rrr}\n12+63 & 36+81 & 0+72 \\\\\n4+21 & 12+27 & 0+24\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n75 & 117 & 72 \\\\\n25 & 39 & 24\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\mathrm{AB}=\\left[\\begin{array}{ccc}75 & 117 & 72 \\\\ 25 & 39 & 24\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.13",
+   "kind": "example",
+   "number": "3.13",
+   "topic": "आव्यूह गुणन में क्रम-विनिमेयता का अभाव",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{rrr}1 & -2 & 3 \\\\ -4 & 2 & 5\\end{array}\\right]$ और $\\mathrm{B}=\\left[\\begin{array}{ll}2 & 3 \\\\ 4 & 5 \\\\ 2 & 1\\end{array}\\right]$, तो AB तथा BA ज्ञात कीजिए। दर्शाइए कि $\\mathrm{AB} \\neq \\mathrm{BA}$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "क्योंकि कि A एक $2 \\times 3$ आव्यूह है और B एक $3 \\times 2$ आव्यूह है, इसलिए AB तथा BA दोनों ही परिभाषित हैं तथा क्रमशः $2 \\times 2$ तथा $3 \\times 3$, कोटियों के आव्यूह हैं। नोट कीजिए कि\n\n$$\n\\mathrm{AB}=\\left[\\begin{array}{rrr}\n1 & -2 & 3 \\\\\n-4 & 2 & 5\n\\end{array}\\right]\\left[\\begin{array}{ll}\n2 & 3 \\\\\n4 & 5 \\\\\n2 & 1\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n2-8+6 & 3-10+3 \\\\\n-8+8+10 & -12+10+5\n\\end{array}\\right]=\\left[\\begin{array}{cr}\n0 & -4 \\\\\n10 & 3\n\\end{array}\\right]\n$$\n\nऔर\n\n$$\n\\mathrm{BA}=\\left[\\begin{array}{ll}\n2 & 3 \\\\\n4 & 5 \\\\\n2 & 1\n\\end{array}\\right]\\left[\\begin{array}{rrr}\n1 & -2 & 3 \\\\\n-4 & 2 & 5\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n2-12 & -4+6 & 6+15 \\\\\n4-20 & -8+10 & 12+25 \\\\\n2-4 & -4+2 & 6+5\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-10 & 2 & 21 \\\\\n-16 & 2 & 37 \\\\\n-2 & -2 & 11\n\\end{array}\\right]\n$$\n\nस्पष्टतया $\\mathrm{AB} \\neq \\mathrm{BA}$."
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_3.14",
+   "kind": "example",
+   "number": "3.14",
+   "topic": "AB ≠ BA का एक और उदाहरण",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{rr}1 & 0 \\\\ 0 & -1\\end{array}\\right]$ तथा $\\mathrm{B}=\\left[\\begin{array}{ll}0 & 1 \\\\ 1 & 0\\end{array}\\right]$ है तो $\\mathrm{AB}=\\left[\\begin{array}{rr}0 & 1 \\\\ -1 & 0\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "और\n\n$$\n\\mathrm{BA}=\\left[\\begin{array}{rr}\n0 & -1 \\\\\n1 & 0\n\\end{array}\\right] \\text { है। स्पष्टतया } \\mathrm{AB} \\neq \\mathrm{BA} \\text { है। }\n$$\n\nअतः आव्यूह गुणन क्रम-विनिमेय नहीं होता है।"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_3.15",
+   "kind": "example",
+   "number": "3.15",
+   "topic": "दो शून्येतर आव्यूहों का गुणनफल शून्य आव्यूह",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{rr}0 & -1 \\\\ 0 & 2\\end{array}\\right]$ तथा $\\mathrm{B}=\\left[\\begin{array}{ll}3 & 5 \\\\ 0 & 0\\end{array}\\right]$ है तो AB का मान ज्ञात कीजिए"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ पर $\\mathrm{AB}=\\left[\\begin{array}{rr}0 & -1 \\\\ 0 & 2\\end{array}\\right]\\left[\\begin{array}{ll}3 & 5 \\\\ 0 & 0\\end{array}\\right]=\\left[\\begin{array}{ll}0 & 0 \\\\ 0 & 0\\end{array}\\right]$\n\nअतः यदि दो आव्यूहों का गुणनफल एक शून्य आव्यूह है तो आवश्यक नहीं है कि उनमें से एक आव्यूह अनिवार्यतः शून्य आव्यूह हो।"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_3.16",
+   "kind": "example",
+   "number": "3.16",
+   "topic": "आव्यूह गुणन की साहचर्यता का सत्यापन",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{ccc}1 & 1 & -1 \\\\ 2 & 0 & 3 \\\\ 3 & -1 & 2\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{cc}1 & 3 \\\\ 0 & 2 \\\\ -1 & 4\\end{array}\\right]$ तथा $\\mathrm{C}=\\left[\\begin{array}{cccc}1 & 2 & 3 & -4 \\\\ 2 & 0 & -2 & 1\\end{array}\\right]$ तो $\\mathrm{A}(\\mathrm{BC})$ तथा $(\\mathrm{AB}) \\mathrm{C}$ ज्ञात कीजिए और दिखलाइए कि $(\\mathrm{AB}) \\mathrm{C}=\\mathrm{A}(\\mathrm{BC})$ है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ $\\mathrm{AB}=\\left[\\begin{array}{rcr}1 & 1 & -1 \\\\ 2 & 0 & 3 \\\\ 3 & -1 & 2\\end{array}\\right]\\left[\\begin{array}{rr}1 & 3 \\\\ 0 & 2 \\\\ -1 & 4\\end{array}\\right]=\\left[\\begin{array}{ll}1+0+1 & 3+2-4 \\\\ 2+0-3 & 6+0+12 \\\\ 3+0-2 & 9-2+8\\end{array}\\right]=\\left[\\begin{array}{rc}2 & 1 \\\\ -1 & 18 \\\\ 1 & 15\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\text { (AB) (C) } \\begin{aligned}\n& =\\left[\\begin{array}{rc}\n2 & 1 \\\\\n-1 & 18 \\\\\n1 & 15\n\\end{array}\\right]\\left[\\begin{array}{rrrr}\n1 & 2 & 3 & -4 \\\\\n2 & 0 & -2 & 1\n\\end{array}\\right]=\\left[\\begin{array}{rrrr}\n2+2 & 4+0 & 6-2 & -8+1 \\\\\n-1+36 & -2+0 & -3-36 & 4+18 \\\\\n1+30 & 2+0 & 3-30 & -4+15\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cccc}\n4 & 4 & 4 & -7 \\\\\n35 & -2 & -39 & 22 \\\\\n31 & 2 & -27 & 11\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अब\n$$\n\\begin{aligned}\n\\mathrm{BC} & =\\left[\\begin{array}{rr}\n1 & 3 \\\\\n0 & 2 \\\\\n-1 & 4\n\\end{array}\\right]\\left[\\begin{array}{rrrr}\n1 & 2 & 3 & -4 \\\\\n2 & 0 & -2 & 1\n\\end{array}\\right]=\\left[\\begin{array}{rrrr}\n1+6 & 2+0 & 3-6 & -4+3 \\\\\n0+4 & 0+0 & 0-4 & 0+2 \\\\\n-1+8 & -2+0 & -3-8 & 4+4\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{rrrr}\n7 & 2 & -3 & -1 \\\\\n4 & 0 & -4 & 2 \\\\\n7 & -2 & -11 & 8\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अतएव\n\n$$\n\\begin{aligned}\nA(B C) & =\\left[\\begin{array}{rrr}\n1 & 1 & -1 \\\\\n2 & 0 & 3 \\\\\n3 & -1 & 2\n\\end{array}\\right]\\left[\\begin{array}{cccc}\n7 & 2 & -3 & -1 \\\\\n4 & 0 & -4 & 2 \\\\\n7 & -2 & -11 & 8\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cccc}\n7+4-7 & 2+0+2 & -3-4+11 & -1+2-8 \\\\\n14+0+21 & 4+0-6 & -6+0-33 & -2+0+24 \\\\\n21-4+14 & 6+0-4 & -9+4-22 & -3-2+16\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{crcc}\n4 & 4 & 4 & -7 \\\\\n35 & -2 & -39 & 22 \\\\\n31 & 2 & -27 & 11\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "स्पष्टतया, (AB) $\\mathrm{C}=\\mathrm{A}(\\mathrm{BC})$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_3.17",
+   "kind": "example",
+   "number": "3.17",
+   "topic": "आव्यूह गुणन के वितरण नियम का सत्यापन",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{rrr}0 & 6 & 7 \\\\ -6 & 0 & 8 \\\\ 7 & -8 & 0\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{lll}0 & 1 & 1 \\\\ 1 & 0 & 2 \\\\ 1 & 2 & 0\\end{array}\\right], \\mathrm{C}=\\left[\\begin{array}{r}2 \\\\ -2 \\\\ 3\\end{array}\\right]$\nतो $\\mathrm{AC}, \\mathrm{BC}$ तथा $(\\mathrm{A}+\\mathrm{B}) \\mathrm{C}$ का परिकलन कीजिए। यह भी सत्यापित कीजिए कि $(\\mathrm{A}+\\mathrm{B}) \\mathrm{C}=\\mathrm{AC}+\\mathrm{BC}$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$\\mathrm{A}+\\mathrm{B}=\\left[\\begin{array}{ccc}0 & 7 & 8 \\\\ -5 & 0 & 10 \\\\ 8 & -6 & 0\\end{array}\\right]$\n\nअतएव,\n\n$$\n(A+B) C=\\left[\\begin{array}{rrc}\n0 & 7 & 8 \\\\\n-5 & 0 & 10 \\\\\n8 & -6 & 0\n\\end{array}\\right]\\left[\\begin{array}{r}\n2 \\\\\n-2 \\\\\n3\n\\end{array}\\right]=\\left[\\begin{array}{r}\n0-14+24 \\\\\n-10+0+30 \\\\\n16+12+0\n\\end{array}\\right]=\\left[\\begin{array}{l}\n10 \\\\\n20 \\\\\n28\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "इसके अतिरिक्त\n\n$$\n\\mathrm{AC}=\\left[\\begin{array}{ccc}\n0 & 6 & 7 \\\\\n-6 & 0 & 8 \\\\\n7 & -8 & 0\n\\end{array}\\right]\\left[\\begin{array}{r}\n2 \\\\\n-2 \\\\\n3\n\\end{array}\\right]=\\left[\\begin{array}{r}\n0-12+21 \\\\\n-12+0+24 \\\\\n14+16+0\n\\end{array}\\right]=\\left[\\begin{array}{c}\n9 \\\\\n12 \\\\\n30\n\\end{array}\\right]\n$$\n\nऔर\n\n$$\n\\mathrm{BC}=\\left[\\begin{array}{lll}\n0 & 1 & 1 \\\\\n1 & 0 & 2 \\\\\n1 & 2 & 0\n\\end{array}\\right]\\left[\\begin{array}{r}\n2 \\\\\n-2 \\\\\n3\n\\end{array}\\right]=\\left[\\begin{array}{l}\n0-2+3 \\\\\n2+0+6 \\\\\n2-4+0\n\\end{array}\\right]=\\left[\\begin{array}{c}\n1 \\\\\n8 \\\\\n-2\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "इसलिए\n\n$$\nA C+B C=\\left[\\begin{array}{l}\n9 \\\\\n12 \\\\\n30\n\\end{array}\\right]+\\left[\\begin{array}{r}\n1 \\\\\n8 \\\\\n-2\n\\end{array}\\right]=\\left[\\begin{array}{l}\n10 \\\\\n20 \\\\\n28\n\\end{array}\\right]\n$$\n\nस्पष्टतया\n\n$$\n(\\mathrm{A}+\\mathrm{B}) \\mathrm{C}=\\mathrm{AC}+\\mathrm{BC}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_3.18",
+   "kind": "example",
+   "number": "3.18",
+   "topic": "आव्यूह बहुपद A³-23A-40I=O का सत्यापन",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{rrr}1 & 2 & 3 \\\\ 3 & -2 & 1 \\\\ 4 & 2 & 1\\end{array}\\right]$ है तो दर्शाइए कि $\\mathrm{A}^{3}-23 \\mathrm{~A}-40 \\mathrm{I}=\\mathrm{O}$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "हम जानते हैं कि $\\mathrm{A}^{2}=\\mathrm{A} . \\mathrm{A}=\\left[\\begin{array}{rrr}1 & 2 & 3 \\\\ 3 & -2 & 1 \\\\ 4 & 2 & 1\\end{array}\\right]\\left[\\begin{array}{rrr}1 & 2 & 3 \\\\ 3 & -2 & 1 \\\\ 4 & 2 & 1\\end{array}\\right]=\\left[\\begin{array}{lll}19 & 4 & 8 \\\\ 1 & 12 & 8 \\\\ 14 & 6 & 15\\end{array}\\right]$\nइसलिए\n\n$$\nA^{3}=A A^{2}=\\left[\\begin{array}{ccc}\n1 & 2 & 3 \\\\\n3 & -2 & 1 \\\\\n4 & 2 & 1\n\\end{array}\\right]\\left[\\begin{array}{llr}\n19 & 4 & 8 \\\\\n1 & 12 & 8 \\\\\n14 & 6 & 15\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n63 & 46 & 69 \\\\\n69 & -6 & 23 \\\\\n92 & 46 & 63\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अब $\\mathrm{A}^{3}-23 \\mathrm{~A}-40 \\mathrm{I}=\\left[\\begin{array}{rrr}63 & 46 & 69 \\\\ 69 & -6 & 23 \\\\ 92 & 46 & 63\\end{array}\\right]-23\\left[\\begin{array}{rrr}1 & 2 & 3 \\\\ 3 & -2 & 1 \\\\ 4 & 2 & 1\\end{array}\\right]-40\\left[\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right]$\n\n$$\n\\begin{aligned}\n& =\\left[\\begin{array}{ccc}\n63 & 46 & 69 \\\\\n69 & -6 & 23 \\\\\n92 & 46 & 63\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n-23 & -46 & -69 \\\\\n-69 & 46 & -23 \\\\\n-92 & -46 & -23\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n-40 & 0 & 0 \\\\\n0 & -40 & 0 \\\\\n0 & 0 & -40\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n63-23-40 & 46-46+0 & 69-69+0 \\\\\n69-69+0 & -6+46-40 & 23-23+0 \\\\\n92-92+0 & 46-46+0 & 63-23-40\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]=\\mathrm{O}\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_3.19",
+   "kind": "example",
+   "number": "3.19",
+   "topic": "चुनाव प्रचार व्यय — आव्यूह गुणन का अनुप्रयोग",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "किसी विधान सभा चुनाव के दौरान एक राजनैतिक दल ने अपने उम्मीदवार के प्रचार हेतु एक जन संपर्क फर्म को ठेके पर अनुबंद्धित किया। प्रचार हेतु तीन विधियों द्वारा संपर्क स्थापित करना निश्चित हुआ। ये हैं: टेलीफोन द्वारा, घर-घर जाकर तथा पर्चा वितरण द्वारा। प्रत्येक संपर्क का शुल्क (पैसों में) नीचे आव्यूह A में व्यक्त है,\n\n$$\n\\begin{aligned}\n& \\text { प्रति संपर्क मूल्य } \\\\\n& \\mathrm{A}=\\left[\\begin{array}{c}\n40 \\\\\n100 \\\\\n50\n\\end{array}\\right] \\begin{array}{c}\n\\text { टेलीफोन द्वारा } \\\\\n\\text { घर जाकर } \\\\\n\\text { पर्चा द्वारा }\n\\end{array}\n\\end{aligned}\n$$\n\n$X$ तथा $Y$ दो शहरों में, प्रत्येक प्रकार के सम्पर्कों की संख्या आव्यूह\nटेलीफोन घर जाकर पर्चा द्वारा\n$B=\\left[\\begin{array}{ccc}1000 & 500 & 5000 \\\\ 3000 & 1000 & 10,000\\end{array}\\right] \\rightarrow X$ में व्यक्त है। $X$ तथा $Y$ शहरों में राजनैतिक दल द्वारा व्यय की गई कुल धनराशि ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ पर\n\n$$\n\\begin{aligned}\n\\mathrm{BA} & =\\left[\\begin{array}{c}\n40,000+50,000+250,000 \\\\\n120,000+100,000+500,000\n\\end{array}\\right] \\rightarrow \\mathrm{X} \\\\\n& =\\left[\\begin{array}{c}\n340,000 \\\\\n720,000\n\\end{array}\\right] \\rightarrow \\mathrm{X}\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "अतः दल द्वारा दोनों शहरों में व्यय की गई कुल धनराशि क्रमशः $3,40,000$ पैसे व $7,20,000$ पैसे अर्थात् Rs $3400$ तथा Rs $7200$ हैं।"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.20",
+   "kind": "example",
+   "number": "3.20",
+   "topic": "आव्यूह परिवर्त के गुणधर्मों का सत्यापन",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{lll}3 & \\sqrt{3} & 2 \\\\ 4 & 2 & 0\\end{array}\\right]$ तथा $\\mathrm{B}=\\left[\\begin{array}{rrr}2 & -1 & 2 \\\\ 1 & 2 & 4\\end{array}\\right]$ तो निम्नलिखित को सत्यापित कीजिए:"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left(\\mathrm{A}^{\\prime}\\right)^{\\prime}=\\mathrm{A}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यहाँ\n$$\nA=\\left[\\begin{array}{lll}\n3 & \\sqrt{3} & 2 \\\\\n4 & 2 & 0\n\\end{array}\\right] \\Rightarrow A^{\\prime}=\\left[\\begin{array}{cc}\n3 & 4 \\\\\n\\sqrt{3} & 2 \\\\\n2 & 0\n\\end{array}\\right] \\Rightarrow\\left(A^{\\prime}\\right)^{\\prime}=\\left[\\begin{array}{ccc}\n3 & \\sqrt{3} & 2 \\\\\n4 & 2 & 0\n\\end{array}\\right]=A\n$$\nअत: $\\left(\\mathrm{A}^{\\prime}\\right)^{\\prime}=\\mathrm{A}$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$(\\mathrm{A}+\\mathrm{B})^{\\prime}=\\mathrm{A}^{\\prime}+\\mathrm{B}^{\\prime}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यहाँ\n$$\n\\mathrm{A}=\\left[\\begin{array}{lll}\n3 & \\sqrt{3} & 2 \\\\\n4 & 2 & 0\n\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{rrr}\n2 & -1 & 2 \\\\\n1 & 2 & 4\n\\end{array}\\right] \\Rightarrow \\mathrm{A}+\\mathrm{B}=\\left[\\begin{array}{ccc}\n5 & \\sqrt{3}-1 & 4 \\\\\n5 & 4 & 4\n\\end{array}\\right]\n$$\nअतएव\n$$\n(\\mathrm{A}+\\mathrm{B})^{\\prime}=\\left[\\begin{array}{cc}\n5 & 5 \\\\\n\\sqrt{3}-1 & 4 \\\\\n4 & 4\n\\end{array}\\right]\n$$\nअब\n$$\n\\mathrm{A}^{\\prime}=\\left[\\begin{array}{ll}\n3 & 4 \\\\\n\\sqrt{3} & 2 \\\\\n2 & 0\n\\end{array}\\right], \\mathrm{B}^{\\prime}=\\left[\\begin{array}{rr}\n2 & 1 \\\\\n-1 & 2 \\\\\n2 & 4\n\\end{array}\\right]\n$$\nअतएव\n$$\n\\mathrm{A}^{\\prime}+\\mathrm{B}^{\\prime}=\\left[\\begin{array}{cr}\n5 & 5 \\\\\n\\sqrt{3}-1 & 4 \\\\\n4 & 4\n\\end{array}\\right]\n$$\nअत:\n$$\n(\\mathrm{A}+\\mathrm{B})^{\\prime}=\\mathrm{A}^{\\prime}+\\mathrm{B}^{\\prime}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$(k \\mathrm{~B})^{\\prime}=k \\mathrm{~B}^{\\prime}$, जहाँ $k$ कोई अचर है।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यहाँ\n$$\nk \\mathrm{~B}=k\\left[\\begin{array}{rrr}\n2 & -1 & 2 \\\\\n1 & 2 & 4\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n2 k & -k & 2 k \\\\\nk & 2 k & 4 k\n\\end{array}\\right]\n$$\nतब\n$$\n(k \\mathrm{~B})^{\\prime}=\\left[\\begin{array}{cc}\n2 k & k \\\\\n-k & 2 k \\\\\n2 k & 4 k\n\\end{array}\\right]=k\\left[\\begin{array}{rc}\n2 & 1 \\\\\n-1 & 2 \\\\\n2 & 4\n\\end{array}\\right]=k \\mathrm{~B}^{\\prime}\n$$\nअत:\n$$\n(k \\mathrm{~B})^{\\prime}=k \\mathrm{~B}^{\\prime}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "ex_3.21",
+   "kind": "example",
+   "number": "3.21",
+   "topic": "(AB)' = B'A' का सत्यापन",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{r}-2 \\\\ 4 \\\\ 5\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{lll}1 & 3 & -6\\end{array}\\right]$ है तो सत्यापित कीजिए $(\\mathrm{AB})^{\\prime}=\\mathrm{B}^{\\prime} \\mathrm{A}^{\\prime}$ है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ\n\n$$\n\\mathrm{A}=\\left[\\begin{array}{r}\n-2 \\\\\n4 \\\\\n5\n\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{lll}\n1 & 3 & -6\n\\end{array}\\right]\n$$\n\nइसलिए\n\n$$\nA B=\\left[\\begin{array}{r}\n-2 \\\\\n4 \\\\\n5\n\\end{array}\\right]\\left[\\begin{array}{lll}\n1 & 3 & -6\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-2 & -6 & 12 \\\\\n4 & 12 & -24 \\\\\n5 & 15 & -30\n\\end{array}\\right]\n$$\n\nअत:\n\n$$\n(\\mathrm{AB})^{\\prime}=\\left[\\begin{array}{ccc}\n-2 & 4 & 5 \\\\\n-6 & 12 & 15 \\\\\n12 & -24 & -30\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अब\n\n$$\nA^{\\prime}=\\left[\\begin{array}{lll}\n-2 & 4 & 5\n\\end{array}\\right], B^{\\prime}=\\left[\\begin{array}{r}\n1 \\\\\n3 \\\\\n-6\n\\end{array}\\right]\n$$\n\nइसलिए\n\n$$\n\\mathrm{B}^{\\prime} \\mathrm{A}^{\\prime}=\\left[\\begin{array}{r}\n1 \\\\\n3 \\\\\n-6\n\\end{array}\\right]\\left[\\begin{array}{lll}\n-2 & 4 & 5\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-2 & 4 & 5 \\\\\n-6 & 12 & 15 \\\\\n12 & -24 & -30\n\\end{array}\\right]=(\\mathrm{AB})^{\\prime}\n$$\n\nस्पष्टतया\n\n$$\n(\\mathrm{AB})^{\\prime}=\\mathrm{B}^{\\prime} \\mathrm{A}^{\\prime}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_3.22",
+   "kind": "example",
+   "number": "3.22",
+   "topic": "आव्यूह को सममित व विषम सममित के योग में व्यक्त करना",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "आव्यूह $\\mathrm{B}=\\left[\\begin{array}{rrr}2 & -2 & -4 \\\\ -1 & 3 & 4 \\\\ 1 & -2 & -3\\end{array}\\right]$ को एक सममित आव्यूह तथा एक विषम सममित आव्यूह के योगफल के रूप में व्यक्त कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ $\\mathrm{B}^{\\prime}=\\left[\\begin{array}{rrr}2 & -1 & 1 \\\\ -2 & 3 & -2 \\\\ -4 & 4 & -3\\end{array}\\right]$\n\nमान लीजिए कि\n\n$$\n\\mathrm{P}=\\frac{1}{2}\\left(\\mathrm{~B}+\\mathrm{B}^{\\prime}\\right)=\\frac{1}{2}\\left[\\begin{array}{ccc}\n4 & -3 & -3 \\\\\n-3 & 6 & 2 \\\\\n-3 & 2 & -6\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n2 & \\frac{-3}{2} & \\frac{-3}{2} \\\\\n\\frac{-3}{2} & 3 & 1 \\\\\n\\frac{-3}{2} & 1 & -3\n\\end{array}\\right] \\text { है। }\n$$\n\nअब\n\n$$\nP^{\\prime}=\\left[\\begin{array}{ccc}\n2 & \\frac{-3}{2} & \\frac{-3}{2} \\\\\n\\frac{-3}{2} & 3 & 1 \\\\\n\\frac{-3}{2} & 1 & -3\n\\end{array}\\right]=P\n$$\n\nअत:\n\n$$\n\\mathrm{P}=\\frac{1}{2}\\left(\\mathrm{~B}+\\mathrm{B}^{\\prime}\\right) \\text { एक सममित आव्यूह है। }\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "साथ ही मान लीजिए $\\mathrm{Q}=\\frac{1}{2}\\left(\\mathrm{~B}-\\mathrm{B}^{\\prime}\\right)=\\frac{1}{2}\\left[\\begin{array}{rrr}0 & -1 & -5 \\\\ 1 & 0 & 6 \\\\ 5 & -6 & 0\\end{array}\\right]=\\left[\\begin{array}{ccc}0 & \\frac{-1}{2} & \\frac{-5}{2} \\\\ \\frac{1}{2} & 0 & 3 \\\\ \\frac{5}{2} & -3 & 0\\end{array}\\right]$ है।\n\nतब\n\n$$\nQ^{\\prime}=\\left[\\begin{array}{ccc}\n0 & \\frac{1}{2} & \\frac{5}{3} \\\\\n\\frac{-1}{2} & 0 & -3 \\\\\n\\frac{-5}{2} & 3 & 0\n\\end{array}\\right]=-Q\n$$\n\nअत:\n\n$$\n\\mathrm{Q}=\\frac{1}{2}\\left(\\mathrm{~B}-\\mathrm{B}^{\\prime}\\right) \\text { एक विषम सममित आव्यूह है। }\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अब\n\n$$\n\\mathrm{P}+\\mathrm{Q}=\\left[\\begin{array}{ccc}\n2 & \\frac{-3}{2} & \\frac{-3}{2} \\\\\n\\frac{-3}{2} & 3 & 1 \\\\\n\\frac{-3}{2} & 1 & -3\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n0 & \\frac{-1}{2} & \\frac{-5}{2} \\\\\n\\frac{1}{2} & 0 & 3 \\\\\n\\frac{5}{2} & -3 & 0\n\\end{array}\\right]=\\left[\\begin{array}{rrr}\n2 & -2 & -4 \\\\\n-1 & 3 & 4 \\\\\n1 & -2 & -3\n\\end{array}\\right]=\\mathrm{B}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "अतः आव्यूह B एक सममित आव्यूह तथा एक विषम सममित आव्यूह के योगफल के रूप में व्यक्त किया गया, जहाँ $\\mathrm{P}=\\left[\\begin{array}{ccc}2 & \\frac{-3}{2} & \\frac{-3}{2} \\\\ \\frac{-3}{2} & 3 & 1 \\\\ \\frac{-3}{2} & 1 & -3\\end{array}\\right]$ सममित तथा $\\mathrm{Q}=\\left[\\begin{array}{ccc}0 & \\frac{-1}{2} & \\frac{-5}{2} \\\\ \\frac{1}{2} & 0 & 3 \\\\ \\frac{5}{2} & -3 & 0\\end{array}\\right]$ विषम सममित है।"
+    }
+   ]
+  },
+  {
+   "id": "ex_3.23",
+   "kind": "example",
+   "number": "3.23",
+   "topic": "सममित आव्यूहों के गुणनफल की सममिति की शर्त",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि A तथा B समान कोटि के सममित आव्यूह हैं तो दर्शाइए कि AB सममित है, यदि और केवल यदि A तथा B क्रमविनिमेय है, अर्थात् $\\mathrm{AB}=\\mathrm{BA}$ है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है कि A तथा B दोनों सममित आव्यूह हैं, इसलिए $\\mathrm{A}^{\\prime}=\\mathrm{A}$ तथा $\\mathrm{B}^{\\prime}=\\mathrm{B}$ है। मान लीजिए कि AB सममित है तो $(\\mathrm{AB})^{\\prime}=\\mathrm{AB}$\nकिंतु\n\n$$\n(\\mathrm{AB})^{\\prime}=\\mathrm{B}^{\\prime} \\mathrm{A}^{\\prime}=\\mathrm{BA} \\text { (क्यों?) }\n$$\n\nअत:\n\n$$\n\\mathrm{BA}=\\mathrm{AB}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "विलोमतः, यदि $\\mathrm{AB}=\\mathrm{BA}$ है तो हम सिद्ध करेंगे कि AB सममित है।\nअब\n\n$$\n\\begin{aligned}\n(\\mathrm{AB})^{\\prime} & =\\mathrm{B}^{\\prime} \\mathrm{A}^{\\prime} \\\\\n& =\\mathrm{B} \\mathrm{~A} \\text { (क्योंकि } \\mathrm{A} \\text { तथा } \\mathrm{B} \\text { सममित हैं ) } \\\\\n& =\\mathrm{AB}\n\\end{aligned}\n$$\n\nअत: AB सममित है।"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_3.24",
+   "kind": "example",
+   "number": "3.24",
+   "topic": "आव्यूह समीकरण CD-AB=O से D ज्ञात करना",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "मान लीजिए कि $\\mathrm{A}=\\left[\\begin{array}{rr}2 & -1 \\\\ 3 & 4\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{ll}5 & 2 \\\\ 7 & 4\\end{array}\\right], \\mathrm{C}=\\left[\\begin{array}{ll}2 & 5 \\\\ 3 & 8\\end{array}\\right]$ है। एक ऐसा आव्यूह D ज्ञात कीजिए कि $\\mathrm{CD}-\\mathrm{AB}=\\mathrm{O}$ हो।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "क्योंकि A, B, C सभी कोटि 2, के वर्ग आव्यूह हैं और $\\mathrm{CD}-\\mathrm{AB}$ भली-भाँति परिभाषित है, इसलिए D कोटि $2$ का एक वर्ग आव्यूह होना चाहिए।\nमान लीजिए कि $\\mathrm{D}=\\left[\\begin{array}{ll}a & b \\\\ c & d\\end{array}\\right]$ है। तब $\\mathrm{CD}-\\mathrm{AB}=\\mathrm{O}$ से प्राप्त होता है कि\n\n$$\n\\left[\\begin{array}{ll}\n2 & 5 \\\\\n3 & 8\n\\end{array}\\right]\\left[\\begin{array}{ll}\na & b \\\\\nc & d\n\\end{array}\\right]-\\left[\\begin{array}{rr}\n2 & -1 \\\\\n3 & 4\n\\end{array}\\right]\\left[\\begin{array}{ll}\n5 & 2 \\\\\n7 & 4\n\\end{array}\\right]=\\mathrm{O}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "या\n\n$$\n\\left[\\begin{array}{ll}\n2 a+5 c & 2 b+5 d \\\\\n3 a+8 c & 3 b+8 d\n\\end{array}\\right]-\\left[\\begin{array}{ll}\n3 & 0 \\\\\n43 & 22\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n0 & 0 \\\\\n0 & 0\n\\end{array}\\right]\n$$\n\nया\n\n$$\n\\left[\\begin{array}{cc}\n2 a+5 c-3 & 2 b+5 d \\\\\n3 a+8 c-43 & 3 b+8 d-22\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n0 & 0 \\\\\n0 & 0\n\\end{array}\\right]\n$$\n\nआव्यूहों की समानता से हमें निम्नलिखित समीकरण प्राप्त होते हैं:\n\n$$\n\\begin{aligned}\n& 2 a+5 c-3=0 \\\\\n& 3 a+8 c-43=0 \\\\\n& 2 b+5 d=0\n\\end{aligned}\n$$\n\nतथा\n\n$$\n3 b+8 d-22=0\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "(1) तथा (2), को सरल करने पर $a=-191, c=77$ प्राप्त होता है।\n(3) तथा (4), को सरल करने पर $b=-110, d=44$ प्राप्त होता है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "अत:\n$$\n\\mathrm{D}=\\left[\\begin{array}{ll}\na & b \\\\\nc & d\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n-191 & -110 \\\\\n77 & 44\n\\end{array}\\right]\n$$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.1.1",
+   "kind": "exercise",
+   "number": "3.1.1",
+   "topic": "Matrix order and elements",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "आव्यूह $\\mathrm{A}=\\left[\\begin{array}{cccc}2 & 5 & 19 & -7 \\\\ 35 & -2 & \\frac{5}{2} & 12 \\\\ \\sqrt{3} & 1 & -5 & 17\\end{array}\\right]$, के लिए ज्ञात कीजिए:"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "आव्यूह की कोटि"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "आव्यूह की कोटि = पंक्तियों की संख्या $\\times$ स्तंभों की संख्या $=3 \\times 4$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$3 \\times 4$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "अवयवों की संख्या"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "अवयवों की संख्या $=3 \\times 4=12$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$12$"
+      }
+     ]
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "अवयव $a_{13}, a_{21}, a_{33}, a_{24}, a_{23}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "अवयव $a_{13}=19, a_{21}=35, a_{33}=-5, a_{24}=12, a_{23}=\\frac{5}{2}$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$a_{13}=19, a_{21}=35, a_{33}=-5, a_{24}=12, a_{23}=\\frac{5}{2}$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.1.2",
+   "kind": "exercise",
+   "number": "3.1.2",
+   "topic": "Possible orders from element count",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि किसी आव्यूह में $24$ अवयव हैं तो इसकी संभव कोटियाँ क्या हैं? यदि इसमें $13$ अवयव हों तो कोटियाँ क्या होंगी?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "आव्यूह में कुल अवयव $=24$\nइसलिए, आव्यूह की संभव कोटियाँ निम्नलिखित हैं:\n$1 \\times 24,2 \\times 12,3 \\times 8,4 \\times 6,6 \\times 4,8 \\times 3,12 \\times 2$ और $24 \\times 1$\nयदि इसमें $13$ अवयव हों तो कोटियाँ निम्नलिखित होंगी: $13 \\times 1$ और $1 \\times 13$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_3.1.3",
+   "kind": "exercise",
+   "number": "3.1.3",
+   "topic": "Possible orders from element count",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि किसी आव्यूह में $18$ अवयव हैं तो इसकी संभव कोटियाँ क्या हैं? यदि इसमें $5$ अवयव हों तो क्या होगा?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "आव्यूह में कुल अवयव $=18$\nइसलिए, आव्यूह की संभव कोटियाँ निम्नलिखित हैं:\n$1 \\times 18,2 \\times 9,3 \\times 6,6 \\times 3,9 \\times 2$ और $18 \\times 1$\nयदि इसमें $5$ अवयव हों तो कोटियाँ निम्नलिखित होंगी: $5 \\times 1$ और $1 \\times 5$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_3.1.4",
+   "kind": "exercise",
+   "number": "3.1.4",
+   "topic": "Constructing 2×2 matrix from formula",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "एक $2 \\times 2$ आव्यूह $\\mathrm{A}=\\left[a_{i j}\\right]$ की रचना कीजिए जिसके अवयव निम्नलिखित प्रकार से प्रदत्त हैं"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$a_{i j}=\\frac{(i+j)^{2}}{2}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यहाँ $a_{i j}=\\frac{(i+j)^{2}}{2}$, इसलिए, आव्यूह के अवयव:\n$a_{11}=\\frac{(1+1)^{2}}{2}=2, \\quad a_{12}=\\frac{(1+2)^{2}}{2}=\\frac{9}{2}$,\n$a_{21}=\\frac{(2+1)^{2}}{2}=\\frac{9}{2}, \\quad a_{22}=\\frac{(2+2)^{2}}{2}=8$,\nइसलिए, आव्यूह $=\\left[\\begin{array}{cc}2 & \\frac{9}{2} \\\\ \\frac{9}{2} & 8\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cc}2 & \\frac{9}{2} \\\\ \\frac{9}{2} & 8\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$a_{i j}=\\frac{i}{j}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यहाँ, $a_{i j}=\\frac{i}{j}$, इसलिए, आव्यूह के अवयव:\n$a_{11}=\\frac{1}{1}=1, \\quad a_{12}=\\frac{1}{2}$,\n$a_{21}=\\frac{2}{1}=2, \\quad a_{22}=\\frac{2}{2}=1$\nइसलिए, आव्यूह $=\\left[\\begin{array}{ll}1 & \\frac{1}{2} \\\\ 2 & 1\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ll}1 & \\frac{1}{2} \\\\ 2 & 1\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$a_{i j}=\\frac{(i+2 j)^{2}}{2}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यहाँ $a_{i j}=\\frac{(i+2 j)^{2}}{2}$, इसलिए, आव्यूह के अवयव:\n$a_{11}=\\frac{(1+2)^{2}}{2}=\\frac{9}{2}, \\quad a_{12}=\\frac{(1+4)^{2}}{2}=\\frac{25}{2}$,\n$a_{21}=\\frac{(2+2)^{2}}{2}=8, \\quad a_{22}=\\frac{(2+4)^{2}}{2}=18$\nइसलिए, आव्यूह $=\\left[\\begin{array}{cc}\\frac{9}{2} & \\frac{25}{2} \\\\ 8 & 18\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cc}\\frac{9}{2} & \\frac{25}{2} \\\\ 8 & 18\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.1.5",
+   "kind": "exercise",
+   "number": "3.1.5",
+   "topic": "Constructing 3×4 matrix from formula",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "एक $3 \\times 4$ आव्यूह की रचना कीजिए जिसके अवयव निम्नलिखित प्रकार से प्राप्त होते हैं:"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$a_{i j}=\\frac{1}{2}|-3 i+j|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यहाँ $a_{i j}=\\frac{1}{2}|-3 i+j|$, इसलिए, आव्यूह के अवयव:\n$a_{11}=\\frac{1}{2}|-3+1|=1, \\quad a_{12}=\\frac{1}{2}|-3+2|=\\frac{1}{2}, \\quad a_{13}=\\frac{1}{2}|-3+3|=0, \\quad a_{14}=\\frac{1}{2}|-3+4|=\\frac{1}{2}$,\n$a_{21}=\\frac{1}{2}|-6+1|=\\frac{5}{2}, \\quad a_{22}=\\frac{1}{2}|-6+2|=2, \\quad a_{23}=\\frac{1}{2}|-6+3|=\\frac{3}{2}, \\quad a_{24}=\\frac{1}{2}|-6+4|=1$,\n$a_{31}=\\frac{1}{2}|-9+1|=4, \\quad a_{32}=\\frac{1}{2}|-9+2|=\\frac{7}{2}, \\quad a_{33}=\\frac{1}{2}|-9+3|=3, \\quad a_{34}=\\frac{1}{2}|-9+4|=\\frac{5}{2}$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cccc}1 & \\frac{1}{2} & 0 & \\frac{1}{2} \\\\ \\frac{5}{2} & 2 & \\frac{3}{2} & 1 \\\\ 4 & \\frac{7}{2} & 3 & \\frac{5}{2}\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$a_{i j}=2 i-j$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यहाँ $a_{i j}=2 i-j$, इसलिए, आव्यूह के अवयव:\n$a_{11}=2-1=1, \\quad a_{12}=2-2=0, \\quad a_{13}=2-3=-1, \\quad a_{14}=2-4=-2$,\n$a_{21}=4-1=3, \\quad a_{22}=4-2=2, \\quad a_{23}=4-3=1, \\quad a_{24}=4-4=0$,\n$a_{31}=6-1=5, \\quad a_{32}=6-2=4, \\quad a_{33}=6-3=3, \\quad a_{34}=6-4=2$,\nइसलिए, आव्यूह $=\\left[\\begin{array}{cccc}1 & 0 & -1 & -2 \\\\ 3 & 2 & 1 & 0 \\\\ 5 & 4 & 3 & 2\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cccc}1 & 0 & -1 & -2 \\\\ 3 & 2 & 1 & 0 \\\\ 5 & 4 & 3 & 2\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.1.6",
+   "kind": "exercise",
+   "number": "3.1.6",
+   "topic": "Solving matrix equality equations",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरणों से $x, y$ तथा $z$ के मान ज्ञात कीजिए:"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ll}4 & 3 \\\\ x & 5\\end{array}\\right]=\\left[\\begin{array}{ll}y & z \\\\ 1 & 5\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यदि दो आव्यूह समान हैं तो उनके संगत अवयव भी समान होते हैं, इसलिए $4=y, \\quad 3=z$ तथा $x=1$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$x=1, y=4, z=3$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cc}x+y & 2 \\\\ 5+z & x y\\end{array}\\right]=\\left[\\begin{array}{ll}6 & 2 \\\\ 5 & 8\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यदि दो आव्यूह समान हैं तो उनके संगत अवयव भी समान होते हैं, इसलिए $x+y=6, \\quad 5+z=5$ तथा $x y=8$\nहल करने पर, $x=2, y=4$ तथा $z=0$ या $x=4, y=2$ तथा $z=0$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$x=2, y=4, z=0$ या $x=4, y=2, z=0$"
+      }
+     ]
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{c}x+y+z \\\\ x+z \\\\ y+z\\end{array}\\right]=\\left[\\begin{array}{c}9 \\\\ 5 \\\\ 7\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यदि दो आव्यूह समान हैं तो उनके संगत अवयव भी समान होते हैं, इसलिए $x+y+z=9, \\quad x+z=5$ तथा $y+z=7$\nहल करने पर, $x=2, y=4$ तथा $z=3$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$x=2, y=4, z=3$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.1.7",
+   "kind": "exercise",
+   "number": "3.1.7",
+   "topic": "Solving matrix equality for constants",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "समीकरण $\\left[\\begin{array}{cc}a-b & 2 a+c \\\\ 2 a-b & 3 c+d\\end{array}\\right]=\\left[\\begin{array}{cc}-1 & 5 \\\\ 0 & 13\\end{array}\\right]$ से $a, b, c$ तथा $d$ के मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "concept",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यदि दो आव्यूह समान हैं तो उनके संगत अवयव भी समान होते हैं, इसलिए\n$a-b=-1$\n$2 a-b=0$\n$2 a+c=5$\n$3 c+d=13$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण (1) और (2) को हल करने पर\n$a=1, \\quad b=2$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$a$ का मान समीकरण (3) में रखने पर\n$c=3$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$c$ का मान समीकरण (4) में रखने पर\n$d=4$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$a=1, b=2, c=3, d=4$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.1.8",
+   "kind": "exercise",
+   "number": "3.1.8",
+   "topic": "Condition for square matrix (MCQ)",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$\\mathrm{A}=\\left[a_{i j}\\right]_{m \\times n}$ एक वर्ग आव्यूह है यदि\n(A) $m<n$\n(B) $m>n$\n(C) $m=n$\n(D) इनमें से कोई नहीं"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "एक वर्ग आव्यूह में स्तंभों की संख्या पंक्तियों की संख्या के बराबर होती है, इसलिए विकल्प (C) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(C) $m=n$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.1.9",
+   "kind": "exercise",
+   "number": "3.1.9",
+   "topic": "Equal matrices and unique values (MCQ)",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$x$ तथा $y$ के प्रदत्त किन मानों के लिए आव्यूहों के निम्नलिखित युग्म समान हैं?\n$\\left[\\begin{array}{cc}3 x+7 & 5 \\\\ y+1 & 2-3 x\\end{array}\\right],\\left[\\begin{array}{cc}0 & y-2 \\\\ 8 & 4\\end{array}\\right]$\n(A) $x=\\frac{-1}{3}, y=7$\n(B) ज्ञात करना संभव नहीं है\n(C) $y=7, x=\\frac{-2}{3}$\n(D) $x=\\frac{-1}{3}, y=\\frac{-2}{3}$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ, $\\left[\\begin{array}{cc}3 x+7 & 5 \\\\ y+1 & 2-3 x\\end{array}\\right]=\\left[\\begin{array}{cc}0 & y-2 \\\\ 8 & 4\\end{array}\\right]$\nयदि दो आव्यूह समान हैं तो उनके संगत अवयव भी समान होते हैं,\nइसलिए\n$3 x+7=0, \\quad 5=y-2, \\quad y-1=8$ तथा $2-3 x=4$\nहल करने पर, $y=7, x=-\\frac{7}{2}$ तथा $x=-\\frac{2}{3}$, इस प्रकार $x$ का कोई अद्वितीय मान नहीं है। इसलिए विकल्प (B) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(B) ज्ञात करना संभव नहीं है"
+    }
+   ]
+  },
+  {
+   "id": "q_3.1.10",
+   "kind": "exercise",
+   "number": "3.1.10",
+   "topic": "Counting 0-1 matrices (MCQ)",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$3 \\times 3$ कोटि के ऐसे आव्यूहों की कुल कितनी संख्या होगी जिनकी प्रत्येक प्रविष्टि $0$ या $1$ है?\n(A) $27$\n(B) $18$\n(C) $81$\n(D) $512$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$3 \\times 3$ कोटि के आव्यूह में अवयवों की कुल संख्या $=9$\nयदि प्रत्येक प्रविष्टि $0$ या $1$ है, तो प्रत्येक अवयव के लिए क्रमचय $=2$\nइसलिए अवयवों के लिए कुल क्रमचय $=2^{9}=512$\nइसलिए विकल्प (D) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(D) $512$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.1",
+   "kind": "exercise",
+   "number": "3.2.1",
+   "topic": "Matrix addition, subtraction, multiplication",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "मान लीजिए कि $\\mathrm{A}=\\left[\\begin{array}{ll}2 & 4 \\\\ 3 & 2\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{rr}1 & 3 \\\\ -2 & 5\\end{array}\\right], \\mathrm{C}=\\left[\\begin{array}{rr}-2 & 5 \\\\ 3 & 4\\end{array}\\right]$, तो निम्नलिखित ज्ञात कीजिए:"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\mathrm{A}+\\mathrm{B}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A+B=\\left[\\begin{array}{ll}2 & 4 \\\\ 3 & 2\\end{array}\\right]+\\left[\\begin{array}{cc}1 & 3 \\\\ -2 & 5\\end{array}\\right]=\\left[\\begin{array}{ll}2+1 & 4+3 \\\\ 3-2 & 2+5\\end{array}\\right]=\\left[\\begin{array}{ll}3 & 7 \\\\ 1 & 7\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ll}3 & 7 \\\\ 1 & 7\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\mathrm{A}-\\mathrm{B}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A-B=\\left[\\begin{array}{ll}2 & 4 \\\\ 3 & 2\\end{array}\\right]-\\left[\\begin{array}{cc}1 & 3 \\\\ -2 & 5\\end{array}\\right]=\\left[\\begin{array}{ll}2-1 & 4-3 \\\\ 3+2 & 2-5\\end{array}\\right]=\\left[\\begin{array}{cc}1 & 1 \\\\ 5 & -3\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cc}1 & 1 \\\\ 5 & -3\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "3A - C"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$3 A-C=3\\left[\\begin{array}{ll}2 & 4 \\\\ 3 & 2\\end{array}\\right]-\\left[\\begin{array}{cc}-2 & 5 \\\\ 3 & 4\\end{array}\\right]=\\left[\\begin{array}{cc}6 & 12 \\\\ 9 & 6\\end{array}\\right]-\\left[\\begin{array}{cc}-2 & 5 \\\\ 3 & 4\\end{array}\\right]=\\left[\\begin{array}{cc}6+2 & 12-5 \\\\ 9-3 & 6-4\\end{array}\\right]=\\left[\\begin{array}{ll}8 & 7 \\\\ 6 & 2\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ll}8 & 7 \\\\ 6 & 2\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(iv)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "AB"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A B=\\left[\\begin{array}{ll}2 & 4 \\\\ 3 & 2\\end{array}\\right]\\left[\\begin{array}{cc}1 & 3 \\\\ -2 & 5\\end{array}\\right]=\\left[\\begin{array}{ll}2 \\times 1+4 \\times(-2) & 2 \\times 3+4 \\times 5 \\\\ 3 \\times 1+2 \\times(-2) & 3 \\times 3+2 \\times 5\\end{array}\\right]=\\left[\\begin{array}{ll}-6 & 26 \\\\ -1 & 19\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ll}-6 & 26 \\\\ -1 & 19\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(v)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "BA"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$B A=\\left[\\begin{array}{cc}1 & 3 \\\\ -2 & 5\\end{array}\\right]\\left[\\begin{array}{ll}2 & 4 \\\\ 3 & 2\\end{array}\\right]=\\left[\\begin{array}{cc}1 \\times 2+3 \\times 3 & 1 \\times 4+3 \\times 2 \\\\ -2 \\times 2+5 \\times 3 & -2 \\times 4+5 \\times 2\\end{array}\\right]=\\left[\\begin{array}{cc}11 & 10 \\\\ 11 & 2\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cc}11 & 10 \\\\ 11 & 2\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.2.2",
+   "kind": "exercise",
+   "number": "3.2.2",
+   "topic": "Matrix addition simplification",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित को परिकलित कीजिए:"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cc}a & b \\\\ -b & a\\end{array}\\right]+\\left[\\begin{array}{ll}a & b \\\\ b & a\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$\\left[\\begin{array}{cc}a & b \\\\ -b & a\\end{array}\\right]+\\left[\\begin{array}{ll}a & b \\\\ b & a\\end{array}\\right]=\\left[\\begin{array}{cc}a+a & b+b \\\\ -b+b & a+a\\end{array}\\right]=\\left[\\begin{array}{cc}2 \\mathrm{a} & 2 \\mathrm{~b} \\\\ 0 & 2 \\mathrm{a}\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cc}2a & 2b \\\\ 0 & 2a\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ll}a^{2}+b^{2} & b^{2}+c^{2} \\\\ a^{2}+c^{2} & a^{2}+b^{2}\\end{array}\\right]+\\left[\\begin{array}{cc}2 a b & 2 b c \\\\ -2 a c & -2 a b\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$\\left[\\begin{array}{ll}a^{2}+b^{2} & b^{2}+c^{2} \\\\ a^{2}+c^{2} & a^{2}+b^{2}\\end{array}\\right]+\\left[\\begin{array}{cc}2 a b & 2 b c \\\\ -2 a c & -2 a b\\end{array}\\right]=\\left[\\begin{array}{ll}a^{2}+b^{2}+2 a b & b^{2}+c^{2}+2 b c \\\\ a^{2}+c^{2}-2 a c & a^{2}+b^{2}-2 a b\\end{array}\\right]=\\left[\\begin{array}{ll}(a+b)^{2} & (b+c)^{2} \\\\ (a-c)^{2} & (a-b)^{2}\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ll}(a+b)^{2} & (b+c)^{2} \\\\ (a-c)^{2} & (a-b)^{2}\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{rrr}-1 & 4 & -6 \\\\ 8 & 5 & 16 \\\\ 2 & 8 & 5\\end{array}\\right]+\\left[\\begin{array}{ccc}12 & 7 & 6 \\\\ 8 & 0 & 5 \\\\ 3 & 2 & 4\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$\\left[\\begin{array}{ccc}-1 & 4 & -6 \\\\ 8 & 5 & 16 \\\\ 2 & 8 & 5\\end{array}\\right]+\\left[\\begin{array}{ccc}12 & 7 & 6 \\\\ 8 & 0 & 5 \\\\ 3 & 2 & 4\\end{array}\\right]=\\left[\\begin{array}{ccc}-1+12 & 4+7 & -6+6 \\\\ 8+8 & 5+0 & 16+5 \\\\ 2+3 & 8+2 & 5+4\\end{array}\\right]=\\left[\\begin{array}{ccc}11 & 11 & 0 \\\\ 16 & 5 & 21 \\\\ 5 & 10 & 9\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ccc}11 & 11 & 0 \\\\ 16 & 5 & 21 \\\\ 5 & 10 & 9\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(iv)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cc}\\cos ^{2} x & \\sin ^{2} x \\\\ \\sin ^{2} x & \\cos ^{2} x\\end{array}\\right]+\\left[\\begin{array}{cc}\\sin ^{2} x & \\cos ^{2} x \\\\ \\cos ^{2} x & \\sin ^{2} x\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$\\left[\\begin{array}{cc}\\cos ^{2} x & \\sin ^{2} x \\\\ \\sin ^{2} x & \\cos ^{2} x\\end{array}\\right]+\\left[\\begin{array}{cc}\\sin ^{2} x & \\cos ^{2} x \\\\ \\cos ^{2} x & \\sin ^{2} x\\end{array}\\right]=\\left[\\begin{array}{cc}\\cos ^{2} x+\\sin ^{2} x & \\sin ^{2} x+\\cos ^{2} x \\\\ \\sin ^{2} x+\\cos ^{2} x & \\cos ^{2} x+\\sin ^{2} x\\end{array}\\right]=\\left[\\begin{array}{ll}1 & 1 \\\\ 1 & 1\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ll}1 & 1 \\\\ 1 & 1\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.2.3",
+   "kind": "exercise",
+   "number": "3.2.3",
+   "topic": "Matrix multiplication",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निदर्शित गुणनफल परिकलित कीजिए:"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{rr}a & b \\\\ -b & a\\end{array}\\right]\\left[\\begin{array}{rr}a & -b \\\\ b & a\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$\\left[\\begin{array}{cc}a & b \\\\ -b & a\\end{array}\\right]\\left[\\begin{array}{cc}a & -b \\\\ b & a\\end{array}\\right]=\\left[\\begin{array}{cc}a \\times a+b \\times b & a \\times(-b)+b \\times a \\\\ -b \\times a+a \\times b & -b \\times(-b)+a \\times a\\end{array}\\right]=\\left[\\begin{array}{cc}a^{2}+b^{2} & 0 \\\\ 0 & b^{2}+a^{2}\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cc}a^{2}+b^{2} & 0 \\\\ 0 & a^{2}+b^{2}\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right]\\left[\\begin{array}{lll}2 & 3 & 4\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$\\left[\\begin{array}{l}1 \\\\ 2 \\\\ 3\\end{array}\\right]\\left[\\begin{array}{lll}2 & 3 & 4\\end{array}\\right]=\\left[\\begin{array}{lll}1 \\times 2 & 1 \\times 3 & 1 \\times 4 \\\\ 2 \\times 2 & 2 \\times 3 & 2 \\times 4 \\\\ 3 \\times 2 & 3 \\times 3 & 3 \\times 4\\end{array}\\right]=\\left[\\begin{array}{ccc}2 & 3 & 4 \\\\ 4 & 6 & 8 \\\\ 6 & 9 & 12\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ccc}2 & 3 & 4 \\\\ 4 & 6 & 8 \\\\ 6 & 9 & 12\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{rr}1 & -2 \\\\ 2 & 3\\end{array}\\right]\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 2 & 3 & 1\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\left[\\begin{array}{cc}\n1 & -2 \\\\\n2 & 3\n\\end{array}\\right]\\left[\\begin{array}{lll}\n1 & 2 & 3 \\\\\n2 & 3 & 1\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n1 \\times 1+(-2) \\times 2 & 1 \\times 2+(-2) \\times 3 & 1 \\times 3+(-2) \\times 1 \\\\\n2 \\times 1+3 \\times 2 & 2 \\times 2+3 \\times 3 & 2 \\times 3+3 \\times 1\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-3 & -4 & 1 \\\\\n8 & 13 & 9\n\\end{array}\\right]\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ccc}-3 & -4 & 1 \\\\ 8 & 13 & 9\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(iv)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{lll}2 & 3 & 4 \\\\ 3 & 4 & 5 \\\\ 4 & 5 & 6\\end{array}\\right]\\left[\\begin{array}{rrr}1 & -3 & 5 \\\\ 0 & 2 & 4 \\\\ 3 & 0 & 5\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\left[\\begin{array}{lll}\n2 & 3 & 4 \\\\\n3 & 4 & 5 \\\\\n4 & 5 & 6\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n1 & -3 & 5 \\\\\n0 & 2 & 4 \\\\\n3 & 0 & 5\n\\end{array}\\right]\n$$\n$$\n\\begin{aligned}\n& =\\left[\\begin{array}{lll}\n2 \\times 1+3 \\times 0+4 \\times 3 & 2 \\times(-3)+3 \\times 2+4 \\times 0 & 2 \\times 5+3 \\times 4+4 \\times 5 \\\\\n3 \\times 1+4 \\times 0+5 \\times 3 & 3 \\times(-3)+4 \\times 2+5 \\times 0 & 3 \\times 5+4 \\times 4+5 \\times 5 \\\\\n4 \\times 1+5 \\times 0+6 \\times 3 & 4 \\times(-3)+5 \\times 2+6 \\times 0 & 4 \\times 5+5 \\times 4+6 \\times 5\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n14 & 0 & 42 \\\\\n18 & -1 & 56 \\\\\n22 & -2 & 70\n\\end{array}\\right]\n\\end{aligned}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ccc}14 & 0 & 42 \\\\ 18 & -1 & 56 \\\\ 22 & -2 & 70\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(v)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{rr}2 & 1 \\\\ 3 & 2 \\\\ -1 & 1\\end{array}\\right]\\left[\\begin{array}{rrr}1 & 0 & 1 \\\\ -1 & 2 & 1\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\left[\\begin{array}{cc}\n2 & 1 \\\\\n3 & 2 \\\\\n-1 & 1\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n1 & 0 & 1 \\\\\n-1 & 2 & 1\n\\end{array}\\right]\n$$\n$$\n\\begin{aligned}\n& =\\left[\\begin{array}{ccc}\n2 \\times 1+1 \\times(-1) & 2 \\times 0+1 \\times 2 & 2 \\times 1+1 \\times 1 \\\\\n3 \\times 1+2 \\times(-1) & 3 \\times 0+2 \\times 2 & 3 \\times 1+2 \\times 1 \\\\\n-1 \\times 1+1 \\times(-1) & -1 \\times 0+1 \\times 2 & -1 \\times 1+1 \\times 1\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n1 & 2 & 3 \\\\\n1 & 4 & 5 \\\\\n-2 & 2 & 0\n\\end{array}\\right]\n\\end{aligned}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{ccc}1 & 2 & 3 \\\\ 1 & 4 & 5 \\\\ -2 & 2 & 0\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(vi)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{rrr}3 & -1 & 3 \\\\ -1 & 0 & 2\\end{array}\\right]\\left[\\begin{array}{rr}2 & -3 \\\\ 1 & 0 \\\\ 3 & 1\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\left[\\begin{array}{ccc}\n3 & -1 & 3 \\\\\n-1 & 0 & 2\n\\end{array}\\right]\\left[\\begin{array}{cc}\n2 & -3 \\\\\n1 & 0 \\\\\n3 & 1\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n3 \\times 2+(-1) \\times 1+3 \\times 3 & 3 \\times(-3)+(-1) \\times 0+3 \\times 1 \\\\\n-1 \\times 2+0 \\times 1+2 \\times 3 & -1 \\times(-3)+0 \\times 0+2 \\times 1\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n14 & -6 \\\\\n4 & 5\n\\end{array}\\right]\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cc}14 & -6 \\\\ 4 & 5\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.2.4",
+   "kind": "exercise",
+   "number": "3.2.4",
+   "topic": "Matrix operations verification",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{rrr}1 & 2 & -3 \\\\ 5 & 0 & 2 \\\\ 1 & -1 & 1\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{rrr}3 & -1 & 2 \\\\ 4 & 2 & 5 \\\\ 2 & 0 & 3\\end{array}\\right]$ तथा $\\mathrm{C}=\\left[\\begin{array}{rrr}4 & 1 & 2 \\\\ 0 & 3 & 2 \\\\ 1 & -2 & 3\\end{array}\\right]$, तो $(\\mathrm{A}+\\mathrm{B})$ तथा $(\\mathrm{B}-\\mathrm{C})$ परिकलित कीजिए। साथ ही सत्यापित कीजिए कि $\\mathrm{A}+(\\mathrm{B}-\\mathrm{C})=(\\mathrm{A}+\\mathrm{B})-\\mathrm{C}$."
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& A+B=\\left[\\begin{array}{ccc}\n1 & 2 & -3 \\\\\n5 & 0 & 2 \\\\\n1 & -1 & 1\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n3 & -1 & 2 \\\\\n4 & 2 & 5 \\\\\n2 & 0 & 3\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n1+3 & 2-1 & -3+2 \\\\\n5+4 & 0+2 & 2+5 \\\\\n1+2 & -1+0 & 1+3\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n4 & 1 & -1 \\\\\n9 & 2 & 7 \\\\\n3 & -1 & 4\n\\end{array}\\right] \\\\\n& B-C=\\left[\\begin{array}{ccc}\n3 & -1 & 2 \\\\\n4 & 2 & 5 \\\\\n2 & 0 & 3\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n4 & 1 & 2 \\\\\n0 & 3 & 2 \\\\\n1 & -2 & 3\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n3-4 & -1-1 & 2-2 \\\\\n4-0 & 2-3 & 5-2 \\\\\n2-1 & 0-(-2) & 3-3\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-1 & -2 & 0 \\\\\n4 & -1 & 3 \\\\\n1 & 2 & 0\n\\end{array}\\right] \\\\\n& \\text { LHS }=A+(B-C)=\\left[\\begin{array}{ccc}\n1 & 2 & -3 \\\\\n5 & 0 & 2 \\\\\n1 & -1 & 1\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n-1 & -2 & 0 \\\\\n4 & -1 & 3 \\\\\n1 & 2 & 0\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n0 & 0 & -3 \\\\\n9 & -1 & 5 \\\\\n2 & 1 & 1\n\\end{array}\\right] \\\\\n& \\text { RHS }=(A+B)-C=\\left[\\begin{array}{ccc}\n4 & 1 & -1 \\\\\n9 & 2 & 7 \\\\\n3 & -1 & 4\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n4 & 1 & 2 \\\\\n0 & 3 & 2 \\\\\n1 & -2 & 3\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n0 & 0 & -3 \\\\\n9 & -1 & 5 \\\\\n2 & 1 & 1\n\\end{array}\\right]\n\\end{aligned}\n$$\nइस प्रकार, $A+(B-C)=(A+B)-C=\\left[\\begin{array}{ccc}0 & 0 & -3 \\\\ 9 & -1 & 5 \\\\ 2 & 1 & 1\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A+B=\\left[\\begin{array}{ccc}4 & 1 & -1 \\\\ 9 & 2 & 7 \\\\ 3 & -1 & 4\\end{array}\\right]$, $B-C=\\left[\\begin{array}{ccc}-1 & -2 & 0 \\\\ 4 & -1 & 3 \\\\ 1 & 2 & 0\\end{array}\\right]$, दोनों पक्ष $\\left[\\begin{array}{ccc}0 & 0 & -3 \\\\ 9 & -1 & 5 \\\\ 2 & 1 & 1\\end{array}\\right]$ के बराबर सत्यापित"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.5",
+   "kind": "exercise",
+   "number": "3.2.5",
+   "topic": "Scalar multiplication of matrices",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{ccc}\\frac{2}{3} & 1 & \\frac{5}{3} \\\\ \\frac{1}{3} & \\frac{2}{3} & \\frac{4}{3} \\\\ \\frac{7}{3} & 2 & \\frac{2}{3}\\end{array}\\right]$ तथा $\\mathrm{B}=\\left[\\begin{array}{ccc}\\frac{2}{5} & \\frac{3}{5} & 1 \\\\ \\frac{1}{5} & \\frac{2}{5} & \\frac{4}{5} \\\\ \\frac{7}{5} & \\frac{6}{5} & \\frac{2}{5}\\end{array}\\right]$, तो $3 \\mathrm{~A}-5 \\mathrm{~B}$ परिकलित कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& 3 A-5 B=3\\left[\\begin{array}{ccc}\n\\frac{2}{3} & 1 & \\frac{5}{3} \\\\\n\\frac{1}{3} & \\frac{2}{3} & \\frac{4}{3} \\\\\n\\frac{7}{3} & 2 & \\frac{2}{3}\n\\end{array}\\right]-5\\left[\\begin{array}{ccc}\n\\frac{2}{5} & \\frac{3}{5} & 1 \\\\\n\\frac{1}{5} & \\frac{2}{5} & \\frac{4}{5} \\\\\n\\frac{7}{5} & \\frac{6}{5} & \\frac{2}{5}\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{lll}\n2 & 3 & 5 \\\\\n1 & 2 & 4 \\\\\n7 & 6 & 2\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n2 & 3 & 5 \\\\\n1 & 2 & 4 \\\\\n7 & 6 & 2\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{lll}\n2-2 & 3-3 & 5-5 \\\\\n1-1 & 2-2 & 4-4 \\\\\n7-7 & 6-6 & 2-2\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]=0\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "शून्य आव्यूह $\\left[\\begin{array}{lll}0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.6",
+   "kind": "exercise",
+   "number": "3.2.6",
+   "topic": "Simplify trigonometric matrix expression",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "सरल कीजिए, $\\cos \\theta\\left[\\begin{array}{rr}\\cos \\theta & \\sin \\theta \\\\ -\\sin \\theta & \\cos \\theta\\end{array}\\right]+\\sin \\theta\\left[\\begin{array}{rr}\\sin \\theta & -\\cos \\theta \\\\ \\cos \\theta & \\sin \\theta\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& \\cos \\theta\\left[\\begin{array}{cc}\n\\cos \\theta & \\sin \\theta \\\\\n-\\sin \\theta & \\cos \\theta\n\\end{array}\\right]+\\sin \\theta\\left[\\begin{array}{cc}\n\\sin \\theta & -\\cos \\theta \\\\\n\\cos \\theta & \\sin \\theta\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n\\cos ^{2} \\theta & \\sin \\theta \\cos \\theta \\\\\n-\\sin \\theta \\cos \\theta & \\cos ^{2} \\theta\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n\\sin ^{2} \\theta & -\\sin \\theta \\cos \\theta \\\\\n\\sin \\theta \\cos \\theta & \\sin ^{2} \\theta\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n\\cos ^{2} \\theta+\\sin ^{2} \\theta & \\sin \\theta \\cos \\theta-\\sin \\theta \\cos \\theta \\\\\n-\\sin \\theta \\cos \\theta+\\sin \\theta \\cos \\theta & \\cos ^{2} \\theta+\\sin ^{2} \\theta\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]=I\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$I=\\left[\\begin{array}{ll}1 & 0 \\\\ 0 & 1\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.7",
+   "kind": "exercise",
+   "number": "3.2.7",
+   "topic": "Solve simultaneous matrix equations",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$X$ तथा $Y$ ज्ञात कीजिए यदि"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\mathrm{X}+\\mathrm{Y}=\\left[\\begin{array}{ll}7 & 0 \\\\ 2 & 5\\end{array}\\right]$ तथा $\\mathrm{X}-\\mathrm{Y}=\\left[\\begin{array}{ll}3 & 0 \\\\ 0 & 3\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "समीकरण (1) और (2) को जोड़ने पर\n$$\n\\begin{aligned}\n& 2 X=\\left[\\begin{array}{ll}\n7 & 0 \\\\\n2 & 5\n\\end{array}\\right]+\\left[\\begin{array}{ll}\n3 & 0 \\\\\n0 & 3\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n10 & 0 \\\\\n2 & 8\n\\end{array}\\right] \\\\\n& \\Rightarrow X=\\left[\\begin{array}{ll}\n5 & 0 \\\\\n1 & 4\n\\end{array}\\right]\n\\end{aligned}\n$$\nसमीकरण (1) में X का मान रखने पर\n$$\n\\begin{aligned}\n& {\\left[\\begin{array}{ll}\n5 & 0 \\\\\n1 & 4\n\\end{array}\\right]+Y=\\left[\\begin{array}{ll}\n7 & 0 \\\\\n2 & 5\n\\end{array}\\right]} \\\\\n& \\Rightarrow Y=\\left[\\begin{array}{ll}\n7 & 0 \\\\\n2 & 5\n\\end{array}\\right]-\\left[\\begin{array}{ll}\n5 & 0 \\\\\n1 & 4\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n2 & 0 \\\\\n1 & 1\n\\end{array}\\right]\n\\end{aligned}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$X=\\left[\\begin{array}{ll}5 & 0 \\\\ 1 & 4\\end{array}\\right]$, $Y=\\left[\\begin{array}{ll}2 & 0 \\\\ 1 & 1\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$2 \\mathrm{X}+3 \\mathrm{Y}=\\left[\\begin{array}{ll}2 & 3 \\\\ 4 & 0\\end{array}\\right]$ तथा $3 \\mathrm{X}+2 \\mathrm{Y}=\\left[\\begin{array}{rr}2 & -2 \\\\ -1 & 5\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "समीकरण (1) को 3 से और (2) को 2 से गुणा करके घटाने पर\n$$\n\\begin{aligned}\n& 3(2 X+3 Y)-2(3 X+2 Y)=3\\left[\\begin{array}{ll}\n2 & 3 \\\\\n4 & 0\n\\end{array}\\right]-2\\left[\\begin{array}{cc}\n2 & -2 \\\\\n-1 & 5\n\\end{array}\\right] \\\\\n& \\Rightarrow 6 X+9 Y-6 X-4 Y=\\left[\\begin{array}{cc}\n6 & 9 \\\\\n12 & 0\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n4 & -4 \\\\\n-2 & 10\n\\end{array}\\right] \\\\\n& \\Rightarrow 5 Y=\\left[\\begin{array}{cc}\n2 & 13 \\\\\n14 & -10\n\\end{array}\\right] \\Rightarrow Y=\\left[\\begin{array}{cc}\n\\frac{2}{5} & \\frac{13}{5} \\\\\n\\frac{14}{5} & -2\n\\end{array}\\right]\n\\end{aligned}\n$$\nसमीकरण (1) में Y का मान रखने पर\n$$\n\\begin{aligned}\n& 2 X+\\left[\\begin{array}{cc}\n\\frac{2}{5} & \\frac{13}{5} \\\\\n\\frac{14}{5} & -2\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n2 & 3 \\\\\n4 & 0\n\\end{array}\\right] \\\\\n& \\Rightarrow 2 X=\\left[\\begin{array}{ll}\n2 & 3 \\\\\n4 & 0\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n\\frac{6}{5} & \\frac{39}{5} \\\\\n\\frac{42}{5} & -6\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n2-\\frac{6}{5} & 3-\\frac{39}{5} \\\\\n4-\\frac{42}{5} & 0-(-6)\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n\\frac{4}{5} & -\\frac{24}{5} \\\\\n-\\frac{22}{5} & 6\n\\end{array}\\right] \\\\\n& \\Rightarrow X=\\left[\\begin{array}{cc}\n\\frac{2}{5} & -\\frac{12}{5} \\\\\n-\\frac{11}{5} & 3\n\\end{array}\\right]\n\\end{aligned}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$X=\\left[\\begin{array}{cc}\\frac{2}{5} & -\\frac{12}{5} \\\\ -\\frac{11}{5} & 3\\end{array}\\right]$, $Y=\\left[\\begin{array}{cc}\\frac{2}{5} & \\frac{13}{5} \\\\ \\frac{14}{5} & -2\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.2.8",
+   "kind": "exercise",
+   "number": "3.2.8",
+   "topic": "Solve for unknown matrix X",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$X$ तथा $Y$ ज्ञात कीजिए यदि $\\mathrm{Y}=\\left[\\begin{array}{ll}3 & 2 \\\\ 1 & 4\\end{array}\\right]$ तथा $2 \\mathrm{X}+\\mathrm{Y}=\\left[\\begin{array}{rr}1 & 0 \\\\ -3 & 2\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& 2 X+Y=\\left[\\begin{array}{cc}\n1 & 0 \\\\\n-3 & 2\n\\end{array}\\right] \\\\\n& \\Rightarrow 2 X+\\left[\\begin{array}{ll}\n3 & 2 \\\\\n1 & 4\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n1 & 0 \\\\\n-3 & 2\n\\end{array}\\right] \\\\\n& \\Rightarrow 2 X=\\left[\\begin{array}{cc}\n1 & 0 \\\\\n-3 & 2\n\\end{array}\\right]-\\left[\\begin{array}{ll}\n3 & 2 \\\\\n1 & 4\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n-2 & -2 \\\\\n-4 & -2\n\\end{array}\\right] \\\\\n& \\Rightarrow X=\\left[\\begin{array}{cc}\n-1 & -1 \\\\\n-2 & -1\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$X=\\left[\\begin{array}{cc}-1 & -1 \\\\ -2 & -1\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.9",
+   "kind": "exercise",
+   "number": "3.2.9",
+   "topic": "Solve for unknowns using matrix equality",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$x$ तथा $y$ ज्ञात कीजिए यदि $2\\left[\\begin{array}{ll}1 & 3 \\\\ 0 & x\\end{array}\\right]+\\left[\\begin{array}{ll}y & 0 \\\\ 1 & 2\\end{array}\\right]=\\left[\\begin{array}{ll}5 & 6 \\\\ 1 & 8\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& 2\\left[\\begin{array}{ll}\n1 & 3 \\\\\n0 & x\n\\end{array}\\right]+\\left[\\begin{array}{ll}\ny & 0 \\\\\n1 & 2\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n5 & 6 \\\\\n1 & 8\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{ll}\n2 & 6 \\\\\n0 & 2 x\n\\end{array}\\right]+\\left[\\begin{array}{ll}\ny & 0 \\\\\n1 & 2\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n5 & 6 \\\\\n1 & 8\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{ll}\n2+y & 6+0 \\\\\n0+1 & 2 x+2\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n5 & 6 \\\\\n1 & 8\n\\end{array}\\right]\n\\end{aligned}\n$$\nयदि दो आव्यूह समान हैं तो उनके संगत अवयव भी समान होते हैं, इसलिए\n$$\n\\begin{aligned}\n& 2+y=5 \\text { तथा } 2 x+2=8 \\\\\n& \\Rightarrow y=3 \\text { तथा } x=3\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=3$, $y=3$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.10",
+   "kind": "exercise",
+   "number": "3.2.10",
+   "topic": "Solve matrix equation for x, y, z, t",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "प्रदत्त समीकरण को $x, y, z$ तथा $t$ के लिए हल कीजिए यदि\n$$\n2\\left[\\begin{array}{ll}\nx & z \\\\\ny & t\n\\end{array}\\right]+3\\left[\\begin{array}{rr}\n1 & -1 \\\\\n0 & 2\n\\end{array}\\right]=3\\left[\\begin{array}{ll}\n3 & 5 \\\\\n4 & 6\n\\end{array}\\right]\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& 2\\left[\\begin{array}{ll}\nx & z \\\\\ny & t\n\\end{array}\\right]+3\\left[\\begin{array}{cc}\n1 & -1 \\\\\n0 & 2\n\\end{array}\\right]=3\\left[\\begin{array}{ll}\n3 & 5 \\\\\n4 & 6\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{ll}\n2 x & 2 z \\\\\n2 y & 2 t\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n3 & -3 \\\\\n0 & 6\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n9 & 15 \\\\\n12 & 18\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{ll}\n2 x+3 & 2 z-3 \\\\\n2 y+0 & 2 t+6\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n9 & 15 \\\\\n12 & 18\n\\end{array}\\right]\n\\end{aligned}\n$$\nयदि दो आव्यूह समान हैं तो उनके संगत अवयव भी समान होते हैं, इसलिए $2 x+3=9,2 z-3=15,2 y=12$ तथा $2 t+6=18$\n$\\Rightarrow x=3, z=9, y=6$ तथा $t=6$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=3$, $y=6$, $z=9$, $t=6$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.11",
+   "kind": "exercise",
+   "number": "3.2.11",
+   "topic": "Solve for x and y using column matrices",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $x\\left[\\begin{array}{l}2 \\\\ 3\\end{array}\\right]+y\\left[\\begin{array}{r}-1 \\\\ 1\\end{array}\\right]=\\left[\\begin{array}{l}10 \\\\ 5\\end{array}\\right]$ है, तो $x$ तथा $y$ के मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& x\\left[\\begin{array}{l}\n2 \\\\\n3\n\\end{array}\\right]+y\\left[\\begin{array}{c}\n-1 \\\\\n1\n\\end{array}\\right]=\\left[\\begin{array}{c}\n10 \\\\\n5\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{l}\n2 x \\\\\n3 x\n\\end{array}\\right]+\\left[\\begin{array}{c}\n-\\mathrm{y} \\\\\ny\n\\end{array}\\right]=\\left[\\begin{array}{c}\n10 \\\\\n5\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{l}\n2 x-y \\\\\n3 x+y\n\\end{array}\\right]=\\left[\\begin{array}{c}\n10 \\\\\n5\n\\end{array}\\right]\n\\end{aligned}\n$$\nयदि दो आव्यूह समान हैं तो उनके संगत अवयव भी समान होते हैं, इसलिए\n$2 x-y=10$ तथा $3 x+y=5$\nदोनों समीकरणों को जोड़ने पर\n$$\n\\begin{aligned}\n& 5 x=15 \\\\\n& \\Rightarrow x=3\n\\end{aligned}\n$$\n$x$ का मान $3 x+y=5$ में रखने पर\n$$\n3(3)+y=5 \\quad \\Rightarrow y=-4\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=3$, $y=-4$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.12",
+   "kind": "exercise",
+   "number": "3.2.12",
+   "topic": "Matrix equality — solve for x, y, z, w",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $3\\left[\\begin{array}{cc}x & y \\\\ z & w\\end{array}\\right]=\\left[\\begin{array}{cc}x & 6 \\\\ -1 & 2 w\\end{array}\\right]+\\left[\\begin{array}{cc}4 & x+y \\\\ z+w & 3\\end{array}\\right]$ है तो $x, y, z$ तथा $w$ के मानों को ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& 3\\left[\\begin{array}{cc}\nx & y \\\\\nz & w\n\\end{array}\\right]=\\left[\\begin{array}{cc}\nx & 6 \\\\\n-1 & 2 w\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n4 & x+y \\\\\nz+w & 3\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{cc}\n3 x & 3 \\mathrm{y} \\\\\n3 \\mathrm{z} & 3 w\n\\end{array}\\right]=\\left[\\begin{array}{cc}\nx+4 & 6+x+y \\\\\n-1+z+w & 2 w+3\n\\end{array}\\right]\n\\end{aligned}\n$$\nयदि दो आव्यूह समान हैं तो उनके संगत अवयव भी समान होते हैं, इसलिए\n$3 x=x+4,3 y=6+x+y, 3 z=-1+z+w$ तथा $3 w=2 w+3$\n$\\Rightarrow x=2, \\quad y=4, \\quad z=1 \\quad$ तथा $\\quad w=3$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=2,\\ y=4,\\ z=1,\\ w=3$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.13",
+   "kind": "exercise",
+   "number": "3.2.13",
+   "topic": "Proving F(x)F(y) = F(x+y)",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{F}(x)=\\left[\\begin{array}{ccc}\\cos x & -\\sin x & 0 \\\\ \\sin x & \\cos x & 0 \\\\ 0 & 0 & 1\\end{array}\\right]$ है तो सिद्ध कीजिए कि $\\mathrm{F}(x) \\mathrm{F}(y)=\\mathrm{F}(x+y)$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "LHS $=F(x) F(y)$\n\n$$\n\\begin{aligned}\n& =\\left[\\begin{array}{ccc}\n\\cos x & -\\sin x & 0 \\\\\n\\sin x & \\cos x & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n\\cos y & -\\sin y & 0 \\\\\n\\sin y & \\cos y & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n\\cos x \\cos y-\\sin x \\sin y+0 & -\\cos x \\sin y-\\sin x \\cos y+0 & 0+0+0 \\\\\n\\sin x \\cos y+\\cos x \\sin y+0 & -\\sin x \\sin y+\\cos x \\cos y+0 & 0+0+0 \\\\\n0+0+0 & 0+0+0+ & 0+0+1\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n\\cos (x+y) & -\\sin (x+y) & 0 \\\\\n\\sin (x+y) & \\cos (x+y) & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right]=F(x+y)=\\text { RHS }\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_3.2.14",
+   "kind": "exercise",
+   "number": "3.2.14",
+   "topic": "Showing AB ≠ BA (non-commutativity)",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "दर्शाइए कि"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{cc}5 & -1 \\\\ 6 & 7\\end{array}\\right]\\left[\\begin{array}{ll}2 & 1 \\\\ 3 & 4\\end{array}\\right] \\neq\\left[\\begin{array}{ll}2 & 1 \\\\ 3 & 4\\end{array}\\right]\\left[\\begin{array}{cc}5 & -1 \\\\ 6 & 7\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "LHS $=\\left[\\begin{array}{cc}5 & -1 \\\\ 6 & 7\\end{array}\\right]\\left[\\begin{array}{ll}2 & 1 \\\\ 3 & 4\\end{array}\\right]$\n$$\n=\\left[\\begin{array}{cc}\n5 \\times 2+(-1) \\times 3 & 5 \\times 1+(-1) \\times 4 \\\\\n6 \\times 2+7 \\times 3 & 6 \\times 1+7 \\times 4\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n7 & 1 \\\\\n33 & 34\n\\end{array}\\right]\n$$\n$$\n\\begin{aligned}\n& \\text { RHS }=\\left[\\begin{array}{ll}\n2 & 1 \\\\\n3 & 4\n\\end{array}\\right]\\left[\\begin{array}{cc}\n5 & -1 \\\\\n6 & 7\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ll}\n2 \\times 5+1 \\times 6 & 2 \\times(-1)+1 \\times 7 \\\\\n3 \\times 5+4 \\times 6 & 3 \\times(-1)+4 \\times 7\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n16 & 5 \\\\\n39 & 25\n\\end{array}\\right]\n\\end{aligned}\n$$\nइसलिए, $\\quad\\left[\\begin{array}{cc}5 & -1 \\\\ 6 & 7\\end{array}\\right]\\left[\\begin{array}{ll}2 & 1 \\\\ 3 & 4\\end{array}\\right] \\neq\\left[\\begin{array}{ll}2 & 1 \\\\ 3 & 4\\end{array}\\right]\\left[\\begin{array}{cc}5 & -1 \\\\ 6 & 7\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 0 & 1 & 0 \\\\ 1 & 1 & 0\\end{array}\\right]\\left[\\begin{array}{ccc}-1 & 1 & 0 \\\\ 0 & -1 & 1 \\\\ 2 & 3 & 4\\end{array}\\right] \\neq\\left[\\begin{array}{ccc}-1 & 1 & 0 \\\\ 0 & -1 & 1 \\\\ 2 & 3 & 4\\end{array}\\right]\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 0 & 1 & 0 \\\\ 1 & 1 & 0\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$L H S=\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 0 & 1 & 0 \\\\ 1 & 1 & 0\\end{array}\\right]\\left[\\begin{array}{ccc}-1 & 1 & 0 \\\\ 0 & -1 & 1 \\\\ 2 & 3 & 4\\end{array}\\right]$\n$$\n\\begin{aligned}\n& =\\left[\\begin{array}{ccc}\n1 \\times(-1)+2 \\times 0+3 \\times 2 & 1 \\times 1+2 \\times(-1)+3 \\times 3 & 1 \\times 0+2 \\times 1+3 \\times 4 \\\\\n0 \\times(-1)+1 \\times 0+0 \\times 2 & 0 \\times 1+1 \\times(-1)+0 \\times 3 & 0 \\times 0+1 \\times 1+0 \\times 4 \\\\\n1 \\times(-1)+1 \\times 0+0 \\times 2 & 1 \\times 1+1 \\times(-1)+0 \\times 3 & 1 \\times 0+1 \\times 1+0 \\times 4\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n5 & 8 & 14 \\\\\n0 & -1 & 1 \\\\\n-1 & 0 & 1\n\\end{array}\\right]\n\\end{aligned}\n$$\n$$\n\\begin{aligned}\n& \\text { RHS }=\\left[\\begin{array}{ccc}\n-1 & 1 & 0 \\\\\n0 & -1 & 1 \\\\\n2 & 3 & 4\n\\end{array}\\right]\\left[\\begin{array}{lll}\n1 & 2 & 3 \\\\\n0 & 1 & 0 \\\\\n1 & 1 & 0\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n-1 \\times 1+1 \\times 0+0 \\times 1 & -1 \\times 2+1 \\times 1+0 \\times 1 & -1 \\times 3+1 \\times 0+0 \\times 0 \\\\\n0 \\times 1+(-1) \\times 0+1 \\times 1 & 0 \\times 2+(-1) \\times 1+1 \\times 1 & 0 \\times 3+(-1) \\times 0+1 \\times 0 \\\\\n2 \\times 1+3 \\times 0+4 \\times 1 & 2 \\times 2+3 \\times 1+4 \\times 1 & 2 \\times 3+3 \\times 0+4 \\times 0\n\\end{array}\\right]\n\\end{aligned}\n$$\n$$\n=\\left[\\begin{array}{ccc}\n-1 & -1 & -3 \\\\\n1 & 0 & 0 \\\\\n6 & 11 & 6\n\\end{array}\\right]\n$$\nइसलिए, $\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 0 & 1 & 0 \\\\ 1 & 1 & 0\\end{array}\\right]\\left[\\begin{array}{ccc}-1 & 1 & 0 \\\\ 0 & -1 & 1 \\\\ 2 & 3 & 4\\end{array}\\right] \\neq\\left[\\begin{array}{ccc}-1 & 1 & 0 \\\\ 0 & -1 & 1 \\\\ 2 & 3 & 4\\end{array}\\right]\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 0 & 1 & 0 \\\\ 1 & 1 & 0\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.2.15",
+   "kind": "exercise",
+   "number": "3.2.15",
+   "topic": "Evaluating A² − 5A + 6I",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{rrr}2 & 0 & 1 \\\\ 2 & 1 & 3 \\\\ 1 & -1 & 0\\end{array}\\right]$ है तो $\\mathrm{A}^{2}-5 \\mathrm{~A}+6 \\mathrm{I}$, का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& A=\\left[\\begin{array}{ccc}\n2 & 0 & 1 \\\\\n2 & 1 & 3 \\\\\n1 & -1 & 0\n\\end{array}\\right] \\\\\n& \\Rightarrow A^{2}=\\left[\\begin{array}{ccc}\n2 & 0 & 1 \\\\\n2 & 1 & 3 \\\\\n1 & -1 & 0\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n2 & 0 & 1 \\\\\n2 & 1 & 3 \\\\\n1 & -1 & 0\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n2 \\times 2+0 \\times 2+1 \\times 1 & 2 \\times 0+0 \\times 1+1 \\times(-1) & 2 \\times 1+0 \\times 3+1 \\times 0 \\\\\n2 \\times 2+1 \\times 2+3 \\times 1 & 2 \\times 0+1 \\times 1+3 \\times(-1) & 2 \\times 1+1 \\times 3+3 \\times 0 \\\\\n1 \\times 2+(-1) \\times 2+0 \\times 1 & 1 \\times 0+(-1) \\times 1+0 \\times(-1) & 1 \\times 1+(-1) \\times 3+0 \\times 0\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n5 & -1 & 2 \\\\\n9 & -2 & 5 \\\\\n0 & -1 & -2\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "इसलिए, $A^{2}-5 A+6 I$\n\n$$\n\\begin{aligned}\n& =\\left[\\begin{array}{ccc}\n5 & -1 & 2 \\\\\n9 & -2 & 5 \\\\\n0 & -1 & -2\n\\end{array}\\right]-5\\left[\\begin{array}{ccc}\n2 & 0 & 1 \\\\\n2 & 1 & 3 \\\\\n1 & -1 & 0\n\\end{array}\\right]+6\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n5 & -1 & 2 \\\\\n9 & -2 & 5 \\\\\n0 & -1 & -2\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n10 & 0 & 5 \\\\\n10 & 5 & 15 \\\\\n5 & -5 & 0\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n6 & 0 & 0 \\\\\n0 & 6 & 0 \\\\\n0 & 0 & 6\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n5-10+6 & -1-0+0 & 2-5+0 \\\\\n9-10+0 & -2-5+6 & 5-15+0 \\\\\n0-5+0 & -1+5+0 & -2-0+6\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n1 & -1 & -3 \\\\\n-1 & -1 & -10 \\\\\n-5 & 4 & 4\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{2}-5A+6I=\\left[\\begin{array}{ccc}1 & -1 & -3 \\\\ -1 & -1 & -10 \\\\ -5 & 4 & 4\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.16",
+   "kind": "exercise",
+   "number": "3.2.16",
+   "topic": "Proving A³ − 6A² + 7A + 2I = 0",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{lll}1 & 0 & 2 \\\\ 0 & 2 & 1 \\\\ 2 & 0 & 3\\end{array}\\right]$ है तो सिद्ध कीजिए कि $\\mathrm{A}^{3}-6 \\mathrm{~A}^{2}+7 \\mathrm{~A}+2 \\mathrm{I}=0$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "concept",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\nA=\\left[\\begin{array}{lll}\n1 & 0 & 2 \\\\\n0 & 2 & 1 \\\\\n2 & 0 & 3\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& \\Rightarrow A^{2}=\\left[\\begin{array}{lll}\n1 & 0 & 2 \\\\\n0 & 2 & 1 \\\\\n2 & 0 & 3\n\\end{array}\\right]\\left[\\begin{array}{lll}\n1 & 0 & 2 \\\\\n0 & 2 & 1 \\\\\n2 & 0 & 3\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{lll}\n1 \\times 1+0 \\times 0+2 \\times 2 & 1 \\times 0+0 \\times 2+2 \\times 0 & 1 \\times 2+0 \\times 1+2 \\times 3 \\\\\n0 \\times 1+2 \\times 0+1 \\times 2 & 0 \\times 0+2 \\times 2+1 \\times 0 & 0 \\times 2+2 \\times 1+1 \\times 3 \\\\\n2 \\times 1+0 \\times 0+3 \\times 2 & 2 \\times 0+0 \\times 2+3 \\times 0 & 2 \\times 2+0 \\times 1+3 \\times 3\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n5 & 0 & 8 \\\\\n2 & 4 & 5 \\\\\n8 & 0 & 13\n\\end{array}\\right] \\\\\n& A^{3}=A^{2} A=\\left[\\begin{array}{lll}\n5 & 0 & 8 \\\\\n2 & 4 & 5 \\\\\n8 & 0 & 13\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n1 & 0 & 2 \\\\\n0 & 2 & 1 \\\\\n2 & 0 & 3\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n5 \\times 1+0 \\times 0+8 \\times 2 & 5 \\times 0+0 \\times 2+8 \\times 0 & 5 \\times 2+0 \\times 1+8 \\times 3 \\\\\n2 \\times 1+4 \\times 0+5 \\times 2 & 2 \\times 0+4 \\times 2+5 \\times 0 & 2 \\times 2+4 \\times 1+5 \\times 3 \\\\\n8 \\times 1+0 \\times 0+13 \\times 2 & 8 \\times 0+0 \\times 2+13 \\times 0 & 8 \\times 2+0 \\times 1+13 \\times 3\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n21 & 0 & 34 \\\\\n12 & 8 & 23 \\\\\n34 & 0 & 55\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "इसलिए, LHS $=A^{3}-6 A^{2}+7 A+2 I$\n\n$$\n\\begin{aligned}\n& =\\left[\\begin{array}{lll}\n21 & 0 & 34 \\\\\n12 & 8 & 23 \\\\\n34 & 0 & 55\n\\end{array}\\right]-6\\left[\\begin{array}{lll}\n5 & 0 & 8 \\\\\n2 & 4 & 5 \\\\\n8 & 0 & 13\n\\end{array}\\right]+7\\left[\\begin{array}{lll}\n1 & 0 & 2 \\\\\n0 & 2 & 1 \\\\\n2 & 0 & 3\n\\end{array}\\right]+2\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{lll}\n21 & 0 & 34 \\\\\n12 & 8 & 23 \\\\\n34 & 0 & 55\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n30 & 0 & 48 \\\\\n12 & 24 & 30 \\\\\n48 & 0 & 78\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n7 & 0 & 14 \\\\\n0 & 14 & 7 \\\\\n14 & 0 & 21\n\\end{array}\\right]+\\left[\\begin{array}{lll}\n2 & 0 & 0 \\\\\n0 & 2 & 0 \\\\\n0 & 0 & 2\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n21-30+7+2 & 0-0+0+0 & 34-48+14+0 \\\\\n12-12+0+0 & 8-24+14+2 & 23-30+7+0 \\\\\n34-48+14+0 & 0-0+0+0 & 55-78+21+2\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{lll}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]=0=R H S\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_3.2.17",
+   "kind": "exercise",
+   "number": "3.2.17",
+   "topic": "Finding k in A² = kA − 2I",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{ll}3 & -2 \\\\ 4 & -2\\end{array}\\right]$ तथा $\\mathrm{I}=\\left[\\begin{array}{ll}1 & 0 \\\\ 0 & 1\\end{array}\\right]$ एवं $\\mathrm{A}^{2}=k \\mathrm{~A}-2 \\mathrm{I}$ हो तो $k$ ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है: $A^{2}=k A-2 I$\n\n$$\n\\begin{aligned}\n& \\Rightarrow\\left[\\begin{array}{ll}\n3 & -2 \\\\\n4 & -2\n\\end{array}\\right]\\left[\\begin{array}{ll}\n3 & -2 \\\\\n4 & -2\n\\end{array}\\right]=k\\left[\\begin{array}{ll}\n3 & -2 \\\\\n4 & -2\n\\end{array}\\right]-2\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{ll}\n3 \\times 3+(-2) \\times 4 & 3 \\times(-2)+(-2) \\times(-2) \\\\\n4 \\times 3+(-2) \\times 4 & 4 \\times(-2)+(-2) \\times(-2)\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n3 k & -2 k \\\\\n4 k & -2 k\n\\end{array}\\right]-\\left[\\begin{array}{ll}\n2 & 0 \\\\\n0 & 2\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{ll}\n1 & -2 \\\\\n4 & -4\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n3 k-2 & -2 k \\\\\n4 k & -2 k-2\n\\end{array}\\right] \\\\\n& \\Rightarrow 4 k=4 \\quad \\Rightarrow k=1\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$k=1$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.18",
+   "kind": "exercise",
+   "number": "3.2.18",
+   "topic": "Proving I+A = (I−A) rotation-matrix identity",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{cc}0 & -\\tan \\frac{\\alpha}{2} \\\\ \\tan \\frac{\\alpha}{2} & 0\\end{array}\\right]$ तथा I कोटि $2$ का एक तत्समक आव्यूह है। तो सिद्ध कीजिए कि $\\mathrm{I}+\\mathrm{A}=(\\mathrm{I}-\\mathrm{A})\\left[\\begin{array}{rr}\\cos \\alpha & -\\sin \\alpha \\\\ \\sin \\alpha & \\cos \\alpha\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "LHS",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& \\text { LHS }=I+A \\\\\n& =\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n0 & -\\tan \\frac{\\alpha}{2} \\\\\n\\tan \\frac{\\alpha}{2} & 0\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n1 & -\\tan \\frac{\\alpha}{2} \\\\\n\\tan \\frac{\\alpha}{2} & 1\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "RHS",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अब RHS $=(I-A)\\left[\\begin{array}{cc}\\cos \\alpha & -\\sin \\alpha \\\\ \\sin \\alpha & \\cos \\alpha\\end{array}\\right]$\n\n$$\n=\\left(\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n0 & -\\tan \\frac{\\alpha}{2} \\\\\n\\tan \\frac{\\alpha}{2} & 0\n\\end{array}\\right]\\right)\\left[\\begin{array}{cc}\n\\cos \\alpha & -\\sin \\alpha \\\\\n\\sin \\alpha & \\cos \\alpha\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n1 & \\tan \\frac{\\alpha}{2} \\\\\n-\\tan \\frac{\\alpha}{2} & 1\n\\end{array}\\right]\\left[\\begin{array}{cc}\n\\cos \\alpha & -\\sin \\alpha \\\\\n\\sin \\alpha & \\cos \\alpha\n\\end{array}\\right]\n$$\n\n$$\n\\begin{aligned}\n& =\\left[\\begin{array}{ll}\n\\cos \\alpha+\\tan \\frac{\\alpha}{2} \\sin \\alpha & -\\sin \\alpha+\\tan \\frac{\\alpha}{2} \\cos \\alpha \\\\\n-\\tan \\frac{\\alpha}{2} \\cos \\alpha+\\sin \\alpha & \\tan \\frac{\\alpha}{2} \\sin \\alpha+\\cos \\alpha\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ll}\n\\cos \\alpha+\\frac{\\sin \\frac{\\alpha}{2}}{\\cos \\frac{\\alpha}{2}} \\sin \\alpha & -\\sin \\alpha+\\frac{\\sin \\frac{\\alpha}{2}}{\\cos \\frac{\\alpha}{2}} \\cos \\alpha \\\\\n-\\frac{\\sin \\frac{\\alpha}{2}}{\\cos \\frac{\\alpha}{2}} \\cos \\alpha+\\sin \\alpha & \\frac{\\sin \\frac{\\alpha}{2}}{\\cos \\frac{\\alpha}{2}} \\sin \\alpha+\\cos \\alpha\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ll}\n\\frac{\\cos \\alpha \\cos \\frac{\\alpha}{2}+\\sin \\frac{\\alpha}{2} \\sin \\alpha}{\\cos \\frac{\\alpha}{2}} & \\frac{-\\sin \\alpha \\cos \\frac{\\alpha}{2}+\\sin \\frac{\\alpha}{2} \\cos \\alpha}{\\cos \\frac{\\alpha}{2}} \\\\\n\\frac{-\\cos \\alpha \\sin \\frac{\\alpha}{2}+\\cos \\frac{\\alpha}{2} \\sin \\alpha}{\\cos \\frac{\\alpha}{2}} & \\frac{\\sin \\alpha \\sin \\frac{\\alpha}{2}+\\cos \\frac{\\alpha}{2} \\cos \\alpha}{\\cos \\frac{\\alpha}{2}}\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n\\frac{\\cos \\left(\\alpha-\\frac{\\alpha}{2}\\right)}{\\cos \\frac{\\alpha}{2}} & \\frac{-\\sin \\left(\\alpha-\\frac{\\alpha}{2}\\right)}{\\cos \\frac{\\alpha}{2}} \\\\\n\\frac{\\sin \\left(\\alpha-\\frac{\\alpha}{2}\\right)}{\\cos \\frac{\\alpha}{2}} & \\frac{\\cos \\left(\\alpha-\\frac{\\alpha}{2}\\right)}{\\cos \\frac{\\alpha}{2}}\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n1 & -\\tan \\frac{\\alpha}{2} \\\\\n\\tan \\frac{\\alpha}{2} & 1\n\\end{array}\\right]=L H S\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_3.2.19",
+   "kind": "exercise",
+   "number": "3.2.19",
+   "topic": "Bond investment via matrix multiplication",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "किसी व्यापार संघ के पास $30,000$ रुपयों का कोष है जिसे दो भिन्न-भिन्न प्रकार के बांडों में निवेशित करना है। प्रथम बांड पर $5 \\%$ वार्षिक तथा द्वितीय बांड पर $7 \\%$ वार्षिक ब्याज प्राप्त होता है। आव्यूह गुणन के प्रयोग द्वारा यह निर्धारित कीजिए कि $30,000$ रुपयों के कोष को दो प्रकार के बांडों में निवेश करने के लिए किस प्रकार बाँटें जिससे व्यापार संघ को प्राप्त कुल वार्षिक ब्याज"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(a)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Rs $1800$ हो।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "concept",
+       "stage": "given",
+       "label": "जानकारी",
+       "flow": [
+        {
+         "type": "text",
+         "text": "माना प्रथम बांड पर निवेश की गई राशि $=₹ x$\nइसलिए, द्वितीय बांड पर निवेश की गई राशि $=₹(30000-x)$\nयदि कुल वार्षिक ब्याज ₹ $1800$ हो।"
+        }
+       ]
+      },
+      {
+       "type": "formula",
+       "stage": "key_formula",
+       "label": "मुख्य सूत्र",
+       "flow": [
+        {
+         "type": "text",
+         "text": "बांडों में निवेश (रुपयों में) वार्षिक ब्याज दर वार्षिक ब्याज (रुपयों में)\n\n$$\n\\left[\\begin{array}{ll}\nx & 30000-x\n\\end{array}\\right] \\quad\\left[\\begin{array}{l}\n5 \\% \\\\\n7 \\%\n\\end{array}\\right] \\quad[1800]\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "मान रखो",
+       "flow": [
+        {
+         "type": "text",
+         "text": "हल करने पर $x \\times 5 \\%+(30000-x) \\times 7 \\%=1800$\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\frac{5 x}{100}+\\frac{7}{100}(30000-x)=1800 \\\\\n& \\Rightarrow 5 x+210000-7 x=180000 \\\\\n& \\Rightarrow-2 x=-30000 \\\\\n& \\Rightarrow x=15000\n\\end{aligned}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "निष्कर्ष",
+       "flow": [
+        {
+         "type": "text",
+         "text": "इसलिए, प्रथम बांड पर निवेश की गई राशि = ₹15000\nतथा द्वितीय बांड पर निवेश की गई राशि = ₹15000"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "प्रथम बांड में ₹15000 तथा द्वितीय बांड में ₹15000"
+      }
+     ]
+    },
+    {
+     "label": "(b)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Rs $2000$ हो।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "concept",
+       "stage": "given",
+       "label": "जानकारी",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यदि कुल वार्षिक ब्याज ₹ $2000$ हो।"
+        }
+       ]
+      },
+      {
+       "type": "formula",
+       "stage": "key_formula",
+       "label": "मुख्य सूत्र",
+       "flow": [
+        {
+         "type": "text",
+         "text": "बांडों में निवेश (रुपयों में) वार्षिक ब्याज दर वार्षिक ब्याज (रुपयों में)\n\n$$\n\\left[\\begin{array}{ll}\nx & 30000-x\n\\end{array}\\right] \\quad\\left[\\begin{array}{l}\n5 \\% \\\\\n7 \\%\n\\end{array}\\right] \\quad[2000]\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "मान रखो",
+       "flow": [
+        {
+         "type": "text",
+         "text": "हल करने पर $x \\times 5 \\%+(30000-x) \\times 7 \\%=2000$\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\frac{5 x}{100}+\\frac{7}{100}(30000-x)=2000 \\\\\n& \\Rightarrow 5 x+210000-7 x=200000 \\\\\n& \\Rightarrow-2 x=-10000 \\\\\n& \\Rightarrow x=5000\n\\end{aligned}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "निष्कर्ष",
+       "flow": [
+        {
+         "type": "text",
+         "text": "इसलिए, प्रथम बांड पर निवेश की गई राशि = ₹5000\nतथा द्वितीय बांड पर निवेश की गई राशि = ₹25000"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "प्रथम बांड में ₹5000 तथा द्वितीय बांड में ₹25000"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.2.20",
+   "kind": "exercise",
+   "number": "3.2.20",
+   "topic": "Bookshop revenue via matrix algebra",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "किसी स्कूल की पुस्तकों की दुकान में $10$ दर्जन रसायन विज्ञान, $8$ दर्जन भौतिक विज्ञान तथा $10$ दर्जन अर्थशास्त्र की पुस्तकें हैं। इन पुस्तकों का विक्रय मूल्य क्रमशः Rs $80$, Rs $60$ तथा Rs $40$ प्रति पुस्तक है। आव्यूह बीजगणित के प्रयोग द्वारा ज्ञात कीजिए कि सभी पुस्तकों को बेचने से दुकान को कुल कितनी धनराशि प्राप्त होगी।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "मुख्य सूत्र",
+     "flow": [
+      {
+       "type": "text",
+       "text": "पुस्तकों की संख्या विक्रय मूल्य प्रति पुस्तक कुल धनराशि (रुपयों में)\nरसायन भौतिक अर्थशास्त्र\n$\\left[\\begin{array}{lll}120 & 96 & 120\\end{array}\\right]$ $\\left[\\begin{array}{l}80 \\\\ 60 \\\\ 40\\end{array}\\right]$ $[x]$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "हल करने पर\n$120 \\times 80+96 \\times 60+120 \\times 40=x$\n$\\Rightarrow x=9600+5760+4800$\n$\\Rightarrow x=20160$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अतः, सभी पुस्तकों को बेचने से दुकान को कुल धनराशि ₹20160 प्राप्त होगी।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "कुल धनराशि ₹20160"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.21",
+   "kind": "exercise",
+   "number": "3.2.21",
+   "topic": "MCQ — condition for PY+WY defined",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "मान लीजिए कि X, Y, Z, W तथा P क्रमशः $2 \\times n, 3 \\times k, 2 \\times p, n \\times 3$ तथा $p \\times k$, कोटियों के आव्यूह हैं।\n\nPY + WY के परिभाषित होने के लिए $n, k$ तथा $p$ पर क्या प्रतिबंध होगा ?\n(A) $k=3, p=n$\n(B) $k$ स्वेच्छ है , $p=2$\n(C) $p$ स्वेच्छ है, $k=3$\n(D) $k=2, p=3$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "P की कोटि $=p \\times k$ तथा Y की कोटि $=3 \\times k$ है।\nइसलिए, PY के परिभाषित होने के लिए, $k=3$ होना चाहिए। इस प्रकार PY की कोटि $p \\times k$ है।\nW की कोटि $=n \\times 3$ तथा Y की कोटि $=3 \\times k$ है।\nकोटि के अनुसार, WY परिभाषित है तथा इसकी कोटि $n \\times k$ है।\n$\\mathrm{PY}+\\mathrm{WY}$ के परिभाषित होने के लिए, PY तथा WY की कोटि बराबर होनी चाहिए।\n$\\Rightarrow p \\times k=n \\times k \\quad \\Rightarrow p=n$\nअतः, विकल्प $(\\mathrm{A})$ सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(A) $k=3, p=n$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.2.22",
+   "kind": "exercise",
+   "number": "3.2.22",
+   "topic": "MCQ — order of the matrix 7X−5Z",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "मान लीजिए कि X, Y, Z, W तथा P क्रमशः $2 \\times n, 3 \\times k, 2 \\times p, n \\times 3$ तथा $p \\times k$, कोटियों के आव्यूह हैं।\n\nयदि $n=p$, तो आव्यूह $7 \\mathrm{X}-5 \\mathrm{Z}$ की कोटि है।\n(A) $p \\times 2$\n(B) $2 \\times n$\n(C) $n \\times 3$\n(D) $p \\times n$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "आव्यूहों को जोड़ने या घटाने पर उनकी कोटि समान रहती है।\nइसलिए, $7 X-5 Z$ की कोटि $=X$ की कोटि $=Z$ की कोटि $=2 \\times n$\nअतः, विकल्प (B) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(B) $2 \\times n$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.3.1",
+   "kind": "exercise",
+   "number": "3.3.1",
+   "topic": "Matrix transpose",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित आव्यूहों में से प्रत्येक का परिवर्त ज्ञात कीजिए:"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{c}5 \\\\ \\frac{1}{2} \\\\ -1\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "माना $A=\\left[\\begin{array}{c}5 \\\\ \\frac{1}{2} \\\\ -1\\end{array}\\right]$ अतः $A^{\\prime}=\\left[\\begin{array}{lll}5 & \\frac{1}{2} & -1\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{rr}1 & -1 \\\\ 2 & 3\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "माना $B=\\left[\\begin{array}{cc}1 & -1 \\\\ 2 & 3\\end{array}\\right]$ अतः $B^{\\prime}=\\left[\\begin{array}{cc}1 & 2 \\\\ -1 & 3\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{rrr}-1 & 5 & 6 \\\\ \\sqrt{3} & 5 & 6 \\\\ 2 & 3 & -1\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "माना $C=\\left[\\begin{array}{ccc}-1 & 5 & 6 \\\\ \\sqrt{3} & 5 & 6 \\\\ 2 & 3 & -1\\end{array}\\right]$ अतः $C^{\\prime}=\\left[\\begin{array}{ccc}-1 & \\sqrt{3} & 2 \\\\ 5 & 5 & 3 \\\\ 6 & 6 & -1\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.3.2",
+   "kind": "exercise",
+   "number": "3.3.2",
+   "topic": "Verifying transpose of sum and difference",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{rrr}-1 & 2 & 3 \\\\ 5 & 7 & 9 \\\\ -2 & 1 & 1\\end{array}\\right]$ तथा $\\mathrm{B}=\\left[\\begin{array}{rrr}-4 & 1 & -5 \\\\ 1 & 2 & 0 \\\\ 1 & 3 & 1\\end{array}\\right]$ हैं तो सत्यापित कीजिए कि"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$(\\mathrm{A}+\\mathrm{B})^{\\prime}=\\mathrm{A}^{\\prime}+\\mathrm{B}^{\\prime}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$(A+B)$\n$=\\left[\\begin{array}{ccc}-1 & 2 & 3 \\\\ 5 & 7 & 9 \\\\ -2 & 1 & 1\\end{array}\\right]+\\left[\\begin{array}{ccc}-4 & 1 & -5 \\\\ 1 & 2 & 0 \\\\ 1 & 3 & 1\\end{array}\\right]=\\left[\\begin{array}{ccc}-1-4 & 2+1 & 3-5 \\\\ 5+1 & 7+2 & 9+0 \\\\ -2+1 & 1+3 & 1+1\\end{array}\\right]=\\left[\\begin{array}{ccc}-5 & 3 & -2 \\\\ 6 & 9 & 9 \\\\ -1 & 4 & 2\\end{array}\\right]$\n\nइसलिए $(A+B)^{\\prime}=\\left[\\begin{array}{ccc}-5 & 6 & -1 \\\\ 3 & 9 & 4 \\\\ -2 & 9 & 2\\end{array}\\right]$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A^{\\prime}+B^{\\prime}=\\left[\\begin{array}{ccc}-1 & 2 & 3 \\\\ 5 & 7 & 9 \\\\ -2 & 1 & 1\\end{array}\\right]^{\\prime}+\\left[\\begin{array}{ccc}-4 & 1 & -5 \\\\ 1 & 2 & 0 \\\\ 1 & 3 & 1\\end{array}\\right]^{\\prime}$\n\n$=\\left[\\begin{array}{ccc}-1 & 5 & -2 \\\\ 2 & 7 & 1 \\\\ 3 & 9 & 1\\end{array}\\right]+\\left[\\begin{array}{ccc}-4 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ -5 & 0 & 1\\end{array}\\right]=\\left[\\begin{array}{ccc}-1-4 & 5+1 & -2+1 \\\\ 2+1 & 7+2 & 1+3 \\\\ 3-5 & 9+0 & 1+1\\end{array}\\right]=\\left[\\begin{array}{ccc}-5 & 6 & -1 \\\\ 3 & 9 & 4 \\\\ -2 & 9 & 2\\end{array}\\right]$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "समीकरण (1) और (2) से,\n$$\n(A+B)^{\\prime}=A^{\\prime}+B^{\\prime}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$(\\mathrm{A}-\\mathrm{B})^{\\prime}=\\mathrm{A}^{\\prime}-\\mathrm{B}^{\\prime}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$(A-B)$\n$=\\left[\\begin{array}{ccc}-1 & 2 & 3 \\\\ 5 & 7 & 9 \\\\ -2 & 1 & 1\\end{array}\\right]-\\left[\\begin{array}{ccc}-4 & 1 & -5 \\\\ 1 & 2 & 0 \\\\ 1 & 3 & 1\\end{array}\\right]=\\left[\\begin{array}{ccc}-1+4 & 2-1 & 3+5 \\\\ 5-1 & 7-2 & 9-0 \\\\ -2-1 & 1-3 & 1-1\\end{array}\\right]=\\left[\\begin{array}{ccc}3 & 1 & 8 \\\\ 4 & 5 & 9 \\\\ -3 & -2 & 0\\end{array}\\right]$\n\nइसलिए $(A-B)^{\\prime}=\\left[\\begin{array}{ccc}3 & 4 & -3 \\\\ 1 & 5 & -2 \\\\ 8 & 9 & 0\\end{array}\\right]$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& A^{\\prime}-B^{\\prime}=\\left[\\begin{array}{ccc}\n-1 & 2 & 3 \\\\\n5 & 7 & 9 \\\\\n-2 & 1 & 1\n\\end{array}\\right]^{\\prime}-\\left[\\begin{array}{ccc}\n-4 & 1 & -5 \\\\\n1 & 2 & 0 \\\\\n1 & 3 & 1\n\\end{array}\\right]^{\\prime} \\\\\n& =\\left[\\begin{array}{ccc}\n-1 & 5 & -2 \\\\\n2 & 7 & 1 \\\\\n3 & 9 & 1\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n-4 & 1 & 1 \\\\\n1 & 2 & 3 \\\\\n-5 & 0 & 1\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-1+4 & 5-1 & -2-1 \\\\\n2-1 & 7-2 & 1-3 \\\\\n3+5 & 9-0 & 1-1\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n3 & 4 & -3 \\\\\n1 & 5 & -2 \\\\\n8 & 9 & 0\n\\end{array}\\right]\n\\end{aligned}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "समीकरण (1) और (2) से,\n$$\n(A+B)^{\\prime}=A^{\\prime}+B^{\\prime}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.3.3",
+   "kind": "exercise",
+   "number": "3.3.3",
+   "topic": "Verifying transpose given A′",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}^{\\prime}=\\left[\\begin{array}{rr}3 & 4 \\\\ -1 & 2 \\\\ 0 & 1\\end{array}\\right]$ तथा $\\mathrm{B}=\\left[\\begin{array}{rrr}-1 & 2 & 1 \\\\ 1 & 2 & 3\\end{array}\\right]$ हैं तो सत्यापित कीजिए कि"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$(\\mathrm{A}+\\mathrm{B})^{\\prime}=\\mathrm{A}^{\\prime}+\\mathrm{B}^{\\prime}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& \\text { (i) } A^{\\prime}=\\left[\\begin{array}{cc}\n3 & 4 \\\\\n-1 & 2 \\\\\n0 & 1\n\\end{array}\\right] \\Rightarrow A=\\left[\\begin{array}{ccc}\n3 & -1 & 0 \\\\\n4 & 2 & 1\n\\end{array}\\right] \\quad\\left[\\text { क्योंकि }\\left(A^{\\prime}\\right)^{\\prime}=A\\right] \\\\\n& (A+B)=\\left[\\begin{array}{ccc}\n3 & -1 & 0 \\\\\n4 & 2 & 1\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n-1 & 2 & 1 \\\\\n1 & 2 & 3\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n3-1 & -1+2 & 0+1 \\\\\n4+1 & 2+2 & 1+3\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n2 & 1 & 1 \\\\\n5 & 4 & 4\n\\end{array}\\right]\n\\end{aligned}\n$$\n\nइसलिए $(A+B)^{\\prime}=\\left[\\begin{array}{ll}2 & 5 \\\\ 1 & 4 \\\\ 1 & 4\\end{array}\\right]$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& A^{\\prime}+B^{\\prime}=\\left[\\begin{array}{ccc}\n3 & -1 & 0 \\\\\n4 & 2 & 1\n\\end{array}\\right]^{\\prime}+\\left[\\begin{array}{ccc}\n-1 & 2 & 1 \\\\\n1 & 2 & 3\n\\end{array}\\right]^{\\prime} \\\\\n& =\\left[\\begin{array}{cc}\n3 & 4 \\\\\n-1 & 2 \\\\\n0 & 1\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n-1 & 1 \\\\\n2 & 2 \\\\\n1 & 3\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n3-1 & 4+1 \\\\\n-1+2 & 2+2 \\\\\n0+1 & 1+3\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n2 & 5 \\\\\n1 & 4 \\\\\n1 & 4\n\\end{array}\\right]\n\\end{aligned}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "समीकरण (1) और (2) से,\n$$\n(A+B)^{\\prime}=A^{\\prime}+B^{\\prime}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$(\\mathrm{A}-\\mathrm{B})^{\\prime}=\\mathrm{A}^{\\prime}-\\mathrm{B}^{\\prime}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "(ii) $A^{\\prime}=\\left[\\begin{array}{cc}3 & 4 \\\\ -1 & 2 \\\\ 0 & 1\\end{array}\\right] \\Rightarrow A=\\left[\\begin{array}{ccc}3 & -1 & 0 \\\\ 4 & 2 & 1\\end{array}\\right] \\quad\\left[\\right.$ क्योंकि $\\left.\\left(A^{\\prime}\\right)^{\\prime}=A\\right]$\n\n$$\n(A-B)=\\left[\\begin{array}{ccc}\n3 & -1 & 0 \\\\\n4 & 2 & 1\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n-1 & 2 & 1 \\\\\n1 & 2 & 3\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n3+1 & -1-2 & 0-1 \\\\\n4-1 & 2-2 & 1-3\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n4 & -3 & -1 \\\\\n3 & 0 & -2\n\\end{array}\\right]\n$$\n\nइसलिए $(A-B)^{\\prime}=\\left[\\begin{array}{cc}4 & 3 \\\\ -3 & 0 \\\\ -1 & -2\\end{array}\\right]$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& A^{\\prime}-B^{\\prime}=\\left[\\begin{array}{ccc}\n3 & -1 & 0 \\\\\n4 & 2 & 1\n\\end{array}\\right]^{\\prime}-\\left[\\begin{array}{ccc}\n-1 & 2 & 1 \\\\\n1 & 2 & 3\n\\end{array}\\right]^{\\prime} \\\\\n& =\\left[\\begin{array}{cc}\n3 & 4 \\\\\n-1 & 2 \\\\\n0 & 1\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n-1 & 1 \\\\\n2 & 2 \\\\\n1 & 3\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n3+1 & 4-1 \\\\\n-1-2 & 2-2 \\\\\n0-1 & 1-3\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n4 & 3 \\\\\n-3 & 0 \\\\\n-1 & -2\n\\end{array}\\right]\n\\end{aligned}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "समीकरण (1) और (2) से,\n$$\n(A-B)^{\\prime}=A^{\\prime}-B^{\\prime}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.3.4",
+   "kind": "exercise",
+   "number": "3.3.4",
+   "topic": "Finding (A+2B)′",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}^{\\prime}=\\left[\\begin{array}{cc}-2 & 3 \\\\ 1 & 2\\end{array}\\right]$ तथा $\\mathrm{B}=\\left[\\begin{array}{rr}-1 & 0 \\\\ 1 & 2\\end{array}\\right]$ हैं तो $(\\mathrm{A}+2 \\mathrm{~B})^{\\prime}$ ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& (A+2 B)=\\left[\\begin{array}{cc}\n-2 & 3 \\\\\n1 & 2\n\\end{array}\\right]+2\\left[\\begin{array}{cc}\n-1 & 0 \\\\\n1 & 2\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n-2 & 3 \\\\\n1 & 2\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n-2 & 0 \\\\\n2 & 4\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n-2-2 & 3+0 \\\\\n1+2 & 2+4\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n-4 & 3 \\\\\n3 & 6\n\\end{array}\\right]\n\\end{aligned}\n$$\n\nइसलिए $(A+2 B)^{\\prime}=\\left[\\begin{array}{cc}-4 & 3 \\\\ 3 & 6\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$(A+2B)^{\\prime}=\\left[\\begin{array}{cc}-4 & 3 \\\\ 3 & 6\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.3.5",
+   "kind": "exercise",
+   "number": "3.3.5",
+   "topic": "Verifying (AB)′=B′A′",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "A तथा B आव्यूहों के लिए सत्यापित कीजिए कि $(\\mathrm{AB})^{\\prime}=\\mathrm{B}^{\\prime} \\mathrm{A}^{\\prime}$, जहाँ"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\mathrm{A}=\\left[\\begin{array}{r}1 \\\\ -4 \\\\ 3\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{lll}-1 & 2 & 1\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "दिया है: $A=\\left[\\begin{array}{c}1 \\\\ -4 \\\\ 3\\end{array}\\right], B=\\left[\\begin{array}{lll}-1 & 2 & 1\\end{array}\\right]$\n\nइसलिए, $A B=\\left[\\begin{array}{c}1 \\\\ -4 \\\\ 3\\end{array}\\right]\\left[\\begin{array}{lll}-1 & 2 & 1\\end{array}\\right]=\\left[\\begin{array}{ccc}1 \\times(-1) & 1 \\times 2 & 1 \\times 1 \\\\ -4 \\times(-1) & -4 \\times 2 & -4 \\times 1 \\\\ 3 \\times(-1) & 3 \\times 2 & 3 \\times 1\\end{array}\\right]=\\left[\\begin{array}{ccc}-1 & 2 & 1 \\\\ 4 & -8 & -4 \\\\ -3 & 6 & 3\\end{array}\\right]$\n\nइसलिए $A B^{\\prime}=\\left[\\begin{array}{ccc}-1 & 4 & -3 \\\\ 2 & -8 & 6 \\\\ 1 & -4 & 3\\end{array}\\right]$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$B^{\\prime}=\\left[\\begin{array}{lll}-1 & 2 & 1\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{c}-1 \\\\ 2 \\\\ 1\\end{array}\\right]$ तथा $A^{\\prime}=\\left[\\begin{array}{c}1 \\\\ -4 \\\\ 3\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{lll}1 & -4 & 3\\end{array}\\right]$\n\nइसलिए, $B^{\\prime} A^{\\prime}=\\left[\\begin{array}{c}-1 \\\\ 2 \\\\ 1\\end{array}\\right]\\left[\\begin{array}{lll}1 & -4 & 3\\end{array}\\right]=\\left[\\begin{array}{ccc}-1 \\times 1 & -1 \\times(-4) & -1 \\times 3 \\\\ 2 \\times 1 & 2 \\times(-4) & 2 \\times 3 \\\\ 1 \\times 1 & 1 \\times(-4) & 1 \\times 3\\end{array}\\right]$\n\n$$\n=\\left[\\begin{array}{ccc}\n-1 & 4 & -3 \\\\\n2 & -8 & 6 \\\\\n1 & -4 & 3\n\\end{array}\\right]\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "समीकरण (1) और (2) से,\n$$\n(A B)^{\\prime}=B^{\\prime} A^{\\prime}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\mathrm{A}=\\left[\\begin{array}{l}0 \\\\ 1 \\\\ 2\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{lll}1 & 5 & 7\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "दिया है: $A=\\left[\\begin{array}{l}0 \\\\ 1 \\\\ 2\\end{array}\\right], B=\\left[\\begin{array}{lll}1 & 5 & 7\\end{array}\\right]$\n\nइसलिए, $A B=\\left[\\begin{array}{l}0 \\\\ 1 \\\\ 2\\end{array}\\right]\\left[\\begin{array}{lll}1 & 5 & 7\\end{array}\\right]=\\left[\\begin{array}{lll}0 \\times 1 & 0 \\times 5 & 0 \\times 7 \\\\ 1 \\times 1 & 1 \\times 5 & 1 \\times 7 \\\\ 2 \\times 1 & 2 \\times 5 & 2 \\times 7\\end{array}\\right]=\\left[\\begin{array}{ccc}0 & 0 & 0 \\\\ 1 & 5 & 7 \\\\ 2 & 10 & 14\\end{array}\\right]$\n\nइसलिए $A B^{\\prime}=\\left[\\begin{array}{ccc}0 & 1 & 2 \\\\ 0 & 5 & 10 \\\\ 0 & 7 & 14\\end{array}\\right]$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$B^{\\prime}=\\left[\\begin{array}{lll}1 & 5 & 7\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{l}1 \\\\ 5 \\\\ 7\\end{array}\\right]$ तथा $A^{\\prime}=\\left[\\begin{array}{l}0 \\\\ 1 \\\\ 2\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{lll}0 & 1 & 2\\end{array}\\right]$\n\nइसलिए, $B^{\\prime} A^{\\prime}=\\left[\\begin{array}{l}1 \\\\ 5 \\\\ 7\\end{array}\\right]\\left[\\begin{array}{lll}0 & 1 & 2\\end{array}\\right]=\\left[\\begin{array}{lll}1 \\times 0 & 1 \\times 1 & 1 \\times 2 \\\\ 5 \\times 0 & 5 \\times 1 & 5 \\times 2 \\\\ 7 \\times 0 & 7 \\times 1 & 7 \\times 2\\end{array}\\right]$\n\n$$\n=\\left[\\begin{array}{ccc}\n0 & 1 & 2 \\\\\n0 & 5 & 10 \\\\\n0 & 7 & 14\n\\end{array}\\right]\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "समीकरण (1) और (2) से,\n$$\n(A B)^{\\prime}=B^{\\prime} A^{\\prime}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.3.6",
+   "kind": "exercise",
+   "number": "3.3.6",
+   "topic": "Verifying A′A=I",
+   "prompt": [],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{cc}\\cos \\alpha & \\sin \\alpha \\\\ -\\sin \\alpha & \\cos \\alpha\\end{array}\\right]$ हो तो सत्यापित कीजिए कि $\\mathrm{A}^{\\prime} \\mathrm{A}=\\mathrm{I}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A=\\left[\\begin{array}{cc}\\cos \\alpha & \\sin \\alpha \\\\ -\\sin \\alpha & \\cos \\alpha\\end{array}\\right] \\Rightarrow A^{\\prime}=\\left[\\begin{array}{cc}\\cos \\alpha & -\\sin \\alpha \\\\ \\sin \\alpha & \\cos \\alpha\\end{array}\\right]$\n\nइसलिए $A^{\\prime} A=\\left[\\begin{array}{cc}\\cos \\alpha & -\\sin \\alpha \\\\ \\sin \\alpha & \\cos \\alpha\\end{array}\\right]\\left[\\begin{array}{cc}\\cos \\alpha & \\sin \\alpha \\\\ -\\sin \\alpha & \\cos \\alpha\\end{array}\\right]$\n$$\n=\\left[\\begin{array}{cc}\n\\cos ^{2} \\alpha+\\sin ^{2} \\alpha & \\cos \\alpha \\sin \\alpha-\\sin \\alpha \\cos \\alpha \\\\\n\\sin \\alpha \\cos \\alpha-\\cos \\alpha \\sin \\alpha & \\sin ^{2} \\alpha+\\cos ^{2} \\alpha\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]=I\n$$\nअतः, $A^{\\prime} A=I$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{cc}\\sin \\alpha & \\cos \\alpha \\\\ -\\cos \\alpha & \\sin \\alpha\\end{array}\\right]$ हो तो सत्यापित कीजिए कि $\\mathrm{A}^{\\prime} \\mathrm{A}=\\mathrm{I}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A=\\left[\\begin{array}{cc}\\sin \\alpha & \\cos \\alpha \\\\ -\\cos \\alpha & \\sin \\alpha\\end{array}\\right] \\Rightarrow A^{\\prime}=\\left[\\begin{array}{cc}\\sin \\alpha & -\\cos \\alpha \\\\ \\cos \\alpha & \\sin \\alpha\\end{array}\\right]$\n\nइसलिए $A^{\\prime} A=\\left[\\begin{array}{cc}\\sin \\alpha & -\\cos \\alpha \\\\ \\cos \\alpha & \\sin \\alpha\\end{array}\\right]\\left[\\begin{array}{cc}\\sin \\alpha & \\cos \\alpha \\\\ -\\cos \\alpha & \\sin \\alpha\\end{array}\\right]$\n$$\n=\\left[\\begin{array}{cc}\n\\sin ^{2} \\alpha+\\cos ^{2} \\alpha & \\sin \\alpha \\cos \\alpha-\\cos \\alpha \\sin \\alpha \\\\\n\\cos \\alpha \\sin \\alpha-\\sin \\alpha \\cos \\alpha & \\cos ^{2} \\alpha+\\sin ^{2} \\alpha\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]=I\n$$\nअतः, $A^{\\prime} A=I$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.3.7",
+   "kind": "exercise",
+   "number": "3.3.7",
+   "topic": "Symmetric and skew-symmetric proof",
+   "prompt": [],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "सिद्ध कीजिए कि आव्यूह $\\mathrm{A}=\\left[\\begin{array}{rrr}1 & -1 & 5 \\\\ -1 & 2 & 1 \\\\ 5 & 1 & 3\\end{array}\\right]$ एक सममित आव्यूह है।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A=\\left[\\begin{array}{ccc}1 & -1 & 5 \\\\ -1 & 2 & 1 \\\\ 5 & 1 & 3\\end{array}\\right] \\Rightarrow A^{\\prime}=\\left[\\begin{array}{ccc}1 & -1 & 5 \\\\ -1 & 2 & 1 \\\\ 5 & 1 & 3\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{ccc}1 & -1 & 5 \\\\ -1 & 2 & 1 \\\\ 5 & 1 & 3\\end{array}\\right]=A$\n\n$\\Rightarrow A^{\\prime}=A$, इसलिए आव्यूह $A=\\left[\\begin{array}{ccc}1 & -1 & 5 \\\\ -1 & 2 & 1 \\\\ 5 & 1 & 3\\end{array}\\right]$ एक सममित आव्यूह है।"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "सिद्ध कीजिए कि आव्यूह $\\mathrm{A}=\\left[\\begin{array}{rrr}0 & 1 & -1 \\\\ -1 & 0 & 1 \\\\ 1 & -1 & 0\\end{array}\\right]$ एक विषम सममित आव्यूह है।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A=\\left[\\begin{array}{ccc}0 & 1 & -1 \\\\ -1 & 0 & 1 \\\\ 1 & -1 & 0\\end{array}\\right] \\Rightarrow A^{\\prime}=\\left[\\begin{array}{ccc}0 & 1 & -1 \\\\ -1 & 0 & 1 \\\\ 1 & -1 & 0\\end{array}\\right]^{\\prime}=-\\left[\\begin{array}{ccc}0 & 1 & -1 \\\\ -1 & 0 & 1 \\\\ 1 & -1 & 0\\end{array}\\right]=-A$\n\n$\\Rightarrow A^{\\prime}=-A$, इसलिए आव्यूह $A=\\left[\\begin{array}{ccc}0 & 1 & -1 \\\\ -1 & 0 & 1 \\\\ 1 & -1 & 0\\end{array}\\right]$ एक विषम सममित आव्यूह है।"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.3.8",
+   "kind": "exercise",
+   "number": "3.3.8",
+   "topic": "A+A′ symmetric, A−A′ skew-symmetric",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "आव्यूह $\\mathrm{A}=\\left[\\begin{array}{ll}1 & 5 \\\\ 6 & 7\\end{array}\\right]$ के लिए सत्यापित कीजिए कि"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left(\\mathrm{A}+\\mathrm{A}^{\\prime}\\right)$ एक सममित आव्यूह है।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "दिया है: $A=\\left[\\begin{array}{ll}1 & 5 \\\\ 6 & 7\\end{array}\\right] \\Rightarrow A^{\\prime}=\\left[\\begin{array}{ll}1 & 5 \\\\ 6 & 7\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{ll}1 & 6 \\\\ 5 & 7\\end{array}\\right]$\n\nइसलिए, $\\quad\\left(A+A^{\\prime}\\right)=\\left[\\begin{array}{ll}1 & 5 \\\\ 6 & 7\\end{array}\\right]+\\left[\\begin{array}{ll}1 & 6 \\\\ 5 & 7\\end{array}\\right]=\\left[\\begin{array}{cc}2 & 11 \\\\ 11 & 14\\end{array}\\right]$\n$$\n\\left(A+A^{\\prime}\\right)^{\\prime}=\\left[\\begin{array}{cc}\n2 & 11 \\\\\n11 & 14\n\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{cc}\n2 & 11 \\\\\n11 & 14\n\\end{array}\\right]=A\n$$\n$\\Rightarrow\\left(A+A^{\\prime}\\right)^{\\prime}=\\left(A+A^{\\prime}\\right)$, इसलिए आव्यूह $\\left(A+A^{\\prime}\\right)$ एक सममित आव्यूह है।"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left(\\mathrm{A}-\\mathrm{A}^{\\prime}\\right)$ एक विषम सममित आव्यूह है।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$\\left(A-A^{\\prime}\\right)=\\left[\\begin{array}{ll}1 & 5 \\\\ 6 & 7\\end{array}\\right]-\\left[\\begin{array}{ll}1 & 6 \\\\ 5 & 7\\end{array}\\right]=\\left[\\begin{array}{cc}0 & -1 \\\\ 1 & 0\\end{array}\\right]$\n$$\n\\left(A-A^{\\prime}\\right)^{\\prime}=\\left[\\begin{array}{cc}\n0 & -1 \\\\\n1 & 0\n\\end{array}\\right]^{\\prime}=-\\left[\\begin{array}{cc}\n0 & -1 \\\\\n1 & 0\n\\end{array}\\right]=-A\n$$\n$\\Rightarrow\\left(A-A^{\\prime}\\right)^{\\prime}=-\\left(A-A^{\\prime}\\right)$, इसलिए आव्यूह $\\left(A-A^{\\prime}\\right)$ एक विषम सममित आव्यूह है।"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.3.9",
+   "kind": "exercise",
+   "number": "3.3.9",
+   "topic": "Symmetric and skew-symmetric parts of a matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{rrr}0 & a & b \\\\ -a & 0 & c \\\\ -b & -c & 0\\end{array}\\right]$ तो $\\frac{1}{2}\\left(\\mathrm{~A}+\\mathrm{A}^{\\prime}\\right)$ तथा $\\frac{1}{2}\\left(\\mathrm{~A}-\\mathrm{A}^{\\prime}\\right)$ ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है: $A=\\left[\\begin{array}{ccc}0 & a & b \\\\ -a & 0 & c \\\\ -b & -c & 0\\end{array}\\right] \\Rightarrow A^{\\prime}=\\left[\\begin{array}{ccc}0 & a & b \\\\ -a & 0 & c \\\\ -b & -c & 0\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{ccc}0 & -a & -b \\\\ a & 0 & -c \\\\ b & c & 0\\end{array}\\right]$\n\nइसलिए, $\\frac{1}{2}\\left(A+A^{\\prime}\\right)=\\frac{1}{2}\\left(\\left[\\begin{array}{ccc}0 & a & b \\\\ -a & 0 & c \\\\ -b & -c & 0\\end{array}\\right]+\\left[\\begin{array}{ccc}0 & -a & -b \\\\ a & 0 & -c \\\\ b & c & 0\\end{array}\\right]\\right)$\n\n$$\n=\\frac{1}{2}\\left[\\begin{array}{lll}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "तथा, $\\frac{1}{2}\\left(A-A^{\\prime}\\right)=\\frac{1}{2}\\left(\\left[\\begin{array}{ccc}0 & a & b \\\\ -a & 0 & c \\\\ -b & -c & 0\\end{array}\\right]-\\left[\\begin{array}{ccc}0 & -a & -b \\\\ a & 0 & -c \\\\ b & c & 0\\end{array}\\right]\\right)$\n\n$$\n=\\frac{1}{2}\\left[\\begin{array}{ccc}\n0 & 2 a & 2 b \\\\\n-2 a & 0 & 2 c \\\\\n-2 b & -2 c & 0\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n0 & a & b \\\\\n-a & 0 & c \\\\\n-b & -c & 0\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\frac{1}{2}\\left(A+A^{\\prime}\\right)=\\left[\\begin{array}{lll}0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right]$, $\\frac{1}{2}\\left(A-A^{\\prime}\\right)=\\left[\\begin{array}{ccc}0 & a & b \\\\ -a & 0 & c \\\\ -b & -c & 0\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.3.10",
+   "kind": "exercise",
+   "number": "3.3.10",
+   "topic": "Expressing as sum of symmetric and skew-symmetric",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित आव्यूहों को एक सममित आव्यूह तथा एक विषम सममित आव्यूह के योगफल के रूप में व्यक्त कीजिए:"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{rr}3 & 5 \\\\ 1 & -1\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "दिया है: $A=\\left[\\begin{array}{cc}3 & 5 \\\\ 1 & -1\\end{array}\\right]$\n\nइसलिए, $\\mathrm{A}=\\frac{1}{2}\\left(A+A^{\\prime}\\right)+\\frac{1}{2}\\left(A-A^{\\prime}\\right)$\n\nमाना, $P=\\frac{1}{2}\\left(A+A^{\\prime}\\right)$ तथा $Q=\\frac{1}{2}\\left(A-A^{\\prime}\\right)$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& P=\\frac{1}{2}\\left(A+A^{\\prime}\\right)=\\frac{1}{2}\\left(\\left[\\begin{array}{cc}\n3 & 5 \\\\\n1 & -1\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n3 & 1 \\\\\n5 & -1\n\\end{array}\\right]\\right)=\\frac{1}{2}\\left[\\begin{array}{cc}\n6 & 6 \\\\\n6 & -2\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n3 & 3 \\\\\n3 & -1\n\\end{array}\\right] \\\\\n& P^{\\prime}=\\left[\\begin{array}{cc}\n3 & 3 \\\\\n3 & -1\n\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{cc}\n3 & 3 \\\\\n3 & -1\n\\end{array}\\right]=P\n\\end{aligned}\n$$\n\n$\\Rightarrow P$ एक सममित आव्यूह है।"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& Q=\\frac{1}{2}\\left(A-A^{\\prime}\\right)=\\frac{1}{2}\\left(\\left[\\begin{array}{cc}\n3 & 5 \\\\\n1 & -1\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n3 & 1 \\\\\n5 & -1\n\\end{array}\\right]\\right)=\\frac{1}{2}\\left[\\begin{array}{cc}\n0 & 4 \\\\\n-4 & 0\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n0 & 2 \\\\\n-2 & 0\n\\end{array}\\right] \\\\\n& Q^{\\prime}=\\left[\\begin{array}{cc}\n0 & 2 \\\\\n-2 & 0\n\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{cc}\n0 & -2 \\\\\n2 & 0\n\\end{array}\\right]=-\\left[\\begin{array}{cc}\n0 & 2 \\\\\n-2 & 0\n\\end{array}\\right]=-Q\n\\end{aligned}\n$$\n\n$\\Rightarrow Q$ एक विषम सममित आव्यूह है।"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "इसप्रकार, $A=P+Q=\\left[\\begin{array}{cc}3 & 3 \\\\ 3 & -1\\end{array}\\right]+\\left[\\begin{array}{cc}0 & 2 \\\\ -2 & 0\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{rrr}6 & -2 & 2 \\\\ -2 & 3 & -1 \\\\ 2 & -1 & 3\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "दिया है: $A=\\left[\\begin{array}{ccc}6 & -2 & 2 \\\\ -2 & 3 & -1 \\\\ 2 & -1 & 3\\end{array}\\right]$\n\nइसलिए, $\\mathrm{A}=\\frac{1}{2}\\left(A+A^{\\prime}\\right)+\\frac{1}{2}\\left(A-A^{\\prime}\\right)$\n\nमाना, $P=\\frac{1}{2}\\left(A+A^{\\prime}\\right)$ तथा $Q=\\frac{1}{2}\\left(A-A^{\\prime}\\right)$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& P=\\frac{1}{2}\\left(A+A^{\\prime}\\right)=\\frac{1}{2}\\left(\\left[\\begin{array}{ccc}\n6 & -2 & 2 \\\\\n-2 & 3 & -1 \\\\\n2 & -1 & 3\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n6 & -2 & 2 \\\\\n-2 & 3 & -1 \\\\\n2 & -1 & 3\n\\end{array}\\right]\\right) \\\\\n& =\\frac{1}{2}\\left[\\begin{array}{ccc}\n12 & -4 & 4 \\\\\n-4 & 6 & -2 \\\\\n4 & -2 & 6\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n6 & -2 & 2 \\\\\n-2 & 3 & -1 \\\\\n2 & -1 & 3\n\\end{array}\\right] \\\\\n& P^{\\prime}=\\left[\\begin{array}{ccc}\n6 & -2 & 2 \\\\\n-2 & 3 & -1 \\\\\n2 & -1 & 3\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n6 & -2 & 2 \\\\\n-2 & 3 & -1 \\\\\n2 & -1 & 3\n\\end{array}\\right]=P\n\\end{aligned}\n$$\n\n$\\Rightarrow P$ एक सममित आव्यूह है।"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& Q=\\frac{1}{2}\\left(A-A^{\\prime}\\right)=\\frac{1}{2}\\left(\\left[\\begin{array}{ccc}\n6 & -2 & 2 \\\\\n-2 & 3 & -1 \\\\\n2 & -1 & 3\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n6 & -2 & 2 \\\\\n-2 & 3 & -1 \\\\\n2 & -1 & 3\n\\end{array}\\right]\\right) \\\\\n& =\\frac{1}{2}\\left[\\begin{array}{lll}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right] \\\\\n& Q^{\\prime}=\\left[\\begin{array}{lll}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{lll}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]=-\\left[\\begin{array}{lll}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]=-Q\n\\end{aligned}\n$$\n\n$\\Rightarrow Q$ एक विषम सममित आव्यूह है।"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "इसप्रकार, $A=P+Q=\\left[\\begin{array}{ccc}6 & -2 & 2 \\\\ -2 & 3 & -1 \\\\ 2 & -1 & 3\\end{array}\\right]+\\left[\\begin{array}{lll}0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{rrr}3 & 3 & -1 \\\\ -2 & -2 & 1 \\\\ -4 & -5 & 2\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "दिया है: $A=\\left[\\begin{array}{ccc}3 & 3 & -1 \\\\ -2 & -2 & 1 \\\\ -4 & -5 & 2\\end{array}\\right]$\n\nइसलिए, $\\mathrm{A}=\\frac{1}{2}\\left(A+A^{\\prime}\\right)+\\frac{1}{2}\\left(A-A^{\\prime}\\right)$\n\nमाना, $P=\\frac{1}{2}\\left(A+A^{\\prime}\\right) \\quad$ तथा $\\quad Q=\\frac{1}{2}\\left(A-A^{\\prime}\\right)$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& P=\\frac{1}{2}\\left(A+A^{\\prime}\\right)=\\frac{1}{2}\\left(\\left[\\begin{array}{ccc}\n3 & 3 & -1 \\\\\n-2 & -2 & 1 \\\\\n-4 & -5 & 2\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n3 & -2 & -4 \\\\\n3 & -2 & -5 \\\\\n-1 & 1 & 2\n\\end{array}\\right]\\right) \\\\\n& =\\frac{1}{2}\\left[\\begin{array}{ccc}\n6 & 1 & -5 \\\\\n1 & -4 & -4 \\\\\n-5 & -4 & 4\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n3 & 1 / 2 & -5 / 2 \\\\\n1 / 2 & -2 & -2 \\\\\n-5 / 2 & -2 & 2\n\\end{array}\\right] \\\\\n& P^{\\prime}=\\left[\\begin{array}{ccc}\n3 & 1 / 2 & -5 / 2 \\\\\n1 / 2 & -2 & -2 \\\\\n-5 / 2 & -2 & 2\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n3 & 1 / 2 & -5 / 2 \\\\\n1 / 2 & -2 & -2 \\\\\n-5 / 2 & -2 & 2\n\\end{array}\\right]=P\n\\end{aligned}\n$$\n\n$\\Rightarrow P$ एक सममित आव्यूह है।"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& Q=\\frac{1}{2}\\left(A-A^{\\prime}\\right)=\\frac{1}{2}\\left(\\left[\\begin{array}{ccc}\n3 & 3 & -1 \\\\\n-2 & -2 & 1 \\\\\n-4 & -5 & 2\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n3 & -2 & -4 \\\\\n3 & -2 & -5 \\\\\n-1 & 1 & 2\n\\end{array}\\right]\\right) \\\\\n& =\\frac{1}{2}\\left[\\begin{array}{ccc}\n0 & 5 & 3 \\\\\n-5 & 0 & 6 \\\\\n-3 & -6 & 0\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n0 & 5 / 2 & 3 / 2 \\\\\n-5 / 2 & 0 & 3 \\\\\n-3 / 2 & -3 & 0\n\\end{array}\\right] \\\\\n& Q^{\\prime}=\\left[\\begin{array}{ccc}\n0 & 5 / 2 & 3 / 2 \\\\\n-5 / 2 & 0 & 3 \\\\\n-3 / 2 & -3 & 0\n\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{ccc}\n0 & -5 / 2 & -3 / 2 \\\\\n5 / 2 & 0 & -3 \\\\\n3 / 2 & 3 & 0\n\\end{array}\\right]=-\\left[\\begin{array}{ccc}\n0 & 5 / 2 & 3 / 2 \\\\\n-5 / 2 & 0 & 3 \\\\\n-3 / 2 & -3 & 0\n\\end{array}\\right]=-Q\n\\end{aligned}\n$$\n\n$\\Rightarrow Q$ एक विषम सममित आव्यूह है।"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "इसप्रकार, $A=P+Q=\\left[\\begin{array}{ccc}3 & 1 / 2 & -5 / 2 \\\\ 1 / 2 & -2 & -2 \\\\ -5 / 2 & -2 & 2\\end{array}\\right]+\\left[\\begin{array}{ccc}0 & 5 / 2 & 3 / 2 \\\\ -5 / 2 & 0 & 3 \\\\ -3 / 2 & -3 & 0\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(iv)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left[\\begin{array}{rr}1 & 5 \\\\ -1 & 2\\end{array}\\right]$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "दिया है: $A=\\left[\\begin{array}{cc}1 & 5 \\\\ -1 & 2\\end{array}\\right]$\n\nइसलिए, $\\mathrm{A}=\\frac{1}{2}\\left(A+A^{\\prime}\\right)+\\frac{1}{2}\\left(A-A^{\\prime}\\right)$\n\nमाना, $P=\\frac{1}{2}\\left(A+A^{\\prime}\\right) \\quad$ तथा $\\quad Q=\\frac{1}{2}\\left(A-A^{\\prime}\\right)$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$P=\\frac{1}{2}\\left(A+A^{\\prime}\\right)=\\frac{1}{2}\\left(\\left[\\begin{array}{cc}1 & 5 \\\\ -1 & 2\\end{array}\\right]+\\left[\\begin{array}{cc}1 & -1 \\\\ 5 & 2\\end{array}\\right]\\right)=\\frac{1}{2}\\left[\\begin{array}{ll}2 & 4 \\\\ 4 & 4\\end{array}\\right]=\\left[\\begin{array}{ll}1 & 2 \\\\ 2 & 2\\end{array}\\right]$\n\n$P^{\\prime}=\\left[\\begin{array}{ll}1 & 2 \\\\ 2 & 2\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{ll}1 & 2 \\\\ 2 & 2\\end{array}\\right]=P$\n\n$\\Rightarrow P$ एक सममित आव्यूह है।"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$Q=\\frac{1}{2}\\left(A-A^{\\prime}\\right)=\\frac{1}{2}\\left(\\left[\\begin{array}{cc}1 & 5 \\\\ -1 & 2\\end{array}\\right]-\\left[\\begin{array}{cc}1 & -1 \\\\ 5 & 2\\end{array}\\right]\\right)=\\frac{1}{2}\\left[\\begin{array}{cc}0 & 6 \\\\ -6 & 0\\end{array}\\right]=\\left[\\begin{array}{cc}0 & 3 \\\\ -3 & 0\\end{array}\\right]$\n\n$Q^{\\prime}=\\left[\\begin{array}{cc}0 & 3 \\\\ -3 & 0\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{cc}0 & -3 \\\\ 3 & 0\\end{array}\\right]=-\\left[\\begin{array}{cc}0 & 3 \\\\ -3 & 0\\end{array}\\right]=-Q$\n\n$\\Rightarrow Q$ एक विषम सममित आव्यूह है।"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "इसप्रकार, $A=P+Q=\\left[\\begin{array}{ll}1 & 2 \\\\ 2 & 2\\end{array}\\right]+\\left[\\begin{array}{cc}0 & 3 \\\\ -3 & 0\\end{array}\\right]$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.3.11",
+   "kind": "exercise",
+   "number": "3.3.11",
+   "topic": "MCQ: AB−BA for symmetric A, B",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि A तथा B समान कोटि के सममित आव्यूह हैं तो $\\mathrm{AB}-\\mathrm{BA}$ एक\n(A) विषम सममित आव्यूह है\n(B) सममित आव्यूह है\n(C) शून्य आव्यूह है\n(D) तत्समक आव्यूह है"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{array}{lr}\n(A B-B A)^{\\prime}=(A B)^{\\prime}-(B A)^{\\prime} & {\\left[\\because(X-Y)^{\\prime}=X^{\\prime}-Y^{\\prime}\\right]} \\\\\n=B^{\\prime} A^{\\prime}-A^{\\prime} B^{\\prime} & {\\left[\\because(X Y)^{\\prime}=Y^{\\prime} X^{\\prime}\\right]} \\\\\n=B A-A B & {\\left[\\because \\text { दिया है: } A^{\\prime}=A, B^{\\prime}=B\\right]} \\\\\n=-(A B-B A) & \\\\\n\\Rightarrow(\\mathrm{AB}-\\mathrm{BA})^{\\prime}=-(\\mathrm{AB}-\\mathrm{BA}), &\n\\end{array}\n$$\n\nइसलिए आव्यूह $(\\mathrm{AB}-\\mathrm{BA})$ एक विषम सममित आव्यूह है। अतः, विकल्प $(\\mathrm{A})$ सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(A) विषम सममित आव्यूह है"
+    }
+   ]
+  },
+  {
+   "id": "q_3.3.12",
+   "kind": "exercise",
+   "number": "3.3.12",
+   "topic": "MCQ: solving for α given A+A′=I",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{cc}\\cos \\alpha & -\\sin \\alpha \\\\ \\sin \\alpha & \\cos \\alpha\\end{array}\\right]$ तथा $\\mathrm{A}+\\mathrm{A}^{\\prime}=\\mathrm{I}$, तो $\\alpha$ का मान है\n(A) $\\frac{\\pi}{6}$\n(B) $\\frac{\\pi}{3}$\n(C) $\\pi$\n(D) $\\frac{3 \\pi}{2}$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है: $A+A^{\\prime}=I \\Rightarrow\\left[\\begin{array}{cc}\\cos \\alpha & -\\sin \\alpha \\\\ \\sin \\alpha & \\cos \\alpha\\end{array}\\right]+\\left[\\begin{array}{cc}\\cos \\alpha & \\sin \\alpha \\\\ -\\sin \\alpha & \\cos \\alpha\\end{array}\\right]=\\left[\\begin{array}{ll}1 & 0 \\\\ 0 & 1\\end{array}\\right]$\n\n$\\Rightarrow\\left[\\begin{array}{cc}2 \\cos \\alpha & 0 \\\\ 0 & 2 \\cos \\alpha\\end{array}\\right]=\\left[\\begin{array}{ll}1 & 0 \\\\ 0 & 1\\end{array}\\right] \\quad \\Rightarrow 2 \\cos \\alpha=1 \\quad \\Rightarrow \\cos \\alpha=\\frac{1}{2} \\quad \\Rightarrow \\alpha=\\frac{\\pi}{3}$\n\nअतः, विकल्प (B) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(B) $\\frac{\\pi}{3}$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.9.1",
+   "kind": "additional_exercise",
+   "number": "3.9.1",
+   "topic": "Skew-symmetric matrix proof",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि A तथा B सममित आव्यूह हैं तो सिद्ध कीजिए कि $\\mathrm{AB}-\\mathrm{BA}$ एक विषम सममित आव्यूह है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{array}{ll}\n(A B-B A)^{\\prime}=(A B)^{\\prime}-(B A)^{\\prime} & {\\left[\\because(X-Y)^{\\prime}=X^{\\prime}-Y^{\\prime}\\right]} \\\\\n=B^{\\prime} A^{\\prime}-A^{\\prime} B^{\\prime} & {\\left[\\because(A B)^{\\prime}=B^{\\prime} A^{\\prime}\\right]} \\\\\n=B A-A B & {\\left[\\because \\text { दिया है: } A^{\\prime}=A, B^{\\prime}=B\\right]} \\\\\n=-(A B-B A) & \\\\\n\\Rightarrow(A B-B A)^{\\prime}=-(A B-B A), &\n\\end{array}\n$$\n\nइसलिए, आव्यूह $(\\mathrm{AB}-\\mathrm{BA})$ एक विषम सममित आव्यूह है।"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_3.9.2",
+   "kind": "additional_exercise",
+   "number": "3.9.2",
+   "topic": "Symmetric or skew-symmetric of B'AB",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "सिद्ध कीजिए कि आव्यूह $\\mathrm{B}^{\\prime} \\mathrm{AB}$ सममित अथवा विषम सममित है यदि A सममित अथवा विषम सममित है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "जब A सममित है",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यदि $A$ सममित आव्यूह है। तब $A^{\\prime}=A$\n\n$$\n\\begin{aligned}\n& \\text { यहाँ, }\\left(B^{\\prime} A B\\right)^{\\prime}=(A B)^{\\prime}\\left(B^{\\prime}\\right)^{\\prime} \\\\\n& =(A B)^{\\prime} B \\\\\n& =B^{\\prime} A^{\\prime} B \\\\\n& =B^{\\prime} A B \\\\\n& \\Rightarrow\\left(B^{\\prime} A B\\right)^{\\prime}=B^{\\prime} A B,\n\\end{aligned}\n$$\n\nइसलिए, आव्यूह $B^{\\prime} A B$ एक सममित आव्यूह है।"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "जब A विषम सममित है",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यदि $A$ विषम सममित आव्यूह है। तब $A^{\\prime}=-A$\n\n$$\n\\begin{aligned}\n& \\text { यहाँ, }\\left(B^{\\prime} A B\\right)^{\\prime}=(A B)^{\\prime}\\left(B^{\\prime}\\right)^{\\prime} \\\\\n& =(A B)^{\\prime} B \\\\\n& =B^{\\prime} A^{\\prime} B \\\\\n& =-B^{\\prime} A B \\\\\n& \\Rightarrow\\left(B^{\\prime} A B\\right)^{\\prime}=-B^{\\prime} A B,\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& {\\left[\\because(A B)^{\\prime}=B^{\\prime} A^{\\prime}\\right]} \\\\\n& {\\left[\\because\\left(B^{\\prime}\\right)^{\\prime}=B\\right]} \\\\\n& {\\left[\\because(A B)^{\\prime}=B^{\\prime} A^{\\prime}\\right]} \\\\\n& {\\left[\\because \\text { दिया है: } A^{\\prime}=-A\\right]}\n\\end{aligned}\n$$\n\nइसलिए, आव्यूह $B^{\\prime} A B$ एक विषम सममित आव्यूह है।"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_3.9.3",
+   "kind": "additional_exercise",
+   "number": "3.9.3",
+   "topic": "Finding x, y, z from A'A=I",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$x, y$, तथा $z$ के मानों को ज्ञात कीजिए, यदि आव्यूह $\\mathrm{A}=\\left[\\begin{array}{rrr}0 & 2 y & z \\\\ x & y & -z \\\\ x & -y & z\\end{array}\\right]$ समीकरण $\\mathrm{A}^{\\prime} \\mathrm{A}=\\mathrm{I}$ को संतुष्ट करता है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "concept",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है: $A^{\\prime} A=I$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& \\Rightarrow\\left[\\begin{array}{ccc}\n0 & 2 y & z \\\\\nx & y & -z \\\\\nx & -y & z\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n0 & 2 y & z \\\\\nx & y & -z \\\\\nx & -y & z\n\\end{array}\\right]^{\\prime}=\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{ccc}\n0 & 2 y & z \\\\\nx & y & -z \\\\\nx & -y & z\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n0 & \\mathrm{x} & x \\\\\n2 y & y & -y \\\\\nz & -z & z\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right]\n\\end{aligned}\n$$\n\n$$\n\\Rightarrow\\left[\\begin{array}{ccc}\n0+4 y^{2}+z^{2} & 0+2 y^{2}-z^{2} & 0-2 y^{2}+z^{2} \\\\\n0+2 y^{2}-z^{2} & x^{2}+y^{2}+z^{2} & x^{2}-y^{2}-z^{2} \\\\\n0-2 y^{2}+z^{2} & x^{2}-y^{2}-z^{2} & x^{2}+y^{2}+z^{2}\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यदि दो आव्यूह समान हैं तो उनके संगत अवयव भी समान होते हैं, इसलिए $4 y^{2}+z^{2}=1, \\quad 2 y^{2}-z^{2}=0$ तथा $x^{2}+y^{2}+z^{2}=1$\nहल करने पर, $x= \\pm \\frac{1}{\\sqrt{2}}, y= \\pm \\frac{1}{\\sqrt{6}}$ तथा $z= \\pm \\frac{1}{\\sqrt{3}}$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x= \\pm \\frac{1}{\\sqrt{2}}, y= \\pm \\frac{1}{\\sqrt{6}}, z= \\pm \\frac{1}{\\sqrt{3}}$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.9.4",
+   "kind": "additional_exercise",
+   "number": "3.9.4",
+   "topic": "Solving x from matrix product equation",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$x$ के किस मान के लिए $\\left[\\begin{array}{lll}1 & 2 & 1\\end{array}\\right]\\left[\\begin{array}{lll}1 & 2 & 0 \\\\ 2 & 0 & 1 \\\\ 1 & 0 & 2\\end{array}\\right]\\left[\\begin{array}{l}0 \\\\ 2 \\\\ x\\end{array}\\right]=\\mathrm{O}$ है ?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है: $\\left[\\begin{array}{lll}1 & 2 & 1\\end{array}\\right]\\left[\\begin{array}{lll}1 & 2 & 0 \\\\ 2 & 0 & 1 \\\\ 1 & 0 & 2\\end{array}\\right]\\left[\\begin{array}{l}0 \\\\ 2 \\\\ x\\end{array}\\right]=0$\n\n$$\n\\begin{aligned}\n& \\Rightarrow\\left[\\begin{array}{lll}\n1+4+1 & 2+0+0 & 0+2+2\n\\end{array}\\right]\\left[\\begin{array}{l}\n0 \\\\\n2 \\\\\nx\n\\end{array}\\right]=O \\\\\n& \\Rightarrow\\left[\\begin{array}{lll}\n6 & 2 & 4\n\\end{array}\\right]\\left[\\begin{array}{l}\n0 \\\\\n2 \\\\\nx\n\\end{array}\\right]=O \\\\\n& \\Rightarrow[0+4+4 x]=[0] \\\\\n& \\Rightarrow 4+4 x=0 \\quad \\Rightarrow x=-1\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=-1$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.9.5",
+   "kind": "additional_exercise",
+   "number": "3.9.5",
+   "topic": "Verifying A²-5A+7I=O",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{rr}3 & 1 \\\\ -1 & 2\\end{array}\\right]$ हो तो सिद्ध कीजिए कि $\\mathrm{A}^{2}-5 \\mathrm{~A}+7 \\mathrm{I}=\\mathrm{O}$ है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& \\text { LHS }=A^{2}-5 A+7 I \\\\\n& =\\left[\\begin{array}{cc}\n3 & 1 \\\\\n-1 & 2\n\\end{array}\\right]\\left[\\begin{array}{cc}\n3 & 1 \\\\\n-1 & 2\n\\end{array}\\right]-5\\left[\\begin{array}{cc}\n3 & 1 \\\\\n-1 & 2\n\\end{array}\\right]+7\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n9-1 & 3+2 \\\\\n-3-2 & -1+4\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n15 & 5 \\\\\n-5 & 10\n\\end{array}\\right]+\\left[\\begin{array}{ll}\n7 & 0 \\\\\n0 & 7\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n8 & 5 \\\\\n-5 & 3\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n15 & 5 \\\\\n-5 & 10\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n7 & 0 \\\\\n0 & 7\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n8-15+7 & 5-5+0 \\\\\n-5+5+0 & 3-10+7\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n0 & 0 \\\\\n0 & 0\n\\end{array}\\right]=O=\\text { RHS }\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_3.9.6",
+   "kind": "additional_exercise",
+   "number": "3.9.6",
+   "topic": "Solving x from vector-matrix equation",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\left[\\begin{array}{lll}x & -5 & -1\\end{array}\\right]\\left[\\begin{array}{lll}1 & 0 & 2 \\\\ 0 & 2 & 1 \\\\ 2 & 0 & 3\\end{array}\\right]\\left[\\begin{array}{l}x \\\\ 4 \\\\ 1\\end{array}\\right]=\\mathrm{O}$ है तो $x$ का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "concept",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है: $\\left[\\begin{array}{lll}x & -5 & -1\\end{array}\\right]\\left[\\begin{array}{lll}1 & 0 & 2 \\\\ 0 & 2 & 1 \\\\ 2 & 0 & 3\\end{array}\\right]\\left[\\begin{array}{l}x \\\\ 4 \\\\ 1\\end{array}\\right]=0$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\left.\\begin{array}{l}\n{\\left[\\begin{array}{lll}\nx & -5 & -1\n\\end{array}\\right]\\left[\\begin{array}{lll}\n1 & 0 & 2 \\\\\n0 & 2 & 1 \\\\\n2 & 0 & 3\n\\end{array}\\right]\\left[\\begin{array}{l}\nx \\\\\n4 \\\\\n1\n\\end{array}\\right]} \\\\\n\\Rightarrow\\left[\\begin{array}{lll}\nx+0-2 & 0-10+0 & 2 x-5-3\n\\end{array}\\right]\\left[\\begin{array}{l}\nx \\\\\n4 \\\\\n1\n\\end{array}\\right]=0 \\\\\n\\Rightarrow\\left[\\begin{array}{lll}\nx-2 & -10 & 2 x-8\n\\end{array}\\right]\\left[\\begin{array}{l}\nx \\\\\n4 \\\\\n1\n\\end{array}\\right]=0 \\\\\n\\Rightarrow\\left[x^{2}-2 x-40+2 x-8\\right]=[0]\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\Rightarrow x^{2}=48\n$$\n\n$$\n\\Rightarrow x=\\pm 4 \\sqrt{3}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_3.9.7",
+   "kind": "additional_exercise",
+   "number": "3.9.7",
+   "topic": "Revenue and profit via matrix algebra",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "एक निर्माता तीन प्रकार की वस्तुएँ $x, y$, तथा z का उत्पादन करता है जिन का वह दो बाजारों में विक्रय करता है। वस्तुओं की वार्षिक बिक्री नीचे सूचित (निदर्शित) है:"
+    },
+    {
+     "type": "table",
+     "html": "| बाज़ार | उत्पादन |  |  |\n| :--- | :--- | :--- | :--- |\n| I | 10,000 | 2,000 | 18,000 |\n| II | 6,000 | 20,000 | 8,000 |"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(a)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "यदि $x, y$ तथा $z$ की प्रत्येक इकाई का विक्रय मूल्य क्रमशः Rs $2.50$, Rs $1.50$ तथा Rs $1.00$ है तो प्रत्येक बाज़ार में कुल आय (Revenue), आव्यूह बीजगणित की सहायता से ज्ञात कीजिए।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "concept",
+       "stage": "given",
+       "label": "जानकारी",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यदि $x, y$ तथा $z$ की प्रत्येक इकाई का विक्रय मूल्य क्रमशः ₹ $2.50$, ₹ $1.50$ तथा ₹ $1.00$ है तो वस्तुएँ विक्रय मूल्य"
+        },
+        {
+         "type": "table",
+         "html": "|  | $x$ | $y$ | $z$ |  |\n| :--- | :--- | :--- | :--- | :--- |\n| बाजार I | [10000 | $2000$ | $18000$ | ₹2.50] |\n| बाजार II | $6000$ | $20000$ | $8000$ J | ₹1.00] |\n|  |  |  |  |  |"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "मान रखो",
+       "flow": [
+        {
+         "type": "text",
+         "text": "प्रत्येक बाज़ार में कुल आय\n\n$$\n=\\left[\\begin{array}{ccc}\n10000 & 2000 & 18000 \\\\\n6000 & 20000 & 8000\n\\end{array}\\right]\\left[\\begin{array}{c}\n₹ 2.50 \\\\\n₹ 1.50 \\\\\n₹ 1.00\n\\end{array}\\right]=\\left[\\begin{array}{c}\n₹ 25000+₹ 3000+₹ 18000 \\\\\n₹ 15000+₹ 30000+₹ 8000\n\\end{array}\\right]=\\left[\\begin{array}{c}\n₹ 46000 \\\\\n₹ 53000\n\\end{array}\\right]\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "निष्कर्ष",
+       "flow": [
+        {
+         "type": "text",
+         "text": "अतः, बाज़ार I में कुल आय ₹46000 तथा बाज़ार II में कुल आय ₹53000 है।"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(b)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "यदि उपर्युक्त तीन वस्तुओं की प्रत्येक इकाई की लागत (Cost) क्रमश: Rs 2.00, Rs $1.00$ तथा पैसे $50$ है तो कुल लाभ (Gross profit) ज्ञात कीजिए।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "concept",
+       "stage": "given",
+       "label": "जानकारी",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यदि $x, y$ तथा $z$ की प्रत्येक इकाई की लागत क्रमशः ₹ $2.00$, ₹ $1.00$ तथा $50$ पैसे है तो वस्तुएँ लागत"
+        },
+        {
+         "type": "table",
+         "html": "|  | $x$ | $y$ | $z$ |  |\n| :--- | :--- | :--- | :--- | :--- |\n| बाजार I | [10000 | $2000$ | $18000$ | ₹2.00] |\n| बाजार II | $6000$ | $20000$ | $8000$ J | ₹0.50] |\n|  |  |  |  |  |"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "label": "मान रखो",
+       "flow": [
+        {
+         "type": "text",
+         "text": "प्रत्येक बाज़ार में कुल लागत\n\n$$\n=\\left[\\begin{array}{ccc}\n10000 & 2000 & 18000 \\\\\n6000 & 20000 & 8000\n\\end{array}\\right]\\left[\\begin{array}{c}\n₹ 2.00 \\\\\n₹ 1.00 \\\\\n₹ 0.50\n\\end{array}\\right]=\\left[\\begin{array}{c}\n₹ 20000+₹ 2000+₹ 9000 \\\\\n₹ 12000+₹ 20000+₹ 4000\n\\end{array}\\right]=\\left[\\begin{array}{c}\n₹ 31000 \\\\\n₹ 36000\n\\end{array}\\right]\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "निष्कर्ष",
+       "flow": [
+        {
+         "type": "text",
+         "text": "बाज़ार I में कुल आय ₹46000 तथा कुल लागत ₹31000 है।\nअतः, कुल लाभ = आय - लागत = ₹46000 - ₹31000 = ₹15000\nबाज़ार $I I$ में कुल आय ₹ $53000$ तथा कुल लागत ₹ $36000$ है।\nअतः, कुल लाभ = आय - लागत =₹53000-₹36000=₹17000"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_3.9.8",
+   "kind": "additional_exercise",
+   "number": "3.9.8",
+   "topic": "Finding matrix X from an equation",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "आव्यूह X ज्ञात कीजिए, यदि $\\mathrm{X}\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 4 & 5 & 6\\end{array}\\right]=\\left[\\begin{array}{rrr}-7 & -8 & -9 \\\\ 2 & 4 & 6\\end{array}\\right]$ है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "concept",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "माना, $\\mathrm{X}=\\left[\\begin{array}{ll}a & b \\\\ c & d\\end{array}\\right]$\nइसलिए, $\\mathrm{X}\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 4 & 5 & 6\\end{array}\\right]=\\left[\\begin{array}{ccc}-7 & -8 & -9 \\\\ 2 & 4 & 6\\end{array}\\right]$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& \\Rightarrow\\left[\\begin{array}{ll}\na & b \\\\\nc & d\n\\end{array}\\right]\\left[\\begin{array}{lll}\n1 & 2 & 3 \\\\\n4 & 5 & 6\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-7 & -8 & -9 \\\\\n2 & 4 & 6\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{lll}\na+4 b & 2 a+5 b & 3 a+6 b \\\\\nc+4 d & 2 c+5 d & 3 c+6 d\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-7 & -8 & -9 \\\\\n2 & 4 & 6\n\\end{array}\\right]\n\\end{aligned}\n$$\n\nयदि दो आव्यूह समान हैं तो उनके संगत अवयव भी समान होते हैं, इसलिए\n\n$$\na+4 b=-7, \\quad 2 a+5 b=-8, c+4 d=2 \\text { तथा } 2 c+5 d=4\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "हल करने पर, $a=1, b=-2, c=2$ तथा $d=0$\nइसलिए, $\\mathrm{X}=\\left[\\begin{array}{cc}1 & -2 \\\\ 2 & 0\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\mathrm{X}=\\left[\\begin{array}{cc}1 & -2 \\\\ 2 & 0\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.9.9",
+   "kind": "additional_exercise",
+   "number": "3.9.9",
+   "topic": "MCQ: property from A²=I",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{cc}\\alpha & \\beta \\\\ \\gamma & -\\alpha\\end{array}\\right]$ इस प्रकार है कि $\\mathrm{A}^{2}=\\mathrm{I}$, तो\n(A) $1+\\alpha^{2}+\\beta \\gamma=0$\n(B) $1-\\alpha^{2}+\\beta \\gamma=0$\n(C) $1-\\alpha^{2}-\\beta \\gamma=0$\n(D) $1+\\alpha^{2}-\\beta \\gamma=0$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "concept",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है: $A^{2}=I$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\Rightarrow\\left[\\begin{array}{cc}\n\\alpha & \\beta \\\\\n\\gamma & -\\alpha\n\\end{array}\\right]\\left[\\begin{array}{cc}\n\\alpha & \\beta \\\\\n\\gamma & -\\alpha\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right] \\quad \\Rightarrow\\left[\\begin{array}{cc}\n\\alpha^{2}+\\beta \\gamma & \\alpha \\beta-\\beta \\alpha \\\\\n\\alpha \\gamma-\\alpha \\gamma & \\beta \\gamma+\\alpha^{2}\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "तुलना करने पर, $\\alpha^{2}+\\beta \\gamma=1$, अतः, विकल्प (C) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(C) $1-\\alpha^{2}-\\beta \\gamma=0$"
+    }
+   ]
+  },
+  {
+   "id": "q_3.9.10",
+   "kind": "additional_exercise",
+   "number": "3.9.10",
+   "topic": "MCQ: symmetric and skew-symmetric matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि एक आव्यूह सममित तथा विषम सममित दोनों ही है तो:\n(A) A एक विकर्ण आव्यूह है।\n(B) A एक शून्य आव्यूह है।\n(C) A एक वर्ग आव्यूह है।\n(D) इनमें से कोई नहीं।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "एक शून्य आव्यूह ही सममित तथा विषम सममित दोनों प्रकार का होता है।\nअतः, विकल्प (B) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(B) A एक शून्य आव्यूह है।"
+    }
+   ]
+  },
+  {
+   "id": "q_3.9.11",
+   "kind": "additional_exercise",
+   "number": "3.9.11",
+   "topic": "MCQ: (I+A)³-7A given A²=A",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि A एक वर्ग आव्यूह इस प्रकार है कि $\\mathrm{A}^{2}=\\mathrm{A}$, तो $(\\mathrm{I}+\\mathrm{A})^{3}-7 \\mathrm{~A}$ बराबर है:\n(A) A\n(B) $\\mathrm{I}-\\mathrm{A}$\n(C) I\n(D) 3A"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{array}{ll}\n(I+A)^{3}-7 A=I^{3}+A^{3}+3 I^{2} \\mathrm{~A}+3 I A^{2}-7 A & \\\\\n=I+A^{2} A+3 I \\mathrm{~A}+3 I A^{2}-7 A & {\\left[\\text { क्योंकि } I^{3}=I^{2}=I\\right]} \\\\\n=I+A A+3 \\mathrm{~A}+3 I A-7 A & {\\left[\\text { क्योंकि } A^{2}=A\\right]} \\\\\n=I+A+3 \\mathrm{~A}+3 A-7 A=I & {[\\text { क्योंकि } I A=A]}\n\\end{array}\n$$\n\nअतः, विकल्प (C) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(C) I"
+    }
+   ]
+  }
+ ]
+}

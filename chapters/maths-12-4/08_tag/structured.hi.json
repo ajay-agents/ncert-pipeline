@@ -1,0 +1,3274 @@
+{
+ "front": {
+  "title": "सारणिक",
+  "chapter": "4"
+ },
+ "items": [
+  {
+   "id": "ex_4.1",
+   "kind": "example",
+   "number": "4.1",
+   "topic": "Value of a 2x2 determinant",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$\\left|\\begin{array}{cc}2 & 4 \\\\ -1 & 2\\end{array}\\right|$ का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{cc}2 & 4 \\\\ -1 & 2\\end{array}\\right|=2(2)-4(-1)=4+4=8$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$8$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.2",
+   "kind": "example",
+   "number": "4.2",
+   "topic": "Value of a symbolic 2x2 determinant",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$\\left|\\begin{array}{cc}x & x+1 \\\\ x-1 & x\\end{array}\\right|$ का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{cc}x & x+1 \\\\ x-1 & x\\end{array}\\right|=x(x)-(x+1)(x-1)=x^{2}-\\left(x^{2}-1\\right)=x^{2}-x^{2}+1=1$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$1$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.3",
+   "kind": "example",
+   "number": "4.3",
+   "topic": "3x3 determinant via column expansion",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "सारणिक $\\Delta=\\left|\\begin{array}{rrr}1 & 2 & 4 \\\\ -1 & 3 & 0 \\\\ 4 & 1 & 0\\end{array}\\right|$ का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "concept",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "ध्यान दीजिए कि तीसरे स्तंभ में दो प्रविष्टियाँ शून्य हैं। इसलिए तीसरे स्तंभ $\\left(\\mathrm{C}_{3}\\right)$ के अनुदिश प्रसरण करने पर हमें प्राप्त होता है कि"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n\\Delta & =4\\left|\\begin{array}{cc}\n-1 & 3 \\\\\n4 & 1\n\\end{array}\\right|-0\\left|\\begin{array}{ll}\n1 & 2 \\\\\n4 & 1\n\\end{array}\\right|+0\\left|\\begin{array}{cc}\n1 & 2 \\\\\n-1 & 3\n\\end{array}\\right| \\\\\n& =4(-1-12)-0+0=-52\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$-52$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.4",
+   "kind": "example",
+   "number": "4.4",
+   "topic": "Determinant of a skew-symmetric-like trig matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$\\Delta=\\left|\\begin{array}{ccc}0 & \\sin \\alpha & -\\cos \\alpha \\\\ -\\sin \\alpha & 0 & \\sin \\beta \\\\ \\cos \\alpha & -\\sin \\beta & 0\\end{array}\\right|$ का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "concept",
+     "stage": "given",
+     "label": "जानकारी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$\\mathrm{R}_{1}$ के अनुदिश प्रसरण करने पर हमें प्राप्त होता है कि"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n\\Delta & =0\\left|\\begin{array}{cc}\n0 & \\sin \\beta \\\\\n-\\sin \\beta & 0\n\\end{array}\\right|-\\sin \\alpha\\left|\\begin{array}{cc}\n-\\sin \\alpha & \\sin \\beta \\\\\n\\cos \\alpha & 0\n\\end{array}\\right|-\\cos \\alpha\\left|\\begin{array}{cc}\n-\\sin \\alpha & 0 \\\\\n\\cos \\alpha & -\\sin \\beta\n\\end{array}\\right| \\\\\n& =0-\\sin \\alpha(0-\\sin \\beta \\cos \\alpha)-\\cos \\alpha(\\sin \\alpha \\sin \\beta-0) \\\\\n& =\\sin \\alpha \\sin \\beta \\cos \\alpha-\\cos \\alpha \\sin \\alpha \\sin \\beta=0\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$0$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.5",
+   "kind": "example",
+   "number": "4.5",
+   "topic": "Solving for x from equal determinants",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\left|\\begin{array}{ll}3 & x \\\\ x & 1\\end{array}\\right|=\\left|\\begin{array}{ll}3 & 2 \\\\ 4 & 1\\end{array}\\right|$ तो $x$ के मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है कि $\\left|\\begin{array}{ll}3 & x \\\\ x & 1\\end{array}\\right|=\\left|\\begin{array}{ll}3 & 2 \\\\ 4 & 1\\end{array}\\right|$\nअर्थात्\nअर्थात्\nअत:\n\n$$\n\\begin{aligned}\n3-x^{2} & =3-8 \\\\\nx^{2} & =8 \\\\\nx & = \\pm 2 \\sqrt{2}\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x= \\pm 2 \\sqrt{2}$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.6",
+   "kind": "example",
+   "number": "4.6",
+   "topic": "Area of a triangle using determinants",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "एक त्रिभुज का क्षेत्रफल ज्ञात कीजिए जिसके शीर्ष $(3,8),(-4,2)$ और $(5,1)$ हैं।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "मुख्य सूत्र",
+     "flow": [
+      {
+       "type": "text",
+       "text": "त्रिभुज का क्षेत्रफल:\n\n$$\n\\begin{aligned}\n\\Delta & =\\frac{1}{2}\\left|\\begin{array}{rrr}\n3 & 8 & 1 \\\\\n-4 & 2 & 1 \\\\\n5 & 1 & 1\n\\end{array}\\right|=\\frac{1}{2}[3(2-1)-8(-4-5)+1(-4-10)] \\\\\n& =\\frac{1}{2}(3+72-14)=\\frac{61}{2}\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\frac{61}{2}$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.7",
+   "kind": "example",
+   "number": "4.7",
+   "topic": "Equation of a line and area condition via determinants",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "सारणिकों का प्रयोग करके $\\mathrm{A}(1,3)$ और $\\mathrm{B}(0,0)$ को जोड़ने वाली रेखा का समीकरण ज्ञात कीजिए और $k$ का मान ज्ञात कीजिए यदि एक बिंदु $\\mathrm{D}(k, 0)$ इस प्रकार है कि $\\Delta \\mathrm{ABD}$ का क्षेत्रफल $3$ वर्ग इकाई है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "मान लीजिए AB पर कोई बिंदु $\\mathrm{P}(x, y)$ है तब $\\Delta \\mathrm{ABP}$ का क्षेत्रफल $=0$ (क्यों?)\nइसलिए\n$$\n\\frac{1}{2}\\left|\\begin{array}{lll}\n0 & 0 & 1 \\\\\n1 & 3 & 1 \\\\\nx & y & 1\n\\end{array}\\right|=0\n$$\nइससे प्राप्त है\n$$\n\\frac{1}{2}(y-3 x)=0 \\text { या } y=3 x\n$$\nजो अभीष्ट रेखा AB का समीकरण है।"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "किंतु $\\Delta \\mathrm{ABD}$ का क्षेत्रफल $3$ वर्ग इकाई दिया है अतः\n$$\n\\frac{1}{2}\\left|\\begin{array}{ccc}\n1 & 3 & 1 \\\\\n0 & 0 & 1 \\\\\nk & 0 & 1\n\\end{array}\\right|= \\pm 3 \\text { हमें प्राप्त है } \\frac{-3 k}{2}= \\pm 3 \\text {, i.e., } k=2\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "रेखा AB का समीकरण $y=3x$; $k=2$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.8",
+   "kind": "example",
+   "number": "4.8",
+   "topic": "Finding a minor of a determinant element",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "सारणिक $\\Delta=\\left|\\begin{array}{lll}1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9\\end{array}\\right|$ में अवयव $6$ का उपसारणिक ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "क्योंकि $6$ दूसरी पंक्ति एवं तृतीय स्तंभ में स्थित है। इसलिए इसका उपसारिणक $=\\mathrm{M}_{23}$ निम्नलिखित प्रकार से प्राप्त होता है।\n\n$$\n\\mathrm{M}_{23}=\\left|\\begin{array}{ll}\n1 & 2 \\\\\n7 & 8\n\\end{array}\\right|=8-14=-6\\left(\\Delta \\text { से } \\mathrm{R}_{2} \\text { और } \\mathrm{C}_{3} \\text { हटाने पर }\\right)\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\mathrm{M}_{23}=-6$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.9",
+   "kind": "example",
+   "number": "4.9",
+   "topic": "Minors and cofactors of a 2x2 determinant",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "सारणिक $\\left|\\begin{array}{cc}1 & -2 \\\\ 4 & 3\\end{array}\\right|$ के सभी अवयवों के उपसारणिक व सहखंड ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अवयव $a_{i j}$ का उपसारणिक $\\mathrm{M}_{i j}$ है।\nयहाँ\n\n$$\n\\begin{aligned}\n& a_{11}=1, \\text { इसलिए } \\mathrm{M}_{11}=a_{11} \\text { का उपसारणिक }=3 \\\\\n& \\mathrm{M}_{12}=\\text { अवयव } a_{12} \\text { का उपसारणिक }=4 \\\\\n& \\mathrm{M}_{21}=\\text { अवयव } a_{21} \\text { का उपसारणिक }=-2 \\\\\n& \\mathrm{M}_{22}=\\text { अवयव } a_{22} \\text { का उपसारणिक }=1\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अब $a_{i j}$ का सहखंड $\\mathrm{A}_{i j}$ है। इसलिए\n\n$$\n\\begin{aligned}\n& A_{11}=(-1)^{1+1} \\quad M_{11}=(-1)^{2}(3)=3 \\\\\n& A_{12}=(-1)^{1+2} \\quad M_{12}=(-1)^{3}(4)=-4 \\\\\n& A_{21}=(-1)^{2+1} \\quad M_{21}=(-1)^{3}(-2)=2 \\\\\n& A_{22}=(-1)^{2+2} \\quad M_{22}=(-1)^{4}(1)=1\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_4.10",
+   "kind": "example",
+   "number": "4.10",
+   "topic": "General minors and cofactors of a 3x3 determinant",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$\\Delta=\\left|\\begin{array}{lll}a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33}\\end{array}\\right|$ के अवयवों $a_{11}$ तथा $a_{21}$ के उपसारणिक और सहखंड ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "उपसारणिक और सहखंड की परिभाषा द्वारा हम पाते हैं:\n$a_{11}$ का उपसारणिक $=\\mathrm{M}_{11}=\\left|\\begin{array}{ll}a_{22} & a_{23} \\\\ a_{32} & a_{33}\\end{array}\\right|=a_{22} a_{33}-a_{23} a_{32}$\n$a_{11}$ का सहखंड $=\\mathrm{A}_{11}=(-1)^{1+1} \\mathrm{M}_{11}=a_{22} a_{33}-a_{23} a_{32}$\n$a_{21}$ का उपसारणिक $=\\mathrm{M}_{21}=\\left|\\begin{array}{ll}a_{12} & a_{13} \\\\ a_{32} & a_{33}\\end{array}\\right|=a_{12} a_{33}-a_{13} a_{32}$\n$a_{21}$ का सहखंड $=\\mathrm{A}_{21}=(-1)^{2+1} \\mathrm{M}_{21}=(-1)\\left(a_{12} a_{33}-a_{13} a_{32}\\right)=-a_{12} a_{33}+a_{13} a_{32}$ है।"
+      }
+     ]
+    },
+    {
+     "type": "note",
+     "note_type": "recall",
+     "label": "टिप्पणी",
+     "flow": [
+      {
+       "type": "text",
+       "text": "टिप्पणी: उदाहरण $21$ में सारणिक $\\boldsymbol{\\Delta}$ का $\\mathrm{R}_{1}$ के सापेक्ष प्रसरण करने पर हम पाते हैं कि\n\n$$\n\\begin{aligned}\n\\Delta & =(-1)^{1+1} a_{11}\\left|\\begin{array}{ll}\na_{22} & a_{23} \\\\\na_{32} & a_{33}\n\\end{array}\\right|+(-1)^{1+2} a_{12}\\left|\\begin{array}{ll}\na_{21} & a_{23} \\\\\na_{31} & a_{33}\n\\end{array}\\right|+(-1)^{1+3} a_{13}\\left|\\begin{array}{ll}\na_{21} & a_{22} \\\\\na_{31} & a_{32}\n\\end{array}\\right| \\\\\n& =a_{11} \\mathrm{~A}_{11}+a_{12} \\mathrm{~A}_{12}+a_{13} \\mathrm{~A}_{13} \\text {, जहाँ } a_{i j} \\text { का सहखंड } \\mathrm{A}_{i j} \\text { हैं। } \\\\\n& =\\mathrm{R}_{1} \\text { के अवयवों और उनके संगत सहखंडों के गुणनफल का योग। }\n\\end{aligned}\n$$\n\nइसी प्रकार $\\Delta$ का $\\mathrm{R}_{2}, \\mathrm{R}_{3}, \\mathrm{C}_{1}, \\mathrm{C}_{2}$ और $\\mathrm{C}_{3}$ के अनुदिश $5$ प्रसरण अन्य प्रकार से हैं।\nअतः सारणिक $\\Delta$, किसी पंक्ति (या स्तंभ) के अवयवों और उनके संगत सहखंडों के गुणनफल का योग है।"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_4.11",
+   "kind": "example",
+   "number": "4.11",
+   "topic": "Minors and cofactors verification",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "सारणिक $\\left|\\begin{array}{ccc}2 & -3 & 5 \\\\ 6 & 0 & 4 \\\\ 1 & 5 & -7\\end{array}\\right|$ के अवयवों के उपसारणिक और सहखंड ज्ञात कीजिए और सत्यापित कीजिए कि $a_{11} \\mathrm{~A}_{31}+a_{12} \\mathrm{~A}_{32}+a_{13} \\mathrm{~A}_{33}=0$ है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ $\\mathrm{M}_{11}=\\left|\\begin{array}{cc}0 & 4 \\\\ 5 & -7\\end{array}\\right|=0-20=-20 ;$ इसलिए $\\mathrm{A}_{11}=(-1)^{1+1}(-20)=-20$\n\n$$\n\\begin{aligned}\n& \\mathrm{M}_{12}=\\left|\\begin{array}{cc}\n6 & 4 \\\\\n1 & -7\n\\end{array}\\right|=-42-4=-46 ; \\text { इसलिए } \\mathrm{A}_{12}=(-1)^{1+2}(-46)=46 \\\\\n& \\mathrm{M}_{13}=\\left|\\begin{array}{cc}\n6 & 0 \\\\\n1 & 5\n\\end{array}\\right|=30-0=30 ; \\text { इसलिए } \\mathrm{A}_{13}=(-1)^{1+3}(30)=30 \\\\\n& \\mathrm{M}_{21}=\\left|\\begin{array}{cc}\n-3 & 5 \\\\\n5 & -7\n\\end{array}\\right|=21-25=-4 ; \\text { इसलिए } \\mathrm{A}_{21}=(-1)^{2+1}(-4)=4 \\\\\n& \\mathrm{M}_{22}=\\left|\\begin{array}{cc}\n2 & 5 \\\\\n1 & -7\n\\end{array}\\right|=-14-5=-19 ; \\text { इसलिए } \\mathrm{A}_{22}=(-1)^{2+2}(-19)=-19 \\\\\n& \\mathrm{M}_{23}=\\left|\\begin{array}{cc}\n2 & -3 \\\\\n1 & 5\n\\end{array}\\right|=10+3=13 ; \\text { इसलिए } \\mathrm{A}_{23}=(-1)^{2+3}(13)=-13 \\\\\n& \\mathrm{M}_{31}=\\left|\\begin{array}{cc}\n-3 & 5 \\\\\n0 & 4\n\\end{array}\\right|=-12-0=-12 ; \\text { इसलिए } \\mathrm{A}_{31}=(-1)^{3+1}(-12)=-12 \\\\\n& \\mathrm{M}_{32}=\\left|\\begin{array}{cc}\n2 & 5 \\\\\n6 & 4\n\\end{array}\\right|=8-30=-22 ; \\text { इसलिए } \\mathrm{A}_{32}=(-1)^{3+2}(-22)=22\n\\end{aligned}\n$$\n\nऔर\n\n$$\n\\mathrm{M}_{33}=\\left|\\begin{array}{cc}\n2 & -3 \\\\\n6 & 0\n\\end{array}\\right|=0+18=18 ; \\text { इसलिए } \\mathrm{A}_{33}=(-1)^{3+3}(18)=18\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अब\n\n$$\na_{11}=2, a_{12}=-3, a_{13}=5 ; \\text { तथा } \\mathrm{A}_{31}=-12, \\mathrm{~A}_{32}=22, \\mathrm{~A}_{33}=18 \\text { है। }\n$$\n\nइसलिए\n\n$$\n\\begin{aligned}\n& a_{11} \\mathrm{~A}_{31}+a_{12} \\mathrm{~A}_{32}+a_{13} \\mathrm{~A}_{33} \\\\\n& =2(-12)+(-3)(22)+5(18)=-24-66+90=0\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_4.12",
+   "kind": "example",
+   "number": "4.12",
+   "topic": "Adjoint of a 2x2 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "आव्यूह $\\mathrm{A}=\\left[\\begin{array}{ll}2 & 3 \\\\ 1 & 4\\end{array}\\right]$ का सहखंडज ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "हम जानते हैं कि $\\mathrm{A}_{11}=4, \\mathrm{~A}_{12}=-1, \\mathrm{~A}_{21}=-3, \\mathrm{~A}_{22}=2$\nअत:\n\n$$\n\\operatorname{adj} \\mathrm{A}=\\left[\\begin{array}{ll}\n\\mathrm{A}_{11} & \\mathrm{~A}_{21} \\\\\n\\mathrm{~A}_{12} & \\mathrm{~A}_{22}\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n4 & -3 \\\\\n-1 & 2\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\operatorname{adj} \\mathrm{A}=\\left[\\begin{array}{cc}4 & -3 \\\\ -1 & 2\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.13",
+   "kind": "example",
+   "number": "4.13",
+   "topic": "Verifying A.adjA=|A|.I and finding inverse",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{lll}1 & 3 & 3 \\\\ 1 & 4 & 3 \\\\ 1 & 3 & 4\\end{array}\\right]$ हो तो सत्यापित कीजिए कि $\\mathrm{A} \\cdot \\operatorname{adj} \\mathrm{A}=|\\mathrm{A}| \\cdot \\mathrm{I}$ और $\\mathrm{A}^{-1}$\nज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "हम पाते हैं कि $|\\mathrm{A}|=1(16-9)-3(4-3)+3(3-4)=1 \\neq 0$\nअब $\\mathrm{A}_{11}=7, \\mathrm{~A}_{12}=-1, \\mathrm{~A}_{13}=-1, \\mathrm{~A}_{21}=-3, \\mathrm{~A}_{22}=1, \\mathrm{~A}_{23}=0, \\mathrm{~A}_{31}=-3, \\mathrm{~A}_{32}=0, \\mathrm{~A}_{33}=1$\nइसलिए\n\n$$\n\\operatorname{adj} \\mathrm{A}=\\left[\\begin{array}{rcc}\n7 & -3 & -3 \\\\\n-1 & 1 & 0 \\\\\n-1 & 0 & 1\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अब\n\n$$\n\\mathrm{A} \\cdot(\\operatorname{adj} \\mathrm{~A})=\\left[\\begin{array}{lll}\n1 & 3 & 3 \\\\\n1 & 4 & 3 \\\\\n1 & 3 & 4\n\\end{array}\\right]\\left[\\begin{array}{rcc}\n7 & -3 & -3 \\\\\n-1 & 1 & 0 \\\\\n-1 & 0 & 1\n\\end{array}\\right]\n$$\n\n$$\n=\\left[\\begin{array}{lll}\n7-3-3 & -3+3+0 & -3+0+3 \\\\\n7-4-3 & -3+4+0 & -3+0+3 \\\\\n7-3-4 & -3+3+0 & -3+0+4\n\\end{array}\\right]\n$$\n\n$$\n=\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right]=(1)\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right]=|\\mathrm{A}| \\cdot \\mathrm{I}\n$$\n\nऔर\n\n$$\n\\mathrm{A}^{-1}=\\frac{1}{|\\mathrm{~A}|} \\cdot \\operatorname{adj} \\mathrm{A}=\\frac{1}{1}\\left[\\begin{array}{ccc}\n7 & -3 & -3 \\\\\n-1 & 1 & 0 \\\\\n-1 & 0 & 1\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n7 & -3 & -3 \\\\\n-1 & 1 & 0 \\\\\n-1 & 0 & 1\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\mathrm{A}^{-1}=\\left[\\begin{array}{ccc}7 & -3 & -3 \\\\ -1 & 1 & 0 \\\\ -1 & 0 & 1\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.14",
+   "kind": "example",
+   "number": "4.14",
+   "topic": "Verifying (AB)^-1 = B^-1 A^-1",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{cc}2 & 3 \\\\ 1 & -4\\end{array}\\right], \\mathrm{B}=\\left[\\begin{array}{cc}1 & -2 \\\\ -1 & 3\\end{array}\\right]$, तो सत्यापित कीजिए कि $(\\mathrm{AB})^{-1}=\\mathrm{B}^{-1} \\mathrm{~A}^{-1}$ है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "हम जानते हैं कि $\\mathrm{AB}=\\left[\\begin{array}{cc}2 & 3 \\\\ 1 & -4\\end{array}\\right]\\left[\\begin{array}{cc}1 & -2 \\\\ -1 & 3\\end{array}\\right]=\\left[\\begin{array}{cc}-1 & 5 \\\\ 5 & -14\\end{array}\\right]$ है। $|\\mathrm{AB}|=-11 \\neq 0,(\\mathrm{AB})^{-1}$ का अस्तित्व है। इसे इस प्रकार व्यक्त किया जाता है।\n\n$$\n(\\mathrm{AB})^{-1}=\\frac{1}{|\\mathrm{AB}|} \\cdot \\operatorname{adj}(\\mathrm{AB})=-\\frac{1}{11}\\left[\\begin{array}{cc}\n-14 & -5 \\\\\n-5 & -1\n\\end{array}\\right]=\\frac{1}{11}\\left[\\begin{array}{cc}\n14 & 5 \\\\\n5 & 1\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$|\\mathrm{A}|=-11 \\neq 0$ और $|\\mathrm{B}|=1 \\neq 0$ भी हैं। इसलिए $\\mathrm{A}^{-1}$ और $\\mathrm{B}^{-1}$ दोनों का अस्तित्व है। इन्हें इस प्रकार लिखा जा सकता है।\n\n$$\n\\mathrm{A}^{-1}=-\\frac{1}{11}\\left[\\begin{array}{cc}\n-4 & -3 \\\\\n-1 & 2\n\\end{array}\\right], \\mathrm{B}^{-1}=\\left[\\begin{array}{ll}\n3 & 2 \\\\\n1 & 1\n\\end{array}\\right]\n$$\n\nइसलिए\n\n$$\n\\mathrm{B}^{-1} \\mathrm{~A}^{-1}=-\\frac{1}{11}\\left[\\begin{array}{ll}\n3 & 2 \\\\\n1 & 1\n\\end{array}\\right]\\left[\\begin{array}{cc}\n-4 & -3 \\\\\n-1 & 2\n\\end{array}\\right]=-\\frac{1}{11}\\left[\\begin{array}{cc}\n-14 & -5 \\\\\n-5 & -1\n\\end{array}\\right]=\\frac{1}{11}\\left[\\begin{array}{cc}\n14 & 5 \\\\\n5 & 1\n\\end{array}\\right]\n$$\n\nअत:\n\n$$\n(\\mathrm{AB})^{-1}=\\mathrm{B}^{-1} \\mathrm{~A}^{-1} \\text { है। }\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "ex_4.15",
+   "kind": "example",
+   "number": "4.15",
+   "topic": "Matrix polynomial equation and inverse",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "प्रदर्शित कीजिए कि आव्यूह $\\mathrm{A}=\\left[\\begin{array}{ll}2 & 3 \\\\ 1 & 2\\end{array}\\right]$ समीकरण $\\mathrm{A}^{2}-4 \\mathrm{~A}+\\mathrm{I}=\\mathrm{O}$, जहाँ I $2 \\times 2$ कोटि का एक तत्समक आव्यूह है और $\\mathrm{O}, 2 \\times 2$ कोटि का एक शून्य आव्यूह है। इसकी सहायता से $\\mathrm{A}^{-1}$ ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "हम जानते हैं कि $\\mathrm{A}^{2}=\\mathrm{A} . \\mathrm{A}=\\left[\\begin{array}{ll}2 & 3 \\\\ 1 & 2\\end{array}\\right]\\left[\\begin{array}{ll}2 & 3 \\\\ 1 & 2\\end{array}\\right]=\\left[\\begin{array}{cc}7 & 12 \\\\ 4 & 7\\end{array}\\right]$\nअत:\n\n$$\nA^{2}-4 A+I=\\left[\\begin{array}{cc}\n7 & 12 \\\\\n4 & 7\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n8 & 12 \\\\\n4 & 8\n\\end{array}\\right]+\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n0 & 0 \\\\\n0 & 0\n\\end{array}\\right]=O\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अब\n\n$$\n\\mathrm{A}^{2}-4 \\mathrm{~A}+\\mathrm{I}=\\mathrm{O}\n$$\n\nइसलिए\n\n$$\nA A-4 A=-I\n$$\n\nया $\\mathrm{A} \\mathrm{A}\\left(\\mathrm{A}^{-1}\\right)-4 \\mathrm{AA}^{-1}=-\\mathrm{IA}^{-1}$ (दोनों ओर $\\mathrm{A}^{-1}$ से उत्तर गुणन द्वारा क्योंकि $|\\mathrm{A}| \\neq 0$ )\nया\n\n$$\n\\mathrm{A}\\left(\\mathrm{~A} \\mathrm{~A}^{-1}\\right)-4 \\mathrm{I}=-\\mathrm{A}^{-1}\n$$\n\nया\n\n$$\nA I-4 I=-A^{-1}\n$$\n\nया\n\n$$\nA^{-1}=4 I-A=\\left[\\begin{array}{ll}\n4 & 0 \\\\\n0 & 4\n\\end{array}\\right]-\\left[\\begin{array}{ll}\n2 & 3 \\\\\n1 & 2\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n2 & -3 \\\\\n-1 & 2\n\\end{array}\\right]\n$$\n\nअत:\n\n$$\nA^{-1}=\\left[\\begin{array}{cc}\n2 & -3 \\\\\n-1 & 2\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\left[\\begin{array}{cc}2 & -3 \\\\ -1 & 2\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.16",
+   "kind": "example",
+   "number": "4.16",
+   "topic": "Solving equation system via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय को हल कीजिए:\n\n$$\n\\begin{aligned}\n& 2 x+5 y=1 \\\\\n& 3 x+2 y=7\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "मुख्य सूत्र",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय $\\mathrm{AX}=\\mathrm{B}$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\n\\mathrm{A}=\\left[\\begin{array}{ll}\n2 & 5 \\\\\n3 & 2\n\\end{array}\\right], \\mathrm{X}=\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right] \\text { और } \\mathrm{B}=\\left[\\begin{array}{l}\n1 \\\\\n7\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अब, $|\\mathrm{A}|=-11 \\neq 0$ है। अत: A व्युत्क्रमणीय आव्यूह है। इसलिए इसके व्युत्क्रम का अस्तित्व है, और समीकरण निकाय का एक अद्वितीय हल है।\n\nध्यान दीजिए कि\n\n$$\n\\mathrm{A}^{-1}=-\\frac{1}{11}\\left[\\begin{array}{cc}\n2 & -5 \\\\\n-3 & 2\n\\end{array}\\right]\n$$\n\nइसलिए\n\n$$\n\\mathrm{X}=\\mathrm{A}^{-1} \\mathrm{~B}=-\\frac{1}{11}\\left[\\begin{array}{cc}\n2 & -5 \\\\\n-3 & 2\n\\end{array}\\right]\\left[\\begin{array}{l}\n1 \\\\\n7\n\\end{array}\\right]\n$$\n\nअर्थात्\n\n$$\n\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right]=-\\frac{1}{11}\\left[\\begin{array}{c}\n-33 \\\\\n11\n\\end{array}\\right]=\\left[\\begin{array}{c}\n3 \\\\\n-1\n\\end{array}\\right]\n$$\n\nअत:\n\n$$\nx=3, y=-1\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=3, y=-1$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.17",
+   "kind": "example",
+   "number": "4.17",
+   "topic": "Solving 3x3 equation system via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय\n\n$$\n\\begin{array}{r}\n3 x-2 y+3 z=8 \\\\\n2 x+y-z=1 \\\\\n4 x-3 y+2 z=4\n\\end{array}\n$$\n\nको आव्यूह विधि से हल कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $\\mathrm{AX}=\\mathrm{B}$ के रूप में व्यक्त किया जा सकता है जहाँ\n\n$$\n\\mathrm{A}=\\left[\\begin{array}{ccc}\n3 & -2 & 3 \\\\\n2 & 1 & -1 \\\\\n4 & -3 & 2\n\\end{array}\\right], \\mathrm{X}=\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] \\text { और } \\mathrm{B}=\\left[\\begin{array}{l}\n8 \\\\\n1 \\\\\n4\n\\end{array}\\right]\n$$\n\nहम देखते हैं कि\n\n$$\n|\\mathrm{A}|=3(2-3)+2(4+4)+3(-6-4)=-17 \\neq 0 \\text { है। }\n$$\n\nअतः A व्युत्क्रमणीय है, और इसके व्युत्क्रम का अस्तित्व है।\n\n$$\n\\begin{array}{lll}\n\\mathrm{A}_{11}=-1, & \\mathrm{~A}_{12}=-8, & \\mathrm{~A}_{13}=-10 \\\\\n\\mathrm{~A}_{21}=-5, & \\mathrm{~A}_{22}=-6, & \\mathrm{~A}_{23}=1 \\\\\n\\mathrm{~A}_{31}=-1, & \\mathrm{~A}_{32}=9, & \\mathrm{~A}_{33}=7\n\\end{array}\n$$\n\nइसलिए\n\n$$\n\\mathrm{A}^{-1}=-\\frac{1}{17}\\left[\\begin{array}{ccc}\n-1 & -5 & -1 \\\\\n-8 & -6 & 9 \\\\\n-10 & 1 & 7\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "और\n\n$$\n\\mathrm{X}=\\mathrm{A}^{-1} \\mathrm{~B}=-\\frac{1}{17}\\left[\\begin{array}{ccc}\n-1 & -5 & -1 \\\\\n-8 & -6 & 9 \\\\\n-10 & 1 & 7\n\\end{array}\\right]\\left[\\begin{array}{l}\n8 \\\\\n1 \\\\\n4\n\\end{array}\\right]\n$$\n\nअत:\n\n$$\n\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=-\\frac{1}{17}\\left[\\begin{array}{l}\n-17 \\\\\n-34 \\\\\n-51\n\\end{array}\\right]=\\left[\\begin{array}{l}\n1 \\\\\n2 \\\\\n3\n\\end{array}\\right]\n$$\n\nअत:\n\n$$\nx=1, y=2 \\text { व } z=3\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=1, y=2, z=3$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.18",
+   "kind": "example",
+   "number": "4.18",
+   "topic": "Word problem - three numbers via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "तीन संख्याओं का योग $6$ है। यदि हम तीसरी संख्या को $3$ से गुणा करके दूसरी संख्या में जोड़ दें तो हमें $11$ प्राप्त होता है। पहली ओर तीसरी को जोड़ने से हमें दूसरी संख्या का दुगुना प्राप्त होता है। इसका बीजगणितीय निरूपण कीजिए और आव्यूह विधि से संख्याएँ ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "मान लीजिए पहली, दूसरी और तीसरी संख्या क्रमशः $x, y$ और $z$ हैं। दी गई शर्तों के अनुसार हमें मिलता है:\n\n$$\n\\begin{aligned}\nx+y+z & =6 \\\\\ny+3 z & =11 \\\\\nx+z & =2 y\n\\end{aligned}\n$$\n\nया\n\n$$\nx-2 y+z=0\n$$\n\nइस निकाय को $\\mathrm{AX}=\\mathrm{B}$ के रूप में लिखा जा सकता है जहाँ\n\n$$\n\\mathrm{A}=\\left[\\begin{array}{lll}\n1 & 1 & 1 \\\\\n0 & 1 & 3 \\\\\n1 & 2 & 1\n\\end{array}\\right], \\mathrm{X}=\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] \\text { और } \\mathrm{B}=\\left[\\begin{array}{c}\n6 \\\\\n11 \\\\\n0\n\\end{array}\\right] \\text { है। }\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ $|\\mathrm{A}|=1(1+6)+0+1(3-1)=9 \\neq 0$ है। अब हम $\\operatorname{adj} \\mathrm{A}$ ज्ञात करते हैं।\n\n$$\n\\begin{array}{lll}\nA_{11}=1(1+6)=7, & A_{12}=-(0-3)=3, & A_{13}=-1 \\\\\nA_{21}=-(1+2)=-3, & A_{22}=0, & A_{23}=-(-2-1)=3 \\\\\nA_{31}=(3-1)=2, & A_{32}=-(3-0)=-3, & A_{33}=(1-0)=1\n\\end{array}\n$$\n\nअतः $\\operatorname{adj} \\mathrm{A}=\\left[\\begin{array}{ccc}7 & -3 & 2 \\\\ 3 & 0 & -3 \\\\ -1 & 3 & 1\\end{array}\\right]$\nइस प्रकार\n\n$$\n\\mathrm{A}^{-1}=\\frac{1}{|\\mathrm{~A}|} \\operatorname{adj} .(\\mathrm{A})=\\frac{1}{9}\\left[\\begin{array}{ccc}\n7 & -3 & 2 \\\\\n3 & 0 & -3 \\\\\n-1 & 3 & 1\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "क्योंकि\n\n$$\n\\begin{aligned}\nX & =A^{-1} B \\\\\nX & =\\frac{1}{9}\\left[\\begin{array}{ccc}\n7 & -3 & 2 \\\\\n3 & 0 & -3 \\\\\n-1 & 3 & 1\n\\end{array}\\right]\\left[\\begin{array}{c}\n6 \\\\\n11 \\\\\n0\n\\end{array}\\right]\n\\end{aligned}\n$$\n\nया\n\n$$\n\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{9}\\left[\\begin{array}{l}\n42-33+0 \\\\\n18+0+0 \\\\\n-6+33+0\n\\end{array}\\right]=\\frac{1}{9}\\left[\\begin{array}{c}\n9 \\\\\n18 \\\\\n27\n\\end{array}\\right]=\\left[\\begin{array}{l}\n1 \\\\\n2 \\\\\n3\n\\end{array}\\right]\n$$\n\nअत:\n\n$$\nx=1, y=2, z=3\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=1, y=2, z=3$"
+    }
+   ]
+  },
+  {
+   "id": "ex_4.19",
+   "kind": "example",
+   "number": "4.19",
+   "topic": "Matrix product application to solve equations",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "आव्यूहों के गुणनफल $\\left[\\begin{array}{ccc}1 & 1 & 2 \\\\ 0 & 2 & 3 \\\\ 3 & 2 & 4\\end{array}\\right]\\left[\\begin{array}{ccc}2 & 0 & 1 \\\\ 9 & 2 & 3 \\\\ 6 & 1 & 2\\end{array}\\right]$ का प्रयोग करते हुए निम्नलिखित समीकरण निकाय को हल कीजिए:\n\n$$\n\\begin{array}{r}\nx-y+2 z=1 \\\\\n2 y-3 z=1 \\\\\n3 x-2 y+4 z=2\n\\end{array}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया गया गुणनफल $\\left[\\begin{array}{ccc}1 & -1 & 2 \\\\ 0 & 2 & -3 \\\\ 3 & -2 & 4\\end{array}\\right]\\left[\\begin{array}{ccc}-2 & 0 & 1 \\\\ 9 & 2 & -3 \\\\ 6 & 1 & -2\\end{array}\\right]$\n\n$$\n=\\left[\\begin{array}{ccc}\n-2-9+12 & 0-2+2 & 1+3-4 \\\\\n0+18-18 & 0+4-3 & 0-6+6 \\\\\n-6-18+24 & 0-4+4 & 3+6-8\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right]\n$$\n\nअत:\n\n$$\n\\left[\\begin{array}{ccc}\n1 & 1 & 2 \\\\\n0 & 2 & 3 \\\\\n3 & 2 & 4\n\\end{array}\\right]^{1}=\\left[\\begin{array}{ccc}\n2 & 0 & 1 \\\\\n9 & 2 & 3 \\\\\n6 & 1 & 2\n\\end{array}\\right]\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अब दिए गए समीकरण निकाय को आव्यूह के रूप निम्नलिखित रूप में लिखा जा सकता है\n\n$$\n\\left[\\begin{array}{ccc}\n1 & -1 & 2 \\\\\n0 & 2 & -3 \\\\\n3 & -2 & 4\n\\end{array}\\right]\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\left[\\begin{array}{l}\n1 \\\\\n1 \\\\\n2\n\\end{array}\\right]\n$$\n\nया\n\n$$\n\\begin{aligned}\n{\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] } & =\\left[\\begin{array}{rrr}\n1 & -1 & 2 \\\\\n0 & 2 & -3 \\\\\n3 & -2 & 4\n\\end{array}\\right]^{-1}\\left[\\begin{array}{l}\n1 \\\\\n1 \\\\\n2\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n2 & 0 & 1 \\\\\n9 & 2 & 3 \\\\\n6 & 1 & 2\n\\end{array}\\right]\\left[\\begin{array}{l}\n1 \\\\\n1 \\\\\n2\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{c}\n-2+0+2 \\\\\n9+2-6 \\\\\n6+1-4\n\\end{array}\\right]=\\left[\\begin{array}{l}\n0 \\\\\n5 \\\\\n3\n\\end{array}\\right]\n\\end{aligned}\n$$\n\nअतः\n\n$$\nx=0, y=5 \\text { और } z=3\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=0, y=5, z=3$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.1.1",
+   "kind": "exercise",
+   "number": "4.1.1",
+   "topic": "Value of a 2x2 determinant",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "सारणिकों का मान ज्ञात कीजिए: $\\left|\\begin{array}{cc}2 & 4 \\\\ -5 & -1\\end{array}\\right|$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{cc}2 & 4 \\\\ -5 & -1\\end{array}\\right|$ $R_{1}$ के अनुदिश प्रसरण करने पर\n$=2 \\times(-1)-4 \\times(-5)=-2+20=18$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$18$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.1.2",
+   "kind": "exercise",
+   "number": "4.1.2",
+   "topic": "Value of trig and symbolic 2x2 determinants",
+   "prompt": [],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{cc}\\cos \\theta & -\\sin \\theta \\\\ \\sin \\theta & \\cos \\theta\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$\\left|\\begin{array}{cc}\\cos \\theta & -\\sin \\theta \\\\ \\sin \\theta & \\cos \\theta\\end{array}\\right|=\\cos \\theta \\times \\cos \\theta-\\sin \\theta \\times(-\\sin \\theta)=\\cos ^{2} \\theta+\\sin ^{2} \\theta=1$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$1$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{ll}x^{2}-x+1 & x-1 \\\\ x+1 & x+1\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$=\\left(x^{2}-x+1\\right) \\times(x+1)-(x-1) \\times(x+1)$\n$=x^{3}+x^{2}-x^{2}-x+x+1-\\left(x^{2}+x-x-1\\right)$\n$=x^{3}-x^{2}+2$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$x^{3}-x^{2}+2$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_4.1.3",
+   "kind": "exercise",
+   "number": "4.1.3",
+   "topic": "Verifying |2A|=4|A|",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{ll}1 & 2 \\\\ 4 & 2\\end{array}\\right]$, तो दिखाइए $|2 \\mathrm{~A}|=4|\\mathrm{~A}|$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$|2 A|=\\left|\\begin{array}{ll}2 & 4 \\\\ 8 & 4\\end{array}\\right|$ $R_{1}$ के अनुदिश प्रसरण करने पर\n\n$$\n=2 \\times 4-4 \\times 8=8-32=-24\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$4|A|=4\\left|\\begin{array}{ll}1 & 2 \\\\ 4 & 2\\end{array}\\right|$ $R_{1}$ के अनुदिश प्रसरण करने पर\n\n$$\n=4(1 \\times 2-2 \\times 4)=4(-6)=-24\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण (1) और (2) से, $|2 A|=4|A|$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_4.1.4",
+   "kind": "exercise",
+   "number": "4.1.4",
+   "topic": "Verifying |3A|=27|A|",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 4\\end{array}\\right]$ हो, तो दिखाइए $|3 \\mathrm{~A}|=27|\\mathrm{~A}|$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$|3 A|=\\left|\\begin{array}{ccc}3 & 0 & 3 \\\\ 0 & 3 & 6 \\\\ 0 & 0 & 12\\end{array}\\right|$ $R_{1}$ के अनुदिश प्रसरण करने पर\n\n$$\n=3(36-0)-0(0-0)+1(0-0)=108\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$27|A|=27\\left|\\begin{array}{lll}1 & 0 & 1 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 4\\end{array}\\right|$ $R_{1}$ के अनुदिश प्रसरण करने पर\n\n$$\n=27\\{1(4-0)-0(0-0)+1(0-0)\\}=27(4)=108\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण (1) और (2) से, $|3 A|=27|A|$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_4.1.5",
+   "kind": "exercise",
+   "number": "4.1.5",
+   "topic": "Value of several 3x3 determinants",
+   "prompt": [],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{ccc}3 & -1 & -2 \\\\ 0 & 0 & -1 \\\\ 3 & -5 & 0\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$R_{1}$ के अनुदिश प्रसरण करने पर $=3(0-5)+1(0+3)-2(0-0)=-15+3-0=-12$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$-12$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{ccc}3 & -4 & 5 \\\\ 1 & 1 & -2 \\\\ 2 & 3 & 1\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$R_{1}$ के अनुदिश प्रसरण करने पर $=3(1+6)+4(1+4)+5(3-2)=21+20+5=46$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$46$"
+      }
+     ]
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{ccc}0 & 1 & 2 \\\\ -1 & 0 & -3 \\\\ -2 & 3 & 0\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$R_{1}$ के अनुदिश प्रसरण करने पर $=0(0+9)-1(0-6)+2(-3-0)=0+6-6=0$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$0$"
+      }
+     ]
+    },
+    {
+     "label": "(iv)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{ccc}2 & -1 & -2 \\\\ 0 & 2 & -1 \\\\ 3 & -5 & 0\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$R_{1}$ के अनुदिश प्रसरण करने पर $=2(0-5)+1(0+3)-2(0-6)=-10+3+12=5$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$5$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_4.1.6",
+   "kind": "exercise",
+   "number": "4.1.6",
+   "topic": "Value of a 3x3 determinant",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{lll}1 & 1 & 2 \\\\ 2 & 1 & 3 \\\\ 5 & 4 & 9\\end{array}\\right]$, हो तो $|A|$ ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$|A|=\\left|\\begin{array}{lll}1 & 1 & -2 \\\\ 2 & 1 & -3 \\\\ 5 & 4 & -9\\end{array}\\right|$ $R_{1}$ के अनुदिश प्रसरण करने पर $=1(-9+12)-1(-18+15)-2(8-5)=3+3-6=0$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$|A|=0$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.1.7",
+   "kind": "exercise",
+   "number": "4.1.7",
+   "topic": "Solving for x from equal determinants",
+   "prompt": [],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{ll}2 & 4 \\\\ 5 & 1\\end{array}\\right|=\\left|\\begin{array}{cc}2 x & 4 \\\\ 6 & x\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$\\Rightarrow 2-20=2 x^{2}-24 \\quad \\Rightarrow x^{2}=3 \\quad \\Rightarrow x= \\pm \\sqrt{3}$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$x= \\pm \\sqrt{3}$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{ll}2 & 3 \\\\ 4 & 5\\end{array}\\right|=\\left|\\begin{array}{cc}x & 3 \\\\ 2 x & 5\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$\\Rightarrow 10-12=5 x-6 x \\quad \\Rightarrow-2=-x \\quad \\Rightarrow x=2$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$x=2$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_4.1.8",
+   "kind": "exercise",
+   "number": "4.1.8",
+   "topic": "MCQ: solving for x from equal determinants",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\left|\\begin{array}{cc}x & 2 \\\\ 18 & x\\end{array}\\right|=\\left|\\begin{array}{cc}6 & 2 \\\\ 18 & 6\\end{array}\\right|$ हो तो $x$ बराबर है:\n(A) $6$\n(B) ±6\n(C) -6\n(D) $0$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "substitute",
+     "label": "मान रखो",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& \\left|\\begin{array}{cc}\nx & 2 \\\\\n18 & x\n\\end{array}\\right|=\\left|\\begin{array}{cc}\n6 & 2 \\\\\n18 & 6\n\\end{array}\\right| \\\\\n& \\Rightarrow x^{2}-36=36-36 \\\\\n& \\Rightarrow x^{2}=36 \\\\\n& \\Rightarrow x= \\pm 6\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "निष्कर्ष",
+     "flow": [
+      {
+       "type": "text",
+       "text": "अतः, विकल्प (B) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(B) ±6"
+    }
+   ]
+  },
+  {
+   "id": "q_4.2.1",
+   "kind": "exercise",
+   "number": "4.2.1",
+   "topic": "Area of triangles from given vertices",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित प्रत्येक में दिए गए शीर्ष बिंदुओं वाले त्रिभुजों का क्षेत्रफल ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "(1, 0), (6, 0), $(4,3)$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "त्रिभुज का क्षेत्रफल $=\\frac{1}{2}\\left|\\begin{array}{lll}x_{1} & y_{1} & 1 \\\\ x_{2} & y_{2} & 1 \\\\ x_{3} & y_{3} & 1\\end{array}\\right|$\n\n$A(1,0), B(6,0), C(4,3)$\nत्रिभुज $A B C$ का क्षेत्रफल $=\\frac{1}{2}\\left|\\begin{array}{lll}1 & 0 & 1 \\\\ 6 & 0 & 1 \\\\ 4 & 3 & 1\\end{array}\\right|$\n$=\\frac{1}{2}[1(0-3)-0(6-4)+1(18-0)]=\\frac{1}{2}(15)=7.5$ वर्ग इकाई"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$7.5$ वर्ग इकाई"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "(2, 7), (1, 1), $(10,8)$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A(2,7), B(1,1), C(10,8)$\nत्रिभुज $A B C$ का क्षेत्रफल $=\\frac{1}{2}\\left|\\begin{array}{ccc}2 & 7 & 1 \\\\ 1 & 1 & 1 \\\\ 10 & 8 & 1\\end{array}\\right|$\n$=\\frac{1}{2}[2(1-8)-7(1-10)+1(8-10)]=\\frac{1}{2}(47)=25.5$ वर्ग इकाई"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$25.5$ वर्ग इकाई"
+      }
+     ]
+    },
+    {
+     "label": "(iii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "(-2, -3), (3, 2), (-1, -8)"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A(-2,-3), B(3,2), C(-1,-8)$\nत्रिभुज $A B C$ का क्षेत्रफल $=\\frac{1}{2}\\left|\\begin{array}{ccc}-2 & -3 & 1 \\\\ 3 & 2 & 1 \\\\ -1 & -8 & 1\\end{array}\\right|$\n$=\\frac{1}{2}[-2(2+8)+3(3+1)+1(-24+2)]=\\frac{1}{2}(-30)=-15$\nत्रिभुज $A B C$ का क्षेत्रफल $=15$ वर्ग इकाई"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$15$ वर्ग इकाई"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_4.2.2",
+   "kind": "exercise",
+   "number": "4.2.2",
+   "topic": "Collinearity of points via determinants",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "दर्शाइए कि बिंदु $\\mathrm{A}(a, b+c), \\mathrm{B}(b, c+a)$ और $\\mathrm{C}(c, a+b)$ संरेख हैं।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यदि बिंदु $A(a, b+c), B(b, c+a)$ और $C(c, a+b)$ संरेख हैं, तो $A B C$ से बने त्रिभुज का क्षेत्रफल शून्य होगा।\nत्रिभुज $A B C$ का क्षेत्रफल $=\\frac{1}{2}\\left|\\begin{array}{lll}a & b+c & 1 \\\\ b & c+a & 1 \\\\ c & a+b & 1\\end{array}\\right|$\n\n$$\n\\begin{array}{ll}\n=\\frac{1}{2}\\left|\\begin{array}{lll}\na & a+b+c & 1 \\\\\nb & a+b+c & 1 \\\\\nc & a+b+c & 1\n\\end{array}\\right| & {\\left[C_{2} \\rightarrow C_{1}+C_{2} \\text { द्वारा }\\right]} \\\\\n=\\frac{1}{2}(a+b+c)\\left|\\begin{array}{lll}\na & 1 & 1 \\\\\nb & 1 & 1 \\\\\nc & 1 & 1\n\\end{array}\\right| & {\\left[C_{2} \\text { से } a+b+c \\text { उभयनिष्ठ लेने पर }\\right]} \\\\\n=0 & {\\left[\\because C_{1}=C_{3}\\right]}\n\\end{array}\n$$\n\nअतः, बिंदु $A(a, b+c), B(b, c+a)$ और $C(c, a+b)$ संरेख हैं।"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_4.2.3",
+   "kind": "exercise",
+   "number": "4.2.3",
+   "topic": "Solving for k given a triangle's area",
+   "prompt": [],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$(k, 0),(4,0),(0,2)$; त्रिभुज का क्षेत्रफल $4$ वर्ग इकाई है, $k$ का मान ज्ञात कीजिए।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A(k, 0), B(4,0), C(0,2)$\nत्रिभुज $A B C$ का क्षेत्रफल $=\\frac{1}{2}\\left|\\begin{array}{lll}k & 0 & 1 \\\\ 4 & 0 & 1 \\\\ 0 & 2 & 1\\end{array}\\right|$\n$=\\frac{1}{2}[k(0-2)-0(4-0)+1(8-0)]=\\frac{1}{2}(-2 k+8)=-k+4$\nप्रश्नानुसार, त्रिभुज $A B C$ का क्षेत्रफल $=4$ वर्ग इकाई\nइसलिए, $|-k+4|=4 \\quad \\Rightarrow-k+4= \\pm 4$\n$\\Rightarrow-k+4=4$ या $-k+4=-4$\n$\\Rightarrow k=0 \\quad$ या $k=8$\nअतः $k$ का मान $0$ या $8$ हैं।"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$k=0$ या $k=8$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "(-2, 0), (0, 4), (0, k); त्रिभुज का क्षेत्रफल $4$ वर्ग इकाई है, $k$ का मान ज्ञात कीजिए।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$A(-2,0), B(0,4), C(0, k)$\nत्रिभुज $A B C$ का क्षेत्रफल $=\\frac{1}{2}\\left|\\begin{array}{ccc}-2 & 0 & 1 \\\\ 0 & 4 & 1 \\\\ 0 & k & 1\\end{array}\\right|$\n$=\\frac{1}{2}[-2(4-k)-0(0-0)+1(0-0)]=\\frac{1}{2}(-8+2 k)=-4+k$\nप्रश्नानुसार, त्रिभुज $A B C$ का क्षेत्रफल $=4$ वर्ग इकाई\nइसलिए, $|-4+k|=4 \\quad \\Rightarrow-4+k= \\pm 4$\n$\\Rightarrow-4+k=4$ या $-4+k=-4$\n$\\Rightarrow k=8$ या $k=0$\nअतः, $k$ का मान $0$ या $8$ हैं।"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$k=0$ या $k=8$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_4.2.4",
+   "kind": "exercise",
+   "number": "4.2.4",
+   "topic": "Equation of a line via determinants",
+   "prompt": [],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "सारणिकों का प्रयोग करके $(1,2)$ और $(3,6)$ को मिलाने वाली रेखा का समीकरण ज्ञात कीजिए।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "माना, $A(1,2)$ और $B(3,6)$ को मिलाने वाली रेखा पर कोई बिंदु $P(x, y)$ है। अतः बिंदु $A, \\mathrm{~B}$ और $P$ संरेख होंगे और इनसे बनने वाले त्रिभुज $A \\mathrm{BP}$ का क्षेत्रफल शून्य होगा।\nइसलिए, त्रिभुज $A B P$ का क्षेत्रफल $=\\frac{1}{2}\\left|\\begin{array}{lll}1 & 2 & 1 \\\\ 3 & 6 & 1 \\\\ x & y & 1\\end{array}\\right|=0$\n$\\Rightarrow \\frac{1}{2}[1(6-y)-2(3-x)+1(3 y-6 x)]=0$\n$\\Rightarrow 6-y-6+2 x+3 y-6 x=0$\n$\\Rightarrow-4 x+2 y=0$\n$\\Rightarrow 2 x=y$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$2x=y$"
+      }
+     ]
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "सारणिकों का प्रयोग करके $(3,1)$ और $(9,3)$ को मिलाने वाली रेखा का समीकरण ज्ञात कीजिए।"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "माना, $A(3,1)$ और $B(9,3)$ को मिलाने वाली रेखा पर कोई बिंदु $P(x, y)$ है। अतः, बिंदु $A, \\mathrm{~B}$ और $P$ संरेख होंगे और इनसे बनने वाले त्रिभुज $A \\mathrm{BP}$ का क्षेत्रफल शून्य होगा।\n\nइसलिए, त्रिभुज $A B P$ का क्षेत्रफल $=\\frac{1}{2}\\left|\\begin{array}{lll}3 & 1 & 1 \\\\ 9 & 3 & 1 \\\\ x & y & 1\\end{array}\\right|=0$\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\frac{1}{2}[3(3-y)-1(9-x)+1(9 y-3 x)]=0 \\\\\n& \\Rightarrow 9-3 y-9+x+9 y-3 x=0 \\\\\n& \\Rightarrow-2 x+6 y=0 \\\\\n& \\Rightarrow x=3 y\n\\end{aligned}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$x=3y$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_4.2.5",
+   "kind": "exercise",
+   "number": "4.2.5",
+   "topic": "MCQ: solving for k given a triangle's area",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि शीर्ष $(2,-6),(5,4)$ और $(k, 4)$ वाले त्रिभुज का क्षेत्रफल $35$ वर्ग इकाई हो तो $k$ का मान है:\n(A) $12$\n(B) -2\n(C) -12, -2\n(D) 12, -2"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& A(2,-6), B(5,4), C(k, 4) \\\\\n& \\text { त्रिभुज } A B C \\text { का क्षेत्रफल }=\\frac{1}{2}\\left|\\begin{array}{ccc}\n2 & -6 & 1 \\\\\n5 & 4 & 1 \\\\\nk & 4 & 1\n\\end{array}\\right| \\\\\n& =\\frac{1}{2}[2(4-4)+6(5-k)+1(20-4 k)]=\\frac{1}{2}(30-6 k+20-4 k)=25-5 k\n\\end{aligned}\n$$\n\nप्रश्नानुसार, त्रिभुज $A B C$ का क्षेत्रफल $=35$ वर्ग इकाई\nइसलिए, $|25-5 k|=35 \\quad \\Rightarrow 25-5 k= \\pm 35$\n\n$$\n\\begin{aligned}\n& \\Rightarrow 25-5 k=35 \\quad \\text { या } \\quad 25-5 k=-35 \\\\\n& \\Rightarrow k=\\frac{-10}{5}=-2 \\quad \\text { या } \\quad k=\\frac{60}{5}=12\n\\end{aligned}\n$$\n\nअतः, विकल्प (D) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(D) 12, -2"
+    }
+   ]
+  },
+  {
+   "id": "q_4.3.1",
+   "kind": "exercise",
+   "number": "4.3.1",
+   "topic": "Minors and cofactors of given determinants",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित सारणिकों के अवयवों के उपसारणिक एवं सहखंड लिखिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{rr}2 & -4 \\\\ 0 & 3\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "अवयव $a_{i j}$ का उपसारणिक $M_{i j}$ है एवं $a_{i j}$ का सहखंड $A_{i j}=(-1)^{i+j} M_{i j}$ है। इसलिए, अवयव $a_{11}$ का उपसारणिक $M_{11}=3$ तथा $a_{11}$ का सहखंड $A_{11}=(-1)^{1+1} M_{11}=3$ है। अवयव $a_{12}$ का उपसारणिक $M_{12}=0$ तथा $a_{12}$ का सहखंड $A_{12}=(-1)^{1+2} M_{12}=0$ है। अवयव $a_{21}$ का उपसारणिक $M_{21}=-4$ तथा $a_{21}$ का सहखंड $A_{21}=(-1)^{2+1} M_{21}=4$ है। अवयव $a_{22}$ का उपसारणिक $M_{22}=2$ तथा $a_{22}$ का सहखंड $A_{22}=(-1)^{2+2} M_{22}=2$ है।"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{cc}a & c \\\\ b & d\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "अवयव $a_{11}$ का उपसारणिक $M_{11}=d$ तथा $a_{11}$ का सहखंड $A_{11}=(-1)^{1+1} M_{11}=d$ है। अवयव $a_{12}$ का उपसारणिक $M_{12}=b$ तथा $a_{12}$ का सहखंड $A_{12}=(-1)^{1+2} M_{12}=-b$ है। अवयव $a_{21}$ का उपसारणिक $M_{21}=c$ तथा $a_{21}$ का सहखंड $A_{21}=(-1)^{2+1} M_{21}=-c$ है। अवयव $a_{22}$ का उपसारणिक $M_{22}=a$ तथा $a_{22}$ का सहखंड $A_{22}=(-1)^{2+2} M_{22}=a$ है।"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_4.3.2",
+   "kind": "exercise",
+   "number": "4.3.2",
+   "topic": "Minors and cofactors of 3x3 determinants",
+   "prompt": [],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यहाँ,\n\n$$\n\\begin{aligned}\n& M_{11}=\\left|\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right|=1-0=1, \\quad M_{12}=\\left|\\begin{array}{ll}\n0 & 0 \\\\\n0 & 1\n\\end{array}\\right|=0-0=0, \\quad M_{13}=\\left|\\begin{array}{ll}\n0 & 0 \\\\\n0 & 1\n\\end{array}\\right|=0-0=0 \\\\\n& M_{21}=\\left|\\begin{array}{ll}\n0 & 0 \\\\\n0 & 1\n\\end{array}\\right|=0-0=0, \\quad M_{22}=\\left|\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right|=1-0=1, \\quad M_{23}=\\left|\\begin{array}{ll}\n1 & 0 \\\\\n0 & 0\n\\end{array}\\right|=0-0=0 \\\\\n& M_{31}=\\left|\\begin{array}{ll}\n0 & 0 \\\\\n1 & 0\n\\end{array}\\right|=0-0=0, \\quad M_{32}=\\left|\\begin{array}{ll}\n1 & 0 \\\\\n0 & 0\n\\end{array}\\right|=0-0=0, \\quad M_{33}=\\left|\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right|=1-0=1\n\\end{aligned}\n$$\n\nएवं $A_{i j}=(-1)^{i+j} M_{i j}$, इसलिए\n\n$$\n\\begin{array}{lll}\nA_{11}=(-1)^{1+1} M_{11}=1 & A_{12}=(-1)^{1+2} M_{12}=0 & A_{13}=(-1)^{1+3} M_{13}=0 \\\\\nA_{21}=(-1)^{2+1} M_{21}=0 & A_{22}=(-1)^{2+2} M_{22}=1 & A_{23}=(-1)^{2+3} M_{23}=0 \\\\\nA_{31}=(-1)^{3+1} M_{31}=0 & A_{32}=(-1)^{3+2} M_{32}=0 & A_{33}=(-1)^{3+3} M_{33}=1\n\\end{array}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{ccc}1 & 0 & 4 \\\\ 3 & 5 & -1 \\\\ 0 & 1 & 2\\end{array}\\right|$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यहाँ,\n\n$$\n\\begin{aligned}\n& M_{11}=\\left|\\begin{array}{cc}\n5 & -1 \\\\\n1 & 2\n\\end{array}\\right|=10+1=11, \\quad M_{12}=\\left|\\begin{array}{cc}\n3 & -1 \\\\\n0 & 2\n\\end{array}\\right|=6-0=6, \\quad M_{13}=\\left|\\begin{array}{ll}\n3 & 5 \\\\\n0 & 1\n\\end{array}\\right|=3-0=3 \\\\\n& M_{21}=\\left|\\begin{array}{cc}\n0 & 4 \\\\\n1 & 2\n\\end{array}\\right|=0-4=-4, \\quad M_{22}=\\left|\\begin{array}{cc}\n1 & 4 \\\\\n0 & 2\n\\end{array}\\right|=2-0=2, \\quad M_{23}=\\left|\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right|=1-0=1 \\\\\n& M_{31}=\\left|\\begin{array}{cc}\n0 & 4 \\\\\n5 & -1\n\\end{array}\\right|=0-20=-20, M_{32}=\\left|\\begin{array}{cc}\n1 & 4 \\\\\n3 & -1\n\\end{array}\\right|=-1-12=-13, M_{33}=\\left|\\begin{array}{ll}\n1 & 0 \\\\\n3 & 5\n\\end{array}\\right|=5-0=5\n\\end{aligned}\n$$\n\nएवं $A_{i j}=(-1)^{i+j} M_{i j}$, इसलिए\n\n$$\n\\begin{array}{lll}\nA_{11}=(-1)^{1+1} M_{11}=11 & A_{12}=(-1)^{1+2} M_{12}=-6 & A_{13}=(-1)^{1+3} M_{13}=3 \\\\\nA_{21}=(-1)^{2+1} M_{21}=4 & A_{22}=(-1)^{2+2} M_{22}=2 & A_{23}=(-1)^{2+3} M_{23}=-1 \\\\\nA_{31}=(-1)^{3+1} M_{31}=-20 & A_{32}=(-1)^{3+2} M_{32}=13 & A_{33}=(-1)^{3+3} M_{33}=5\n\\end{array}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_4.3.3",
+   "kind": "exercise",
+   "number": "4.3.3",
+   "topic": "Value of a determinant via second-row cofactors",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "दूसरी पंक्ति के अवयवों के सहखंडों का प्रयोग करके $\\Delta=\\left|\\begin{array}{lll}5 & 3 & 8 \\\\ 2 & 0 & 1 \\\\ 1 & 2 & 3\\end{array}\\right|$ का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\Delta=\\left|\\begin{array}{lll}\n5 & 3 & 8 \\\\\n2 & 0 & 1 \\\\\n1 & 2 & 3\n\\end{array}\\right|=a_{21} A_{21}+a_{22} A_{22}+a_{23} A_{23}\n$$\n\nयहाँ, $a_{21}=2, a_{22}=0, a_{23}=1$ तथा\n\n$$\n\\begin{aligned}\n& A_{21}=(-1)^{2+1}\\left|\\begin{array}{ll}\n3 & 8 \\\\\n2 & 3\n\\end{array}\\right|=-(9-16)=7 \\\\\n& A_{22}=(-1)^{2+2}\\left|\\begin{array}{ll}\n5 & 8 \\\\\n1 & 3\n\\end{array}\\right|=15-8=7 \\\\\n& A_{23}=(-1)^{2+3}\\left|\\begin{array}{ll}\n5 & 3 \\\\\n1 & 2\n\\end{array}\\right|=-(10-3)=-7\n\\end{aligned}\n$$\n\nइसलिए, $\\Delta=\\left|\\begin{array}{lll}5 & 3 & 8 \\\\ 2 & 0 & 1 \\\\ 1 & 2 & 3\\end{array}\\right|=2(7)+0(7)+1(-7)=7$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\Delta=7$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.3.4",
+   "kind": "exercise",
+   "number": "4.3.4",
+   "topic": "Value of a symbolic determinant via third-column cofactors",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "तीसरे स्तंभ के अवयवों के सहखंडों का प्रयोग करके $\\Delta=\\left|\\begin{array}{lll}1 & x & y z \\\\ 1 & y & z x \\\\ 1 & z & x y\\end{array}\\right|$ का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\Delta=\\left|\\begin{array}{lll}\n1 & x & y z \\\\\n1 & y & z x \\\\\n1 & z & x y\n\\end{array}\\right|=a_{13} A_{13}+a_{23} A_{23}+a_{33} A_{33}\n$$\n\nयहाँ, $a_{13}=y z, a_{23}=z x, a_{33}=x y$ तथा\n\n$$\n\\begin{aligned}\n& A_{13}=(-1)^{1+3}\\left|\\begin{array}{ll}\n1 & y \\\\\n1 & z\n\\end{array}\\right|=z-y \\\\\n& A_{23}=(-1)^{2+3}\\left|\\begin{array}{ll}\n1 & x \\\\\n1 & z\n\\end{array}\\right|=-(z-x)=x-z \\\\\n& A_{33}=(-1)^{3+3}\\left|\\begin{array}{ll}\n1 & x \\\\\n1 & y\n\\end{array}\\right|=y-x\n\\end{aligned}\n$$\n\nइसलिए, $\\Delta=\\left|\\begin{array}{lll}1 & x & y z \\\\ 1 & y & z x \\\\ 1 & z & x y\\end{array}\\right|=y z(z-y)+z x(x-z)+x y(y-x)$\n$=y z^{2}-y^{2} z+z x^{2}-x z^{2}+x y^{2}-x^{2} y$\n$=z x^{2}-x^{2} y-x z^{2}+x y^{2}+y z^{2}-y^{2} z$\n$=x^{2}(z-y)-x\\left(z^{2}-y^{2}\\right)+y z(z-y)$\n$=(z-y)\\left[x^{2}-x(z+y)+y z\\right]$\n$=(z-y)\\left[x^{2}-x z-x y+y z\\right]$\n$=(z-y)[x(x-z)-y(x-z)]$\n$=(x-z)(z-y)(x-y)$\n$=(x-y)(y-z)(z-x)$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\Delta=(x-y)(y-z)(z-x)$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.3.5",
+   "kind": "exercise",
+   "number": "4.3.5",
+   "topic": "MCQ: expansion of a determinant via cofactors",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\Delta=\\left|\\begin{array}{lll}a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33}\\end{array}\\right|$ और $a_{i j}$ का सहखंड $\\mathrm{A}_{i j}$ हो तो $\\Delta$ का मान निम्नलिखित रूप में व्यक्त किया जाता है:\n(A) $a_{11} \\mathrm{~A}_{31}+a_{12} \\mathrm{~A}_{32}+a_{13} \\mathrm{~A}_{33}$\n(B) $a_{11} \\mathrm{~A}_{11}+a_{12} \\mathrm{~A}_{21}+a_{13} \\mathrm{~A}_{31}$\n(C) $a_{21} \\mathrm{~A}_{11}+a_{22} \\mathrm{~A}_{12}+a_{23} \\mathrm{~A}_{13}$\n(D) $a_{11} \\mathrm{~A}_{11}+a_{21} \\mathrm{~A}_{21}+a_{31} \\mathrm{~A}_{31}$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{lll}a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33}\\end{array}\\right|$ को इस प्रकार लिखा जा सकता है: $a_{11} A_{11}+a_{21} A_{21}+a_{31} A_{31}$ अतः, विकल्प (D) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(D) $a_{11} \\mathrm{~A}_{11}+a_{21} \\mathrm{~A}_{21}+a_{31} \\mathrm{~A}_{31}$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.1",
+   "kind": "exercise",
+   "number": "4.4.1",
+   "topic": "Adjoint of a 2x2 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "प्रत्येक आव्यूह का सहखंडज (adjoint) ज्ञात कीजिए: $\\left[\\begin{array}{ll}1 & 2 \\\\ 3 & 4\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ, $A=\\left[\\begin{array}{ll}1 & 2 \\\\ 3 & 4\\end{array}\\right]$, इसलिए, $A_{11}=4 \\quad A_{12}=-3 \\quad A_{21}=-2 \\quad A_{22}=1$\nआव्यूह $A$ का सहखंडज $=\\left[\\begin{array}{ll}A_{11} & A_{21} \\\\ A_{12} & A_{22}\\end{array}\\right]=\\left[\\begin{array}{cc}4 & -2 \\\\ -3 & 1\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\left[\\begin{array}{cc}4 & -2 \\\\ -3 & 1\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.2",
+   "kind": "exercise",
+   "number": "4.4.2",
+   "topic": "Adjoint of a 3x3 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "प्रत्येक आव्यूह का सहखंडज (adjoint) ज्ञात कीजिए: $\\left[\\begin{array}{ccc}1 & -1 & 2 \\\\ 2 & 3 & 5 \\\\ -2 & 0 & 1\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ, $A=\\left[\\begin{array}{ccc}1 & -1 & 2 \\\\ 2 & 3 & 5 \\\\ -2 & 0 & 1\\end{array}\\right]$, इसलिए\n\n$$\n\\begin{aligned}\n& A_{11}=3 \\\\\n& A_{21}=1 \\\\\n& A_{31}=-11\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& A_{12}=-12 \\\\\n& A_{22}=5 \\\\\n& A_{32}=-1\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\nA_{13} & =6 \\\\\nA_{23} & =2 \\\\\nA_{33} & =5\n\\end{aligned}\n$$\n\nआव्यूह $A$ का सहखंडज $=\\left[\\begin{array}{lll}A_{11} & A_{21} & A_{31} \\\\ A_{12} & A_{22} & A_{32} \\\\ A_{13} & A_{23} & A_{33}\\end{array}\\right]=\\left[\\begin{array}{ccc}3 & 1 & -11 \\\\ -12 & 5 & -1 \\\\ 6 & 2 & 5\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\left[\\begin{array}{ccc}3 & 1 & -11 \\\\ -12 & 5 & -1 \\\\ 6 & 2 & 5\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.3",
+   "kind": "exercise",
+   "number": "4.4.3",
+   "topic": "Verifying A(adjA)=(adjA)A=|A|I for a singular matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "सत्यापित कीजिए कि $\\mathrm{A}(\\operatorname{adj} \\mathrm{A})=(\\operatorname{adj} \\mathrm{A}) . \\mathrm{A}=|\\mathrm{A}| . \\mathrm{I}$ है: $\\left[\\begin{array}{cc}2 & 3 \\\\ -4 & -6\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ, $A=\\left[\\begin{array}{cc}2 & 3 \\\\ -4 & -6\\end{array}\\right]$,\nइसलिए, $A_{11}=-6 \\quad A_{12}=4$\n\n$$\nA_{21}=-3\n$$\n\n$$\nA_{22}=2\n$$\n\n$|A|=-12+12=0$\n\n$$\n\\operatorname{adj} A=\\left[\\begin{array}{ll}\nA_{11} & A_{21} \\\\\nA_{12} & A_{22}\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n-6 & -3 \\\\\n4 & 2\n\\end{array}\\right]\n$$\n\n$A(\\operatorname{adj} A)=\\left[\\begin{array}{cc}2 & 3 \\\\ -4 & -6\\end{array}\\right]\\left[\\begin{array}{cc}-6 & -3 \\\\ 4 & 2\\end{array}\\right]=\\left[\\begin{array}{cc}-12+12 & -6+6 \\\\ 24-24 & 12-12\\end{array}\\right]=\\left[\\begin{array}{ll}0 & 0 \\\\ 0 & 0\\end{array}\\right]$\n$(\\operatorname{adj} A) . A=\\left[\\begin{array}{cc}-6 & -3 \\\\ 4 & 2\\end{array}\\right]\\left[\\begin{array}{cc}2 & 3 \\\\ -4 & -6\\end{array}\\right]=\\left[\\begin{array}{cc}-12+12 & -18+18 \\\\ 8-8 & 12-12\\end{array}\\right]=\\left[\\begin{array}{ll}0 & 0 \\\\ 0 & 0\\end{array}\\right]$\n$|A| . I=0 .\\left[\\begin{array}{ll}1 & 0 \\\\ 0 & 1\\end{array}\\right]=\\left[\\begin{array}{ll}0 & 0 \\\\ 0 & 0\\end{array}\\right]$\nअतः, $A(\\operatorname{adj} A)=(\\operatorname{adj} A) . A=|A| . I=\\left[\\begin{array}{ll}0 & 0 \\\\ 0 & 0\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_4.4.4",
+   "kind": "exercise",
+   "number": "4.4.4",
+   "topic": "Verifying A(adjA)=(adjA)A=|A|I for a 3x3 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "सत्यापित कीजिए कि $\\mathrm{A}(\\operatorname{adj} \\mathrm{A})=(\\operatorname{adj} \\mathrm{A}) . \\mathrm{A}=|\\mathrm{A}| . \\mathrm{I}$ है: $\\left[\\begin{array}{ccc}1 & -1 & 2 \\\\ 3 & 0 & -2 \\\\ 1 & 0 & 3\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ, $A=\\left[\\begin{array}{ccc}1 & -1 & 2 \\\\ 3 & 0 & -2 \\\\ 1 & 0 & 3\\end{array}\\right]$, इसलिए $|A|=1(0-0)+1(9+2)+2(0-0)=11$\n\n$$\n\\begin{aligned}\n& A_{11}=0 \\\\\n& A_{21}=3 \\\\\n& A_{31}=2\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& A_{12}=-11 \\\\\n& A_{22}=1 \\\\\n& A_{32}=8\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\nA_{13} & =0 \\\\\nA_{23} & =-1 \\\\\nA_{33} & =3\n\\end{aligned}\n$$\n\nआव्यूह $A$ का सहखंडज $=\\left[\\begin{array}{lll}A_{11} & A_{21} & A_{31} \\\\ A_{12} & A_{22} & A_{32} \\\\ A_{13} & A_{23} & A_{33}\\end{array}\\right]=\\left[\\begin{array}{ccc}0 & 3 & 2 \\\\ -11 & 1 & 8 \\\\ 0 & -1 & 3\\end{array}\\right]$\n\n$$\n\\begin{aligned}\n& A(\\operatorname{adj} A)=\\left[\\begin{array}{ccc}\n1 & -1 & 2 \\\\\n3 & 0 & -2 \\\\\n1 & 0 & 3\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n0 & 3 & 2 \\\\\n-11 & 1 & 8 \\\\\n0 & -1 & 3\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n0+11+0 & 3-1-2 & 2-8+6 \\\\\n0+0+0 & 9+0+2 & 6+0-6 \\\\\n0+0+0 & 3+0-3 & 2+0+9\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n11 & 0 & 0 \\\\\n0 & 11 & 0 \\\\\n0 & 0 & 11\n\\end{array}\\right]\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& (\\operatorname{adj} A) \\cdot A=\\left[\\begin{array}{ccc}\n0 & 3 & 2 \\\\\n-11 & 1 & 8 \\\\\n0 & -1 & 3\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n1 & -1 & 2 \\\\\n3 & 0 & -2 \\\\\n1 & 0 & 3\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n0+9+2 & 0+0+0 & 0-6+6 \\\\\n-11+3+8 & 11+0+0 & -22-2+24 \\\\\n0-3+3 & 0+0+0 & 0+2+9\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n11 & 0 & 0 \\\\\n0 & 11 & 0 \\\\\n0 & 0 & 11\n\\end{array}\\right]\n\\end{aligned}\n$$\n\n$|A| . I=11 .\\left[\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right]=\\left[\\begin{array}{ccc}11 & 0 & 0 \\\\ 0 & 11 & 0 \\\\ 0 & 0 & 11\\end{array}\\right]$\nअतः, $A(\\operatorname{adj} A)=(\\operatorname{adj} A) . A=|A| . I=\\left[\\begin{array}{ccc}11 & 0 & 0 \\\\ 0 & 11 & 0 \\\\ 0 & 0 & 11\\end{array}\\right]$"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_4.4.5",
+   "kind": "exercise",
+   "number": "4.4.5",
+   "topic": "Inverse of a 2x2 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "दिए गए आव्यूह का व्युत्क्रम (जिनका अस्तित्व हो) ज्ञात कीजिए: $\\left[\\begin{array}{cc}2 & -2 \\\\ 4 & 3\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ, $A=\\left[\\begin{array}{cc}2 & -2 \\\\ 4 & 3\\end{array}\\right]$,\nइसलिए, $A_{11}=3 \\quad A_{12}=-4 \\quad A_{21}=2 \\quad A_{22}=2$\n$|A|=6+8=14 \\neq 0 \\Rightarrow A^{-1}$ का अस्तित्व है।"
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "मुख्य सूत्र",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\nA^{-1}=\\frac{1}{|A|} \\operatorname{adj} A=\\frac{1}{|A|}\\left[\\begin{array}{ll}\nA_{11} & A_{21} \\\\\nA_{12} & A_{22}\n\\end{array}\\right]=\\frac{1}{14}\\left[\\begin{array}{cc}\n3 & 2 \\\\\n-4 & 2\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\frac{1}{14}\\left[\\begin{array}{cc}3 & 2 \\\\ -4 & 2\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.6",
+   "kind": "exercise",
+   "number": "4.4.6",
+   "topic": "Inverse of a 2x2 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "दिए गए आव्यूह का व्युत्क्रम (जिनका अस्तित्व हो) ज्ञात कीजिए: $\\left[\\begin{array}{ll}-1 & 5 \\\\ -3 & 2\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ, $A=\\left[\\begin{array}{ll}-1 & 5 \\\\ -3 & 2\\end{array}\\right]$,\nइसलिए, $A_{11}=2 \\quad A_{12}=3 \\quad A_{21}=-5 \\quad A_{22}=-1$\n$|A|=-2+15=13 \\neq 0 \\quad \\Rightarrow A^{-1}$ का अस्तित्व है।"
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "मुख्य सूत्र",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\nA^{-1}=\\frac{1}{|A|} \\operatorname{adj} A=\\frac{1}{|A|}\\left[\\begin{array}{ll}\nA_{11} & A_{21} \\\\\nA_{12} & A_{22}\n\\end{array}\\right]=\\frac{1}{13}\\left[\\begin{array}{ll}\n2 & -5 \\\\\n3 & -1\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\frac{1}{13}\\left[\\begin{array}{ll}2 & -5 \\\\ 3 & -1\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.7",
+   "kind": "exercise",
+   "number": "4.4.7",
+   "topic": "Inverse of an upper triangular 3x3 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "दिए गए आव्यूह का व्युत्क्रम (जिनका अस्तित्व हो) ज्ञात कीजिए: $\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 0 & 2 & 4 \\\\ 0 & 0 & 5\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ, $A=\\left[\\begin{array}{lll}1 & 2 & 3 \\\\ 0 & 2 & 4 \\\\ 0 & 0 & 5\\end{array}\\right]$,\nइसलिए $|A|=1(10-0)-2(0-0)+3(0-0)=10 \\neq 0 \\Rightarrow A^{-1}$ का अस्तित्व है।\n\n$$\n\\begin{aligned}\n& A_{11}=10 \\\\\n& A_{21}=-10 \\\\\n& A_{31}=2\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "मुख्य सूत्र",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{array}{cc}\nA_{12}=0 & A_{13}=0 \\\\\nA_{22}=5 & A_{23}=0 \\\\\nA_{32}=-4 & A_{33}=2 \\\\\nA^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{|A|}\\left[\\begin{array}{lll}\nA_{11} & A_{21} & A_{31} \\\\\nA_{12} & A_{22} & A_{32} \\\\\nA_{13} & A_{23} & A_{33}\n\\end{array}\\right]=\\frac{1}{10}\\left[\\begin{array}{ccc}\n10 & -10 & 2 \\\\\n0 & 5 & -4 \\\\\n0 & 0 & 2\n\\end{array}\\right]\n\\end{array}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\frac{1}{10}\\left[\\begin{array}{ccc}10 & -10 & 2 \\\\ 0 & 5 & -4 \\\\ 0 & 0 & 2\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.8",
+   "kind": "exercise",
+   "number": "4.4.8",
+   "topic": "Inverse of a lower triangular 3x3 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "दिए गए आव्यूह का व्युत्क्रम (जिनका अस्तित्व हो) ज्ञात कीजिए: $\\left[\\begin{array}{ccc}1 & 0 & 0 \\\\ 3 & 3 & 0 \\\\ 5 & 2 & -1\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ, $A=\\left[\\begin{array}{ccc}1 & 0 & 0 \\\\ 3 & 3 & 0 \\\\ 5 & 2 & -1\\end{array}\\right]$,\nइसलिए $|A|=1(-3-0)-0(-3-0)+0(6-15)=-3 \\neq 0 \\Rightarrow A^{-1}$ का अस्तित्व है।\n\n$$\n\\begin{aligned}\n& A_{11}=-3 \\\\\n& A_{21}=0 \\\\\n& A_{31}=0\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& A_{12}=3 \\\\\n& A_{22}=-1 \\\\\n& A_{32}=0\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\nA_{13} & =-9 \\\\\nA_{23} & =-2 \\\\\nA_{33} & =3\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "मुख्य सूत्र",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\nA^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{|A|}\\left[\\begin{array}{lll}\nA_{11} & A_{21} & A_{31} \\\\\nA_{12} & A_{22} & A_{32} \\\\\nA_{13} & A_{23} & A_{33}\n\\end{array}\\right]=\\frac{1}{-3}\\left[\\begin{array}{ccc}\n-3 & 0 & 0 \\\\\n3 & -1 & 0 \\\\\n-9 & -2 & 3\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\frac{1}{-3}\\left[\\begin{array}{ccc}-3 & 0 & 0 \\\\ 3 & -1 & 0 \\\\ -9 & -2 & 3\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.9",
+   "kind": "exercise",
+   "number": "4.4.9",
+   "topic": "Inverse of a 3x3 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "दिए गए आव्यूह का व्युत्क्रम (जिनका अस्तित्व हो) ज्ञात कीजिए: $\\left[\\begin{array}{ccc}2 & 1 & 3 \\\\ 4 & -1 & 0 \\\\ -7 & 2 & 1\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ, $A=\\left[\\begin{array}{ccc}2 & 1 & 3 \\\\ 4 & -1 & 0 \\\\ -7 & 2 & 1\\end{array}\\right]$,\nइसलिए $|A|=2(-1-0)-1(4-0)+3(8-7)=-3 \\neq 0 \\Rightarrow A^{-1}$ का अस्तित्व है।\n\n$$\n\\begin{aligned}\n& A_{11}=-1 \\\\\n& A_{21}=5 \\\\\n& A_{31}=3\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& A_{12}=-4 \\\\\n& A_{22}=23 \\\\\n& A_{32}=12\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\nA_{13} & =1 \\\\\nA_{23} & =-11 \\\\\nA_{33} & =-6\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "मुख्य सूत्र",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\nA^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{|A|}\\left[\\begin{array}{lll}\nA_{11} & A_{21} & A_{31} \\\\\nA_{12} & A_{22} & A_{32} \\\\\nA_{13} & A_{23} & A_{33}\n\\end{array}\\right]=\\frac{1}{-3}\\left[\\begin{array}{ccc}\n-1 & 5 & 3 \\\\\n-4 & 23 & 12 \\\\\n1 & -11 & -6\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\frac{1}{-3}\\left[\\begin{array}{ccc}-1 & 5 & 3 \\\\ -4 & 23 & 12 \\\\ 1 & -11 & -6\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.10",
+   "kind": "exercise",
+   "number": "4.4.10",
+   "topic": "Inverse of a 3x3 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "दिए गए आव्यूह का व्युत्क्रम (जिनका अस्तित्व हो) ज्ञात कीजिए: $\\left[\\begin{array}{ccc}1 & -1 & 2 \\\\ 0 & 2 & -3 \\\\ 3 & -2 & 4\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ $A=\\left[\\begin{array}{ccc}1 & -1 & 2 \\\\ 0 & 2 & -3 \\\\ 3 & -2 & 4\\end{array}\\right]$ है।\nइसलिए $|A|=1(8-6)+1(0+9)+2(0-6)=-1 \\neq 0 \\Rightarrow A^{-1}$ का अस्तित्व है।\n\n$$\n\\begin{aligned}\n& A_{11}=2 \\\\\n& A_{21}=0 \\\\\n& A_{31}=-1\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& A_{12}=-9 \\\\\n& A_{22}=-2 \\\\\n& A_{32}=3\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\nA_{13} & =-6 \\\\\nA_{23} & =-1 \\\\\nA_{33} & =2\n\\end{aligned}\n$$\n\n$$\nA^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{|A|}\\left[\\begin{array}{lll}\nA_{11} & A_{21} & A_{31} \\\\\nA_{12} & A_{22} & A_{32} \\\\\nA_{13} & A_{23} & A_{33}\n\\end{array}\\right]=\\frac{1}{-1}\\left[\\begin{array}{ccc}\n2 & 0 & -1 \\\\\n-9 & -2 & 3 \\\\\n-6 & -1 & 2\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-2 & 0 & 1 \\\\\n9 & 2 & -3 \\\\\n6 & 1 & -2\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\left[\\begin{array}{ccc}-2 & 0 & 1 \\\\ 9 & 2 & -3 \\\\ 6 & 1 & -2\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.11",
+   "kind": "exercise",
+   "number": "4.4.11",
+   "topic": "Inverse of a matrix with trig entries",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "दिए गए आव्यूह का व्युत्क्रम (जिनका अस्तित्व हो) ज्ञात कीजिए: $\\left[\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & \\cos \\alpha & \\sin \\alpha \\\\ 0 & \\sin \\alpha & -\\cos \\alpha\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ $A=\\left[\\begin{array}{ccc}1 & 0 & 0 \\\\ 0 & \\cos \\alpha & \\sin \\alpha \\\\ 0 & \\sin \\alpha & -\\cos \\alpha\\end{array}\\right]$ है। इसलिए:\n\n$$\n\\begin{aligned}\n& |A|=1\\left(-\\cos ^{2} \\alpha-\\sin ^{2} \\alpha\\right)+0(0-0)+0(0-0)=-1 \\neq 0 \\Rightarrow A^{-1} \\text { का अस्तित्व है। } \\\\\n& A_{11}=1 \\quad A_{12}=0 \\quad A_{13}=0 \\\\\n& A_{21}=0 \\quad A_{22}=-\\cos \\alpha \\quad A_{23}=-\\sin \\alpha \\\\\n& A_{31}=0 \\quad A_{32}=-\\sin \\alpha \\quad A_{33}=\\cos \\alpha \\\\\n& A^{-1}=\\frac{1}{|A|} a d j A=\\frac{1}{|A|}\\left[\\begin{array}{ccc}\nA_{11} & A_{21} & A_{31} \\\\\nA_{12} & A_{22} & A_{32} \\\\\nA_{13} & A_{23} & A_{33}\n\\end{array}\\right]=\\frac{1}{-1}\\left[\\begin{array}{ccc}\n1 & 0 & 0 \\\\\n0 & -\\cos \\alpha & -\\sin \\alpha \\\\\n0 & -\\sin \\alpha & \\cos \\alpha\n\\end{array}\\right] \\\\\n& \\Rightarrow A^{-1}=\\left[\\begin{array}{ccc}\n-1 & 0 & 0 \\\\\n0 & \\cos \\alpha & \\sin \\alpha \\\\\n0 & \\sin \\alpha & -\\cos \\alpha\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\left[\\begin{array}{ccc}-1 & 0 & 0 \\\\ 0 & \\cos \\alpha & \\sin \\alpha \\\\ 0 & \\sin \\alpha & -\\cos \\alpha\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.12",
+   "kind": "exercise",
+   "number": "4.4.12",
+   "topic": "Verifying (AB)^-1 = B^-1 A^-1",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{ll}3 & 7 \\\\ 2 & 5\\end{array}\\right]$ और $\\mathrm{B}=\\left[\\begin{array}{ll}6 & 8 \\\\ 7 & 9\\end{array}\\right]$ है तो सत्यापित कीजिए कि $(\\mathrm{AB})^{-1}=\\mathrm{B}^{-1} \\mathrm{~A}^{-1}$ है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ $A=\\left[\\begin{array}{ll}3 & 7 \\\\ 2 & 5\\end{array}\\right]$ है। इसलिए $A_{11}=5 \\quad A_{12}=-2 \\quad A_{21}=-7 \\quad A_{22}=3$\n$|A|=15-14=1 \\neq 0 \\quad \\Rightarrow A^{-1}$ का अस्तित्व है।\n\n$$\nA^{-1}=\\frac{1}{|A|} \\operatorname{adj} A=\\frac{1}{|A|}\\left[\\begin{array}{ll}\nA_{11} & A_{21} \\\\\nA_{12} & A_{22}\n\\end{array}\\right]=\\frac{1}{1}\\left[\\begin{array}{cc}\n5 & -7 \\\\\n-2 & 3\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n5 & -7 \\\\\n-2 & 3\n\\end{array}\\right]\n$$\n\nऔर $B=\\left[\\begin{array}{ll}6 & 8 \\\\ 7 & 9\\end{array}\\right]$ है। इसलिए $B_{11}=9 \\quad B_{12}=-7 \\quad B_{21}=-8 \\quad B_{22}=6$\n$|A|=54-56=-2 \\neq 0 \\quad \\Rightarrow B^{-1}$ का अस्तित्व है।\n\n$$\n\\begin{gathered}\nB^{-1}=\\frac{1}{|B|} \\text { adj } B=\\frac{1}{|B|}\\left[\\begin{array}{ll}\nB_{11} & B_{21} \\\\\nB_{12} & B_{22}\n\\end{array}\\right]=\\frac{1}{-2}\\left[\\begin{array}{cc}\n9 & -8 \\\\\n-7 & 6\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n-9 / 2 & 4 \\\\\n7 / 2 & -3\n\\end{array}\\right] \\\\\nB^{-1} A^{-1}=\\left[\\begin{array}{cc}\n-9 / 2 & 4 \\\\\n7 / 2 & -3\n\\end{array}\\right]\\left[\\begin{array}{cc}\n5 & -7 \\\\\n-2 & 3\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n-\\frac{45}{2}-8 & \\frac{63}{2}+12 \\\\\n\\frac{35}{2}+6 & -\\frac{49}{2}-9\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n-\\frac{61}{2} & \\frac{87}{2} \\\\\n\\frac{47}{2} & -\\frac{67}{2}\n\\end{array}\\right] \\\\\nA B=\\left[\\begin{array}{ll}\n3 & 7 \\\\\n2 & 5\n\\end{array}\\right]\\left[\\begin{array}{cc}\n6 & 8 \\\\\n7 & 9\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n18+49 & 24+63 \\\\\n12+35 & 16+45\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n67 & 87 \\\\\n47 & 61\n\\end{array}\\right] \\\\\n|A B|=67 \\times 61-87 \\times 47=4087-4089=-2 \\neq 0 \\Rightarrow(A B)^{-1} \\text { का अस्तित्व है। } \\\\\nC_{11}=61 \\quad C_{12}=-47 \\quad C_{21}=-87 \\quad C_{22}=67 \\\\\n(A B)^{-1}=\\frac{1}{|A B|} a d j A B=\\frac{1}{|A B|}\\left[\\begin{array}{ll}\nC_{11} & C_{21} \\\\\nC_{12} & C_{22}\n\\end{array}\\right]=\\frac{1}{-2}\\left[\\begin{array}{cc}\n61 & -87 \\\\\n-47 & 67\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n-\\frac{61}{2} & \\frac{87}{2} \\\\\n\\frac{47}{2} & -\\frac{67}{2}\n\\end{array}\\right]\n\\end{gathered}\n$$\n\nअतः $(A B)^{-1}=B^{-1} A^{-1}$ है।"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_4.4.13",
+   "kind": "exercise",
+   "number": "4.4.13",
+   "topic": "Matrix polynomial equation and inverse",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{cc}3 & 1 \\\\ -1 & 2\\end{array}\\right]$ है तो दर्शाइए कि $\\mathrm{A}^{2}-5 \\mathrm{~A}+7 \\mathrm{I}=\\mathrm{O}$ है इसकी सहायता से $\\mathrm{A}^{-1}$ ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "LHS $=A^{2}-5 A+7 I=A A-5 A+7 I$\n\n$$\n\\begin{aligned}\n& =\\left[\\begin{array}{cc}\n3 & 1 \\\\\n-1 & 2\n\\end{array}\\right]\\left[\\begin{array}{cc}\n3 & 1 \\\\\n-1 & 2\n\\end{array}\\right]-5\\left[\\begin{array}{cc}\n3 & 1 \\\\\n-1 & 2\n\\end{array}\\right]+7\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n9-1 & 3+2 \\\\\n-3-2 & -1+4\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n15 & 5 \\\\\n-5 & 10\n\\end{array}\\right]+\\left[\\begin{array}{ll}\n7 & 0 \\\\\n0 & 7\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{cc}\n8-15+7 & 5-5+0 \\\\\n-5+5+0 & 3-10+7\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n0 & 0 \\\\\n0 & 0\n\\end{array}\\right]=0=\\text { RHS } \\\\\n& \\Rightarrow A^{2}-5 A+7 I=0 \\quad \\Rightarrow A^{2}-5 A=-7 I\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दोनों ओर $A^{-1}$ से उत्तर गुणन करने पर (क्योंकि $|A| \\neq 0$ )\n\n$$\n\\begin{aligned}\n& A A A^{-1}-5 A A^{-1}=-7 I A^{-1} \\\\\n& \\Rightarrow A I-5 I=-7 A^{-1} \\\\\n& \\Rightarrow 7 A^{-1}=5 I-A=5\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n3 & 1 \\\\\n-1 & 2\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n5 & 0 \\\\\n0 & 5\n\\end{array}\\right]-\\left[\\begin{array}{cc}\n3 & 1 \\\\\n-1 & 2\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n2 & -1 \\\\\n1 & 3\n\\end{array}\\right] \\\\\n& \\Rightarrow A^{-1}=\\frac{1}{7}\\left[\\begin{array}{cc}\n2 & -1 \\\\\n1 & 3\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\frac{1}{7}\\left[\\begin{array}{cc}2 & -1 \\\\ 1 & 3\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.14",
+   "kind": "exercise",
+   "number": "4.4.14",
+   "topic": "Finding constants a, b for a matrix polynomial",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "आव्यूह $\\mathrm{A}=\\left[\\begin{array}{ll}3 & 2 \\\\ 1 & 1\\end{array}\\right]$ के लिए $a$ और $b$ ऐसी संख्याएँ ज्ञात कीजिए ताकि\n\n$$\n\\mathrm{A}^{2}+a \\mathrm{~A}+b \\mathrm{I}=\\mathrm{O} \\text { हो। }\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है: $A^{2}+a A+b I=O$\n\n$$\n\\begin{aligned}\n& \\Rightarrow\\left[\\begin{array}{ll}\n3 & 2 \\\\\n1 & 1\n\\end{array}\\right]\\left[\\begin{array}{ll}\n3 & 2 \\\\\n1 & 1\n\\end{array}\\right]+a\\left[\\begin{array}{ll}\n3 & 2 \\\\\n1 & 1\n\\end{array}\\right]+b\\left[\\begin{array}{ll}\n1 & 0 \\\\\n0 & 1\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n0 & 0 \\\\\n0 & 0\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{cc}\n9+2 & 6+2 \\\\\n3+1 & 2+1\n\\end{array}\\right]+\\left[\\begin{array}{cc}\n3 a & 2 a \\\\\na & a\n\\end{array}\\right]+\\left[\\begin{array}{ll}\nb & 0 \\\\\n0 & b\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n0 & 0 \\\\\n0 & 0\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{cc}\n11+3 a+b & 8+2 a+0 \\\\\n4+a+0 & 3+a+b\n\\end{array}\\right]=\\left[\\begin{array}{ll}\n0 & 0 \\\\\n0 & 0\n\\end{array}\\right] \\\\\n& \\Rightarrow 4+a=0 \\Rightarrow a=-4 \\quad \\text { और } \\quad 3+a+b=0 \\Rightarrow b=-3-a=-3+4=1\n\\end{aligned}\n$$\n\nअतः $a=-4, b=1$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$a=-4, b=1$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.15",
+   "kind": "exercise",
+   "number": "4.4.15",
+   "topic": "Matrix polynomial equation for a 3x3 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "आव्यूह $\\mathrm{A}=\\left[\\begin{array}{ccc}1 & 1 & 1 \\\\ 1 & 2 & -3 \\\\ 2 & -1 & 3\\end{array}\\right]$ के लिए दर्शाइए कि $\\mathrm{A}^{3}-6 \\mathrm{~A}^{2}+5 \\mathrm{~A}+11 \\mathrm{I}=\\mathrm{O}$ है। इसकी सहायता से $\\mathrm{A}^{-1}$ ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& A^{2}=A \\cdot A=\\left[\\begin{array}{ccc}\n1 & 1 & 1 \\\\\n1 & 2 & -3 \\\\\n2 & -1 & 3\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n1 & 1 & 1 \\\\\n1 & 2 & -3 \\\\\n2 & -1 & 3\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n1+1+2 & 1+2-1 & 1-3+3 \\\\\n1+2-6 & 1+4+3 & 1-6-9 \\\\\n2-1+6 & 2-2-3 & 2+3+9\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n4 & 2 & 1 \\\\\n-3 & 8 & -14 \\\\\n7 & -3 & 14\n\\end{array}\\right] \\\\\n& A^{3}=A^{2} \\cdot A=\\left[\\begin{array}{ccc}\n4 & 2 & 1 \\\\\n-3 & 8 & -14 \\\\\n7 & -3 & 14\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n1 & 1 & 1 \\\\\n1 & 2 & -3 \\\\\n2 & -1 & 3\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n4+2+2 & 4+4-1 & 4-6+3 \\\\\n-3+8-28 & -3+16+14 & -3-24-42 \\\\\n7-3+28 & 7-6-14 & 7+9+42\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n8 & 7 & 1 \\\\\n-23 & 27 & -69 \\\\\n32 & -13 & 58\n\\end{array}\\right] \\\\\n& \\text { LHS }=A^{3}-6 A^{2}+5 A+11 I \\\\\n& =\\left[\\begin{array}{ccc}\n8 & 7 & 1 \\\\\n-23 & 27 & -69 \\\\\n32 & -13 & 58\n\\end{array}\\right]-6\\left[\\begin{array}{ccc}\n4 & 2 & 1 \\\\\n-3 & 8 & -14 \\\\\n7 & -3 & 14\n\\end{array}\\right]+5\\left[\\begin{array}{ccc}\n1 & 1 & 1 \\\\\n1 & 2 & -3 \\\\\n2 & -1 & 3\n\\end{array}\\right]+11\\left[\\begin{array}{ccc}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n8 & 7 & 1 \\\\\n-23 & 27 & -69 \\\\\n32 & -13 & 58\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n24 & 12 & 6 \\\\\n-18 & 48 & -84 \\\\\n42 & -18 & 84\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n5 & 5 & 5 \\\\\n5 & 10 & -15 \\\\\n10 & -5 & 15\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n11 & 0 & 0 \\\\\n0 & 11 & 0 \\\\\n0 & 0 & 11\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n8-24+5+11 & 7-12+5+0 & 1-6+5+0 \\\\\n-23+18+5+0 & 27-48+10+11 & -69+84-15+0 \\\\\n32-42+10+0 & -13+18-5+0 & 58-84+15+11\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]=0=\\text { RHS } \\\\\n& \\Rightarrow A^{3}-6 A^{2}+5 A+11 I=O\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दोनों ओर $A^{-1}$ से उत्तर गुणन करने पर (क्योंकि $|A| \\neq 0$ )\n\n$$\n\\begin{aligned}\n& A^{2} A A^{-1}-6 A A A^{-1}+5 A A^{-1}=-11 I A^{-1} \\\\\n& \\Rightarrow A^{2} I-6 A I+5 I=-11 A^{-1} \\\\\n& \\Rightarrow 11 A^{-1}=-A^{2}+6 A-5 I \\\\\n& \\Rightarrow 11 A^{-1}=-\\left[\\begin{array}{ccc}\n4 & 2 & 1 \\\\\n-3 & 8 & -14 \\\\\n7 & -3 & 14\n\\end{array}\\right]+6\\left[\\begin{array}{ccc}\n1 & 1 & 1 \\\\\n1 & 2 & -3 \\\\\n2 & -1 & 3\n\\end{array}\\right]-5\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& \\Rightarrow 11 A^{-1}=\\left[\\begin{array}{ccc}\n-4 & -2 & -1 \\\\\n3 & -8 & 14 \\\\\n-7 & 3 & -14\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n6 & 6 & 6 \\\\\n6 & 12 & -18 \\\\\n12 & -6 & 18\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n5 & 0 & 0 \\\\\n0 & 5 & 0 \\\\\n0 & 0 & 5\n\\end{array}\\right] \\\\\n& \\Rightarrow 11 A^{-1}=\\left[\\begin{array}{ccc}\n-4+6-5 & -2+6+0 & -1+6+0 \\\\\n3+6-0 & -8+12-5 & 14-18+0 \\\\\n-7+12+0 & 3-6+0 & -14+18-5\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-3 & 4 & 5 \\\\\n9 & -1 & -4 \\\\\n5 & -3 & -1\n\\end{array}\\right] \\\\\n& \\Rightarrow A^{-1}=\\frac{1}{11}\\left[\\begin{array}{ccc}\n-3 & 4 & 5 \\\\\n9 & -1 & -4 \\\\\n5 & -3 & -1\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\frac{1}{11}\\left[\\begin{array}{ccc}-3 & 4 & 5 \\\\ 9 & -1 & -4 \\\\ 5 & -3 & -1\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.16",
+   "kind": "exercise",
+   "number": "4.4.16",
+   "topic": "Verifying a matrix polynomial identity for a 3x3 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{ccc}2 & -1 & 1 \\\\ -1 & 2 & -1 \\\\ 1 & -1 & 2\\end{array}\\right]$, तो सत्यापित कीजिए कि $\\mathrm{A}^{3}-6 \\mathrm{~A}^{2}+9 \\mathrm{~A}-4 \\mathrm{I}=\\mathrm{O}$ है तथा इसकी सहायता से $\\mathrm{A}^{-1}$ ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& A^{2}=A \\cdot A=\\left[\\begin{array}{ccc}\n2 & -1 & 1 \\\\\n-1 & 2 & -1 \\\\\n1 & -1 & 2\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n2 & -1 & 1 \\\\\n-1 & 2 & -1 \\\\\n1 & -1 & 2\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n4+1+1 & -2-2-1 & 2+1+2 \\\\\n-2-2-1 & 1+4+1 & -1-2-2 \\\\\n2+1+2 & -1-2-2 & 1+1+4\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n6 & -5 & 5 \\\\\n-5 & 6 & -5 \\\\\n5 & -5 & 6\n\\end{array}\\right] \\\\\n& A^{3}=A^{2} \\cdot A=\\left[\\begin{array}{ccc}\n6 & -5 & 5 \\\\\n-5 & 6 & -5 \\\\\n5 & -5 & 6\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n2 & -1 & 1 \\\\\n-1 & 2 & -1 \\\\\n1 & -1 & 2\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n12+5+5 & -6-10-5 & 6+5+10 \\\\\n-10-6-5 & 5+12+5 & -5-6-10 \\\\\n10+5+6 & -5-10-6 & 5+5+12\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n22 & -21 & 21 \\\\\n-21 & 22 & -21 \\\\\n21 & -21 & 22\n\\end{array}\\right] \\\\\n& \\text { LHS }=A^{3}-6 A^{2}+9 A-4 I \\\\\n& =\\left[\\begin{array}{ccc}\n22 & -21 & 21 \\\\\n-21 & 22 & -21 \\\\\n21 & -21 & 22\n\\end{array}\\right]-6\\left[\\begin{array}{ccc}\n6 & -5 & 5 \\\\\n-5 & 6 & -5 \\\\\n5 & -5 & 6\n\\end{array}\\right]+9\\left[\\begin{array}{ccc}\n2 & -1 & 1 \\\\\n-1 & 2 & -1 \\\\\n1 & -1 & 2\n\\end{array}\\right]-4\\left[\\begin{array}{ccc}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n22 & -21 & 21 \\\\\n-21 & 22 & -21 \\\\\n21 & -21 & 22\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n36 & -30 & 30 \\\\\n-30 & 36 & -30 \\\\\n30 & -30 & 36\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n18 & -9 & 9 \\\\\n-9 & 18 & -9 \\\\\n9 & -9 & 18\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n4 & 0 & 0 \\\\\n0 & 4 & 0 \\\\\n0 & 0 & 4\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n22-36+18-4 & -21+30-9+0 & 21-30+9+0 \\\\\n-21+30-9-0 & 22-36+18-4 & -21+30-9+0 \\\\\n21-30+9-0 & -21+30-9-0 & 22-36+18-4\n\\end{array}\\right] \\\\\n& =\\left[\\begin{array}{ccc}\n0 & 0 & 0 \\\\\n0 & 0 & 0 \\\\\n0 & 0 & 0\n\\end{array}\\right]=0=\\mathrm{RHS} \\\\\n& \\Rightarrow A^{3}-6 A^{2}+9 A-4 I=O \\quad \\Rightarrow A^{3}-6 A^{2}+9 A=4 I\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दोनों ओर $A^{-1}$ से उत्तर गुणन करने पर (क्योंकि $|A| \\neq 0$ )\n\n$$\n\\begin{aligned}\n& A^{2} A A^{-1}-6 A A A^{-1}+9 A A^{-1}=4 I A^{-1} \\\\\n& \\left.\\Rightarrow A^{2} I-6 A I+9 I=4 A^{-1} \\quad \\text { [क्योंकि } A A^{-1}=I\\right] \\\\\n& \\Rightarrow 4 A^{-1}=A^{2}-6 A+9 I \\\\\n& \\Rightarrow 4 A^{-1}=\\left[\\begin{array}{ccc}\n6 & -5 & 5 \\\\\n-5 & 6 & -5 \\\\\n5 & -5 & 6\n\\end{array}\\right]-6\\left[\\begin{array}{ccc}\n2 & -1 & 1 \\\\\n-1 & 2 & -1 \\\\\n1 & -1 & 2\n\\end{array}\\right]+9\\left[\\begin{array}{ccc}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\\\\n& \\Rightarrow 4 A^{-1}=\\left[\\begin{array}{ccc}\n6 & -5 & 5 \\\\\n-5 & 6 & -5 \\\\\n5 & -5 & 6\n\\end{array}\\right]-\\left[\\begin{array}{ccc}\n12 & -6 & 6 \\\\\n-6 & 12 & -6 \\\\\n6 & -6 & 12\n\\end{array}\\right]+\\left[\\begin{array}{ccc}\n9 & 0 & 0 \\\\\n0 & 9 & 0 \\\\\n0 & 0 & 9\n\\end{array}\\right] \\\\\n& \\Rightarrow 4 A^{-1}=\\left[\\begin{array}{ccc}\n6-12+9 & -5+6+0 & 5-6+0 \\\\\n-5+6+0 & 6-12+9 & -5+6+0 \\\\\n5-6+0 & -5+6+0 & 6-12+9\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n3 & 1 & -1 \\\\\n1 & 3 & 1 \\\\\n-1 & 1 & 3\n\\end{array}\\right] \\\\\n& \\Rightarrow A^{-1}=\\frac{1}{4}\\left[\\begin{array}{ccc}\n3 & 1 & -1 \\\\\n1 & 3 & 1 \\\\\n-1 & 1 & 3\n\\end{array}\\right]\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\frac{1}{4}\\left[\\begin{array}{ccc}3 & 1 & -1 \\\\ 1 & 3 & 1 \\\\ -1 & 1 & 3\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.17",
+   "kind": "exercise",
+   "number": "4.4.17",
+   "topic": "MCQ: value of |adj A| for a 3x3 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}, 3 \\times 3$ कोटि का वर्ग आव्यूह है तो $|\\operatorname{adj} \\mathrm{Al}|$ का मान है:\n(A) $|\\mathrm{A}|$\n(B) $|\\mathrm{A}|^{2}$\n(C) $|\\mathrm{A}|^{3}$\n(D) $3|\\mathrm{~A}|$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "हम जानते हैं कि $\\operatorname{adj} A=|A| I$\n\n$$\n\\Rightarrow(\\operatorname{adj} A) A=|A|\\left[\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right] \\Rightarrow|(\\operatorname{adj} A) A|=|A|\\left|\\begin{array}{lll}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{array}\\right|=\\left|\\begin{array}{ccc}\n|A| & 0 & 0 \\\\\n0 & |A| & 0 \\\\\n0 & 0 & |A|\n\\end{array}\\right|=|A|^{3}\n$$\n\n$\\Rightarrow|\\operatorname{adj} A|=|A|^{2}$। अतः विकल्प (B) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(B) $|\\mathrm{A}|^{2}$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.4.18",
+   "kind": "exercise",
+   "number": "4.4.18",
+   "topic": "MCQ: det(A^-1) for an invertible 2x2 matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि A कोटि दो का व्युत्क्रमीय आव्यूह है तो $\\operatorname{det}\\left(\\mathrm{A}^{-1}\\right)$ बराबर:\n(A) $\\operatorname{det}(\\mathrm{A})$\n(B) $\\frac{1}{\\operatorname{det}(\\mathrm{~A})}$\n(C) $1$\n(D) $0$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है: A व्युत्क्रमीय आव्यूह है। अतः $A^{-1}=\\frac{1}{|A|} \\operatorname{adj} A$\nA कोटि दो का आव्यूह है, माना $A=\\left[\\begin{array}{ll}a & b \\\\ c & d\\end{array}\\right]$\nइसलिए $|A|=a d-b c$ तथा $a d j A=\\left[\\begin{array}{cc}d & -b \\\\ -c & a\\end{array}\\right]$\n\n$$\n\\begin{aligned}\n& A^{-1}=\\frac{1}{|A|} \\text { adj } A=A^{-1}=\\frac{1}{|A|}\\left[\\begin{array}{cc}\nd & -b \\\\\n-c & a\n\\end{array}\\right]=\\left[\\begin{array}{cc}\n\\frac{d}{|A|} & -\\frac{b}{|A|} \\\\\n-\\frac{c}{|A|} & \\frac{a}{|A|}\n\\end{array}\\right] \\\\\n& \\operatorname{det}\\left(A^{-1}\\right)=\\left|A^{-1}\\right|=\\left|\\begin{array}{cc}\n\\frac{d}{|A|} & -\\frac{b}{|A|} \\\\\n-\\frac{c}{|A|} & \\frac{a}{|A|}\n\\end{array}\\right| \\\\\n& =\\frac{1}{|A|^{2}}\\left|\\begin{array}{cc}\nd & -b \\\\\n-c & a\n\\end{array}\\right|=\\frac{1}{|A|^{2}}(a d-b c)=\\frac{1}{|A|^{2}}|A|=\\frac{1}{|A|}\n\\end{aligned}\n$$\n\nअतः विकल्प (B) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(B) $\\frac{1}{\\operatorname{det}(\\mathrm{~A})}$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.1",
+   "kind": "exercise",
+   "number": "4.5.1",
+   "topic": "Classifying a system as consistent/inconsistent",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय का संगत अथवा असंगत के रूप में वर्गीकरण कीजिए:\n\n$$\n\\begin{aligned}\n& x+2 y=2 \\\\\n& 2 x+3 y=3\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ll}\n1 & 2 \\\\\n2 & 3\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{l}\n2 \\\\\n3\n\\end{array}\\right]\n$$\n\n$|A|=3-4=-1 \\neq 0 \\quad \\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है। अतः, दी गई समीकरण निकाय संगत हैं।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "संगत"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.2",
+   "kind": "exercise",
+   "number": "4.5.2",
+   "topic": "Classifying a system as consistent/inconsistent",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय का संगत अथवा असंगत के रूप में वर्गीकरण कीजिए:\n\n$$\n\\begin{aligned}\n& 2 x-y=5 \\\\\n& x+y=4\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{cc}\n2 & -1 \\\\\n1 & 1\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{l}\n5 \\\\\n4\n\\end{array}\\right]\n$$\n\n$|A|=2+1=3 \\neq 0 \\quad \\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है। अतः, दी गई समीकरण निकाय संगत हैं।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "संगत"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.3",
+   "kind": "exercise",
+   "number": "4.5.3",
+   "topic": "Classifying a system as consistent/inconsistent",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय का संगत अथवा असंगत के रूप में वर्गीकरण कीजिए:\n\n$$\n\\begin{aligned}\n& x+3 y=5 \\\\\n& 2 x+6 y=8\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ll}\n1 & 3 \\\\\n2 & 6\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{l}\n5 \\\\\n8\n\\end{array}\\right]\n$$\n\n$|A|=6-6=0 \\quad \\Rightarrow$ आव्यूह $A$ अव्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व नहीं है।\nअब, $\\operatorname{adj} A=\\left[\\begin{array}{cc}6 & -3 \\\\ -2 & 1\\end{array}\\right]$\n\n$$\n(\\operatorname{adj} A) B=\\left[\\begin{array}{cc}\n6 & -3 \\\\\n-2 & 1\n\\end{array}\\right]\\left[\\begin{array}{l}\n5 \\\\\n8\n\\end{array}\\right]=\\left[\\begin{array}{c}\n30-24 \\\\\n-10+8\n\\end{array}\\right]=\\left[\\begin{array}{c}\n6 \\\\\n-2\n\\end{array}\\right] \\neq 0\n$$\n\nइसलिए, दी गई समीकरण निकाय का कोई हल नहीं है।\nअतः, दी गई समीकरण निकाय असंगत हैं।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "असंगत"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.4",
+   "kind": "exercise",
+   "number": "4.5.4",
+   "topic": "Classifying a system as consistent/inconsistent",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय का संगत अथवा असंगत के रूप में वर्गीकरण कीजिए:\n\n$$\n\\begin{aligned}\n& x+y+z=1 \\\\\n& 2 x+3 y+2 z=2 \\\\\n& a x+a y+2 a z=4\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ccc}\n1 & 1 & 1 \\\\\n2 & 3 & 2 \\\\\na & a & 2 a\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{l}\n1 \\\\\n2 \\\\\n3\n\\end{array}\\right]\n$$\n\n$|A|=1(6 a-2 a)-1(4 a-2 a)+1(2 a-3 a)=a \\neq 0$\n$\\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है।\nअतः, दी गई समीकरण निकाय संगत हैं।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "संगत"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.5",
+   "kind": "exercise",
+   "number": "4.5.5",
+   "topic": "Classifying a system as consistent/inconsistent",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय का संगत अथवा असंगत के रूप में वर्गीकरण कीजिए:\n\n$$\n\\begin{aligned}\n& 3 x-y-2 z=2 \\\\\n& 2 y-z=-1 \\\\\n& 3 x-5 y=3\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ccc}\n3 & -1 & -2 \\\\\n0 & 2 & -1 \\\\\n3 & -5 & 0\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{c}\n2 \\\\\n-1 \\\\\n3\n\\end{array}\\right]\n$$\n\n$|A|=3(0-5)+1(0+3)-2(0-6)=-15+3+12=0$\n$\\Rightarrow$ आव्यूह $A$ अव्युक्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व नहीं है। अब,\n\n$$\n\\begin{aligned}\n& A_{11}=-5 \\\\\n& A_{21}=10 \\\\\n& A_{31}=5\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& A_{12}=-3 \\\\\n& A_{22}=6 \\\\\n& A_{32}=3\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\nA_{13} & =-6 \\\\\nA_{23} & =12 \\\\\nA_{33} & =6\n\\end{aligned}\n$$\n\n$\\operatorname{adj} A=\\left[\\begin{array}{ccc}-5 & 10 & 5 \\\\ -3 & 6 & 3 \\\\ -6 & 12 & 6\\end{array}\\right]$\n$(\\operatorname{adj} A) B=\\left[\\begin{array}{ccc}-5 & 10 & 5 \\\\ -3 & 6 & 3 \\\\ -6 & 12 & 6\\end{array}\\right]\\left[\\begin{array}{c}2 \\\\ -1 \\\\ 3\\end{array}\\right]=\\left[\\begin{array}{c}-10-10+15 \\\\ -6-6+9 \\\\ -12-12+16\\end{array}\\right]=\\left[\\begin{array}{l}-5 \\\\ -3 \\\\ -6\\end{array}\\right] \\neq 0$\nइसलिए, दी गई समीकरण निकाय का कोई हल नहीं है।\nअतः, दी गई समीकरण निकाय असंगत हैं।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "असंगत"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.6",
+   "kind": "exercise",
+   "number": "4.5.6",
+   "topic": "Classifying a system as consistent/inconsistent",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय का संगत अथवा असंगत के रूप में वर्गीकरण कीजिए:\n\n$$\n\\begin{aligned}\n& 5 x-y+4 z=5 \\\\\n& 2 x+3 y+5 z=2 \\\\\n& 5 x-2 y+6 z=-1\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ccc}\n5 & -1 & 4 \\\\\n2 & 3 & 5 \\\\\n5 & -2 & 6\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{c}\n5 \\\\\n2 \\\\\n-1\n\\end{array}\\right]\n$$\n\n$|A|=5(18+10)+1(12-25)+4(-4-15)=140-13-76=51 \\neq 0$\n$\\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है।\nअतः, दी गई समीकरण निकाय संगत हैं।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "संगत"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.7",
+   "kind": "exercise",
+   "number": "4.5.7",
+   "topic": "Solving a 2x2 system via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय को आव्यूह विधि से हल कीजिए:\n\n$$\n\\begin{aligned}\n& 5 x+2 y=4 \\\\\n& 7 x+3 y=5\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ll}\n5 & 2 \\\\\n7 & 3\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{l}\n4 \\\\\n5\n\\end{array}\\right]\n$$\n\n$|A|=15-14=1 \\neq 0 \\quad \\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है।\nअतः, दी गई समीकरण निकाय संगत हैं।\nइसलिए, $A_{11}=3 \\quad A_{12}=-7 \\quad A_{21}=-2 \\quad A_{22}=5$\n\n$$\nA^{-1}=\\frac{1}{|A|} \\operatorname{adj} A=\\frac{1}{|A|}\\left[\\begin{array}{ll}\nA_{11} & A_{21} \\\\\nA_{12} & A_{22}\n\\end{array}\\right]=\\frac{1}{1}\\left[\\begin{array}{cc}\n3 & -2 \\\\\n-7 & 5\n\\end{array}\\right]\n$$\n\n$X=A^{-1} B \\quad \\Rightarrow\\left[\\begin{array}{l}x \\\\ y\\end{array}\\right]=\\left[\\begin{array}{cc}3 & -2 \\\\ -7 & 5\\end{array}\\right]\\left[\\begin{array}{l}4 \\\\ 5\\end{array}\\right]$\n\n$$\n\\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right]=\\left[\\begin{array}{c}\n12-10 \\\\\n-28+25\n\\end{array}\\right] \\quad \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right]=\\left[\\begin{array}{c}\n2 \\\\\n-3\n\\end{array}\\right] \\quad \\Rightarrow x=2, \\quad y=-3\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=2, y=-3$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.8",
+   "kind": "exercise",
+   "number": "4.5.8",
+   "topic": "Solving a 2x2 system via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय को आव्यूह विधि से हल कीजिए:\n\n$$\n\\begin{aligned}\n& 2 x-y=-2 \\\\\n& 3 x+4 y=3\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{cc}\n2 & -1 \\\\\n3 & 4\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{c}\n-2 \\\\\n3\n\\end{array}\\right]\n$$\n\n$|A|=8+3=11 \\neq 0 \\quad \\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है। अतः, दी गई समीकरण निकाय संगत हैं।\nइसलिए, $A_{11}=4 \\quad A_{12}=-3 \\quad A_{21}=1 \\quad A_{22}=2$\n\n$$\n\\begin{gathered}\nA^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{|A|}\\left[\\begin{array}{ll}\nA_{11} & A_{21} \\\\\nA_{12} & A_{22}\n\\end{array}\\right]=\\frac{1}{11}\\left[\\begin{array}{cc}\n4 & 1 \\\\\n-3 & 2\n\\end{array}\\right] \\\\\nX=A^{-1} B \\quad \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right]=\\frac{1}{11}\\left[\\begin{array}{cc}\n4 & 1 \\\\\n-3 & 2\n\\end{array}\\right]\\left[\\begin{array}{c}\n-2 \\\\\n3\n\\end{array}\\right] \\\\\n\\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right]=\\frac{1}{11}\\left[\\begin{array}{c}\n-8+3 \\\\\n6+6\n\\end{array}\\right] \\quad \\Rightarrow\\left[\\begin{array}{c}\nx \\\\\ny\n\\end{array}\\right]=\\left[\\begin{array}{c}\n-\\frac{5}{11} \\\\\n\\frac{12}{11}\n\\end{array}\\right] \\quad \\Rightarrow x=-\\frac{5}{11}, \\quad y=\\frac{12}{11}\n\\end{gathered}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=-\\frac{5}{11}, y=\\frac{12}{11}$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.9",
+   "kind": "exercise",
+   "number": "4.5.9",
+   "topic": "Solving a 2x2 system via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय को आव्यूह विधि से हल कीजिए:\n\n$$\n\\begin{aligned}\n& 4 x-3 y=3 \\\\\n& 3 x-5 y=7\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ll}\n4 & -3 \\\\\n3 & -5\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{l}\n3 \\\\\n7\n\\end{array}\\right]\n$$\n\n$|A|=-20+9=-11 \\neq 0 \\quad \\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है। अतः, दी गई समीकरण निकाय संगत हैं।\nइसलिए, $A_{11}=-5 \\quad A_{12}=-3 \\quad A_{21}=3 \\quad A_{22}=4$\n\n$$\n\\begin{gathered}\nA^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{|A|}\\left[\\begin{array}{ll}\nA_{11} & A_{21} \\\\\nA_{12} & A_{22}\n\\end{array}\\right]=\\frac{1}{-11}\\left[\\begin{array}{ll}\n-5 & 3 \\\\\n-3 & 4\n\\end{array}\\right] \\\\\nX=A^{-1} B \\quad \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right]=-\\frac{1}{11}\\left[\\begin{array}{ll}\n-5 & 3 \\\\\n-3 & 4\n\\end{array}\\right]\\left[\\begin{array}{l}\n3 \\\\\n7\n\\end{array}\\right] \\\\\n\\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right]=-\\frac{1}{11}\\left[\\begin{array}{c}\n-15+21 \\\\\n-9+28\n\\end{array}\\right] \\quad \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right]=\\left[\\begin{array}{r}\n-\\frac{6}{11} \\\\\n-\\frac{19}{11}\n\\end{array}\\right] \\quad \\Rightarrow x=-\\frac{6}{11}, \\quad y=-\\frac{19}{11}\n\\end{gathered}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=-\\frac{6}{11}, y=-\\frac{19}{11}$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.10",
+   "kind": "exercise",
+   "number": "4.5.10",
+   "topic": "Solving a 2x2 system via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय को आव्यूह विधि से हल कीजिए:\n\n$$\n\\begin{aligned}\n& 5 x+2 y=3 \\\\\n& 3 x+2 y=5\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ll}\n5 & 2 \\\\\n3 & 2\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{l}\n3 \\\\\n5\n\\end{array}\\right]\n$$\n\n$|A|=10-6=4 \\neq 0 \\quad \\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है। अतः, दी गई समीकरण निकाय संगत हैं।\nइसलिए, $A_{11}=2 \\quad A_{12}=-3 \\quad A_{21}=-2 \\quad A_{22}=5$\n\n$$\n\\begin{aligned}\n& A^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{|A|}\\left[\\begin{array}{ll}\nA_{11} & A_{21} \\\\\nA_{12} & A_{22}\n\\end{array}\\right]=\\frac{1}{4}\\left[\\begin{array}{cc}\n2 & -2 \\\\\n-3 & 5\n\\end{array}\\right] \\\\\n& X=A^{-1} B \\quad \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right]=\\frac{1}{4}\\left[\\begin{array}{cc}\n2 & -2 \\\\\n-3 & 5\n\\end{array}\\right]\\left[\\begin{array}{l}\n3 \\\\\n5\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right]=\\frac{1}{4}\\left[\\begin{array}{c}\n6-10 \\\\\n-9+25\n\\end{array}\\right] \\quad \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny\n\\end{array}\\right]=\\left[\\begin{array}{c}\n-\\frac{4}{4} \\\\\n\\frac{16}{4}\n\\end{array}\\right] \\quad \\Rightarrow x=-1, \\quad y=4\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=-1, y=4$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.11",
+   "kind": "exercise",
+   "number": "4.5.11",
+   "topic": "Solving a 3x3 system via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय को आव्यूह विधि से हल कीजिए:\n\n$$\n\\begin{aligned}\n& 2 x+y+z=1 \\\\\n& x-2 y-z=\\frac{3}{2} \\\\\n& 3 y-5 z=9\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ccc}\n2 & 1 & 1 \\\\\n1 & -2 & -1 \\\\\n0 & 3 & -5\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{c}\n1 \\\\\n3 / 2 \\\\\n9\n\\end{array}\\right]\n$$\n\n$|A|=2(10+3)-1(-5-0)+1(3-0)=26+5+3=34 \\neq 0$\n⇒ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है।\nअतः, दी गई समीकरण निकाय संगत हैं। इसलिए,\n\n$$\n\\begin{array}{lll}\nA_{11}=13 & A_{12}=5 & A_{13}=3 \\\\\nA_{21}=8 & A_{22}=-10 & A_{23}=-6 \\\\\nA_{31}=1 & A_{32}=3 & A_{33}=-5\n\\end{array}\n$$\n\n$$\nA^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{34}\\left[\\begin{array}{ccc}\n13 & 8 & 1 \\\\\n5 & -10 & 3 \\\\\n3 & -6 & -5\n\\end{array}\\right]\n$$\n\n$$\nX=A^{-1} B \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{34}\\left[\\begin{array}{ccc}\n13 & 8 & 1 \\\\\n5 & -10 & 3 \\\\\n3 & -6 & -5\n\\end{array}\\right]\\left[\\begin{array}{c}\n1 \\\\\n3 / 2 \\\\\n9\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{34}\\left[\\begin{array}{c}\n13+12+9 \\\\\n5-15+27 \\\\\n3-9-45\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{c}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{34}\\left[\\begin{array}{c}\n34 \\\\\n17 \\\\\n-51\n\\end{array}\\right]=\\left[\\begin{array}{c}\n1 \\\\\n1 / 2 \\\\\n-3 / 2\n\\end{array}\\right] \\Rightarrow x=1, y=\\frac{1}{2}, z=-\\frac{3}{2}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=1, y=\\frac{1}{2}, z=-\\frac{3}{2}$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.12",
+   "kind": "exercise",
+   "number": "4.5.12",
+   "topic": "Solving a 3x3 system via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय को आव्यूह विधि से हल कीजिए:\n\n$$\n\\begin{aligned}\n& x-y+z=4 \\\\\n& 2 x+y-3 z=0 \\\\\n& x+y+z=2\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ccc}\n1 & -1 & 1 \\\\\n2 & 1 & -3 \\\\\n1 & 1 & 1\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{l}\n4 \\\\\n0 \\\\\n2\n\\end{array}\\right]\n$$\n\n$$\n|A|=1(1+3)+1(2+3)+1(2-1)=4+5+1=10 \\neq 0\n$$\n\n$\\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है।\nअतः, दी गई समीकरण निकाय संगत हैं। इसलिए,\n\n$$\n\\begin{array}{lll}\nA_{11}=4 & A_{12}=-5 & A_{13}=1 \\\\\nA_{21}=2 & A_{22}=0 & A_{23}=-2 \\\\\nA_{31}=2 & A_{32}=5 & A_{33}=3\n\\end{array}\n$$\n\n$$\nA^{-1}=\\frac{1}{|A|} a d j A=\\frac{1}{10}\\left[\\begin{array}{ccc}\n4 & 2 & 2 \\\\\n-5 & 0 & 5 \\\\\n1 & -2 & 3\n\\end{array}\\right]\n$$\n\n$$\nX=A^{-1} B \\quad \\Rightarrow\\left[\\begin{array}{c}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{10}\\left[\\begin{array}{ccc}\n4 & 2 & 2 \\\\\n-5 & 0 & 5 \\\\\n1 & -2 & 3\n\\end{array}\\right]\\left[\\begin{array}{c}\n4 \\\\\n0 \\\\\n2\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{10}\\left[\\begin{array}{c}\n16+0+4 \\\\\n-20+0+10 \\\\\n4+0+6\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{c}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{10}\\left[\\begin{array}{c}\n20 \\\\\n-10 \\\\\n10\n\\end{array}\\right]=\\left[\\begin{array}{c}\n2 \\\\\n-1 \\\\\n1\n\\end{array}\\right] \\Rightarrow x=2, y=-1, z=1\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=2, y=-1, z=1$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.13",
+   "kind": "exercise",
+   "number": "4.5.13",
+   "topic": "Solving a 3x3 system via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय को आव्यूह विधि से हल कीजिए:\n\n$$\n\\begin{aligned}\n& 2 x+3 y+3 z=5 \\\\\n& x-2 y+z=-4 \\\\\n& 3 x-y-2 z=3\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ccc}\n2 & 3 & 3 \\\\\n1 & -2 & 1 \\\\\n3 & -1 & -2\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{c}\n5 \\\\\n-4 \\\\\n3\n\\end{array}\\right]\n$$\n\n$$\n|A|=2(4+1)-3(-2-3)+3(-1+6)=10+15+15=40 \\neq 0\n$$\n\n$\\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है।\nअतः, दी गई समीकरण निकाय संगत हैं। इसलिए,\n\n$$\n\\begin{array}{lcl}\nA_{11}=5 & A_{12}=5 & A_{13}=5 \\\\\nA_{21}=3 & A_{22}=-13 & A_{23}=11 \\\\\nA_{31}=9 & A_{32}=1 & A_{33}=-7\n\\end{array}\n$$\n\n$$\nA^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{40}\\left[\\begin{array}{ccc}\n5 & 3 & 9 \\\\\n5 & -13 & 1 \\\\\n5 & 11 & -7\n\\end{array}\\right]\n$$\n\n$$\nX=A^{-1} B \\quad \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{40}\\left[\\begin{array}{ccc}\n5 & 3 & 9 \\\\\n5 & -13 & 1 \\\\\n5 & 11 & -7\n\\end{array}\\right]\\left[\\begin{array}{c}\n5 \\\\\n-4 \\\\\n3\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{40}\\left[\\begin{array}{c}\n25-12+27 \\\\\n25+52+3 \\\\\n25-44-21\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{c}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{40}\\left[\\begin{array}{c}\n40 \\\\\n80 \\\\\n-40\n\\end{array}\\right]=\\left[\\begin{array}{c}\n1 \\\\\n2 \\\\\n-1\n\\end{array}\\right] \\Rightarrow x=1, y=2, z=-1\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=1, y=2, z=-1$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.14",
+   "kind": "exercise",
+   "number": "4.5.14",
+   "topic": "Solving a 3x3 system via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय को आव्यूह विधि से हल कीजिए:\n\n$$\n\\begin{aligned}\n& x-y+2 z=7 \\\\\n& 3 x+4 y-5 z=-5 \\\\\n& 2 x-y+3 z=12\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "समीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ccc}\n1 & -1 & 2 \\\\\n3 & 4 & -5 \\\\\n2 & -1 & 3\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{c}\n7 \\\\\n-5 \\\\\n12\n\\end{array}\\right]\n$$\n\n$|A|=1(12-5)+1(9+10)+2(-3-8)=7+19-22=4 \\neq 0$\n$\\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है।\nअतः, दी गई समीकरण निकाय संगत हैं। इसलिए,\n\n$$\n\\begin{array}{lcl}\nA_{11}=7 & A_{12}=-19 & A_{13}=-11 \\\\\nA_{21}=1 & A_{22}=-1 & A_{23}=-1 \\\\\nA_{31}=-3 & A_{32}=11 & A_{33}=7\n\\end{array}\n$$\n\n$$\nA^{-1}=\\frac{1}{|A|} \\operatorname{adj} A=\\frac{1}{4}\\left[\\begin{array}{ccc}\n7 & 1 & -3 \\\\\n-19 & -1 & 11 \\\\\n-11 & -1 & 7\n\\end{array}\\right]\n$$\n\n$$\nX=A^{-1} B \\quad \\Rightarrow\\left[\\begin{array}{c}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{4}\\left[\\begin{array}{ccc}\n7 & 1 & -3 \\\\\n-19 & -1 & 11 \\\\\n-11 & -1 & 7\n\\end{array}\\right]\\left[\\begin{array}{c}\n7 \\\\\n-5 \\\\\n12\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{4}\\left[\\begin{array}{c}\n49-5-36 \\\\\n-133+5+132 \\\\\n-77+5+84\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{c}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{4}\\left[\\begin{array}{c}\n4 \\\\\n4 \\\\\n12\n\\end{array}\\right]=\\left[\\begin{array}{l}\n1 \\\\\n1 \\\\\n3\n\\end{array}\\right] \\Rightarrow x=1, y=1, z=3\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=1, y=1, z=3$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.15",
+   "kind": "exercise",
+   "number": "4.5.15",
+   "topic": "Finding A^-1 and using it to solve a 3x3 system",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{ccc}2 & -3 & 5 \\\\ 3 & 2 & -4 \\\\ 1 & 1 & -2\\end{array}\\right]$ है तो $\\mathrm{A}^{-1}$ ज्ञात कीजिए। $\\mathrm{A}^{-1}$ का प्रयोग करके निम्नलिखित समीकरण निकाय को हल कीजिए।\n\n$$\n\\begin{aligned}\n& 2 x-3 y+5 z=11 \\\\\n& 3 x+2 y-4 z=-5 \\\\\n& x+y-2 z=-3\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\nA=\\left[\\begin{array}{ccc}\n2 & -3 & 5 \\\\\n3 & 2 & -4 \\\\\n1 & 1 & -2\n\\end{array}\\right]\n$$\n\n$|A|=2(-4+4)+3(-6+4)+5(3-2)=0-6+5=-1 \\neq 0$\n$\\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है। इसलिए,\n\n$$\n\\begin{aligned}\n& A_{11}=0 \\\\\n& A_{21}=-1 \\\\\n& A_{31}=2\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& A_{12}=2 \\\\\n& A_{22}=-9 \\\\\n& A_{32}=23\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& A_{13}=1 \\\\\n& A_{23}=-5 \\\\\n& A_{33}=13\n\\end{aligned}\n$$\n\n$$\nA^{-1}=\\frac{1}{|A|} \\operatorname{adj} A=\\frac{1}{-1}\\left[\\begin{array}{ccc}\n0 & -1 & 2 \\\\\n2 & -9 & 23 \\\\\n1 & -5 & 13\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n0 & 1 & -2 \\\\\n-2 & 9 & -23 \\\\\n-1 & 5 & -13\n\\end{array}\\right]\n$$\n\nसमीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ccc}\n2 & -3 & 5 \\\\\n3 & 2 & -4 \\\\\n1 & 1 & -2\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{l}\n11 \\\\\n-5 \\\\\n-3\n\\end{array}\\right]\n$$\n\n$$\nX=A^{-1} B \\quad \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n0 & 1 & -2 \\\\\n-2 & 9 & -23 \\\\\n-1 & 5 & -13\n\\end{array}\\right]\\left[\\begin{array}{l}\n11 \\\\\n-5 \\\\\n-3\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\left[\\begin{array}{c}\n0-5+6 \\\\\n-22-45+69 \\\\\n-11-25+39\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\left[\\begin{array}{l}\n1 \\\\\n2 \\\\\n3\n\\end{array}\\right] \\Rightarrow x=1, y=2, z=3\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$A^{-1}=\\left[\\begin{array}{ccc}0 & 1 & -2 \\\\ -2 & 9 & -23 \\\\ -1 & 5 & -13\\end{array}\\right]$; $x=1, y=2, z=3$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.5.16",
+   "kind": "exercise",
+   "number": "4.5.16",
+   "topic": "Word problem - price per kg via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$4$ kg प्याज, $3$ kg गेहूँ और $2$ kg चावल का मूल्य Rs $60$ है। $2$ kg प्याज, $4$ kg गेहूँ और $6 \\mathrm{~kg}$ चावल का मूल्य Rs $90$ है। $6 \\mathrm{~kg}$ प्याज, $2 \\mathrm{~kg}$ और $3 \\mathrm{~kg}$ चावल का मूल्य Rs $70$ है। आव्यूह विधि द्वारा प्रत्येक का मूल्य प्रति kg ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "माना, $1 \\mathrm{~kg}$ प्याज का मूल्य $=₹ x$,\nमाना, $1 \\mathrm{~kg}$ गेहूँ का मूल्य = ₹ $y$ और\nमाना, $1 k g$ चावल का मूल्य $=₹ z$ है।\nयहाँ, $4 k g$ प्याज, $3 k g$ गेहूँ और $2 k g$ चावल का मूल्य ₹ $60$ है। इसलिए, $4 x+3 y+2 z=60$ $2 k g$ प्याज, $4 k g$ गेहूँ और $6 k g$ चावल का मूल्य ₹ $90$ है। इसलिए, $2 x+4 y+6 z=90$ और $6 k g$ प्याज, $2 k g$ और $3 k g$ चावल का मूल्य ₹ $70$ है। इसलिए, $6 x+2 y+3 z=70$\n\nसमीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{lll}\n4 & 3 & 2 \\\\\n2 & 4 & 6 \\\\\n6 & 2 & 3\n\\end{array}\\right], X=\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{l}\n60 \\\\\n90 \\\\\n70\n\\end{array}\\right]\n$$\n\n$|A|=4(12-12)-3(6-36)+2(4-24)=0+90-40=50 \\neq 0$\n$\\Rightarrow$ आव्यूह $A$ व्युत्क्रमणीय है। इसलिए, $A^{-1}$ का अस्तित्व है।\nअतः, दी गई समीकरण निकाय संगत हैं। इसलिए,\n\n$$\n\\begin{array}{lcl}\nA_{11}=0 & A_{12}=30 & A_{13}=-20 \\\\\nA_{21}=-5 & A_{22}=0 & A_{23}=10 \\\\\nA_{31}=10 & A_{32}=-20 & A_{33}=10\n\\end{array}\n$$\n\n$$\nA^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{50}\\left[\\begin{array}{ccc}\n0 & -5 & 10 \\\\\n30 & 0 & -20 \\\\\n-20 & 10 & 10\n\\end{array}\\right]\n$$\n\n$$\nX=A^{-1} B \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{50}\\left[\\begin{array}{ccc}\n0 & -5 & 10 \\\\\n30 & 0 & -20 \\\\\n-20 & 10 & 10\n\\end{array}\\right]\\left[\\begin{array}{l}\n60 \\\\\n90 \\\\\n70\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{50}\\left[\\begin{array}{c}\n0-450+700 \\\\\n1800+0-1400 \\\\\n-1200+900+700\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{l}\nx \\\\\ny \\\\\nz\n\\end{array}\\right]=\\frac{1}{50}\\left[\\begin{array}{l}\n250 \\\\\n400 \\\\\n400\n\\end{array}\\right]=\\left[\\begin{array}{l}\n5 \\\\\n8 \\\\\n8\n\\end{array}\\right] \\Rightarrow x=5, y=8, z=8\n$$\n\nअतः, $1 \\mathrm{~kg}$ प्याज का मूल्य ₹ $5,1 \\mathrm{~kg}$ गेहूँ का मूल्य ₹ $8$ और $1 \\mathrm{~kg}$ चावल का मूल्य ₹ $8$ है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "प्याज ₹5/kg, गेहूँ ₹8/kg, चावल ₹8/kg"
+    }
+   ]
+  },
+  {
+   "id": "q_4.9.1",
+   "kind": "additional_exercise",
+   "number": "4.9.1",
+   "topic": "Proving a determinant is independent of θ",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "सिद्ध कीजिए कि सारणिक $\\left|\\begin{array}{ccc}x & \\sin \\theta & \\cos \\theta \\\\ -\\sin \\theta & -x & 1 \\\\ \\cos \\theta & 1 & x\\end{array}\\right|, \\theta$ से स्वतंत्र है।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\Delta=\\left|\\begin{array}{ccc}\nx & \\sin \\theta & \\cos \\theta \\\\\n-\\sin \\theta & -x & 1 \\\\\n\\cos \\theta & 1 & x\n\\end{array}\\right|\n$$\n\n$=x\\left(-x^{2}-1\\right)-\\sin \\theta(-x \\sin \\theta-\\cos \\theta)+\\cos \\theta(-\\sin \\theta+x \\cos \\theta)$\n$=-x^{3}-x+x \\sin ^{2} \\theta+\\sin \\theta \\cos \\theta-\\cos \\theta \\sin \\theta+x \\cos ^{2} \\theta$\n$=-x^{3}-x+x\\left(\\sin ^{2} \\theta+\\cos ^{2} \\theta\\right)=-x^{3}-x+x=-x^{3}$, जो $\\theta$ से स्वतंत्र है।"
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_4.9.2",
+   "kind": "additional_exercise",
+   "number": "4.9.2",
+   "topic": "Value of a determinant with trigonometric entries",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$\\left|\\begin{array}{ccc}\\cos \\alpha \\cos \\beta & \\cos \\alpha \\sin \\beta & -\\sin \\alpha \\\\ -\\sin \\beta & \\cos \\beta & 0 \\\\ \\sin \\alpha \\cos \\beta & \\sin \\alpha \\sin \\beta & \\cos \\alpha\\end{array}\\right|$ का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$\\left|\\begin{array}{ccc}\\cos \\alpha \\cos \\beta & \\cos \\alpha \\sin \\beta & -\\sin \\alpha \\\\ -\\sin \\beta & \\cos \\beta & 0 \\\\ \\sin \\alpha \\cos \\beta & \\sin \\alpha \\sin \\beta & \\cos \\alpha\\end{array}\\right|$\n$=-\\sin \\alpha\\left(-\\sin \\alpha \\sin ^{2} \\beta-\\sin \\alpha \\cos ^{2} \\beta\\right)-0(\\cos \\alpha \\cos \\beta \\sin \\alpha \\sin \\beta-\\cos \\alpha \\sin \\beta \\sin \\alpha \\cos \\beta)+\\cos \\alpha\\left(\\cos \\alpha \\cos ^{2} \\beta+\\cos \\alpha \\sin ^{2} \\beta\\right)$\n$\\left[C_{3}\\right.$ के अनुदिश प्रसरण करने पर]\n\n$$\n\\begin{aligned}\n& =\\sin ^{2} \\alpha\\left(\\sin ^{2} \\beta+\\cos ^{2} \\beta\\right)+\\cos ^{2} \\alpha\\left(\\cos ^{2} \\beta+\\sin ^{2} \\beta\\right) \\\\\n& =\\sin ^{2} \\alpha+\\sin^{2} \\alpha=1\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$1$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.9.3",
+   "kind": "additional_exercise",
+   "number": "4.9.3",
+   "topic": "Finding (AB)^-1 from A^-1 and B",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}^{-1}=\\left[\\begin{array}{lll}3 & 1 & 1 \\\\ 15 & 6 & 5 \\\\ 5 & 2 & 2\\end{array}\\right]$ और $\\mathrm{B}=\\left[\\begin{array}{ccc}1 & 2 & 2 \\\\ 1 & 3 & 0 \\\\ 0 & 2 & 1\\end{array}\\right]$, हो तो $(\\mathrm{AB})^{-1}$ का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "यहाँ, $B=\\left[\\begin{array}{ccc}1 & 2 & -2 \\\\ -1 & 3 & 0 \\\\ 0 & -2 & 1\\end{array}\\right]$,\nइसलिए $|B|=1(3-0)-2(-1-0)-2(2-0)=1 \\neq 0 \\Rightarrow B^{-1}$ का अस्तित्व है।\n\n$$\n\\begin{array}{lll}\nB_{11}=3 & B_{12}=1 & B_{13}=2 \\\\\nB_{21}=2 & B_{22}=1 & B_{23}=2 \\\\\nB_{31}=6 & B_{32}=2 & B_{33}=5\n\\end{array}\n$$\n\n$$\nB^{-1}=\\frac{1}{|B|} \\operatorname{adj} B=\\frac{1}{1}\\left[\\begin{array}{lll}\nB_{11} & B_{21} & B_{31} \\\\\nB_{12} & B_{22} & B_{32} \\\\\nB_{13} & B_{23} & B_{33}\n\\end{array}\\right]=\\left[\\begin{array}{lll}\n3 & 2 & 6 \\\\\n1 & 1 & 2 \\\\\n2 & 2 & 5\n\\end{array}\\right]\n$$\n\nहम जानते हैं कि $(\\mathrm{AB})^{-1}=\\mathrm{B}^{-1} \\mathrm{~A}^{-1}$, इसलिए\n\n$$\n(A B)^{-1}=B^{-1} A^{-1}=\\left[\\begin{array}{lll}\n3 & 2 & 6 \\\\\n1 & 1 & 2 \\\\\n2 & 2 & 5\n\\end{array}\\right]\\left[\\begin{array}{ccc}\n3 & -1 & 1 \\\\\n-15 & 6 & -5 \\\\\n5 & -2 & 2\n\\end{array}\\right]\n$$\n\n$$\n=\\left[\\begin{array}{ccc}\n9-30+30 & -3+12-12 & 3-10+12 \\\\\n3-15+10 & -1+6-4 & 1-5+4 \\\\\n6-30+25 & -2+12-10 & 2-10+10\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n9 & -3 & 5 \\\\\n-2 & 1 & 0 \\\\\n1 & 0 & 2\n\\end{array}\\right]\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$(AB)^{-1}=\\left[\\begin{array}{ccc}9 & -3 & 5 \\\\ -2 & 1 & 0 \\\\ 1 & 0 & 2\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.9.4",
+   "kind": "additional_exercise",
+   "number": "4.9.4",
+   "topic": "Verifying (adj A)^-1 = adj(A^-1) and (A^-1)^-1 = A",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "मान लीजिए $\\mathrm{A}=\\left[\\begin{array}{lll}1 & 2 & 1 \\\\ 2 & 3 & 1 \\\\ 1 & 1 & 5\\end{array}\\right]$ हो तो सत्यापित कीजिए कि"
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "(i)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$[\\operatorname{adj} \\mathrm{A}]^{-1}=\\operatorname{adj}\\left(\\mathrm{A}^{-1}\\right)$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "यहाँ, $A=\\left[\\begin{array}{ccc}1 & -2 & 1 \\\\ -2 & 3 & 1 \\\\ 1 & 1 & 5\\end{array}\\right]$, इसलिए\n$|A|=1(15-1)+2(-10-1)+1(-2-3)=-13 \\neq 0 \\Rightarrow A^{-1}$ का अस्तित्व है।\n\n$$\n\\begin{aligned}\n& A_{11}=14 \\\\\n& A_{21}=11 \\\\\n& A_{31}=-5\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& A_{12}=11 \\\\\n& A_{22}=4 \\\\\n& A_{32}=-3\n\\end{aligned}\n$$\n\n$$\n\\begin{gathered}\nA_{13}=-5 \\\\\nA_{23}=-3 \\\\\nA_{33}=-1\n\\end{gathered}\n$$\n\n$$\n\\operatorname{adj} A=\\left[\\begin{array}{lll}\nA_{11} & A_{21} & A_{31} \\\\\nA_{12} & A_{22} & A_{32} \\\\\nA_{13} & A_{23} & A_{33}\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n14 & 11 & -5 \\\\\n11 & 4 & -3 \\\\\n-5 & -3 & -1\n\\end{array}\\right]\n$$\n\n$$\nA^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{-13}\\left[\\begin{array}{ccc}\n14 & 11 & -5 \\\\\n11 & 4 & -3 \\\\\n-5 & -3 & -1\n\\end{array}\\right]\n$$\n\nमाना, $B=\\operatorname{adj} A$, इसलिए, $B=\\left[\\begin{array}{ccc}14 & 11 & -5 \\\\ 11 & 4 & -3 \\\\ -5 & -3 & -1\\end{array}\\right]$, इसलिए\n$|B|=14(-4-9)-11(-11-15)-5(-33+20)=-182+286+65=169 \\neq 0$\n$\\Rightarrow B^{-1}$ का अस्तित्व है।\n\n$$\n\\begin{aligned}\n& B_{11}=-13 \\\\\n& B_{21}=26 \\\\\n& B_{31}=-13\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& B_{12}=26 \\\\\n& B_{22}=-39 \\\\\n& B_{32}=-13\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& B_{13}=-13 \\\\\n& B_{23}=-13 \\\\\n& B_{33}=-65\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& B^{-1}=\\frac{1}{|B|}\\left[\\begin{array}{lll}\nB_{11} & B_{21} & B_{31} \\\\\nB_{12} & B_{22} & B_{32} \\\\\nB_{13} & B_{23} & B_{33}\n\\end{array}\\right]=\\frac{1}{169}\\left[\\begin{array}{ccc}\n-13 & 26 & -13 \\\\\n26 & -39 & -13 \\\\\n-13 & -13 & -65\n\\end{array}\\right] \\\\\n& \\Rightarrow(\\operatorname{adj} A)^{-1}=\\frac{1}{13}\\left[\\begin{array}{ccc}\n-1 & 2 & -1 \\\\\n2 & -3 & -1 \\\\\n-1 & -1 & -5\n\\end{array}\\right]\n\\end{aligned}\n$$\n\nमाना, $C=A^{-1}$, इसलिए, $C=\\frac{1}{-13}\\left[\\begin{array}{ccc}14 & 11 & -5 \\\\ 11 & 4 & -3 \\\\ -5 & -3 & -1\\end{array}\\right]=\\left[\\begin{array}{ccc}-\\frac{14}{13} & -\\frac{11}{13} & \\frac{5}{13} \\\\ -\\frac{11}{13} & -\\frac{4}{13} & \\frac{3}{13} \\\\ \\frac{5}{13} & \\frac{3}{13} & \\frac{1}{13}\\end{array}\\right]$, इसलिए\n\n$$\n\\begin{aligned}\n& C_{11}=-\\frac{1}{13} \\\\\n& C_{21}=\\frac{2}{13} \\\\\n& C_{31}=-\\frac{1}{13}\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& C_{12}=\\frac{2}{13} \\\\\n& C_{22}=-\\frac{3}{13} \\\\\n& C_{32}=-\\frac{1}{13}\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& C_{13}=-\\frac{1}{13} \\\\\n& C_{23}=-\\frac{1}{13} \\\\\n& C_{33}=-\\frac{5}{13}\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& \\operatorname{Adj} C=\\left[\\begin{array}{lll}\nC_{11} & C_{21} & C_{31} \\\\\nC_{12} & C_{22} & C_{32} \\\\\nC_{13} & C_{23} & C_{33}\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n-\\frac{1}{13} & \\frac{2}{13} & -\\frac{1}{13} \\\\\n\\frac{2}{13} & -\\frac{3}{13} & -\\frac{1}{13} \\\\\n-\\frac{1}{13} & -\\frac{1}{13} & -\\frac{5}{13}\n\\end{array}\\right]=\\frac{1}{13}\\left[\\begin{array}{ccc}\n-1 & 2 & -1 \\\\\n2 & -3 & -1 \\\\\n-1 & -1 & -5\n\\end{array}\\right] \\\\\n& \\Rightarrow \\operatorname{Adj} C=\\operatorname{adj}\\left(A^{-1}\\right)=\\frac{1}{13}\\left[\\begin{array}{ccc}\n-1 & 2 & -1 \\\\\n2 & -3 & -1 \\\\\n-1 & -1 & -5\n\\end{array}\\right]\n\\end{aligned}\n$$\n\nअतः, $(\\operatorname{adj} A)^{-1}=\\operatorname{adj}\\left(A^{-1}\\right)$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "(ii)",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "$\\left(\\mathrm{A}^{-1}\\right)^{-1}=\\mathrm{A}$"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "label": "",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\nA^{-1}=\\frac{1}{-13}\\left[\\begin{array}{ccc}\n14 & 11 & -5 \\\\\n11 & 4 & -3 \\\\\n-5 & -3 & -1\n\\end{array}\\right]\n$$\n\nमाना, $D=A^{-1}$, इसलिए, $D=\\frac{1}{-13}\\left[\\begin{array}{ccc}14 & 11 & -5 \\\\ 11 & 4 & -3 \\\\ -5 & -3 & -1\\end{array}\\right]=\\left[\\begin{array}{ccc}-\\frac{14}{13} & -\\frac{11}{13} & \\frac{5}{13} \\\\ -\\frac{11}{13} & -\\frac{4}{13} & \\frac{3}{13} \\\\ \\frac{5}{13} & \\frac{3}{13} & \\frac{1}{13}\\end{array}\\right]$, इसलिए\n\n$$\n\\begin{aligned}\n& |D|=-\\left(\\frac{1}{13}\\right)^{3}[14(-4-9)-11(-11-15)-5(-33+20)] \\\\\n& =-\\left(\\frac{1}{13}\\right)^{3}(169)=-\\frac{1}{13} \\neq 0 \\quad \\Rightarrow D^{-1} \\text { का अस्तित्व है। } \\\\\n& \\begin{array}{lll}\nD_{11}=-\\frac{1}{13} & D_{12}=\\frac{2}{13} & D_{13}=-\\frac{1}{13} \\\\\nD_{21}=\\frac{2}{13} & D_{22}=-\\frac{3}{13} & D_{23}=-\\frac{1}{13} \\\\\nD_{31}=-\\frac{1}{13} & D_{32}=-\\frac{1}{13} & D_{33}=-\\frac{5}{13}\n\\end{array} \\\\\n& D^{-1}=\\frac{1}{|D|}\\left[\\begin{array}{ccc}\nD_{11} & D_{21} & D_{31} \\\\\nD_{12} & D_{22} & D_{32} \\\\\nD_{13} & D_{23} & D_{33}\n\\end{array}\\right]=\\frac{1}{-1 / 13}\\left[\\begin{array}{ccc}\n-\\frac{1}{13} & \\frac{2}{13} & -\\frac{1}{13} \\\\\n\\frac{2}{13} & -\\frac{3}{13} & -\\frac{1}{13} \\\\\n-\\frac{1}{13} & -\\frac{1}{13} & -\\frac{5}{13}\n\\end{array}\\right]=\\left[\\begin{array}{ccc}\n1 & -2 & 1 \\\\\n-2 & 3 & 1 \\\\\n1 & 1 & 5\n\\end{array}\\right] \\\\\n& \\Rightarrow D^{-1}=\\left(A^{-1}\\right)^{-1}=\\left[\\begin{array}{ccc}\n1 & -2 & 1 \\\\\n-2 & 3 & 1 \\\\\n1 & 1 & 5\n\\end{array}\\right]=A\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_4.9.5",
+   "kind": "additional_exercise",
+   "number": "4.9.5",
+   "topic": "Value of a determinant with symmetric entries",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$\\left|\\begin{array}{ccc}x & y & x+y \\\\ y & x+y & x \\\\ x+y & x & y\\end{array}\\right|$ का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है: $\\left|\\begin{array}{ccc}x & y & x+y \\\\ y & x+y & x \\\\ x+y & x & y\\end{array}\\right|$\n\n$$\n\\begin{array}{lll}\n=\\left|\\begin{array}{ccc}\n2(x+y) & y & x+y \\\\\n2(x+y) & x+y & x \\\\\n2(x+y) & x & y\n\\end{array}\\right| & & {\\left[C_{1} \\rightarrow C_{1}+C_{2}+C_{3} \\text { द्वारा }\\right]} \\\\\n=2(x+y)\\left|\\begin{array}{ccc}\n1 & y & x+y \\\\\n1 & x+y & x \\\\\n1 & x & y\n\\end{array}\\right| & & {\\left[C_{1} \\text { से } 2(x+y) \\text { उभयनिष्ठ लेने पर }\\right]} \\\\\n=2(x+y)\\left|\\begin{array}{ccc}\n0 & -x & y \\\\\n0 & y & x-y \\\\\n1 & x & y\n\\end{array}\\right| & & {\\left[R_{1} \\rightarrow R_{1}-R_{2}, R_{2} \\rightarrow R_{2}-R_{3} \\text { द्वारा }\\right]} \\\\\n=2(x+y)\\{(-x)(x-y)-y . y\\} & & {\\left[C_{1} \\text { के अनुदिश प्रसरण करने पर }\\right]} \\\\\n=2(x+y)\\left(-x^{2}+x y-y^{2}\\right) & & \\\\\n=-2(x+y)\\left(x^{2}-x y+y^{2}\\right) & & \\\\\n=-2\\left(x^{3}+y^{3}\\right) & &\n\\end{array}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$-2(x^3+y^3)$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.9.6",
+   "kind": "additional_exercise",
+   "number": "4.9.6",
+   "topic": "Value of a determinant with symmetric entries",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "$\\left|\\begin{array}{ccc}1 & x & y \\\\ 1 & x+y & y \\\\ 1 & x & x+y\\end{array}\\right|$ का मान ज्ञात कीजिए।"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दिया है: $\\left|\\begin{array}{ccc}1 & x & y \\\\ 1 & x+y & y \\\\ 1 & x & x+y\\end{array}\\right|$\n\n$$\n\\begin{array}{ll}\n=\\left|\\begin{array}{ccc}\n0 & -y & 0 \\\\\n0 & y & -x \\\\\n1 & x & x+y\n\\end{array}\\right| & {\\left[R_{1} \\rightarrow R_{1}-R_{2}, R_{2} \\rightarrow R_{2}-R_{3} \\text { द्वारा }\\right]} \\\\\n=\\{(-y)(-x)-y .0\\} & {\\left[C_{1} \\text { के अनुदिश प्रसरण करने पर }\\right]} \\\\\n=x y &\n\\end{array}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$xy$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.9.7",
+   "kind": "additional_exercise",
+   "number": "4.9.7",
+   "topic": "Solving a system of equations in 1/x, 1/y, 1/z via matrix method",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित समीकरण निकाय को हल कीजिए\n\n$$\n\\begin{aligned}\n& \\frac{2}{x}+\\frac{3}{y}+\\frac{10}{z}=4 \\\\\n& \\frac{4}{x}-\\frac{6}{y}+\\frac{5}{z}=1 \\\\\n& \\frac{6}{x}+\\frac{9}{y}-\\frac{20}{z}=2\n\\end{aligned}\n$$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "दी गई समीकरण निकाय:\n\n$$\n\\begin{aligned}\n& \\frac{2}{x}+\\frac{3}{y}+\\frac{10}{z}=4 \\\\\n& \\frac{4}{x}-\\frac{6}{y}+\\frac{5}{z}=1 \\\\\n& \\frac{6}{x}+\\frac{9}{y}-\\frac{20}{z}=2\n\\end{aligned}\n$$\n\nसमीकरण निकाय को $A X=B$ के रूप में लिखा जा सकता है, जहाँ\n\n$$\nA=\\left[\\begin{array}{ccc}\n2 & 3 & 10 \\\\\n4 & -6 & 5 \\\\\n6 & 9 & -20\n\\end{array}\\right], X=\\left[\\begin{array}{l}\n1 / x \\\\\n1 / y \\\\\n1 / z\n\\end{array}\\right] \\text { और } B=\\left[\\begin{array}{l}\n4 \\\\\n1 \\\\\n2\n\\end{array}\\right]\n$$\n\n$|A|=2(120-45)-3(-80-30)+10(36+36)=150+330+720=1200 \\neq 0$\n⇒ आव्यूह $A$ व्युत्क्रमणीय है।\nअतः, $A^{-1}$ का अस्तित्व है। इसलिए,\n\n$$\n\\begin{aligned}\n& A_{11}=75 \\quad A_{12}=110 \\quad A_{13}=72 \\\\\n& A_{21}=150 \\quad A_{22}=-100 \\quad A_{23}=0 \\\\\n& A_{31}=75 \\quad A_{32}=30 \\quad A_{33}=-24 \\\\\n& A^{-1}=\\frac{1}{|A|} \\text { adj } A=\\frac{1}{1200}\\left[\\begin{array}{ccc}\n75 & 150 & 75 \\\\\n110 & -100 & 30 \\\\\n72 & 0 & -24\n\\end{array}\\right] \\\\\n& X=A^{-1} B \\quad \\Rightarrow\\left[\\begin{array}{c}\n1 / x \\\\\n1 / y \\\\\n1 / z\n\\end{array}\\right]=\\frac{1}{1200}\\left[\\begin{array}{ccc}\n75 & 150 & 75 \\\\\n110 & -100 & 30 \\\\\n72 & 0 & -24\n\\end{array}\\right]\\left[\\begin{array}{c}\n4 \\\\\n1 \\\\\n2\n\\end{array}\\right] \\\\\n& \\Rightarrow\\left[\\begin{array}{c}\n\\frac{1}{x} \\\\\n\\frac{1}{y} \\\\\n\\frac{1}{z}\n\\end{array}\\right]=\\frac{1}{1200}\\left[\\begin{array}{c}\n300+150+150 \\\\\n440-100+60 \\\\\n288+0-48\n\\end{array}\\right] \\Rightarrow\\left[\\begin{array}{c}\n\\frac{1}{x} \\\\\n\\frac{1}{y} \\\\\n\\frac{1}{z}\n\\end{array}\\right]=\\frac{1}{1200}\\left[\\begin{array}{l}\n600 \\\\\n400 \\\\\n240\n\\end{array}\\right]=\\left[\\begin{array}{l}\n\\frac{1}{2} \\\\\n\\frac{1}{3} \\\\\n\\frac{1}{5}\n\\end{array}\\right] \\\\\n& \\Rightarrow \\frac{1}{x}=\\frac{1}{2}, \\quad \\frac{1}{y}=\\frac{1}{3}, \\quad \\frac{1}{z}=\\frac{1}{5} \\quad \\Rightarrow x=2, y=3, z=5\n\\end{aligned}\n$$"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$x=2, y=3, z=5$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.9.8",
+   "kind": "additional_exercise",
+   "number": "4.9.8",
+   "topic": "MCQ: inverse of a diagonal matrix",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "निम्नलिखित प्रश्नों में सही उत्तर का चुनाव कीजिए।\nयदि $x, y, z$ शून्येतर वास्तविक संख्याएँ हों तो आव्यूह $\\mathrm{A}=\\left[\\begin{array}{ccc}x & 0 & 0 \\\\ 0 & y & 0 \\\\ 0 & 0 & z\\end{array}\\right]$ का व्युत्क्रम है:\n(A) $\\left[\\begin{array}{ccc}x^{-1} & 0 & 0 \\\\ 0 & y^{-1} & 0 \\\\ 0 & 0 & z^{-1}\\end{array}\\right]$\n(B) $x y z\\left[\\begin{array}{ccc}x^{-1} & 0 & 0 \\\\ 0 & y^{-1} & 0 \\\\ 0 & 0 & z^{-1}\\end{array}\\right]$\n(C) $\\frac{1}{x y z}\\left[\\begin{array}{ccc}x & 0 & 0 \\\\ 0 & y & 0 \\\\ 0 & 0 & z\\end{array}\\right]$\n(D) $\\frac{1}{x y z}\\left[\\begin{array}{lll}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{array}\\right]$"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\nA=\\left[\\begin{array}{lll}\nx & 0 & 0 \\\\\n0 & y & 0 \\\\\n0 & 0 & z\n\\end{array}\\right]\n$$\n\n$|A|=x(y z-0)-0(0-0)+0(0-0)=x y z \\neq 0 \\Rightarrow A^{-1}$ का अस्तित्व है। इसलिए,\n\n$$\n\\begin{array}{lll}\nA_{11}=y z & A_{12}=0 & A_{13}=0 \\\\\nA_{21}=0 & A_{22}=x z & A_{23}=0 \\\\\nA_{31}=0 & A_{32}=0 & A_{33}=x y\n\\end{array}\n$$\n\n$A^{-1}=\\frac{1}{|A|} \\operatorname{adj} A=\\frac{1}{\\mathrm{xyz}}\\left[\\begin{array}{ccc}y z & 0 & 0 \\\\ 0 & x z & 0 \\\\ 0 & 0 & x y\\end{array}\\right]=\\left[\\begin{array}{ccc}\\frac{1}{x} & 0 & 0 \\\\ 0 & \\frac{1}{y} & 0 \\\\ 0 & 0 & \\frac{1}{z}\\end{array}\\right]=\\left[\\begin{array}{ccc}x^{-1} & 0 & 0 \\\\ 0 & y^{-1} & 0 \\\\ 0 & 0 & z^{-1}\\end{array}\\right]$\nअतः, विकल्प (A) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(A) $\\left[\\begin{array}{ccc}x^{-1} & 0 & 0 \\\\ 0 & y^{-1} & 0 \\\\ 0 & 0 & z^{-1}\\end{array}\\right]$"
+    }
+   ]
+  },
+  {
+   "id": "q_4.9.9",
+   "kind": "additional_exercise",
+   "number": "4.9.9",
+   "topic": "MCQ: range of a determinant involving sinθ",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "यदि $\\mathrm{A}=\\left[\\begin{array}{ccc}1 & \\sin \\theta & 1 \\\\ -\\sin \\theta & 1 & \\sin \\theta \\\\ -1 & -\\sin \\theta & 1\\end{array}\\right]$, जहाँ $0 \\leq \\theta \\leq 2 \\pi$ हो तो:\n(A) $\\operatorname{det}(\\mathrm{A})=0$\n(B) $\\operatorname{det}(\\mathrm{A}) \\in(2, \\infty)$\n(C) $\\operatorname{det}(\\mathrm{A}) \\in(2,4)$\n(D) $\\operatorname{det}(\\mathrm{A}) \\in[2,4]$."
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "label": "",
+     "flow": [
+      {
+       "type": "text",
+       "text": "$$\n\\begin{aligned}\n& A=\\left[\\begin{array}{ccc}\n1 & \\sin \\theta & 1 \\\\\n-\\sin \\theta & 1 & \\sin \\theta \\\\\n-1 & -\\sin \\theta & 1\n\\end{array}\\right] \\\\\n& =1\\left(1+\\sin ^{2} \\theta\\right)+\\sin \\theta(-\\sin \\theta+\\sin \\theta)+1\\left(\\sin ^{2} \\theta+1\\right) \\\\\n& =2\\left(1+\\sin ^{2} \\theta\\right)\n\\end{aligned}\n$$\n\n$\\left[C_{1}\\right.$ के अनुदिश प्रसरण करने पर $]$\n\nदिया है: $0 \\leq \\theta \\leq 2 \\pi$\n\n$$\n\\begin{aligned}\n& \\Rightarrow 0 \\leq \\sin \\theta \\leq 1 \\\\\n& \\Rightarrow 0 \\leq \\sin ^{2} \\theta \\leq 1 \\\\\n& \\Rightarrow 1 \\leq 1+\\sin ^{2} \\theta \\leq 2 \\\\\n& \\Rightarrow 2 \\leq 2\\left(1+\\sin ^{2} \\theta\\right) \\leq 4 \\\\\n& \\Rightarrow \\operatorname{det}(A) \\in[2,4]\n\\end{aligned}\n$$\n\nअतः, विकल्प (D) सही है।"
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "(D) $\\operatorname{det}(\\mathrm{A}) \\in[2,4]$"
+    }
+   ]
+  }
+ ]
+}

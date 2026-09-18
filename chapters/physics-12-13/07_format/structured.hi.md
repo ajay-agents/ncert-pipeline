@@ -194,7 +194,7 @@ $$\begin{aligned}
 
 :::
 
-:::question{number="13.2" kind="exercise" id="q_13.2" topic="Fe-56 एवं Bi-209 की बंधन-ऊर्जा" verified="True" simplified="True"}
+:::question{number="13.2" kind="exercise" id="q_13.2" topic="Fe-56 एवं Bi-209 की बंधन-ऊर्जा" verified="True" simplified="True" corrections_applied="1"}
 #### प्रश्न 13.2
 
 :::prompt
@@ -203,8 +203,8 @@ $$\begin{aligned}
 
 :::solution{label="हल"}
 :::concept{label="जानकारी"}
-प्रोटॉन का द्रव्यमान, $m_{p}=1.00783 u$
-न्यूट्रॉन का द्रव्यमान, $m_{n}=1.00867 u$
+प्रोटॉन का द्रव्यमान, $m_{p}=1.007825 u$
+न्यूट्रॉन का द्रव्यमान, $m_{n}=1.008665 u$
 :::
 
 :::step{n="1" label="मान रखो"}
@@ -213,7 +213,7 @@ ${ }_{26} \mathrm{Fe}^{56}$ में $26$ प्रोटॉन तथा $30$ 
 द्रव्यमान क्षति $(\Delta m)=26 \times m_{p}+30 \times m_{n}-m_{N}$
 
 $$\begin{aligned}
-& =26 \times 1.00783+30 \times 1.00867-55.934939 \\
+& =26 \times 1.007825+30 \times 1.008665-55.934939 \\
 & =26.20345+30.25995-55.934939 \\
 & =0.528461 \mathrm{u}
 \end{aligned}$$
@@ -254,7 +254,7 @@ $$\begin{aligned}
 
 :::
 
-:::question{number="13.3" kind="exercise" id="q_13.3" topic="सिक्के के न्यूक्लिऑनों को अलग करने हेतु ऊर्जा" verified="True" simplified="True"}
+:::question{number="13.3" kind="exercise" id="q_13.3" topic="सिक्के के न्यूक्लिऑनों को अलग करने हेतु ऊर्जा" verified="True" simplified="True" corrections_applied="1"}
 #### प्रश्न 13.3
 
 :::prompt
@@ -276,7 +276,7 @@ Cu परमाणु में न्यूट्रॉनों की सं�
 
 :::step{label="मान रखो"}
 $$\begin{aligned}
-& =29 \times 1.00783+34 \times 1.00867-62.9260 \\
+& =29 \times 1.00783+34 \times 1.00867-62.92960 \\
 & =0.59225 \mathrm{u}
 \end{aligned}$$
 
@@ -513,7 +513,7 @@ $$=\frac{15.75 \times 10^{11}}{60 \times 24 \times 60 \times 365} \mathrm{yr}=4.
 
 :::
 
-:::question{number="13.9" kind="exercise" id="q_13.9" topic="दो ड्यूट्रॉनों के लिए कूलॉम अवरोध की ऊँचाई" verified="True" simplified="True" corrections_applied="1"}
+:::question{number="13.9" kind="exercise" id="q_13.9" topic="दो ड्यूट्रॉनों के लिए कूलॉम अवरोध की ऊँचाई" verified="True" simplified="True" corrections_applied="2"}
 #### प्रश्न 13.9
 
 :::prompt
@@ -523,26 +523,23 @@ $$=\frac{15.75 \times 10^{11}}{60 \times 24 \times 60 \times 365} \mathrm{yr}=4.
 :::solution{label="हल"}
 :::concept{label="जानकारी"}
 त्रिज्या, $r=2 \mathrm{fm}=2 \times 10^{-15} \mathrm{~m}$
-दो ड्यूट्रानों के केन्द्रों के बीच की दूरी $d=r$
+दो ड्यूट्रॉन जब परस्पर स्पर्श करते हैं, तब उनके केन्द्रों के बीच की दूरी $d=r+r=2r$
 
-$$d=2 \times 10^{-15} \mathrm{~m}$$
+$$d=2 \times 2 \times 10^{-15}=4 \times 10^{-15} \mathrm{~m}$$
 
 प्रति ड्युट्रॉन आवेश, $e=1.6 \times 10^{-19} \mathrm{C}$
 :::
 
 :::step{label="मान रखो"}
 $$\begin{aligned}
-\text { स्थितिज ऊर्जा }=\frac{1}{4 \pi \varepsilon_{0}} \cdot \frac{q_{1} q_{2}}{d} & =\frac{9 \times 10^{9} \times 1.6 \times 10^{-19} \times 1.6 \times 10^{-19}}{2 \times 10^{-15}} \\
-& =\frac{1.152 \times 10^{-13}}{1.6 \times 10^{-19}}=720000 \mathrm{eV}
+\text { स्थितिज ऊर्जा }=\frac{1}{4 \pi \varepsilon_{0}} \cdot \frac{q_{1} q_{2}}{d} & =\frac{9 \times 10^{9} \times 1.6 \times 10^{-19} \times 1.6 \times 10^{-19}}{4 \times 10^{-15}} \\
+& =\frac{2.304 \times 10^{-28}}{4 \times 10^{-15}}=5.76 \times 10^{-14} \mathrm{~J} \\
+& =\frac{5.76 \times 10^{-14}}{1.6 \times 10^{-19}}=360000 \mathrm{eV}
 \end{aligned}$$
-
-[ऊर्जा संरक्षण के नियम से दोनों ड्युट्रॉनों की कुल गतिज ऊर्जा कुल स्थितिज ऊर्जा के बराबर होगी]
-∴ स्थितिज ऊर्जा $=2 \times$ प्रति ड्युट्रॉन की गतिज ऊर्जा
-प्रत्येक ड्युट्रॉन की गतिज ऊर्जा $=\frac{720000}{2}=360000 \mathrm{eV}=360 \mathrm{keV}$
 :::
 
 :::step{label="निष्कर्ष"}
-अतः विभव प्राचीर $360 \mathrm{keV}$ है।
+चूँकि कूलॉम अवरोध की ऊँचाई इसी स्थितिज ऊर्जा के बराबर होती है, अतः विभव प्राचीर $360000 \mathrm{eV}=360 \mathrm{keV}$ है।
 :::
 :::
 

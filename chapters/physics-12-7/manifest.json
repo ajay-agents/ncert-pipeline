@@ -335,5 +335,30 @@
     ],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium: page.goto(file:// path) with wait_until=networkidle, waited on document.fonts.ready (Noto Serif Devanagari / STIX Two Text load async via CSS @import), called page.emulate_media(media=screen) immediately before page.pdf() per the standing Devanagari pre-base vowel-reordering fix, then page.pdf(print_background=True, prefer_css_page_size=True) with no explicit format/width/height so the page own @page A4 rules govern pagination. Gates: page count 11 (sane for 18 items, several multi-part, at the base CSS zoom level) - PASS. No blank pages (fitz get_text().strip() non-empty on all 11 pages) - PASS. Numeric read-back re-run fresh against the PDFs own extracted text (not assumed carried over from the stage 9 HTML check): pulled every numeric token from each question/final_answer field in 06_simplify/chapter.simplified.hi.md (88 tokens) and confirmed each appears in the PDFs extracted text across all pages - 0 missing. Applied the documented superscript-merge guard (insert a separator before a run of unicode superscript digits before translating to ASCII, so a base number and its exponent normalize to two distinct tokens rather than one glued token) even though this chapter turned out not to need it in practice (its exponents are all rendered via <sup> HTML tags from LaTeX ^{...}, which fitz extracts as separate adjacent text runs already, not as literal unicode superscript characters) - kept as a defensive measure per the standing lesson, not because a failure was observed here. Visually spot-checked 2 of the 11 pages (page 1 and page 6) by rendering to image and reading - Devanagari renders cleanly, math/fractions/superscripts correct, pagination lands in sensible places, no visible garbling or overflow. Known unresolved limitation noted per step_10/PROMPT.md (not this pipelines bug, not chapter-specific): Chromiums print-to-PDF pipeline can drop the reph (र्) character from the extractable text layer for र्+consonant sequences while rendering it correctly on-screen and in the visual PDF - the numeric read-back gate is unaffected (digits only), but any future consumer relying on copy-paste or in-PDF text search from this PDF should be aware. Not independently re-verified against this specific chapters output (no known र् sequence targeted for testing), flagged for completeness per the standing pipeline note. No CALIBRATION/calibrate.py re-run needed - it only reads pre-stage-7 flat markdown and has nothing to say about a PDF export."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-15T07:11:05.726033+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "e28ade555760bdcb",
+      "chapter.hi.pdf": "eaa2d1c00507c667",
+      "solutions.hi.pdf": "b8bc0917f0bdd25c"
+    },
+    "counts": {
+      "corrections_applied": 16,
+      "items_affected": 6,
+      "stages_touched": 5
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse_05verify",
+      "tag_parse_06simplify",
+      "tag_parse_07format",
+      "json_counts_match",
+      "stage9_gates",
+      "stage10_gates"
+    ],
+    "model_calls": 1,
+    "notes": "POST-COMPLETION correction round, from user-supplied external review of final.hi.pdf cross-checked against both source PDFs. Two claims in the review were investigated and found NOT to hold (reported back to user with evidence, no action taken): (1) a claim that q_7.1's 200V/220V cross-document disagreement should be resolved was self-contradictory in the user's own message and was re-confirmed via AskUserQuestion - user's decision: leave both as printed, unchanged, matching the original stage-5 decision on this exact item. Three genuine issues were confirmed against the actual source PDF page images (solutions.hi.pdf p.133, chapter.hi.pdf) and fixed: (1) q_7.8(a): '7.76 Hz' is a genuine arithmetic error already printed in the official solutions manual itself (50/(2x3.14) actually equals 7.96, not 7.76) - fixed in solution and final_answer. (2) q_7.8(c): the displayed symbolic formula for V_C dropped 'C' from the denominator (showed I_rms x 1/omega_r instead of I_rms x 1/(omega_r C)) even though the very next line's numeric substitution already correctly divides by 80x10^-6 - confirmed genuinely printed that way in the source, fixed the symbolic line only, substitution/answer untouched. (3) A widespread mathpix OCR artifact (dropping the 'r' from 'rms' subscripts, sometimes also mis-OCRing the current symbol 'I' as lowercase 'l') was found spanning 6 items (q_7.1, q_7.2, q_7.4, q_7.5, q_7.7, q_7.8) - 16 total notation-only fixes applied (V_ms-> V_rms, I_ms/l_ms->I_rms, one stray 'mrs' typo->rms), none touching any numeric value including q_7.1's disputed 220V. Applied identically across 05_verify, 06_simplify, 07_format (hand-edited, mdio can't parse nested containers) and 08_tag/structured.hi.json (patched directly via targeted string replacement rather than re-running stage 8's tagging logic from scratch, to avoid introducing a new divergence - item/part/figure counts confirmed unchanged: 18/20/2). Stage 9 re-rendered via the existing render_page.py; stage 10 PDF re-exported. All gates pass: tag balance, JSON counts match, 0 leftover LaTeX, 56/56 numbers present in HTML and PDF text, page count 11/no blank pages, both corrected values (7.96, the C-inclusive formula) visually confirmed via screenshot."
   }
 ]

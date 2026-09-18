@@ -548,7 +548,7 @@ $\mathrm{H}_{2}$ परमाणु का वेग,
 $$
 \begin{aligned}
 v=\frac{\rho}{m}=\frac{1.05 \times 10^{-27}}{1.66 \times 10^{-27}} & =0.63 \mathrm{~m} / \mathrm{s} \\
-{[\because m} & \left.=1.66 \times 10^{-27} \mathrm{~kg} \text { (इलेक्ट्रॉन का द्रव्यमान) }\right]
+{[\because m} & \left.=1.66 \times 10^{-27} \mathrm{~kg} \text { (हाइड्रोजन परमाणु का द्रव्यमान) }\right]
 \end{aligned}
 $$
 :::
@@ -755,7 +755,7 @@ $488 \mathrm{~nm}$ तरंगदैर्घ्य का प्रकाश �
 :::concept{label="जानकारी"}
 दिया है, प्रकाश का तरंगदैर्घ्य, $\lambda=488 \mathrm{~nm}=488 \times 10^{-9} \mathrm{~m}$
 निरोधी विभव $V_{0}=0.38 \mathrm{~V}, \quad e=1.6 \times 10^{-19} \mathrm{C}$
-प्लांक नियतांक $h=6.62 \times 10^{-34} \mathrm{~J}-\mathrm{s}$
+प्लांक नियतांक $h=6.63 \times 10^{-34} \mathrm{~J}-\mathrm{s}$
 प्रकाश की चाल $c=3 \times 10^{8} \mathrm{~m} / \mathrm{s}$
 माना $\phi_{0}$ कार्य-फलन है।
 :::

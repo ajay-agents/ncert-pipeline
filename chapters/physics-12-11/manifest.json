@@ -221,5 +221,29 @@
     ],
     "model_calls": 0,
     "notes": "Mechanical export pass (Playwright/Chromium), no model judgment. page.emulate_media(media=\"screen\") called immediately before page.pdf() per step_10/PROMPT.mds standing fix for Chromiums print-media Devanagari pre-base vowel-sign reordering bug; prefer_css_page_size=True + print_background=True honor the base CSSs own @page/A4 rules. Output: 10 pages, 786,697 bytes, zero blank pages -- sane for 14 items (3 examples + 11 exercises across 17 parts), consistent with physics-12-10s own 6 pages for 8 items (~0.71 vs ~0.75 pages/item). Numeric read-back re-run against the PDFs own extracted text (via PyMuPDF, mdio.markdown_to_chapter against 06_simplify/chapter.simplified.hi.md, same source stage 9 used): all 124 numeric tokens from every question/final_answer field found -- zero missing. Guarded explicitly against the documented base-plus-exponent-merge trap: extracted text via page.get_text(\"dict\") span-by-span and inserted a separator wherever two adjacent spans on the same line have different baselines (a superscript exponent glued to its base with no literal space), rather than a flat get_text() string or a naive unicode-superscript translate() -- this chapter renders exponents as real HTML <sup> (not literal unicode superscript characters), so the failure mode is the HTML/PDF-adjacency version of the same trap, not the original unicode-translate version, and needed the same defensive fix in spirit. Known, unresolved limitation flagged per step_10/PROMPT.md (not a gate failure -- the numeric gate is digit-only and unaffected): Chromiums print-to-PDF pipeline drops the pre-base reph (\"र्\") from this PDFs *extractable* text layer for every \"र्\"+consonant sequence (visual rendering is unaffected) -- this chapter uses \"निष्कर्ष\" (conclusion pill label) 24 times and \"कार्य-फलन\" (work function) repeatedly, both reph-bearing, so copy-pasted or re-extracted text from this specific PDF will read those words one character short, same as physics-12-2s own final PDF. No fix attempted (documented as a Chromium-level defect outside this pipelines control); flagging to the user now as the PROMPT requires."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-15T07:49:51.814522+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "e50992e18118cea2",
+      "chapter.hi.pdf": "1e76d4f6a22f1094",
+      "solutions.hi.pdf": "e3f14d4e84b93d4d"
+    },
+    "counts": {
+      "corrections_applied": 2,
+      "items_affected": 2,
+      "stages_touched": 5
+    },
+    "gate_results": {
+      "tag_parse_05verify": [],
+      "tag_parse_06simplify": [],
+      "tag_parse_07format": [],
+      "json_counts_match": [],
+      "stage9_gates": [],
+      "stage10_gates": []
+    },
+    "model_calls": 1,
+    "notes": "POST-COMPLETION correction round, from a detailed user review of final.hi.pdf against the NCERT textbook and the supplied solutions PDF. The review's large 'VERIFIED CORRECT' table (19 rows across Examples 11.1-11.10) was accurate; only 2 genuine errors were reported and both confirmed against direct page renders of solutions.hi.pdf. (1) q_11.4(c): the bracket label read '(इलेक्ट्रॉन का द्रव्यमान)' (electron's mass) for m=1.66e-27 kg, when the value used is actually the hydrogen atom's mass - confirmed genuinely printed this way on solutions.hi.pdf p.43. This item was flagged during the ORIGINAL build (stage 2's match_report and stage 5's verify notes both already noted it as a source-book error and deliberately left it as printed, since at that time only the milder 'leave as printed' precedent existed for textbook/solutions-manual disagreements). Re-examined now under this project's more fully developed standing authorization: the label directly contradicts the very same sentence's own preceding phrase 'H2 परमाणु का वेग' (the H2 atom's velocity) one clause earlier - a same-page self-contradiction, not merely a source-vs-source disagreement - so it qualifies for a direct fix under standing authorization. Fixed '(इलेक्ट्रॉन का द्रव्यमान)' -> '(हाइड्रोजन परमाणु का द्रव्यमान)'; the numerical calculation itself (v=0.63 m/s) was already correct and untouched. (2) q_11.9: the जानकारी (given-data) line stated 'प्लांक नियतांक h=6.62e-34 J-s' while the calculation two lines later used h=6.63e-34 - confirmed genuinely printed this way on solutions.hi.pdf p.46 (a same-page self-contradiction). Fixed the given-data line to h=6.63e-34, matching both the calculation actually performed and the NCERT standard value; the calculation and final answer (phi0=2.17 eV) were already correct and untouched. Applied identically across 05_verify, 06_simplify, 07_format (hand-edited, mdio cannot parse this file's nested containers) and 08_tag/structured.hi.json (patched via targeted string replacement - item/part counts confirmed unchanged: 14/17). Stage 9 re-rendered via the existing render_page.py; stage 10 PDF re-exported via the existing export.py. All gates pass: tag/div/span/p/figure/svg balance (628/628, 385/385, 31/31, 1/1, 43/43), 0 leftover LaTeX commands, 0 stray backslashes, both fixed strings present and both old wrong strings absent, page count 10/no blank pages (unchanged from before this round), both fixes visually confirmed via Playwright screenshot of each item's rendered card. PDF numeric read-back: 61 distinct multi-digit numbers checked, only '14'/'16'/'18' 'missing' - these are exponent digits inside 10^14/10^16/10^18 scientific notation merging with their base number in extracted text, the same documented false-positive pattern already accepted for physics-12-10's own '14' gap, not a real content gap. One extraction-only artifact noted (not a defect): PyMuPDF's get_text() renders 'हाइड्रोजन' as 'हाइड्रोोजन' (a duplicated vowel-sign matra) in this PDF's specific font/ligature - purely a text-extraction quirk, confirmed by the Playwright screenshot that the on-screen/print rendering itself is correct."
   }
 ]

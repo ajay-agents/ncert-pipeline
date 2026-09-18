@@ -1,10 +1,35 @@
-### q_13.9 — solution (hi)
+### q_13.9 — solution (hi) [SUPERSEDED — see post-completion round below]
 - **Confidence:** high
 - **Reason:** Same-page arithmetic self-contradiction, confirmed against the actual solutions.hi.pdf page image (p.90): 9x10^9 x (1.6x10^-19)^2 / (2x10^-15) correctly equals 1.152x10^-13 J, not the printed 5.76x10^-14 J (exactly half). The printed intermediate value contradicts both the computation directly above it and the division immediately following it on the same line (5.76e-14 / 1.6e-19 = 360000, not the printed 720000; only 1.152e-13 / 1.6e-19 = 720000 matches). The final answer (720000 eV -> 360 keV) was already correct and is left untouched; only the self-contradictory intermediate number is corrected.
 - **Found:**
   > \frac{5.76 \times 10^{-14}}{1.6 \times 10^{-19}}=720000 \mathrm{eV}
 - **Should be:**
   > \frac{1.152 \times 10^{-13}}{1.6 \times 10^{-19}}=720000 \mathrm{eV}
+- **Superseded by:** the post-completion round below found a deeper error underneath this one -- the contact distance itself was wrong (d=r instead of d=2r), and this fix only made the (still wrong) d=r derivation internally consistent. The whole derivation has since been replaced with one using the correct d=2r.
+
+### q_13.9 — solution (hi) [post-completion round]
+- **Confidence:** high
+- **Reason:** Confirmed against solutions.hi.pdf page 90: two touching spheres of radius r have centres separated by d=r+r=2r, not d=r as printed. Using the wrong d=r=2x10^-15 m doubles the potential energy to 720000 eV; the source then divides by 2 via an ad-hoc, physically unjustified "total KE = total PE, so KE per deuteron = PE/2" step to land back on 360 keV -- the right number reached through two compensating errors, not correct reasoning (the question's own hint defines the barrier height as the PE at contact directly, not half of it).
+- **Found:**
+  > दो ड्यूट्रानों के केन्द्रों के बीच की दूरी $d=r$ ... [PE computed at d=2e-15, giving 720000 eV] ... [ऊर्जा संरक्षण के नियम से हुई अतिरिक्त हलवाई ÷2 चरण] ... अतः विभव प्राचीर 360 keV है।
+- **Should be:**
+  > दूरी $d=r+r=2r=4\times10^{-15}$ m; स्थितिज ऊर्जा $=(9\times10^9)(1.6\times10^{-19})^2/(4\times10^{-15})=5.76\times10^{-14}$ J $=360000$ eV directly (see 07_format/structured.hi.md's q_13.9 for the exact text) -- no halving step.
+
+### q_13.2 — जानकारी + part (i) (hi) [post-completion round]
+- **Confidence:** high
+- **Reason:** Confirmed against solutions.hi.pdf page 79: जानकारी states m_p=1.00783 u, m_n=1.00867 u, but part (i)'s own printed arithmetic (26.20345, 30.25995) only matches if the more precise m_p=1.007825, m_n=1.008665 are used -- confirmed by direct recomputation both ways. Part (ii) (Bi-209), in the same solution, already explicitly uses 1.007825/1.008665. The final answers (492.26 MeV/8.790 MeV per nucleon) are the correct official values and match only the precise-mass computation -- so the जानकारी box (not the arithmetic) was the inconsistent element.
+- **Found:**
+  > प्रोटॉन का द्रव्यमान, $m_p=1.00783 u$; न्यूट्रॉन का द्रव्यमान, $m_n=1.00867 u$ ... $=26\times1.00783+30\times1.00867-55.934939$
+- **Should be:**
+  > प्रोटॉन का द्रव्यमान, $m_p=1.007825 u$; न्यूट्रॉन का द्रव्यमान, $m_n=1.008665 u$ ... $=26\times1.007825+30\times1.008665-55.934939$
+
+### q_13.3 — मान रखो (hi) [post-completion round]
+- **Confidence:** high
+- **Reason:** Confirmed against solutions.hi.pdf page 80: the question itself states the Cu-63 mass as 62.92960 u, but the मान रखो line truncates it to 62.9260. The final answer (0.59225 u) only matches when the full 62.92960 is used -- a pure display/transcription slip with no computational impact, not a real error.
+- **Found:**
+  > $=29\times1.00783+34\times1.00867-62.9260$
+- **Should be:**
+  > $=29\times1.00783+34\times1.00867-62.92960$
 
 ## Additional findings from this stage's full read-back + arithmetic re-derivation
 (documented here per CLAUDE.md/step_5 - not applied as Correction objects,

@@ -1,0 +1,316 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-17T08:02:51.052568+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "7fdc559e856ea0fd",
+      "solutions.hi.pdf": "268605ade215d6b1"
+    },
+    "counts": {
+      "chapter_hi_pdf_pages": 46,
+      "solutions_hi_pdf_pages": 60,
+      "chapter.hi.md_chars": 72526,
+      "solutions.hi.md_chars": 114173,
+      "chapter.hi.md_dollar_spans": 2816,
+      "solutions.hi.md_dollar_spans": 3800,
+      "chapter.hi.md_image_refs": 12,
+      "solutions.hi.md_image_refs": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no chapter.en.pdf/solutions.en.pdf supplied). Converted both PDFs via pipeline.mathpix.convert(). Chapter 5 (Continuity and Differentiability) is notably larger than maths-12-3/4: 46-page chapter PDF (vs 31), 60-page solutions PDF (vs 44) - the longest chapter in this series so far. Unlike prior maths chapters, this one has genuine mathematically-relevant figures (e.g. आकृति 5.1, a continuity graph on page 1) alongside the usual decorative portrait, so later stages should not assume all extracted images are decorative-only the way maths-12-3/4 did."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-17T10:39:26.219923+00:00",
+    "inputs": {
+      "chapter.hi.md": "ff237f5f30c27d27",
+      "solutions.hi.md": "7939070a907d6968"
+    },
+    "counts": {
+      "examples": 42,
+      "prashnavali_5.1": 34,
+      "prashnavali_5.2": 10,
+      "prashnavali_5.3": 15,
+      "prashnavali_5.4": 10,
+      "prashnavali_5.5": 18,
+      "prashnavali_5.6": 11,
+      "prashnavali_5.7": 17,
+      "misc_exercise_kept": 22,
+      "misc_exercise_orphaned": 1,
+      "solutions_prashnavali_5.8_orphaned_whole_exercise_rolle_theorem": 6,
+      "total_items": 179,
+      "matched": 179,
+      "needs_review_resolved_by_hand": 0
+    },
+    "gates_failed": {
+      "gate_bilingual": [
+        "N/A - expected, Hindi-only chapter, no English source exists"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_hi"
+    ],
+    "model_calls": 15,
+    "notes": "Hindi-only chapter (no chapter.en.pdf/solutions.en.pdf supplied). Largest chapter built in this series so far - 179 items (42 examples + 137 exercise/misc items across 7 numbered exercises + 1 misc exercise), more than double maths-12-4. Extraction split across 15 batches: 3 for examples (1-14, 15-28, 29-42), 6 for exercise-questions (5.1 in two halves, 5.2+5.3, 5.4+5.5, 5.6+5.7, misc), 6 for raw solutions (same grouping). 14 of 15 batches were dispatched fork sub-agents (given only step_2/extract.md, never step_2/PROMPT.md, each scoped narrowly and told not to touch chapters/, gates, or manifest.json); the 15th (praSnavali 5.6+5.7 solutions) was completed directly by the coordinator after that one dispatch failed on a session usage limit (all 14 others succeeded cleanly). UNUSUALLY CLEAN JOIN: unlike maths-12-3/12-4 (whole-exercise numbering shifts affecting every exercise past a certain point), all 7 of this chapter's numbered exercises (5.1-5.7) matched solutions.hi.md 1:1 by printed number with ZERO needs_review entries from match.join_solutions() (called once per exercise section with chapter=\"\" to keep each section's own bare 1-based numbering from colliding with another's). Per step_2/PROMPT.md's own standing warning about a clean-looking join still being silently wrong, 5 matched pairs across different sections were spot-checked by content (not just number) and all correct. TWO GENUINE ORPHANS found and resolved by hand, both flagged clearly in match_report.md: (1) solutions.hi.md's own 'praSnavali 5.8' (6 items, Rolle's Theorem) is a WHOLE-EXERCISE orphan with zero counterpart anywhere in the current chapter (confirmed by grep - the Hindi word for Rolle's theorem appears 0 times in chapter.hi.md) - never extracted at all, discarded per Rule 5 before any join was attempted. (2) The misc exercise's own solutions-manual counterpart (a separate, later heading also called the chapter's own misc-exercise title, distinct from the Rolle-orphan section above) has 23 items vs the chapter's own 22 - solutions' own item 19 (an induction proof of the power rule) is an interspersed orphan with no chapter counterpart, confirmed by content (not just count) to shift every later item by +1 (chapter 19<->solutions 20, 20<->21, 21<->22, 22<->23) - discarded before renumbering the rest down to a clean 1:1 join. ONE STRUCTURAL FIX during assembly: a dispatched batch nested a genuine :::figure block INSIDE :::solution for ex_5.15 (the figure is referenced mid-solution-text) - pipeline.mdio cannot parse a container nested inside :::solution at this pre-stage-7 stage, so this was moved to a top-level sibling of :::solution (matching the convention already used correctly for the chapter's other 5 genuine figures: ex_5.9/10/11/12/13), with no change to the solution text itself. This chapter has GENUINE mathematically-relevant figures (real graphs, not just decorative portraits, unlike maths-12-3/12-4) - 6 of 12 extracted images attached to specific examples (ex_5.9/10/11/12/13/15); the other 6 (Newton portrait + theory-illustration graphs for x^n growth and log functions) correctly excluded from every item. Two genuine cross-document copy-paste artifacts (uttar 8 in both 5.4 and 5.5, each opening with an unrelated stray derivative line before the correct computation resumes) and one likely OCR-garbled exponent (q_5.9.3) transcribed exactly as printed per Rule 5, flagged in match_report.md for stage 5 to check against the source PDF images. Final validation: gate_counts clean (0 duplicate ids among 179, exact expected per-kind counts), gate_solutions_present(hi) clean (every item has a non-empty solution), gate_bilingual reports all 179 as expected (Hindi-only, no English source), and a round-trip render->re-parse reproduces exactly 179 items."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-17T10:42:45.428703+00:00",
+    "inputs": {
+      "chapter.hi.md": "7f76c90d69d37f72"
+    },
+    "counts": {
+      "examples.hi.md_chars": 40026,
+      "examples.hi.md_items": 42,
+      "qa.hi.md_chars": 145963,
+      "qa.hi.md_items": 137,
+      "total_items": 179
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure mechanical split via pipeline.render.render() on kind-filtered item subsets - no model call. Hindi-only chapter (no chapter.en.md exists at 02_extract). examples.hi.md holds all 42 worked examples (ex_5.1-ex_5.42); qa.hi.md holds all 137 exercise/additional_exercise items (34+10+15+10+18+11+17 across प्रश्नावली 5.1-5.7, plus 22 misc items under q_5.9.<n>). 42+137=179 matches the merged chapter's total item count exactly - nothing gained or lost in the split. Round-trip verified: both output files re-parse via tag._parse with no TagError and via mdio.markdown_to_chapter with exactly the expected item counts."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-17T10:50:06.245931+00:00",
+    "inputs": {
+      "examples.hi.md": "c55263092eb560ba",
+      "qa.hi.md": "c30f30c6ff51a334"
+    },
+    "counts": {
+      "combined.hi.md_chars": 185880,
+      "combined.hi.md_items": 179,
+      "examples_items": 42,
+      "qa_items": 137
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure mechanical reunion via pipeline.mdio.markdown_to_chapter() on each of stage 3's two files, concatenated (examples then qa, matching stage 2's original order) and re-rendered via pipeline.render.render() - no model call. Hindi-only chapter (no examples.en.md/qa.en.md exist). 42 example items + 137 qa items = 179, matching stage 3's combined count exactly - nothing gained or lost recombining. Round-trip verified: combined.hi.md re-parses via tag._parse with no TagError and via mdio.markdown_to_chapter with exactly 179 items, and reparsed id set equals the disjoint union of examples/qa ids with zero overlap."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-17T11:22:02.609030+00:00",
+    "inputs": {
+      "combined.hi.md": "7f76c90d69d37f72",
+      "chapter.hi.pdf": "7fdc559e856ea0fd",
+      "solutions.hi.pdf": "268605ade215d6b1"
+    },
+    "counts": {
+      "total_items": 179,
+      "corrections_returned": 8,
+      "corrections_applied_high": 8,
+      "corrections_held": 0,
+      "corrections_by_type": {
+        "typo_consistency_restored": 1,
+        "genuine_truncation_restored": 2,
+        "missing_parenthetical_restored": 2,
+        "ocr_misspelling_fixed": 2,
+        "missing_question_sub_instructions_restored": 1
+      }
+    },
+    "gates_failed": {
+      "gate_math_parity_hi": [
+        "ex_5.13.solution: display math: 1 -> 3; inline math: 1 -> 26",
+        "q_5.5.17.solution: display math: 0 -> 2; inline math: 1 -> 11"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts"
+    ],
+    "model_calls": 16,
+    "notes": "Verified all 179 items against the actual source PDF page images (chapter.hi.pdf, 46 pages; solutions.hi.pdf, 60 pages - the latter has NO extractable text layer at all, fully image-based; the former has a non-standard legacy font encoding making its own text layer unreadable too - both required rendering to PNG via PyMuPDF and direct visual inspection, never trusting page.get_text()). Split across 15 dispatched fork sub-agent batches (given step_5/verify.md only, never step_5/PROMPT.md) - 3 for examples (1-14, 15-28, 29-42), 12 combining question-vs-chapter.hi.pdf and solution-vs-solutions.hi.pdf verification in one dispatch per exercise section (5.1 in two halves, 5.2, 5.3, 5.4, 5.5 in two halves, 5.6, 5.7 in two halves, misc in two halves) - plus one re-dispatch (q57a) after its first attempt returned a degenerate empty result (0 tool uses, nonsensical output) without actually doing any verification work; the re-run completed correctly. 8 corrections found and applied (all high confidence): (1) q_5.2.7 - restored a 'cossec' typo the source repeats twice but extraction only preserved once; (2) ex_5.13 - restored a MAJOR truncation, the extracted solution silently dropped its entire दशा-1/2/3 case analysis and concluding sentence after defining D1/D2/D3; (3)+(4) ex_5.7 - restored two missing '(क्यों?)' rhetorical parentheticals; (5)+(6) ex_5.25 parts (i)/(ii) - fixed two different OCR mis-spellings of 'शृंखला' (chain), confirmed against the item's own correctly-spelled parts (iii)/(iv); (7)+(8) q_5.5.17 - restored a MAJOR truncation spanning both question (three labelled method-instructions + a verification instruction, entirely dropped) and solution (extraction kept only the first line of a 3-method, ~30-line worked solution). gate_math_parity(hi) reports exactly 2 non-empty diffs - ex_5.13 and q_5.5.17 - which are precisely the 2 truncation-restoring corrections above; this is the EXPECTED signature of a legitimate content restoration (recovering genuinely-printed content that extraction had silently dropped), not a bug - the gate's job here is to surface every math-span change for audit, and both flagged changes are fully accounted for by name. gate_counts is clean (0 duplicate ids, part counts unchanged). Every other previously-flagged issue from match_report.md was independently re-verified against the actual page images and confirmed as a genuine SOURCE-SIDE artifact already correctly transcribed verbatim (not an extraction error): q_5.4.8 and q_5.5.8's stray copy-pasted opening lines, q_5.6.3's 'cot t' vs 'cos t' quirk, q_5.9.3's OCR-garbled exponent, q_5.9.6's sign-inconsistent 'माना' line, ex_5.33's y-exponent typo, ex_5.7's cso-3x-style typo, and the misc exercise's +1 numbering shift for items 19-22 (independently re-confirmed by a second batch). gate_math_parity(hi) and gate_counts both pass in the sense that matters - every diff is named and accounted for. Round-trip verified: chapter.verified.hi.md re-parses to exactly 179 items."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-17T11:26:27.342396+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "7902b0713b790272"
+    },
+    "counts": {
+      "total_solution_fields": 194,
+      "fields_simplified": 9,
+      "fields_left_unchanged": 185,
+      "restore_failures": 0
+    },
+    "gates_failed": {
+      "gate_bilingual": "N/A - expected, Hindi-only chapter, no English source exists"
+    },
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_answers_unchanged_hi",
+      "gate_question_text_frozen_hi"
+    ],
+    "model_calls": 15,
+    "notes": "Simplified all 194 solution fields (item-level + part-level) across 179 items, split into 15 dispatched fork sub-agent batches (given step_6/simplify.md only, never step_6/PROMPT.md), each following the freeze-before/restore-after discipline via pipeline.protect. Only 9 of 194 fields (4.6%) received a real text change - all minor punctuation/spacing fixes (a missing space before/after a protection token or Devanagari पूर्ण विराम) or a single run-on sentence split (ex_5.24, ex_5.39 parts ii/iii) - no number, sign, unit, or protection token touched anywhere. The remaining 185 fields were already terse, formula-driven NCERT-style solutions with nothing to simplify without churn - matches this pipeline's own established pattern for this kind of dense, protected-math-token-heavy content. Zero restore failures across all 194 fields (every protection token reproduced exactly once by every batch). NOTED (not a bug, matches established precedent): q_5.5.17 has both an item-level solution field AND 3 labelled parts (i)/(ii)/(iii), each with their own solution field covering one of the three methods - the item-level field is a redundant whole-item echo of the same content already split across the parts (the same 'duplicate whole-item solution' artifact this pipeline has documented before; per step_7/8's own established handling, the item-level field is not used for rendering once parts exist, so this is expected, not reconciled here). Both the item-level field and the 3 part-level fields were independently simplified (correctly) by their respective batches. All four gates pass: gate_math_parity(hi), gate_answers_unchanged(hi), and gate_question_text_frozen(hi) all clean; gate_bilingual reports all 354 item+part entries as expected for this Hindi-only chapter (no English source exists). Round-trip verified: chapter.simplified.hi.md re-parses to exactly 179 items."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-17T12:05:13.362961+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "e9b57a8bbc24a14b"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "item": "ex_5.10"
+    },
+    "gates_failed": {
+      "gate_math_parity_hi": [
+        "ex_5.10.solution: display math: 1 -> 2; inline math: 19 -> 26"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Post-hoc correction discovered during stage 7 formatting: a dispatched format batch flagged ex_5.10's solution as ending mid-sentence ('...दाएँ पक्ष की सीमा, अर्थात्' with nothing following) - the same truncation class as ex_5.13 (caught and fixed during the original stage-5 pass), but this instance was missed by that pass's own ex1-14 verification batch. Confirmed and restored via 400dpi zoom on chapter.hi.pdf page 117 (file page 8) - see corrections.md's appended entry for the full found/should_be text. gate_math_parity(hi) shows exactly the expected diff for this one restoration; gate_counts clean. This correction has been propagated forward into 06_simplify (the field was already confirmed unchanged by stage 6's own ex1 batch, so the corrected text carries forward verbatim, no new simplification judgment needed) and into the in-progress stage 7 format batch."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-17T12:12:16.009613+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "52c3eb50e8bc238d"
+    },
+    "counts": {
+      "structured.hi.md_chars": 192024,
+      "total_items": 179
+    },
+    "gates_failed": {
+      "tag_parse": "OK"
+    },
+    "gates_passed": [
+      "protect_parity_stage6_to_stage7"
+    ],
+    "model_calls": 15,
+    "notes": "Applied inner component structure (step_7/format.md) to all 179 items across 15 batches (ex1, ex2, ex3, q51a, q51b, q52, q53, q54, q55a, q55b, q56, q57a, q57b, misc_a, misc_b). 14 of the 15 batches were completed by dispatched fork sub-agents; the q51b batch (praśnāvalī 5.1 items 18-34) failed with the org's monthly spend limit (rate_limit 429, second such failure this session) and was completed by the coordinator directly in-session, following the same style already established by q51a's own completed batch. Structure added where genuinely multi-stage: :::step splits by 'स्थिति'/case for multi-case items (ex_5.15, q_5.1.7/8/10-16/23/24/25/32/33/34), two-stage splits for items with a distinct second phase (q_5.1.18's lambda-then-x=1 check, q_5.1.30's a-at-x=2-then-b-at-x=10-then-combine, ex_5.29/5.37), u/v-derivative splits (q_5.5.4/6/7/8/9, q_5.5.10/11/12), multi-method splits (ex_5.22/5.27, q_5.5.18), multi-part solution splits (misc_a items 10-11, misc_b items 14/15/22). :::note{type='recall'} added only where the source literally printed a trailing टिप्पणी (ex_5.17, ex_5.32). :::concept wraps added for standalone given/setup observations (ex_5.3/5.12/5.13, q_5.1.31/32/33/34's function-composition setups). ex_5.9's two tables wrapped in :::table and its fig_5.3 figure relocated to its actual reference point (was immediately after the prompt, mdio does not otherwise support mid-solution figure placement pre-stage-7). Short single-flow items left unstructured throughout (q_5.1.19/20/22/26/27/28/29 and many others) per format.md's guidance against forcing structure onto ordinary prose. Two known duplicate-whole-item-solution artifacts (a multi-part item whose parts each carry the shared derivation AND a redundant trailing item-level solution repeating it) were found and left exactly as-is per established precedent: q_5.1.21 (3 parts) and q_5.5.17 (3 parts). All known pre-existing typos (cossec/cso 3x/5x^5/doubled '==', etc.) and stray lines left untouched, not fixed here (out of scope for stage 7). CRITICAL: ex_5.10's solution was found ending mid-sentence during this stage's ex1 batch - the same truncation class as ex_5.13 (fixed in stage 5) but missed by stage 5's own ex1-14 verification batch. Per pipeline convention this was NOT patched here; it was fixed at its source stage (05_verify, see corrections.md's appended entry and the 'verify_correction' manifest stage) and propagated forward into both 06_simplify and this stage's own ex1 batch output before assembly. Gates: tag._parse succeeds on the full assembled file (179 items, 0 duplicates), and protect.parity(stage6, stage7) shows zero drift across the whole file, confirming inner-structure-only insertion with no wording, number, or symbol changed anywhere."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-17T12:42:12.599817+00:00",
+    "inputs": {
+      "structured.hi.md": "e6b836492804d7ee"
+    },
+    "counts": {
+      "item_count": 179,
+      "part_count": 19,
+      "figure_count": 6,
+      "stage_dist": {
+        "conclusion": 192,
+        "given": 50,
+        "substitute": 47,
+        "key_formula": 1
+      },
+      "kind_dist": {
+        "example": 42,
+        "exercise": 115,
+        "additional_exercise": 22
+      }
+    },
+    "gates_failed": {
+      "item_count_match": true,
+      "part_count_match": true,
+      "figure_src_set_match": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Serialized 07_format/structured.hi.md into 08_tag/structured.hi.json via a single coordinator-run script (reused proven design from maths-12-4/stage8_tag_m4.py, no dispatched judgment batches needed - the given/key_formula/substitute/conclusion inference is mechanical position-based logic per step_8/PROMPT.md, not free-form model judgment, once stage 7 has already set explicit labels). Given/key-formula/substitute/conclusion stage assigned per block: explicit :::concept always given, explicit :::formula always key_formula, fixed-vocabulary labels (जानकारी/मुख्य सूत्र/मान रखो/निष्कर्ष) honored as-is, unlabelled :::step/text inferred by position (first=given, last=conclusion, single block=conclusion, else=substitute), independently per part for the 19 multi-part items. Leading हल/हल:/हल : openers (including the \text{हल :} LaTeX-embedded form) stripped from the first solution block only. Both known duplicate-whole-item-solution items (q_5.1.21, q_5.5.17) correctly left with empty item-level solution_blocks - their 3 parts each carry their own solution_blocks/answer, matching step_8/PROMPT.md's instruction not to double-populate. ONE BUG FOUND AND FIXED during this stage: the initial script only walked :::solution's own children, missing that ex_5.17 and ex_5.32's stage-7 :::note blocks were placed as direct siblings of :::solution (after it closes, both trailing textbook टिप्पणी remarks), not nested inside it - both notes were silently dropped on the first run despite the count gate passing (notes are not counted by the item/part/figure gate). Fixed by also collecting item-level sibling :::note nodes and appending them to the item's solution_blocks; verified both notes now present with their type=recall, label=टिप्पणी (the empty-label default), correct flow text. Figure src paths kept in their images/... form. Gate: fresh independent recount from structured.hi.md matches the JSON exactly - 179 items (order and id set identical), 19 parts, 6 distinct figure srcs."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-17T12:50:09.362597+00:00",
+    "inputs": {
+      "structured.hi.md": "2e68db1af943f341"
+    },
+    "counts": {
+      "item": "q_5.9.11",
+      "stray_dollar_pairs_removed": 1
+    },
+    "gates_failed": {
+      "tag_parse": "OK, 179 items"
+    },
+    "gates_passed": [
+      "protect_parity_stage6_to_stage7"
+    ],
+    "model_calls": 0,
+    "notes": "Post-hoc fix discovered during stage 9 design work: q_5.9.11 (misc_a batch, the one item that got a 4-step split during stage 7 formatting) had a stray duplicate closing \\$\\$ line immediately after its step 2 display-math block - confirmed absent from 06_simplify/chapter.simplified.hi.md (clean single \\$\\$...\\$\\$ pair there), so this was introduced by the stage-7 step-splitting edit itself, not a source-side OCR artifact. The unpaired \\$\\$ was invisible to tag._parse (container syntax, not markdown math syntax) and to protect.parity (before this fix it already showed zero drift, since the counter evidently does not separately flag an odd \\$\\$ count) - only surfaced when stage 9 rendering tried to protect \\$\\$...\\$\\$ spans before sentence-splitting and the unmatched second \\$\\$ fell through as literal visible text on the page. Fixed by removing the duplicate line directly in 07_format/structured.hi.md (the actual stage output containing the defect - this is a stage-7 formatting bug, not a content-accuracy issue verify.py corrections are for). Re-verified: 179 items, tag._parse clean, protect.parity(stage6, stage7) still zero drift. Propagated forward: 08_tag/structured.hi.json regenerated from the fixed file before continuing stage 9."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-17T12:50:26.782794+00:00",
+    "inputs": {
+      "structured.hi.md": "2e68db1af943f341"
+    },
+    "counts": {
+      "item_count": 179,
+      "part_count": 19,
+      "figure_count": 6,
+      "stage_dist": {
+        "conclusion": 192,
+        "given": 50,
+        "substitute": 47,
+        "key_formula": 1
+      },
+      "kind_dist": {
+        "example": 42,
+        "exercise": 115,
+        "additional_exercise": 22
+      }
+    },
+    "gates_failed": {
+      "item_count_match": true,
+      "part_count_match": true,
+      "figure_src_set_match": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Re-run (no new judgment) after the format_correction entry fixed q_5.9.11s stray duplicate $$ in 07_format/structured.hi.md - same script/logic as the original tag stage, regenerating 08_tag/structured.hi.json from the corrected source. Counts unchanged from the first run (179 items, 19 parts, 6 figures) since the fix only removed an invisible stray delimiter, not any real content."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-18T05:27:07.495629+00:00",
+    "inputs": {
+      "structured.hi.json": "2ab16987725ecfde"
+    },
+    "counts": {
+      "final.hi.html_bytes": 616307,
+      "figures_rendered": 6,
+      "items": 179
+    },
+    "gates_failed": {
+      "figure_src_exists": true
+    },
+    "gates_passed": [
+      "numeric_readback_missing",
+      "leaked_latex_backslash_count",
+      "leaked_dollar_count"
+    ],
+    "model_calls": 1,
+    "notes": "Hand-authored HTML/CSS built directly (no design-skill canvas), adapted from maths-12-4s proven working latex.py/render_page.py (copied from chapters/maths-12-4/09_design/, itself descended from maths-12-3/-2). FIRST REAL EXERCISE of the figure-rendering path in this maths sub-series (maths-12-2/3/4 had zero in-item figures) - 6 genuine continuity/discontinuity graphs, 5 as item-level  (render_item extended to render these - m4 never needed this code path) and 1 (ex_5.9s fig_5.3) as a bare top-level :::figure inside :::solution (render_solution_stacks existing figure-group branch, inherited from m4 defensively but never previously exercised for real). Images copied from 01_mathpix/images/ into this directorys own images/ subfolder; all 6 srcs verified to exist via os.path.exists against the actual 09_design/ output directory. LaTeX MACRO COVERAGE, done via the mandated grep-and-diff against this chapters own 06_simplify content before trusting the reused converter (step_9/PROMPT.md): added \\lim (204 occurrences, this chapters single most common command, entirely unhandled in the inherited converter), \\mathbf/\boldsymbol (6+1, real-number-set notation, silently dropped before this fix), \\prime (24, exponent-position prime mark), \\pm (2), \\cup (1, set union), \\ldots (5). Fixed \\circ: the inherited converter mapped it to a degree sign (correct for maths-12-4/Physics chapters) but this chapter (Continuity/Differentiability) uses \\circ exclusively for function composition (g o h) - confirmed by checking all 3 occurrences before overriding to the composition ring operator, per step_9/PROMPT.mds own warning about \\circ ambiguity. Hardened the unrecognized-command fallback to print the bare command name instead of silently dropping it, so any future gap fails visibly in the mandatory read-back rather than invisibly losing content. TWO NEW BUGS FOUND AND FIXED during this stages own manual read-back (not caught by any earlier gate, exactly as step_9/PROMPT.md warns this stage has none): (1) OPERATOR_NAMES handler (sin/cos/tan/cot/sec/log/lim) always advanced past any whitespace it peeked at while checking for a following \"^\" superscript, even when no \"^\" was found - silently eating the separating space and gluing the operator to its own argument on every plain use (\"\\sin c\" -> \"sinc\", \"\\cos h\" -> \"cosh\", reads like a typo) chapter-wide, caught via a design screenshot of ex_5.17s sine-continuity proof. Fixed by only consuming the whitespace when a \"^\" actually follows it. (2) q_5.9.11 (misc_a, the one item that got a 4-step split during stage 7) had a stray duplicate closing $$ introduced by that step-split edit, invisible to tag._parse/protect.parity but rendered as a literal visible \"$$\" on the page - fixed at its actual source (07_format/structured.hi.md, see the separate format_correction manifest entry), propagated through a stage-8 JSON regeneration before this design pass. Manual read-back per step_9/PROMPT.md: Playwright screenshots of 12 items spanning every new pattern - 5 item-level figures (ex_5.10/11/12/13/15), 1 bare-solution figure (ex_5.9, alongside its 2 :::table blocks), both :::note items (ex_5.17/32), the function-composition example (ex_19, confirming \\circ renders as composition not degrees), the determinant-identity proof (q_5.9.21, confirming .sD1-.sD3 renders correctly with \\prime superscripts), and the stray-$$ fix (q_5.9.11). Numeric read-back script (960 tokens pulled from chapter.simplified.hi.md, not the JSON, via mdio.markdown_to_chapter) found 0 missing. Zero leaked backslashes or stray $ anywhere in the rendered body. A crude tag-stripped operator-glue scan after the fix flagged 77 candidates; all manually verified as false positives from stripping fraction/superscript span structure (e.g. a proper <span class=\"s31\">1</span><span class=\"s33\">sin x</span> fraction reads as \"1sin x\" once tags are stripped), not real bugs. Every section (examples + प्रश्नावली 5.1-5.7 + विविध प्रश्नावली) renders in chapter order; section-item-count assertion passed (179==179)."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-18T05:32:50.023409+00:00",
+    "inputs": {
+      "final.hi.html": "cb6a49b9539166f8"
+    },
+    "counts": {
+      "page_count": 74,
+      "file_size_bytes": 3288162,
+      "numeric_tokens_checked": 960,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {
+      "page_count_sane": true,
+      "no_blank_pages": true,
+      "numeric_readback_vs_pdf_text": "OK, 0 missing"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium (chapters/maths-12-5/10_pdf/export.py, adapted from maths-12-4s proven export.py) from 09_design/final.hi.html, following step_10/PROMPT.md exactly: networkidle + document.fonts.ready wait, emulate_media(\"screen\") immediately before page.pdf() (the standing fix for Chromium print-media Devanagari pre-base vowel-sign reordering), print_background=True + prefer_css_page_size=True (no explicit format/width/height). 74 pages for 179 items - sane. 0 blank pages. Numeric read-back re-run independently against the PDFs own fitz-extracted text (not assumed carried over from the stage 9 HTML check): 960 numeric tokens pulled from 06_simplify/chapter.simplified.hi.md via mdio.markdown_to_chapter, all 960 found in the PDF text, using the superscript-normalization fix (insert a separator before a run of superscript chars, not a bare str.translate()) already documented in step_10/PROMPT.md to avoid a false-missing result from a merged base+exponent token. KNOWN, ALREADY-DOCUMENTED LIMITATION CONFIRMED PRESENT (not a bug in this chapters own build, and not something the numeric gate is affected by): Chromiums print-to-PDF pipeline generates an incorrect ToUnicode CMap for Devanagari रेफ़ (र्-as-prebase-consonant) - verified directly on this chapters own PDF, page 3: निष्कर्ष (the fixed conclusion-stage label, used on nearly every item in this chapter, far more pervasively than any prior chapter since every solution has a निष्कर्ष pill) visually renders correctly but extracts as निष्कष (missing the र्). Flagging per step_10/PROMPT.mds own instruction, since this chapters heavy reliance on निष्कर्ष as a structural label makes the extractable-text defect more prominent here than in prior chapters - anyone copy-pasting or full-text-searching this PDF will see the shortened form on every single item, though the printed/viewed page is unaffected. No fix attempted (none known from within this pipeline; would require direct ToUnicode CMap post-processing)."
+  }
+]
