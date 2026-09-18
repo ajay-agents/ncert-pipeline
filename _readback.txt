@@ -1,2 +1,0 @@
-total distinct numbers checked: 372
-missing: ['35.0', '54.0', '63.0', '0.0787', '25.7', '178', '2140']
