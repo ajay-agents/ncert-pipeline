@@ -1,0 +1,322 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-18T08:48:28.146112+00:00",
+    "inputs": {
+      "chapter.hi.pdf": "9fa57f798f8114c2",
+      "solutions.hi.pdf": "999d556a03af81ff"
+    },
+    "counts": {
+      "chapter_pages": 33,
+      "chapter_chars": 167607,
+      "chapter_dollar_spans": 323,
+      "chapter_tables": 2,
+      "chapter_image_refs": 20,
+      "solutions_pages": 8,
+      "solutions_chars": 44554,
+      "solutions_dollar_spans": 78,
+      "solutions_tables": 0,
+      "solutions_image_refs": 4,
+      "images_downloaded": 24
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter (no chapter.en.pdf/solutions.en.pdf in 00_raw - valid per step_1/PROMPT.md). Both PDFs independently verified before this stage: chapter.hi.pdf confirmed genuine via page-render as NCERT Class 12 Biology chapter 5, molecular basis of inheritance; solutions.hi.pdf went through three candidate files before a correct one was found (attempt 1 was a SelfStudys.com webpage screenshot with zero solution content; attempt 2 was a duplicate of biology-12-4's own already-processed solutions content; attempt 3, used here, verified by rendering pages 1/2/3/last and reading real DNA/replication/Hershey-Chase/bioinformatics content matching the chapter's own topic list). Converted via pipeline.mathpix.convert() with subject=biology, lang=hi, chapter=bio12-5. 24 figures downloaded into 01_mathpix/images/, matching 20+4=24 image references across the two files. No tables in solutions.hi.md (expected - mostly prose/diagram answers); 2 tables in chapter.hi.md. No model reasoning about content, per stage rule - conversion and counting only."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-18T09:54:26.604296+00:00",
+    "inputs": {
+      "chapter.hi.md": "9722e11c41a4d66e",
+      "solutions.hi.md": "1a5ff7a8d52620ba"
+    },
+    "counts": {
+      "exercises_hi": 14,
+      "solutions_hi": 14,
+      "matched": 14,
+      "needs_review": 0,
+      "final_items": 14,
+      "gate_counts_issues": 0,
+      "gate_solutions_present_issues": 0,
+      "total_figures": 4
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter, no examples section in either document (biology chapters typically have none). Built via direct Python-object construction rather than dispatched sub-agents, given the small/clean scope: 14 exercises, no tables, only 4 figures in the solutions manual, all attached at item level (including sol_5.14's translation diagram, logically tied to its part (ग) but rendered item-level per render.py's existing shape - same convention prior chapters use). Clean 1:1 numeric correspondence between the chapter's own 14 exercises (bare numbers 1-14, not '5.x') and the solutions manual's own 14 प्रश्न (also bare 1-14) - 0 needs_review, 0 orphans, 0 duplicates; spot-checked every pair by content (not just number) given step_2/PROMPT.md's warning about silent chapter-numbering drift - all 14 matched correctly by both number and subject matter (nitrogenous bases, Chargaff's rule, DNA strand complementarity, mRNA sequence, semi-conservative replication, polymerase types, Hershey-Chase, repetitive/satellite DNA + mRNA/tRNA + template/coding strand, ribosome roles, lac operon shutdown, promoter/tRNA/exon, HGP, DNA fingerprinting, transcription/polymorphism/translation/bioinformatics). q_5.8, q_5.11, q_5.14 have labelled (क)/(ख)/(ग)/(घ) sub-parts in both the question and the solutions manual's own answer structure - split into :::part blocks with per-part solutions, matching the biology-12-4 q_4.2/q_4.13 precedent, since the solutions manual itself delineates each sub-answer under the same labels (not invented parts). final_answer used only for q_5.2 (30%), q_5.3 (complementary sequence), q_5.4 (mRNA sequence) - the three items with a distinctly stated short result; all other items are descriptive/explanatory, no separate boxed answer in the source, so final_answer left empty per extract.md. Genuine source OCR noise transcribed as-is, not fixed (per Rule 4): 'रच्जुक'/'ईकाई' for 'रज्जुक'/'इकाई' in q_5.4, 'एमआर्एनए' variants, 'प्रमोगर' for 'प्रोमोटर' in sol_5.10, 'हर्बे-चेस' for 'हर्षे-चेस' in the sol_5.7 figure caption - flagged for stage 5 verification against the source PDF."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-18T09:56:06.965234+00:00",
+    "inputs": {
+      "chapter.hi.md": "7abe072b29089a8e"
+    },
+    "counts": {
+      "total_items": 14,
+      "examples_items": 0,
+      "examples_bytes": 183,
+      "qa_items": 14,
+      "qa_bytes": 46793
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hindi-only chapter, no examples (matches biology-12-1/2/3/4 pattern - this textbook has no worked-example blocks, only end-of-chapter exercises). Pure mechanical split via pipeline.render.render() kind-filtering, no model call. Round-trip verified: re-parsed both output files with tag._parse(), confirmed container balance, and 0 examples + 14 qa = 14 total items, matching stage 2's merged chapter exactly - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-18T09:57:16.895322+00:00",
+    "inputs": {
+      "examples.hi.md": "6179c7e60c0db6ab",
+      "qa.hi.md": "7abe072b29089a8e"
+    },
+    "counts": {
+      "combined_items": 14,
+      "combined_bytes": 46793
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure mechanical reunion via pipeline.render.render(), no model call. Round-trip verified: re-parsed combined.hi.md with tag._parse(), 14 items match stage 3's 0 examples + 14 qa exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-18T10:04:26.940495+00:00",
+    "inputs": {
+      "combined.hi.md": "7abe072b29089a8e",
+      "chapter.hi.pdf": "9fa57f798f8114c2",
+      "solutions.hi.pdf": "999d556a03af81ff"
+    },
+    "counts": {
+      "corrections_applied": 0,
+      "corrections_held": 1,
+      "corrections_high": 0,
+      "corrections_medium": 1,
+      "corrections_low": 0,
+      "gate_math_parity_issues": 0,
+      "gate_counts_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 2,
+    "notes": "All 14 exercise questions verified against chapter.hi.pdf pages 32-33 (printed pages 119-120, अभ्यास section) - exact match, no corrections needed for question text (immutable per Rule 4 anyway). All 14 solutions verified against solutions.hi.pdf pages 1-8 (printed pages 35-42) at 150dpi, with two specific passages re-cropped at 500dpi for close reading. One correction held (medium confidence, not auto-applied): q_5.10's solution text 'प्रमोगर' -> 'प्रमोटर' - the source page's own glyph for this word is broken/undersized even under 500dpi zoom, so this is an inference, not an unambiguous read; needs the user's explicit sign-off before a lower-confidence re-run applies it. One issue flagged separately (not a Correction - no field exists for a figure caption per step_5/verify.md): sol_5.7's attached figure (Hershey-Chase experiment) caption reads 'हर्बे-चेस' in the extracted text, but the source PDF (page 37, verified at 500dpi) actually prints 'हर्षे-घेस' - the source's own apparent typesetting substitution, not a mathpix misread toward the 'correct' biological spelling. Both flagged to the user rather than silently applied or left unmentioned. gate_math_parity and gate_counts both pass (chapter unchanged since no high-confidence corrections landed)."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-18T10:13:37.380997+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "e99b95658802f65f"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "corrections_held": 0,
+      "figure_captions_fixed": 1,
+      "gate_math_parity_issues": 0,
+      "gate_counts_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Follow-up to the prior verify entry: user explicitly approved both flagged items. (1) q_5.10's 'प्रमोगर' -> 'प्रमोटर' correction re-applied at high confidence after user sign-off (was held at medium). (2) sol_5.7's Hershey-Chase figure caption fixed at the object level (not a Correction - no field exists for figure captions per step_5/verify.md) from 'हर्बे-चेस' to 'हर्षे-घेस', matching the source PDF's own printed text exactly (page 37, 500dpi) rather than the scientifically 'correct' transliteration - per Rule 5, the source's own apparent typesetting substitution is not ours to silently correct toward what we think it should say. Both gates re-confirmed clean after these changes. chapter.verified.hi.md rewritten with both fixes."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-18T10:23:34.332032+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "82bdaa84b54a3c44"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Second follow-up: caught during the stage 6 close read-through, not the original stage 5 pass - q_5.8 part ग (Difference between Template Strand and Coding Strand) had 'कूटलेखन ज्जुक' where solutions-manual page 38 clearly prints 'कूटलेखन रज्जुक' in full (500dpi re-check). Applied at high confidence as a proper found/should_be correction against chapter.verified.hi.md rather than silently reworded during stage 6 - content fixes belong to stage 5's audit trail regardless of which stage's re-read caught them. Serves as a reminder that a single verification pass, even one that reviewed the right page, can still miss an individual word - the fix path is the same either way."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-18T10:27:02.576366+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "82bdaa84b54a3c44"
+    },
+    "counts": {
+      "solution_fields_total": 21,
+      "solution_fields_simplified": 13,
+      "solution_fields_unchanged": 8,
+      "restore_failed": 0,
+      "gate_question_text_frozen_issues": 0,
+      "gate_answers_unchanged_issues": 0,
+      "gate_math_parity_issues": 0,
+      "gate_bilingual_issues_before": 25,
+      "gate_bilingual_issues_after": 25,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Built directly (not dispatched sub-agents) given the small scope: 21 solution fields across 14 items (11 item-level + 10 part-level across q_5.8/5.11/5.14). Every field run through protect.freeze()/restore() - 0 restore failures, all math/number tokens preserved exactly. 13 fields simplified (shorter sentences, plain register, hyphen-joins like 'X-यह' split into separate sentences per house style); 8 left unchanged because already short and clear (q_5.1, q_5.3, q_5.9, q_5.12 item-level; q_5.11's 3 one-line parts; q_5.14 part घ) - a valid outcome per step_6/simplify.md, not under-effort. Applied the comparative-reordering caution from step_6/simplify.md while rewriting q_5.10's lac-operon passage: kept 'यह प्रोमोटर कोशिका में प्रवेश करके...' exactly as the verified text states it (an odd-looking referent - grammatically 'यह' point back to 'प्रोमोटर' rather than 'लैक्टोज प्रेरक', which reads oddly) rather than 'fixing' which noun does the entering, since that is stage 5's call against the source PDF, not stage 6's - already verified against page 39 in stage 5 as printed. gate_question_text_frozen/gate_answers_unchanged/gate_math_parity all 0 issues. gate_bilingual issue count unchanged (25 before and after, all pre-existing since this is a Hindi-only chapter with no English fields at all) - confirms simplification introduced no NEW bilingual gaps, matching the biology-12-4 precedent for how this gate reads on a Hindi-only chapter."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-18T10:31:18.792154+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "8ebdfc8431ade60d"
+    },
+    "counts": {
+      "structured_bytes_hi": 45775,
+      "items_with_new_structure": 3,
+      "parity_issues": 0,
+      "parse_ok": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Deliberately conservative given this chapter's low-math, descriptive content (per RULES.md's biology subject note - figure-heavy, caption accuracy is the main risk, not step-by-step derivations). Applied new structure to only 3 items where it was a genuine, source-demarcated fit, left the other 11 as plain paragraph text rather than forcing containers onto ordinary prose: (1) q_5.2 - the only item with a real given/key-formula/substitute/conclusion derivation (Chargaff's rule calculation) - used the fixed 4-word vocabulary (':::formula{label=\"मुख्य सूत्र\"}', ':::step{label=\"मान रखो\"}', ':::step{label=\"निष्कर्ष\"}'). (2) q_5.6 - wrapped in ':::concept' the two sub-sections the source itself demarcates with its own headings ('DNA Template' / 'RNA Template'). (3) q_5.8's three parts - each is a source-set-apart two-term comparison ('Difference between X and Y', X: ... Y: ...) - wrapped each named term's own definition in its own ':::concept{label=...}' with the term itself as the freeform label. No figure was moved: none of this chapter's solutions name their attached figure inline (e.g. no 'चित्र 6.2 में दिखाया गया है' in running prose), so all figures stay exactly where stage 4 placed them (between prompt and solution) per format.md's 'only move if the solution names it' rule. No tables in this chapter (0 per stage 1). No ':::note' added - no textbook-own remark existed to wrap; none invented. protect.parity() shows 0 issues on every touched field (math/table/image counts unchanged - only containers added around existing text, no wording touched). tag._parse succeeds on the full output (15 top-level children, matching the 14 questions + 1 top-level section heading)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T10:40:02.802912+00:00",
+    "inputs": {
+      "structured.hi.md": "475306f25b8f6a5f"
+    },
+    "counts": {
+      "items": 14,
+      "parts": 10,
+      "distinct_figure_srcs": 4,
+      "item_count_gate": "14 == 14 (match)",
+      "part_count_gate": "10 == 10 (match)",
+      "figure_src_gate": "4 == 4 (match)",
+      "stage_given": 13,
+      "stage_key_formula": 1,
+      "stage_substitute": 1,
+      "stage_conclusion": 17
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Used pipeline/serialize.py directly (structured_md_to_json) - already implements every rule in step_8/PROMPT.md mechanically (given/key_formula/substitute/conclusion inference, हल/उत्तर opener stripping, figure src preservation, nested-figure-in-step promotion), so no model judgement was needed beyond what stage 7 already decided. Gate: re-parsed the written JSON and cross-checked against a fresh, direct count from structured.hi.md - item count (14=14), part count (10=10), and distinct figure src count (4=4) all matched exactly, nothing dropped or duplicated. Stage distribution audited block-by-block: the 13 'given' entries are not all from explicit :::concept blocks (8: q_5.6's 2 + q_5.8's 3 parts x 2) - the other 5 are each restructured item/part's own leading intro sentence (e.g. q_5.2's 'चारगाफ के नियम के अनुसार:', q_5.8 part क's own comparison heading), which becomes its own synthetic step block ahead of the first concept/formula and lands on 'given' by position - correct per the documented positional-inference rule, not a defect. q_5.8's 3 parts each end up entirely 'given' stage blocks (intro step + 2 concepts, explicit concepts always stage=given regardless of position) with no 'conclusion' - expected, since a definitional comparison ('Difference between X and Y') has no derivation to conclude, matching RULES.md's own carve-out that concept/note freeform blocks aren't forced into the given/formula/substitute/conclusion flow. The remaining 11 items/7 parts left unstructured in stage 7 each serialize as exactly one synthetic 'step' block, correctly inferred as 'conclusion' (the single-stageable-block rule)."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-18T10:53:30.277269+00:00",
+    "inputs": {},
+    "counts": {
+      "reorder_fix": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[REORDER FIX for stage 'extract_match'] Ordering bug fix, discovered while starting stage 9: the original stage 2 build script constructed the `exercises` Python list with plain items (q_5.1-5.7, 5.9, 5.10, 5.12, 5.13) followed by the three part-bearing items (q_5.8, 5.11, 5.14) appended afterward, rather than in natural numeric order - match.join_solutions preserves list order, so this out-of-order sequence (5.1..5.7, 5.9, 5.10, 5.12, 5.13, 5.8, 5.11, 5.14) propagated unchanged through every stage 2-8 output file (chapter.hi.md, qa.hi.md, combined.hi.md, chapter.verified.hi.md, chapter.simplified.hi.md, structured.hi.md, structured.hi.json) since none of those stages' gates check item order, only counts/content. Caught only when starting stage 9's page layout, where display order is directly visible. Fixed at the root rather than only in the stage 9 render: rebuilt stages 2-8 from the same content (byte-identical field values - question text, solution text, figures, corrections, simplifications, structure) with items sorted by (chapter, exercise) as integers before merging - not float(item.number), which would silently collapse '5.1' and '5.10' to the same value 5.1. All stage gates re-verified clean on the reordered rebuild: gate_counts, gate_solutions_present (stage 2), gate_math_parity (stage 5/6), gate_question_text_frozen/gate_answers_unchanged (stage 6), tag._parse + item/part/figure count parity (stage 7/8) - all identical results to the original out-of-order build, confirming this was purely a display-order defect, never a content one. Every output file for stages 02_extract through 08_tag has been overwritten with the reordered version; this entry supersedes the ordering (but not the content) of every manifest entry recorded before it for stages extract_match/split/combine/verify/simplify/format/tag."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-18T10:53:30.279084+00:00",
+    "inputs": {},
+    "counts": {
+      "reorder_fix": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[REORDER FIX for stage 'split'] Rebuilt from the reordered stage 'extract_match' output; same content, natural numeric item order now."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-18T10:53:30.279904+00:00",
+    "inputs": {},
+    "counts": {
+      "reorder_fix": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[REORDER FIX for stage 'combine'] Rebuilt from the reordered stage 'extract_match' output; same content, natural numeric item order now."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-18T10:53:30.280669+00:00",
+    "inputs": {},
+    "counts": {
+      "reorder_fix": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[REORDER FIX for stage 'verify'] Rebuilt from the reordered stage 'extract_match' output; same content, natural numeric item order now."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-18T10:53:30.281625+00:00",
+    "inputs": {},
+    "counts": {
+      "reorder_fix": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[REORDER FIX for stage 'simplify'] Rebuilt from the reordered stage 'extract_match' output; same content, natural numeric item order now."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-18T10:53:30.282466+00:00",
+    "inputs": {},
+    "counts": {
+      "reorder_fix": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[REORDER FIX for stage 'format'] Rebuilt from the reordered stage 'extract_match' output; same content, natural numeric item order now."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T10:53:30.283557+00:00",
+    "inputs": {},
+    "counts": {
+      "reorder_fix": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[REORDER FIX for stage 'tag'] Rebuilt from the reordered stage 'extract_match' output; same content, natural numeric item order now."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-18T11:09:12.386816+00:00",
+    "inputs": {
+      "structured.hi.json": "407202978c564eef"
+    },
+    "counts": {
+      "html_bytes": 53569,
+      "distinct_figure_srcs_resolved": 4,
+      "figure_srcs_missing": 0,
+      "items_rendered": 14,
+      "parts_rendered": 10
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored final.hi.html + final.hi.css directly (not via the design skill canvas, per step_9/PROMPT.md), reusing biology-12-4's final.hi.css almost verbatim as the base (it already carries every documented fix: .s81/.s82 flex replacement for .s22's grid, .s23 flex-column doodle fix, .s37p/.s44p/.s50p/.s56p plain-rectangle boxed-answer variants, overflow-wrap resets, break-inside avoid on .s31/.s14, .s90/.s91 glued-unit helpers, the @media 700px mobile breakpoint) - trimmed out chemistry-specific unused classes (underset/stackrel/xrightarrow/substack/table-img) this chapter never needs. Wrote a purpose-built LaTeX->HTML converter scoped to exactly this chapter's own math (grepped chapter.simplified.hi.md first: \\mathrm, \\text, \\left/\\right, ^{...} incl. isotope {}^{N} and prime marks, \\rightarrow, \\beta, \\times, \\%, one literal '/' division, '=' padding - no \\frac/\\sqrt/\\sum/\\begin{}/set-theory, none of which this chapter uses) rather than reusing a richer chapter's converter with unused surface area. Caught and fixed during standalone testing before wiring into the page: (1) naive ordering let '\\right' stripping eat the 'right' out of '\\rightarrow', leaving literal 'arrow' text on the page; (2) plain-text HTML-escaping was being re-applied to already-generated <sup>/fraction HTML, double-escaping it - fixed by routing all generated markup through placeholder tokens, substituted back in only after the surrounding plain text is escaped. One real bug found and fixed upstream, not papered over here: pipeline/serialize.py's 'answer' flow never stripped render_item()'s own baked-in '**Label:** ' markdown prefix (mdio.py's markdown_to_chapter() already does this on its own read path; serialize.py had no equivalent) - every boxed final-answer echo was showing literal '**उत्तर:** 30%' text. Added _strip_answer_flow_prefix() to serialize.py (mirroring mdio.py's own _strip_answer_prefix), re-ran stage 8, confirmed the JSON's answer fields are now clean plain text - this fixes every future chapter's stage 9 build too, not just this one. A second, chapter-2-through-8-wide bug discovered while starting this stage: items were stored out of numeric order (see the separate reorder-fix manifest entries on stages extract_match through tag) - fixed at the root before starting this stage's own work, not papered over with a display-only sort here. Also fixed during visual review: q_5.9's solution text used literal markdown blockquote syntax ('> ...') written at stage 2, which this renderer doesn't interpret as a container - stripped the leading '> ' marker at render time (cosmetic, not a content change). Boxed final-answer echo used only for q_5.2/5.3/5.4 (the only items with a separate `answer` field) - q_5.2's short '30%' kept the organic blob variant, q_5.3/5.4's longer DNA/mRNA sequences (>30 chars) used the plain rounded-rectangle variant per the documented length threshold. No :::note/:::table blocks exist in this chapter (none invented). No figure needed repositioning mid-solution - none of this chapter's solutions name their attached figure inline, so all 4 stayed exactly where stage 4 placed them (between prompt and solution/parts). Manual read-back per step_9/PROMPT.md's mandatory check: every question and final_answer field from 06_simplify/chapter.simplified.hi.md (not the JSON) confirmed present in the rendered HTML - 27 fields checked via automated substring match (2 flagged as 'missing' were false positives from literal '$...$' syntax in the raw source no longer being literally present once converted to real math markup - manually confirmed both questions' actual text does appear), plus all 11 numeric tokens across every question/final_answer confirmed present with 0 missing. Also manually read every one of all 14 items' rendered content via full-page screenshots (10 viewport sections) side by side against the source - all correct, no dropped or transposed content. Every figure src (4 distinct) verified with os.path.exists against the real 09_design/images/ directory, not a scratch copy. lang=\"hi\" confirmed present on the html element."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-18T11:14:17.993120+00:00",
+    "inputs": {
+      "final.hi.html": "29cd3b16a7d136b2"
+    },
+    "counts": {
+      "page_count": 10,
+      "blank_pages": 0,
+      "pdf_bytes": 1130593,
+      "numeric_readback_checked": 11,
+      "numeric_readback_missing": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.hi.html file:// path (not a copy), waited for document.fonts.ready, called emulate_media('screen') before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base vowel-reordering bug), exported with print_background=True and prefer_css_page_size=True (no explicit format/width/height). Gate: 10 pages (sane for 14 items with 4 figures and 10 :::part sub-answers across 3 multi-part items), 0 blank pages, numeric read-back re-run against the PDF's own fitz-extracted text using the same question/final_answer-field scope as stage 9's check (via mdio.markdown_to_chapter against chapter.simplified.hi.md, not the JSON). Applied the documented superscript-glue guard when normalizing unicode superscript digits back to ASCII (insert a separator before a run of superscript chars, e.g. '10⁹' -> '10 9' not '109') so a base number and its exponent register as two distinct tokens rather than a false merge hiding a real number. 11 numeric tokens checked (this chapter's question/final_answer fields are mostly descriptive prose with only a handful of embedded numbers - e.g. '20' in q_5.2, the year figures aren't in question/final_answer scope since they live in solution text only), 0 missing. Visually spot-checked pages 1, 5 and 10 at 150dpi - Devanagari renders cleanly (no garbling), colors/badges/pills/pagination all correct, last page ends cleanly on q_5.14 part (घ). Not independently re-verified: the known, currently-unresolved Chromium reph ('र्'+consonant) ToUnicode CMap bug documented in step_10/PROMPT.md - visual rendering is unaffected, only copy-paste/text-extraction of words containing that exact sequence; flagged to the user, not silently shipped around, consistent with how prior chapters (e.g. biology-12-4) handled the same known limitation."
+  }
+]

@@ -18,9 +18,11 @@ from __future__ import annotations
 import re
 from typing import Any
 
+from . import render as _render
 from . import tag as _tag
 
 _STAGE_EXCLUDED = {"note", "figure", "table"}
+_ANSWER_PREFIX_CACHE: dict[str, re.Pattern] = {}
 _SOLUTION_OPENER_RE = re.compile(
     r'^(?:\\text\{)?(?:हल|उत्तर)\s*[:：]?\s*\}?\s*'  # हल/उत्तर, with or
     # without a colon, with or without \text{...} wrapping. Different
@@ -214,6 +216,36 @@ def build_solution_blocks(children: list, lang: str) -> list[dict[str, Any]]:
     return blocks
 
 
+def _answer_prefix_re(lang: str) -> re.Pattern:
+    if lang not in _ANSWER_PREFIX_CACHE:
+        label = _render.LABELS[lang]["answer"]
+        _ANSWER_PREFIX_CACHE[lang] = re.compile(rf"^\*\*{re.escape(label)}:\*\*\s*")
+    return _ANSWER_PREFIX_CACHE[lang]
+
+
+def _strip_answer_flow_prefix(flow: list[dict[str, Any]], lang: str) -> list[dict[str, Any]]:
+    """render_item() bakes '**{Answer label}:** ' into an :::answer block's
+    own text (mdio.py's markdown_to_chapter() already undoes this on the
+    read-back-into-Chapter path via its own _strip_answer_prefix - this is
+    the same fix for serialize.py's separate structured-markdown-to-JSON
+    path, which parses the :::answer container's raw text directly and had
+    no equivalent stripping, so every 'answer' flow this stage ever produced
+    carried the literal '**उत्तर:**'/'**Answer:**' markdown text visible at
+    stage 9. Strip only the first text segment's leading occurrence."""
+    if not flow or flow[0]["type"] != "text":
+        return flow
+    text = flow[0]["text"]
+    stripped = _answer_prefix_re(lang).sub("", text, count=1)
+    if stripped == text:
+        return flow
+    out = list(flow)
+    if stripped:
+        out[0] = {**out[0], "text": stripped}
+    else:
+        out = out[1:]
+    return out
+
+
 def _collect_figures(node: dict) -> list[dict[str, str]]:
     figs = []
     for fig in _child_dicts(node["children"], "figure"):
@@ -233,7 +265,7 @@ def _part_to_json(node: dict, lang: str) -> dict[str, Any]:
         "solution_blocks": build_solution_blocks(solution_nodes[0]["children"], lang) if solution_nodes else [],
     }
     if answer_nodes:
-        out["answer"] = build_flow(answer_nodes[0]["children"], lang)
+        out["answer"] = _strip_answer_flow_prefix(build_flow(answer_nodes[0]["children"], lang), lang)
     return out
 
 
@@ -272,7 +304,7 @@ def _item_to_json(node: dict, lang: str) -> dict[str, Any]:
         out["parts"] = parts
     out["solution_blocks"] = solution_blocks
     if answer_nodes:
-        out["answer"] = build_flow(answer_nodes[0]["children"], lang)
+        out["answer"] = _strip_answer_flow_prefix(build_flow(answer_nodes[0]["children"], lang), lang)
     return out
 
 
