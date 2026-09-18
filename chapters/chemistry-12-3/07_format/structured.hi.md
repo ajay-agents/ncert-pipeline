@@ -1623,7 +1623,7 @@ $$
 (i) माना $360 \mathrm{~s}$ के बाद वेग स्थिरांक $=k_{1}$
 $$
 \begin{aligned}
-k_{1} & =-\frac{2.303}{(360 \mathrm{~s})} \log \frac{(35 \mathrm{~atm})}{(70-54) \mathrm{atm}} \\
+k_{1} & =-\frac{2.303}{(360 \mathrm{~s})} \log \frac{(35 \mathrm{~mm} \mathrm{Hg})}{(70-54) \mathrm{mm} \mathrm{Hg}} \\
 & =\frac{2.303}{(360 \mathrm{~s})} \log \frac{35}{16} \\
 & =\frac{2.303}{(360 \mathrm{~s})} \log 2.1875 \\
 & =\frac{2.303 \times 0.33995}{(360 \mathrm{~s})} \\
@@ -1636,7 +1636,7 @@ $$
 (ii) माना $720 \mathrm{~s}$ के बाद वेग स्थिरांक $=k_{2}$
 $$
 \begin{aligned}
-k_{2} & =-\frac{2.303}{(720 \mathrm{~s})} \log \frac{(35 \mathrm{~atm})}{(70-63) \mathrm{atm}} \\
+k_{2} & =-\frac{2.303}{(720 \mathrm{~s})} \log \frac{(35 \mathrm{~mm} \mathrm{Hg})}{(70-63) \mathrm{mm} \mathrm{Hg}} \\
 & =-\frac{2.303}{(720 \mathrm{~s})} \log 5=\frac{2.303 \times 0.6990}{(720 \mathrm{~s})} \\
 & =2.24 \times 10^{-3} \mathrm{~s}^{-1}
 \end{aligned}
@@ -1816,7 +1816,7 @@ $$
 &=6.2\left[y_{2}-y_{1}=-1-(7.2)\right] \\
 & \text { आवृत्ति गुणक, } A=\text { Antilog } 6.2=1585000 \\
 &=1.585 \times 10^{6} \mathrm{collisions} \mathrm{~s}^{-1} \\
-& A=1.585 \times 10^{6} \text { collisions }^{-1}
+& A=1.585 \times 10^{6} \text { collisions } \mathrm{~s}^{-1}
 \end{aligned}
 $$
 :::
@@ -1834,7 +1834,7 @@ $$
 :::
 
 :::answer
-**उत्तर:** $E_a=97.875 \mathrm{~kJ} \mathrm{~mol}^{-1}$; $A=1.585 \times 10^{6}$ (as printed, "collisions"); $30^{\circ}\mathrm{C}$ (303 K) पर $k=6.31 \times 10^{-5} \mathrm{~s}^{-1}$; $50^{\circ}\mathrm{C}$ (323 K) पर $k=1.585 \times 10^{-3} \mathrm{~s}^{-1}$
+**उत्तर:** $E_a=97.875 \mathrm{~kJ} \mathrm{~mol}^{-1}$; $A=1.585 \times 10^{6} \text { collisions } \mathrm{s}^{-1}$; $30^{\circ}\mathrm{C}$ (303 K) पर $k=6.31 \times 10^{-5} \mathrm{~s}^{-1}$; $50^{\circ}\mathrm{C}$ (323 K) पर $k=1.585 \times 10^{-3} \mathrm{~s}^{-1}$
 :::
 
 :::

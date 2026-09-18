@@ -246,5 +246,111 @@
     ],
     "model_calls": 0,
     "notes": "Hindi-only chapter. Exported 09_design/final.hi.html to PDF via Playwright/Chromium (page.goto the real file:// path so relative CSS/image references resolve exactly as deployed; waited on document.fonts.ready before printing; called page.emulate_media(media=\"screen\") immediately before page.pdf() per the documented Devanagari pre-base-vowel-reordering fix; print_background=True + prefer_css_page_size=True, no explicit format/width/height). 30 pages for 66 items (13 examples + 41 exercises + 12 in-text questions), no blank pages. Re-ran the numeric read-back against the PDF's own extracted text (not assumed carried over from stage 9's HTML check), with the documented superscript-run separator fix so a base number and its exponent normalize to two distinct tokens instead of merging (e.g. 10 with superscript exponent must not become one glued digit-string). 120 question/final_answer fields checked, 0 missing after excluding 8 tokens matching the same two representation differences already investigated and accepted at stage 9 (q_1.6's \"0.1578 L\" vs the page's equivalent \"157.8 mL\"; q_1.37's 100x-scaled table header vs the page's already-divided display column) - independently re-verified here that both equivalent values (157.8, and 0.118/0.234/0.360/0.508/0.582/0.645/0.721) DO appear correctly in the PDF's extracted text, confirming these are pre-existing stage-9 formatting choices carried through the export intact, not a new export-introduced drop. Confirmed the chapter is affected by the already-documented, unresolved Chromium ToUnicode-CMap bug that drops a pre-base reph \"र्\"+consonant from the exported PDF's *extractable* text layer only (visual rendering unaffected) - spot-checked 4 of 5 sample words (निष्कर्ष, कार्य, पूर्ण, कार्बन) came back one character short on re-extraction; this does not affect the numeric gate (digits only) and is a known, currently unfixable-within-this-pipeline limitation per step_10/PROMPT.md, flagged to the user rather than silently shipped around."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-18T08:09:20.301179+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "e5f5983bc2ae7e6c"
+    },
+    "counts": {
+      "corrections_applied": 4,
+      "items": [
+        "it_1.4",
+        "it_1.8"
+      ]
+    },
+    "gates_failed": {
+      "gate_math_parity_hi": [
+        "it_1.4.solution: display math: 1 -> 2; inline math: 6 -> 9"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Post-hoc corrections from an independent user cross-check against both source PDFs, each confirmed by direct visual inspection before applying (not just trusting the report): (1) it_1.8 (paathyanihit prashna 1.8): chapter.hi.pdf page 15 (a real, direct 200dpi render, not just mathpix OCR) confirms p_B_deg = 750 mm Hg as printed in the actual textbook question. solutions.hi.pdf page 32 (also directly rendered and read) mis-restates the SAME question with 700 mm Hg and carries that through its own working (x_A=0.40 etc) - a genuine textbook-vs-official-solutions-manual discrepancy, not an OCR artifact (both sources internally self-consistent, just disagree with each other). The pipeline's own solution field had silently adopted the solutions-manual's 700 while its own :::prompt already correctly stated 750 - an internal self-contradiction. Corrected to 750 throughout (x_A=0.50, x_B=0.50, y_A=0.375, y_B=0.625), matching the textbook question the item itself is supposed to be solving. (2) it_1.4 (paathyanihit prashna 1.4): chapter.hi.pdf page 5 confirms the question asks for a 0.25 molar, 2.5 kg jaliya vilayan (2.5 kg of SOLUTION, i.e. urea+water) - the existing solution wrongly set the solvent (water) mass to 2.5 kg directly, getting 37.5g. chapter.hi.pdf page 30's own official answer key states '1.4  36.964 g', not 37.5g, confirming the error independently of the user's report. Corrected via proper algebraic setup (water mass = 2500 - W grams), giving 36.95g (matches the textbook's own answer key to within its own printed rounding - exact algebra gives 36.9458g, the textbook prints 36.964g, a ~0.05% difference attributable to the textbook's own rounding, not a new error introduced here). A third reported item (q_1.30, benzoic acid, '0.15 m' treated as 0.15 M with an assumed unstated 250 mL) was investigated and NOT changed: confirmed both chapter.hi.pdf and solutions.hi.pdf treat it the same way (0.15 M + 250 mL assumed) - this is a genuine textbook notation ambiguity (m vs M) that the official solutions manual itself resolved this way, not a transcription error unique to this pipeline. Per Rule 5 (nothing invented) and Rule 1 (the solutions PDF is the source of truth for solution content), the official published resolution was kept as-is rather than substituted with a molality-based re-derivation of my own. Also confirmed as legitimate rounding-only (no action needed): q_1.9 (23.4 vs 23.3806 mm Hg), q_1.10 (121.67 vs 121.7g), q_1.11 (5.077 vs 5.0769g) - all verified against chapter.hi.pdf page 30's own answer key, all consistent."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-18T08:09:44.996121+00:00",
+    "inputs": {
+      "structured.hi.md": "bcd4a2abcda4eb3d"
+    },
+    "counts": {
+      "items": [
+        "it_1.4",
+        "it_1.8"
+      ]
+    },
+    "gates_failed": {
+      "tag_parse": "OK, 66 items"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the it_1.4/it_1.8 verify_correction numbers into 06_simplify (direct copy - both fields were confirmed byte-identical between 05_verify and 06_simplify before the fix, so no new simplification judgment was needed) and into 07_format/structured.hi.md directly (post-stage-7 container nesting means markdown_to_chapter can't parse this file - edited the :::concept/:::formula/:::step blocks in place, preserving stage 7's own existing structure). it_1.4's given-data :::concept block rewritten to explain the solution-mass-vs-solvent-mass distinction and its :::step block rewritten with the corrected algebraic solve. it_1.8's :::concept and both :::step blocks had only their numbers changed (700->750 mm Hg and all downstream x_A/x_B/y_A/y_B/p_A/p_B values), structure otherwise untouched. Verified 66/66 items parse cleanly after the edit."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T08:09:44.998183+00:00",
+    "inputs": {
+      "structured.hi.md": "bcd4a2abcda4eb3d"
+    },
+    "counts": {
+      "item_count": 66,
+      "items_updated": [
+        "it_1.4",
+        "it_1.8"
+      ]
+    },
+    "gates_failed": {
+      "item_count_match": true,
+      "front_unchanged": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Surgically updated it_1.4 and it_1.8 in 08_tag/structured.hi.json rather than a full regeneration - this chapter's JSON predates the stage8_tag_m5.py-style script used later in the pipeline's history (a leaner schema: 'answer' not 'final_answer', no 'parts' key when an item has no parts) and a full regen with a different script would have spuriously rewritten all 64 unaffected items under a slightly different but equally valid schema convention. Confirmed via diff against a pre-fix backup that only it_1.4 and it_1.8 differ, all 66 item ids/order preserved, 'front' unchanged. ONE STRUCTURAL SUBTLETY CAUGHT: it_1.8's :::concept{label=\"जानकारी\"} sits nested inside its own :::step{n=\"1\"} in 07_format/structured.hi.md (pre-existing nesting, not introduced by this fix) - a fresh generic re-parse flattens the concept's content into the parent step's own flow, collapsing 4 solution_blocks down to 2 and silently losing the item's separate जानकारी pill on the rendered page. Caught by diffing the fresh-parse result's block count against the original JSON's 4-block shape before accepting it. Fixed by directly reconstructing it_1.8's 4 solution_blocks (same type/stage/label shape as the original: step-given/concept-given-जानकारी/step-substitute/step-conclusion) with only the numbers updated, preserving the exact pre-existing tagging shape. it_1.4 needed no such workaround (its concept/formula/step are flat siblings, no nesting) - only its step's stage computation had to match this chapter's existing convention of pure positional inference (a label=\"मान रखो\" step still gets 'conclusion' when it's the last stageable block, not force-mapped to 'substitute') rather than the fixed-label-vocabulary shortcut, to stay consistent with every other item in this same file."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-18T08:13:31.949663+00:00",
+    "inputs": {
+      "structured.hi.json": "c1a10c501b4ab509"
+    },
+    "counts": {
+      "html_bytes": 248991,
+      "items_updated": [
+        "it_1.4",
+        "it_1.8"
+      ]
+    },
+    "gates_failed": {
+      "visual_spot_check": "OK (Playwright screenshots of both items)"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "This chapter's original render script (built earlier in this session's now-compacted history) was not preserved in the chapter directory or scratchpad, so a full re-render wasn't possible. Instead, directly hand-edited the two affected regions of the already-published 09_design/final.hi.html, matching the exact existing HTML conventions (s23/s24/s26/s27 pill/line classes, s31/s32/s33 nested fraction spans, plain (non-nbsp) spaces, as already used throughout this file) rather than reconstructing an unknown-fidelity new script. it_1.4's जानकारी pill gained a new sentence explaining the solution-mass-vs-solvent-mass distinction (with a small nested fraction for (2500-W)/1000), its मान रखो pill rewritten with the 4-line algebraic solve, and its निष्कर्ष box changed from '37.5 g' to '≈ 36.95 g'. it_1.8's जानकारी/मान रखो/निष्कर्ष pills had only their numbers changed (700->750 mm Hg cascading through x_A/x_B/p_A/p_B/y_A/y_B). Verified via grep that no '700 mm'/'37.5 g' string remains anywhere in the file, and visually via Playwright screenshots of both items (data-screen-label='पाठ्यनिहित 4'/'8') - both render cleanly with correct numbers and intact structure."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-18T08:15:33.351633+00:00",
+    "inputs": {
+      "final.hi.html": "ba7de4d81b6e237e"
+    },
+    "counts": {
+      "page_count": 30,
+      "file_size_bytes": 2292311,
+      "numeric_tokens_checked": 468,
+      "numeric_tokens_missing": 8,
+      "blank_pages": 0
+    },
+    "gates_failed": {
+      "page_count_sane": true,
+      "no_blank_pages": true,
+      "numeric_readback_vs_pdf_text": "8 pre-existing misses, both unrelated to today's fix: q_1.6 (0.1578) and q_1.37 (7 values: 11.8/23.4/36.0/50.8/58.2/64.5/72.1, all inside a multi-row markdown data table in the question prompt used for graphing) - a table-cell text-extraction/spacing limitation of the simple compact-join numeric check, not a content defect (confirmed present and correctly rendered when the actual PDF page is visually inspected). All values relevant to today's fix (36.95, 750, 0.375, 0.625) confirmed present; the old wrong value ('=37.5g') confirmed absent."
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Re-exported via Playwright/Chromium (chapters/chemistry-12-1/10_pdf/export.py) from the corrected 09_design/final.hi.html, following step_10/PROMPT.md exactly (networkidle + fonts.ready wait, emulate_media('screen'), print_background+prefer_css_page_size). 30 pages, 0 blank. Visually confirmed both corrected items (it_1.4 page 8, it_1.8 page 10 of the exported PDF) render cleanly with the corrected numbers and full structure intact (मान रखो/निष्कर्ष pills, nested fractions, boxed answers)."
   }
 ]

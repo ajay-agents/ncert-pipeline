@@ -479,5 +479,108 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Regenerated after stage 7's item-order fix (see that stage's own manifest entry) - same content, correct sequence now. Gate re-run and passed with identical item/part/figure counts as before the fix (49/22/3), confirming this was a pure reorder. Re-exported PDF: 33 pages (same as before the fix), no blank pages, 345/345 numbers found in the PDF's own extracted text."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-18T08:51:05.988259+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "d147e3f09f96cecb"
+    },
+    "counts": {
+      "corrections_applied": 3,
+      "items": [
+        "q_3.20",
+        "q_3.22"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Post-hoc corrections from an independent user cross-check against both source PDFs, each confirmed by direct visual inspection (200dpi page renders) before applying: (1) q_3.20: the question's own table (confirmed via mathpix and the item's own :::prompt) gives pressure in mm Hg, but the k1/k2 derivation labelled the same 35/54/63/70 values as 'atm'. Traced to a genuine error in solutions.hi.pdf page 107 (confirmed by direct render - the source itself prints 'atm' for mm Hg data). Does not change the numeric k value (a ratio of same-unit pressures), but the label is factually wrong. Corrected to mm Hg throughout. (2) q_3.22: two defects, both confirmed UNIQUE to this pipeline (NOT inherited, contrary to the user's own initial guess) - solutions.hi.pdf page 110 (directly rendered at 200dpi) clearly shows 'A = 1.585x10^6 collisions s^-1' on BOTH the first and duplicate lines. (a) this pipeline's solution.hi had dropped the 's' unit on the duplicate line ('collisions^-1') - an extraction-stage artifact never caught by any gate; corrected to match the source's own clean repeated line. (b) final_answer.hi contained a stray internal QC/proofreading annotation '(as printed, \"collisions\")' that does not exist anywhere in the source (absent from both the mathpix text and the direct page render) - a genuine document-hygiene defect; removed and replaced with the clean 'collisions s^-1' unit."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-18T08:51:05.989885+00:00",
+    "inputs": {
+      "structured.hi.md": "047c5cf2753c1053"
+    },
+    "counts": {
+      "items": [
+        "q_3.20",
+        "q_3.22"
+      ]
+    },
+    "gates_failed": {
+      "tag_parse": "OK, 49 items"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the q_3.20/q_3.22 verify_correction changes into 06_simplify (direct copy - both fields were confirmed byte-identical between 05_verify and 06_simplify before the fix) and into 07_format/structured.hi.md directly (edited the :::step blocks in place, preserving stage 7's existing structure - number/unit-only changes, no structural change). Verified 49/49 items parse cleanly."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T08:51:05.991159+00:00",
+    "inputs": {
+      "structured.hi.md": "047c5cf2753c1053"
+    },
+    "counts": {
+      "item_count": 49,
+      "items_updated": [
+        "q_3.20",
+        "q_3.22"
+      ]
+    },
+    "gates_failed": {
+      "item_count_match": true,
+      "front_unchanged": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Surgically updated q_3.20 (solution_blocks[4] and [5], the k1/k2 steps) and q_3.22 (solution_blocks[4]'s flow text, and the item's own answer field) in 08_tag/structured.hi.json via direct string substitution, rather than a full regeneration (same rationale as the prior two chapters' fixes this session). Confirmed via diff against a pre-fix backup that only these two items differ, all 49 item ids/order preserved, 'front' unchanged."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-18T08:51:05.992386+00:00",
+    "inputs": {
+      "structured.hi.json": "e05ab36f976eb4c5"
+    },
+    "counts": {
+      "html_bytes": 185888,
+      "items_updated": [
+        "q_3.20",
+        "q_3.22"
+      ]
+    },
+    "gates_failed": {
+      "visual_spot_check": "OK (Playwright screenshots of both items)"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Directly hand-edited the affected regions of the already-published 09_design/final.hi.html (original render script not preserved, same situation as the prior two chapters' fixes this session), matching this file's own NBSP-spaced math-span convention exactly (verified exact byte matches via Python before writing, avoiding the plain-space-vs-NBSP mismatch that slowed down the chemistry-12-2 fix). 4 substitutions (k1's mm Hg, k2's mm Hg, the duplicate collisions-s^-1 line, and the answer box's stray annotation), each verified to match exactly once before writing. Visually confirmed via Playwright screenshots of both items - both render cleanly with correct units/text and intact structure."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-18T08:51:05.993759+00:00",
+    "inputs": {
+      "final.hi.html": "fa0735b5a941163c"
+    },
+    "counts": {
+      "page_count": 33,
+      "file_size_bytes": 1658503,
+      "numeric_tokens_checked": 662,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {
+      "page_count_sane": true,
+      "no_blank_pages": true,
+      "numeric_readback_vs_pdf_text": "OK, 0 missing"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Re-exported via Playwright/Chromium from the corrected 09_design/final.hi.html, following step_10/PROMPT.md exactly. 33 pages, 0 blank, 0/662 numeric tokens missing. Directly confirmed via fitz text extraction that 'mm Hg' is present, 'as printed' is absent, and all 3 'collisions' occurrences carry the s^-1 unit cleanly anywhere in the exported PDF text. Visually confirmed page 23 (q_3.22) renders cleanly with the corrected text."
   }
 ]

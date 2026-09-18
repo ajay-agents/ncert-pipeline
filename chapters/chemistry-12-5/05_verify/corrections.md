@@ -586,3 +586,73 @@
   > \left[\mathrm{Ni}^{2+}\left(\mathrm{NO}_{2}\right)_{6}\right]^{4-}
 - **Should be:**
   > \left[\mathrm{Ni}\left(\mathrm{NO}_{2}\right)_{6}\right]^{4-}
+
+### q_5.8 — solution (hi)
+- **Confidence:** high
+- **Reason:** The classification list self-contradicts (group 2's lettering jumps (b)->(d), skipping (c)) because solutions.hi.pdf page 17 prints this as a two-column table and (d) sits at a 4th-row/column-2 position purely for layout reasons, not as a genuine third item of group 2 - confirmed by direct 200dpi render and by this same item's own worked-examples list two lines below, which already correctly places (d) under group 1. Moved (d) to group 1, right after (c), matching the worked-example list, the textbook's own conceptual grouping, and solutions.hi.pdf's own worked-example page (page 18).
+- **Found:**
+  > उपसहसंयोजक यौगिकों में समावयवता मुख्यतः दो प्रकार की होती है।
+  > 
+  > 1. संरचनात्मक समावयवता
+  > (a) बंधनी समावयवता
+  > (b) उपसहसंयोजन समावयवता
+  > (c) आयनन समावयवता
+  > 2. त्रिविम समावयवता
+  > (a) ज्यामितीय समावयवता
+  > (b) ध्रुवण समावयवता
+  > (d) विलायकयोजन समावयवता
+  > 
+  > उदाहरण
+  > 
+  > 1. (a) बंधनी समावयवता
+  >     (i) $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{NO}_{2}\right] \mathrm{Cl}_{2}$ तथा $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{ONO}\right] \mathrm{Cl}_{2}$
+  >     (ii) $\left[\mathrm{Mn}(\mathrm{CO})_{5} \mathrm{SCN}\right]$ तथा $\left[\mathrm{Mn}(\mathrm{CO})_{5} \mathrm{NCS}\right]$
+  >     (b) उपसहसंयोजन समावयवता
+  >     (i) $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]\left[\mathrm{Cr}(\mathrm{CN})_{6}\right]$ तथा $\left[\mathrm{Cr}\left(\mathrm{NH}_{3}\right)_{6}\right]\left[\mathrm{Co}(\mathrm{CN})_{6}\right]$
+  >     (c) आयनन समावयवता
+  >         (i) $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{SO}_{4}\right] \mathrm{Br}$ तथा $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{Br}\right] \mathrm{SO}_{4}$
+  >     (d) विलायकयोजन समावयवता
+  >     (i) $\left[\mathrm{Cr}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right] \mathrm{Cl}_{3}$ (बैंगनी) तथा $\left[\mathrm{Cr}\left(\mathrm{H}_{2} \mathrm{O}\right)_{5} \mathrm{Cl}\right] \mathrm{Cl}_{2} \cdot \mathrm{H}_{2} \mathrm{O}$ (स्लेटी हरा)
+  > 2. (a) ज्यामितीय समावयवता
+  >     (i) $\left[\mathrm{CoCl}_{2}(\mathrm{en})_{2}\right]$ के समपक्ष तथा विपक्ष समावयव
+  > 
+  >     (b)ध्रुवण समावयवता
+  > (i) $\left[\mathrm{Co}(\mathrm{en})_{3}\right]^{3+}$ के दो रूप दक्षिणावर्त ($d$) और वामावर्त ($l$) हैं।
+  > 
+  > विपक्ष रूप
+  > 
+  > 
+  > दर्पण
+- **Should be:**
+  > उपसहसंयोजक यौगिकों में समावयवता मुख्यतः दो प्रकार की होती है।
+  > 
+  > 1. संरचनात्मक समावयवता
+  > (a) बंधनी समावयवता
+  > (b) उपसहसंयोजन समावयवता
+  > (c) आयनन समावयवता
+  > (d) विलायकयोजन समावयवता
+  > 2. त्रिविम समावयवता
+  > (a) ज्यामितीय समावयवता
+  > (b) ध्रुवण समावयवता
+  > 
+  > उदाहरण
+  > 
+  > 1. (a) बंधनी समावयवता
+  >     (i) $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{NO}_{2}\right] \mathrm{Cl}_{2}$ तथा $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{ONO}\right] \mathrm{Cl}_{2}$
+  >     (ii) $\left[\mathrm{Mn}(\mathrm{CO})_{5} \mathrm{SCN}\right]$ तथा $\left[\mathrm{Mn}(\mathrm{CO})_{5} \mathrm{NCS}\right]$
+  >     (b) उपसहसंयोजन समावयवता
+  >     (i) $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]\left[\mathrm{Cr}(\mathrm{CN})_{6}\right]$ तथा $\left[\mathrm{Cr}\left(\mathrm{NH}_{3}\right)_{6}\right]\left[\mathrm{Co}(\mathrm{CN})_{6}\right]$
+  >     (c) आयनन समावयवता
+  >         (i) $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{SO}_{4}\right] \mathrm{Br}$ तथा $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{Br}\right] \mathrm{SO}_{4}$
+  >     (d) विलायकयोजन समावयवता
+  >     (i) $\left[\mathrm{Cr}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right] \mathrm{Cl}_{3}$ (बैंगनी) तथा $\left[\mathrm{Cr}\left(\mathrm{H}_{2} \mathrm{O}\right)_{5} \mathrm{Cl}\right] \mathrm{Cl}_{2} \cdot \mathrm{H}_{2} \mathrm{O}$ (स्लेटी हरा)
+  > 2. (a) ज्यामितीय समावयवता
+  >     (i) $\left[\mathrm{CoCl}_{2}(\mathrm{en})_{2}\right]$ के समपक्ष तथा विपक्ष समावयव
+  > 
+  >     (b)ध्रुवण समावयवता
+  > (i) $\left[\mathrm{Co}(\mathrm{en})_{3}\right]^{3+}$ के दो रूप दक्षिणावर्त ($d$) और वामावर्त ($l$) हैं।
+  > 
+  > विपक्ष रूप
+  > 
+  > 
+  > दर्पण

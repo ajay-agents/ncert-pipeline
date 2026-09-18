@@ -194,5 +194,104 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.hi.html file:// path (not a copy), waited for document.fonts.ready, called emulate_media('screen') before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base vowel-reordering bug), exported with print_background=True and prefer_css_page_size=True (no explicit format/width/height). Gate: 6 pages (sane for 12 discursive items with zero figures - the smallest export yet), 0 blank pages, numeric read-back re-run against the PDF's own fitz-extracted text using the same question/final_answer-field scope as stage 9. Only 1 numeric token checked - '50' from q_3.4's own question text ('पिछले 50 वर्षों के दौरान...') - since this chapter's question/final_answer fields are almost entirely discursive prose with no boxed numeric answers (true/false answers are words; the chapter's own real numeric content - population growth rates in q_3.5's solution, dates/percentages in q_3.4/q_3.9's solutions - lives in solution text, outside this gate's documented scope) - found correctly. Not independently re-verified: the known, currently-unresolved Chromium reph ('र्'+consonant) ToUnicode CMap bug documented in step_10/PROMPT.md - visual rendering is unaffected, only copy-paste/text-extraction of words containing that exact sequence; flagged to the user, not silently shipped around, consistent with how prior chapters handled the same known limitation."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-18T10:34:29.584445+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "3046ab6d6b0ed66c"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "items": [
+        "q_3.9"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_hi",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Post-hoc correction from an independent user cross-check against both source PDFs. q_3.9's GIFT sub-block had the embryo-transfer direction reversed: it said the embryo forms in the fallopian tube of the woman who HAS the gestation problem, and is sent OUT to another woman's uterus - which defeats the stated therapeutic purpose of helping her. Confirmed via a direct 200dpi render of chapter.hi.pdf page 54: the textbook's own body text states the opposite - an embryo formed by in-vivo fertilization is transferred INTO the woman with the gestation problem, to help her. The reversed version traces to solutions.hi.pdf's own text (confirmed via mathpix) - an inherited error, but corrected here since it directly contradicts the textbook's own explicit statement (matching the same fix pattern already applied to several inherited chemistry-chapter errors earlier in this session). The following sentences in the same block (donor ovum transferred into the SAME recipient woman's own tube = the textbook's actual GIFT definition) were already correct and left unchanged."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-18T10:34:29.585574+00:00",
+    "inputs": {
+      "structured.hi.md": "4c1743314804bc0f"
+    },
+    "counts": {
+      "items": [
+        "q_3.9"
+      ]
+    },
+    "gates_failed": {
+      "tag_parse": "OK, 12 items"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the q_3.9 fix into 06_simplify via a targeted single-sentence replacement matching 06_simplify's own paraphrased wording (not a full-field copy from 05_verify, since stage 6 had independently reworded other sentences in this same item and a full overwrite would have discarded that legitimate simplification) and into 07_format/structured.hi.md directly (inside the existing :::concept{label=\"GIFT\"} block, no structural change). Verified 12/12 items parse cleanly."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T10:34:29.586437+00:00",
+    "inputs": {
+      "structured.hi.md": "4c1743314804bc0f"
+    },
+    "counts": {
+      "item_count": 12,
+      "items_updated": [
+        "q_3.9"
+      ]
+    },
+    "gates_failed": {
+      "item_count_match": true,
+      "front_unchanged": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Surgically updated q_3.9 in 08_tag/structured.hi.json via direct string substitution. Confirmed via diff against a pre-fix backup that only this item differs, all 12 item ids/order preserved, 'front' unchanged."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-18T10:34:29.587394+00:00",
+    "inputs": {
+      "structured.hi.json": "b844c04f83d6d07a"
+    },
+    "counts": {
+      "html_bytes": 44364,
+      "items_updated": [
+        "q_3.9"
+      ]
+    },
+    "gates_failed": {
+      "visual_spot_check": "OK (Playwright screenshot)"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Directly hand-edited the affected sentence in the already-published 09_design/final.hi.html (original render script not preserved). Verified the substitution matched exactly once before writing, and visually via a Playwright screenshot of the GIFT pill's content."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-18T10:34:29.588247+00:00",
+    "inputs": {
+      "final.hi.html": "9a04edfcc26e7517"
+    },
+    "counts": {
+      "page_count": 6,
+      "file_size_bytes": 510856,
+      "numeric_tokens_checked": 1,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {
+      "page_count_sane": true,
+      "no_blank_pages": true,
+      "numeric_readback_vs_pdf_text": "OK, 0 missing"
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Re-exported via Playwright/Chromium from the corrected 09_design/final.hi.html, following step_10/PROMPT.md exactly. 6 pages, 0 blank. Directly confirmed via fitz text extraction that the old reversed-direction sentence is absent and the corrected sentence is present, on PDF page 4."
   }
 ]

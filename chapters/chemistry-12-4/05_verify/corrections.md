@@ -323,3 +323,65 @@
   > $30$-इलेक्ट्रॉनों
 - **Should be:**
   > $3d$-इलेक्ट्रॉनों
+
+### it_4.2 — solution (hi)
+- **Confidence:** high
+- **Reason:** chapter.hi.pdf's Table 4.1/4.2 lists Zn as [Ar]3d^10 4s^2, the standard non-exceptional configuration - 4s^1 belongs to the Cu/Cr exception pattern, not Zn. Traced to a genuine error in solutions.hi.pdf page 168 (confirmed by direct 200dpi render). Corrected to 4s^2.
+- **Found:**
+  > जिंक $\left(3 d^{10} 4 s^{1}\right)$ में $d$-कक्षक पूर्ण भरित है अतः $d$-कक्षक के इलेक्ट्रॉन धात्विक बंधन में भागीदारी नहीं करते हैं। अतः श्रेणी के दूसरे तत्वों, जिनमें धात्विक बन्ध बनाने में $d$-कक्षक के इलेक्ट्रॉन भागीदारी करतें हैं की अपेक्षाकृत जिंक में अधात्विक बंध दुर्बल है। यही कारण है कि जिंक की कणन एन्थैल्पी अपनी संक्रमण श्रेणी में सबसे कम है।
+- **Should be:**
+  > जिंक $\left(3 d^{10} 4 s^{2}\right)$ में $d$-कक्षक पूर्ण भरित है अतः $d$-कक्षक के इलेक्ट्रॉन धात्विक बंधन में भागीदारी नहीं करते हैं। अतः श्रेणी के दूसरे तत्वों, जिनमें धात्विक बन्ध बनाने में $d$-कक्षक के इलेक्ट्रॉन भागीदारी करतें हैं की अपेक्षाकृत जिंक में अधात्विक बंध दुर्बल है। यही कारण है कि जिंक की कणन एन्थैल्पी अपनी संक्रमण श्रेणी में सबसे कम है।
+
+### q_4.32 — solution (hi)
+- **Confidence:** high
+- **Reason:** chapter.hi.pdf's own body text (section 4.5.3) explicitly states 'Pr, Nd, Tb तथा Dy भी +4 ऑक्सीकरण अवस्था दर्शाते हैं' - Nd and Dy both belong in the +4 list, not +2. solutions.hi.pdf's own answer instead wrongly places Nd in +2 and omits Dy from +4 entirely - an error in the official answer key contradicting the textbook's own explicit statement. Corrected to match the textbook.
+- **Found:**
+  > $+4$ ऑक्सीकरण अवस्था ${ }_{58} \mathrm{Ce},{ }_{59} \mathrm{Pr}$ तथा ${ }_{65} \mathrm{~Tb}$ में पायी जाती है। $+2$ ऑक्सीकरण अवस्था ${ }_{60} \mathrm{Nd},{ }_{62} \mathrm{Sm}{ }_{63} \mathrm{Fu}_{69} \mathrm{Tm}$ तथा ${ }_{70} \mathrm{Yb}$ में पायी जाती है।
+  > 
+  > सामान्यतः $5 d^{0} 6 s^{2}$ विन्यास वाले तत्व आसानी से दो इलेक्ट्रॉन खोकर $+2$ ऑक्सीकरण अवस्था दर्शाते हैं। इसी प्रकार वे तत्व जो चार इलेक्ट्रॉन खोकर अपेक्षाकृत स्थाईविन्यास $4 f^{0}$ या $4 f^{7}$ ग्रहण कर सकते हैं, $+4$ ऑक्सीकरण अवस्था दर्शाते हैं।
+- **Should be:**
+  > $+4$ ऑक्सीकरण अवस्था ${ }_{58} \mathrm{Ce}, { }_{59} \mathrm{Pr}, { }_{60} \mathrm{Nd}, { }_{65} \mathrm{Tb}$ तथा ${ }_{66} \mathrm{Dy}$ में पायी जाती है। $+2$ ऑक्सीकरण अवस्था ${ }_{62} \mathrm{Sm}, { }_{63} \mathrm{Eu}, { }_{69} \mathrm{Tm}$ तथा ${ }_{70} \mathrm{Yb}$ में पायी जाती है।
+  > 
+  > सामान्यतः $5 d^{0} 6 s^{2}$ विन्यास वाले तत्व आसानी से दो इलेक्ट्रॉन खोकर $+2$ ऑक्सीकरण अवस्था दर्शाते हैं। इसी प्रकार वे तत्व जो चार इलेक्ट्रॉन खोकर अपेक्षाकृत स्थाईविन्यास $4 f^{0}$ या $4 f^{7}$ ग्रहण कर सकते हैं, $+4$ ऑक्सीकरण अवस्था दर्शाते हैं।
+
+### q_4.20 — solution (hi)
+- **Confidence:** high
+- **Reason:** chapter.hi.pdf's own body text explicitly states 'Pa, U तथा Np में क्रमशः +5, +6 तथा +7 तक पहुँच जाती है' - Np reaches +7. solutions.hi.pdf's own answer to this question only lists +4,+5,+6 for actinoid oxidation states, omitting +7 - contradicts the textbook's own explicit statement. Corrected to add +7.
+- **Found:**
+  > | क्र.सं. | लैन्येंनॉयड | ऐक्टिनॉयड |
+  > | :--- | :--- | :--- |
+  > | (i) | इलेक्ट्रॉनिक विन्यास $\begin{aligned} & {[\mathrm{Xe}]_{54} 4 f^{1-14} 5 d^{0-1} 6 s^{2} } \\ & \text { उदाहरण, }{ }_{57 \mathrm{La}}=[\mathrm{Xe}] 5 d^{1} 6 s^{2} \\ & 58 \mathrm{Ce}=[\mathrm{Xe}] 4 f^{1} 5 d^{1} 6 s^{2} \end{aligned}$ | इलेक्ट्रॉनिक विन्यास $\begin{aligned} & {[\mathrm{Rn}]_{86} 5 f^{1-14} 6 d^{0-1} 7 s^{2} } \\ & \text { उदाहरण, }{ }_{89} \mathrm{Ac}=[\mathrm{Rn}] 6 d^{1} 7 s^{2} \\ & 90 \mathrm{Th}=[\mathrm{Rn}] 6 d^{2} 7 s^{2} \end{aligned}$ |
+  > | (ii) | ऑक्सीकरण अवस्थाएँ <br> सामान्य ऑक्सीरण अवस्थाएँ $=+3$ <br> अन्य ऑक्सीकरण अवस्थाएँ $=+2,+4$. | ऑक्सीकरण अवस्थाएँ <br> सामान्य ऑक्सीरण अवस्थाएँ $=+3$ <br> अन्य ऑक्सीकरण अवस्थाएँ $=+4,+5$, +6. |
+  > | (iii) | परमाण्वीय एवं आयनिक आकार <br> परमाणु/आयन का आकार आवर्त में (बाएँ से दाएँ) घटता है। <br> अपने वर्ग में लैन्थेंनॉयड तत्व का आकार ऐक्टिनॉयड से छोटा होता है। | परमाण्वीय एवं आयनिक आकार <br> परमाणु/आयन का आकार आवर्त में (बाएँ से दाएँ) घटता है। <br> अपने वर्ग में एक्टिनॉयड का आकार सबसे बड़ा है। |
+  > | (iv) | रांसायनिक अभिक्रियाशीलता<br>(a) संकुल बनाने की प्रवृत्ति कम।<br>(b) केवल प्रोमिथियम रेडियोऐक्टिव है।<br>(c) ये ऑक्सोधनायन नहीं बनाते।<br> <br> (d) इनके ऑक्साइड तथा हाइड्रॉक्साइड कम क्षारीय हैं। | रासायनिक अभिक्रियाशीलता<br>(a) संकुल बनाने की प्रवृति प्रबल<br>(b) सभी ऐक्टिनॉयड रेडियोधर्मी हैं।<br>(c) ये ऑक्सोधनायन बनाते हैं जैसे $\mathrm{UO}_{2}^{2+}, \mathrm{PuO}_{2}^{2+}, \mathrm{UO}^{+}$, आदि।<br>(d) ऑक्साइड तथा हाइड्रॉक्साइड अधिक क्षारीय हैं।<br> |
+- **Should be:**
+  > | क्र.सं. | लैन्येंनॉयड | ऐक्टिनॉयड |
+  > | :--- | :--- | :--- |
+  > | (i) | इलेक्ट्रॉनिक विन्यास $\begin{aligned} & {[\mathrm{Xe}]_{54} 4 f^{1-14} 5 d^{0-1} 6 s^{2} } \\ & \text { उदाहरण, }{ }_{57 \mathrm{La}}=[\mathrm{Xe}] 5 d^{1} 6 s^{2} \\ & 58 \mathrm{Ce}=[\mathrm{Xe}] 4 f^{1} 5 d^{1} 6 s^{2} \end{aligned}$ | इलेक्ट्रॉनिक विन्यास $\begin{aligned} & {[\mathrm{Rn}]_{86} 5 f^{1-14} 6 d^{0-1} 7 s^{2} } \\ & \text { उदाहरण, }{ }_{89} \mathrm{Ac}=[\mathrm{Rn}] 6 d^{1} 7 s^{2} \\ & 90 \mathrm{Th}=[\mathrm{Rn}] 6 d^{2} 7 s^{2} \end{aligned}$ |
+  > | (ii) | ऑक्सीकरण अवस्थाएँ <br> सामान्य ऑक्सीरण अवस्थाएँ $=+3$ <br> अन्य ऑक्सीकरण अवस्थाएँ $=+2,+4$. | ऑक्सीकरण अवस्थाएँ <br> सामान्य ऑक्सीरण अवस्थाएँ $=+3$ <br> अन्य ऑक्सीकरण अवस्थाएँ $=+4,+5,+6$, +7. |
+  > | (iii) | परमाण्वीय एवं आयनिक आकार <br> परमाणु/आयन का आकार आवर्त में (बाएँ से दाएँ) घटता है। <br> अपने वर्ग में लैन्थेंनॉयड तत्व का आकार ऐक्टिनॉयड से छोटा होता है। | परमाण्वीय एवं आयनिक आकार <br> परमाणु/आयन का आकार आवर्त में (बाएँ से दाएँ) घटता है। <br> अपने वर्ग में एक्टिनॉयड का आकार सबसे बड़ा है। |
+  > | (iv) | रांसायनिक अभिक्रियाशीलता<br>(a) संकुल बनाने की प्रवृत्ति कम।<br>(b) केवल प्रोमिथियम रेडियोऐक्टिव है।<br>(c) ये ऑक्सोधनायन नहीं बनाते।<br> <br> (d) इनके ऑक्साइड तथा हाइड्रॉक्साइड कम क्षारीय हैं। | रासायनिक अभिक्रियाशीलता<br>(a) संकुल बनाने की प्रवृति प्रबल<br>(b) सभी ऐक्टिनॉयड रेडियोधर्मी हैं।<br>(c) ये ऑक्सोधनायन बनाते हैं जैसे $\mathrm{UO}_{2}^{2+}, \mathrm{PuO}_{2}^{2+}, \mathrm{UO}^{+}$, आदि।<br>(d) ऑक्साइड तथा हाइड्रॉक्साइड अधिक क्षारीय हैं।<br> |
+
+### q_4.22 — solution (hi)
+- **Confidence:** high
+- **Reason:** A direct 250dpi render of solutions.hi.pdf page 14 shows the source prints '2CrO4^{2-}' with a small '(+6)' oxidation-state label positioned above it, exactly matching the adjacent example (i)'s own stackrel(+7)/(+4) style. mathpix merged the two annotations into one garbled superscript '+62-' during extraction. Corrected to the same stackrel style already used correctly one line above in this same item.
+- **Found:**
+  > असमानुपातन अभिक्रिया में, एक ही पदार्थ (तत्व) का ऑक्सीकरण (ऑक्सीकरण संख्या बढ़ना) तथा अपचयन (ऑक्सीकण संख्या घटना) दोनों होते है जिसके परिणामस्वरूप दो विभिन्न उत्पाद बनते हैं। दूसरे शब्दों में, एक ही पदार्थ किसी एक अणु के लिए ऑक्सीकारक का कार्य करता है तथा उसी समय वह दूसरे अणु के लिए अपचायक का कार्य करता हैं।
+  > 
+  > उदाहरण
+  > 
+  > (i) $3 \mathrm{MnO}_{4}^{2-}+4 \mathrm{H}^{+} \longrightarrow \stackrel{(+7)}{2 \mathrm{MnO}_{4}^{-}}+\stackrel{(+4)}{\mathrm{MnO}_{2}}+2 \mathrm{H}_{2} \mathrm{O}$
+  > (ii) $3 \mathrm{CrO}_{4}^{3-}+8 \mathrm{H}^{+} \longrightarrow 2 \mathrm{CrO}_{4}^{+62-}+\mathrm{Cr}^{3+}+4 \mathrm{H}_{2} \mathrm{O}$
+  > विशेष छात्र पिछले एकक से सबंधित उदाहरण भी दे सकते है।
+  >     (i) $4 \mathrm{H}_{3} \mathrm{PO}_{3} \longrightarrow 3 \mathrm{H}_{3} \mathrm{PO}_{4}+\mathrm{PH}_{3}$
+  >     (ii) $3 \mathrm{HNO}_{2} \longrightarrow \mathrm{HNO}_{3}+\mathrm{H}_{2} \mathrm{O}+2 \mathrm{NO}$
+- **Should be:**
+  > असमानुपातन अभिक्रिया में, एक ही पदार्थ (तत्व) का ऑक्सीकरण (ऑक्सीकरण संख्या बढ़ना) तथा अपचयन (ऑक्सीकण संख्या घटना) दोनों होते है जिसके परिणामस्वरूप दो विभिन्न उत्पाद बनते हैं। दूसरे शब्दों में, एक ही पदार्थ किसी एक अणु के लिए ऑक्सीकारक का कार्य करता है तथा उसी समय वह दूसरे अणु के लिए अपचायक का कार्य करता हैं।
+  > 
+  > उदाहरण
+  > 
+  > (i) $3 \mathrm{MnO}_{4}^{2-}+4 \mathrm{H}^{+} \longrightarrow \stackrel{(+7)}{2 \mathrm{MnO}_{4}^{-}}+\stackrel{(+4)}{\mathrm{MnO}_{2}}+2 \mathrm{H}_{2} \mathrm{O}$
+  > (ii) $3 \mathrm{CrO}_{4}^{3-}+8 \mathrm{H}^{+} \longrightarrow \stackrel{(+6)}{2 \mathrm{CrO}_{4}^{2-}}+\mathrm{Cr}^{3+}+4 \mathrm{H}_{2} \mathrm{O}$
+  > विशेष छात्र पिछले एकक से सबंधित उदाहरण भी दे सकते है।
+  >     (i) $4 \mathrm{H}_{3} \mathrm{PO}_{3} \longrightarrow 3 \mathrm{H}_{3} \mathrm{PO}_{4}+\mathrm{PH}_{3}$
+  >     (ii) $3 \mathrm{HNO}_{2} \longrightarrow \mathrm{HNO}_{3}+\mathrm{H}_{2} \mathrm{O}+2 \mathrm{NO}$
