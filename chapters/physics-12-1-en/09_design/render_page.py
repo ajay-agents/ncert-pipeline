@@ -1,0 +1,530 @@
+# -*- coding: utf-8 -*-
+"""Stage 9 render script for physics-12-1-en (Electric Charges and Fields,
+English medium), adapted from maths-12-5's own working render_page.py/
+latex.py (the most recent, most bug-fixed prior chapter), plus every trap
+documented in step_9/PROMPT.md.
+
+Differences from the maths lineage this was adapted from:
+- English throughout (lang="en"): pill labels, part-heading prefix,
+  item-kind prefix, section titles, page title/subtitle - no Devanagari
+  anywhere in this chapter's own content, so LABEL_EN replaces LABEL_HI
+  and every literal Hindi string in the maths version becomes English.
+- Two sections only (Examples, then Questions and Solutions) - this
+  chapter (like every NCERT Physics chapter, unlike the Maths chapters
+  this was adapted from) has one combined EXERCISES section, not several
+  numbered प्रश्नावली sub-sections, so no per-section id-prefix filtering
+  is needed - kind=="example"/"exercise" is the whole split.
+- This chapter's own part labels are bare letters ("a", "b", "c"), not
+  already parenthesized like the maths chapter this was adapted from
+  ("(i)", "(ii)") - so the "don't double-wrap a label that already starts
+  with '(' " check still runs, but always adds the parens here.
+- No :::note blocks, no :::table blocks, no item with parts>0 that ALSO
+  has an item-level solution artifact anywhere in this chapter (confirmed
+  at stage 7 and again at stage 8) - group_blocks/render_solution_stack
+  still carry the general-case handling for all of these (matches the
+  proven pattern; never assumes a feature is unused just because this
+  chapter's own JSON doesn't exercise it).
+"""
+import json
+import re
+import sys
+import os
+
+sys.path.insert(0, os.path.dirname(__file__))
+from latex import convert_math_spans
+
+CH = os.path.dirname(__file__) + r'\..'
+with open(CH + r'\08_tag\structured.en.json', encoding='utf-8') as f:
+    DATA = json.load(f)
+
+ITEMS = DATA['items']
+
+# ============================================================
+# text helpers
+# ============================================================
+
+
+# "Fig." is this chapter's own cross-reference abbreviation (20x,
+# "as shown in Fig. 1.29") - checked directly against the chapter's own
+# text before adding, per the same "don't cover a case this chapter
+# doesn't actually have" discipline as the LaTeX macro table (Eq./Eqs./
+# Ref./No. all occur zero times here, so not added speculatively).
+_ABBREV_RE = re.compile(r'\b(?:i\.e\.|e\.g\.|etc\.|Fig\.)', re.I)
+
+
+def text_to_lines(text):
+    """Split flowing prose into one line per sentence: on existing
+    newlines, and on sentence-ending punctuation (ASCII '.' only when not
+    a decimal point) outside any $...$ span.
+
+    Also guards a handful of common abbreviations whose internal/trailing
+    periods are not sentence boundaries either - a plain digit-only guard
+    doesn't cover "i.e." (neither character next to either period is a
+    digit) or "Fig. 1.29" (the digit is on the far side of a space, not
+    immediately adjacent to the period) - without this, "i.e." splits into
+    "i."/"e." and "...as shown in Fig." gets cut off from its own "1.29",
+    the same class of over-eager-sentence-split bug step_9/PROMPT.md
+    documents for decimal points."""
+    if text is None:
+        return []
+    spans = []
+
+    def protect(m):
+        spans.append(m.group(0))
+        return f"\x00{len(spans) - 1}\x00"
+
+    protected = re.sub(r'\$\$.+?\$\$|\$[^$]+\$', protect, text, flags=re.S)
+    protected = _ABBREV_RE.sub(protect, protected)
+
+    lines = []
+    for raw_line in protected.split('\n'):
+        raw_line = raw_line.strip()
+        if not raw_line:
+            continue
+        parts = []
+        buf = []
+        i = 0
+        n = len(raw_line)
+        while i < n:
+            c = raw_line[i]
+            buf.append(c)
+            if c == '.':
+                prev = raw_line[i - 1] if i > 0 else ''
+                nxt = raw_line[i + 1] if i + 1 < n else ''
+                if not (prev.isdigit() and nxt.isdigit()) and not prev.isdigit():
+                    parts.append(''.join(buf))
+                    buf = []
+            i += 1
+        if buf:
+            parts.append(''.join(buf))
+        lines.extend(p.strip() for p in parts if p.strip())
+
+    def restore(s):
+        return re.sub(r'\x00(\d+)\x00', lambda m: spans[int(m.group(1))], s)
+
+    return [restore(l) for l in lines]
+
+
+def render_prose_lines(text):
+    lines = text_to_lines(text)
+    return ''.join(f'<div class="s27">{convert_math_spans(l)}</div>' for l in lines)
+
+
+_TABLE_LINE_RE = re.compile(r'^\s*\|.*\|\s*$')
+_TABLE_SEP_RE = re.compile(r'^\s*\|?[\s:|-]+\|?\s*$')
+
+
+def render_table_html(table_md):
+    """Render a flow's raw markdown pipe-table as a real HTML <table>. This
+    chapter has no tables at all, kept for parity with the proven pattern -
+    a flow-reader that only ever joins type:"text" segments would silently
+    drop these."""
+    lines = [l for l in table_md.strip().split('\n') if l.strip()]
+    if len(lines) < 2:
+        return ''
+    data_lines = [lines[0]] + [l for l in lines[1:] if not _TABLE_SEP_RE.match(l)]
+    rows_html = []
+    for line in data_lines:
+        cells = [c.strip() for c in line.strip().strip('|').split('|')]
+        cells_html = ''.join(f'<td class="s100">{convert_math_spans(c)}</td>' for c in cells)
+        rows_html.append(f'<tr>{cells_html}</tr>')
+    return f'<table class="s99">{"".join(rows_html)}</table>'
+
+
+def render_prompt(text):
+    """Render an item/part prompt as one or more <p class="s21">
+    paragraphs, splitting out any embedded markdown pipe-table first."""
+    if not text:
+        return ''
+    lines = text.split('\n')
+    n = len(lines)
+    chunks = []
+    i = 0
+    while i < n:
+        if (_TABLE_LINE_RE.match(lines[i]) and i + 1 < n
+                and _TABLE_SEP_RE.match(lines[i + 1]) and '|' in lines[i + 1]):
+            j = i
+            while j < n and lines[j].strip() and _TABLE_LINE_RE.match(lines[j]):
+                j += 1
+            chunks.append(('table', lines[i:j]))
+            i = j
+        else:
+            j = i
+            prose = []
+            while j < n and not (_TABLE_LINE_RE.match(lines[j]) and j + 1 < n
+                                  and _TABLE_SEP_RE.match(lines[j + 1])):
+                prose.append(lines[j])
+                j += 1
+            chunks.append(('prose', prose))
+            i = j
+
+    out = []
+    for kind, chunk_lines in chunks:
+        if kind == 'table':
+            out.append(render_table_html('\n'.join(chunk_lines)))
+        else:
+            joined = ' '.join(l.strip() for l in chunk_lines if l.strip())
+            if joined:
+                out.append(f'<p class="s21">{convert_math_spans(joined)}</p>')
+    return ''.join(out)
+
+
+def flow_text(flow):
+    return '\n'.join(seg['text'] for seg in flow if seg.get('type') == 'text')
+
+
+def render_flow_html(flow, text_renderer):
+    """Render an ordered text/figure/table flow, preserving order - a
+    figure nested mid-solution (not just an item-level one before any
+    part) must render as a real figure element in its correct position,
+    not be silently dropped the way a text-only join would."""
+    out = []
+    for seg in flow:
+        if seg.get('type') == 'text':
+            out.append(text_renderer(seg['text']))
+        elif seg.get('type') == 'table':
+            out.append(render_table_html(seg.get('html', '')))
+        elif seg.get('type') == 'figure':
+            src = seg.get('src', '')
+            cap = seg.get('caption', '')
+            out.append(
+                f'<div class="s76"><figure class="s77"><img src="{src}" alt="" class="s78">'
+                f'<figcaption class="s79">{convert_math_spans(cap)}</figcaption></figure></div>'
+            )
+    return ''.join(out)
+
+
+# ============================================================
+# stage pill classes (cycle by section color index 0..3: teal/orange/pink/purple)
+# ============================================================
+PILL = {
+    'given': ['s24'] * 4,
+    'key_formula': ['s28'] * 4,
+    'substitute': ['s34'] * 4,
+    'conclusion': ['s35'] * 4,
+}
+LABEL_EN = {'given': 'Given', 'key_formula': 'Key formula', 'substitute': 'Substitute', 'conclusion': 'Conclusion'}
+BOX_BLOB = ['s37', 's44', 's50', 's56']
+BOX_PLAIN = ['s86', 's87', 's88', 's89']
+ARROW_COLOR = ['#10989e', '#f5820b', '#e42a63', '#7a3df0']
+
+NOTE_PILL = {'recall': 's74', 'caution': 's75', 'tip': 's74'}
+
+DOODLE_ARROW = '<svg width="44" height="86" viewBox="0 0 44 118" class="s25" aria-hidden="true"><path d="M36 6 C 12 26, 6 62, 15 102" fill="none" stroke="{c}" stroke-width="2.2" stroke-linecap="round"></path><path d="M9 92 L15 103 L22 94" fill="none" stroke="{c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>'
+CHECK_DOODLE = '<svg width="30" height="28" viewBox="0 0 30 28" class="s38" aria-hidden="true"><path d="M3 22 L11 12 M13 26 L18 13 M22 22 L28 14" fill="none" stroke="{c}" stroke-width="2.4" stroke-linecap="round"></path></svg>'
+
+ITEM_DOODLES = [
+    '<svg width="30" height="30" viewBox="0 0 30 30" class="s20"><path d="M15 3 C15.5 10.5 19.5 14.5 27 15 C19.5 15.5 15.5 19.5 15 27 C14.5 19.5 10.5 15.5 3 15 C10.5 14.5 14.5 10.5 15 3 Z" fill="none" stroke="#10989e" stroke-width="1.8" stroke-linejoin="round"></path></svg>',
+    '<svg width="30" height="30" viewBox="0 0 30 30" class="s20"><path d="M15 2 L18.5 11 L28 11.5 L20.5 17.5 L23 27 L15 21.5 L7 27 L9.5 17.5 L2 11.5 L11.5 11 Z" fill="none" stroke="#f5820b" stroke-width="1.8" stroke-linejoin="round"></path></svg>',
+    '<svg width="36" height="28" viewBox="0 0 36 28" class="s20"><path d="M7 4 C 3 10, 3 18, 8 25 M18 2 C 15 10, 15 18, 18 26 M29 5 C 33 11, 33 18, 28 24" fill="none" stroke="#e42a63" stroke-width="2.1" stroke-linecap="round"></path></svg>',
+    '<svg width="32" height="30" viewBox="0 0 32 30" class="s20"><circle cx="16" cy="15" r="10" fill="none" stroke="#7a3df0" stroke-width="1.8" stroke-dasharray="4 3"></circle><path d="M16 1 L16 4 M16 26 L16 29 M2 15 L5 15 M27 15 L30 15" stroke="#7a3df0" stroke-width="1.8" stroke-linecap="round"></path></svg>',
+]
+
+BADGE_VARIANT = [
+    ('s15', 's16', 's17', 's19'),
+    ('s40', 's41', 's42', 's43'),
+    ('s46', 's47', 's48', 's49'),
+    ('s52', 's53', 's54', 's55'),
+]
+BADGE_VARIANT_38 = [
+    ('s15', 's16', 's68', 's19'),
+    ('s40', 's41', 's65', 's43'),
+    ('s46', 's47', 's66', 's49'),
+    ('s52', 's53', 's67', 's55'),
+]
+DIVIDER_CLASS = {0: 's57', 1: 's39', 2: 's58', 3: 's51'}
+
+
+def group_blocks(blocks):
+    """Group consecutive blocks of the same stage, preserving order. A
+    block with type "note" or "figure" gets its own group kind (checked
+    BEFORE the stage dispatch) rather than being routed through the
+    stage-pill branch (a bare figure block carries no `stage` key at all,
+    same as a note - conflating the two silently drops the figure into an
+    empty, contentless note pill)."""
+    groups = []
+    for b in blocks:
+        if b['type'] == 'note':
+            groups.append({'kind': 'note', 'note': b})
+            continue
+        if b['type'] == 'figure':
+            groups.append({'kind': 'figure', 'figure': b})
+            continue
+        stage = b.get('stage')
+        if stage is None:
+            continue
+        if groups and groups[-1].get('kind') == 'stage' and groups[-1]['stage'] == stage:
+            groups[-1]['blocks'].append(b)
+        else:
+            groups.append({'kind': 'stage', 'stage': stage, 'blocks': [b]})
+    return groups
+
+
+def render_solution_stack(blocks, answer_text, color_idx):
+    if not blocks:
+        return ''
+    groups = group_blocks(blocks)
+    stage_group_indices = [i for i, g in enumerate(groups) if g.get('kind') == 'stage']
+    conclusion_idx = None
+    for i in stage_group_indices:
+        if groups[i]['stage'] == 'conclusion':
+            conclusion_idx = i
+    # fall back to the last stage group when no block reached `conclusion`
+    # (a short solution ending at key_formula/substitute, with the actual
+    # result only ever stated in the item's own separate `answer` field) -
+    # never silently drop the answer box this way.
+    echo_idx = conclusion_idx if conclusion_idx is not None else (
+        stage_group_indices[-1] if stage_group_indices else None)
+
+    parts = []
+    for i, g in enumerate(groups):
+        if g.get('kind') == 'note':
+            note = g['note']
+            note_type = note.get('note_type', '')
+            pill_class = NOTE_PILL.get(note_type, 's74')
+            label = note.get('label') or ''
+            label_html = f'<div class="s23"><span class="{pill_class}">{label}</span></div>'
+            body_html = render_flow_html(note.get('flow', []), render_prose_lines)
+            content_html = f'<div class="s91"><div class="s26">{body_html}</div></div>'
+            parts.append(f'<div class="s82">{label_html}{content_html}</div>')
+            continue
+        if g.get('kind') == 'figure':
+            # sits directly in the .s81 stack, not forced through the
+            # 2-child .s82 flex row a stage/note pill assumes.
+            fig = g['figure']
+            src = fig.get('src', '')
+            cap = fig.get('caption', '')
+            parts.append(
+                f'<div class="s76"><figure class="s77"><img src="{src}" alt="" class="s78">'
+                f'<figcaption class="s79">{convert_math_spans(cap)}</figcaption></figure></div>'
+            )
+            continue
+
+        stage = g['stage']
+        pill_class = PILL[stage][color_idx]
+        label = LABEL_EN[stage]
+        needs_doodle = stage in ('given', 'key_formula')
+        doodle = DOODLE_ARROW.format(c=ARROW_COLOR[color_idx]) if needs_doodle else ''
+        label_html = f'<div class="s23"><span class="{pill_class}">{label}</span>{doodle}</div>'
+
+        body_html = ''.join(
+            render_flow_html(b['flow'], render_prose_lines) for b in g['blocks']
+        )
+        content_inner = f'<div class="s26">{body_html}</div>'
+
+        if i == echo_idx and answer_text:
+            # Approximate the ANSWER'S OWN RENDERED width, not its raw
+            # LaTeX source length. The original version of this regex
+            # stripped an entire "$...$" span as a single alternative
+            # BEFORE the backslash-command strip ever ran - so a
+            # multi-clause answer written as several separate $...$ spans
+            # (e.g. "$E_A=7.2\times10^4...$; $E_B=...$; $E_C=...$", this
+            # chapter's own ex_1.8) counted as effectively zero-length
+            # (just the bare "; " connectors between spans), always
+            # choosing the organic-blob box regardless of how long the
+            # answer actually renders - exactly the corner-cutting failure
+            # mode this threshold exists to avoid, just reached via a
+            # miscount rather than a missing check. Strip only the "$"
+            # delimiters and LaTeX syntax (commands/braces/sub/superscript
+            # markers), keeping the digits/letters/units inside each span
+            # so they count toward the length the way they visually will.
+            plain_len = len(re.sub(r'\$|\\[a-zA-Z]+|[{}\\^_]', '', answer_text))
+            box_class = (BOX_PLAIN if plain_len > 30 else BOX_BLOB)[color_idx]
+            answer_html = convert_math_spans(answer_text)
+            echo = (f'<div class="s36"><div class="s27"><span class="{box_class}">{answer_html}</span></div>'
+                    f'{CHECK_DOODLE.format(c=ARROW_COLOR[color_idx])}</div>')
+            content_inner += echo
+
+        content_html = f'<div class="s91">{content_inner}</div>'
+        parts.append(f'<div class="s82">{label_html}{content_html}</div>')
+
+    return f'<div class="s81">{"".join(parts)}</div>'
+
+
+def strip_redundant_enumeration(item_prompt, parts):
+    """Skip the item-level prompt when it's pure repetition of the parts'
+    own prompts (exact duplicate, or a telescoped multi-clause enumeration
+    where every labelled clause is a substring of that part's own
+    prompt)."""
+    if not parts or not item_prompt:
+        return item_prompt
+    stripped = item_prompt.strip()
+    for p in parts:
+        p_text = (p.get('prompt_text') or '').strip()
+        p_text_nomark = re.sub(r'^\([a-zA-Z0-9]+\)\s*', '', p_text)
+        if stripped == p_text or stripped == p_text_nomark:
+            return None
+
+    # telescoped-enumeration case: every labelled clause a substring of
+    # that same-labelled part's own prompt.
+    markers = list(re.finditer(r'\(([a-zA-Z0-9]+)\)', stripped))
+    if len(markers) >= 2:
+        clauses = {}
+        clause_end_pos = {}  # label -> absolute end index in `stripped`,
+                              # tracked directly against the ORIGINAL
+                              # string - never recomputed from a
+                              # separately-.strip()'d copy's length, which
+                              # silently drifts whenever the raw clause has
+                              # leading/trailing whitespace stripped off
+                              # (caught for real: left a stray "?" behind
+                              # after the enumeration span on a 4-clause
+                              # item, since the last clause's computed end
+                              # landed short of its actual terminator).
+        for idx, m in enumerate(markers):
+            start = m.end()
+            end = markers[idx + 1].start() if idx + 1 < len(markers) else len(stripped)
+            raw_clause = stripped[start:end]
+            # guard against a decimal point being mistaken for the
+            # clause's own sentence-ending punctuation (never split a "."
+            # immediately preceded/followed by a digit).
+            m_end = re.search(r'(?<!\d)\.(?!\d)|[?!]', raw_clause)
+            if m_end:
+                abs_end = start + m_end.end()
+                clause = raw_clause[:m_end.end()]
+            else:
+                abs_end = end
+                clause = raw_clause
+            clauses[m.group(1)] = clause.strip()
+            clause_end_pos[m.group(1)] = abs_end
+        all_ok = True
+        for label, clause in clauses.items():
+            matching_part = next((p for p in parts if p.get('label', '').strip('()') == label), None)
+            if matching_part is None or clause not in (matching_part.get('prompt_text') or ''):
+                all_ok = False
+                break
+        if all_ok and clauses:
+            span_start = markers[0].start()
+            last_clause_end = clause_end_pos[markers[-1].group(1)]
+            remainder = stripped[:span_start].strip()
+            trailing = stripped[last_clause_end:].strip()
+            trailing = re.sub(r'^[,;]\s*', '', trailing)
+            new_prompt = (remainder + ' ' + trailing).strip() if (remainder or trailing) else None
+            return new_prompt or None
+
+    return item_prompt
+
+
+def render_item(item, color_idx, badges):
+    (badge_cls, q_cls, num_cls, topic_cls) = badges
+    number_disp = item['number'].split('.')[-1]
+    label_prefix = 'Example' if item['kind'] == 'example' else 'Question'
+
+    prompt_text = flow_text(item['prompt'])
+    parts_list = item.get('parts') or []
+    for p in parts_list:
+        p['prompt_text'] = flow_text(p['prompt'])
+    prompt_text_use = strip_redundant_enumeration(prompt_text, parts_list) if parts_list else prompt_text
+    skip_item_prompt = parts_list and prompt_text_use is None
+
+    body = []
+    if not skip_item_prompt:
+        if parts_list:
+            # multi-part item: use the (possibly enumeration-trimmed) text,
+            # not the raw segments - the trimming operates on the flattened
+            # text, and this chapter never has a table/figure embedded in
+            # an item-level prompt's own flow.
+            if prompt_text_use:
+                body.append(render_prompt(prompt_text_use))
+        else:
+            for seg in item['prompt']:
+                if seg.get('type') == 'text':
+                    body.append(render_prompt(seg['text']))
+                elif seg.get('type') == 'table':
+                    body.append(render_table_html(seg.get('html', '')))
+
+    # item-level figures (a :::figure sitting before any part/solution)
+    for fig in item.get('figures') or []:
+        src = fig.get('src', '')
+        cap = fig.get('caption', '')
+        body.append(
+            f'<div class="s76"><figure class="s77"><img src="{src}" alt="" class="s78">'
+            f'<figcaption class="s79">{convert_math_spans(cap)}</figcaption></figure></div>'
+        )
+
+    if parts_list:
+        for p in parts_list:
+            label = p['label']
+            label_disp = label if label.startswith('(') else f'({label})'
+            body.append(f'<p class="s59">Part {label_disp}</p>')
+            if p['prompt_text']:
+                body.append(render_prompt(p["prompt_text"]))
+            ans_text = flow_text(p.get('answer') or [])
+            body.append(render_solution_stack(p.get('solution_blocks') or [], ans_text, color_idx))
+    else:
+        ans_text = flow_text(item.get('answer') or [])
+        body.append(render_solution_stack(item.get('solution_blocks') or [], ans_text, color_idx))
+
+    doodle = ITEM_DOODLES[color_idx]
+    html = (
+        f'<div data-screen-label="{label_prefix} {item["number"]}" class="s13">\n'
+        f'      <div class="s14">\n'
+        f'        <div class="{badge_cls}">\n'
+        f'          <div class="{q_cls}">Q</div>\n'
+        f'          <div class="{num_cls}">{number_disp}<span class="s18"></span></div>\n'
+        f'          <div class="{topic_cls}">{item.get("topic", "")}</div>\n'
+        f'        </div>\n'
+        f'        {doodle}\n'
+        f'      </div>\n'
+        f'      <div>\n'
+        f'{"".join(body)}\n'
+        f'      </div>\n'
+        f'    </div>\n'
+    )
+    return html
+
+
+def build_page():
+    out = []
+    color_idx = 0
+    sections = [
+        ('Examples', [it for it in ITEMS if it['kind'] == 'example']),
+        ('Questions and Solutions', [it for it in ITEMS if it['kind'] == 'exercise']),
+    ]
+
+    total_section_items = sum(len(items) for _, items in sections)
+    assert total_section_items == len(ITEMS), (
+        f'section list drops items: {total_section_items} != {len(ITEMS)}'
+    )
+
+    out.append('<div class="s2">\n  <div class="s3">Electric Charges and Fields</div>\n  <div class="s4">Chapter 1 &middot; All Questions and Solutions</div>\n  <div class="s5"><span class="s6"></span><span class="s7"></span><span class="s8"></span><span class="s9"></span></div>\n</div>\n')
+
+    for sec_num, (label, section_items) in enumerate(sections, start=1):
+        if sec_num == 1:
+            out.append(f'<div class="s10"><div class="s11"></div><div class="s12">Part {sec_num} &middot; {label}</div><div class="s11"></div></div>\n')
+        else:
+            out.append(f'<div class="s69"><div class="s70"></div><div class="s71">Part {sec_num} &middot; {label}</div><div class="s70"></div></div>\n')
+
+        for i, item in enumerate(section_items):
+            num_disp = item['number'].split('.')[-1]
+            badge_set = BADGE_VARIANT_38[color_idx] if len(num_disp) >= 2 else BADGE_VARIANT[color_idx]
+            out.append(render_item(item, color_idx, badge_set))
+            if i != len(section_items) - 1:
+                out.append(f'<div class="{DIVIDER_CLASS[(color_idx + 1) % 4]}"></div>\n')
+            color_idx = (color_idx + 1) % 4
+
+    return ''.join(out)
+
+
+PAGE = build_page()
+
+HTML = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electric Charges and Fields &middot; Chapter 1 &mdash; Questions and Solutions</title>
+<link rel="stylesheet" href="final.en.css">
+</head>
+<body>
+<main class="sheet">
+  <div class="s1">
+{PAGE}  </div>
+</main>
+</body>
+</html>
+'''
+
+out_path = os.path.join(os.path.dirname(__file__), 'final.en.html')
+with open(out_path, 'w', encoding='utf-8') as f:
+    f.write(HTML)
+print('wrote', out_path, len(HTML), 'chars')

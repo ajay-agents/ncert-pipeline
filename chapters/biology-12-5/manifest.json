@@ -318,5 +318,105 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.hi.html file:// path (not a copy), waited for document.fonts.ready, called emulate_media('screen') before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base vowel-reordering bug), exported with print_background=True and prefer_css_page_size=True (no explicit format/width/height). Gate: 10 pages (sane for 14 items with 4 figures and 10 :::part sub-answers across 3 multi-part items), 0 blank pages, numeric read-back re-run against the PDF's own fitz-extracted text using the same question/final_answer-field scope as stage 9's check (via mdio.markdown_to_chapter against chapter.simplified.hi.md, not the JSON). Applied the documented superscript-glue guard when normalizing unicode superscript digits back to ASCII (insert a separator before a run of superscript chars, e.g. '10⁹' -> '10 9' not '109') so a base number and its exponent register as two distinct tokens rather than a false merge hiding a real number. 11 numeric tokens checked (this chapter's question/final_answer fields are mostly descriptive prose with only a handful of embedded numbers - e.g. '20' in q_5.2, the year figures aren't in question/final_answer scope since they live in solution text only), 0 missing. Visually spot-checked pages 1, 5 and 10 at 150dpi - Devanagari renders cleanly (no garbling), colors/badges/pills/pagination all correct, last page ends cleanly on q_5.14 part (घ). Not independently re-verified: the known, currently-unresolved Chromium reph ('र्'+consonant) ToUnicode CMap bug documented in step_10/PROMPT.md - visual rendering is unaffected, only copy-paste/text-extraction of words containing that exact sequence; flagged to the user, not silently shipped around, consistent with how prior chapters (e.g. biology-12-4) handled the same known limitation."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-21T08:20:34.529412+00:00",
+    "inputs": {
+      "chapter.verified.hi.md": "d773976986f9f634"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "User-identified and user-approved fix (external QA review citing Chapter_5.pdf and Biology_ch5_soln.pdf page 39) for q_5.10's lac-operon-induction subject-swap error: \"यह प्रोमोटर कोशिका में प्रवेश करके...\" incorrectly named the promoter (a fixed DNA sequence, not a diffusible molecule) as the entity that enters the cell and binds the repressor - corrected to \"यह प्रेरक (the lactose inducer)\", matching the mechanism already correctly stated one clause earlier in the same sentence and matching the textbook's own lac operon description. This error is inherited verbatim from the official solutions manual (not introduced by this pipeline's own extraction/simplification). Applied via pipeline.verify.apply_corrections() against a fresh snapshot, never a hand-edit. Stages 6 (simplify), 7 (format), 8 (tag), 9 (design) and 10 (pdf) - all already built for this chapter - must be propagated with the same fix next, since the same wrong subject persists verbatim through the same phrase in each of those already-completed outputs."
+  },
+  {
+    "stage": "simplify_correction",
+    "at": "2026-09-21T08:20:55.642147+00:00",
+    "inputs": {
+      "chapter.simplified.hi.md": "11a40d8a1fc726c6"
+    },
+    "counts": {
+      "items_fixed": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the stage-5 q_5.10 subject-swap correction (प्रोमोटर -> प्रेरक) into 06_simplify/chapter.simplified.hi.md - stage 6 had already rephrased this sentence (splitting it into two shorter sentences per its own simplification judgment) but kept the same wrong subject word verbatim, so the identical exact-match substitution applies cleanly here too. Applied via mdio.markdown_to_chapter() -> mutate Item.solution.hi -> render.render() -> overwrite, never hand-edited. Round-trip verified via a full diff confirming every other item's solution/part text is byte-identical to before this fix. Re-running stage 6's own model judgment from scratch was deliberately avoided to prevent an unrelated regression (this happened for real earlier in this session on physics-12-3-en, where a full stage re-run silently reverted an unrelated prior fix) - a targeted substitution matching what stage 6 already produced is lower-risk for a single-word content fix."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-21T08:21:12.628337+00:00",
+    "inputs": {
+      "structured.hi.md": "9b5ca173f6dda291"
+    },
+    "counts": {
+      "items_fixed": 1
+    },
+    "gates_failed": {
+      "tag_parse": "PASS"
+    },
+    "gates_passed": [
+      "protect_parity"
+    ],
+    "model_calls": 0,
+    "notes": "Propagated the same q_5.10 subject-swap correction (प्रोमोटर -> प्रेरक) into 07_format/structured.hi.md via a direct exact-match text.replace() (count==1 verified first), not via mdio - this file has post-stage-7 nested container structure that mdio.markdown_to_chapter() explicitly refuses to parse. tag._parse confirms containers still balance; protect.parity confirms no structural drift, only the intended word-level content swap."
+  },
+  {
+    "stage": "tag_correction",
+    "at": "2026-09-21T08:21:38.016305+00:00",
+    "inputs": {
+      "structured.hi.json": "423bfd37caf6689d"
+    },
+    "counts": {
+      "items_fixed": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the q_5.10 subject-swap correction into 08_tag/structured.hi.json via a direct exact-match text substitution (count==1 verified) inside the relevant flow segment's text - re-validated as well-formed JSON with the same 31-item structure before writing, not a structural regeneration since only prose content changed, not any stage/label/block-type judgment."
+  },
+  {
+    "stage": "design_correction",
+    "at": "2026-09-21T08:21:38.019005+00:00",
+    "inputs": {
+      "final.hi.html": "5e00ab9f990cf72d"
+    },
+    "counts": {
+      "items_fixed": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the same correction into 09_design/final.hi.html via a direct exact-match text substitution (count==1 verified) - this sentence is plain Devanagari prose with no LaTeX/math span, so it survives the HTML converter unchanged, and this substitution is byte-identical in effect to what a full stage-9 re-run would have produced for this one sentence. No other content on the page touched."
+  },
+  {
+    "stage": "pdf_correction",
+    "at": "2026-09-21T08:22:37.759286+00:00",
+    "inputs": {
+      "final.hi.html": "5e00ab9f990cf72d"
+    },
+    "counts": {
+      "page_count": 10,
+      "file_size_bytes": 1130581,
+      "numeric_tokens_checked": 11,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-exported 10_pdf/final.hi.pdf after propagating the q_5.10 subject-swap correction (प्रोमोटर -> प्रेरक) through 05_verify/06_simplify/07_format/08_tag/09_design. Same export method as the original pdf stage: Playwright/Chromium, real file:// path, document.fonts.ready wait, emulate_media(screen) (the standing Devanagari pre-base vowel-reordering fix), print_background=True, prefer_css_page_size=True. Gates re-run against the fresh PDF's own fitz-extracted text (page count, blank pages, numeric read-back scoped to question/final_answer fields, matching the original pdf stage's own scope). Independently confirmed the corrected word \"प्रेरक\" is present and the old wrong phrase \"प्रोमोटर कोशिका में प्रवेश\" no longer appears anywhere in the exported PDF's extracted text."
   }
 ]

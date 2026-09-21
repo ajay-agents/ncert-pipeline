@@ -1,0 +1,672 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-21T06:42:27.629663+00:00",
+    "inputs": {
+      "chapter.en.pdf": "a00ff04c376523c1",
+      "solutions.en.pdf": "0e670b1d5eab3295"
+    },
+    "counts": {
+      "chapter.en": {
+        "pages": 26,
+        "chars": 63908,
+        "dollar_spans": 1246,
+        "tables": 5,
+        "images": 19
+      },
+      "solutions.en": {
+        "pages": 30,
+        "chars": 34216,
+        "dollar_spans": 768,
+        "tables": 4,
+        "images": 14
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-medium build for physics-12-3 (Current Electricity), kept in its own separate chapter directory (physics-12-3-en) matching physics-12-1-en/physics-12-2-en's own precedent - the Hindi-only physics-12-3 chapter (already built) is left completely untouched. This directory is English-only (no chapter.hi.pdf/solutions.hi.pdf) - per the user's own explicit instruction, same as the two prior English-medium builds this session. The user's two source files were named misleadingly, again - confirmed directly by reading each file's own first-page text BEFORE naming anything in 00_raw (not assumed from filename): 'Chapter 3 Current Electricity.pdf' (390KB, 30 pages) opens with 'Question 3.1: ... Answer' - this is actually the SOLUTIONS manual, copied into 00_raw as solutions.en.pdf. 'physics_ch3_eng.pdf' (2.1MB, 26 pages) opens with '3.1 INTRODUCTION ... Charges in motion constitute an electric current' - this is the real TEXTBOOK, copied into 00_raw as chapter.en.pdf."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-21T06:52:36.258045+00:00",
+    "inputs": {
+      "chapter.en.md": "5c4efdfa4bf03e57",
+      "solutions.en.md": "6a9ede1a2fe54ef8"
+    },
+    "counts": {
+      "examples": 7,
+      "exercises": 9,
+      "raw_solutions": 24,
+      "matched": 9,
+      "orphan_solutions": 15,
+      "final_items": 31
+    },
+    "gates_failed": {
+      "gate_counts": [
+        "duplicate item id q_3.3",
+        "duplicate item id q_3.4"
+      ]
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "NOT a simple offset like physics-12-1-en's single dropped exercise, and NOT a clean 1:1 mapping like physics-12-2-en - a genuinely scattered renumbering, verified by direct content comparison (not number-counting) at every one of the 9 real textbook exercises: the current rationalised textbook keeps only 9 exercises (3.1-3.9), while the older solutions manual's 24 questions include two extra resistor-combination drill questions (raw 3.3, 3.4) not in the current textbook, plus the entire Wheatstone/meter-bridge and potentiometer topics (raw 3.10, 3.12, 3.15, 3.20-3.24, etc.) that NCERT's 2023 rationalisation removed from this chapter altogether. Real matches were renumbered individually (sol_3.5->3.3, sol_3.6->3.4, sol_3.7->3.5, sol_3.8->3.6, sol_3.9->3.7, sol_3.11->3.8, sol_3.13->3.9; sol_3.1/sol_3.2 already correct). This created a number collision for the two raw orphans (sol_3.3, sol_3.4) that happened to already own the target numbers 3.3/3.4 - excluded them from the match.join_solutions() call entirely (its sol_by_num dict would have silently dropped one side as a spurious \"duplicate\") and appended them as additional_exercise items by hand, identically to the 13 orphans join_solutions() found on its own. Content anomaly flagged, not fixed: real exercise 3.7's matching solution (raw sol_3.9) labels its own figure \"Fig 3.30\" while the textbook's own exercise text says \"Fig. 3.20\" for what is clearly the same network-of-resistors question - a cross-edition figure-numbering mismatch, not a content mismatch; both images kept under their own source-correct filenames (fig_physics-12-3_18 from the textbook, fig_physics-12-3_19/_20 from the solutions manual). No source content was reworded or \"fixed\" anywhere."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-21T06:52:56.043783+00:00",
+    "inputs": {
+      "chapter.en.md": "5c4efdfa4bf03e57",
+      "solutions.en.md": "6a9ede1a2fe54ef8"
+    },
+    "counts": {
+      "examples": 7,
+      "exercises": 9,
+      "raw_solutions": 24,
+      "matched": 9,
+      "orphan_solutions": 15,
+      "final_items": 31
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "NOT a simple offset like physics-12-1-en's single dropped exercise, and NOT a clean 1:1 mapping like physics-12-2-en - a genuinely scattered renumbering, verified by direct content comparison (not number-counting) at every one of the 9 real textbook exercises: the current rationalised textbook keeps only 9 exercises (3.1-3.9), while the older solutions manual's 24 questions include two extra resistor-combination drill questions (raw 3.3, 3.4) not in the current textbook, plus the entire Wheatstone/meter-bridge and potentiometer topics (raw 3.10, 3.12, 3.15, 3.20-3.24, etc.) that NCERT's 2023 rationalisation removed from this chapter altogether. Real matches were renumbered individually (sol_3.5->3.3, sol_3.6->3.4, sol_3.7->3.5, sol_3.8->3.6, sol_3.9->3.7, sol_3.11->3.8, sol_3.13->3.9; sol_3.1/sol_3.2 already correct). This created a number collision for the two raw orphans (sol_3.3, sol_3.4) that happened to already own the target numbers 3.3/3.4 - excluded them from the match.join_solutions() call entirely (its sol_by_num dict would have silently dropped one side as a spurious \"duplicate\") and appended them as additional_exercise items by hand, identically to the 13 orphans join_solutions() found on its own. Content anomaly flagged, not fixed: real exercise 3.7's matching solution (raw sol_3.9) labels its own figure \"Fig 3.30\" while the textbook's own exercise text says \"Fig. 3.20\" for what is clearly the same network-of-resistors question - a cross-edition figure-numbering mismatch, not a content mismatch; both images kept under their own source-correct filenames (fig_physics-12-3_18 from the textbook, fig_physics-12-3_19/_20 from the solutions manual). No source content was reworded or \"fixed\" anywhere."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-21T06:56:38.921092+00:00",
+    "inputs": {
+      "chapter.en.md": "8a8a4b5a47866a2c"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 7,
+        "bytes": 16391
+      },
+      "qa.en": {
+        "items": 24,
+        "bytes": 41757
+      },
+      "total_items_in": 31
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise + additional_exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 31 items (7 + 24) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-21T07:10:52.968349+00:00",
+    "inputs": {
+      "examples.en.md": "5387e8df2e42be0e",
+      "qa.en.md": "6506f085dcca3787"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 31,
+        "bytes": 58032
+      },
+      "examples_in": 7,
+      "qa_in": 24
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order (examples then exercises/additional_exercises) - plain reunion by disjoint id, not a fresh match, since both files came from the same stage-2 source. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 31 items equal examples.en.md's 7 + qa.en.md's 24 exactly - nothing gained or lost."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-21T07:18:31.781385+00:00",
+    "inputs": {
+      "combined.en.md": "15bc87b5270f908b",
+      "chapter.en.pdf": "a00ff04c376523c1",
+      "solutions.en.pdf": "0e670b1d5eab3295"
+    },
+    "counts": {
+      "items_checked": 31,
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "genuine_source_defects_confirmed_unchanged": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 8,
+    "notes": "Verified all 31 items (7 examples, 9 exercises, 15 additional_exercise orphans) against the actual source PDFs - chapter.en.pdf (26 pages, the real textbook) and solutions.en.pdf (30 pages, the real solutions manual) - via fitz page-text search plus full-page pixmap rendering for formula-heavy pages, not the mathpix markdown alone. A first-pass automated numeric containment check (every number from each item against the PDFs plain-text extraction) flagged 26 apparent missing tokens; all 26 were individually investigated and confirmed to be false positives of two kinds, not real defects: (1) the checks own regex matched a subtraction operator immediately followed by a digit (e.g. 85.8-75.3) as if it were a negative number token (-75.3), when it is really two ordinary positive values with a minus sign between them; (2) several genuine intermediate values (71.87, 82.14, 840.5, 8.59, 0.46, 1.73, 11.749, etc.) sit inside image-rendered formula lines in these particular source PDFs that plain text extraction cannot capture at all, though they are visually present and correct - confirmed by rendering the specific pages as images and reading them directly for every flagged item. Zero Corrections were needed - no OCR/extraction defect found in any of the 31 items. The q_3.7 figure-number anomaly flagged at stage 2 (its solution, raw sol_3.9, labels the diagram fig 3.30 while the current rationalised textbooks own Exercise 3.7 calls the same diagram Fig. 3.20) is CONFIRMED via direct visual inspection of both PDF pages to be genuinely printed that way in both official documents - not a mathpix/OCR transcription defect. Left unchanged per Rule 1 - the PDF is the authority and a cross-edition numbering mismatch between the two official documents is not this stages call to reconcile. ONE genuine defect found via direct visual reading (not the numeric check, which cannot detect a unit-type error): sol_3.15s own derivation states Terminal voltage, V = IR = 1.39 x 8.5 = 11.87 A and repeats terminal voltage is 11.87 A in its concluding sentence - a voltage value given in Amperes instead of Volts, baked into the derivation line itself (confirmed on solutions.en.pdf page 17/18). This matches step_5/verify.mds narrow unit-type self-contradiction exception (a torque given in bare N instead of N-m is the documented example) - NOT applied as a correction here; flagged for the coordinator/users explicit sign-off before any fix, per the rule."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-21T07:19:50.717545+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "dc727f3c97d9e3be"
+    },
+    "counts": {
+      "corrections_applied": 2,
+      "corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "User-approved fix (via AskUserQuestion) for sol_3.15's unit-type self-contradiction flagged during the main verify pass: \"Terminal voltage, V=IR=1.39x8.5=11.87 A\" and the repeated \"terminal voltage is 11.87 A\" both corrected from A to V - the official manual printed a voltage value in Amperes. Applied via pipeline.verify.apply_corrections() against a fresh snapshot, not a hand-edit of the markdown. 2 corrections applied, 0 held."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-21T07:26:28.970640+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "dc727f3c97d9e3be"
+    },
+    "counts": {
+      "items_touched": 3,
+      "fields_simplified": 4,
+      "items_total": 31,
+      "items_unchanged": 28,
+      "restore_failed": 0
+    },
+    "gates_failed": {
+      "gate_math_parity": [
+        "ex_3.1 part a.solution: inline math: 6 -> 7"
+      ]
+    },
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged"
+    ],
+    "model_calls": 1,
+    "notes": "Simplified dense narrative prose in 4 items (ex_3.1 item-level + part b, ex_3.3, ex_3.6) - shorter sentences, plainer register, per step_6/simplify.md. The other 27 items (all 9 exercises, the 15 additional_exercise orphans, and 4 of the 7 examples) were left unchanged - already terse given/formula/substitute prose with little to gain from rewording, matching this session's own established precedent of touching a deliberate subset rather than reflexively rewriting everything. sol_3.16's comparative claim (\"m1 is less than m2... aluminium is lighter than copper\") was deliberately left completely untouched despite being adjacent to otherwise-simplifiable text, per step_6/simplify.md's documented caution about silently reversing a comparative claim during rewording - verified the untouched sentence is internally consistent (m1/m2=0.46<1, so aluminium genuinely is lighter) but chose not to risk rewording it. No question text, numbers, units, signs, final answers, or container attrs touched anywhere - confirmed by all three gates passing. sol_3.15's stage-5-approved unit correction (11.87 V, not A) was left exactly as corrected. Noted but out of scope for this stage (not fixed): sol_3.17's prompt references \"the following observations\" but no table is attached to the item - likely a table mathpix produced separately that never made it into this item's prompt at stage 2; flagging for the coordinator, not addressed here since stage 6 only simplifies existing solution prose, never adds missing content."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-21T07:26:55.273248+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "dc727f3c97d9e3be"
+    },
+    "counts": {
+      "items_touched": 3,
+      "fields_simplified": 4,
+      "items_total": 31,
+      "items_unchanged": 28,
+      "restore_failed": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 1,
+    "notes": "Simplified dense narrative prose in 4 items (ex_3.1 item-level + part b, ex_3.3, ex_3.6) - shorter sentences, plainer register, per step_6/simplify.md. The other 27 items (all 9 exercises, the 15 additional_exercise orphans, and 4 of the 7 examples) were left unchanged - already terse given/formula/substitute prose with little to gain from rewording, matching this session's own established precedent of touching a deliberate subset rather than reflexively rewriting everything. sol_3.16's comparative claim (\"m1 is less than m2... aluminium is lighter than copper\") was deliberately left completely untouched despite being adjacent to otherwise-simplifiable text, per step_6/simplify.md's documented caution about silently reversing a comparative claim during rewording - verified the untouched sentence is internally consistent (m1/m2=0.46<1, so aluminium genuinely is lighter) but chose not to risk rewording it. No question text, numbers, units, signs, final answers, or container attrs touched anywhere - confirmed by all three gates passing. sol_3.15's stage-5-approved unit correction (11.87 V, not A) was left exactly as corrected. Noted but out of scope for this stage (not fixed): sol_3.17's prompt references \"the following observations\" but no table is attached to the item - likely a table mathpix produced separately that never made it into this item's prompt at stage 2; flagging for the coordinator, not addressed here since stage 6 only simplifies existing solution prose, never adds missing content."
+  },
+  {
+    "stage": "extract_match_correction",
+    "at": "2026-09-21T07:28:57.170761+00:00",
+    "inputs": {
+      "chapter.en.md": "73b1eccfba2d6f11"
+    },
+    "counts": {
+      "items_fixed": 1,
+      "sol_3.17_question_chars": {
+        "before": 98,
+        "after": 350
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Found and fixed a genuine stage-2 data-loss bug, caught only at stage 6 (a fork correctly noticed sol_3.17's prompt refers to \"the following observations\" with no table attached, and flagged it rather than fixing it or ignoring it), then independently confirmed against 01_mathpix/solutions.en.md: the raw mathpix source genuinely has a 4-column current/voltage observations table for Question 3.17 (a manganin-resistor Ohm's-law-check exercise) immediately after the question sentence, which stage 2's original authoring dropped entirely - present in neither question, solution, nor final_answer. Fixed via pipeline.mdio.markdown_to_chapter() -> append the verbatim table markdown to Item.question.en -> pipeline.render.render() -> overwrite 02_extract/chapter.en.md, never hand-edited directly. Round-trip verified via tag._parse and a full diff confirming every other item's question/solution text is byte-identical to before this fix. Stages 3 (split), 4 (combine), 5 (verify) and 6 (simplify) must be re-run against this corrected chapter.en.md - their existing outputs still lack the table."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-21T07:29:04.959059+00:00",
+    "inputs": {
+      "chapter.en.md": "73b1eccfba2d6f11"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 7,
+        "bytes": 16391
+      },
+      "qa.en": {
+        "items": 24,
+        "bytes": 42018
+      },
+      "total_items_in": 31
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise + additional_exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 31 items (7 + 24) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-21T07:29:05.344120+00:00",
+    "inputs": {
+      "examples.en.md": "5387e8df2e42be0e",
+      "qa.en.md": "c367ddbb291a3458"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 31,
+        "bytes": 58293
+      },
+      "examples_in": 7,
+      "qa_in": 24
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order (examples then exercises/additional_exercises) - plain reunion by disjoint id, not a fresh match, since both files came from the same stage-2 source. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 31 items equal examples.en.md's 7 + qa.en.md's 24 exactly - nothing gained or lost."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-21T07:29:51.849361+00:00",
+    "inputs": {
+      "combined.en.md": "2cfc93ab6aae0f15",
+      "chapter.en.pdf": "a00ff04c376523c1",
+      "solutions.en.pdf": "0e670b1d5eab3295"
+    },
+    "counts": {
+      "items_checked": 31,
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "genuine_source_defects_confirmed_unchanged": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Second verify pass, re-run after fixing a stage-2 data-loss bug in sol_3.17 (its 4-column current/voltage observations table was dropped entirely during original extraction - see the extract_match_correction manifest entry) and re-running stages 3-4 against the corrected 02_extract/chapter.en.md. This pass carries no new Corrections - the fix was applied at its source (stage 2), not here, since it was a transcription/data-loss defect (missing content), not a PDF-vs-extraction mismatch of the kind step_5/verify.md addresses. The corrected table was independently re-verified byte-for-byte against solutions.en.pdf page 20 (rendered via fitz pixmap, read visually) before this pass - all 12 cell values now match the official manual exactly. The one genuine official-manual defect already confirmed and fixed with explicit user sign-off in the first verify pass (sol_3.15's terminal voltage given in Amperes instead of Volts) remains correctly fixed; the q_3.7 cross-edition figure-numbering mismatch (Fig 3.30 vs Fig. 3.20) remains correctly unchanged per Rule 1."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-21T07:31:48.336685+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "5aae4ae2c0a1e894"
+    },
+    "counts": {
+      "corrections_applied": 2,
+      "corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "REGRESSION FIX: re-running stage 3 (split) and stage 4 (combine) from 02_extract to propagate the unrelated sol_3.17 table fix silently reverted sol_3.15's previously user-approved A->V unit correction, because that correction had only ever been applied at the 05_verify layer (via apply_corrections against combined.en.md) and was never pushed back into 02_extract - so the next combine from 02_extract regenerated combined.en.md with the ORIGINAL uncorrected \"11.87 A\" text, and the stage-5 pass-2 script (which hardcoded corrections=[] on the assumption nothing new needed fixing) silently overwrote the previous fix when it wrote a fresh chapter.verified.en.md. Caught by a fork reading the file for stage 6 and noticing \"11.87 A\" still present. Re-applied both corrections properly via pipeline.verify.apply_corrections() this time (not a hand-edit), against a fresh snapshot. Both gates pass. LESSON for this pipeline going forward: a verify-stage Correction is NOT permanent once combined.en.md changes for an unrelated reason - the full correction list must be re-applied on every verify pass, never assumed to already be baked in upstream."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-21T07:33:53.208358+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "5aae4ae2c0a1e894"
+    },
+    "counts": {
+      "items_simplified": 3,
+      "fields_simplified": 4,
+      "fields_unchanged": 34,
+      "restore_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 1,
+    "notes": "Second full attempt at stage 6 for this chapter (the first, on now-stale data before the sol_3.17 table fix and the sol_3.15 regression fix, was discarded rather than reused, since its input file no longer exists in the pipeline in the same form). Simplified 4 solution fields across 3 items for plainer register and shorter sentences: ex_3.1 part a (drift-speed derivation intro prose), ex_3.1 part b (thermal-speed and field-propagation comparison prose), ex_3.3 (steady-temperature narrative paragraph), ex_3.6 (Kirchhoff's-rules setup narrative). All 27 other solution fields (all 9 exercises, all 15 additional_exercise orphans, and 4 of the 7 examples) were left unchanged as already-terse Given/relation/therefore register, matching this session's established precedent of touching only a deliberate subset rather than churning every item. sol_3.16's comparative sentence (\"aluminium is lighter than copper\") was deliberately left completely untouched per step_6/simplify.md's documented caution about reversing a comparative claim - confirmed unchanged. sol_3.15's corrected unit (V, not A) and sol_3.17's restored observations table survive untouched, verified by the passing gate_question_text_frozen/gate_answers_unchanged/gate_math_parity gates against the pre-simplification snapshot. No numbers, units, signs, or final answers were changed anywhere - edits were applied as direct exact-match text substitutions on the prose surrounding verbatim-preserved math spans (the same discipline as every other hand-applied fix this session), not via a live freeze/model/restore call, since this stage was executed directly by the acting agent rather than dispatched to a separate model call."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-21T07:47:35.375132+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "9ac34cf2f6dc7550"
+    },
+    "counts": {
+      "structured.en_bytes": 56982,
+      "formula_wraps_added": 18,
+      "step_splits_added": 2,
+      "table_wraps_added": 1,
+      "figures_repositioned": 1
+    },
+    "gates_failed": {
+      "tag_parse": "PASS"
+    },
+    "gates_passed": [
+      "protect_parity"
+    ],
+    "model_calls": 0,
+    "notes": "Structural markup added directly (not via fork - two consecutive fork dispatch attempts for this stage failed to actually execute, so this was done by the coordinator itself, working straight from 06_simplify/chapter.simplified.en.md). 18 :::formula{label=\"Key formula\"} wraps added around standalone named-relation lines across both examples and exercises/additional_exercises (ex_3.1a, ex_3.3, ex_3.4, ex_3.5, q_3.1, q_3.2, q_3.3, q_3.4, q_3.5, q_3.6, q_3.8, sol_3.3, sol_3.4, sol_3.10, sol_3.12, sol_3.14, sol_3.20, sol_3.21, sol_3.22, sol_3.23, sol_3.24 - some items got the wrap without further step-splitting). 2 :::step splits added for ex_3.1(a)'s genuinely two-stage derivation (n computation, then v_d computation). sol_3.17's restored 4-column observations table wrapped in :::table inside its :::prompt (the first table-wrapping case this session's physics chapters have hit). q_3.7's primary figure (fig_18, FIGURE 3.20) moved from its item-level position into the solution at its first textual reference (\"represented in the given figure\"), matching format.md's figure-repositioning rule - the two supplementary unlabelled figures (fig_19, fig_20) were left at item level since nothing in the solution text specifically calls either one out individually. Deliberately left as plain text (no clear given/formula/step shape, or genuinely sensitive content not worth the risk of restructuring): ex_3.1(b), ex_3.2(a-e) (conceptual), ex_3.6/ex_3.7/q_3.7/q_3.9 (already well-organized multi-equation derivations with their own \"For loop X\"/\"Considering the mesh X\" natural labels - adding :::step would be redundant), q_3.9 (after an aborted risky edit that split one 647 block into two was caught and reverted - left unwrapped entirely to avoid the same risk again), sol_3.15 (contains the just-approved A->V unit fix - left completely untouched to avoid any risk of corrupting it while adding tags), sol_3.16 (contains the sensitive \"aluminium is lighter than copper\" comparative sentence - left completely untouched for the same reason), sol_3.18/sol_3.19 (conceptual, bundled sub-answers). PROCESS NOTE: two bugs were introduced and caught by this stage's own verification before finalizing - (1) initially edited 06_simplify/chapter.simplified.en.md directly instead of building a new 07_format/structured.en.md, caught immediately and fixed by copying the edited content to the correct new path and restoring 06_simplify's original content from this conversation's own earlier verbatim read of it (confirmed byte-exact via a 56141-char length match against the original stage-6 completion report); (2) a stray unmatched \":::\" closer and a q_3.9/ex_3.4 647-block split both introduced by editing mistakes, caught by tag._parse and protect.parity failing, and fixed before this entry was appended. Final verification: tag._parse passes, protect.parity shows zero drift, and a token-multiset comparison (stage 6 vs stage 7, tags stripped) confirms every word/symbol is preserved with none added or removed - only whitespace from inserted tag lines and the one intentional figure repositioning changed ordering."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-21T07:50:10.963169+00:00",
+    "inputs": {
+      "structured.en.md": "7a98eb2879a79cb4"
+    },
+    "counts": {
+      "items": 31,
+      "parts": 7,
+      "distinct_figures": 18,
+      "stage_distribution": {
+        "given": 22,
+        "key_formula": 21,
+        "substitute": 2,
+        "conclusion": 35
+      }
+    },
+    "gates_failed": {
+      "reparsed_counts_match_fresh_markdown_count": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Serialized via a deterministic Python walker (pipeline.tag._parse tree -> JSON), adapted directly from the same script proven on physics-12-2-en, extended here to handle a :::table block wherever it appears (both nested inside :::prompt for sol_3.17's restored observations table, and the general solution_blocks case, though this chapter has no table inside any solution). No item in this chapter has both :::part children AND a stray item-level :::solution (unlike physics-12-2-en's q_2.3), so the known-duplicate allowlist is empty here - confirmed by the allowlist safety check never raising. q_3.7's solution has a bare :::figure as a direct child of :::solution (not nested in any step/formula) - handled as its own figure-type block, not folded into a note. **Answer:** prefix explicitly stripped from every answer flow (item-level and part-level) - the same fix physics-12-2-en needed, applied proactively here rather than caught after the fact; confirmed zero leaked prefixes by the gate. Figure src values kept exactly as \"images/fig_physics-12-3_N.jpg\". Gate re-parsed the written JSON and compared item/part/figure counts against a FRESH direct count from structured.en.md - all matched exactly."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-21T07:55:21.990253+00:00",
+    "inputs": {
+      "structured.en.md": "7a98eb2879a79cb4"
+    },
+    "counts": {
+      "items": 31,
+      "parts": 7,
+      "distinct_figures": 18,
+      "stage_distribution": {
+        "given": 22,
+        "key_formula": 21,
+        "substitute": 2,
+        "conclusion": 35
+      }
+    },
+    "gates_failed": {
+      "reparsed_counts_match_fresh_markdown_count": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Serialized via a deterministic Python walker (pipeline.tag._parse tree -> JSON), adapted directly from the same script proven on physics-12-2-en, extended here to handle a :::table block wherever it appears (both nested inside :::prompt for sol_3.17's restored observations table, and the general solution_blocks case, though this chapter has no table inside any solution). No item in this chapter has both :::part children AND a stray item-level :::solution (unlike physics-12-2-en's q_2.3), so the known-duplicate allowlist is empty here - confirmed by the allowlist safety check never raising. q_3.7's solution has a bare :::figure as a direct child of :::solution (not nested in any step/formula) - handled as its own figure-type block, not folded into a note. **Answer:** prefix explicitly stripped from every answer flow (item-level and part-level) - the same fix physics-12-2-en needed, applied proactively here rather than caught after the fact; confirmed zero leaked prefixes by the gate. Figure src values kept exactly as \"images/fig_physics-12-3_N.jpg\". Gate re-parsed the written JSON and compared item/part/figure counts against a FRESH direct count from structured.en.md - all matched exactly."
+  },
+  {
+    "stage": "extract_match_correction",
+    "at": "2026-09-21T08:02:21.000806+00:00",
+    "inputs": {
+      "chapter.en.md": "ff161ce20ead0d43"
+    },
+    "counts": {
+      "items_fixed": 15,
+      "item_ids": [
+        "sol_3.3",
+        "sol_3.4",
+        "sol_3.10",
+        "sol_3.12",
+        "sol_3.14",
+        "sol_3.15",
+        "sol_3.16",
+        "sol_3.17",
+        "sol_3.18",
+        "sol_3.19",
+        "sol_3.20",
+        "sol_3.21",
+        "sol_3.22",
+        "sol_3.23",
+        "sol_3.24"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Found and fixed a genuine stage-2 data gap, caught only during stage 9's visual QA (a design fork noticed sol_3.20's badge topic-label pill rendered literally as \"None\"): all 15 additional_exercise orphan items were missing their topic attribute entirely - per CLAUDE.md's \"Item topics\" section, this is a short (2-6 word) categorising label meant to be written once at stage 2 extraction (never checked against the source PDF, never simplified), which the original stage-2 authoring only did for examples and the 9 matched exercises, never for the 15 genuine orphans kept as their own additional_exercise items. Fixed via pipeline.mdio.markdown_to_chapter() -> set Item.topic.en for each of the 15 items (a short descriptive noun phrase written directly from each item's own already-verified question/solution content, per Rule 5's requirement that even a non-exam-text label must not claim anything false about the item) -> pipeline.render.render() -> overwrite 02_extract/chapter.en.md, never hand-edited directly. Round-trip verified via tag._parse and a full diff confirming every other item and every other field of these 15 items is byte-identical to before this fix. Stages 3 (split), 4 (combine) and 5 (verify) must be regenerated fresh from this corrected chapter.en.md; stages 6 (simplify) and 7 (format) already made their own real judgment calls on solution text unaffected by this fix, so their existing outputs are patched with just these 15 topic attrs (exact-match text insertion, round-trip verified) rather than re-run from scratch - not a shortcut around Rule 1, since the attribute value itself is fully decided and the patch changes nothing else. Stage 8 (tag) must be regenerated fresh either way, since it JSON-serializes structured.en.md wholesale."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-21T08:02:28.563732+00:00",
+    "inputs": {
+      "chapter.en.md": "ff161ce20ead0d43"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 7,
+        "bytes": 16391
+      },
+      "qa.en": {
+        "items": 24,
+        "bytes": 42827
+      },
+      "total_items_in": 31
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise + additional_exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 31 items (7 + 24) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-21T08:02:29.365905+00:00",
+    "inputs": {
+      "examples.en.md": "5387e8df2e42be0e",
+      "qa.en.md": "ec5a73f4d1a90961"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 31,
+        "bytes": 59102
+      },
+      "examples_in": 7,
+      "qa_in": 24
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order (examples then exercises/additional_exercises) - plain reunion by disjoint id, not a fresh match, since both files came from the same stage-2 source. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 31 items equal examples.en.md's 7 + qa.en.md's 24 exactly - nothing gained or lost."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-21T08:02:55.766100+00:00",
+    "inputs": {
+      "combined.en.md": "df6c3b5b4bebf3aa",
+      "chapter.en.pdf": "a00ff04c376523c1",
+      "solutions.en.pdf": "0e670b1d5eab3295"
+    },
+    "counts": {
+      "items_checked": 31,
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "genuine_source_defects_confirmed_unchanged": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Third verify pass, re-run after adding the 15 missing additional_exercise topic labels at stage 2 (see the second extract_match_correction manifest entry) and re-running stages 3-4. No new Corrections - topic is not a field this stage checks against the source PDF (CLAUDE.md's Item-topics section). All previously-confirmed content (sol_3.15's approved unit fix, sol_3.17's restored table, the q_3.7 cross-edition figure-numbering mismatch left correctly unchanged) carries through."
+  },
+  {
+    "stage": "extract_match_correction",
+    "at": "2026-09-21T08:03:31.999140+00:00",
+    "inputs": {
+      "chapter.en.md": "4d4ebf7c9f490f35"
+    },
+    "counts": {
+      "items_fixed": 1,
+      "item_id": "sol_3.15"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "PERMANENT FIX for a regression that happened TWICE: sol_3.15's user-approved terminal-voltage unit correction (A -> V, a genuine official-manual error, approved by the user earlier in this chapter's build) had only ever been applied at the 05_verify layer via apply_corrections() against combined.en.md - never pushed back into 02_extract/chapter.en.md itself. Every time 02_extract changed for an unrelated reason (first for the sol_3.17 table fix, now for the 15 missing topic labels) and stages 3-4 were regenerated fresh from it, the fix silently reverted back to the original \"11.87 A\" text, because nothing downstream re-applied it - caught the first time by a stage-6 fork noticing the bug text was still present, caught this second time by this same coordinator explicitly checking for it after the lesson from the first regression. Baking the fix into 02_extract/chapter.en.md itself (via mdio.markdown_to_chapter() -> exact-match text.replace() on Item.solution.en, guarded by count()==1 assertions -> pipeline.render.render() -> overwrite, never a hand-edit) makes it permanent - every future regenerate-from-source for any other reason will now carry this fix automatically, instead of needing to be remembered and re-applied at the verify layer every single time something else changes upstream of it."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-21T08:03:40.112349+00:00",
+    "inputs": {
+      "chapter.en.md": "4d4ebf7c9f490f35"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 7,
+        "bytes": 16391
+      },
+      "qa.en": {
+        "items": 24,
+        "bytes": 42851
+      },
+      "total_items_in": 31
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise + additional_exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 31 items (7 + 24) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-21T08:03:40.568699+00:00",
+    "inputs": {
+      "examples.en.md": "5387e8df2e42be0e",
+      "qa.en.md": "368bee1fd1caa71a"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 31,
+        "bytes": 59126
+      },
+      "examples_in": 7,
+      "qa_in": 24
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order (examples then exercises/additional_exercises) - plain reunion by disjoint id, not a fresh match, since both files came from the same stage-2 source. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 31 items equal examples.en.md's 7 + qa.en.md's 24 exactly - nothing gained or lost."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-21T08:03:41.052963+00:00",
+    "inputs": {
+      "combined.en.md": "63d1225f3609669e",
+      "chapter.en.pdf": "a00ff04c376523c1",
+      "solutions.en.pdf": "0e670b1d5eab3295"
+    },
+    "counts": {
+      "items_checked": 31,
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "genuine_source_defects_confirmed_unchanged": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Third verify pass, re-run after adding the 15 missing additional_exercise topic labels at stage 2 (see the second extract_match_correction manifest entry) and re-running stages 3-4. No new Corrections - topic is not a field this stage checks against the source PDF (CLAUDE.md's Item-topics section). All previously-confirmed content (sol_3.15's approved unit fix, sol_3.17's restored table, the q_3.7 cross-edition figure-numbering mismatch left correctly unchanged) carries through."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-21T08:04:47.103758+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "63d1225f3609669e"
+    },
+    "counts": {
+      "items": 31,
+      "topics_patched": 15,
+      "solution_text_touched": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 0,
+    "notes": "Not a re-simplification - this pass only patches in the 15 missing additional_exercise topic labels (via mdio, verified via round-trip that no solution/question text changed) onto the PREVIOUS simplify pass's own already-completed judgment work (4 solution fields simplified across ex_3.1/ex_3.3/ex_3.6, 27 left unchanged). Re-running the full model-judgment simplify pass was unnecessary since topic is inert with respect to every decision that pass made."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-21T08:04:58.094731+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "b3bca45f56d56d3a"
+    },
+    "counts": {
+      "topics_patched": 15,
+      "structure_touched": 0
+    },
+    "gates_failed": {
+      "tag_parse": "PASS"
+    },
+    "gates_passed": [
+      "protect_parity"
+    ],
+    "model_calls": 0,
+    "notes": "Not a re-formatting - this pass only patches in the 15 missing additional_exercise topic attrs (exact-match text insertion into each item-level container tag, verified via a full attrs-diff confirming every other attribute and all body text is byte-identical to before) onto the PREVIOUS format pass's own already-completed structural work (18 formula wraps, 2 step splits, 1 table wrap, 1 figure repositioned). Re-running the full model-judgment format pass was unnecessary since topic is inert with respect to every structural decision that pass made."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-21T08:05:06.540995+00:00",
+    "inputs": {
+      "structured.en.md": "032fab1b78f8d210"
+    },
+    "counts": {
+      "items": 31,
+      "parts": 7,
+      "distinct_figures": 18,
+      "stage_distribution": {
+        "given": 22,
+        "key_formula": 21,
+        "substitute": 2,
+        "conclusion": 35
+      }
+    },
+    "gates_failed": {
+      "reparsed_counts_match_fresh_markdown_count": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Serialized via a deterministic Python walker (pipeline.tag._parse tree -> JSON), adapted directly from the same script proven on physics-12-2-en, extended here to handle a :::table block wherever it appears (both nested inside :::prompt for sol_3.17's restored observations table, and the general solution_blocks case, though this chapter has no table inside any solution). No item in this chapter has both :::part children AND a stray item-level :::solution (unlike physics-12-2-en's q_2.3), so the known-duplicate allowlist is empty here - confirmed by the allowlist safety check never raising. q_3.7's solution has a bare :::figure as a direct child of :::solution (not nested in any step/formula) - handled as its own figure-type block, not folded into a note. **Answer:** prefix explicitly stripped from every answer flow (item-level and part-level) - the same fix physics-12-2-en needed, applied proactively here rather than caught after the fact; confirmed zero leaked prefixes by the gate. Figure src values kept exactly as \"images/fig_physics-12-3_N.jpg\". Gate re-parsed the written JSON and compared item/part/figure counts against a FRESH direct count from structured.en.md - all matched exactly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-21T08:07:42.279411+00:00",
+    "inputs": {
+      "structured.en.json": "443e73618cc23c9c"
+    },
+    "counts": {
+      "final.en.html_bytes": 139013,
+      "final.en.css_bytes": 17905,
+      "figures_embedded": 18
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored plain static HTML/CSS, reusing physics-12-2-en's converter/render_page.py and final.en.css as the starting basis. Genuine new-territory work for this chapter (neither prior physics chapter needed any of these): (1) added \\Omega to the GREEK/NOARG_SYMBOL table (upright, not italicized - a unit symbol, not a variable) - completely missing before, and this chapter uses it on nearly every line; caught via the mandatory macro-table grep-and-diff, not by eyeballing. (2) Added real CSS (.s98 scrollable wrapper, .s99/.s100, teal header row) for sol_3.17's observations table - render_table_html already existed in the reused script ('kept for parity', never exercised), but had zero matching CSS; also fixed a stage-8 schema field-name mismatch (the serializer used 'content', render_page.py expected 'html') by re-running stage 8 with the corrected key, not by patching the render script to accept both. (3) Fixed build_page()'s hardcoded section list (only 'example'/'exercise', no 'additional_exercise') and stale chapter-2 title strings left over from the reused file - this chapter is the first to carry 15 genuine orphan additional-exercise items all the way to final output. (4) Found and fixed a second genuine stage-2 gap (separate from the table): all 15 additional_exercise items were missing their topic label entirely, rendering literally as 'None' on the badge - traced back through stage 8/7/6 to stage 2, fixed by baking real topic text into 02_extract/chapter.en.md and propagating forward (stages 3-5 fully regenerated; 6-7's own already-completed judgment work patched in place rather than re-run, since topic is inert to those decisions; 8 regenerated fresh). (5) In the same pass, caught and permanently fixed a REGRESSION: sol_3.15's earlier user-approved unit correction (A->V) had only ever lived at the verify layer and silently reverted twice when 02_extract changed for unrelated reasons - now baked into 02_extract itself so it can never revert again. q_3.7's bare mid-solution figure (no stage key) and its two item-level figures all confirmed rendering correctly, in order, no duplicates (group_blocks's existing figure-before-stage-dispatch check, inherited from an earlier chapter, handled this correctly on first render - no fix needed there). sol_3.20's 7 figures for its multi-network question all confirmed present. Full numeric read-back against 06_simplify/chapter.simplified.en.md: 295/295 tokens present. All 18 figures resolve against the real 09_design/images/ directory. ex_3.1/ex_3.2's item-level prompts are NOT enumeration-stripped (both have nested (i)/(ii) sub-markers inside their last lettered clause, which correctly trips strip_redundant_enumeration's conservative safety fallback - leaves real but ambiguous content unstripped rather than risk cutting something real on a guess, exactly per its documented design, not a bug to fix."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-21T08:12:19.010328+00:00",
+    "inputs": {
+      "final.en.html": "0da215623e681d68"
+    },
+    "counts": {
+      "page_count": 30,
+      "file_size_bytes": 1253039,
+      "numeric_tokens_checked": 295,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "English-only chapter, no Devanagari - the standing emulate_media(screen) fix was still applied unconditionally per step_10/PROMPT.md. Playwright/Chromium export with print_background=True, prefer_css_page_size=True, after waiting for document.fonts.ready. Page count, blank-page and numeric read-back gates all run against the PDF's own extracted text (fitz), not assumed carried over from stage 9's HTML check - read-back normalizes unicode superscript digits with an inserted separator before each run before numeric comparison. This chapter also has a genuine HTML <table> (sol_3.17) and 18 figures - both checked to resolve/extract correctly in the PDF as part of the general read-back."
+  }
+]
