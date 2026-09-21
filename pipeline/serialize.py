@@ -22,20 +22,59 @@ from . import render as _render
 from . import tag as _tag
 
 _STAGE_EXCLUDED = {"note", "figure", "table"}
+# Fixed given/key-formula/substitute/conclusion vocabulary from
+# _shared/RULES.md's container-vocabulary table, in both languages, mapped
+# to the internal stage identifier - keyed lowercase/stripped so an English
+# label ("Given", "Key formula", ...) matches regardless of the exact casing
+# a stage-7 batch happened to write. Hindi has no case to normalize, but
+# .lower() is a harmless no-op on Devanagari text.
+_STAGE_LABEL_MAP = {
+    "given": "given", "जानकारी": "given",
+    "key formula": "key_formula", "मुख्य सूत्र": "key_formula",
+    "substitute": "substitute", "मान रखो": "substitute",
+    "conclusion": "conclusion", "निष्कर्ष": "conclusion",
+}
+
+
+def _label_to_stage(label: str | None) -> str | None:
+    """Map a stage-7 `label` attribute to its internal stage id if it's the
+    fixed given/key-formula/substitute/conclusion vocabulary (in either
+    language), else None (a freeform caption, or no label at all).
+
+    Previously this was a literal `label in ("given", "key_formula", ...)`
+    check - comparing stage 7's actual written text ("Given", "Substitute",
+    "जानकारी", ...) against internal lowercase/snake_case identifiers that
+    never equal it, so the explicit label was silently ignored every time in
+    favour of raw positional inference, and the fixed-vocabulary text itself
+    got kept as a redundant `label` field alongside the (wrong-by-luck-only)
+    inferred stage. This only produced a visibly wrong stage when a step's
+    true position disagreed with its explicit label (most solutions have the
+    given step first and the conclusion last anyway, so the bug stayed
+    latent) - caught for real on chemistry-12-1's q_1.21, where the "Key
+    formula" and "Substitute" content had to be merged into one OCR'd LaTeX
+    block, labelled "Substitute" by stage 7, but sitting in the first
+    (normally "given") position; also found retroactively producing
+    redundant labels (with the correct stage only by position-inference
+    coincidence) on biology-12-5's q_5.2."""
+    return _STAGE_LABEL_MAP.get((label or "").strip().lower())
 _ANSWER_PREFIX_CACHE: dict[str, re.Pattern] = {}
 _SOLUTION_OPENER_RE = re.compile(
-    r'^(?:\\text\{)?(?:हल|उत्तर)\s*[:：]?\s*\}?\s*'  # हल/उत्तर, with or
-    # without a colon, with or without \text{...} wrapping. Different
-    # solutions-manual publishers use different Hindi words for "Solution:" -
-    # हल is the chemistry/physics-manual convention already handled here;
-    # उत्तर ("answer") is a biology-manual convention that surfaced for real
-    # on biology-12-4 (every one of its 16 items opens "उत्तर : ...", and
-    # none were stripped because this regex only knew हल). biology-12-1/2/3
-    # never hit this same gap only because those chapters' own solution text
-    # was built by hand-typing clean content directly rather than
-    # transcribing the source verbatim - the underlying source documents
-    # likely use "उत्तर :" too and would show the same leak if re-extracted
-    # verbatim. Extend this list again if a future chapter's own solutions
+    r'^(?:\\text\{)?(?:हल|उत्तर|Solution|Answer)\s*[:：]?\s*\}?\s*'  # हल/उत्तर/
+    # Solution/Answer, with or without a colon, with or without \text{...}
+    # wrapping. Different solutions-manual publishers use different words for
+    # "Solution:" - हल is the chemistry/physics-manual convention already
+    # handled here; उत्तर ("answer") is a biology-manual convention that
+    # surfaced for real on biology-12-4 (every one of its 16 items opens
+    # "उत्तर : ...", and none were stripped because this regex only knew हल).
+    # biology-12-1/2/3 never hit this same gap only because those chapters'
+    # own solution text was built by hand-typing clean content directly
+    # rather than transcribing the source verbatim - the underlying source
+    # documents likely use "उत्तर :" too and would show the same leak if
+    # re-extracted verbatim. "Solution"/"Answer" are the equivalent English-
+    # medium convention, surfaced for real on chemistry-12-1's English track
+    # (9 of its items opened with a bare "Solution" or "Solution <working>"
+    # line, none previously stripped because this regex only knew the Hindi
+    # words). Extend this list again if a future chapter's own solutions
     # manual uses yet another convention (e.g. "समाधान").
 )
 _NOTE_TYPE_LABELS_HI = {"caution": "सावधानी",
@@ -166,6 +205,20 @@ def _note_label(node: dict, lang: str) -> str | None:
 def build_solution_blocks(children: list, lang: str) -> list[dict[str, Any]]:
     raw = _flatten_children(children)
 
+    # If the very first block's entire content is a redundant "Solution:"/
+    # "हल :" opener (nothing else - common when that heading sits alone on
+    # its own line before any real derivation begins), drop the block
+    # outright rather than strip it down to an empty placeholder. Left in
+    # place, that hollow block would still occupy the first stageable
+    # position, so infer_stage() below would hand "given" to an empty box
+    # and push the real given content into "substitute" - caught for real on
+    # chemistry-12-1's English track (ex_1.8/1.9/1.10/1.13 each open with a
+    # bare "Solution" line and nothing else in that first block).
+    if raw and raw[0][0] in ("step", "concept"):
+        first_flow = build_flow(raw[0][1]["children"], lang)
+        if first_flow and not _strip_hal_opener(first_flow):
+            raw = raw[1:]
+
     stageable_idxs = [i for i, (kind, _) in enumerate(raw) if kind not in _STAGE_EXCLUDED]
 
     def infer_stage(i: int) -> str:
@@ -182,20 +235,23 @@ def build_solution_blocks(children: list, lang: str) -> list[dict[str, Any]]:
     for i, (kind, node) in enumerate(raw):
         if kind == "step":
             label = node["attrs"].get("label")
-            stage = label if label in ("given", "key_formula", "substitute", "conclusion") else infer_stage(i)
+            mapped = _label_to_stage(label)
+            stage = mapped if mapped else infer_stage(i)
             block = {"type": "step", "stage": stage, "flow": build_flow(node["children"], lang)}
-            if label and label not in ("given", "key_formula", "substitute", "conclusion"):
+            if label and not mapped:
                 block["label"] = label
             blocks.append(block)
         elif kind == "concept":
+            c_label = node["attrs"].get("label")
             block = {"type": "concept", "stage": "given", "flow": build_flow(node["children"], lang)}
-            if node["attrs"].get("label"):
-                block["label"] = node["attrs"]["label"]
+            if c_label and not _label_to_stage(c_label):
+                block["label"] = c_label
             blocks.append(block)
         elif kind == "formula":
+            f_label = node["attrs"].get("label")
             block = {"type": "formula", "stage": "key_formula", "flow": build_flow(node["children"], lang)}
-            if node["attrs"].get("label"):
-                block["label"] = node["attrs"]["label"]
+            if f_label and not _label_to_stage(f_label):
+                block["label"] = f_label
             blocks.append(block)
         elif kind == "note":
             blocks.append({

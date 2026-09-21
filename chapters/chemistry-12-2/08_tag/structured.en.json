@@ -1,0 +1,2477 @@
+{
+  "front": {
+    "title": "Electrochemistry",
+    "chapter": "2"
+  },
+  "items": [
+    {
+      "id": "ex_2.1",
+      "kind": "example",
+      "number": "2.1",
+      "topic": "Cell notation and Nernst equation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Represent the cell in which the following reaction takes place $\\mathrm{Mg}(\\mathrm{s})+2 \\mathrm{Ag}^{+}(0.0001 \\mathrm{M}) \\rightarrow \\mathrm{Mg}^{2+}(0.130 \\mathrm{M})+2 \\mathrm{Ag}(\\mathrm{s})$\n\nCalculate its $E_{\\text {(cell) }}$ if $E_{\\text {(cell) }}^{\\circ}=3.17 \\mathrm{~V}$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The cell can be written as $\\mathrm{Mg}\\left|\\mathrm{Mg}^{2+}(0.130 \\mathrm{M})\\right|\\left|\\mathrm{Ag}^{+}(0.0001 \\mathrm{M})\\right| \\mathrm{Ag}$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nE_{\\text {(cell) }} & =E_{\\text {(cell) }}^{\\mathrm{o}}-\\frac{\\mathrm{RT}}{2 \\mathrm{~F}} \\ln \\frac{\\mathrm{Mg}^{2+}}{\\mathrm{Ag}^{+2}} \\\\\n& =3.17 \\mathrm{~V}-\\frac{0.059 \\mathrm{~V}}{2} \\log \\frac{0.130}{(0.0001)^{2}}=3.17 \\mathrm{~V}-0.21 \\mathrm{~V}=2.96 \\mathrm{~V}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$E_{\\text {(cell) }} = 2.96 \\mathrm{~V}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.2",
+      "kind": "example",
+      "number": "2.2",
+      "topic": "Equilibrium constant from standard cell potential",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Calculate the equilibrium constant of the reaction:\n\n$$\n\\begin{aligned}\n& \\mathrm{Cu}(\\mathrm{~s})+2 \\mathrm{Ag}^{+}(\\mathrm{aq}) \\rightarrow \\mathrm{Cu}^{2+}(\\mathrm{aq})+2 \\mathrm{Ag}(\\mathrm{~s}) \\\\\n& \\mathrm{E}_{(\\text {cell })}^{\\mathrm{o}}=0.46 \\mathrm{~V}\n\\end{aligned}\n$$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nE_{\\text {(cell) }}^{\\circ} & =\\frac{0.059 \\mathrm{~V}}{2} \\log K_{C}=0.46 \\mathrm{~V} \\text { or } \\\\\n\\log \\quad K_{C} & =\\frac{0.46 \\mathrm{~V} \\times 2}{0.059 \\mathrm{~V}}=15.6 \\\\\nK_{C} & =3.92 \\times 10^{15}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$K_{C} = 3.92 \\times 10^{15}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.3",
+      "kind": "example",
+      "number": "2.3",
+      "topic": "Standard Gibbs energy from cell potential",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The standard electrode potential for Daniell cell is 1.1V. Calculate the standard Gibbs energy for the reaction:\n\n$$\n\\mathrm{Zn}(\\mathrm{~s})+\\mathrm{Cu}^{2+}(\\mathrm{aq}) \\longrightarrow \\mathrm{Zn}^{2+}(\\mathrm{aq})+\\mathrm{Cu}(\\mathrm{~s})\n$$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\Delta_{\\mathrm{r}} G^{\\circ}=-n F \\mathrm{E}_{\\text {(cell) }}^{\\mathrm{o}}$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$n$ in the above equation is $2, \\mathrm{~F}=96487 \\mathrm{C} \\mathrm{mol}^{-1}$ and $\\mathrm{E}_{(\\text {cell })}^{0}=1.1 \\mathrm{~V}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\text { Therefore, } \\begin{aligned}\n\\Delta_{\\mathrm{r}} G^{0} & =-2 \\times 1.1 \\mathrm{~V} \\times 96487 \\mathrm{C} \\mathrm{~mol}^{-1} \\\\\n& =-21227 \\mathrm{~J} \\mathrm{~mol}^{-1} \\\\\n& =-212.27 \\mathrm{~kJ} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\Delta_{\\mathrm{r}} G^{0} = -212.27 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.4",
+      "kind": "example",
+      "number": "2.4",
+      "topic": "Conductivity and molar conductivity from cell constant",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Resistance of a conductivity cell filled with $0.1 \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{KCl}$ solution is $100 \\Omega$. If the resistance of the same cell when filled with $0.02 \\mathrm{~mol} \\mathrm{~L}^{-1}$ KCl solution is $520 \\Omega$, calculate the conductivity and molar conductivity of $0.02 \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{KCl}$ solution. The conductivity of $0.1 \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{KCl}$ solution is 1.29 S/m."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The cell constant is given by the equation:"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Cell constant $=G^{*}=$ conductivity × resistance"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n=1.29 \\mathrm{~S} / \\mathrm{m} \\times 100 \\Omega=129 \\mathrm{~m}^{-1}=1.29 \\mathrm{~cm}^{-1}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Conductivity of $0.02 \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{KCl}$ solution = cell constant / resistance"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n=\\frac{G^{*}}{R}=\\frac{129 \\mathrm{~m}^{-1}}{520 \\Omega}=0.248 \\mathrm{~S} \\mathrm{~m}^{-1}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Concentration\n\n$$\n\\begin{aligned}\n& =0.02 \\mathrm{~mol} \\mathrm{~L}^{-1} \\\\\n& =1000 \\times 0.02 \\mathrm{~mol} \\mathrm{~m}^{-3}=20 \\mathrm{~mol} \\mathrm{~m}^{-3}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Molar conductivity $=\\Lambda_{m}=\\frac{\\kappa}{c}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n=\\frac{248 \\times 10^{-3} \\mathrm{~S} \\mathrm{~m}^{-1}}{20 \\mathrm{~mol} \\mathrm{~m}^{-3}}=124 \\times 10^{-4} \\mathrm{~S} \\mathrm{~m}^{2} \\mathrm{~mol}^{-1}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "note_type": "tip",
+          "label": "Alternative method",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Alternatively,\n\n$$\n\\kappa=\\frac{1.29 \\mathrm{~cm}^{-1}}{520 \\Omega}=0.248 \\times 10^{-2} \\mathrm{~S} \\mathrm{~cm}^{-1}\n$$\n\nand\n\n$$\n\\begin{aligned}\n\\Lambda_{m} & =\\kappa \\times 1000 \\mathrm{~cm}^{3} \\mathrm{~L}^{-1} \\text { molarity }{ }^{-1} \\\\\n& =\\frac{0.248 \\times 10^{-2} \\mathrm{~S} \\mathrm{~cm}^{-1} \\times 1000 \\mathrm{~cm}^{3} \\mathrm{~L}^{-1}}{0.02 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\\\\n& =124 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Conductivity $= 0.248 \\times 10^{-2} \\mathrm{~S} \\mathrm{~cm}^{-1}$ ($=0.248 \\mathrm{~S} \\mathrm{~m}^{-1}$); Molar conductivity $\\Lambda_{m} = 124 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.5",
+      "kind": "example",
+      "number": "2.5",
+      "topic": "Resistivity, conductivity and molar conductivity of NaOH",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The electrical resistance of a column of $0.05 \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{NaOH}$ solution of diameter 1 cm and length 50 cm is $5.55 \\times 10^{3}$ ohm. Calculate its resistivity, conductivity and molar conductivity."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$A=\\pi r^{2}=3.14 \\times 0.5^{2} \\mathrm{~cm}^{2}=0.785 \\mathrm{~cm}^{2}=0.785 \\times 10^{-4} \\mathrm{~m}^{2}$ $l=50 \\mathrm{~cm}=0.5 \\mathrm{~m}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nR=\\frac{\\rho l}{A} \\quad \\text { or } \\quad \\rho=\\frac{R A}{l}=\\frac{5.55 \\times 10^{3} \\Omega \\times 0.785 \\mathrm{~cm}^{2}}{50 \\mathrm{~cm}}=87.135 \\Omega \\mathrm{~cm}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\text { Conductivity }=\\kappa & =\\frac{1}{\\rho}=\\left(\\frac{1}{87.135}\\right) \\mathrm{S} \\mathrm{~cm}^{-1} \\\\\n& =0.01148 \\mathrm{~S} \\mathrm{~cm}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Molar conductivity, $\\Lambda_{m}=\\frac{\\kappa \\times 1000}{\\mathrm{c}} \\mathrm{cm}^{3} \\mathrm{~L}^{-1}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\frac{0.01148 \\mathrm{~S} \\mathrm{~cm}^{-1} \\times 1000 \\mathrm{~cm}^{3} \\mathrm{~L}^{-1}}{0.05 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\\\\n& =229.6 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "note_type": "tip",
+          "label": "Alternative units",
+          "flow": [
+            {
+              "type": "text",
+              "text": "If we want to calculate the values of different quantities in terms of 'm' instead of 'cm',\n\n$$\n\\begin{aligned}\n& \\rho=\\frac{R A}{l} \\\\\n&=\\frac{5.55 \\times 10^{3} \\Omega \\times 0.785 \\times 10^{-4} \\mathrm{~m}^{2}}{0.5 \\mathrm{~m}}=87.135 \\times 10^{-2} \\Omega \\mathrm{~m} \\\\\n& \\kappa=\\frac{1}{\\rho}=\\frac{100}{87.135} \\Omega \\mathrm{~m}=1.148 \\mathrm{~S} \\mathrm{~m}^{-1} \\\\\n& \\text { and } \\quad \\Lambda_{m}=\\frac{\\kappa}{c}=\\frac{1.148 \\mathrm{~S} \\mathrm{~m}^{-1}}{50 \\mathrm{~mol} \\mathrm{~m}^{-3}}=229.6 \\times 10^{-4} \\mathrm{~S} \\mathrm{~m}^{2} \\mathrm{~mol}^{-1} .\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Resistivity $\\rho = 87.135 \\Omega \\mathrm{~cm}$; Conductivity $\\kappa = 0.01148 \\mathrm{~S} \\mathrm{~cm}^{-1}$; Molar conductivity $\\Lambda_{m} = 229.6 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.6",
+      "kind": "example",
+      "number": "2.6",
+      "topic": "Limiting molar conductivity of KCl by extrapolation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The molar conductivity of KCl solutions at different concentrations at 298 K are given below:\n\n| $\\boldsymbol{c} \\boldsymbol{/} \\mathbf{m o l ~}^{\\boldsymbol{-} \\mathbf{1}}$ | $\\Lambda_{m} / \\mathrm{S} \\mathbf{~ c m}^{\\mathbf{2}} \\mathbf{~ m o l}^{\\boldsymbol{-} \\mathbf{1}}$ |\n| :--- | :--- |\n| 0.000198 | 148.61 |\n| 0.000309 | 148.29 |\n| 0.000521 | 147.81 |\n| 0.000989 | 147.09 |\n\nShow that a plot between $\\Lambda_{m}$ and $c^{1 / 2}$ is a straight line. Determine the values of $\\Lambda_{m}^{\\circ}$ and A for KCl."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Taking the square root of concentration, we get:\n\n$$\n\\begin{array}{cc}\n\\boldsymbol{c}^{\\mathbf{1 / 2}} /\\left(\\mathbf{m o l ~ L}^{-\\mathbf{1}}\\right)^{\\mathbf{1 / 2}} & \\Lambda \\boldsymbol{m} / \\mathbf{S} \\mathbf{c m}^{\\mathbf{2}} \\mathbf{m o l}^{\\mathbf{- 1}} \\\\\n0.01407 & 148.61 \\\\\n0.01758 & 148.29 \\\\\n0.02283 & 147.81 \\\\\n0.03145 & 147.09\n\\end{array}\n$$\n\nA plot of $\\Lambda_{m}$ (y-axis) against $\\mathrm{c}^{1 / 2}$ ($x$-axis) is shown in (Fig. 3.7). It is nearly a straight line. From the intercept $\\left(c^{1 / 2}=0\\right)$, we get:"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\Lambda_{m}^{\\circ}=150.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { and } \\\\\n& A=- \\text { slope }=87.46 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} /\\left(\\mathrm{mol} / \\mathrm{L}^{-1}\\right)^{1 / 2}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\Lambda_{m}^{\\circ} = 150.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$; $A = 87.46 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} /\\left(\\mathrm{mol} / \\mathrm{L}^{-1}\\right)^{1 / 2}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.7",
+      "kind": "example",
+      "number": "2.7",
+      "topic": "Limiting molar conductivity via Kohlrausch's law",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Calculate $\\Lambda_{m}^{0}$ for $\\mathrm{CaCl}_{2}$ and $\\mathrm{MgSO}_{4}$ from the data given in Table 3.4."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We know from Kohlrausch law that"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\Lambda_{m\\left(\\mathrm{CaCl}_{2}\\right)}^{\\mathrm{o}} & =\\lambda_{\\mathrm{Ca}^{2+}}^{\\mathrm{o}}+2 \\lambda_{\\mathrm{Cl}^{-}}^{\\mathrm{o}}=119.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}+2(76.3) \\mathrm{S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\\\\n& =(119.0+152.6) \\mathrm{S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\\\\n& =271.6 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\Lambda_{m\\left(\\mathrm{MgSO}_{4}\\right)}^{o} & =\\lambda_{\\mathrm{Mg}^{2+}}^{o}+\\lambda_{\\mathrm{SO}_{4}^{2-}}^{o}=106.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}+160.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\\\\n& =266 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\Lambda_{m}^{\\circ}(\\mathrm{CaCl}_{2}) = 271.6 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$; $\\Lambda_{m}^{\\circ}(\\mathrm{MgSO}_{4}) = 266 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.8",
+      "kind": "example",
+      "number": "2.8",
+      "topic": "Limiting molar conductivity of a weak electrolyte via Kohlrausch's law",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\Lambda_{m}^{0}$ for NaCl, HCl and NaAc are 126.4, 425.9 and $91.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$ respectively. Calculate $\\Lambda^{0}$ for HAc."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\Lambda_{m(\\mathrm{HAc})}^{\\circ}=\\lambda_{\\mathrm{H}^{+}}^{\\circ}+\\lambda_{\\mathrm{Ac}^{-}}^{\\circ}=\\lambda_{\\mathrm{H}^{+}}^{\\circ}+\\lambda_{\\mathrm{Cl}^{-}}^{\\circ}+\\lambda_{\\mathrm{Ac}^{-}}^{\\circ}+\\lambda_{\\mathrm{Na}^{+}}^{\\circ}-\\lambda_{\\mathrm{Cl}^{-}}^{\\circ}-\\lambda_{\\mathrm{Na}^{+}}^{\\circ}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\Lambda_{m(\\mathrm{HCl})}^{\\mathrm{o}}+\\Lambda_{m(\\mathrm{NaAc})}^{\\mathrm{o}}-\\Lambda_{m(\\mathrm{NaCl})}^{\\mathrm{o}} \\\\\n& =(425.9+91.0-126.4) \\mathrm{S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\\\\n& =390.5 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\Lambda_{m(\\mathrm{HAc})}^{\\circ} = 390.5 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.9",
+      "kind": "example",
+      "number": "2.9",
+      "topic": "Dissociation constant of acetic acid from conductivity",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The conductivity of $0.001028 \\mathrm{~mol} \\mathrm{~L}^{-1}$ acetic acid is $4.95 \\times 10^{-5} \\mathrm{~S} \\mathrm{~cm}^{-1}$. Calculate its dissociation constant if $\\Lambda_{m}^{0}$ for acetic acid is $390.5 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\Lambda_{m}=\\frac{\\kappa}{c}=\\frac{4.95 \\times 10^{-5} \\mathrm{Scm}^{-1}}{0.001028 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}}=48.15 \\mathrm{~S} \\mathrm{~cm}^{3} \\mathrm{~mol}^{-1}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\alpha=\\frac{\\Lambda_{m}}{\\Lambda_{m}^{\\mathrm{o}}}=\\frac{48.15 \\mathrm{Scm}^{2} \\mathrm{~mol}^{-1}}{390.5 \\mathrm{Scm}^{2} \\mathrm{~mol}^{-1}}=0.1233 \\\\\n& \\mathrm{k}=\\frac{\\mathrm{c} \\alpha^{2}}{(1-\\alpha)}=\\frac{0.001028 \\mathrm{molL}^{-1} \\times(0.1233)^{2}}{1-0.1233}=1.78 \\times 10^{-5} \\mathrm{~mol} \\mathrm{~L}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\alpha = 0.1233$; $K_{a} = 1.78 \\times 10^{-5} \\mathrm{~mol} \\mathrm{~L}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.10",
+      "kind": "example",
+      "number": "2.10",
+      "topic": "Mass of copper deposited via Faraday's law",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A solution of $\\mathrm{CuSO}_{4}$ is electrolysed for 10 minutes with a current of 1.5 amperes. What is the mass of copper deposited at the cathode?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$t=600 \\mathrm{~s}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "charge = current $\\times$ time $=1.5 \\mathrm{~A} \\times 600 \\mathrm{~s}=900 \\mathrm{C}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "According to the reaction:"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\mathrm{Cu}^{2+}(\\mathrm{aq})+2 \\mathrm{e}^{-}=\\mathrm{Cu}(\\mathrm{~s})\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We require 2F or $2 \\times 96487 \\mathrm{C}$ to deposit 1 mol or 63 g of Cu .\nFor 900 C, the mass of Cu deposited"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n=\\left(63 \\mathrm{~g} \\mathrm{~mol}^{-1} \\times 900 \\mathrm{C}\\right) /\\left(2 \\times 96487 \\mathrm{C} \\mathrm{~mol}^{-1}\\right)=0.2938 \\mathrm{~g} .\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Mass of Cu deposited $= 0.2938 \\mathrm{~g}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1",
+      "kind": "exercise",
+      "number": "2.1",
+      "topic": "Metal displacement order",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Arrange the following metals in the order in which they displace each other from the solution of their salts.\nAl, Cu, Fe, Mg and Zn."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The following is the order in which the given metals displace each other from the solution of their salts.\n\nMg, Al, Zn, Fe, Cu"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Mg, Al, Zn, Fe, Cu"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2",
+      "kind": "exercise",
+      "number": "2.2",
+      "topic": "Reducing power ranking",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Given the standard electrode potentials,\n$\\mathrm{K}^{+} / \\mathrm{K}=-2.93 \\mathrm{~V}, \\mathrm{Ag}^{+} / \\mathrm{Ag}=0.80 \\mathrm{~V}$,\n$\\mathrm{Hg}^{2+} / \\mathrm{Hg}=0.79 \\mathrm{~V}$\n$\\mathrm{Mg}^{2+} / \\mathrm{Mg}=-2.37 \\mathrm{~V}, \\mathrm{Cr}^{3+} / \\mathrm{Cr}=-0.74 \\mathrm{~V}$\nArrange these metals in their increasing order of reducing power."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The lower the reduction potential, the higher is the reducing power. The given standard electrode potentials increase in the order of $\\mathrm{K}^{+} / \\mathrm{K}<\\mathrm{Mg}^{2+} / \\mathrm{Mg}<\\mathrm{Cr}^{3+} / \\mathrm{Cr}<\\mathrm{Hg}^{2+} / \\mathrm{Hg}<$ $\\mathrm{Ag}^{+} / \\mathrm{Ag}$.\n\nHence, the reducing power of the given metals increases in the following order: Ag $<\\mathrm{Hg}<\\mathrm{Cr}<\\mathrm{Mg}<\\mathrm{K}$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Ag $<\\mathrm{Hg}<\\mathrm{Cr}<\\mathrm{Mg}<\\mathrm{K}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.3",
+      "kind": "exercise",
+      "number": "2.3",
+      "topic": "Zn-Ag galvanic cell setup",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Depict the galvanic cell in which the reaction\n$\\mathrm{Zn}(\\mathrm{s})+2 \\mathrm{Ag}^{+}(\\mathrm{aq}) \\rightarrow \\mathrm{Zn}^{2+}(\\mathrm{aq})+2 \\mathrm{Ag}(\\mathrm{s})$ takes place. Further show:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Which of the electrode is negatively charged?"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "The carriers of the current in the cell."
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Individual reaction at each electrode."
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The galvanic cell in which the given reaction takes place is depicted as:\n\n$$\n\\mathrm{Zn}_{(s)}\\left|\\mathrm{Zn}_{(a q)}^{2+} \\| \\mathrm{Ag}_{(a q)}^{+}\\right| \\mathrm{Ag}_{(s)}\n$$\n\n(i) Zn electrode (anode) is negatively charged.\n(ii) Ions carry the current in the cell. In the external circuit, current flows from silver to zinc.\n(iii) The reaction taking place at the anode is given by,\n$$\n\\mathrm{Zn}_{(s)} \\longrightarrow \\mathrm{Zn}_{(a q)}^{2+}+2 \\mathrm{e}^{-}\n$$\nThe reaction taking place at the cathode is given by,\n$$\n\\mathrm{Ag}_{(\\mathrm{aq})}^{+}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Ag}_{(s)}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.4",
+      "kind": "exercise",
+      "number": "2.4",
+      "topic": "Standard cell potential and Gibbs energy",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Calculate the standard cell potentials of galvanic cell in which the following reactions take place:\nCalculate the $\\Delta_{\\mathrm{r}} G^{\\circ}$ and equilibrium constant of the reactions."
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$2 \\mathrm{Cr}(\\mathrm{s})+3 \\mathrm{Cd}^{2+}(\\mathrm{aq}) \\rightarrow 2 \\mathrm{Cr}^{3+}(\\mathrm{aq})+3 \\mathrm{Cd}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Fe}^{2+}(\\mathrm{aq})+\\mathrm{Ag}^{+}(\\mathrm{aq}) \\rightarrow \\mathrm{Fe}^{3+}(\\mathrm{aq})+\\mathrm{Ag}(\\mathrm{s})$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $E_{\\mathrm{Cr}^{3+} / \\mathrm{Cr}}^{\\ominus}=0.74 \\mathrm{~V}$\n$$\nE_{\\mathrm{Cd}^{2+} / \\mathrm{Cd}}^{\\ominus}=-0.40 \\mathrm{~V}\n$$\n\nThe galvanic cell of the given reaction is depicted as:\n\n$$\n\\mathrm{Cr}_{(s)}\\left|\\mathrm{Cr}_{(a q)}^{3+} \\| \\mathrm{Cd}_{(a q)}^{2+}\\right| \\mathrm{Cd}_{(s)}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, the standard cell potential is\n\n$$\n\\begin{aligned}\nE_{\\text {cell }}^{\\ominus} & =E_{\\mathrm{R}}^{\\ominus}-E_{\\mathrm{L}}^{\\ominus} \\\\\n& =-0.40-(-0.74) \\\\\n& =+0.34 \\mathrm{~V}\n\\end{aligned}\n$$\n\n$$\n\\Delta_{r} G^{\\ominus}=-n \\mathrm{~F} E_{\\text {cell }}^{\\ominus}\n$$\n\nIn the given equation, $n$\n\n$$\n=6\n$$\n\n$$\n\\begin{aligned}\n& \\mathrm{F}=96487 \\mathrm{C} \\mathrm{~mol}^{-1} \\\\\n& E_{\\text {cell }}^{\\ominus}=+0.34 \\mathrm{~V}\n\\end{aligned}\n$$\n\nThen, $\\Delta_{\\mathrm{r}} G^{\\ominus}=-6 \\times 96487 \\mathrm{C} \\mathrm{mol}^{-1} \\times 0.34 \\mathrm{~V}$\n\n$$\n\\begin{aligned}\n& =-196833.48 \\mathrm{CV} \\mathrm{~mol}^{-1} \\\\\n& =-196833.48 \\mathrm{~J} \\mathrm{~mol}^{-1} \\\\\n& =-196.83 \\mathrm{~kJ} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Again,\n\n$$\n\\begin{aligned}\n& \\Delta_{\\mathrm{r}} G^{\\ominus}=-\\mathrm{R} T \\ln K \\\\\n& \\begin{aligned}\n& \\Rightarrow \\Delta_{\\mathrm{r}} G^{\\ominus}=-2.303 \\mathrm{R} T \\ln K \\\\\n& \\Rightarrow \\log K=-\\frac{\\Delta_{\\mathrm{r}} G}{2.303 \\mathrm{R} T} \\\\\n& \\quad=\\frac{-196.83 \\times 10^{3}}{2.303 \\times 8.314 \\times 298} \\\\\n&=34.496 \\\\\n& \\therefore \\mathrm{~K}=\\text { antilog }(34.496)= \\\\\n& 3.13 \\times 10^{34}\n\\end{aligned}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii)\n\n$$\nE_{\\mathrm{Fe}^{3+} / \\mathrm{Fe}^{2+}}=0.77 \\mathrm{~V}\n$$\n\n$$\nE_{\\mathrm{Ag}^{+} / \\mathrm{Ag}}^{\\ominus}=0.80 \\mathrm{~V}\n$$\n\nThe galvanic cell of the given reaction is depicted as:\n\n$$\n\\mathrm{Fe}_{(a q)}^{2+}\\left|\\mathrm{Fe}_{(a q)}^{3+}\\right|\\left|\\mathrm{Ag}_{(a q)}^{+}\\right| \\mathrm{Ag}_{(s)}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, the standard cell potential is\n\n$$\n\\begin{aligned}\nE_{\\text {cell }}^{\\ominus} & =E_{\\mathrm{R}}^{\\ominus}-E_{\\mathrm{L}}^{\\ominus} \\\\\n& =0.80-0.77 \\\\\n& =0.03 \\mathrm{~V}\n\\end{aligned}\n$$\n\nHere, $n=1$.\nThen, $\\Delta_{\\mathrm{r}} G^{\\ominus}=-n \\mathrm{~F} E_{\\text {cell }}^{\\ominus}$\n\n$$\n=-1 \\times 96487 \\mathrm{C} \\mathrm{~mol}^{-1} \\times 0.03 \\mathrm{~V}\n$$\n\n$$\n\\begin{aligned}\n& =-2894.61 \\mathrm{~J} \\mathrm{~mol}^{-1} \\\\\n& =-2.89 \\mathrm{~kJ} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Again, $\\Delta_{\\mathrm{r}} G^{\\ominus}=-2.303 \\mathrm{R} T \\ln K$\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\log K=-\\frac{\\Delta_{\\mathrm{r}} G}{2.303 \\mathrm{R} T} \\\\\n& \\quad=\\frac{-2894.61}{2.303 \\times 8.314 \\times 298} \\\\\n& =0.5073 \\\\\n& \\therefore \\mathrm{~K}=\\text { antilog (0.5073) } \\\\\n& =3.2 \\text { (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(i) $E_{\\text{cell}}^{\\ominus} = +0.34 \\mathrm{~V}$, $\\Delta_{r}G^{\\ominus} = -196.83 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$, $K = 3.13 \\times 10^{34}$; (ii) $E_{\\text{cell}}^{\\ominus} = 0.03 \\mathrm{~V}$, $\\Delta_{r}G^{\\ominus} = -2.89 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$, $K = 3.2$ (approximately)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.5",
+      "kind": "exercise",
+      "number": "2.5",
+      "topic": "Nernst equation and emf of cells",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write the Nernst equation and emf of the following cells at 298 K:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Mg}(\\mathrm{s})\\left|\\mathrm{Mg}^{2+}(0.001 \\mathrm{M})\\right|\\left|\\mathrm{Cu}^{2+}(0.0001 \\mathrm{M})\\right| \\mathrm{Cu}(\\mathrm{s})$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Fe}(\\mathrm{s})\\left|\\mathrm{Fe}^{2+}(0.001 \\mathrm{M})\\right|\\left|\\mathrm{H}^{+}(1 \\mathrm{M})\\right| \\mathrm{H}_{2}(\\mathrm{~g})(1 \\mathrm{bar}) \\mid \\mathrm{Pt}(\\mathrm{s})$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Sn}(\\mathrm{s})\\left|\\mathrm{Sn}^{2+}(0.050 \\mathrm{M}) \\| \\mathrm{H}^{+}(0.020 \\mathrm{M})\\right| \\mathrm{H}_{2}(\\mathrm{~g})$ (1 bar) | Pt (s)"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\operatorname{Pt}(\\mathrm{s})\\left|\\mathrm{Br}^{-}(0.010 \\mathrm{M})\\right| \\mathrm{Br}_{2}(l) \\| \\mathrm{H}^{+}(0.030 \\mathrm{M}) \\mid \\mathrm{H}_{2}(\\mathrm{~g})$ (1 bar) | Pt(s)."
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) For the given reaction, the Nernst equation can be given as:\n$$\n\\begin{aligned}\n& E_{\\text {cell }}=E_{\\text {cell }}^{\\ominus}-\\frac{0.0591}{n} \\log \\frac{\\left[\\mathrm{Mg}^{2+}\\right]}{\\left[\\mathrm{Cu}^{2+}\\right]} \\\\\n&=\\{0.34-(-2.36)\\}-\\frac{0.0591}{2} \\log \\frac{.001}{.0001} \\\\\n&=2.7-\\frac{0.0591}{2} \\log 10 \\\\\n&=2.7-0.02955 \\\\\n&=2.67 \\mathrm{~V} \\text { (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) For the given reaction, the Nernst equation can be given as:\n\n$$\n\\begin{aligned}\nE_{\\text {cell }} & =E_{\\text {cell }}^{\\ominus}-\\frac{0.0591}{n} \\log \\frac{\\left[\\mathrm{Fe}^{2+}\\right]}{\\left[\\mathrm{H}^{+}\\right]^{2}} \\\\\n& =\\{0-(-0.44)\\}-\\frac{0.0591}{2} \\log \\frac{0.001}{1^{2}} \\\\\n& =0.44-0.02955(-3) \\\\\n= & 0.52865 \\mathrm{~V} \\\\\n= & 0.53 \\mathrm{~V} \\text { (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) For the given reaction, the Nernst equation can be given as:\n\n$$\n\\begin{aligned}\n& E_{\\text {cell }}=E_{\\text {cell }}^{\\ominus}-\\frac{0.0591}{n} \\log \\frac{\\left[\\mathrm{Sn}^{2+}\\right]}{\\left[\\mathrm{H}^{+}\\right]^{2}} \\\\\n& \\quad=\\{0-(-0.14)\\}-\\frac{0.0591}{2} \\log \\frac{0.050}{(0.020)^{2}} \\\\\n& =0.14-0.0295 \\times \\log 125 \\\\\n& =0.14-0.062 \\\\\n& =0.078 \\mathrm{~V} \\\\\n& =0.08 \\mathrm{~V} \\text { (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) For the given reaction, the Nernst equation can be given as:\n\n$$\n\\begin{aligned}\nE_{\\text {cell }} & =E_{\\text {cell }}^{\\ominus}-\\frac{0.0591}{n} \\log \\frac{1}{\\left[\\mathrm{Br}^{-}\\right]^{2}\\left[\\mathrm{H}^{+}\\right]^{2}} \\\\\n& =(0-1.09)-\\frac{0.0591}{2} \\log \\frac{1}{(0.010)^{2}(0.030)^{2}} \\\\\n& =-1.09-0.02955 \\times \\log \\frac{1}{0.00000009} \\\\\n& =-1.09-0.02955 \\times \\log \\frac{1}{9 \\times 10^{-8}} \\\\\n& =-1.09-0.02955 \\times \\log \\left(1.11 \\times 10^{7}\\right) \\\\\n& =-1.09-0.02955(0.0453+7) \\\\\n& =-1.09-0.208 \\\\\n& =-1.298 \\mathrm{~V}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(i) $2.67 \\mathrm{~V}$ (approximately); (ii) $0.53 \\mathrm{~V}$ (approximately); (iii) $0.08 \\mathrm{~V}$ (approximately); (iv) $-1.298 \\mathrm{~V}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.6",
+      "kind": "exercise",
+      "number": "2.6",
+      "topic": "Gibbs energy and standard potential of button cell",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "In the button cells widely used in watches and other devices the following reaction takes place:\n$\\mathrm{Zn}(\\mathrm{s})+\\mathrm{Ag}_{2} \\mathrm{O}(\\mathrm{s})+\\mathrm{H}_{2} \\mathrm{O}(\\mathrm{l}) \\rightarrow \\mathrm{Zn}^{2+}(\\mathrm{aq})+2 \\mathrm{Ag}(\\mathrm{s})+2 \\mathrm{OH}^{-}(\\mathrm{aq})$\nDetermine $\\Delta_{r} G^{\\circ}$ and $E^{\\circ}$ for the reaction."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "= 1.104 V"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We know that,\n\n$$\n\\begin{aligned}\n& \\Delta_{r} G^{\\ominus}=-n \\mathrm{~F} E^{\\ominus} \\\\\n& =-2 \\times 96487 \\times 1.04 \\\\\n& =-213043.296 \\mathrm{~J} \\\\\n& =-213.04 \\mathrm{~kJ}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$E^{\\ominus} = 1.104 \\mathrm{~V}$ (as stated); $\\Delta_{r}G^{\\ominus} = -213.04 \\mathrm{~kJ}$ (calculation shown uses $1.04$, not $1.104$ — see report)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.7",
+      "kind": "exercise",
+      "number": "2.7",
+      "topic": "Conductivity and molar conductivity definitions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Define conductivity and molar conductivity for the solution of an electrolyte. Discuss their variation with concentration."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Conductivity of a solution is the conductance of the solution kept between two electrodes 1 cm apart, each with an area of cross-section of 1 sq. cm. It is the inverse of resistivity, so it is also called specific conductance, and is written as $\\kappa$. If $\\rho$ is the resistivity, we can write:\n\n$$\n\\kappa=\\frac{1}{\\rho}\n$$\n\nAt any given concentration, the conductivity of a solution is the conductance $(G)$ of one unit volume of the solution. This volume is held between two platinum electrodes, each of unit area of cross-section, separated by unit length.\ni.e.,\n\n$$\nG=\\kappa \\frac{a}{l}=\\kappa \\cdot 1=\\kappa\n$$\n\n(Since $a=1, l=1$ )\nConductivity always decreases as concentration decreases, for both weak and strong electrolytes. This is because fewer ions per unit volume are available to carry the current as concentration falls."
+            }
+          ],
+          "label": "Conductivity"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "## Molar conductivity:\n\nAt a given concentration, molar conductivity is the conductance of a volume V of solution that contains 1 mole of the electrolyte, kept between two electrodes with area of cross-section $A$ and unit length between them.\n\n$$\n\\Lambda_{m}=\\kappa \\frac{A}{l}\n$$\n\nNow, $I=1$ and $A=\\mathrm{V}$ (volume containing 1 mole of the electrolyte).\n\n$$\n\\therefore \\Lambda_{m}=\\kappa \\mathrm{V}\n$$\n\nMolar conductivity increases as concentration decreases. This happens because the total volume V of the solution containing one mole of the electrolyte increases on dilution.\nThe variation of $\\Lambda_{m}$ with $\\sqrt{\\mathrm{c}}$ for strong and weak electrolytes is shown in the following plot:"
+            }
+          ],
+          "label": "Molar conductivity"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_2_29.jpg",
+          "caption": "The variation of $\\Lambda_{m}$ with $\\sqrt{\\mathrm{c}}$ for strong and weak electrolytes."
+        }
+      ]
+    },
+    {
+      "id": "q_2.8",
+      "kind": "exercise",
+      "number": "2.8",
+      "topic": "Molar conductivity of KCl solution",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The conductivity of 0.20 M solution of KCl at 298 K is 0.0248 S cm ${ }^{-1}$. Calculate its molar conductivity."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Given, $\\kappa$\n\n$$\n\\begin{aligned}\n& =0.0248 \\mathrm{~S} \\mathrm{~cm}^{-1} \\mathrm{C} \\\\\n& =0.20 \\mathrm{M}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\therefore \\text { Molar conductivity, } \\Lambda_{m}=\\frac{\\kappa \\times 1000}{\\mathrm{c}} \\\\\n& =\\frac{0.0248 \\times 1000}{0.2} \\\\\n& =124 \\mathrm{Scm}^{2} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$124 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.9",
+      "kind": "exercise",
+      "number": "2.9",
+      "topic": "Cell constant from KCl conductivity",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The resistance of a conductivity cell containing 0.001M KCl solution at 298 K is $1500 \\Omega$. What is the cell constant if conductivity of 0.001 M KCl solution at 298 K is $0.146 \\times 10^{-3} \\mathrm{~S} \\mathrm{~cm}^{-1}$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Given,"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\text { Conductivity, } \\kappa=0.146 \\times 10^{-3} \\mathrm{~S} \\mathrm{~cm}^{-1} \\\\\n& \\text { Resistance, } R=1500 \\Omega \\\\\n& \\therefore \\text { Cell constant }=\\kappa \\times R \\\\\n& =0.146 \\times 10^{-3} \\times 1500 \\\\\n& =0.219 \\mathrm{~cm}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$0.219 \\mathrm{~cm}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.10",
+      "kind": "exercise",
+      "number": "2.10",
+      "topic": "Molar conductivity of NaCl vs concentration",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The conductivity of sodium chloride at 298 K has been determined at different concentrations and the results are given below:\n\n| Concentration/M | 0.001 | 0.010 | 0.020 | 0.050 | 0.100 |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| $10^{2} \\times \\kappa / \\mathrm{S} \\mathrm{m}^{-1}$ | 1.237 | 11.85 | 23.15 | 55.53 | 106.74 |\n\nCalculate $\\Lambda_{m}$ for all concentrations and draw a plot between $\\Lambda_{m}$ and $\\mathrm{c}^{1 / 2}$. Find the value of $\\Lambda_{m}^{0}$."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_2_30.jpg",
+          "caption": "Plot of $\\Lambda_{m}$ against $c^{1/2}$ for the given NaCl concentration data."
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Given,\n\n$$\n\\kappa=1.237 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.001 \\mathrm{M}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Then, $\\kappa=1.237 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.0316 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\Lambda_{m}=\\frac{\\kappa}{c} \\\\\n& =\\frac{1.237 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.001 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =123.7 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=11.85 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.010 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\mathrm{K}=11.85 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.1 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\Lambda_{m}=\\frac{\\kappa}{c} \\\\\n& =\\frac{11.85 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.010 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =118.5 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=23.15 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.020 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\kappa=23.15 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.1414 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\Lambda_{m}=\\frac{K}{c} \\\\\n& =\\frac{23.15 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.020 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =115.8 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=55.53 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.050 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\kappa=55.53 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.2236 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\kappa=\\frac{\\kappa}{c} \\\\\n& =\\frac{55.53 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.050 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =111.11 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=106.74 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.100 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\kappa=106.74 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.3162 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\Lambda_{m}=\\frac{K}{c} \\\\\n= & \\frac{106.74 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.100 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n= & 106.74 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Now, we }\n\\end{aligned}\n$$\n\nhave the following data:"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "| $\\mathrm{C}^{1 / 2} / \\mathrm{M}^{1 / 2}$ | 0.0316 | 0.1 | 0.1414 | 0.2236 | 0.3162 |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| $\\Lambda_{m}\\left(\\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}\\right)$ | 123.7 | 118.5 | 115.8 | 111.1 | 106.74 |"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since the line interrupts ${ }^{\\Lambda_{m}}$ at $124.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}, \\Lambda_{m}^{0}=124.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\Lambda_{m}^{0} = 124.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.11",
+      "kind": "exercise",
+      "number": "2.11",
+      "topic": "Molar conductivity and dissociation constant of acetic acid",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Conductivity of 0.00241 M acetic acid is $7.896 \\times 10^{-5} \\mathrm{~S} \\mathrm{~cm}^{-1}$. Calculate its molar conductivity. If $\\Lambda_{m}^{0}$ for acetic acid is $390.5 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$, what is its dissociation constant?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Given, $\\kappa=7.896 \\times 10^{-5} \\mathrm{~S} \\mathrm{~m}^{-1} \\mathrm{c}$\n$=0.00241 \\mathrm{~mol} \\mathrm{~L}^{-1}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Then, molar conductivity,"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\Lambda_{m}=\\frac{K}{\\mathrm{c}}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\frac{7.896 \\times 10^{-5} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.00241 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =32.76 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& \\Lambda_{m}^{0}=390.5 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\quad \\text { Again }, \\\\\n& \\alpha=\\frac{\\Lambda_{m}}{\\Lambda_{m}^{0}}=\\frac{32.76 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}}{390.5 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}}\n\\end{aligned}\n$$\n\nNow,\n\n$$\n\\text { = } 0.084\n$$\n\n$$\n\\begin{aligned}\n& \\therefore K_{a}=\\frac{\\mathrm{c} \\alpha^{2}}{(1-\\alpha)} \\\\\n& =\\frac{\\left(0.00241 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)(0.084)^{2}}{(1-0.084)} \\\\\n& =1.86 \\times 10^{-5} \\mathrm{~mol} \\mathrm{~L}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\Lambda_{m} = 32.76 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$; $\\alpha = 0.084$; $K_{a} = 1.86 \\times 10^{-5} \\mathrm{~mol} \\mathrm{~L}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.12",
+      "kind": "exercise",
+      "number": "2.12",
+      "topic": "Charge required for reductions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "How much charge is required for the following reductions:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "1 mol of $\\mathrm{Al}^{3+}$ to Al ?"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "1 mol of $\\mathrm{Cu}^{2+}$ to Cu ?"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "1 mol of $\\mathrm{MnO}_{4}^{-}$to $\\mathrm{Mn}^{2+}$ ?"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i)\n\n$$\n\\mathrm{Al}^{3+}+3 \\mathrm{e}^{-} \\longrightarrow \\mathrm{Al}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "∴ Required charge $=3 \\mathrm{~F}$\n\n$$\n\\begin{aligned}\n& =3 \\times 96487 \\mathrm{C} \\\\\n& =289461 \\mathrm{C}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii)\n\n$$\n\\mathrm{Cu}^{2+}+2 \\mathrm{e}^{-} \\longrightarrow \\mathrm{Cu}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "∴ Required charge $=2 \\mathrm{~F}$\n\n$$\n\\begin{aligned}\n& =2 \\times 96487 \\mathrm{C} \\\\\n& =192974 \\mathrm{C}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii)\n\n$$\n\\mathrm{MnO}_{4}^{-} \\longrightarrow \\mathrm{Mn}^{2+}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i.e.,\n\n$$\n\\begin{aligned}\n& \\therefore \\\\\n& =5 \\times 96487 \\mathrm{C} \\\\\n& =482435 \\mathrm{C}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(i) $289461 \\mathrm{C}$ (3 F); (ii) $192974 \\mathrm{C}$ (2 F); (iii) $482435 \\mathrm{C}$ (5 F)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.13",
+      "kind": "exercise",
+      "number": "2.13",
+      "topic": "Faraday charge for metal production",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "How much electricity in terms of Faraday is required to produce"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "20.0 g of Ca from molten $\\mathrm{CaCl}_{2}$ ?"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "40.0 g of Al from molten $\\mathrm{Al}_{2} \\mathrm{O}_{3}$ ?"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) According to the question,\n\n$$\n\\mathrm{Ca}^{2+}+2 \\mathrm{e}^{-1} \\longrightarrow \\underset{40 \\mathrm{~g}}{\\mathrm{Ca}}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Electricity required to produce 40 g of calcium $=2 \\mathrm{~F}$\nTherefore, electricity required to produce 20 g of calcium $=\\frac{2 \\times 20}{40} \\mathrm{~F}$\n\n$$\n\\text { = } 1 \\text { F }\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) According to the question,\n\n$$\n\\mathrm{Al}^{3+}+3 \\mathrm{e}^{-} \\longrightarrow{ }_{27 \\mathrm{~g}}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Electricity required to produce 27 g of AI = 3 F\nTherefore, electricity required to produce 40 g of $\\mathrm{Al}=\\frac{3 \\times 40}{27} \\mathrm{~F}$ $=4.44 \\mathrm{~F}$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(i) $1 \\mathrm{~F}$; (ii) $4.44 \\mathrm{~F}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.14",
+      "kind": "exercise",
+      "number": "2.14",
+      "topic": "Charge for oxidation reactions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "How much electricity is required in coulomb for the oxidation of"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "1 mol of $\\mathrm{H}_{2} \\mathrm{O}$ to $\\mathrm{O}_{2}$ ?"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "1 mol of FeO to $\\mathrm{Fe}_{2} \\mathrm{O}_{3}$ ?"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) According to the question,\n\n$$\n\\mathrm{H}_{2} \\mathrm{O} \\longrightarrow \\mathrm{H}_{2}+\\frac{1}{2} \\mathrm{O}_{2}\n$$\n\nNow, we can write:\n\n$$\n\\mathrm{O}^{2-} \\longrightarrow \\frac{1}{2} \\mathrm{O}_{2}+2 \\mathrm{e}^{-}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Electricity required for the oxidation of 1 mol of $\\mathrm{H}_{2} \\mathrm{O}$ to $\\mathrm{O}_{2}=2 \\mathrm{~F}$\n\n$$\n\\begin{aligned}\n& =2 \\times 96487 \\mathrm{C} \\\\\n& =192974 \\mathrm{C}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) According to the question,\n\n$$\n\\mathrm{Fe}^{2+} \\longrightarrow \\mathrm{Fe}^{3+}+\\mathrm{e}^{-1}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Electricity required for the oxidation of 1 mol of FeO to $\\mathrm{Fe}_{2} \\mathrm{O}_{3}=1 \\mathrm{~F}$\n\n$$\n\\text { = } 96487 \\text { C }\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(i) $192974 \\mathrm{C}$ (2 F); (ii) $96487 \\mathrm{C}$ (1 F)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.15",
+      "kind": "exercise",
+      "number": "2.15",
+      "topic": "Mass of nickel deposited",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A solution of $\\mathrm{Ni}\\left(\\mathrm{NO}_{3}\\right)_{2}$ is electrolysed between platinum electrodes using a current of 5 amperes for 20 minutes. What mass of Ni is deposited at the cathode?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Given,\nCurrent $=5 \\mathrm{~A}$\nTime $=20 \\times 60=1200 \\mathrm{~s}$\n∴ Charge = current × time\n$=5 \\times 1200$\n$=6000 \\mathrm{C}$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "According to the reaction,\n\n$$\n\\begin{aligned}\n\\mathrm{Ni}_{(a q)}^{2+}+2 \\mathrm{e}^{-} \\longrightarrow & \\mathrm{Ni}_{(s)} \\\\\n& 58.7 \\mathrm{~g}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Nickel deposited by $2 \\times 96487 \\mathrm{C}=58.71 \\mathrm{~g}$\nTherefore, nickel deposited by $6000 \\mathrm{C}=\\frac{58.71 \\times 6000}{2 \\times 96487} \\mathrm{~g}$\n$=1.825 \\mathrm{~g}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, 1.825 g of nickel will be deposited at the cathode."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$1.825 \\mathrm{~g}$ of nickel"
+        }
+      ]
+    },
+    {
+      "id": "q_2.16",
+      "kind": "exercise",
+      "number": "2.16",
+      "topic": "Series electrolytic cells deposition",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Three electrolytic cells A,B,C containing solutions of $\\mathrm{ZnSO}_{4}, \\mathrm{AgNO}_{3}$ and $\\mathrm{CuSO}_{4}$, respectively are connected in series. A steady current of 1.5 amperes was passed through them until 1.45 g of silver deposited at the cathode of cell B. How long did the current flow? What mass of copper and zinc were deposited?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "According to the reaction:\n\n$$\n\\begin{aligned}\n\\mathrm{Ag}_{(a q)}^{+}+\\mathrm{e}^{-} \\longrightarrow & \\mathrm{Ag}_{(s)} \\\\\n& 108 \\mathrm{~g}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i.e., 108 g of Ag is deposited by 96487 C.\nTherefore, 1.45 g of Ag is deposited by $=\\frac{96487 \\times 1.45}{108} \\mathrm{C}$\n= 1295.43 C\nGiven,\nCurrent $=1.5 \\mathrm{~A}$\n\n$$\n\\begin{aligned}\n& \\therefore \\text { Time }=\\frac{1295.43}{1.5} \\mathrm{~s} \\\\\n& =863.6 \\mathrm{~s} \\\\\n& =864 \\mathrm{~s} \\\\\n& =14.40 \\mathrm{~min}\n\\end{aligned}\n$$\n\nAgain,\n\n$$\n\\mathrm{Cu}_{(\\mathrm{aq})}^{2+}+2 \\mathrm{e}^{-} \\longrightarrow \\underset{63.5 \\mathrm{~g}}{\\mathrm{Cu}_{(\\mathrm{s})}}\n$$\n\ni.e., $2 \\times 96487 \\mathrm{C}$ of charge deposit $=63.5 \\mathrm{~g}$ of Cu\nTherefore, 1295.43 C of charge will deposit $=\\frac{63.5 \\times 1295.43}{2 \\times 96487} \\mathrm{~g}$\n\n$$\n\\begin{aligned}\n& =0.426 \\mathrm{~g} \\text { of } \\mathrm{Cu} \\\\\n& \\mathrm{Zn}_{(a q)}^{2+}+2 \\mathrm{e}^{-} \\longrightarrow \\mathrm{Zn}_{(s)} \\\\\n& 65.4 \\mathrm{~g}\n\\end{aligned}\n$$\n\ni.e., $2 \\times 96487 \\mathrm{C}$ of charge deposit = 65.4 g of Zn\nTherefore, 1295.43 C of charge will deposit $=\\frac{65.4 \\times 1295.43}{2 \\times 96487} \\mathrm{~g}$\n$=0.439 \\mathrm{~g}$ of Zn"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Time $= 864 \\mathrm{~s}$ ($14.40 \\mathrm{~min}$); Cu deposited $= 0.426 \\mathrm{~g}$; Zn deposited $= 0.439 \\mathrm{~g}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.17",
+      "kind": "exercise",
+      "number": "2.17",
+      "topic": "Feasibility of redox reactions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Using the standard electrode potentials given in Table 3.1, predict if the reaction between the following is feasible:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Fe}^{3+}(\\mathrm{aq})$ and $\\mathrm{I}^{-}(\\mathrm{aq})$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Ag}^{+}(\\mathrm{aq})$ and $\\mathrm{Cu}(\\mathrm{s})$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Fe}^{3+}(\\mathrm{aq})$ and $\\mathrm{Br}^{-}(\\mathrm{aq})$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Ag}(\\mathrm{s})$ and $\\mathrm{Fe}^{3+}(\\mathrm{aq})$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Br}_{2}$ (aq) and $\\mathrm{Fe}^{2+}$ (aq)."
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $$\n\\begin{array}{cl}\n\\left.\\mathrm{Fe}^{3+}{ }_{(\\mathrm{aq})}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Fe}^{2+}{ }_{(\\mathrm{aq})}\\right] \\times 2 ; & E^{0}=+0.77 \\mathrm{~V} \\\\\n2 \\mathrm{I}_{(\\mathrm{aq})}^{-} \\longrightarrow \\mathrm{I}_{2(\\mathrm{~s})}+2 \\mathrm{e}^{-} ; & E^{0}=-0.54 \\mathrm{~V} \\\\\n\\hline 2 \\mathrm{Fe}^{3+}{ }_{(\\mathrm{aq})}+2 \\mathrm{I}_{(\\mathrm{aq})}^{-} \\longrightarrow 2 \\mathrm{Fe}^{2+}{ }_{(\\mathrm{aq})}+\\mathrm{I}_{2(\\mathrm{~s})} ; & E^{0}=+0.23 \\mathrm{~V}\n\\end{array}\n$$\nSince 3+(aq) and I-(aq) is feasible.\n(ii) $$\n\\begin{array}{ll}\n\\left.\\mathrm{Ag}_{(a q)}^{+}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Ag}_{(s)}\\right] \\times 2 ; & E^{\\circ}=+0.80 \\mathrm{~V}, \\mathrm{Fe} \\\\\n\\mathrm{Cu}_{(s)} \\quad \\longrightarrow \\mathrm{Cu}_{(a q)}^{2+}+2 \\mathrm{e}^{-} ; & E^{\\circ}=-0.34 \\mathrm{~V} \\\\\n2 \\mathrm{Ag}_{(a q)}^{+}+\\mathrm{Cu}_{(s)} \\longrightarrow 2 \\mathrm{Ag}_{(s)}+\\mathrm{Cu}_{(a q)}^{2+} ; & E^{\\circ}=+0.46 \\mathrm{~V}\n\\end{array}\n$$\n$E^{\\circ}$ for the overall reaction is positive, the rea ction between Ag Since + (aq) and $\\mathrm{Cu}_{(s)}$ is feasible.\n(iii) $$\n\\begin{array}{ll}\n\\left.\\mathrm{Fe}^{3+}{ }_{(a q)}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Fe}^{2+}{ }_{(a q)}\\right] \\times 2 ; & E^{0}=+0.77 \\mathrm{~V} \\\\\n2 \\mathrm{Br}^{-}{ }_{(a q)} \\longrightarrow \\mathrm{Br}_{2(q)}+2 \\mathrm{e}^{-} \\quad ; & E^{0}=-1.09 \\mathrm{~V} \\\\\n\\hline 2 \\mathrm{Fe}^{3+}{ }_{(a q)}+2 \\mathrm{Br}^{-}{ }_{(a q)} \\longrightarrow 2 \\mathrm{Fe}^{2+}{ }_{(a q)} \\text { and } \\mathrm{Br}_{2(i)} ; & E^{0}=-0.32 \\mathrm{~V}\n\\end{array}\n$$\nSince $E^{\\circ}$ for the overall reaction is negative, the reaction between Fe 3+ - (aq) and Br (aq) is not feasible.\n(iv) $$\n\\begin{array}{ll}\n\\mathrm{Ag}_{(s)} \\longrightarrow \\mathrm{Ag}_{(a q)}^{+}+\\mathrm{e}^{-} & ; E^{0}=-0.80 \\mathrm{~V} \\\\\n\\mathrm{Fe}^{3+}{ }_{(a q)}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Fe}^{2+}(a q) & ; E^{0}=+0.77 \\mathrm{~V} \\\\\n\\hline \\mathrm{Ag}_{(s)}+\\mathrm{Fe}^{3+}{ }_{(a q)} \\longrightarrow \\mathrm{Ag}_{(a q)}^{+}+\\mathrm{Fe}^{2+}{ }_{(a q)} & ; E^{0}=-0.03 \\mathrm{~V}\n\\end{array}\n$$\n(iv) $$\n\\mathrm{Br}_{2(a q)}+2 \\mathrm{e}^{-} \\longrightarrow 2 \\mathrm{Br}_{(a q)}^{-} \\quad ; E^{\\circ}=+1.09 \\mathrm{~V}\n$$\n!\n$$\n\\begin{aligned}\n& \\left.\\mathrm{Fe}^{2+}{ }_{(a q)} \\longrightarrow \\mathrm{Fe}^{3+}{ }_{(a q)}+\\mathrm{e}^{-}\\right] \\times 2 \\quad ; \\quad E^{\\circ}=-0.77 \\mathrm{~V} \\quad \\text { en } \\mathrm{Ag} \\quad \\text { (s) } \\text { and } \\mathrm{Fe}_{3+(a q)} \\text { is } \\\\\n& \\mathrm{Br}_{2(a q)}+2 \\mathrm{Fe}^{2+}{ }_{(a q)} \\longrightarrow 2 \\mathrm{Br}^{-}{ }_{(a q)}+2 \\mathrm{Fe}^{3+}{ }_{(a q)} ; \\quad E^{\\circ}=+0.32 \\mathrm{~V} \\quad \\text { not feasible. }\n\\end{aligned}\n$$\n$E^{\\circ}$ for the overall reaction is positive, the reaction between Br Since 2(aq) and $\\mathrm{Fe}_{2+(a q)}$ is feasible."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.18",
+      "kind": "exercise",
+      "number": "2.18",
+      "topic": "Products of electrolysis",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Predict the products of electrolysis in each of the following:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "An aqueous solution of $\\mathrm{AgNO}_{3}$ with silver electrodes."
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "An aqueous solution of $\\mathrm{AgNO}_{3}$ with platinum electrodes."
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "A dilute solution of $\\mathrm{H}_{2} \\mathrm{SO}_{4}$ with platinum electrodes."
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "An aqueous solution of $\\mathrm{CuCl}_{2}$ with platinum electrodes."
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) At cathode:"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The following reduction reactions compete to take place at the cathode.\n\n$$\n\\begin{aligned}\n& \\mathrm{Ag}_{(a q)}^{+}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Ag}_{(s)} ; E^{0}=0.80 \\mathrm{~V} \\\\\n& \\mathrm{H}_{(a q)}^{+}+\\mathrm{e}^{-} \\longrightarrow \\frac{1}{2} \\mathrm{H}_{2(g)} ; E^{0}=0.00 \\mathrm{~V}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The reaction with a higher value of $E^{\\circ}$ takes place at the cathode. Therefore, deposition of silver will take place at the cathode."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "At anode:\nThe Ag anode is attacked by $\\mathrm{NO}_{3}^{-}$ions. Therefore, the silver electrode at the anode dissolves in the solution to form $\\mathrm{Ag}^{+}$.\n(ii) At cathode:"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The following reduction reactions compete to take place at the cathode.\n\n$$\n\\begin{aligned}\n& \\mathrm{Ag}_{(a q)}^{+}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Ag}_{(s)} ; E^{0}=0.80 \\mathrm{~V} \\\\\n& \\mathrm{H}_{(a q)}^{+}+\\mathrm{e}^{-} \\longrightarrow \\frac{1}{2} \\mathrm{H}_{2(g)} ; E^{0}=0.00 \\mathrm{~V}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The reaction with a higher value of $E^{\\circ}$ takes place at the cathode. Therefore, deposition of silver will take place at the cathode."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "At anode:\nSince Pt electrodes are inert, the anode is not attacked by $\\mathrm{NO}_{3}^{-}$ions. Therefore, $\\mathrm{OH}^{-}$or $\\mathrm{NO}_{3}^{-}$ions can be oxidized at the anode. But $\\mathrm{OH}^{-}$ions have a lower discharge potential, so they get preference and decompose to liberate $\\mathrm{O}_{2}$.\n\n$$\n\\begin{aligned}\n& \\mathrm{OH}^{-} \\longrightarrow \\mathrm{OH}+\\mathrm{e}^{-} \\\\\n& 4 \\mathrm{OH}^{-} \\longrightarrow 2 \\mathrm{H}_{2} \\mathrm{O}+\\mathrm{O}_{2}\n\\end{aligned}\n$$\n\n(iii) At the cathode, the following reduction reaction occurs to produce $\\mathrm{H}_{2}$ gas."
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\mathrm{H}^{+}{ }_{(a q)}+\\mathrm{e}^{-} \\longrightarrow \\frac{1}{2} \\mathrm{H}_{2(g)}\n$$\n\nAt the anode, the following processes are possible.\n\n$$\n\\begin{aligned}\n& 2 \\mathrm{H}_{2} \\mathrm{O}_{(i)} \\longrightarrow \\mathrm{O}_{2(g)}+4 \\mathrm{H}_{(a q)}^{+}+4 \\mathrm{e}^{-} ; E^{\\circ}=+1.23 \\mathrm{~V} \\\\\n& 2 \\mathrm{SO}_{4(a q)}^{2-} \\longrightarrow \\mathrm{S}_{2} \\mathrm{O}_{6(a q)}^{2-}+2 \\mathrm{e}^{-} ; E^{\\circ}=+1.96 \\mathrm{~V}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For dilute sulphuric acid, reaction (i) is preferred to produce $\\mathrm{O}_{2}$ gas. But for concentrated sulphuric acid, reaction (ii) occurs."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) At cathode:"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The following reduction reactions compete to take place at the cathode.\n\n$$\n\\begin{array}{cc}\n\\mathrm{Cu}_{(a q)}^{2+}+2 \\mathrm{e}^{-} \\longrightarrow \\mathrm{Cu}_{(s)} ; & E^{0}=0.34 \\mathrm{~V} \\\\\n\\mathrm{H}_{(a q)}^{+}+\\mathrm{e}^{-} \\longrightarrow 1 / 2 \\mathrm{H}_{2(g)} ; & E^{0}=0.00 \\mathrm{~V}\n\\end{array}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The reaction with a higher value of $E^{\\circ}$ takes place at the cathode. Therefore, deposition of copper will take place at the cathode."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "At anode:"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The following oxidation reactions are possible at the anode.\nAt the anode, the reaction with a lower value of\n\n$$\n\\begin{aligned}\n& \\mathrm{Cl}_{(a q)}^{-} \\longrightarrow 1 / 2 \\mathrm{Cl}_{2(g)}+\\mathrm{e}^{-1} ; E^{0}=1.36 \\mathrm{~V} \\\\\n& 2 \\mathrm{H}_{2} \\mathrm{O}_{(i)} \\longrightarrow \\mathrm{O}_{2(g)}+4 \\mathrm{H}_{(a q)}^{+}+4 \\mathrm{e}^{-} ; E^{0}=+1.23 \\mathrm{~V}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$E^{\\circ}$ is preferred. But due to the overpotential of oxygen, $\\mathrm{Cl}^{-}$gets oxidized at the anode to produce $\\mathrm{Cl}_{2}$ gas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_2.1",
+      "kind": "additional_exercise",
+      "number": "2.1",
+      "topic": "Standard electrode potential of Mg",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "How would you determine the standard electrode potential of the system $\\mathrm{Mg}^{2+}$ | Mg?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The standard electrode potential of $\\mathrm{Mg}^{2+} \\mid \\mathrm{Mg}$ can be measured with respect to the standard hydrogen electrode, represented by $\\mathrm{Pt}_{(s)}, \\mathrm{H}_{2(g)}$ (1 atm) | $\\mathrm{H}^{+}{ }_{(a q)}(1 \\mathrm{M})$.\n\nWe set up a cell with $\\mathrm{Mg} \\mid \\mathrm{MgSO}_{4}(a q 1 \\mathrm{M})$ as the anode and the standard hydrogen electrode as the cathode.\n\n$$\n\\mathrm{Mg}\\left|\\mathrm{Mg}^{2+}(\\mathrm{aq}, 1 \\mathrm{M}) \\| \\mathrm{H}^{+}(\\mathrm{aq}, 1 \\mathrm{M})\\right| \\mathrm{H}_{2}(\\mathrm{~g}, 1 \\text { bar }), \\mathrm{Pt}_{(\\mathrm{s})}\n$$\n\nWe then measure the emf of the cell. This measured emf is the standard electrode potential of the magnesium electrode."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nE^{\\ominus}=E_{R}^{\\ominus}-E_{L}^{\\ominus}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Here, $E_{R}^{\\ominus}$ for the standard hydrogen electrode is zero.\n\n$$\n\\begin{aligned}\n& \\therefore E^{\\ominus}=0-E_{L}^{\\ominus} \\\\\n& =-E_{L}^{\\ominus}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_2.2",
+      "kind": "additional_exercise",
+      "number": "2.2",
+      "topic": "Zinc pot with copper sulphate",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Can you store copper sulphate solutions in a zinc pot?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Zinc is more reactive than copper. So zinc displaces copper from its salt solution. If copper sulphate solution is stored in a zinc pot, zinc will displace the copper from it.\n\n$$\n\\mathrm{Zn}+\\mathrm{CuSO}_{4} \\longrightarrow \\mathrm{ZnSO}_{4}+\\mathrm{Cu}\n$$\n\nSo, copper sulphate solution cannot be stored in a zinc pot."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_2.3",
+      "kind": "additional_exercise",
+      "number": "2.3",
+      "topic": "Oxidising agents for ferrous ions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consult the table of standard electrode potentials and suggest three substances that can oxidise ferrous ions under suitable conditions."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Substances that are stronger oxidising agents than ferrous ions can oxidise ferrous ions."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\mathrm{Fe}^{2+} \\longrightarrow \\mathrm{Fe}^{3+}+\\mathrm{e}^{-1} ; E^{\\ominus}=-0.77 \\mathrm{~V}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This implies that the substances having higher reduction potentials than +0.77 V can oxidise ferrous ions to ferric ions. Three substances that can do so are $\\mathrm{F}_{2}$, $\\mathrm{Cl}_{2}$, and $\\mathrm{O}_{2}$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\mathrm{F}_{2}$, $\\mathrm{Cl}_{2}$, and $\\mathrm{O}_{2}$"
+        }
+      ]
+    },
+    {
+      "id": "it_2.4",
+      "kind": "additional_exercise",
+      "number": "2.4",
+      "topic": "Hydrogen electrode potential at pH 10",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Calculate the potential of hydrogen electrode in contact with a solution whose pH is 10."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For hydrogen electrode,\n\n$$\n\\mathrm{H}^{+}+\\mathrm{e}^{-} \\longrightarrow \\frac{1}{2} \\mathrm{H}_{2} \\text {, it is given that } \\mathrm{pH}=10\n$$\n\n$$\n\\therefore\\left[\\mathrm{H}^{+}\\right]=10^{-10} \\mathrm{M}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, using Nernst equation:\n\n$$\n\\begin{aligned}\n& \\mathrm{H}_{\\left(\\mathrm{H}^{+}, \\frac{1}{2} \\mathrm{H}_{2}\\right)}=E_{\\left(\\mathrm{H}^{+}, \\frac{1}{2} \\mathrm{H}_{2}\\right)}^{\\ominus}-\\frac{\\mathrm{R} T}{n \\mathrm{~F}} \\ln \\frac{1}{\\left[\\mathrm{H}^{+}\\right]} \\\\\n& =E_{\\left(\\mathrm{H}^{+}, \\frac{1}{2} \\mathrm{H}_{2}\\right)}^{\\ominus}-\\frac{0.0591}{1} \\log \\frac{1}{\\left[\\mathrm{H}^{+}\\right]} \\\\\n& =0-\\frac{0.0591}{1} \\log \\frac{1}{\\left[10^{-10}\\right]} \\\\\n& =-0.0591 \\log 10^{10} \\\\\n& =-0.591 \\mathrm{~V}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$-0.591 \\mathrm{~V}$"
+        }
+      ]
+    },
+    {
+      "id": "it_2.5",
+      "kind": "additional_exercise",
+      "number": "2.5",
+      "topic": "EMF from Nernst equation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Calculate the emf of the cell in which the following reaction takes place:\n$$\n\\mathrm{Ni}(\\mathrm{~s})+2 \\mathrm{Ag}^{+}(0.002 \\mathrm{M}) \\rightarrow \\mathrm{Ni}^{2+}(0.160 \\mathrm{M})+2 \\mathrm{Ag}(\\mathrm{~s})\n$$\nGiven that $E_{\\text {cell }}^{\\mathrm{o}}=1.05 \\mathrm{~V}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Applying Nernst equation we have:\n\n$$\n\\begin{aligned}\n& \\mathrm{Ni}_{(s)}+2 \\mathrm{Ag}^{+}(0.002 \\mathrm{M}) \\rightarrow \\mathrm{Ni}^{2+}(0.160 \\mathrm{M})+2 \\mathrm{Ag}_{(s)} \\\\\n& E_{(\\text {cell) }}^{\\ominus}=1.05 \\mathrm{~V} \\\\\n& E_{\\text {(cell) }}=E_{\\text {(cell) }}^{\\ominus}-\\frac{0.0591}{n} \\log \\frac{\\left[\\mathrm{Ni}^{2+}\\right]}{\\left[\\mathrm{Ag}^{+}\\right]^{2}} \\\\\n& =1.05-\\frac{0.0591}{2} \\log \\frac{(0.160)}{(0.002)^{2}} \\\\\n& =1.05-0.02955 \\log \\frac{0.16}{0.000004} \\\\\n& =1.05-0.02955 \\log 4 \\times 10^{4} \\\\\n& =1.05-0.02955(\\log 10000+\\log 4) \\\\\n& =1.05-0.02955(4+0.6021) \\\\\n& =0.914 \\mathrm{~V}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$0.914 \\mathrm{~V}$"
+        }
+      ]
+    },
+    {
+      "id": "it_2.6",
+      "kind": "additional_exercise",
+      "number": "2.6",
+      "topic": "Gibbs energy and equilibrium constant",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The cell in which the following reaction occurs:\n$$\n2 \\mathrm{Fe}^{3+}(\\mathrm{aq})+2 \\mathrm{I}^{-}(\\mathrm{aq}) \\rightarrow 2 \\mathrm{Fe}^{2+}(\\mathrm{aq})+\\mathrm{I}_{2}(\\mathrm{~s}) \\text { has } E_{\\text {cell }}^{\\mathrm{o}}=0.236 \\mathrm{~V} \\text { at } 298 \\mathrm{~K} .\n$$\nCalculate the standard Gibbs energy and the equilibrium constant of the cell reaction."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\text { Here, } n=2, E_{\\text {cell }}^{\\ominus}=0.236 \\mathrm{~V}, \\mathrm{~T}=298 \\mathrm{~K}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We know that:\n\n$$\n\\begin{aligned}\n& \\Delta_{r} \\mathrm{G}^{\\ominus}=-n \\mathrm{FE}_{\\mathrm{cell}}^{\\ominus} \\\\\n& =-2 \\times 96487 \\times 0.236 \\\\\n& =-45541.864 \\mathrm{~J} \\mathrm{~mol}^{-1} \\\\\n& =-45.54 \\mathrm{~kJ} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Again, $\\Delta_{r} G^{\\ominus}=-2.303 \\mathrm{R} T \\log K_{\\mathrm{c}}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\Rightarrow \\log K_{\\mathrm{c}}=-\\frac{\\Delta_{r} G^{\\ominus}}{2.303 \\mathrm{R} T} \\\\\n& \\quad=-\\frac{-45.54 \\times 10^{3}}{2.303 \\times 8.314 \\times 298} \\\\\n& =7.981 \\\\\n& \\therefore K_{\\mathrm{c}}=\\text { Antilog }(7.981) \\\\\n& =9.57 \\times 10^{7}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\Delta_{r}G^{\\ominus} = -45.54 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$; $K_{c} = 9.57 \\times 10^{7}$"
+        }
+      ]
+    },
+    {
+      "id": "it_2.7",
+      "kind": "additional_exercise",
+      "number": "2.7",
+      "topic": "Conductivity and dilution",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Why does the conductivity of a solution decrease with dilution?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The conductivity of a solution is the conductance of ions present in a unit volume of the solution. The number of ions (responsible for carrying current) decreases when the solution is diluted. As a result, the conductivity of a solution decreases with dilution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_2.8",
+      "kind": "additional_exercise",
+      "number": "2.8",
+      "topic": "Limiting molar conductivity of water",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Suggest a way to determine the $\\Lambda_{m}^{\\circ}$ value of water."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Applying Kohlrausch's law of independent migration of ions, the $\\Lambda^{0}$ value of water can be determined as follows:"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\Lambda_{m\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)}^{0} & =\\lambda_{\\mathrm{H}^{+}}^{0}+\\lambda_{\\mathrm{OH}}^{0} \\\\\n& =\\left(\\lambda_{\\mathrm{H}^{+}}^{0}+\\lambda_{\\mathrm{Cl}^{-}}^{0}\\right)+\\left(\\lambda_{\\mathrm{Na}^{+}}^{0}+\\lambda_{\\mathrm{OH}^{-}}^{0}\\right)-\\left(\\lambda_{\\mathrm{Na}^{+}}^{0}+\\lambda_{\\mathrm{Cl}^{-}}^{0}\\right) \\\\\n\\Lambda_{m(\\mathrm{HCl})}^{0} & +\\Lambda_{m(\\mathrm{NaOH})}^{0}-\\Lambda_{m(\\mathrm{NaCl})}^{0}\n\\end{aligned}\n$$\n\n$$\n\\Lambda_{m}^{0}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, by knowing the values of $\\mathrm{HCl}, \\mathrm{NaOH}$, and NaCl , the $\\Lambda_{m}^{0}$ value of water can be determined."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_2.9",
+      "kind": "additional_exercise",
+      "number": "2.9",
+      "topic": "Degree of dissociation of methanoic acid",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The molar conductivity of $0.025 \\mathrm{~mol} \\mathrm{~L}^{-1}$ methanoic acid is $46.1 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$. Calculate its degree of dissociation and dissociation constant. Given $\\lambda^{0}\\left(\\mathrm{H}^{+}\\right)$ $=349.6 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$ and $\\lambda^{0}\\left(\\mathrm{HCOO}^{-}\\right)=54.6 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& C=0.025 \\mathrm{~mol} \\mathrm{~L}^{-1} \\\\\n& \\Lambda_{m}=46.1 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\\\\n& \\begin{aligned}\n& \\lambda^{0}\\left(\\mathrm{H}^{+}\\right)=349.6 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\\\\n& \\lambda^{0}(\\mathrm{HCOO}-)=54.6 \\mathrm{Scm}^{2} \\mathrm{~mol}^{-1} \\\\\n& \\Lambda_{m}^{0}(\\mathrm{HCOOH})=\\lambda^{0}\\left(\\mathrm{H}^{+}\\right)+\\lambda^{0}\\left(\\mathrm{HCOO}^{-}\\right) \\\\\n&=349.6+54.6 \\\\\n&=404.2 \\mathrm{Scm}^{2} \\mathrm{~mol}^{-1}\n\\end{aligned}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, degree of dissociation:\n\n$$\n\\begin{aligned}\n\\alpha & =\\frac{\\Lambda_{m}(\\mathrm{HCOOH})}{\\Lambda_{m}^{0}(\\mathrm{HCOOH})} \\\\\n& =\\frac{46.1}{404.2} \\\\\n& =0.114(\\text { approximately })\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, dissociation constant:\n\n$$\n\\begin{aligned}\nK & =\\frac{c \\propto c^{2}}{(1-\\propto)} \\\\\n& =\\frac{\\left(0.025 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)(0.114)^{2}}{(1-0.114)} \\\\\n& =3.67 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\alpha = 0.114$ (approximately); $K = 3.67 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "it_2.10",
+      "kind": "additional_exercise",
+      "number": "2.10",
+      "topic": "Electrons from current and time",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "If a current of 0.5 ampere flows through a metallic wire for 2 hours, then how many electrons would flow through the wire?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The current is:\n\n$$\n\\begin{aligned}\n& =0.5 \\mathrm{~A} \\\\\n& t=2 \\text { hours }=2 \\times 60 \\times 60 \\mathrm{~s}=7200 \\mathrm{~s}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, $Q=I t$\n\n$$\n\\begin{aligned}\n& =0.5 \\mathrm{~A} \\times 7200 \\mathrm{~s} \\\\\n& =3600 \\mathrm{C}\n\\end{aligned}\n$$\n\nWe know that $96487 \\mathrm{C}=6.023 \\times 10^{23}$ gives the number of electrons. So:\n\n$$\n\\begin{aligned}\n3600 \\mathrm{C} & =\\frac{6.023 \\times 10^{23} \\times 3600}{96487} \\text { number of electrons } \\\\\n& =2.25 \\times 10^{22} \\text { number of electrons }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, $2.25 \\times 10^{22}$ number of electrons will flow through the wire."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$2.25 \\times 10^{22}$ electrons"
+        }
+      ]
+    },
+    {
+      "id": "it_2.11",
+      "kind": "additional_exercise",
+      "number": "2.11",
+      "topic": "Metals extracted electrolytically",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Suggest a list of metals that are extracted electrolytically."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Metals that are on the top of the reactivity series such as sodium, potassium, calcium, lithium, magnesium, aluminium are extracted electrolytically."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Sodium, potassium, calcium, lithium, magnesium, aluminium"
+        }
+      ]
+    },
+    {
+      "id": "it_2.12",
+      "kind": "additional_exercise",
+      "number": "2.12",
+      "topic": "Charge to reduce dichromate",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider the reaction: $\\mathrm{Cr}_{2} \\mathrm{O}_{7}{ }^{2-}+14 \\mathrm{H}^{+}+6 \\mathrm{e}^{-} \\rightarrow 2 \\mathrm{Cr}^{3+}+7 \\mathrm{H}_{2} \\mathrm{O}$\nWhat is the quantity of electricity in coulombs needed to reduce 1 mol of $\\mathrm{Cr}_{2} \\mathrm{O}_{7}{ }^{2-}$ ?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The given reaction is as follows:\n\n$$\n\\begin{aligned}\n& \\mathrm{Cr}_{2} \\mathrm{O}_{7}^{2-}+14 \\mathrm{H}^{+}+6 \\mathrm{e}^{-} \\rightarrow 2 \\mathrm{Cr}^{3+}+7 \\mathrm{H}_{2} \\mathrm{O} \\text {, the required quantity of electricity will } \\\\\n& \\text { Therefore, to reduce } 1 \\text { mole of } \\mathrm{Cr}_{2} \\mathrm{O}_{7}^{2-}=6 \\mathrm{~F} \\\\\n& =6 \\times 96487 \\mathrm{C} \\\\\n& =578922 \\mathrm{C}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$578922 \\mathrm{C}$ (6 F)"
+        }
+      ]
+    },
+    {
+      "id": "it_2.13",
+      "kind": "additional_exercise",
+      "number": "2.13",
+      "topic": "Recharging lead storage battery",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write the chemistry of recharging the lead storage battery, highlighting all the materials that are involved during recharging."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": []
+    },
+    {
+      "id": "it_2.14",
+      "kind": "additional_exercise",
+      "number": "2.14",
+      "topic": "Alternative fuel cell materials",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Suggest two materials other than hydrogen that can be used as fuels in fuel cells."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Methane and methanol can be used as fuels in fuel cells."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Methane and methanol"
+        }
+      ]
+    },
+    {
+      "id": "it_2.15",
+      "kind": "additional_exercise",
+      "number": "2.15",
+      "topic": "Rusting as electrochemical cell",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Explain how rusting of iron is envisaged as setting up of an electrochemical cell."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "In corrosion, air and moisture cause oxidation at one spot on an iron object. This spot acts as the anode. The anode reaction is:"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\mathrm{Fe}_{(s)} \\longrightarrow \\mathrm{Fe}_{(a q)}^{2+}+2 \\mathrm{e}^{-}\n$$"
+            }
+          ],
+          "label": "Anode reaction"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Electrons released at this anodic spot travel through the metal to another spot on the same object.\n\nAt that spot, in the presence of $\\mathrm{H}^{+}$ ions, the electrons reduce oxygen. This spot acts as the cathode. These $\\mathrm{H}^{+}$ ions come either from $\\mathrm{H}_{2} \\mathrm{CO}_{3}$, formed when carbon dioxide from air dissolves in water, or from other acidic oxides in the atmosphere dissolving in water.\n\nThe cathode reaction is:"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\mathrm{O}_{2(\\mathrm{~g})}+4 \\mathrm{H}_{(a q)}^{+}+4 \\mathrm{e}^{-} \\longrightarrow 2 \\mathrm{H}_{2} \\mathrm{O}_{(l)}\n$$"
+            }
+          ],
+          "label": "Cathode reaction"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The overall reaction is:"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n2 \\mathrm{Fe}_{(s)}+\\mathrm{O}_{2(g)}+4 \\mathrm{H}_{(a q)}^{+} \\longrightarrow 2 \\mathrm{Fe}_{(a q)}^{2+}+2 \\mathrm{H}_{2} \\mathrm{O}_{(l)}\n$$"
+            }
+          ],
+          "label": "Overall reaction"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Atmospheric oxygen then oxidises the ferrous ions further to ferric ions. These ferric ions combine with moisture in the surroundings to form hydrated ferric oxide, $\\left(\\mathrm{Fe}_{2} \\mathrm{O}_{3}, x \\mathrm{H}_{2} \\mathrm{O}\\right)_{\\text {i.e., rust. }}$.\n\nSo, rusting of iron can be seen as the setting up of an electrochemical cell."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

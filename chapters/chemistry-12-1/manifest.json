@@ -352,5 +352,356 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Re-exported via Playwright/Chromium (chapters/chemistry-12-1/10_pdf/export.py) from the corrected 09_design/final.hi.html, following step_10/PROMPT.md exactly (networkidle + fonts.ready wait, emulate_media('screen'), print_background+prefer_css_page_size). 30 pages, 0 blank. Visually confirmed both corrected items (it_1.4 page 8, it_1.8 page 10 of the exported PDF) render cleanly with the corrected numbers and full structure intact (मान रखो/निष्कर्ष pills, nested fractions, boxed answers)."
+  },
+  {
+    "stage": "mathpix",
+    "at": "2026-09-18T13:03:30.281332+00:00",
+    "inputs": {
+      "chapter.en.pdf": "99d19dbb008280c3",
+      "solutions.en.pdf": "a35447d2a2a44d73"
+    },
+    "counts": {
+      "chapter_pages": 30,
+      "chapter_chars": 80100,
+      "chapter_dollar_spans": 920,
+      "chapter_tables": 7,
+      "chapter_image_refs": 9,
+      "solutions_pages": 51,
+      "solutions_chars": 97496,
+      "solutions_dollar_spans": 1458,
+      "solutions_tables": 10,
+      "solutions_image_refs": 3,
+      "images_downloaded_total": 26,
+      "images_downloaded_this_run": 12
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-medium addition to an already-fully-processed Hindi-only chapter (chemistry-12-1 already completed all 10 stages in Hindi previously) - by explicit user decision, this is an ENGLISH-ONLY track run independently alongside the existing Hindi files, not a bilingual merge via match.align_languages(); chapter.hi.md/solutions.hi.md are untouched. Both source PDFs independently verified before this stage: chapter.en.pdf confirmed genuine NCERT Class 12 Chemistry Unit 1 'Solutions' via page-render; solutions.en.pdf went through one failed attempt first (a 3.00 MB truncated file that opened with a valid PDF header but reported 0 pages via PyMuPDF, causing a render script to hang trying to access page -1 of an empty document) before a complete 51-page re-provided file was confirmed via rendering pages 1/2/last - content matches (mass percentage, mole fraction, osmotic pressure - core Solutions-chapter topics), labelled 'Chapter 2' internally which matches the same solutions-manual-numbers-its-own-chapter-N+1 offset pattern already documented repeatedly for other subjects in this pipeline, not a wrong-chapter mismatch. Converted via pipeline.mathpix.convert() with subject=chemistry, lang=en, chapter='1' (matching the existing Hindi figure-naming convention 'fig_1_N', not the biology-style 'fig_bio12-5_N' prefix). 12 new figures downloaded (9 chapter + 3 solutions), bringing the chapter's total images/ folder to 26 (14 existing Hindi + 12 new English), matching 9+3=12 new image references. No model reasoning about content in this stage, per stage rule."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-18T13:43:09.610895+00:00",
+    "inputs": {
+      "chapter.en.md": "5d0efee4e86f944b",
+      "solutions.en.md": "32032bb2a317e158"
+    },
+    "counts": {
+      "examples_en": 13,
+      "additional_exercise_en": 12,
+      "exercises_en": 41,
+      "final_items": 66,
+      "exercises_matched": 35,
+      "exercises_missing_solution": 6,
+      "intext_matched": 12,
+      "gate_counts_issues": 0,
+      "gate_solutions_present_issues": 6,
+      "total_figures": 6
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 4,
+    "notes": "English-only track for chemistry-12-1 (Solutions), run independently alongside the existing Hindi track per explicit user decision - no match.align_languages() bilingual merge. 4 sub-agent extraction batches dispatched per step_2/extract.md, given this chapter's scale (66 items, math-heavy, 30-page chapter + 51-page solutions manual): (1) 13 worked Examples (self-contained question+solution from chapter.en.md), (2) 12 Intext Question solutions from solutions.en.md's own 'Intext Questions' section, (3) exercise solutions 1-20, (4) exercise solutions 21-41 - the last of these batches stalled with zero progress for ~15 minutes (vs ~5-8 min for the comparable batch) and was killed and relaunched fresh, which completed normally. Intext question text (12) and all 41 exercise question texts were transcribed directly, not via sub-agent, since they were already fully visible in the mathpix output. MAJOR FINDING, verified by hand directly against solutions.en.md (not just trusting the sub-agent's own extraction): the source solutions manual's own '## Exercises Solutions' section has a genuine content defect. Its own printed 'Question 2.1' through 'Question 2.6' do NOT contain real exercise 1.1-1.6 content at all - they are a verbatim duplicate of the 'Intext Questions' section's own solutions 1.1-1.6 (e.g. 'Question 2.1' here is the benzene/CCl4 mass-percentage problem - intext question 1.1 - not exercise 1.1's real 'Define the term solution...' question). Real exercise solutions resume with ZERO further offset starting at the section's own 'Question 2.7' (confirmed verbatim = real exercise 1.7's 'mixing 300 g of 25% solution...' text) straight through 'Question 2.41' (confirmed verbatim = real exercise 1.41's K2SO4 osmotic-pressure problem, matching what was already seen on the source PDF's own last page during file verification). Exercises 1.1 through 1.6 therefore have NO solution anywhere in this 51-page manual - not a join bug, a genuine content gap in the source. Per Rule 5 (nothing invented), the 6 wrongly-numbered intext-duplicate entries were discarded from the exercise-solutions pool rather than force-matched to q_1.1-q_1.6 by their printed number, and those 6 questions were left with an empty solution field. gate_solutions_present's resulting 6 failures were individually confirmed to be exactly {q_1.1...q_1.6} (the expected, documented set) before proceeding - any other/additional failure would have been treated as a real, unexpected gap and hard-stopped. This is reported here explicitly per Rule 5 and step_2/PROMPT.md's 'report every empty solution explicitly' instruction - flagging to the user that exercises 1.1-1.6 need a different/supplementary English solutions source if full coverage is wanted; the existing Hindi track's own solutions.hi.pdf may serve as a reference for what these 6 answers should contain, or the user may accept the gap as this manual's own genuine limitation. Other real gaps flagged by the extraction sub-agents and carried through unfixed (per Rule 4 - fixing content is stage 5's job, not stage 2's): Example 1.5's and Example 1.12's headings are entirely absent from the mathpix OCR (inferred by position + content match, to verify at stage 5); Example 1.7's solution is genuinely truncated mid-derivation in the source, ending before its final numeric answer - transcribed exactly as present, no :::answer block invented. 6 figures attached (2 to q_1.14, 1 to q_1.37, 3 elsewhere from the intext/examples batches) - two inline base64 chemical-structure images (in q_1.25(iv) and q_1.31) were left as text-only per the extracting sub-agent's judgment (decorative renderings of formulas already stated in the surrounding prose, not real standalone figures) - flagged for the coordinator's/user's review if that judgment should be revisited. Genuine source OCR noise transcribed as-is throughout (per Rule 4): e.g. '1.3319. 5 g' for exercise 1.33's leading '19.5 g', 'CCl4 = 1×12+4×355' (should be 4×35.5) in sol_1.2, an empty-denominator broken fraction in sol_1.5(a), assorted mid-word line-wrap artifacts - flagged for stage 5 verification against the source PDF."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-18T13:59:14.174751+00:00",
+    "inputs": {
+      "chapter.en.md": "2679775a21e6f31e"
+    },
+    "counts": {
+      "total_items": 66,
+      "examples_items": 13,
+      "examples_bytes": 17900,
+      "qa_items": 53,
+      "qa_bytes": 71305
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-only track, run independently alongside the existing Hindi track (no merge). Pure mechanical split via pipeline.render.render() kind-filtering, no model call. Round-trip verified: re-parsed both output files with tag._parse(), confirmed container balance, and 13 examples + 53 qa (12 additional_exercise intext + 41 exercise) = 66 total items, matching stage 2's merged chapter exactly - nothing gained or lost. The 6 exercises with no solution (q_1.1-q_1.6, flagged at stage 2 as a genuine source gap, user confirmed proceed-with-gap) pass through this stage unchanged, still flagged by their empty solution field."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-18T17:14:16.683830+00:00",
+    "inputs": {
+      "examples.en.md": "690cc16eb7f99fe8",
+      "qa.en.md": "7b1845606bed60aa"
+    },
+    "counts": {
+      "combined_items": 66,
+      "combined_bytes": 89116
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-only track, pure mechanical reunion via pipeline.render.render(), no model call. Round-trip verified: re-parsed combined.en.md with tag._parse(), 66 items match stage 3's 13 examples + 53 qa exactly."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-18T17:48:13.301409+00:00",
+    "inputs": {},
+    "counts": {
+      "gap_expansion_fix": true,
+      "exercises_missing_solution": 11
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[GAP EXPANSION FIX for stage 'extract_match'] GAP EXPANSION, discovered during stage 5 verification of exercises 1.7-1.20: the original stage 2 extraction correctly found that exercises 1.1-1.6 have no real solution (see the earlier extract_match manifest entry), but missed that the same source defect ALSO affects exercises 1.8 through 1.12 (5 more items) - the 'Exercises Solutions' section's own 'Question 2.8' through 'Question 2.12' also contain the Intext Questions section's own solutions (verified directly: e.g. 'Question 2.8' is the 'vapour pressure of pure liquids A and B' problem, which is intext question 1.8's topic, not real exercise 1.8's antifreeze/ethylene-glycol molality problem confirmed on chapter.en.pdf page 28) rather than their own real exercise solutions. This was caught by a verification sub-agent reading q_1.7-q_1.20 page-by-page against the source, who noticed the solution content didn't match its own item's (separately-verified) question text for 5 consecutive items - not something the original stage 2 pass, which only spot-checked a handful of pairings by number (matching the documented '11 consecutive items silently mismatched' risk pattern in step_2/PROMPT.md), would have caught without a full page-by-page read. Directly confirmed by hand afterward: the 'Exercises Solutions' section is a single non-duplicated sequence 2.1-2.41 (no repeated headings), but only 'Question 2.7' and 'Question 2.13' through '2.41' carry genuine, correctly-matched exercise content - 2.1-2.6 and 2.8-2.12 (11 positions total) all contain intext-duplicate content instead. 2.14-2.20 were directly re-checked against the real exercise topics to confirm no further gaps in that range, and the independently-verified 21-41 range was already reported clean by its own batch. Full set of exercises with no real solution anywhere in this 51-page manual: {1,2,3,4,5,6,8,9,10,11,12} - 11 of 41, not 6. 02_extract/chapter.en.md, 03_split/{examples,qa}.en.md, and 04_combined/combined.en.md have all been rebuilt from the same underlying extraction batches with the corrected filter (excluding solution-content for exercise numbers in {1,2,3,4,5,6,8,9,10,11,12}, not just {1..6}) - gate_counts and gate_solutions_present re-verified against the exact expected 11-item gap before writing. This entry supersedes the item counts (not the content) of every manifest entry recorded before it for stages extract_match/split/combine."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-18T17:48:13.303055+00:00",
+    "inputs": {},
+    "counts": {
+      "gap_expansion_fix": true,
+      "exercises_missing_solution": 11
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[GAP EXPANSION FIX for stage 'split'] Rebuilt from the corrected 'extract_match' output; same underlying content, corrected 11-item missing-solution set (was 6)."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-18T17:48:13.304471+00:00",
+    "inputs": {},
+    "counts": {
+      "gap_expansion_fix": true,
+      "exercises_missing_solution": 11
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[GAP EXPANSION FIX for stage 'combine'] Rebuilt from the corrected 'extract_match' output; same underlying content, corrected 11-item missing-solution set (was 6)."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-18T17:59:54.969888+00:00",
+    "inputs": {
+      "combined.en.md": "86f73f4895ff1fa4",
+      "chapter.en.pdf": "99d19dbb008280c3",
+      "solutions.en.pdf": "a35447d2a2a44d73"
+    },
+    "counts": {
+      "corrections_applied": 5,
+      "corrections_held": 0,
+      "corrections_high": 4,
+      "corrections_medium_then_user_approved": 1,
+      "object_level_fixes": 1,
+      "gate_math_parity_issues": 1,
+      "gate_math_parity_issues_expected": 1,
+      "gate_counts_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 5,
+    "notes": "5 verification sub-agent batches dispatched per step_5/verify.md: examples (13), intext solutions (12), exercises 1.7-1.20 (14, required two relaunches after the first two attempts stalled with zero progress for 15+ min each and were killed - the third attempt succeeded), exercises 1.21-1.41 (21). Question text (all 41 exercises + boundary spot-checks) verified directly by hand against chapter.en.pdf pages 27-30, 4-23 - only one fix needed (q_1.33's '19. 5 g' mathpix spacing artifact, confirmed against the source as '19.5 g'). MAJOR FOLLOW-UP FINDING that expanded the stage-2 missing-solution set from 6 to 11 items: the exercises-1.7-1.20 verification batch noticed that q_1.8 through q_1.12's solution content didn't answer their own (separately-verified) question text - e.g. q_1.8's solution was about 'vapour pressure of pure liquids A and B', not its own antifreeze/ethylene-glycol question. Verified directly against solutions.en.md: the 'Exercises Solutions' section is a single non-duplicated sequence 'Question 2.1' through '2.41', but positions 2.1-2.6 AND 2.8-2.12 both contain the Intext Questions section's own solutions instead of real exercise answers - confirmed by reading the actual text, and cross-checked 2.14-2.20 to confirm no further gaps beyond the already-independently-verified 21-41 range. Full corrected missing-solution set: {1,2,3,4,5,6,8,9,10,11,12} (11 of 41 exercises), not the original 6. Retroactively fixed stages extract_match/split/combine (see their own manifest entries) before finalizing this stage - same underlying extraction content, corrected filter. 5 corrections applied at high confidence (1 promoted from medium after explicit user sign-off): q_1.33 (OCR spacing artifact in question text), ex_1.5 (scrambled two-column derivation - dropped units, truncated 25.5g to 25g, dropped two intermediate results), ex_1.7 (genuinely truncated solution - restored the missing delta-Tb calculation and final boiling point 373.202 K from the source), it_1.5 (division-by-zero garble in a compound fraction, user-approved), q_1.32 (truncated delta-Tf derivation missing its final '0.65 K' line, already present in the item's own separate answer field so nothing invented). One object-level fix (not a Correction - no field existed to address): ex_1.7 was missing its :::answer block entirely; added final_answer='373.202 K' directly, matching the value the corrected solution derivation reaches. gate_math_parity's one flagged issue (ex_1.7: inline math 3->5) is expected and correct - the correction legitimately restores dropped math, verified against the source, not an accidental loss; confirmed this was the ONLY flagged issue before proceeding. gate_counts clean. Other findings confirmed as genuine SOURCE quirks, not extraction errors, and left untouched per the rule that a textbook/manual's own error is not ours to fix: it_1.2's 'CCl4 = 1x12+4x355' (should be 35.5, source's own typo), it_1.23(iii)'s 'ion-diople' typo, q_1.32's own internal 0.0816-vs-0.0186 inconsistency (both values are the source's own printed text), it_1.19's oddly-ordered variable-name labels (matches the source's own layout). No missing sub-parts, question-numbering issues, or figure-reference problems found anywhere across all 66 items - all figures (fig_1_23, fig_1_24, fig_1_25) confirmed correctly placed and captioned."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-18T18:17:37.503294+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "8609a8935d6e2888"
+    },
+    "counts": {
+      "solution_fields_total": 55,
+      "items_simplified": 29,
+      "items_left_unchanged": 26,
+      "restore_failed": 0,
+      "gate_question_text_frozen_issues": 0,
+      "gate_answers_unchanged_issues": 0,
+      "gate_math_parity_issues": 0,
+      "gate_bilingual_issues_before": 118,
+      "gate_bilingual_issues_after": 118,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 5,
+    "notes": "5 sub-agent batches dispatched per step_6/simplify.md, given this chapter's scale (55 solution fields across 66 items - 11 exercises have no solution at all, a confirmed source gap, so nothing to simplify there): examples (13, 10 reworded), intext questions (12, 5 reworded), exercises 1.7+1.13-1.20 (9, 6 reworded), exercises 1.21-1.30 (10, 6 reworded), exercises 1.31-1.41 (11, 2 reworded). 29 of 55 fields reworded overall (shorter sentences, plainer register, textbook phrasing like 'Hence'/'Therefore' softened), 26 left unchanged because already short/clear - a valid outcome per step_6/simplify.md, not under-effort. Given no literal protect.freeze() token-masking was used for the sub-agent dispatch (each was instead given explicit, strict instructions never to touch anything inside a $...$/$$...$$ span), gate_math_parity served as the mechanical safety net this stage's own rules call for - 0 issues, confirming no math was accidentally altered during rewording. Multiple batches independently verified their own math-span integrity beyond just eyeballing: one extracted and diffed all 353 math spans between original and rewritten text (empty diff), another extracted the exact source line range via sed first and diffed the whole file afterward (only the 2 intended lines differed). Sound judgment calls, correctly declining to touch genuine source issues that aren't stage 6's job: q_1.16's heptane/octane vapour-pressure-value ordering is confusingly laid out in the source itself (left untouched rather than risk silently swapping which value belongs to which component - exactly the comparative-reordering risk step_6/simplify.md warns about); q_1.19's source solution has a pre-existing mole-count/label mismatch (moles of solvent vs solute mislabeled) - flagged for the coordinator, not corrected (that's stage 5's call, not stage 6's); q_1.32's already-known 0.0816-vs-0.0186 source inconsistency reconfirmed, left untouched. it_1.5's garbled math layout left untouched (already flagged/partially fixed at stage 5; remaining oddity is inside a math span stage 6 cannot touch). gate_question_text_frozen/gate_answers_unchanged/gate_math_parity all 0 issues. gate_bilingual unchanged before/after (118/118, all pre-existing since this is an English-only track with no Hindi fields at all) - confirms simplification introduced no new bilingual gaps."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-19T06:15:28.718468+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "e09e9e4ce154cd2a"
+    },
+    "counts": {
+      "structured_en_bytes": 93045,
+      "items_total": 66,
+      "items_with_solution_structured": 55,
+      "items_left_untouched_no_solution": 11,
+      "example": 13,
+      "exercise": 41,
+      "additional_exercise": 12,
+      "gate_tag_parse": "pass",
+      "gate_protect_parity_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 5,
+    "notes": "5 sub-agent batches dispatched per step_7/format.md (mirroring stages 5/6's split): examples (13), intext/additional exercises (12), exercises 1.7+1.13-1.20 (9), exercises 1.21-1.30 (10), exercises 1.31-1.41 (11) - totaling 55 items with a real solution to structure; the 11 confirmed no-solution exercises (q_1.1-1.6, q_1.8-1.12) were explicitly skipped and carried through this stage completely untouched from 06_simplify. Two of the five batches (Examples, Intext) stalled at 600s on first dispatch and were killed/relaunched fresh by the coordinator - both relaunches, plus all three other batches, completed normally. Merge was done at the raw-text level (stack-based top-level block splicing keyed by each item's id attr), not via mdio.markdown_to_chapter, because mdio's _node_text() deliberately rejects nested containers inside a solution field - stage 7 output is exactly that nesting (:::concept/:::formula/:::step inside :::solution), so parsing it into Item objects isn't meaningful before stage 8 does that judgement call; the merge only needed to substitute each item's whole block text, leaving every outer attribute (id, kind, number, topic, verified, simplified, corrections_applied) exactly as stage 6 emitted it. One real defect caught and fixed before merging: the exercises-1.31-1.41 batch (chem1_en_format_ex_c.md) had exactly one stray extra bare ':::' appended after every single item's true closing tag (11 occurrences, one per item) - confirmed by a stack-depth trace going negative right after each item boundary, and confirmed against the stage-6 source that only one closing tag was ever expected there. Auto-fixed by dropping each stray line (verified the resulting depth trace returns to exactly 0 with all 11 items intact) rather than re-dispatching the batch. Gates: tag._parse succeeded on the full merged 66-item document with no unclosed/mismatched containers; protect.parity(stage6_text, stage7_text) returned 0 issues (display math, inline math, table and image counts all identical before/after - confirms no content was altered, only new structural containers inserted). Post-merge spot checks: only allowed container vocabulary used (concept, formula, step, table, note, figure, part, prompt, solution, answer, question, example - no disallowed names); kind counts unchanged (13 example, 41 exercise, 12 additional_exercise); q_1.14's two figures (fig_1_23, fig_1_24) and q_1.37's figure (fig_1_25) confirmed still present and not duplicated or moved (solution text never referenced them inline, per format.md's rule to only move a figure to its first inline reference point); q_1.19/q_1.23/q_1.25's pre-existing :::part sub-structure confirmed intact (2/5/6 parts respectively); all labels confirmed in English only (fixed vocabulary Given/Key formula/Substitute/Conclusion plus a handful of legitimate freeform standalone labels: 'Association equilibrium', 'Dissociation setup', 'Ideal solution', 'Positive deviation', 'Negative deviation', 'Discrepancy', 'Molar mass'). One coordinator-flagged item for stage 8's attention: q_1.21's Key-formula and Substitute content arrived pre-merged into a single OCR'd LaTeX block that couldn't be split without altering the math, so the whole cluster is labelled 'Substitute' only, with the formula itself inline inside it rather than in its own Key-formula container, for this one item."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-19T08:11:47.204650+00:00",
+    "inputs": {
+      "structured.en.md": "5c5fcddd19830613"
+    },
+    "counts": {
+      "structured_en_json_bytes": 142491,
+      "items": 66,
+      "parts": 19,
+      "distinct_figure_srcs": 3,
+      "gate_item_count": "pass (66 == 66)",
+      "gate_part_count": "pass (19 == 19)",
+      "gate_figure_src_set": "pass (3 == 3, exact set match)",
+      "stage_given": 45,
+      "stage_substitute": 61,
+      "stage_conclusion": 53,
+      "stage_key_formula": 22
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure code stage - pipeline.serialize.structured_md_to_json() already implements the given/key-formula/substitute/conclusion judgement as a deterministic rule (an explicit :::concept/:::formula's stage is fixed regardless of position; an unlabelled/freeform-labelled :::step is inferred by position), so no model batches were needed - the coordinator ran it directly and fixed three real, general bugs in pipeline/serialize.py surfaced by this being the pipeline's first English-medium chapter to reach this stage: (1) _SOLUTION_OPENER_RE only stripped the Hindi हल/उत्तर 'Solution:' openers, never the English 'Solution'/'Answer' equivalent - left unfixed, 9 items (ex_1.1/1.2/1.4/1.6/1.8/1.9/1.10/1.11/1.13) would have kept a literal redundant 'Solution' word leading their first solution_blocks flow. Extended the regex to also match Solution/Answer. (2) Stripping that opener could leave a block's flow completely empty when the block's ENTIRE original content was just the word 'Solution' (ex_1.8/1.9/1.10/1.13) - the empty block was still occupying the first stageable position, so infer_stage() handed 'given' to a hollow placeholder and pushed the real given content into 'substitute'. Fixed build_solution_blocks() to detect and drop such a block entirely before computing stageable positions, rather than emit it as an empty step. (3) THE MAJOR ONE, pipeline-wide, not chemistry-12-1-specific: the code compared stage 7's literal label text ('Given', 'Substitute', 'जानकारी', 'मान रखो', ...) against lowercase snake_case internal identifiers ('given', 'substitute', ...) that never equal it, so an explicit, authoritative stage-7 label was ALWAYS silently ignored in favour of raw positional inference, and the fixed-vocabulary label text was then kept as a redundant 'label' field duplicating the (only-correct-by-position-coincidence) inferred stage. This stayed invisible whenever a solution's natural shape put given first / conclusion last anyway (confirmed retroactively on biology-12-5's q_5.2 - the same redundant-label symptom, harmlessly right stage by luck) but produced a genuinely wrong stage for chemistry-12-1's q_1.21, whose fused OCR'd formula+substitution content stage 7 explicitly labelled 'Substitute' while it sat in the first ('given') position - before this fix it was silently re-labelled 'given' by position inference, contradicting stage 7's own explicit, already-made call. Added _label_to_stage(), a normalized (lowercased, stripped) lookup covering both languages' fixed vocabulary, used for step/concept/formula blocks alike; also stopped storing the fixed-vocabulary text itself as a redundant freeform 'label' once it's already conveyed by 'stage' (32 concept blocks and 21 formula blocks in this chapter alone previously carried a redundant label:'Given'/'Key formula'). Net effect on this chapter's stage distribution after all three fixes: given 53->45, substitute 43->61, conclusion 63->53, key_formula unchanged at 22 (always position-independent). Not retroactively re-run against biology-12-5/other already-shipped chapters' JSON in this session (out of scope - noted here since the fix is general, not chapter-specific; no prior chapter had q_1.21's kind of position/label disagreement, so their existing JSON's *stage* values were already correct, only the redundant label metadata was cosmetic). Gates: item count 66==66, part count 19==19, distinct figure src set {fig_1_23, fig_1_24, fig_1_25} identical both ways - all pass. Spot checks: q_1.14/q_1.37's figures and q_1.19/q_1.23/q_1.25's :::part structure all correctly carried through; only allowed block types (step/concept/formula/note/figure/table) appear; the known duplicate-solution-artifact rule (empty item-level solution_blocks when parts carry their own) verified not triggered for this chapter - no item flagged that pattern at stage 7."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-19T08:26:46.829255+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "3d9d245757fd972c"
+    },
+    "counts": {
+      "retroactive_fix": true,
+      "corrections_applied": 1,
+      "item": "ex_1.1"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[RETROACTIVE FIX] RETROACTIVE FIX, discovered during stage 9 design/read-back, not at stage 5: ex_1.1's x_glycol mole-fraction formula was mis-OCR'd by mathpix ('moles of_{2} H_{6} O_{2}' instead of 'moles of C_{2}H_{6}O_{2}' in the numerator, plus a stray superscript degree sign after 'moles' in the denominator) - this slipped past the original stage-5 verification pass entirely (which found no issues with the Examples batch). Caught while building stage 9's HTML page and actually reading every rendered formula against the source, per step_9/PROMPT.md's mandatory manual read-back. Verified against chapter.en.pdf page 4 (Example 1.1): printed formula is x_glycol = (moles of C2H6O2) / (moles of C2H6O2 + moles of H2O) = 0.322 mol / (0.322 mol + 4.444 mol) = 0.068. The numeric result (0.068) was already correct throughout - only the symbolic formula display was garbled. Applied as a proper Correction object at 05_verify (see corrections.md), then the identical exact-text substitution carried through 06_simplify (stage 6 never touches math, so the same garbled span was still present verbatim there) and 07_format (the formatting sub-agent likewise never altered LaTeX content). 08_tag/structured.en.json was regenerated from the patched structured.en.md (pure code, tag._parse confirmed clean). gate_math_parity: 0 issues (same span counts, content cleaned up not altered in shape)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-19T08:26:46.831612+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "fd6478c89db9064d"
+    },
+    "counts": {
+      "retroactive_fix": true,
+      "item": "ex_1.1"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[RETROACTIVE FIX - same source correction carried through unchanged] RETROACTIVE FIX, discovered during stage 9 design/read-back, not at stage 5: ex_1.1's x_glycol mole-fraction formula was mis-OCR'd by mathpix ('moles of_{2} H_{6} O_{2}' instead of 'moles of C_{2}H_{6}O_{2}' in the numerator, plus a stray superscript degree sign after 'moles' in the denominator) - this slipped past the original stage-5 verification pass entirely (which found no issues with the Examples batch). Caught while building stage 9's HTML page and actually reading every rendered formula against the source, per step_9/PROMPT.md's mandatory manual read-back. Verified against chapter.en.pdf page 4 (Example 1.1): printed formula is x_glycol = (moles of C2H6O2) / (moles of C2H6O2 + moles of H2O) = 0.322 mol / (0.322 mol + 4.444 mol) = 0.068. The numeric result (0.068) was already correct throughout - only the symbolic formula display was garbled. Applied as a proper Correction object at 05_verify (see corrections.md), then the identical exact-text substitution carried through 06_simplify (stage 6 never touches math, so the same garbled span was still present verbatim there) and 07_format (the formatting sub-agent likewise never altered LaTeX content). 08_tag/structured.en.json was regenerated from the patched structured.en.md (pure code, tag._parse confirmed clean). gate_math_parity: 0 issues (same span counts, content cleaned up not altered in shape)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-19T08:26:46.833836+00:00",
+    "inputs": {
+      "structured.en.md": "62337cea6344ee40"
+    },
+    "counts": {
+      "retroactive_fix": true,
+      "item": "ex_1.1"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[RETROACTIVE FIX - same source correction carried through unchanged] RETROACTIVE FIX, discovered during stage 9 design/read-back, not at stage 5: ex_1.1's x_glycol mole-fraction formula was mis-OCR'd by mathpix ('moles of_{2} H_{6} O_{2}' instead of 'moles of C_{2}H_{6}O_{2}' in the numerator, plus a stray superscript degree sign after 'moles' in the denominator) - this slipped past the original stage-5 verification pass entirely (which found no issues with the Examples batch). Caught while building stage 9's HTML page and actually reading every rendered formula against the source, per step_9/PROMPT.md's mandatory manual read-back. Verified against chapter.en.pdf page 4 (Example 1.1): printed formula is x_glycol = (moles of C2H6O2) / (moles of C2H6O2 + moles of H2O) = 0.322 mol / (0.322 mol + 4.444 mol) = 0.068. The numeric result (0.068) was already correct throughout - only the symbolic formula display was garbled. Applied as a proper Correction object at 05_verify (see corrections.md), then the identical exact-text substitution carried through 06_simplify (stage 6 never touches math, so the same garbled span was still present verbatim there) and 07_format (the formatting sub-agent likewise never altered LaTeX content). 08_tag/structured.en.json was regenerated from the patched structured.en.md (pure code, tag._parse confirmed clean). gate_math_parity: 0 issues (same span counts, content cleaned up not altered in shape)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-19T08:26:46.835406+00:00",
+    "inputs": {
+      "structured.en.md": "62337cea6344ee40"
+    },
+    "counts": {
+      "retroactive_fix": true,
+      "item": "ex_1.1",
+      "regenerated": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[RETROACTIVE FIX - structured.en.json regenerated from patched markdown] RETROACTIVE FIX, discovered during stage 9 design/read-back, not at stage 5: ex_1.1's x_glycol mole-fraction formula was mis-OCR'd by mathpix ('moles of_{2} H_{6} O_{2}' instead of 'moles of C_{2}H_{6}O_{2}' in the numerator, plus a stray superscript degree sign after 'moles' in the denominator) - this slipped past the original stage-5 verification pass entirely (which found no issues with the Examples batch). Caught while building stage 9's HTML page and actually reading every rendered formula against the source, per step_9/PROMPT.md's mandatory manual read-back. Verified against chapter.en.pdf page 4 (Example 1.1): printed formula is x_glycol = (moles of C2H6O2) / (moles of C2H6O2 + moles of H2O) = 0.322 mol / (0.322 mol + 4.444 mol) = 0.068. The numeric result (0.068) was already correct throughout - only the symbolic formula display was garbled. Applied as a proper Correction object at 05_verify (see corrections.md), then the identical exact-text substitution carried through 06_simplify (stage 6 never touches math, so the same garbled span was still present verbatim there) and 07_format (the formatting sub-agent likewise never altered LaTeX content). 08_tag/structured.en.json was regenerated from the patched structured.en.md (pure code, tag._parse confirmed clean). gate_math_parity: 0 issues (same span counts, content cleaned up not altered in shape)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-19T08:44:24.332759+00:00",
+    "inputs": {
+      "structured.en.json": "118f0fdf0a7e24d8"
+    },
+    "counts": {
+      "final_en_html_bytes": 211835,
+      "final_en_css_bytes": 13990,
+      "items_rendered": 66,
+      "figures_used": 3,
+      "readback_numeric_tokens_checked": 226,
+      "readback_missing": 0,
+      "console_errors": 0,
+      "broken_images": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored per step_9/PROMPT.md: no fixed-code fallback, HTML/CSS written directly (not via the design skill's canvas, which can't load MathJax/CDN scripts). Started from solutions-chapter-1.css (the base stylesheet) and this SAME chapter's own existing Hindi exemplar (09_design/final.hi.html, already built in an earlier session) - visually cross-checked the Hindi page's mechanical structure (4-color item rotation cycling teal/orange/pink/purple GLOBALLY across all 66 items in document order regardless of section boundaries, matching doodle SVGs and badge/number/topic classes per color, the 38px number variant for a 2-digit-after-decimal example number, bare serial-number badges for intext/exercise items vs full chapter.number badges for examples) but never reused its actual CONTENT - confirmed by hand that the Hindi solutions manual is a genuinely different publication with different (and in several cases fuller) content than the English one, e.g. Hindi 'Exercise 1' has a real answer while English q_1.1 is part of the confirmed 11-item no-solution gap; using Hindi content for an English gap would have violated Rule 5. Wrote a scoped LaTeX-to-HTML converter (not general-purpose - built against a grep of every \\\\command and \\\\begin{} environment actually used in this chapter's own 07_format/structured.en.md: mathrm/text/mathbf/boldsymbol/frac/sqrt/left/right/begin(aligned,array,gathered)/subscripts/superscripts, symbol commands times/cdot/alpha/Delta/pi/Pi/therefore/because/approx/gg/ll/Rightarrow/rightleftharpoons/leftrightarrow/longrightarrow/quad/qquad, plus non-letter escapes \\\\% \\\\$ \\\\& \\\\_ \\\\, \\\\; \\\\: \\\\! caught only after they first leaked through as literal text on the rendered page). 5 genuine bare '/' value-divisions (out of 8 candidates chapter-wide) rewritten into stacked fractions via explicit, hand-verified string matches - the other 3 (a bare unit-ratio '(w/w)' and two 'quantity / its own unit' table headers) correctly left as a plain slash, since they carry no digit on either side. One genuine transcription defect newly discovered while building this page (not caught at stage 5): ex_1.1's mole-fraction formula was mis-OCR'd - fixed as a proper retroactive Correction cascaded through stages 5/6/7/8 (see their own manifest entries), not patched into the HTML directly. Real bugs found and fixed during this build via iterative browser screenshot review: (1) the operator-padding regex was corrupting HTML closing tags like </sub> by matching the '/' inside them - fixed by restructuring the converter to buffer plain text and pad only before any tag exists, never as a blanket pass over already-tagged HTML; (2) a markdown table embedded as raw text inside an item's own PROMPT (stage 7 never touches prompts, so it's never wrapped in its own :::table the way a solution-side table is) was rendering as literal pipe syntax - fixed by detecting consecutive '|...|' rows during line-splitting and rendering them as a real table regardless of which flow they're found in; (3) the conclusion-pill boxed-answer-echo logic originally left dead/duplicated code that would have mis-rendered a multi-line conclusion (the documented '.s26 must wrap all derivation lines before the boxed answer' trap) - rewritten before it ever reached the page. House-style additions beyond the base CSS (documented in step_9/PROMPT.md, all applied): .s81/.s82 flex replacements for .s22's grid (this chapter's content doesn't fit a strict alternating 2-column grid), .s23 flex-column fix for the pill+doodle ordering trap, .s37p/44p/50p/56p plain-rounded-rect boxed-answer variants for the several long combined answers here (length >30 chars), .s90 nowrap-glue spans for '= <fraction/sqrt>' and sqrt-of-a-fraction units, .s93 for aligned/array/gathered multi-row blocks, break-inside:avoid on fractions/badge-column, and the @media (max-width:700px) mobile breakpoint (no mobile support existed in the base CSS at all). Checks before finishing, all passed: every figure src (fig_1_23/24/25) resolves via os.path.exists against the REAL 09_design/images/ directory; 66/66 items present (data-screen-label count); div/span tags balanced (1750/1750, 1687/1687); zero stray LaTeX artifacts (no leftover backslash-commands, '$' signs, or 'begin{'/'end{' text) anywhere on the rendered page; zero browser console/page errors; all 3 images load (naturalWidth > 0) when opened in a real Chromium page. Mandatory manual read-back per step_9/PROMPT.md: every numeric token (226 checked, decimals or 3+ digit integers) from every question/final_answer field (item-level and per-part) in 06_simplify/chapter.simplified.en.md - the actual gated source of truth, not the JSON - confirmed present somewhere in the rendered page's plain text; 0 missing. Also spot-read a representative sample of items by eye via browser screenshots (multi-part items q_1.19/23/25, figure-bearing q_1.14/1.37, table-bearing q_1.37, the no-solution gap rendering for q_1.1, long-formula ex_1.12) before considering the page finished."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-19T09:58:24.715709+00:00",
+    "inputs": {
+      "final.en.html": "d1fa1b1275482949",
+      "final.en.css": "b37dff2bc7df548d"
+    },
+    "counts": {
+      "page_count": 42,
+      "blank_pages": 0,
+      "final_en_pdf_bytes": 1633593,
+      "readback_numeric_tokens_checked": 226,
+      "readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export pass per step_10/PROMPT.md: Playwright/Chromium, navigated to 09_design/final.en.html's own file:// path (not a scratch copy) so its relative href/img src resolve exactly as any other viewer would see them, waited on networkidle + document.fonts.ready before printing, called page.emulate_media(media='screen') unconditionally before page.pdf() per the standing fix (this chapter has no Devanagari text at all - English medium - so the specific pre-base-vowel-reordering bug that fix addresses doesn't apply here, but the prompt calls for applying it unconditionally on every export regardless), print_background=True + prefer_css_page_size=True (no explicit format/width/height passed) to honor the base CSS's own @page/A4/9mm-margin rules. Gates (all code, fitz/PyMuPDF): page count 42 - sane for 66 items across 3 sections; 0 blank pages; numeric read-back re-run directly against the PDF's own extracted text (not assumed carried over from stage 9's HTML check) - 226 tokens pulled from every question/final_answer field (item- and part-level) in 06_simplify/chapter.simplified.en.md via mdio.markdown_to_chapter, all 226 confirmed present in the PDF text after normalizing unicode super/subscript digits back to ASCII with a separator inserted before each run (guards the documented '10^39 -> merged 1039' false-missing trap, e.g. distinguishing a base's own digits from its exponent's). This chapter's own r-reph/CMap-drop bug does not apply (English medium, no Devanagari text anywhere on the page). Visual spot-check of 4 rendered pages (first, one mid-Examples with two figures, one mid-Exercises, the very last page) via fitz pixmap render: clean pagination, section-divider page-break landed correctly before 'Part 3 - Questions and Solutions', no split fraction/badge-column artifacts observed, boxed answers and stage pills rendering correctly throughout."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-21T06:45:27.435071+00:00",
+    "inputs": {
+      "structured.en.json": "118f0fdf0a7e24d8"
+    },
+    "counts": {
+      "retroactive_fix": 1,
+      "items_affected": 2,
+      "html_bytes": 207509
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Retroactive render-script bugfix discovered while building chemistry-12-3's own stage 9 page: build_page_chemN.py's render_item() unconditionally rendered every part's own (label + prompt + solution) block whenever an item had `parts`, even when the item's real solution was ONE flowing item-level block covering every sub-case (parts_have_solutions False) - producing a redundant, unstructured 'Part (i) / <prompt>' tail with no solution attached below the real, already-complete item-level solution. Confirmed for real on this chapter: q_1.3 (define 4 terms) and q_1.9 (2-part water-contamination problem). First fix attempt (suppress parts_html whenever parts_have_solutions is False) was too broad and caused a worse regression on q_1.3/q_1.9 specifically: both also have an EMPTY item-level solution_blocks (no solution anywhere for these items - a genuine Rule-5 gap, not a bug), so blind suppression removed the ONLY remaining visible question content (the actual terms/parts being asked about) - q_1.3 briefly rendered as a bare 'Define the following terms:' with nothing else on the page at all. Caught by re-running the mandatory numeric read-back (0 missing before vs after this second, corrected fix) and by direct visual screenshot comparison. Final, correct condition: suppress a part's own render only when the item-level solution_blocks is genuinely non-empty AND no part has its own solution_blocks - i.e. only when there is real, substantive content elsewhere on the page already covering it. Rebuilt 09_design/final.en.html (207,509 bytes, was ~207KB before - byte count essentially unchanged since only 2 of 66 items were affected and both now render exactly as before this whole investigation) and re-exported 10_pdf/final.en.pdf (42 pages, unchanged from before, 0 blank pages, numeric read-back against the PDF's own extracted text: 226 tokens checked, 0 missing). No other content changed."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-21T06:45:27.437638+00:00",
+    "inputs": {
+      "final.en.html": "9a1c69177367eaa1"
+    },
+    "counts": {
+      "retroactive_reexport": 1,
+      "pages": 42,
+      "blank_pages": 0,
+      "numeric_tokens_checked": 226,
+      "numeric_tokens_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical re-export of final.en.html after the paired 'design' manifest entry's retroactive fix. Gates pass."
   }
 ]

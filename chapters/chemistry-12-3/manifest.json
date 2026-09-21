@@ -582,5 +582,282 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Re-exported via Playwright/Chromium from the corrected 09_design/final.hi.html, following step_10/PROMPT.md exactly. 33 pages, 0 blank, 0/662 numeric tokens missing. Directly confirmed via fitz text extraction that 'mm Hg' is present, 'as printed' is absent, and all 3 'collisions' occurrences carry the s^-1 unit cleanly anywhere in the exported PDF text. Visually confirmed page 23 (q_3.22) renders cleanly with the corrected text."
+  },
+  {
+    "stage": "mathpix",
+    "at": "2026-09-19T13:20:00.941223+00:00",
+    "inputs": {
+      "chapter.en.pdf": "7c822864c114aa80",
+      "solutions.en.pdf": "12125570b6a5420d"
+    },
+    "counts": {
+      "chapter_en_pages": 28,
+      "chapter_en_chars": 67991,
+      "chapter_en_dollar_spans": 506,
+      "chapter_en_table_rows": 79,
+      "chapter_en_image_refs": 12,
+      "solutions_en_pages": 39,
+      "solutions_en_chars": 48370,
+      "solutions_en_dollar_spans": 544,
+      "solutions_en_table_rows": 56,
+      "solutions_en_image_refs": 2,
+      "devanagari_leak": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-only track added alongside chemistry-12-3's existing Hindi files (same pattern as chemistry-12-1/12-2's English tracks this session) - user confirmed via AskUserQuestion before starting. Source files verified before conversion: chemistry_ch3_EM.pdf (3,984,702 bytes, 28 pages, page 1 text sample confirms Chemical Kinetics content - 'the feasibility of a chemical reaction' / 'Kinetic studies... determine the speed or rate of a chemical reaction') and chemistry_ch3_soln_EM.pdf (2,638,507 bytes, 39 pages) - neither is a suspiciously round byte count, both open with fitz reporting real page counts. solutions.en.pdf's own text layer is completely empty (0 extractable characters on page 1 via fitz) - same image-based-scan characteristic already established for chemistry-12-1/2's own solutions.en.pdf; confirmed genuine (not corrupt) by rendering page 1 to PNG and reading it visually: '(Chapter 4)(Chemical Kinetics) XII / Intext Questions / Question 4.1' - the same Rationalised-edition manual-numbering offset pattern already seen on chemistry-12-1 and 12-2 (solutions manual's own chapter N+1 = textbook's chapter N), confirming this solutions manual is for the SAME textbook chapter as chemistry-12-3's existing Hindi track (its own title, 'रासायनिक बलगतिकी · अध्याय 3', is the Hindi for Chemical Kinetics). Sanity checks per step_1/PROMPT.md: both files well above the 5000-character floor, both have tables, zero Devanagari characters leaked into either English file. No content judgment made at this stage."
+  },
+  {
+    "stage": "mathpix",
+    "at": "2026-09-19T13:38:28.140574+00:00",
+    "inputs": {
+      "chapter.en.pdf": "7c822864c114aa80"
+    },
+    "counts": {
+      "retroactive_fix": true,
+      "headings_restored": 7,
+      "section_headings_restored": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "[RETROACTIVE FIX] Before dispatching stage 2 extraction, systematically checked every Example heading AND every Example's own 'Solution' label for the same mathpix OCR-drop defect already seen twice on chemistry-12-1/12-2 (a shaded-box example's own script-styled heading text getting dropped while its body content extracts fine). Found and fixed, all verified against the actual PDF pages before restoring: (1) Example 3.1's own 'Example 3.1' heading was missing (page 2) - restored; (2) Example 3.3's 'Solution' label was missing (page 7) - restored; (3) Example 3.4's 'Solution' label was missing (page 8) - restored (tricky case: the question's own (i)/(ii) sub-labels and the answer's (i)/(ii) sub-labels ran directly together with no separator at all besides the dropped 'Solution' text); (4) Example 3.6's 'Example 3.6' heading was missing (page 14) - restored; (5) Example 3.8's both 'Example 3.8' and 'Solution' labels were missing (page 16) - restored. Example 3.7's own heading text is present but glued inline with the end of the preceding sentence (mathpix reading-order artifact, not a drop) - left as-is, no fix needed, just noted so a future extraction pass isn't surprised by the unusual placement. Also found and fixed a SECTION-level instance of the same defect: the entire '## Exercises' heading (also styled as fancy script text on its own page, same visual treatment as an 'Example'/'Solution' label) was dropped by mathpix even though all 30 numbered exercise questions (3.1-3.30) extracted correctly underneath where it should have been - confirmed via the actual PDF page (a distinct 'Exercises' banner heading) and restored as a proper '## Exercises' markdown heading at the exact verified position, so downstream extraction can find the section boundary the same way every other chapter's own mathpix output already provides one. Scope of this chapter (confirmed via direct counting after all fixes): 10 examples (3.1-3.10), 9 intext questions (3.1-3.9, across two '## Intext Questions' headings), 30 exercises (3.1-3.30, several with numbers glued directly to their own text with no space, e.g. '3.8In a pseudo...' - a cosmetic mathpix spacing artifact, not a content gap, left for stage 2's extraction to handle by content). Solutions manual has a clean, complete match on both sides with no missing-question gaps: 'Question 4.1' through '4.9' for Intext (9, no jumps) and a second independent 'Question 4.1' through '4.30' sequence for Exercises (30, no jumps) - the same Rationalised-edition +1 numbering offset already established for chemistry-12-1/12-2's own solutions manuals."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-19T13:49:01.972576+00:00",
+    "inputs": {
+      "chapter.en.md": "9405c1d76c5d1c71",
+      "solutions.en.md": "db33ff2ed867192c"
+    },
+    "counts": {
+      "examples": 10,
+      "additional_exercise": 9,
+      "exercise": 30,
+      "total_items": 49,
+      "intext_matched": 9,
+      "intext_unmatched": 0,
+      "exercise_matched": 30,
+      "exercise_unmatched": 0,
+      "gate_counts": "pass",
+      "gate_bilingual_issues": 96
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 9,
+    "notes": "English-only track (no align_languages - same precedent as chemistry-12-1/12-2's English tracks this session). 3 sub-agent batches dispatched per step_2/extract.md: Examples (10, chapter-side with own solutions), Questions (39 = 9 intext + 30 exercise, chapter-side, question text only), Solutions (39 = 9 intext + 30 exercise, from the separately-published solutions manual). Clean join both ways, unlike chemistry-12-1/12-2: intext 9/9 matched, exercise 30/30 matched, needs_review empty on both - no missing-solution gap in this chapter's source material at all. Spot-checked 7 matched pairs by content anyway per step_2/PROMPT.md's standing warning (q_3.1, q_3.15, q_3.22, q_3.30, it_3.1, it_3.6, it_3.9) - every one's solution is genuinely about its own question's topic, no sign of a silent mismatch. PRE-EXTRACTION mathpix gaps found and fixed before dispatching any batch (more extensive than chemistry-12-1/12-2's own gaps): (1) Example 3.1's own heading missing (page 2); (2) Example 3.3's Solution label missing (page 7); (3) Example 3.4's Solution label missing (page 8, a tricky case since the question's own (i)/(ii) sub-labels and the answer's (i)/(ii) sub-labels ran directly together with no separator besides the dropped label); (4) Example 3.6's own heading missing (page 14); (5) Example 3.8's both heading and Solution label missing (page 16); (6) the entire '## Exercises' SECTION heading was dropped (also styled as fancy script text, same visual treatment as an Example/Solution label) even though all 30 numbered exercises extracted correctly underneath where it should have been - restored as a proper markdown heading at its verified position; (7) Example 3.10's solution was genuinely TRUNCATED mid-derivation at a PDF page break (page 20 cuts off right after the two-point Arrhenius setup equation, page 21 continues with the full substitution and final result k2=6.36e-3 s^-1) - confirmed by rendering both pages and reading them directly, restored the missing continuation plus a recoverable :::answer that didn't exist in the extraction before this fix (this is the closest analogue this chapter has to chemistry-12-1's ex_1.7 cross-page truncation). Example 3.7's own heading text is present but glued inline to the end of the preceding sentence (a reading-order artifact, not a drop) - left as-is, no fix needed. All fixes verified against the actual PDF pages before restoring, same discipline as the two prior chapters' own mathpix fixes this session. One structural bug caught in the Questions batch's own output before merging: q_3.15 (6 labelled sub-parts) had a stray extra closing ':::' immediately after its shared prompt/table, which prematurely closed the outer :::question block and left all 6 :::part blocks as orphaned top-level siblings, plus one now-genuinely-extra closing tag at the very end (tag._parse correctly failed with \"':::' closes nothing\"); fixed by deleting the single misplaced closing line, which also revealed the final tag was actually needed as the item's own real closer. 8 genuine source-manual anomalies flagged by the solutions-extraction batch, deliberately left untouched per stage 2's 'transcribe as-is' rule and reported here for stage 5 to verify against the actual PDF: (1) intext 3.6's k=0.693/60=0.01155 min^-1 is restated two lines later as '1.155 min^-1' (factor-of-100 slip, final answer 1.925e-4 s^-1 is consistent with the correct 0.01155 value); (2) exercise 3.15 part (vi)'s half-life formula prints as 't1/2=0.639/k' (should be 0.693, single-digit OCR slip, inconsistent with every other half-life formula in the same document); (3) exercise 3.20's product formula renders as a garbled 'C6H1+(g)'; (4) exercise 3.21's table header reads 'Time/s^-1' (likely should be 'Time/s'); (5) exercise 3.22's results table appears to have two rows' labels/values crossed (a 10^3/T-scale row sits under an 'ln k' header, with the true ln k values in an unlabeled row below); (6) exercise 3.26's given rate equation is garbled ('10_11 S-1'/'e-28000 K/T', clearly meant as 4.5x10^11 s^-1 and an exponential -28000K/T term); (7) exercise 3.29 computes an intermediate 't=2.2877/k'' but uses '0.2877' in the very next line (2.303*log(100/75)=0.2877 is the value actually used downstream, so '2.2877' looks like a stray leading digit); (8) exercise 3.30's equation '(313-2)/(293*3)' is visibly truncated (should be (313-293)/(293*313)) though the final numeric answer is already correct, a pure display artifact. None corrected at this stage - stage 5 verification against the actual PDF pages is where each will be resolved. gate_counts: pass (10/9/30 exactly as expected). gate_bilingual: 96 issues, all expected and pre-existing (English-only track, no Hindi fields populated by design - not a defect)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-19T13:50:05.570815+00:00",
+    "inputs": {
+      "chapter.en.md": "743c5044ea04257e"
+    },
+    "counts": {
+      "examples_en_bytes": 14118,
+      "examples_en_items": 10,
+      "qa_en_bytes": 59137,
+      "qa_en_items": 39,
+      "total_items": 49
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure function (render.render() kind-filtered), no model call. Round-trip verified: tag._parse succeeds on both output files, and examples+qa item counts (10+39=49) sum exactly to the merged chapter's total - nothing gained or lost in the split."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-19T13:51:08.222504+00:00",
+    "inputs": {
+      "examples.en.md": "a0750cc98eb69399",
+      "qa.en.md": "e4b5b2bdbe1a6b96"
+    },
+    "counts": {
+      "combined_en_bytes": 73150,
+      "combined_en_items": 49
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure function (plain reunion of stage 3's two files, re-sorted by kind then numeric number), no model call. Round-trip verified: tag._parse succeeds, item count (49) matches stage 3's examples+qa combined count exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-21T05:05:54.754976+00:00",
+    "inputs": {
+      "combined.en.md": "743c5044ea04257e",
+      "chapter.en.pdf": "7c822864c114aa80",
+      "solutions.en.pdf": "12125570b6a5420d"
+    },
+    "counts": {
+      "corrections_applied": 11,
+      "corrections_held": 0,
+      "corrections_high": 10,
+      "corrections_medium_then_user_approved": 1,
+      "gate_math_parity_issues_ex_3.1": 3,
+      "gate_math_parity_issues_q_3.22": 1,
+      "gate_math_parity_issues_expected": 4,
+      "gate_counts_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 5,
+    "notes": "5 verification sub-agent batches dispatched per step_5/verify.md: examples 3.1-3.5, examples 3.6-3.10, intext 3.1-3.9 (entirely clean), exercises 3.1-3.15 (entirely clean), exercises 3.16-3.30. 11 corrections applied total: 10 high confidence, 1 medium confidence promoted after explicit user sign-off via AskUserQuestion. ex_3.1 question: removed a sidebar 'Example 3.1' heading label that had bled into the running prompt sentence (high). ex_3.1 solution x2: (a) a genuine truncation dropping the final numeric result 'L^-1 = 5.12e-5 mol L^-1 s^-1' (high); (b) a substantial reconstruction (medium, user-approved) of a badly mis-segmented passage where mathpix had captured a real sentence and equation (3.3) as two raster images, which the combine step then mislabeled/duplicated - verified by opening the raw image crops directly and reading the source page, restored the real sentence, equation (3.3), and the correctly-placed Fig 3.2 image, removing 2 spurious image references. ex_3.2 solution: unit fix '184 min^-1' -> '184 min' (high, the source shows a plain duration not an inverse-time unit). ex_3.10 solution: unit fix restoring an inserted 'L' the source page genuinely prints ('J mol L^-1', unusual but confirmed present) that the coordinator's own earlier manual page-break restoration had accidentally smoothed over to 'J mol^-1' (high) - caught by the verification batch specifically re-checking the coordinator's own restoration, not just the original extraction. q_3.20 solution: OCR fix 'C6H1+(g)' -> 'C6H14(g)' (high). q_3.22 solution x4: a scrambled results table relabeled/completed to match the source's actual 3-row structure (1/T, 10^5xk/s^-1, ln k) - 3 high confidence, 1 medium (a coordinator bookkeeping slip recorded the k-row label fix as high when the verifying agent had reported it as medium; the correction itself was independently verified against the source page and is not in question, only the confidence label was miscopied - corrected in corrections.md for an accurate audit trail). q_3.30 solution: truncation fix '(313-2)/(293x3)' -> '(313-293)/(293x313)' (high). gate_math_parity: exactly 4 issues, all expected and individually confirmed before proceeding - ex_3.1's reconstruction (display math 1->2, inline math 10->17, images 3->1, since 2 of the original 3 image refs were themselves mis-OCR'd text/equation, not real images) and q_3.22's relabeling (inline math 16->17, from restoring genuine row-label math spans). gate_counts: pass (10/9/30 unchanged). Two flagged anomalies from stage 2 extraction were re-investigated against the actual PDF pages and CONFIRMED as genuine source-manual print defects, left uncorrected per the 'should_be must be what the PDF shows' rule: intext 3.6's k=0.01155 min^-1 restated as '1.155' two lines later (confirmed on the actual page, the item's final answer 1.925e-4 s^-1 is consistent with the correct 0.01155 value); exercise 3.15(vi)'s half-life formula prints '0.639/k' but the very next line's computation correctly uses 0.693 (confirmed on the actual page). Three more anomalies also confirmed as genuine source defects, left untouched: exercise 3.21's dimensionally-odd 'Time/s^-1' table header (both chapter and solutions-manual editions print this identically); exercise 3.26's garbled rate-equation formatting (both the display line and its answer-text restatement on the same source page show the identical defect); exercise 3.29's 't=2.2877/k'' immediately followed by '0.2877/k'' two lines later (both values confirmed exactly as printed on the source page)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-21T05:12:48.007835+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "37fb829a95e5137e"
+    },
+    "counts": {
+      "solution_fields_total": 49,
+      "items_simplified": 20,
+      "items_left_unchanged": 29,
+      "restore_failed": 0,
+      "gate_question_text_frozen_issues": 0,
+      "gate_answers_unchanged_issues": 0,
+      "gate_math_parity_issues": 0,
+      "gate_bilingual_issues": 96,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "3 sub-agent batches dispatched per step_6/simplify.md, split by kind (examples 10, intext 9, exercises 30), following the same proper freeze-first discipline established for chemistry-12-2's own stage 6: each batch's container markdown passed through pipeline.protect.freeze() before dispatch (95/62/393 tokens masked respectively), sub-agents only saw opaque tokens in place of math/tables/images, protect.restore() run on each returned output - all 3 restores succeeded cleanly, and every batch's own token-count diff (95/95, 62/62, 393/393) confirmed independently by the sub-agents before hand-back. 20 of 49 solution fields reworded overall (5 examples: ex_3.1/3.2/3.4/3.6/3.8 - textbook-register-to-plain swaps and sentence splits, including breaking up ex_3.1's long average/instantaneous-rate paragraphs; 4 intext: it_3.4/3.5/3.7/3.8; 11 exercises: q_3.7/3.10/3.11/3.12/3.15/3.22/3.26/3.27/3.28/3.29/3.30 - all textbook-register swaps per simplify.md's own worked example, 'we obtain'->'we get' etc). 29 of 49 left unchanged because already short/clear - a valid, expected outcome, not under-effort. All 6 known source-manual defects confirmed preserved exactly across the batches (verified individually by each sub-agent, cross-checked against the diff hunks): it_3.6's '0.01155'/'1.155' pair; q_3.15(vi)'s '0.639/k' vs '0.693' lines; q_3.21's 'Time/s^-1' header; q_3.26's garbled rate-equation token; q_3.29's '2.2877/k'''/'0.2877/k''' pair - none were touched, edited, or reconciled while simplifying the surrounding prose. No comparative-sentence reordering trap triggered anywhere (ex_3.6's parallel-additive stoichiometry description was explicitly checked and correctly identified as not a comparative claim). Gates: gate_question_text_frozen, gate_answers_unchanged, gate_math_parity all 0 issues - output written only because all three genuinely passed. gate_bilingual unchanged at 96 (identical to stage 2's count - English-only track, confirms no drift)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-21T05:59:55.269025+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "fdbf9b76af64770b"
+    },
+    "counts": {
+      "items_total": 49,
+      "items_structured": 49,
+      "tag_parse_issues": 0,
+      "parity_issues": 0,
+      "gate_passed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 4,
+    "notes": "3 sub-agent batches dispatched per step_7/format.md, split by kind (examples 10, intext 9, exercises 30). The exercises batch stalled once (600s stream-watchdog failure, no output produced) and was relaunched fresh from scratch - the retry completed cleanly. Applied the fixed given/key-formula/substitute/conclusion pattern wherever a genuine multi-stage derivation existed; left short or purely qualitative solutions as plain paragraphs (examples: 2/10 fully plain (ex_3.3, ex_3.4); intext: 2/9 fully plain (it_3.3, it_3.7); exercises: q_3.5 and most of q_3.7 left plain). Multiple items whose source LaTeX mixes the governing formula and its numeric substitution inseparably in one \\begin{aligned} block were wrapped whole as a single :::step{label=\"Substitute\"} rather than split, preserving the LaTeX exactly (ex_3.5/3.7/3.9, and several exercises). One violation caught and fixed before merge: the exercises batch's first attempt split q_3.29's single combined formula+substitution \\begin{aligned} block (the Arrhenius two-point relation immediately followed by its own numeric substitution, sharing one aligned environment) into two separate $$ blocks, in direct violation of the explicit instruction not to do this - this also altered the LaTeX itself (dropped the leading '&' and trailing '\\\\' line-continuation on the first line to make it a standalone equation). Caught by protect.parity showing 'display math: 179 -> 180' after the first merge attempt; traced to q_3.29 specifically via a per-item $$-count diff script, and fixed by manually restoring the original single combined $$...$$ block (exact original LaTeX) wrapped in one :::step{label=\"Substitute\"} container, matching the established whole-block-wrap pattern used elsewhere in the same batch. Re-ran the merge after the fix: protect.parity 0 issues, tag._parse OK. All 4 known source-manual print defects flagged at stage 5 confirmed preserved character-for-character in the final structured.en.md: it_3.6's '0.01155'/'1.155' pair, q_3.15(vi)'s '0.639/k' vs '0.693' lines, q_3.21's 'Time/s^-1' table header (left in the prompt, out of this stage's solution-only scope), q_3.29's '2.2877/k'''/'0.2877/k''' pair. Container vocabulary check: only allowed names used (answer, concept, example, figure, formula, note, part, prompt, question, solution, step, table) - no unknown container introduced. All figures (fig_3_18, fig_3_27, fig_3_28) left exactly where they sat in stage 6, unmoved and unwrapped."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-21T06:06:52.756307+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "276155d9f1a1ba69"
+    },
+    "counts": {
+      "retroactive_fix": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Retroactive structural fix (not a content/wording change) discovered during stage 8's fresh figure-count gate: ex_3.1's fig_3_18.jpg reference - introduced by this coordinator's own stage-5 reconstruction correction of the mis-segmented ex_3.1 passage - had been written as bare markdown '![](images/fig_3_18.jpg)' followed by a caption, instead of the ':::figure{src=\"...\" id=\"...\"}' container used for every other figure across all 3 chemistry chapters (confirmed by grep: chemistry-12-1 and chemistry-12-2 have zero bare '![](' occurrences anywhere in their structured.en.md - this was a one-off slip in my own hand-reconstructed replacement text, not a systemic gap). stage 8's serializer only recognizes an explicit ':::figure{}' container - a bare inline markdown image sitting as plain text in a solution's flow is silently kept as literal text (\"![](images/fig_3_18.jpg)\" would have rendered as visible garbage text at stage 9, not an actual image), while the gate's independent 'fresh' regex-based figure count (count_figures_in_raw_text) DOES catch bare '![]()' syntax - producing the exact 3-vs-2 figure-count mismatch this gate exists to catch. Fixed at its origin per Rule 1 (fix the data, not the artifact): wrapped the identical existing text (same src, same caption, no wording changed) in a proper ':::figure{src=\"images/fig_3_18.jpg\" id=\"fig_3_18\"}' container in chapter.verified.en.md, then applied the identical wrap at the same text location in 06_simplify/chapter.simplified.en.md and 07_format/structured.en.md (neither of those two later stages had altered this exact text, confirmed by exact-match replace count=1 in each file). Re-ran stage 7's own gates (tag._parse, protect.parity) after the fix - both still pass, 0 issues."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-21T06:06:52.759506+00:00",
+    "inputs": {
+      "structured.en.md": "b089ad5a97155be5"
+    },
+    "counts": {
+      "items": 49,
+      "parts": 22,
+      "figures": 3,
+      "gate_item_count_issues": 0,
+      "gate_part_count_issues": 0,
+      "gate_figure_count_issues": 0,
+      "stage_given": 34,
+      "stage_substitute": 75,
+      "stage_key_formula": 41,
+      "stage_conclusion": 39
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Pure-code stage: pipeline.serialize.structured_md_to_json() walked 07_format/structured.en.md's container tree into 08_tag/structured.en.json, using the already-fixed serialize.py (English-opener stripping, hollow-block dropping, label-to-stage mapping - all 3 general bugfixes made earlier this session while processing chemistry-12-1/12-2, reused here unchanged). First run failed the figure-count gate (fresh=3, json=2, missing 'images/fig_3_18.jpg') - root-caused to a bare, unwrapped markdown image left over from a stage-5 correction; fixed retroactively at stages 5/6/7 (see the paired 'verify' manifest entry just above) before re-running this stage. Second run: all 3 gates pass - item count 49/49, part count 22/22, figure src set {fig_3_18, fig_3_27, fig_3_28} matching exactly on both sides. given/key_formula/substitute/conclusion stage distribution: 34 given, 41 key_formula, 75 substitute, 39 conclusion, across all item- and part-level solution_blocks combined. No हल/Solution/Answer opener noise found needing stripping beyond what stage 7's batches already handled structurally."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-21T06:09:15.115815+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "37fb829a95e5137e"
+    },
+    "counts": {
+      "correction_of_own_earlier_manifest_entry": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Correction to this chapter's immediately preceding 'verify' manifest entry (the ex_3.1/fig_3_18.jpg bare-markdown-to-container fix): that entry wrongly applied the ':::figure{src=... id=...}' wrap to 05_verify/chapter.verified.en.md AND 06_simplify/chapter.simplified.en.md as well as 07_format/structured.en.md. Running CALIBRATION/calibrate.py immediately after caught the mistake: mdio.py's markdown_to_chapter() deliberately rejects any nested container inside a ':::solution' block at stages 5/6 ('unexpected nested container - only understand pre-stage-7 flat item structure') - the bare '![](images/fig_3_18.jpg)' markdown was actually CORRECT at those two stages precisely because it is flat text there (mdio treats embedded markdown-image syntax as ordinary text, no different from any other character span, at stages 5/6), exactly the same way 'Table 3.1' mid-solution stays raw markdown at 5/6 and only becomes ':::table' at stage 7. Reverted 05_verify and 06_simplify back to the original bare-markdown form (confirmed exact-match, count=1 each); kept the ':::figure{}' wrap only in 07_format/structured.en.md, where introducing that structure is stage 7's actual job. Re-ran calibrate.py: succeeds. Re-ran stage 5->6 and 6->7 gates after the revert: gate_question_text_frozen/gate_answers_unchanged/gate_math_parity between 05_verify and 06_simplify all pass at 0 issues (unchanged from before this whole episode - the revert is a pure no-op restoring the prior, already-approved stage 5/6 content). protect.parity between 06_simplify and 07_format now correctly reports exactly one EXPECTED deviation - 'images: 1 -> 0' - because protect.py's image-count regex only matches bare '![...]()' markdown syntax, and wrapping that syntax in a ':::figure{}' container (legitimate stage-7 structuring, not a content change - same src, same caption) necessarily removes that match. This is the sole difference from the stage-7 manifest entry's earlier claim of '0 issues' for protect.parity, which was written before this correction was made and is now superseded by this note. tag._parse still succeeds on the corrected 07_format/structured.en.md. Stage 8's own JSON (08_tag/structured.en.json, already written) is unaffected by this correction - it was generated from 07_format's content, which already had the correct ':::figure{}' wrap throughout this whole episode; only 05_verify/06_simplify needed reverting."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-21T06:46:05.077440+00:00",
+    "inputs": {
+      "structured.en.json": "01d0b687b32bdcd6"
+    },
+    "counts": {
+      "items": 49,
+      "html_bytes": 195430,
+      "figures_resolved": 3,
+      "readback_fields_checked": 116,
+      "readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored 09_design/final.en.html + final.en.css, reusing and extending the shared latex_convert.py/build_page_chemN.py infrastructure built on chemistry-12-1/12-2. final.en.css copied byte-identical from chemistry-12-2's own (chapter-agnostic - already has the mobile breakpoint, .s23 flex-column fix, plain-rectangle answer-box variants, break-inside:avoid on .s31/.s14/.s90, and .s93/.s27 for aligned/array/gathered rows from earlier sessions' work). Per step_9/PROMPT.md's explicit warning, grepped this chapter's own 06_simplify/chapter.simplified.en.md for every \\command and \\begin{env} actually used before trusting the reused converter. Found and fixed 4 genuinely new, previously-unhandled LaTeX commands (all silently dropped via the unknown-command path before this fix): \\mu (microgram/microsecond prefix - was silently turning '1 microgram' into '1 gram', a real content bug), \\prime (k'/T' notation in the two-point Arrhenius equation, q_3.29 - was silently making k' render identical to k), \\overline (bar-log characteristic notation in antilog calculations, q_3.13/q_3.21 - same combining-mark device as the existing \\ddot handler), and \\xrightarrow (catalyst-labelled reaction arrow, q_3.3's NH3-on-Pt decomposition - rendered as an arrow + parenthesized label, same device as \\underset). \\begin{gathered} and a genuinely nested \\begin{array} inside an outer \\begin{aligned} (q_3.9's order-calculation side-note) both confirmed handled correctly already by the existing depth-aware, environment-name-generic \\begin/\\end matching (no environment-name-specific special-casing exists in this converter, unlike the separate display-block-vs-inline architecture warned about in step_9/PROMPT.md - this converter's single recursive _convert() path sidesteps that whole class of bug by construction). Deliberately did NOT implement a general bare-'/'-to-\\frac rewrite for this chapter (93 bare-slash occurrences found by grep, all individually reviewed): every genuine case is either a half-life subscript (t_{1/2}), a fractional reaction order in a superscript exponent (^{3/2}), a unit ratio (mol L^-1 / min), or a short single-line Arrhenius-calculation row already isolated by the aligned-block's own row-splitting (e.g. 'Ea = 0.544 x 19.15 / 5.714 x 10^-4 = 18230.8 J') - all already render as legible, nbsp-protected inline text under the existing behaviour, and none would benefit from being forced into a stacked fraction (matching chemistry-12-1's own established precedent of a narrow, hand-verified rewrite list rather than a general parser, applied here as 'zero genuine cases' rather than an empty list left unexamined). Verified every multi-part item's item-level prompt against both documented traps (duplicate-of-one-part, telescoped enumeration) - none of this chapter's 7 multi-part items (ex_3.3/3.4, q_3.1/3.6/3.9/3.13/3.15) hit either shape; every item-level prompt is genuine, distinct shared context. Found and fixed a real, general (not chapter-specific) render-script bug while building this chapter's page - see the paired 'design'/'pdf' manifest entries on chemistry-12-1 and chemistry-12-2 for full detail: render_item() was unconditionally rendering a redundant, solution-less 'Part (i)/<prompt>' tail for any item whose real solution is one flowing item-level block rather than broken out per part. This chapter's own affected items (q_3.1/3.6/3.9/3.13/3.15) all have a non-empty, substantive item-level solution already restating each part's content inline, so the fix's default suppression path applied cleanly with zero exceptions needed here (unlike chemistry-12-1's q_1.3/q_1.9, which needed restored part-rendering because their item-level solution is ALSO empty, and chemistry-12-2's q_2.13, which needed a one-item exception because its item-level prompt is a sentence fragment). Figure-src-count check: JSON's 3 distinct srcs (fig_3_18, fig_3_27, fig_3_28) match exactly what resolves in the rendered HTML's <img> tags, and all 3 files verified to exist under 09_design/images/ via os.path.exists against the real output directory. Mandatory manual read-back (numeric tokens from every question/final_answer field in 06_simplify/chapter.simplified.en.md, via mdio.markdown_to_chapter - not the JSON): 116 fields checked, 0 missing. Visually spot-checked via Playwright screenshots: ex_3.9 (chained Arrhenius derivation with multiple bare-slash divisions), q_3.3 (\\xrightarrow{Pt} reaction arrow), q_3.13 (\\overline bar-log notation, now correctly deduplicated part rendering), ex_3.1 (mid-solution figure fig_3_18), q_3.15 (two item-level figures fig_3_27/28, 6-part item), q_3.22 (the stage-5-corrected table) - all render correctly with no garbled LaTeX, no dropped content, no layout breakage."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-21T06:49:58.761002+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "8e18f444214cbfbb"
+    },
+    "counts": {
+      "retroactive_fix": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Retroactive fix discovered during stage 9's own visual QA screenshot review of q_3.15's rendered page: its third table column header (log[N2O5]) rendered as visibly spaced-out letters 'l o g' instead of 'log'. Traced back through every stage to 01_mathpix/solutions.en.md - a genuine mathpix OCR artifact present from the very first extraction (source wrote bold 'log' as '\\boldsymbol{\\operatorname { l o g }}', with spurious spaces between each letter inside the \\operatorname argument), carried unchanged through every downstream stage including stage 5's own verification pass, which missed it - a genuine stage-5 gap, not a stage-9 rendering bug (the LaTeX converter faithfully rendered exactly what the source said). Fixed with high confidence WITHOUT a full solutions-PDF page re-render: 'log' is unambiguous, universal mathematical notation with no legitimate alternate reading of spaced-out letters (unlike a numeric/scientific value, where genuine ambiguity would demand independent page verification per this project's standing rule) - replaced '\\boldsymbol{\\operatorname { l o g }}' with the standard '\\boldsymbol{\\log}' in 05_verify/chapter.verified.en.md, 06_simplify/chapter.simplified.en.md, and 07_format/structured.en.md (exact-match replace, count=1 in each). Scoped to the English track only, matching this session's actual work - the Hindi track (chapter.verified.hi.md etc.) carries the identical defect but is out of scope this session; left as a known, documented gap for a future Hindi-track session. Re-ran stage 7's own gates after the fix: tag._parse OK, protect.parity shows only the same pre-existing expected 'images: 1 -> 0' deviation (fig_3_18's bare-markdown-to-container wrap, already documented in an earlier manifest entry) - no new issues. Regenerated 08_tag/structured.en.json and 09_design/final.en.html; re-ran the mandatory numeric read-back (116 fields checked, 0 missing) and visually re-confirmed the fixed table header renders as 'log[N2O5]' correctly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-21T07:01:28.395948+00:00",
+    "inputs": {
+      "structured.en.json": "afeefec1cee1c071"
+    },
+    "counts": {
+      "retroactive_fix": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Retroactive LaTeX-converter bugfix found during stage 10's own PDF page-render spot check (a rendered page of ex_3.1's Table 3.1 header showed literal, visible '</sub>' tag text leaking onto the page - e.g. '[C4</sub> H9</sub> Cl]t2</sub></sub>'). Root cause: latex_convert.py's \\left/\\right handler tried to detect an escaped literal brace delimiter (\\left\\{ / \\right\\}, used in ex_3.1's Table 3.1 header - a \\begin{aligned} cell wrapping nested chemical-formula subscripts in \\left\\{...\\right\\}) via a regex requiring a LETTER immediately after the backslash (\\\\[a-zA-Z]+) - which never matches a non-letter escape like '\\{', so the two branches meant to convert it to a literal brace character were unreachable dead code. The backslash got consumed alone, leaving the bare '{' character unconsumed, which the NEXT loop iteration swept into the generic brace-group reader (`if c == \"{\": inner = _read_group(p); buf.append(_convert(inner))`) - reading the ENTIRE \\left\\{...\\right\\} span (including its own nested \\frac/sub/sup content) as one group, recursively converting it to HTML, and dropping that already-tag-wrapped HTML straight into the plain-text buffer. When that buffer was later padded by _finish_plain_text()'s operator-spacing regex (which pads a bare '/' with non-breaking spaces), it matched the '/' INSIDE the nested content's own '</sub>' closing tags and corrupted them into '<\\xa0/\\xa0sub>' - exactly the general failure mode the module's own docstring already documents ('never let tag-producing HTML enter buf'), resurfacing via this specific escaped-brace path. Fixed by matching '\\{'/'\\}' as an explicit 2-character token check before falling back to the general \\\\[a-zA-Z]+ regex, so the literal brace is fully consumed as its own ordinary buffered character and never reaches the group-reading branch at all. Confirmed this pattern (\\left\\{) appears exactly once in this chapter (ex_3.1's Table 3.1 header) and zero times in chemistry-12-1/chemistry-12-2's own 06_simplify sources (grep-confirmed) - rebuilt both chapters' pages after this fix as a precaution and confirmed their final.en.html came out byte-identical (md5 unchanged), so no re-export was needed for either. Re-ran chemistry-12-3's own full chain after the fix: stage 8 JSON regenerated (unaffected, gates pass), 09_design/final.en.html rebuilt (195,408 bytes), numeric read-back re-run (116 fields, 0 missing), visually re-confirmed the fixed table renders correctly with clean nested subscripts and no stray tag text."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-21T07:01:28.398941+00:00",
+    "inputs": {
+      "final.en.html": "8f128f14d1d56d9a"
+    },
+    "counts": {
+      "pages": 35,
+      "blank_pages": 0,
+      "numeric_tokens_checked": 199,
+      "numeric_tokens_missing": 0,
+      "file_bytes": 1457970
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.en.html file:// path (not a scratch copy), waited on networkidle + document.fonts.ready + a 300ms settle, called page.emulate_media(media='screen') unconditionally before page.pdf() (the standing per-export fix for Chromium's print-media text-shaping bug - applied even though this is an English-only chapter with no Devanagari, per this project's own standing rule to apply it unconditionally rather than per-chapter-diagnose), print_background=True + prefer_css_page_size=True, no explicit format/width/height. Gate (fitz/PyMuPDF): page count 35 (sane for a 49-item chapter, matching chemistry-12-2's ~26 pages for 43 items and chemistry-12-1's 42 pages for 66 items at a consistent density), 0 blank pages. Numeric read-back re-run against the PDF's OWN extracted text (not assumed carried over from the stage-9 HTML check) with the documented superscript/subscript-merge-trap guard (insert a separator before a run of super/subscript characters when normalizing, so '10^39' normalizes to two distinct tokens '10' and '39' rather than gluing into '1039'): 199 numeric tokens checked, 0 missing. Visually spot-checked page 1 (ex_3.1, including the just-fixed Table 3.1 header) - renders cleanly, correct pagination, no cut-off content."
   }
 ]

@@ -1,0 +1,3207 @@
+{
+  "front": {
+    "title": "Chemical Kinetics",
+    "chapter": "3"
+  },
+  "items": [
+    {
+      "id": "ex_3.1",
+      "kind": "example",
+      "number": "3.1",
+      "topic": "Average and instantaneous rate from concentration data",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "From the concentrations of $\\mathrm{C}_{4} \\mathrm{H}_{9} \\mathrm{Cl}$ (butyl chloride) at different times given below, calculate the average rate of the reaction:\n\n$$\n\\mathrm{C}_{4} \\mathrm{H}_{9} \\mathrm{Cl}+\\mathrm{H}_{2} \\mathrm{O} \\rightarrow \\mathrm{C}_{4} \\mathrm{H}_{9} \\mathrm{OH}+\\mathrm{HCl}\n$$\n\nduring different intervals of time.\n\n| t/s | 0 | 50 | 100 | 150 | 200 | 300 | 400 | 700 | 800 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| $\\left[\\mathrm{C}_{4} \\mathrm{H}_{9} \\mathrm{Cl}\\right] / \\mathrm{mol} \\mathrm{L}^{-1}$ | 0.100 | 0.0905 | 0.0820 | 0.0741 | 0.0671 | 0.0549 | 0.0439 | 0.0210 | 0.017 |"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We find the difference in concentration over different intervals of time. Dividing $\\Delta[\\mathrm{R}]$ by $\\Delta t$ gives the average rate (Table 3.1)."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "Table 3.1: Average rates of hydrolysis of butyl chloride\n| $\\left[\\mathrm{C}_{4} \\mathrm{H}_{9} \\mathrm{CI}\\right]_{t_{1}} / \\mathrm{mol} \\mathrm{L}^{-1}$ | $\\left[\\mathrm{C}_{4} \\mathrm{H}_{9} \\mathrm{CI}\\right]_{t_{2}} / \\mathbf{m o l ~ L}^{\\boldsymbol{-} \\mathbf{1}}$ | $t_{1} / \\mathrm{s}$ | $t_{2} / \\mathrm{s}$ | $\\begin{aligned} & r_{\\mathrm{av}} \\times 10^{4} / \\mathrm{mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1} \\\\ & =-\\left\\{\\left[\\mathrm{C}_{4} \\mathrm{H}_{9} \\mathrm{Cl}\\right]_{\\mathrm{t}_{2}}-\\left[\\mathrm{C}_{4} \\mathrm{H}_{9} \\mathrm{Cl}\\right]_{\\mathrm{t}_{1}} /\\left(\\mathrm{t}_{2}-\\mathrm{t}_{1}\\right)\\right\\} \\times 10^{4} \\end{aligned}$ |\n| :--- | :--- | :--- | :--- | :--- |\n| 0.100 | 0.0905 | 0 | 50 | 1.90 |\n| 0.0905 | 0.0820 | 50 | 100 | 1.70 |\n| 0.0820 | 0.0741 | 100 | 150 | 1.58 |\n| 0.0741 | 0.0671 | 150 | 200 | 1.40 |\n| 0.0671 | 0.0549 | 200 | 300 | 1.22 |\n| 0.0549 | 0.0439 | 300 | 400 | 1.10 |\n| 0.0439 | 0.0335 | 400 | 500 | 1.04 |\n| 0.0210 | 0.017 | 700 | 800 | 0.4 |"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Table 3.1 shows that the average rate falls from $1.90 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}$ to $0.4 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}$. But average rate cannot tell us the rate at one particular instant, since it stays constant over whichever time interval we use to calculate it. So, to get the rate at a particular moment, we find the instantaneous rate. We get this by taking the average rate over the smallest possible time interval, say d$t$ (that is, when $\\Delta t$ approaches zero). So, for an infinitesimally small d$t$, the instantaneous rate is given by"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nr_{\\mathrm{av}}=\\frac{-\\Delta[\\mathrm{R}]}{\\Delta t}=\\frac{\\Delta[\\mathrm{P}]}{\\Delta t} \\quad (3.3)\n$$"
+            }
+          ],
+          "label": "Instantaneous rate"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "As $\\Delta t \\rightarrow 0$ or $\\quad r_{\\text {inst }}=\\frac{-\\mathrm{d}[\\mathrm{R}]}{\\mathrm{d} t}=\\frac{\\mathrm{d}[\\mathrm{P}]}{\\mathrm{d} t}$"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_3_18.jpg",
+          "caption": "Fig 3.2\nInstantaneous rate of hydrolysis of butyl chloride $\\left(\\mathrm{C}_{4} \\mathrm{H}_{9} \\mathrm{Cl}\\right)$"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We can also find it graphically. Draw a tangent at time t on either curve (concentration of R or P vs time t) and calculate its slope (Fig. 3.1). So in problem 3.1, we can find $r_{\\text {inst }}$ at 600s, for example, by plotting the concentration of butyl chloride against time. We draw a tangent that touches the curve at $t=600 \\mathrm{~s}$ (Fig. 3.2).\n\nThe slope of this tangent gives the instantaneous rate.\n\n$$\n\\begin{aligned}\n& \\text { So, } r_{\\text {inst }} \\text { at } 600 \\mathrm{~s}=-\\left(\\frac{0.0165-0.037}{(800-400) \\mathrm{s}}\\right) \\mathrm{mol} \\mathrm{~L}^{-1}=5.12 \\times 10^{-5} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1} \\\\\n& \\text { At } t=250 \\mathrm{~s} \\quad r_{\\text {inst }}=1.22 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1} \\\\\n& t=350 \\mathrm{~s} \\quad r_{\\text {inst }}=1.0 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1} \\\\\n& t=450 \\mathrm{~s} \\quad r_{\\text {inst }}=6.4 \\times 10^{-5} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_3.2",
+      "kind": "example",
+      "number": "3.2",
+      "topic": "Average rate of N2O5 decomposition in different time units",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The decomposition of $\\mathrm{N}_{2} \\mathrm{O}_{5}$ in $\\mathrm{CCl}_{4}$ at 318K has been studied by monitoring the concentration of $\\mathrm{N}_{2} \\mathrm{O}_{5}$ in the solution. Initially the concentration of $\\mathrm{N}_{2} \\mathrm{O}_{5}$ is $2.33 \\mathrm{~mol} \\mathrm{~L}^{-1}$ and after 184 minutes, it is reduced to $2.08 \\mathrm{~mol} \\mathrm{~L}^{-1}$. The reaction takes place according to the equation\n\n$$\n2 \\mathrm{~N}_{2} \\mathrm{O}_{5}(\\mathrm{~g}) \\rightarrow 4 \\mathrm{NO}_{2}(\\mathrm{~g})+\\mathrm{O}_{2}(\\mathrm{~g})\n$$\n\nCalculate the average rate of this reaction in terms of hours, minutes and seconds. What is the rate of production of $\\mathrm{NO}_{2}$ during this period?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\text { Average Rate }=\\frac{1}{2}-\\frac{\\Delta\\left[\\mathrm{N}_{2} \\mathrm{O}_{5}\\right]}{\\Delta t}=-\\frac{1}{2} \\frac{(2.08-2.33) \\mathrm{mol} \\mathrm{~L}^{-1}}{184 \\mathrm{~min}} \\\\\n& =6.79 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} / \\mathrm{min}=\\left(6.79 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}\\right) \\times(60 \\mathrm{~min} / 1 \\mathrm{~h}) \\\\\n& =4.07 \\times 10^{-2} \\mathrm{~mol} \\mathrm{~L}^{-1} / \\mathrm{h} \\\\\n& =6.79 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\times 1 \\mathrm{~min} / 60 \\mathrm{~s} \\\\\n& =1.13 \\times 10^{-5} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Remember that\n\n$$\n\\begin{aligned}\n& \\text { Rate }=\\frac{1}{4} \\frac{\\Delta\\left[\\mathrm{NO}_{2}\\right]}{\\Delta t} \\\\\n\\frac{\\Delta\\left[\\mathrm{NO}_{2}\\right]}{\\Delta t} & =6.79 \\times 10^{-4} \\times 4 \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}=2.72 \\times 10^{-3} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Average rate $=4.07 \\times 10^{-2} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~h}^{-1}=6.79 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}=1.13 \\times 10^{-5} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}$; rate of production of $\\mathrm{NO}_{2}=2.72 \\times 10^{-3} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_3.3",
+      "kind": "example",
+      "number": "3.3",
+      "topic": "Overall order from a fractional rate expression",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Calculate the overall order of a reaction which has the rate expression"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(a)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Rate $=k[\\mathrm{~A}]^{1 / 2}[\\mathrm{~B}]^{3 / 2}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Rate $=k[\\mathrm{~A}]^{\\mathrm{x}}[\\mathrm{B}]^{\\mathrm{y}}$\norder $=\\mathrm{x}+\\mathrm{y}$\nSo order $=1 / 2+3 / 2=2$, i.e., second order"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "Second order"
+            }
+          ]
+        },
+        {
+          "label": "(b)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Rate $=k[\\mathrm{~A}]^{3 / 2}[\\mathrm{~B}]^{-1}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "order $=3 / 2+(-1)=1 / 2$, i.e., half order."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "Half order"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "ex_3.4",
+      "kind": "example",
+      "number": "3.4",
+      "topic": "Reaction order from rate constant units",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Identify the reaction order from each of the following rate constants."
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$k=2.3 \\times 10^{-5} \\mathrm{~L} \\mathrm{~mol}^{-1} \\mathrm{~s}^{-1}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The unit of a second order rate constant is $\\mathrm{L} \\mathrm{mol}^{-1} \\mathrm{~s}^{-1}$. So $k=2.3 \\times 10^{-5} \\mathrm{~L} \\mathrm{~mol}^{-1} \\mathrm{~s}^{-1}$ represents a second order reaction."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "Second order reaction"
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$k=3 \\times 10^{-4} \\mathrm{~s}^{-1}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The unit of a first order rate constant is $\\mathrm{s}^{-1}$. So $k=3 \\times 10^{-4} \\mathrm{~s}^{-1}$ represents a first order reaction."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "First order reaction"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "ex_3.5",
+      "kind": "example",
+      "number": "3.5",
+      "topic": "Rate constant of first order N2O5 decomposition",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The initial concentration of $\\mathrm{N}_{2} \\mathrm{O}_{5}$ in the following first order reaction $\\mathrm{N}_{2} \\mathrm{O}_{5}(\\mathrm{~g}) \\rightarrow 2 \\mathrm{NO}_{2}(\\mathrm{~g})+1 / 2 \\mathrm{O}_{2}(\\mathrm{~g})$ was $1.24 \\times 10^{-2} \\mathrm{~mol} \\mathrm{~L}^{-1}$ at 318 K. The concentration of $\\mathrm{N}_{2} \\mathrm{O}_{5}$ after 60 minutes was $0.20 \\times 10^{-2} \\mathrm{~mol} \\mathrm{~L}^{-1}$. Calculate the rate constant of the reaction at 318 K."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For a first order reaction\n\n$$\n\\begin{aligned}\n\\log \\frac{[\\mathrm{R}]_{1}}{[\\mathrm{R}]_{2}} & =\\frac{k\\left(t_{2}-t_{1}\\right)}{2.303} \\\\\nk & =\\frac{2.303}{\\left(t_{2}-t_{1}\\right)} \\log \\frac{[R]_{1}}{[R]_{2}} \\\\\n& =\\frac{2.303}{(60 \\mathrm{~min}-0 \\mathrm{~min})} \\log \\frac{1.24 \\times 10^{-2} \\mathrm{~mol} \\mathrm{~L}^{-1}}{0.20 \\times 10^{-2} \\mathrm{~mol} \\mathrm{~L}^{-1}} \\\\\n& =\\frac{2.303}{60} \\log 6.2 \\mathrm{~min}^{-1} \\\\\nk & =0.0304 \\mathrm{~min}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$k=0.0304 \\mathrm{~min}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_3.6",
+      "kind": "example",
+      "number": "3.6",
+      "topic": "Rate constant from total pressure data",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The following data were obtained during the first order thermal decomposition of $\\mathrm{N}_{2} \\mathrm{O}_{5}(\\mathrm{g})$ at constant volume:\n\n| $2 \\mathrm{~N}_{2} \\mathrm{O}_{5}(\\mathrm{~g}) \\rightarrow 2 \\mathrm{~N}_{2} \\mathrm{O}_{4}(\\mathrm{~g})+\\mathrm{O}_{2}(\\mathrm{~g})$ |\n| :--- |\n\n\n| S.No. | Time/s | Total Pressure/(atm) |\n| :--- | :--- | :--- |\n| 1. | 0 | 0.5 |\n| 2. | 100 | 0.512 |\n\nCalculate the rate constant."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let the pressure of $\\mathrm{N}_{2} \\mathrm{O}_{5}(\\mathrm{g})$ decrease by 2x atm. Two moles of $\\mathrm{N}_{2} \\mathrm{O}_{5}$ decompose to give two moles of $\\mathrm{N}_{2} \\mathrm{O}_{4}(\\mathrm{g})$ and one mole of $\\mathrm{O}_{2}(\\mathrm{g})$. So the pressure of $\\mathrm{N}_{2} \\mathrm{O}_{4}(\\mathrm{g})$ increases by 2x atm, and the pressure of $\\mathrm{O}_{2}(\\mathrm{g})$ increases by x atm."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "|  | $2 \\mathrm{~N}_{2} \\mathrm{O}_{5}(\\mathrm{~g})$ | → | $2 \\mathrm{~N}_{2} \\mathrm{O}_{4}(\\mathrm{~g})$ | + | $\\mathrm{O}_{2}(\\mathrm{~g})$ |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| Start $t=0$ | 0.5 atm |  | 0 atm |  | 0 atm |\n| At time $t$ | (0.5-2x) atm |  | 2x atm |  | x atm |"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\np_{t} & =p_{\\mathrm{N}_{2} \\mathrm{O}_{5}}+p_{\\mathrm{N}_{2} \\mathrm{O}_{4}}+p_{\\mathrm{O}_{2}} \\\\\n& =(0.5-2 \\mathrm{x})+2 \\mathrm{x}+\\mathrm{x}=0.5+\\mathrm{x} \\\\\n\\mathrm{x} & =p_{t}-0.5\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\np_{\\mathrm{N}_{2} \\mathrm{O}_{5}} & =0.5-2 \\mathrm{x} \\\\\n& =0.5-2\\left(p_{\\mathrm{t}}-0.5\\right)=1.5-2 p_{t}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "At $\\quad t=100 \\mathrm{~s} ; p_{\\mathrm{t}}=0.512 \\mathrm{~atm}$\n\n$$\np_{\\mathrm{N}_{2} \\mathrm{O}_{5}}=1.5-2 \\times 0.512=0.476 \\mathrm{~atm}\n$$\n\nUsing equation (3.16)\n\n$$\n\\begin{aligned}\nk & =\\frac{2.303}{t} \\log \\frac{p_{\\mathrm{i}}}{p_{\\mathrm{A}}}=\\frac{2.303}{100 \\mathrm{~s}} \\log \\frac{0.5 \\mathrm{~atm}}{0.476 \\mathrm{~atm}} \\\\\n& =\\frac{2.303}{100 \\mathrm{~s}} \\times 0.0216=4.98 \\times 10^{-4} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$k=4.98 \\times 10^{-4} \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_3.7",
+      "kind": "example",
+      "number": "3.7",
+      "topic": "Half-life of a first order reaction",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A first order reaction is found to have a rate constant, $k=5.5 \\times 10^{-14} \\mathrm{~s}^{-1}$. Find the half-life of the reaction."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Half-life for a first order reaction is\n\n$$\n\\begin{aligned}\nt_{1 / 2} & =\\frac{0.693}{k} \\\\\nt_{1 / 2} & =\\frac{0.693}{5.5 \\times 10^{-14} \\mathrm{~s}^{-1}}=1.26 \\times 10^{13} \\mathrm{~s}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$t_{1/2}=1.26 \\times 10^{13} \\mathrm{~s}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_3.8",
+      "kind": "example",
+      "number": "3.8",
+      "topic": "Proof: 99.9% completion time versus half-life",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that in a first order reaction, time required for completion of 99.9\\% is 10 times of half-life ( $t_{1 / 2}$ ) of the reaction."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "When the reaction is completed, $99.9 \\%,[\\mathrm{R}]_{\\mathrm{n}}=[\\mathrm{R}]_{0}-0.999[\\mathrm{R}]_{0}$\n\n$$\n\\begin{aligned}\nk & =\\frac{2.303}{t} \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]} \\\\\n& =\\frac{2.303}{t} \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]_{0}-0.999[\\mathrm{R}]_{0}}=\\frac{2.303}{t} \\log 10^{3} \\\\\nt & =6.909 / k\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For half-life of the reaction\n\n$$\n\\begin{aligned}\nt_{1 / 2} & =0.693 / k \\\\\n\\frac{t}{t_{1 / 2}} & =\\frac{6.909}{k} \\times \\frac{k}{0.693}=10\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_3.9",
+      "kind": "example",
+      "number": "3.9",
+      "topic": "Activation energy and Arrhenius factor from two temperatures",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The rate constants of a reaction at 500K and 700K are $0.02 \\mathrm{~s}^{-1}$ and $0.07 \\mathrm{~s}^{-1}$ respectively. Calculate the values of $E_{\\mathrm{a}}$ and $A$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\log \\frac{k_{2}}{k_{1}} & =\\frac{E_{\\mathrm{a}}}{2.303 R}\\left[\\frac{T_{2}-T_{1}}{T_{1} T_{2}}\\right] \\\\\n\\log \\frac{0.07}{0.02} & =\\left(\\frac{E_{\\mathrm{a}}}{2.303 \\times 8.314 \\mathrm{JK}^{-1} \\mathrm{~mol}^{-1}}\\right)\\left[\\frac{700-500}{700 \\times 500}\\right] \\\\\n0.544 & =E_{\\mathrm{a}} \\times 5.714 \\times 10^{-4} / 19.15 \\\\\nE_{\\mathrm{a}} & =0.544 \\times 19.15 / 5.714 \\times 10^{-4}=18230.8 \\mathrm{~J} \\\\\nk & =A \\mathrm{e}^{-E a / R T} \\\\\n0.02 & =A \\mathrm{e}^{-18230.8 / 8.314 \\times 500} \\\\\nA & =0.02 / 0.012=1.61\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$E_{\\mathrm{a}}=18230.8 \\mathrm{~J}$; $A=1.61$"
+        }
+      ]
+    },
+    {
+      "id": "ex_3.10",
+      "kind": "example",
+      "number": "3.10",
+      "topic": "Rate constant of ethyl iodide decomposition at a new temperature",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The first order rate constant for the decomposition of ethyl iodide by the reaction\n\n$$\n\\mathrm{C}_{2} \\mathrm{H}_{5} \\mathrm{I}(\\mathrm{~g}) \\rightarrow \\mathrm{C}_{2} \\mathrm{H}_{4}(\\mathrm{~g})+\\mathrm{HI}(\\mathrm{~g})\n$$\n\nat 600K is $1.60 \\times 10^{-5} \\mathrm{~s}^{-1}$. Its energy of activation is 209 kJ/mol. Calculate the rate constant of the reaction at 700K."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We know that\n\n$$\n\\log k_{2}-\\log k_{1}=\\frac{E_{\\mathrm{a}}}{2.303 R}\\left[\\frac{1}{T_{1}}-\\frac{1}{T_{2}}\\right]\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\log k_{2} & =\\log k_{1}+\\frac{E_{\\mathrm{a}}}{2.303 R}\\left[\\frac{1}{T_{1}}-\\frac{1}{T_{2}}\\right] \\\\\n& =\\log \\left(1.60 \\times 10^{-5}\\right)+\\frac{209000 \\mathrm{~J} \\mathrm{~mol} \\mathrm{~L}^{-1}}{2.303 \\times 8.314 \\mathrm{~J} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~K}^{-1}}\\left[\\frac{1}{600 \\mathrm{~K}}-\\frac{1}{700 \\mathrm{~K}}\\right]\n\\end{aligned}\n$$\n\n$$\n\\log k_{2}=-4.796+2.599=-2.197\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nk_{2}=6.36 \\times 10^{-3} \\mathrm{~s}^{-1}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$k_2 = 6.36 \\times 10^{-3} \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.1",
+      "kind": "exercise",
+      "number": "3.1",
+      "topic": "Order and rate constant dimensions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "From the rate expression for the following reactions, determine their order of reaction and the dimensions of the rate constants."
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$3 \\mathrm{NO}(\\mathrm{g}) \\rightarrow \\mathrm{N}_{2} \\mathrm{O}(\\mathrm{g}) \\quad$ Rate $=k[\\mathrm{NO}]^{2}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{H}_{2} \\mathrm{O}_{2}(\\mathrm{aq})+3 \\mathrm{I}^{-}(\\mathrm{aq})+2 \\mathrm{H}^{+} \\rightarrow 2 \\mathrm{H}_{2} \\mathrm{O}(\\mathrm{l})+\\mathrm{I}_{3}^{-} \\quad$ Rate $=k\\left[\\mathrm{H}_{2} \\mathrm{O}_{2}\\right]\\left[\\mathrm{I}^{-}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{CH}_{3} \\mathrm{CHO}(\\mathrm{g}) \\rightarrow \\mathrm{CH}_{4}(\\mathrm{~g})+\\mathrm{CO}(\\mathrm{g}) \\quad$ Rate $=k\\left[\\mathrm{CH}_{3} \\mathrm{CHO}\\right]^{3 / 2}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{C}_{2} \\mathrm{H}_{5} \\mathrm{Cl}(\\mathrm{g}) \\rightarrow \\mathrm{C}_{2} \\mathrm{H}_{4}(\\mathrm{~g})+\\mathrm{HCl}(\\mathrm{g}) \\quad$ Rate $=k\\left[\\mathrm{C}_{2} \\mathrm{H}_{5} \\mathrm{Cl}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) Given rate $=k[\\mathrm{NO}]^{2}$\n\nTherefore, order of the reaction $=2$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Dimension of\n\n$$\nk=\\frac{\\text { Rate }}{[\\mathrm{NO}]^{2}}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\frac{\\mathrm{mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}}{\\left(\\mathrm{~mol} \\mathrm{~L}^{-1}\\right)^{2}} \\\\\n& =\\frac{\\mathrm{mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}}{\\mathrm{~mol}^{2} \\mathrm{~L}^{-2}} \\\\\n& =\\mathrm{L} \\mathrm{~mol}^{-1} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) Given rate $=k\\left[\\mathrm{H}_{2} \\mathrm{O}_{2}\\right]\\left[\\mathrm{I}^{-}\\right]$\n\nTherefore, order of the reaction $=2$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Dimension of\n\n$$\nk=\\frac{\\text { Rate }}{\\left[\\mathrm{H}_{2} \\mathrm{O}_{2}\\right]\\left[\\mathrm{I}^{-}\\right]}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\frac{\\mathrm{mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}}{\\left(\\mathrm{~mol} \\mathrm{~L}^{-1}\\right)\\left(\\mathrm{mol} \\mathrm{~L}^{-1}\\right)} \\\\\n& =\\mathrm{L} \\mathrm{~mol}^{-1} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) Given rate $=k\\left[\\mathrm{CH}_{3} \\mathrm{CHO}\\right]^{3 / 2}$\n\nTherefore, order of reaction $={ }^{\\frac{3}{2}}$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Dimension of\n\n$$\nk=\\frac{\\text { Rate }}{\\left[\\mathrm{CH}_{3} \\mathrm{CHO}\\right]^{\\frac{3}{2}}}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\frac{\\mathrm{mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}}{\\left(\\mathrm{~mol} \\mathrm{~L}^{-1}\\right)^{\\frac{3}{2}}} \\\\\n& =\\frac{\\mathrm{mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}}{\\mathrm{~mol}^{\\frac{3}{2}} \\mathrm{~L}^{-\\frac{3}{2}}} \\\\\n& =\\mathrm{L}^{\\frac{1}{2}} \\mathrm{~mol}^{-\\frac{1}{2}} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) Given rate $=k\\left[\\mathrm{C}_{2} \\mathrm{H}_{5} \\mathrm{Cl}\\right]$ Therefore, order of the reaction $=1$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Dimension of\n\n$$\nk=\\frac{\\text { Rate }}{\\left[\\mathrm{C}_{2} \\mathrm{H}_{5} \\mathrm{Cl}\\right]}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\frac{\\mathrm{mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}}{\\mathrm{~mol} \\mathrm{~L}^{-1}} \\\\\n& =\\mathrm{s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(i) order $=2$, $k$ in $\\mathrm{L} \\mathrm{~mol}^{-1} \\mathrm{~s}^{-1}$; (ii) order $=2$, $k$ in $\\mathrm{L} \\mathrm{~mol}^{-1} \\mathrm{~s}^{-1}$; (iii) order $=\\frac{3}{2}$, $k$ in $\\mathrm{L}^{\\frac{1}{2}} \\mathrm{~mol}^{-\\frac{1}{2}} \\mathrm{~s}^{-1}$; (iv) order $=1$, $k$ in $\\mathrm{s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.2",
+      "kind": "exercise",
+      "number": "3.2",
+      "topic": "Initial rate calculation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "For the reaction:\n$$\n2 \\mathrm{~A}+\\mathrm{B} \\rightarrow \\mathrm{~A}_{2} \\mathrm{~B}\n$$\nthe rate $=k[\\mathrm{~A}][\\mathrm{B}]^{2}$ with $\\mathrm{k}=2.0 \\times 10^{-6} \\mathrm{~mol}^{-2} \\mathrm{~L}^{2} \\mathrm{~s}^{-1}$. Calculate the initial rate of the reaction when $[\\mathrm{A}]=0.1 \\mathrm{~mol} \\mathrm{~L}^{-1},[\\mathrm{~B}]=0.2 \\mathrm{~mol} \\mathrm{~L}^{-1}$. Calculate the rate of reaction after [A] is reduced to $0.06 \\mathrm{~mol} \\mathrm{~L}^{-1}$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The initial rate of the reaction is"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\text { Rate }=k[\\mathrm{~A}][\\mathrm{B}]^{2} \\\\\n& =\\left(2.0 \\times 10^{-6} \\mathrm{~mol}^{-2} \\mathrm{~L}^{2} \\mathrm{~s}^{-1}\\right)\\left(0.1 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)\\left(0.2 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)^{2} \\\\\n& =8.0 \\times 10^{-9} \\mathrm{~mol}^{-2} \\mathrm{~L}^{2} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "When $[\\mathrm{A}]$ is reduced from $0.1 \\mathrm{~mol} \\mathrm{~L}^{-1}$ to $0.06 \\mathrm{~mol}^{-1}$, the concentration of A reacted = $(0.1-0.06) \\mathrm{mol} \\mathrm{L}^{-1}=0.04 \\mathrm{~mol} \\mathrm{~L}^{-1}$\n\nTherefore, concentration of B reacted $\\begin{aligned} & =\\frac{1}{2} \\times 0.04 \\mathrm{~mol} \\mathrm{~L}^{-1} \\\\ & =0.02 \\mathrm{~mol} \\mathrm{~L}^{-1}\\end{aligned}$\nThen, concentration of B available, $[\\mathrm{B}]=(0.2-0.02) \\mathrm{mol} \\mathrm{L}^{-1}$\n\n$$\n=0.18 \\mathrm{~mol} \\mathrm{~L}^{-1}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "After $[\\mathrm{A}]$ is reduced to $0.06 \\mathrm{~mol} \\mathrm{~L}^{-1}$, the rate of the reaction is given by,\n\n$$\n\\begin{aligned}\n& \\text { Rate }=k[\\mathrm{~A}][\\mathrm{B}]^{2} \\\\\n& =\\left(2.0 \\times 10^{-6} \\mathrm{~mol}^{-2} \\mathrm{~L}^{2} \\mathrm{~s}^{-1}\\right)\\left(0.06 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)\\left(0.18 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)^{2} \\\\\n& =3.89 \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Initial rate $=8.0 \\times 10^{-9} \\mathrm{~mol}^{-2} \\mathrm{~L}^{2} \\mathrm{~s}^{-1}$; after $[\\mathrm{A}]$ falls to $0.06 \\mathrm{~mol} \\mathrm{~L}^{-1}$, rate $=3.89 \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.3",
+      "kind": "exercise",
+      "number": "3.3",
+      "topic": "Zero order rate of production",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The decomposition of $\\mathrm{NH}_{3}$ on platinum surface is zero order reaction. What are the rates of production of $\\mathrm{N}_{2}$ and $\\mathrm{H}_{2}$ if $k=2.5 \\times 10^{-4} \\mathrm{~mol}^{-1} \\mathrm{~L} \\mathrm{~s}^{-1}$ ?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The decomposition of $\\mathrm{NH}_{3}$ on platinum surface is represented by the following equation.\n\n$$\n2 \\mathrm{NH}_{3(\\mathrm{~g})} \\xrightarrow{\\mathrm{Pt}} \\mathrm{~N}_{2(\\mathrm{~g})}+3 \\mathrm{H}_{2(\\mathrm{~g})}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore,\n\n$$\n\\text { Rate }=-\\frac{1}{2} \\frac{d\\left[\\mathrm{NH}_{3}\\right]}{d t}=\\frac{d\\left[\\mathrm{~N}_{2}\\right]}{d t}=\\frac{1}{3} \\frac{d\\left[\\mathrm{H}_{2}\\right]}{d t}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "However, it is given that the reaction is of zero order. Therefore,\n\n$$\n\\begin{aligned}\n-\\frac{1}{2} \\frac{d\\left[\\mathrm{NH}_{3}\\right]}{d t}=\\frac{d\\left[\\mathrm{~N}_{2}\\right]}{d t}=\\frac{1}{3} \\frac{d\\left[\\mathrm{H}_{2}\\right]}{d t} & =k \\\\\n& =2.5 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, the rate of production of $\\mathrm{N}_{2}$ is\n\n$$\n\\frac{d\\left[\\mathrm{~N}_{2}\\right]}{d t}=2.5 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}\n$$\n\nAnd, the rate of production of $\\mathrm{H}_{2}$ is\n\n$$\n\\begin{aligned}\n& \\frac{d\\left[\\mathrm{H}_{2}\\right]}{d t}=3 \\times 2.5 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1} \\\\\n& =7.5 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Rate of production of $\\mathrm{N}_2 = 2.5 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}$; rate of production of $\\mathrm{H}_2 = 7.5 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.4",
+      "kind": "exercise",
+      "number": "3.4",
+      "topic": "Units of rate and rate constant",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The decomposition of dimethyl ether leads to the formation of $\\mathrm{CH}_{4}, \\mathrm{H}_{2}$ and CO and the reaction rate is given by\n$$\n\\text { Rate }=k\\left[\\mathrm{CH}_{3} \\mathrm{OCH}_{3}\\right]^{3 / 2}\n$$\nThe rate of reaction is followed by increase in pressure in a closed vessel, so the rate can also be expressed in terms of the partial pressure of dimethyl ether, i.e.,\n$$\n\\text { Rate }=k\\left(p_{\\mathrm{CH}_{3} \\mathrm{OCH}_{3}}\\right)^{3 / 2}\n$$\nIf the pressure is measured in bar and time in minutes, then what are the units of rate and rate constants?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "If pressure is measured in bar and time in minutes, then\nUnit of rate = bar min-1"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\text { Rate }=k\\left(p_{\\mathrm{CH}_{3} \\mathrm{OCH}_{3}}\\right)^{3 / 2} \\\\\n& \\Rightarrow k=\\frac{\\text { Rate }}{\\left(p_{\\mathrm{CH}_{3} \\mathrm{OCH}_{1}}\\right)^{3 / 2}}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, unit of rate constants\n\n$$\n(k)=\\frac{\\text { bar min }{ }^{-1}}{\\text { bar }^{3 / 2}}\n$$\n\n$$\n=\\mathrm{bar}^{-1 / 2} \\mathrm{~min}^{-1}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Unit of rate $=\\mathrm{bar} \\mathrm{~min}^{-1}$; unit of rate constant $(k)=\\mathrm{bar}^{-1 / 2} \\mathrm{~min}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.5",
+      "kind": "exercise",
+      "number": "3.5",
+      "topic": "Factors affecting reaction rate",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Mention the factors that affect the rate of a chemical reaction."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The factors that affect the rate of a reaction are as follows.\n\n(i) Concentration of reactants (pressure in case of gases)\n(ii) Temperature\n\n(iii) Presence of a catalyst"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.6",
+      "kind": "exercise",
+      "number": "3.6",
+      "topic": "Second order concentration effect",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A reaction is second order with respect to a reactant. How is the rate of reaction affected if the concentration of the reactant is"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "doubled"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "reduced to half ?"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let the concentration of the reactant be $[\\mathrm{A}]=a$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Rate of reaction, $\\mathrm{R}=k[\\mathrm{~A}]^{2}$\n\n$$\n=k a^{2}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) If the concentration of the reactant is doubled, i.e. $[\\mathrm{A}]=2 a$, then the rate of the reaction would be\n\n$$\n\\begin{aligned}\n& \\mathrm{R}^{\\prime}=k(2 a)^{2} \\\\\n& =4 k a^{2} \\\\\n& =4 \\mathrm{R}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, the rate of the reaction would increase by 4 times."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) If the concentration of the reactant is reduced to half, i.e. $[\\mathrm{A}]=\\frac{1}{2} a$, then the rate of the reaction would be\n\n$$\n\\begin{aligned}\n\\mathrm{R}^{\\prime \\prime} & =k\\left(\\frac{1}{2} a\\right)^{2} \\\\\n& =\\frac{1}{4} k a \\\\\n& =\\frac{1}{4} R\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, the rate of the reaction would be reduced to $\\frac{1}{4}^{\\text {th }}$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(i) Rate increases by 4 times; (ii) rate is reduced to $\\frac{1}{4}^{\\text {th }}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.7",
+      "kind": "exercise",
+      "number": "3.7",
+      "topic": "Temperature dependence of rate constant",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is the effect of temperature on the rate constant of a reaction? How can this effect of temperature on rate constant be represented quantitatively?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For most chemical reactions, the rate constant nearly doubles when the temperature rises by 10°.\n\nThe Arrhenius equation expresses this temperature effect quantitatively:"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nk=\\mathrm{A} e^{-E_{s} / \\mathrm{R} T}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "where $k$ is the rate constant,\nA is the Arrhenius factor (or frequency factor),\n$R$ is the gas constant,\n$T$ is the temperature, and\n$E_{a}$ is the energy of activation for the reaction"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.8",
+      "kind": "exercise",
+      "number": "3.8",
+      "topic": "Pseudo first order average rate",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "In a pseudo first order reaction in water, the following results were obtained:\n\n| t/s | 0 | 30 | 60 | 90 |\n| :--- | :--- | :--- | :--- | :--- |\n| [A]/ $\\mathrm{mol} \\mathrm{L}^{-1}$ | 0.55 | 0.31 | 0.17 | 0.085 |\n\nCalculate the average rate of reaction between the time interval 30 to 60 seconds."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) Average rate of reaction between the time interval, 30 to 60 seconds, $=\\frac{d[\\text { Ester }]}{d t}$\n$$\n\\begin{aligned}\n& =\\frac{0.31-0.17}{60-30} \\\\\n& =\\frac{0.14}{30} \\\\\n& =4.67 \\times 10^{-3} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) For a pseudo first order reaction,\n\n$$\nk=\\frac{2.303}{t} \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For\n\n$$\nk_{1}=\\frac{2.303}{30} \\log \\frac{0.55}{0.31} t=30 \\mathrm{~s},\n$$\n\nFor $t=60 \\mathrm{~s}$,\n\n$$\nk_{2}=\\frac{2.303}{60} \\log \\frac{0.55}{0.17}\n$$\n\n$=1.957 \\times 10^{-2} \\mathrm{~s}^{-1}$\nFor $t=90 \\mathrm{~s}$,\n\n$$\nk_{3}=\\frac{2.303}{90} \\log \\frac{0.55}{0.085}\n$$\n\n$$\n=2.075 \\times 10^{-2} \\mathrm{~s}^{-1}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Then, average rate constant,\n\n$$\nk=\\frac{k_{1}+k_{2}+k_{3}}{3}\n$$\n\n$$\n\\begin{aligned}\n& =\\frac{\\left(1.911 \\times 10^{-2}\\right)+\\left(1.957 \\times 10^{-2}\\right)+\\left(2.075 \\times 10^{-2}\\right)}{3} \\\\\n& =1.98 \\times 10^{-2} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(i) Average rate (30–60 s) $=4.67 \\times 10^{-3} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~s}^{-1}$; (ii) average pseudo first order $k=1.98 \\times 10^{-2} \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.9",
+      "kind": "exercise",
+      "number": "3.9",
+      "topic": "Mixed order rate equation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A reaction is first order in A and second order in B."
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Write the differential rate equation."
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "How is the rate affected on increasing the concentration of B three times?"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "How is the rate affected when the concentrations of both A and B are doubled?"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) The differential rate equation will be"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n-\\frac{d[\\mathrm{R}]}{d t}=k[\\mathrm{~A}][\\mathrm{B}]^{2}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) If the concentration of B is increased three times, then\n$$\n\\begin{aligned}\n-\\frac{d[\\mathrm{R}]}{d t} & =k[\\mathrm{~A}][3 \\mathrm{~B}]^{2} \\\\\n& =9 \\cdot k[\\mathrm{~A}][\\mathrm{B}]^{2}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, the rate of reaction will increase 9 times."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) When the concentrations of both A and B are doubled,\n\n$$\n\\begin{aligned}\n-\\frac{d[\\mathrm{R}]}{d t} & =k[\\mathrm{~A}][\\mathrm{B}]^{2} \\\\\n& =k[2 \\mathrm{~A}][2 \\mathrm{~B}]^{2} \\\\\n& =8 \\cdot k[\\mathrm{~A}][\\mathrm{B}]^{2}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, the rate of reaction will increase 8 times."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(i) $-\\frac{d[\\mathrm{R}]}{d t}=k[\\mathrm{~A}][\\mathrm{B}]^{2}$; (ii) rate increases 9 times; (iii) rate increases 8 times"
+        }
+      ]
+    },
+    {
+      "id": "q_3.10",
+      "kind": "exercise",
+      "number": "3.10",
+      "topic": "Order determination from data",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "In a reaction between A and B, the initial rate of reaction $\\left(\\mathrm{r}_{0}\\right)$ was measured for different initial concentrations of A and B as given below:\n\n| A/ $\\mathrm{mol} \\mathrm{L}^{-1}$ | 0.20 | 0.20 | 0.40 |\n| :--- | :--- | :--- | :--- |\n| B/ $\\mathrm{mol} \\mathrm{L}^{-1}$ | 0.30 | 0.10 | 0.05 |\n| $\\mathrm{r}_{0} / \\mathrm{mol} \\mathrm{L}^{-1} \\mathrm{~s}^{-1}$ | $5.07 \\times 10^{-5}$ | $5.07 \\times 10^{-5}$ | $1.43 \\times 10^{-4}$ |\n\nWhat is the order of the reaction with respect to A and B?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let the order of the reaction with respect to A be $x$ and with respect to B be $y$.\nTherefore,\n\n$$\n\\begin{aligned}\n& \\mathrm{r}_{0}=k[\\mathrm{~A}]^{x}[\\mathrm{~B}]^{y} \\\\\n& 5.07 \\times 10^{-5}=k[0.20]^{x}[0.30]^{y} \\\\\n& 5.07 \\times 10^{-5}=k[0.20]^{x}[0.10]^{y} \\\\\n& 1.43 \\times 10^{-4}=k[0.40]^{x}[0.05]^{y}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Dividing equation (i) by (ii), we get\n\n$$\n\\begin{aligned}\n& \\frac{5.07 \\times 10^{-5}}{5.07 \\times 10^{-5}}=\\frac{k[0.20]^{x}[0.30]^{y}}{k[0.20]^{x}[0.10]^{y}} \\\\\n& \\Rightarrow 1=\\frac{[0.30]^{y}}{[0.10]^{y}} \\\\\n& \\Rightarrow\\left(\\frac{0.30}{0.10}\\right)^{0}=\\left(\\frac{0.30}{0.10}\\right)^{y} \\\\\n& \\Rightarrow y=0\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Dividing equation (iii) by (ii), we get\n\n$$\n\\begin{aligned}\n& \\frac{1.43 \\times 10^{-4}}{5.07 \\times 10^{-5}}=\\frac{k[0.40]^{x}[0.05]^{y}}{k[0.20]^{x}[0.30]^{y}} \\\\\n& \\Rightarrow \\frac{1.43 \\times 10^{-4}}{5.07 \\times 10^{-5}}=\\frac{[0.40]^{x}}{[0.20]^{x}} \\quad\\left[\\begin{array}{l}\n\\text { Since } y=0, \\\\\n{[0.05]^{y}=[0.30]^{y}=1}\n\\end{array}\\right] \\\\\n& \\Rightarrow 2.821=2^{x} \\\\\n& \\Rightarrow \\log 2.821=x \\log 2 \\quad \\text { (Taking log on both sides) } \\\\\n& \\Rightarrow x=\\frac{\\log 2.821}{\\log 2} \\\\\n& =1.496 \\\\\n& =1.5 \\text { (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, the order of the reaction with respect to A is 1.5 and with respect to B is zero."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Order with respect to A $=1.5$; order with respect to B $=0$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.11",
+      "kind": "exercise",
+      "number": "3.11",
+      "topic": "Rate law from kinetic data",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The following results have been obtained during the kinetic studies of the reaction:\n\n$$\n2 \\mathrm{~A}+\\mathrm{B} \\rightarrow \\mathrm{C}+\\mathrm{D}\n$$\n\n| Experiment | $[\\mathrm{A}] / \\mathrm{mol} \\mathrm{L}^{-1}$ | [B]/mol $\\mathrm{L}^{-1}$ | Initial rate of formation of $\\mathrm{D} / \\mathrm{mol} \\mathrm{L}^{-1} \\mathrm{~min}^{-1}$ |\n| :--- | :--- | :--- | :--- |\n| I | 0.1 | 0.1 | $6.0 \\times 10^{-3}$ |\n| II | 0.3 | 0.2 | $7.2 \\times 10^{-2}$ |\n| III | 0.3 | 0.4 | $2.88 \\times 10^{-1}$ |\n| IV | 0.4 | 0.1 | $2.40 \\times 10^{-2}$ |\n\nDetermine the rate law and the rate constant for the reaction."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let the order of the reaction with respect to A be $x$ and with respect to B be $y$.\nTherefore, rate of the reaction is given by,"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\text { Rate }=k[\\mathrm{~A}]^{x}[\\mathrm{~B}]^{y}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "According to the question,\n\n$$\n\\begin{aligned}\n& 6.0 \\times 10^{-3}=k[0.1]^{x}[0.1]^{y} \\\\\n& 7.2 \\times 10^{-2}=k[0.3]^{x}[0.2]^{y} \\\\\n& 2.88 \\times 10^{-1}=k[0.3]^{x}[0.4]^{y} \\\\\n& 2.40 \\times 10^{-2}=k[0.4]^{x}[0.1]^{y}\n\\end{aligned}\n$$\n\nDividing equation (iv) by (i), we get\n\n$$\n\\begin{aligned}\n& \\frac{2.40 \\times 10^{-2}}{6.0 \\times 10^{-3}}=\\frac{k[0.4]^{x}[0.1]^{y}}{k[0.1]^{x}[0.1]^{y}} \\\\\n& \\Rightarrow 4=\\frac{[0.4]^{x}}{[0.1]^{x}} \\\\\n& \\Rightarrow 4=\\left(\\frac{0.4}{0.1}\\right)^{x} \\\\\n& \\Rightarrow(4)^{1}=4^{x} \\\\\n& \\Rightarrow x=1\n\\end{aligned}\n$$\n\nDividing equation (iii) by (ii), we get\n\n$$\n\\begin{aligned}\n& \\frac{2.88 \\times 10^{-1}}{7.2 \\times 10^{-2}}=\\frac{k[0.3]^{x}[0.4]^{y}}{k[0.3]^{x}[0.2]^{y}} \\\\\n& \\Rightarrow 4=\\left(\\frac{0.4}{0.2}\\right)^{y} \\\\\n& \\Rightarrow 4=2^{y} \\\\\n& \\Rightarrow 2^{2}=2^{y} \\\\\n& \\Rightarrow y=2\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, the rate law is\n\n$$\n\\begin{aligned}\n\\text { Rate } & =k[\\mathrm{~A}][\\mathrm{B}]^{2} \\\\\nk & =\\frac{\\text { Rate }}{[\\mathrm{A}][\\mathrm{B}]^{2}}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "From experiment I, we get\n\n$$\n\\begin{aligned}\n& k=\\frac{6.0 \\times 10^{-3} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}}{\\left(0.1 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)\\left(0.1 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)^{2}} \\\\\n& =6.0 \\mathrm{~L}^{2} \\mathrm{~mol}^{-2} \\mathrm{~min}^{-1}\n\\end{aligned}\n$$\n\nFrom experiment II, we get\n\n$$\n\\begin{aligned}\n& k=\\frac{7.2 \\times 10^{-2} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}}{\\left(0.3 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)\\left(0.2 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)^{2}} \\\\\n& =6.0 \\mathrm{~L}^{2} \\mathrm{~mol}^{-2} \\mathrm{~min}^{-1}\n\\end{aligned}\n$$\n\nFrom experiment III, we get\n\n$$\n\\begin{aligned}\n& k=\\frac{2.88 \\times 10^{-1} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}}{\\left(0.3 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)\\left(0.4 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)^{2}} \\\\\n& =6.0 \\mathrm{~L}^{2} \\mathrm{~mol}^{-2} \\mathrm{~min}^{-1}\n\\end{aligned}\n$$\n\nFrom experiment IV, we get\n\n$$\n\\begin{aligned}\n& k=\\frac{2.40 \\times 10^{-2} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}}{\\left(0.4 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)\\left(0.1 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)^{2}} \\\\\n& =6.0 \\mathrm{~L}^{2} \\mathrm{~mol}^{-2} \\mathrm{~min}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, rate constant, $k=6.0 \\mathrm{~L}^{2} \\mathrm{~mol}^{-2} \\mathrm{~min}^{-1}$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Rate law $=k[\\mathrm{~A}][\\mathrm{B}]^{2}$; $k=6.0 \\mathrm{~L}^{2} \\mathrm{~mol}^{-2} \\mathrm{~min}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.12",
+      "kind": "exercise",
+      "number": "3.12",
+      "topic": "Fill in rate table",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The reaction between A and B is first order with respect to A and zero order with respect to B. Fill in the blanks in the following table:\n\n| Experiment | [A]/ $\\mathrm{mol} \\mathrm{L}^{-1}$ | [B]/ $\\mathrm{mol} \\mathrm{L}^{-1}$ | Initial rate/ $\\mathrm{mol} \\mathrm{L}^{-1} \\mathrm{~min}^{-1}$ |\n| :--- | :--- | :--- | :--- |\n| I | 0.1 | 0.1 | $2.0 \\times 10^{-2}$ |\n| II | - | 0.2 | $4.0 \\times 10^{-2}$ |\n| III | 0.4 | 0.4 | - |\n| IV | - | 0.2 | $2.0 \\times 10^{-2}$ |"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The given reaction is of the first order with respect to $A$ and of zero order with respect to B.\n\nTherefore, the rate of the reaction is given by,"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\text { Rate }=k[\\mathrm{~A}]^{1}[\\mathrm{~B}]^{0} \\\\\n& \\Rightarrow \\text { Rate }=k[\\mathrm{~A}]\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "From experiment I, we get\n\n$$\n\\begin{aligned}\n& 2.0 \\times 10^{-2} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}=\\mathrm{k}\\left(0.1 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right) \\\\\n& \\Rightarrow k=0.2 \\mathrm{~min}^{-1}\n\\end{aligned}\n$$\n\nFrom experiment II, we get\n\n$$\n\\begin{aligned}\n& 4.0 \\times 10^{-2} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}=0.2 \\mathrm{~min}^{-1}[\\mathrm{~A}] \\\\\n& \\Rightarrow[\\mathrm{A}]=0.2 \\mathrm{~mol} \\mathrm{~L}^{-1}\n\\end{aligned}\n$$\n\nFrom experiment III, we get Rate\n\n$$\n\\begin{aligned}\n& =0.2 \\mathrm{~min}^{-1} \\times 0.4 \\mathrm{~mol} \\mathrm{~L}^{-1} \\\\\n& =0.08 \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}\n\\end{aligned}\n$$\n\nFrom experiment IV, we get\n\n$$\n2.0 \\times 10^{-2} \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}=0.2 \\mathrm{~min}^{-1}[\\mathrm{~A}]\n$$\n\n$$\n\\Rightarrow[\\mathrm{A}]=0.1 \\mathrm{~mol} \\mathrm{~L}^{-1}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$k=0.2 \\mathrm{~min}^{-1}$; experiment II $[\\mathrm{A}]=0.2 \\mathrm{~mol} \\mathrm{~L}^{-1}$; experiment III rate $=0.08 \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1}$; experiment IV $[\\mathrm{A}]=0.1 \\mathrm{~mol} \\mathrm{~L}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.13",
+      "kind": "exercise",
+      "number": "3.13",
+      "topic": "Half-life from rate constant",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Calculate the half-life of a first order reaction from their rate constants given below:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$200 \\mathrm{~s}^{-1}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$2 \\mathrm{~min}^{-1}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "4 years ${ }^{-1}$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\text { (i) Half life, } t_{1 / 2}=\\frac{0.693}{k} \\\\\n& =\\frac{0.693}{200 \\mathrm{~s}^{-1}} \\\\\n& =3.47 \\mathrm{~s} \\text { (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) Half life, $t_{1 / 2}=\\frac{0.693}{k}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\frac{0.693}{2 \\mathrm{~min}^{-1}} \\\\\n& =0.35 \\text { min (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) Half life, $t_{1 / 2}=\\frac{0.693}{k}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =\\frac{0.693}{4 \\text { years }^{-1}} \\\\\n& =0.173 \\text { years (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(i) $t_{1/2}=3.47 \\mathrm{~s}$; (ii) $t_{1/2}=0.35$ min; (iii) $t_{1/2}=0.173$ years"
+        }
+      ]
+    },
+    {
+      "id": "q_3.14",
+      "kind": "exercise",
+      "number": "3.14",
+      "topic": "Radiocarbon dating",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The half-life for radioactive decay of ${ }^{14} \\mathrm{C}$ is 5730 years. An archaeological artifact containing wood had only 80\\% of the ${ }^{14} \\mathrm{C}$ found in a living tree. Estimate the age of the sample."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Here,\n\n$$\nk=\\frac{0.693}{t_{1 / 2}}\n$$\n\n$$\n=\\frac{0.693}{5730} \\text { years }^{-1}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is known that,"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nt & =\\frac{2.303}{k} \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]} \\\\\n& =\\frac{2.303}{\\frac{0.693}{5730}} \\log \\frac{100}{80} \\\\\n= & 1845 \\text { years (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, the age of the sample is 1845 years."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Age of the sample $\\approx 1845$ years"
+        }
+      ]
+    },
+    {
+      "id": "q_3.15",
+      "kind": "exercise",
+      "number": "3.15",
+      "topic": "N2O5 decomposition kinetics",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The experimental data for decomposition of $\\mathrm{N}_{2} \\mathrm{O}_{5}$\n\n$$\n\\left[2 \\mathrm{~N}_{2} \\mathrm{O}_{5} \\rightarrow 4 \\mathrm{NO}_{2}+\\mathrm{O}_{2}\\right]\n$$\n\nin gas phase at 318K are given below:\n\n| t/s | 0 | 400 | 800 | 1200 | 1600 | 2000 | 2400 | 2800 | 3200 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| $\\begin{aligned} & 10^{2} \\times\\left[\\mathrm{N}_{2} \\mathrm{O}_{5}\\right] / \\\\ & \\mathrm{mol} \\mathrm{~L}^{-1} \\end{aligned}$ | 1.63 | 1.36 | 1.14 | 0.93 | 0.78 | 0.64 | 0.53 | 0.43 | 0.35 |"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_3_27.jpg",
+          "caption": "Plot of $\\left[\\mathrm{N}_{2} \\mathrm{O}_{5}\\right]$ against $t$"
+        },
+        {
+          "src": "images/fig_3_28.jpg",
+          "caption": "Plot of $\\log \\left[\\mathrm{N}_{2} \\mathrm{O}_{5}\\right]$ against $t$"
+        }
+      ],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Plot $\\left[\\mathrm{N}_{2} \\mathrm{O}_{5}\\right]$ against $t$."
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Find the half-life period for the reaction."
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Draw a graph between $\\log \\left[\\mathrm{N}_{2} \\mathrm{O}_{5}\\right]$ and $t$."
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "What is the rate law ?"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Calculate the rate constant."
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(vi)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Calculate the half-life period from $k$ and compare it with (ii)."
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) Time corresponding to the concentration, $\\frac{1.630 \\times 10^{2}}{2} \\mathrm{~mol} \\mathrm{~L}^{-1}=81.5 \\mathrm{molL}^{-1}$, is the half life."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "From the graph, the half life is obtained as 1450 s."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii)"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "| t(s) | $10^{2} \\times\\left[\\mathrm{N}_{2} \\mathrm{O}_{5}\\right] / \\mathrm{mol} \\mathrm{L}^{-1}$ | $\\boldsymbol{\\log}\\left[\\mathrm{N}_{2} \\mathrm{O}_{5}\\right]$ |\n| :--- | :--- | :--- |\n| 0 | 1.63 | - 1.79 |\n| 400 | 1.36 | - 1.87 |\n| 800 | 1.14 | - 1.94 |\n| 1200 | 0.93 | - 2.03 |\n| 1600 | 0.78 | - 2.11 |\n| 2000 | 0.64 | - 2.19 |\n| 2400 | 0.53 | - 2.28 |\n| 2800 | 0.43 | - 2.37 |\n| 3200 | 0.35 | - 2.46 |"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) The given reaction is of the first order as the plot, $\\log \\left[\\mathrm{N}_{2} \\mathrm{O}_{5}\\right]_{\\mathrm{V} / \\mathrm{s}} t$, is a straight line."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, the rate law of the reaction is\n\n$$\n\\text { Rate }=k\\left[\\mathrm{~N}_{2} \\mathrm{O}_{5}\\right]\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(v) From the plot, $\\log \\left[\\mathrm{N}_{2} \\mathrm{O}_{5}\\right]$\n\n$$\n\\begin{aligned}\n\\text { Slope } & =\\frac{-2.46-(-1.79)}{3200-0} \\\\\n& =\\frac{-0.67}{3200}\n\\end{aligned}\n$$\n\nv/s $t$, we get\nAgain, slope of the line of the plot $\\log \\left[\\mathrm{N}_{2} \\mathrm{O}_{5}\\right]_{\\mathrm{V} / \\mathrm{s}} t$ is given by\n\n$$\n-\\frac{k}{2.303} .\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, we get,\n\n$$\n\\begin{aligned}\n& -\\frac{k}{2.303}=-\\frac{0.67}{3200} \\\\\n& \\Rightarrow k=4.82 \\times 10^{-4} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(vi) Half-life is given by,"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nt_{1 / 2} & =\\frac{0.639}{k} \\\\\n& =\\frac{0.693}{4.82 \\times 10^{-4}} \\mathrm{~s} \\\\\n& =1.438 \\times 10^{3} \\mathrm{~s} \\\\\n& =1438 \\mathrm{~s}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This value, 1438 s, is very close to the value that was obtained from the graph."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(ii) $t_{1/2}$ (from graph) $=1450$ s; (iv) Rate $=k[\\mathrm{N}_2\\mathrm{O}_5]$; (v) $k=4.82 \\times 10^{-4} \\mathrm{~s}^{-1}$; (vi) $t_{1/2}$ (from $k$) $=1438$ s"
+        }
+      ]
+    },
+    {
+      "id": "q_3.16",
+      "kind": "exercise",
+      "number": "3.16",
+      "topic": "First order concentration reduction time",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The rate constant for a first order reaction is $60 \\mathrm{~s}^{-1}$. How much time will it take to reduce the initial concentration of the reactant to its $1 / 16^{\\text {th }}$ value?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is known that,"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nt & =\\frac{2.303}{k} \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]} \\\\\n& =\\frac{2.303}{60 \\mathrm{~s}^{-1}} \\log \\frac{1}{1 / 16} \\\\\n& =\\frac{2.303}{60 \\mathrm{~s}^{-1}} \\log 16 \\\\\n& =4.6 \\times 10^{-2} \\mathrm{~s} \\text { (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, the required time is $4.6 \\times 10^{-2} \\mathrm{~s}$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$t=4.6 \\times 10^{-2} \\mathrm{~s}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.17",
+      "kind": "exercise",
+      "number": "3.17",
+      "topic": "Radioactive decay remaining amount",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "During nuclear explosion, one of the products is ${ }^{90} \\mathrm{Sr}$ with half-life of 28.1 years. If $1 \\mu \\mathrm{~g}$ of ${ }^{90} \\mathrm{Sr}$ was absorbed in the bones of a newly born baby instead of calcium, how much of it will remain after 10 years and 60 years if it is not lost metabolically."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Here,\n\n$$\nk=\\frac{0.693}{t_{1 / 2}}=\\frac{0.693}{28.1} \\mathrm{y}^{-1}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is known that,"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& t=\\frac{2.303}{k} \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]} \\\\\n& \\Rightarrow 10=\\frac{2.303}{\\frac{0.693}{28.1}} \\log \\frac{1}{[\\mathrm{R}]} \\\\\n& \\Rightarrow 10=\\frac{2.303}{\\frac{0.693}{28.1}}(-\\log [\\mathrm{R}]) \\\\\n& \\Rightarrow \\log [\\mathrm{R}]=-\\frac{10 \\times 0.693}{2.303 \\times 28.1} \\\\\n& \\Rightarrow[\\mathrm{R}]=\\operatorname{antilog}(-0.1071) \\\\\n& \\quad=\\operatorname{antilog}(\\overline{1} .8929) \\\\\n& \\quad=0.7814 \\mu \\mathrm{~g}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, $0.7814 \\mu \\mathrm{~g}$ of ${ }^{90} \\mathrm{Sr}$ will remain after 10 years."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Again,\n\n$$\n\\begin{aligned}\n& t=\\frac{2.303}{k} \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]} \\\\\n& \\Rightarrow 60=\\frac{2.303}{\\frac{0.693}{28.1}} \\log \\frac{1}{[\\mathrm{R}]} \\\\\n& \\Rightarrow \\log [\\mathrm{R}]=-\\frac{60 \\times 0.693}{2.303 \\times 28.1} \\\\\n& \\Rightarrow[\\mathrm{R}]=\\operatorname{antilog}(-0.6425) \\\\\n& \\quad=\\operatorname{antilog}(\\overline{1} .3575) \\\\\n& \\quad=0.2278 \\mu \\mathrm{~g}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, $0.2278 \\mu \\mathrm{~g}$ of ${ }^{90} \\mathrm{Sr}$ will remain after 60 years."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "After 10 years, $0.7814\\ \\mu\\mathrm{g}$ of ${}^{90}\\mathrm{Sr}$ remains; after 60 years, $0.2278\\ \\mu\\mathrm{g}$ remains"
+        }
+      ]
+    },
+    {
+      "id": "q_3.18",
+      "kind": "exercise",
+      "number": "3.18",
+      "topic": "First order completion time proof",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "For a first order reaction, show that time required for 99\\% completion is twice the time required for the completion of 90\\% of reaction."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For a first order reaction, the time required for 99\\% completion is"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nt_{1} & =\\frac{2.303}{k} \\log \\frac{100}{100-99} \\\\\n& =\\frac{2.303}{k} \\log 100 \\\\\n& =2 \\times \\frac{2.303}{k}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For a first order reaction, the time required for 90\\% completion is"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nt_{2} & =\\frac{2.303}{k} \\log \\frac{100}{100-90} \\\\\n& =\\frac{2.303}{k} \\log 10 \\\\\n& =\\frac{2.303}{k}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, $t_{1}=2 t_{2}$\nHence, the time required for 99\\% completion of a first order reaction is twice the time required for the completion of 90\\% of the reaction."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.19",
+      "kind": "exercise",
+      "number": "3.19",
+      "topic": "Half-life from decomposition data",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A first order reaction takes 40 min for 30\\% decomposition. Calculate $\\mathrm{t}_{1 / 2}$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For a first order reaction,"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nt & =\\frac{2.303}{k} \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]} \\\\\nk & =\\frac{2.303}{40 \\mathrm{~min}} \\log \\frac{100}{100-30} \\\\\n& =\\frac{2.303}{40 \\mathrm{~min}} \\log \\frac{10}{7} \\\\\n& =8.918 \\times 10^{-3} \\mathrm{~min}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, $t_{1 / 2}$ of the decomposition reaction is\n\n$$\n\\begin{aligned}\nt_{1 / 2} & =\\frac{0.693}{k} \\\\\n& =\\frac{0.693}{8.918 \\times 10^{-3}} \\mathrm{~min} \\\\\n= & 77.7 \\text { min (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$t_{1/2} \\approx 77.7$ min"
+        }
+      ]
+    },
+    {
+      "id": "q_3.20",
+      "kind": "exercise",
+      "number": "3.20",
+      "topic": "Rate constant from pressure data",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "For the decomposition of azoisopropane to hexane and nitrogen at 543 K, the following data are obtained.\n\n| $t(\\mathrm{sec})$ | $\\mathrm{P}(\\mathrm{mm}$ of Hg$)$ |\n| :--- | :--- |\n| 0 | 35.0 |\n| 360 | 54.0 |\n| 720 | 63.0 |\n\nCalculate the rate constant."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The decomposition of azoisopropane to hexane and nitrogen at 543 K is represented by the following equation.\n\n$$\n\\left(\\mathrm{CH}_{3}\\right)_{2} \\mathrm{CHN}=\\mathrm{NCH}\\left(\\mathrm{CH}_{3}\\right)_{2(g)} \\longrightarrow \\mathrm{N}_{2(g)}+\\mathrm{C}_{6} \\mathrm{H}_{14(g)}\n$$\n\nAt $t=0 \\quad \\mathrm{P}_{0} \\quad 0 \\quad 0$\nAt $t=t \\quad \\mathrm{P}_{0}-p \\quad p \\quad p$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\mathrm{P}_{l}=\\left(\\mathrm{P}_{0}-p\\right)+p+p\n$$\n\nAfter time, $t$, total pressure,\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\mathrm{P}_{1}=\\mathrm{P}_{0}+p \\\\\n& \\Rightarrow p=\\mathrm{P}_{1}-\\mathrm{P}_{0}\n\\end{aligned}\n$$\n\nTherefore, $\\mathrm{P}_{\\mathrm{o}}-p=\\mathrm{P}_{\\mathrm{o}}-\\left(\\mathrm{P}_{\\mathrm{t}}-\\mathrm{P}_{\\mathrm{o}}\\right)$\n\n$$\n=2 \\mathrm{P}_{0}-\\mathrm{P}_{t}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For a first order reaction,\n\n$$\n\\begin{aligned}\nk & =\\frac{2.303}{t} \\log \\frac{\\mathrm{P}_{0}}{\\mathrm{P}_{0}-p} \\\\\n& =\\frac{2.303}{t} \\log \\frac{\\mathrm{P}_{0}}{2 \\mathrm{P}_{0}-\\mathrm{P}_{t}}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "When $t=360 \\mathrm{~s}$,\n\n$$\nk=\\frac{2.303}{360 \\mathrm{~s}} \\log \\frac{35.0}{2 \\times 35.0-54.0}\n$$\n\n$=2.175 \\times 10^{-3} \\mathrm{~s}^{-1}$\nWhen $t=720 \\mathrm{~s}$,\n\n$$\nk=\\frac{2.303}{720 \\mathrm{~s}} \\log \\frac{35.0}{2 \\times 35.0-63.0}\n$$\n\n$=2.235 \\times 10^{-3} \\mathrm{~s}^{-1}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, the average value of rate constant is\n\n$$\n\\begin{aligned}\n& k=\\frac{\\left(2.175 \\times 10^{-3}\\right)+\\left(2.235 \\times 10^{-3}\\right)}{2} \\mathrm{~s}^{-1} \\\\\n& =2.21 \\times 10^{-3} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "note_type": "tip",
+          "label": "Textbook variance",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Note: There is a slight variation in this answer and the one given in the NCERT textbook."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Average $k = 2.21 \\times 10^{-3} \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.21",
+      "kind": "exercise",
+      "number": "3.21",
+      "topic": "Rate from total pressure data",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The following data were obtained during the first order thermal decomposition of $\\mathrm{SO}_{2} \\mathrm{Cl}_{2}$ at a constant volume.\n\n$$\n\\mathrm{SO}_{2} \\mathrm{Cl}_{2}(\\mathrm{~g}) \\rightarrow \\mathrm{SO}_{2}(\\mathrm{~g})+\\mathrm{Cl}_{2}(\\mathrm{~g})\n$$\n\n| Experiment | Time $/ \\mathrm{s}^{-1}$ | Total pressure/atm |\n| :--- | :--- | :--- |\n| 1 | 0 | 0.5 |\n| 2 | 100 | 0.6 |\n\nCalculate the rate of the reaction when total pressure is 0.65 atm."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The thermal decomposition of $\\mathrm{SO}_{2} \\mathrm{Cl}_{2}$ at a constant volume is represented by the following equation.\n\n$$\n\\mathrm{SO}_{2} \\mathrm{Cl}_{2(g)} \\longrightarrow \\mathrm{SO}_{2(g)}+\\mathrm{Cl}_{2(g)}\n$$\n\nAt $t=0 \\quad \\mathrm{P}_{0} \\quad 0 \\quad 0$\nAt $t=t \\quad \\mathrm{P}_{0}-\\mathrm{p} \\quad \\mathrm{p} \\quad \\mathrm{p}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\mathrm{P}_{l}=\\left(\\mathrm{P}_{0}-p\\right)+p+p\n$$\n\nAfter time, $t$, total pressure,\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\mathrm{P}_{t}=\\mathrm{P}_{0}+p \\\\\n& \\Rightarrow p=\\mathrm{P}_{\\mathrm{t}}-\\mathrm{P}_{0}\n\\end{aligned}\n$$\n\n$$\n\\mathrm{P}_{0}-p=\\mathrm{P}_{0}-\\left(\\mathrm{P}_{1}-\\mathrm{P}_{0}\\right)\n$$\n\nTherefore,\n\n$$\n=2 P_{0}-P_{t}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For a first order reaction,\n\n$$\n\\begin{aligned}\nk & =\\frac{2.303}{t} \\log \\frac{\\mathrm{P}_{0}}{\\mathrm{P}_{0}-p} \\\\\n& =\\frac{2.303}{t} \\log \\frac{\\mathrm{P}_{0}}{2 \\mathrm{P}_{0}-\\mathrm{P}_{t}}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "When\n\n$$\nk=\\frac{2.303}{100 \\mathrm{~s}} \\log \\frac{0.5}{2 \\times 0.5-0.6} t=100 \\mathrm{~s},\n$$\n\n$$\n=2.231 \\times 10^{-3} \\mathrm{~s}^{-1}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "When $\\mathrm{P}_{t}=0.65 \\mathrm{~atm}$,\n\n$$\n\\begin{aligned}\n& \\mathrm{P}_{0}+p=0.65 \\\\\n& \\Rightarrow p=0.65-\\mathrm{P}_{0} \\\\\n& =0.65-0.5 \\\\\n& =0.15 \\text { atm }\n\\end{aligned}\n$$\n\nTherefore, when the total pressure is 0.65 atm, pressure of $\\mathrm{SOCl}_{2}$ is\n\n$$\n\\begin{aligned}\n& p_{\\mathrm{SOCl}_{2}}=\\mathrm{P}_{0}-\\mathrm{p} \\\\\n& =0.5-0.15 \\\\\n& =0.35 \\mathrm{~atm}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, the rate of equation, when total pressure is 0.65 atm, is given by,\n\n$$\n\\begin{aligned}\n& \\text { Rate }=k\\left(p_{\\mathrm{SoCl}_{2}}\\right) \\\\\n& =\\left(2.23 \\times 10^{-3} \\mathrm{~s}^{-1}\\right)(0.35 \\mathrm{~atm}) \\\\\n& =7.8 \\times 10^{-4} \\mathrm{~atm} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Rate (at total pressure 0.65 atm) $=7.8 \\times 10^{-4} \\mathrm{~atm} \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.22",
+      "kind": "exercise",
+      "number": "3.22",
+      "topic": "Arrhenius plot and prediction",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The rate constant for the decomposition of $\\mathrm{N}_{2} \\mathrm{O}_{5}$ at various temperatures is given below:\n\n| $T /{ }^{\\circ} \\mathrm{C}$ | 0 | 20 | 40 | 60 | 80 |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| $10^{5} \\times \\mathrm{k} / \\mathrm{s}^{-1}$ | 0.0787 | 1.70 | 25.7 | 178 | 2140 |\n\nDraw a graph between $\\ln k$ and $1 / T$ and calculate the values of $A$ and $E_{\\mathrm{a}}$. Predict the rate constant at 30° and 50°C."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "From the given data, we get"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "| T/ °C | 0 | 20 | 40 | 60 | 80 |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| T/K | 273 | 293 | 313 | 333 | 353 |"
+        },
+        {
+          "type": "table",
+          "html": "| $10^{3} \\times \\frac{1}{T}\\left(\\mathrm{~K}^{-1}\\right) \\longrightarrow$ | $3.66 \\times 10^{-3}$ | $3.41 \\times 10^{-3}$ | $3.19 \\times 10^{-3}$ | $3.0 \\times 10^{-3}$ | $2.83 \\times 10^{-3}$ |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n|  $10^{5} \\times k/\\mathrm{s}^{-1}$ | 0.0787 | 1.70 | 25.7 | 178 | 2140 |\n|  $\\ln k$ | -7.147 | - 4.075 | -1.359 | -0.577 | 3.063 |\n|"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Slope of the line,\n\n$$\n\\frac{y_{2}-y_{1}}{x_{2}-x_{1}}=-12.301 \\mathrm{~K}\n$$\n\nAccording to Arrhenius equation,\n\n$$\n\\begin{aligned}\n& \\text { Slope }=-\\frac{E_{a}}{\\mathrm{R}} \\\\\n& \\Rightarrow E_{a}=- \\text { Slope } \\times \\mathrm{R} \\\\\n& =-(-12.301 \\mathrm{~K}) \\times\\left(8.314 \\mathrm{JK}^{-1} \\mathrm{~mol}^{-1}\\right) \\\\\n& =102.27 \\mathrm{~kJ} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Again,\n\n$$\n\\begin{aligned}\n& \\ln k=\\ln A-\\frac{E_{a}}{\\mathrm{R} T} \\\\\n& \\ln A=\\ln k+\\frac{E_{a}}{\\mathrm{R} T}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "When $T=273 \\mathrm{~K}$,\n$\\ln k=-7.147$\n\n$$\n\\text { Then, } \\begin{aligned}\n\\ln A & =-7.147+\\frac{102.27 \\times 10^{3}}{8.314 \\times 273} \\\\\n& =37.911\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, $A=2.91 \\times 10^{6}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "When $T=30+273 \\mathrm{~K}=303 \\mathrm{~K}$,\n\n$$\n\\frac{1}{T}=0.0033 \\mathrm{~K}=3.3 \\times 10^{-3} \\mathrm{~K}\n$$\n\nThen, ${ }^{\\text {at }} \\frac{1}{T}=3.3 \\times 10^{-3} \\mathrm{~K}$,\n\n$$\n\\ln k=-2.8\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, $k=6.08 \\times 10^{-2} \\mathrm{~s}^{-1}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Again, when $T=50+273 \\mathrm{~K}=323 \\mathrm{~K}$\n\n$$\n\\frac{1}{T}=0.0031 \\mathrm{~K}=3.1 \\times 10^{-3} \\mathrm{~K}\n$$\n\nThen, at $\\frac{1}{T}=3.1 \\times 10^{-3} \\mathrm{~K}$\n\n$$\n\\operatorname{In} k=-0.5\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, $k=0.607 \\mathrm{~s}^{-1}$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$E_{a}=102.27 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$; $A=2.91 \\times 10^{6}$; $k(30^{\\circ}\\mathrm{C})=6.08 \\times 10^{-2} \\mathrm{~s}^{-1}$; $k(50^{\\circ}\\mathrm{C})=0.607 \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.23",
+      "kind": "exercise",
+      "number": "3.23",
+      "topic": "Pre-exponential factor calculation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The rate constant for the decomposition of hydrocarbons is $2.418 \\times 10^{-5} \\mathrm{~s}^{-1}$ at 546 K. If the energy of activation is $179.9 \\mathrm{~kJ} / \\mathrm{mol}$, what will be the value of pre-exponential factor."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$k=2.418 \\times 10^{-5} \\mathrm{~s}^{-1}$\n\n$$\n\\begin{aligned}\n& T=546 \\mathrm{~K} \\\\\n& E_{\\mathrm{a}}=179.9 \\mathrm{~kJ} \\mathrm{~mol}^{-1}=179.9 \\times 10^{3} \\mathrm{~J} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "According to the Arrhenius equation,\n\n$$\n\\begin{aligned}\n& k=\\mathrm{Ae}^{-E_{a} / \\mathrm{R} T} \\\\\n& \\Rightarrow \\ln k=\\ln \\mathrm{A}-\\frac{E_{a}}{\\mathrm{R} T} \\\\\n& \\begin{aligned}\n& \\Rightarrow \\log k=\\log \\mathrm{A}-\\frac{E_{a}}{2.303 \\mathrm{R} T} \\\\\n& \\Rightarrow \\log \\mathrm{~A}=\\log k+\\frac{E_{a}}{2.303 \\mathrm{R} T} \\\\\n&=\\log \\left(2.418 \\times 10^{-5} \\mathrm{~s}^{-1}\\right)+\\frac{179.9 \\times 10^{3} \\mathrm{~J} \\mathrm{~mol}^{-1}}{2.303 \\times 8.314 \\mathrm{Jk}^{-1} \\mathrm{~mol}^{-1} \\times 546 \\mathrm{~K}} \\\\\n&=(0.3835-5)+17.2082 \\\\\n&=12.5917\n\\end{aligned}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, A = antilog (12.5917)\n\n$$\n=3.9 \\times 10^{12} \\mathrm{~s}^{-1} \\text { (approximately) }\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$A=3.9 \\times 10^{12} \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.24",
+      "kind": "exercise",
+      "number": "3.24",
+      "topic": "Concentration remaining after time",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider a certain reaction A → Products with $k=2.0 \\times 10^{-2} \\mathrm{~s}^{-1}$. Calculate the concentration of $A$ remaining after 100 s if the initial concentration of $A$ is $1.0 \\mathrm{~mol} \\mathrm{~L}^{-1}$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$k=2.0 \\times 10^{-2} \\mathrm{~s}^{-1} T=100 \\mathrm{~s}$\n\n$$\n[\\mathrm{A}]_{\\mathrm{o}}=1.0 \\mathrm{moL}^{-1}\n$$\n\nSince the unit of $k$ is $\\mathrm{s}^{-1}$, the given reaction is a first order reaction."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore,\n\n$$\nk=\\frac{2.303}{t} \\log \\frac{[\\mathrm{~A}]_{0}}{[\\mathrm{~A}]}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\Rightarrow 2.0 \\times 10^{-2} \\mathrm{~s}^{-1}=\\frac{2.303}{100 \\mathrm{~s}} \\log \\frac{1.0}{[\\mathrm{~A}]} \\\\\n& \\Rightarrow 2.0 \\times 10^{-2} \\mathrm{~s}^{-1}=\\frac{2.303}{100 \\mathrm{~s}}(-\\log [\\mathrm{A}]) \\\\\n& \\Rightarrow-\\log [\\mathrm{A}]=\\frac{2.0 \\times 10^{-2} \\times 100}{2.303} \\\\\n& \\Rightarrow[\\mathrm{~A}]=\\operatorname{anti} \\log \\left(-\\frac{2.0 \\times 10^{-2} \\times 100}{2.303}\\right) \\\\\n& =0.135 \\mathrm{~mol} \\mathrm{~L}^{-1} \\text { (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, the remaining concentration of A is $0.135 \\mathrm{~mol} \\mathrm{~L}^{-1}$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$[\\mathrm{A}]=0.135 \\mathrm{~mol} \\mathrm{~L}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.25",
+      "kind": "exercise",
+      "number": "3.25",
+      "topic": "Fraction remaining after decay",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Sucrose decomposes in acid solution into glucose and fructose according to the first order rate law, with $t_{1 / 2}=3.00$ hours. What fraction of sample of sucrose remains after 8 hours ?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For a first order reaction,\n\n$$\nk=\\frac{2.303}{t} \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that, $t_{1 / 2}=3.00$ hours"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore,\n\n$$\nk=\\frac{0.693}{t_{1 / 2}}\n$$\n\n$$\n\\begin{aligned}\n& =\\frac{0.693}{3} \\mathrm{~h}^{-1} \\\\\n& =0.231 \\mathrm{~h}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Then, $0.231 \\mathrm{~h}^{-1}=\\frac{2.303}{8 \\mathrm{~h}} \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]}$\n\n$$\n\\begin{gathered}\n\\Rightarrow \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]}=\\frac{0.231 \\mathrm{~h}^{-1} \\times 8 \\mathrm{~h}}{2.303} \\\\\n\\Rightarrow \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]}=\\operatorname{antilog}(0.8024) \\\\\n\\Rightarrow \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]}=6.3445 \\\\\n\\Rightarrow \\frac{[\\mathrm{R}]}{[\\mathrm{R}]_{0}}=0.1576 \\text { (approx) } \\\\\n=0.158\n\\end{gathered}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, the fraction of sample of sucrose that remains after 8 hours is 0.158 ."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Fraction of sucrose remaining after 8 hours $=0.158$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.26",
+      "kind": "exercise",
+      "number": "3.26",
+      "topic": "Activation energy from Arrhenius form",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The decomposition of hydrocarbon follows the equation\n$$\nk=\\left(4.5 \\times 10^{11} \\mathrm{~s}^{-1}\\right) \\mathrm{e}^{-28000 K / T}\n$$\nCalculate $E_{\\mathrm{a}}$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The given equation is $k=(4.5 \\times$\n\n$$\n\\left.10_{11} \\mathrm{~S}-1\\right) \\mathrm{e}-28000 \\mathrm{~K} / T(\\mathrm{i})\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The Arrhenius equation is\n\n$$\nk=\\mathrm{Ae}^{-E_{\\alpha} / \\mathrm{RT}}(\\mathrm{ii})\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Comparing equations (i) and (ii), we get\n\n$$\n\\begin{aligned}\n& \\frac{E_{a}}{\\mathrm{R} T}=\\frac{28000 \\mathrm{~K}}{T} \\\\\n& \\Rightarrow E_{a}=\\mathrm{R} \\times 28000 \\mathrm{~K} \\\\\n& =8.314 \\mathrm{~J} \\mathrm{~K}^{-1} \\mathrm{~mol}^{-1} \\times 28000 \\mathrm{~K} \\\\\n& =232792 \\mathrm{~J} \\mathrm{~mol}^{-1} \\\\\n& =232.792 \\mathrm{~kJ} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$E_{a}=232.792 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.27",
+      "kind": "exercise",
+      "number": "3.27",
+      "topic": "Ea and temperature from rate equation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The rate constant for the first order decomposition of $\\mathrm{H}_{2} \\mathrm{O}_{2}$ is given by the following equation:\n$$\n\\log k=14.34-1.25 \\times 10^{4} K / T\n$$\nCalculate $E_{\\mathrm{a}}$ for this reaction and at what temperature will its half-period be 256 minutes?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The Arrhenius equation is\n\n$$\n\\begin{aligned}\n& k=\\mathrm{Ae}^{-E_{s} / \\mathrm{R} T} \\\\\n& \\Rightarrow \\ln k=\\ln \\mathrm{A}-\\frac{E_{a}}{\\mathrm{R} T} \\\\\n& \\Rightarrow \\ln k=\\log \\mathrm{A}-\\frac{E_{a}}{\\mathrm{R} T} \\\\\n& \\Rightarrow \\log k=\\log \\mathrm{A}-\\frac{E_{a}}{2.303 \\mathrm{R} T}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The given equation is\n\n$$\n\\log k=14.34-1.25 \\times 10^{4} \\mathrm{~K} / T\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Comparing equations (i) and (ii), we get\n\n$$\n\\begin{aligned}\n& \\frac{E_{a}}{2.303 \\mathrm{R} T}=\\frac{1.25 \\times 10^{4} \\mathrm{~K}}{T} \\\\\n& \\Rightarrow E_{a}=1.25 \\times 10^{4} \\mathrm{~K} \\times 2.303 \\times \\mathrm{R} \\\\\n& =1.25 \\times 10^{4} \\mathrm{~K} \\times 2.303 \\times 8.314 \\mathrm{~J} \\mathrm{~K}^{-1} \\mathrm{~mol}^{-1} \\\\\n& =239339.3 \\mathrm{~J} \\mathrm{~mol}^{-1} \\text { (approximately) } \\\\\n& =239.34 \\mathrm{~kJ} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Also, when $t_{1 / 2}=256$ minutes,\n\n$$\n\\begin{aligned}\nk & =\\frac{0.693}{t_{1 / 2}} \\\\\n& =\\frac{0.693}{256} \\\\\n= & 2.707 \\times 10^{-3} \\mathrm{~min}^{-1} \\\\\n= & 4.51 \\times 10^{-5} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is also given that, $\\log k=14.34-1.25 \\times 10^{4} \\mathrm{~K} / T$\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\log \\left(4.51 \\times 10^{-5}\\right)=14.34-\\frac{1.25 \\times 10^{4} \\mathrm{~K}}{T} \\\\\n& \\Rightarrow \\log (0.654-05)=14.34-\\frac{1.25 \\times 10^{4} \\mathrm{~K}}{T} \\\\\n& \\Rightarrow \\frac{1.25 \\times 10^{4} \\mathrm{~K}}{T}=18.686 \\\\\n& \\Rightarrow T=\\frac{1.25 \\times 10^{4} \\mathrm{~K}}{18.686} \\\\\n& =668.95 \\mathrm{~K} \\\\\n& =669 \\mathrm{~K} \\text { (approximately) }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$E_{a}=239.34 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$; $T=669$ K (for $t_{1/2}=256$ min)"
+        }
+      ]
+    },
+    {
+      "id": "q_3.28",
+      "kind": "exercise",
+      "number": "3.28",
+      "topic": "Temperature from Arrhenius equation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The decomposition of A into product has value of $k$ as $4.5 \\times 10^{3} \\mathrm{~s}^{-1}$ at $10^{\\circ} \\mathrm{C}$ and energy of activation $60 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$. At what temperature would $k$ be $1.5 \\times 10^{4} \\mathrm{~s}^{-1}$ ?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Using the Arrhenius equation, we get\n\n$$\n\\log \\frac{k_{2}}{k_{1}}=\\frac{E_{a}}{2.303 \\mathrm{R}}\\left(\\frac{T_{2}-T_{1}}{T_{1} T_{2}}\\right)\n$$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Also, $k_{1}=4.5 \\times 10^{3} \\mathrm{~s}^{-1}$\n\n$$\n\\begin{aligned}\n& T_{1}=273+10=283 \\mathrm{Kk}_{2} \\\\\n& =1.5 \\times 10^{4} \\mathrm{~s}^{-1} \\\\\n& E_{a}=60 \\mathrm{~kJ} \\mathrm{~mol}^{-1}=6.0 \\times 10^{4} \\mathrm{~J} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Then,\n\n$$\n\\begin{aligned}\n& \\log \\frac{1.5 \\times 10^{4}}{4.5 \\times 10^{3}}=\\frac{6.0 \\times 10^{4} \\mathrm{~J} \\mathrm{~mol}^{-1}}{2.303 \\times 8.314 \\mathrm{~J} \\mathrm{~K}^{-1} \\mathrm{~mol}^{-1}}\\left(\\frac{T_{2}-283}{283 T_{2}}\\right) \\\\\n& \\Rightarrow 0.5229=3133.627\\left(\\frac{T_{2}-283}{283 T_{2}}\\right) \\\\\n& \\Rightarrow \\frac{0.5229 \\times 283 T_{2}}{3133.627}=T_{2}-283 \\\\\n& \\Rightarrow 0.0472 T_{2}=T_{2}-283 \\\\\n& \\Rightarrow 0.9528 T_{2}=283 \\\\\n& \\Rightarrow T_{2}=297.019 \\mathrm{~K} \\text { (approximately) } \\\\\n& =297 \\mathrm{~K} \\\\\n& =24^{\\circ} \\mathrm{C}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, $k$ would be $1.5 \\times 10^{4} \\mathrm{~s}^{-1}$ at $24^{\\circ} \\mathrm{C}$."
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "note_type": "tip",
+          "label": "Textbook variance",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Note: There is a slight variation in this answer and the one given in the NCERT textbook."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$T_{2}=297$ K $=24^{\\circ}\\mathrm{C}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.29",
+      "kind": "exercise",
+      "number": "3.29",
+      "topic": "k and Ea from completion times",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The time required for 10\\% completion of a first order reaction at 298K is equal to that required for its 25\\% completion at 308K. If the value of $A$ is $4 \\times 10^{10} \\mathrm{~s}^{-1}$. Calculate $k$ at 318K and $E_{\\mathrm{a}}$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For a first order reaction,\n\n$$\nt=\\frac{2.303}{k} \\log \\frac{a}{a-x}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "At 298 K,\n\n$$\nt=\\frac{2.303}{k} \\log \\frac{100}{90}\n$$\n\n$=\\frac{0.1054}{k}$\nAt 308 K,\n\n$$\nt^{\\prime}=\\frac{2.303}{k^{\\prime}} \\log \\frac{100}{75}\n$$\n\n$$\n=\\frac{2.2877}{k^{\\prime}}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "According to the question,\n\n$$\n\\begin{aligned}\n& t=t^{\\prime} \\\\\n& \\Rightarrow \\frac{0.1054}{k}=\\frac{0.2877}{k^{\\prime}} \\\\\n& \\Rightarrow \\frac{k^{\\prime}}{k}=2.7296\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "From the Arrhenius equation, we get\n\n$$\n\\begin{aligned}\n& \\log \\frac{k^{\\prime}}{k}=\\frac{E_{a}}{2.303 \\mathrm{R}}\\left(\\frac{T^{\\prime}-T}{T T^{\\prime}}\\right) \\\\\n& \\log (2.7296)=\\frac{E_{a}}{2.303 \\times 8.314}\\left(\\frac{308-298}{298 \\times 308}\\right) \\\\\n& \\begin{aligned}\nE_{a} & =\\frac{2.303 \\times 8.314 \\times 298 \\times 308 \\times \\log (2.7296)}{308-298} \\\\\n& =76640.096 \\mathrm{~J} \\mathrm{~mol}^{-1} \\\\\n& =76.64 \\mathrm{~kJ} \\mathrm{~mol}^{-1}\n\\end{aligned}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "To calculate $k$ at 318 K ,\nIt is given that, $A=4 \\times 10^{10} \\mathrm{~s}^{-1}, T=318 \\mathrm{~K}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Again, from the Arrhenius equation, we get\n\n$$\n\\begin{aligned}\n\\log k & =\\log A-\\frac{E_{a}}{2.303 \\mathrm{R} T} \\\\\n& =\\log \\left(4 \\times 10^{10}\\right)-\\frac{76.64 \\times 10^{3}}{2.303 \\times 8.314 \\times 318} \\\\\n& =(0.6021+10)-12.5876 \\\\\n& =-1.9855\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\text { Therefore, } \\begin{aligned}\nk & =\\operatorname{Antilog}(-1.9855) \\\\\n& =1.034 \\times 10^{-2} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$E_{a}=76.64 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$; $k$ (at 318 K) $=1.034 \\times 10^{-2} \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "q_3.30",
+      "kind": "exercise",
+      "number": "3.30",
+      "topic": "Activation energy from rate quadrupling",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The rate of a reaction quadruples when the temperature changes from 293 K to 313 K. Calculate the energy of activation of the reaction assuming that it does not change with temperature."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Using the Arrhenius equation, we get\n\n$$\n\\log \\frac{k_{2}}{k_{1}}=\\frac{E_{a}}{2.303 \\mathrm{R}}\\left(\\frac{T_{2}-T_{1}}{T_{1} T_{2}}\\right)\n$$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that, $k_{2}=4 k_{1}$\n\n$$\n\\begin{aligned}\n& T_{1}=293 \\mathrm{~K} \\\\\n& T_{2}=313 \\mathrm{~K}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\text { Therefore, } \\log \\frac{4 k_{1}}{k_{2}}=\\frac{E_{a}}{2.303 \\times 8.314}\\left(\\frac{313-293}{293 \\times 313}\\right. \\\\\n& \\begin{aligned}\n& \\Rightarrow 0.6021=\\frac{20 \\times E_{a}}{2.303 \\times 8.314 \\times 293 \\times 313} \\\\\n& \\Rightarrow E_{\\alpha}=\\frac{0.6021 \\times 2.303 \\times 8.314 \\times 293 \\times 313}{20} \\\\\n& \\quad=52863.33 \\mathrm{~J} \\mathrm{~mol}^{-1} \\\\\n&=52.86 \\mathrm{~kJ} \\mathrm{~mol}^{-1}\n\\end{aligned}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, the required energy of activation is $52.86 \\mathrm{kJmol}^{-1}$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$E_{a}=52.86 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "it_3.1",
+      "kind": "additional_exercise",
+      "number": "3.1",
+      "topic": "Average rate calculation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "For the reaction R → P, the concentration of a reactant changes from 0.03M to 0.02M in 25 minutes. Calculate the average rate of reaction using units of time both in minutes and seconds."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n=-\\frac{\\Delta[\\mathrm{R}]}{\\Delta t}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =-\\frac{[\\mathrm{R}]_{2}-[\\mathrm{R}]_{1}}{t_{2}-t_{1}} \\\\\n& =-\\frac{0.02-0.03}{25} \\mathrm{M} \\mathrm{~min}^{-1} \\\\\n& =-\\frac{-0.01}{25} \\mathrm{M} \\mathrm{~min}^{-1} \\\\\n& =4 \\times 10^{-4} \\mathrm{M} \\mathrm{~min}^{-1} \\\\\n& =\\frac{4 \\times 10^{-4}}{60} \\mathrm{M} \\mathrm{~s}^{-1} \\\\\n& =6.67 \\times 10^{-6} \\mathrm{M} \\mathrm{~s}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$4 \\times 10^{-4} \\mathrm{M} \\mathrm{~min}^{-1} = 6.67 \\times 10^{-6} \\mathrm{M} \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "it_3.2",
+      "kind": "additional_exercise",
+      "number": "3.2",
+      "topic": "Rate from concentration change",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "In a reaction, 2A → Products, the concentration of A decreases from 0.5 $\\mathrm{mol} \\mathrm{L}^{-1}$ to $0.4 \\mathrm{~mol} \\mathrm{L}^{-1}$ in 10 minutes. Calculate the rate during this interval?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\text { Average rate }=-\\frac{1}{2} \\frac{\\Delta[\\mathrm{~A}]}{\\Delta t}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =-\\frac{1}{2} \\frac{[\\mathrm{~A}]_{2}-[\\mathrm{~A}]_{1}}{t_{2}-t_{1}} \\\\\n& =-\\frac{1}{2} \\frac{0.4-0.5}{10} \\\\\n& =-\\frac{1}{2} \\frac{-0.1}{10} \\\\\n& =0.005 \\mathrm{~mol} \\mathrm{~L}^{-1} \\mathrm{~min}^{-1} \\\\\n& =5 \\times 10^{-3} \\mathrm{M} \\mathrm{~min}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$5 \\times 10^{-3} \\mathrm{M} \\mathrm{~min}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "it_3.3",
+      "kind": "additional_exercise",
+      "number": "3.3",
+      "topic": "Order from rate law",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "For a reaction, $\\mathrm{A}+\\mathrm{B} \\rightarrow$ Product; the rate law is given by, $r=k[\\mathrm{~A}]^{1 / 2}[\\mathrm{~B}]^{2}$. What is the order of the reaction?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\qquad=\\frac{1}{2}+2 \\\\\n& \\text { The order of the reaction } \\\\\n& =2 \\frac{1}{2} \\\\\n& =2.5\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "The order of the reaction $= 2.5$"
+        }
+      ]
+    },
+    {
+      "id": "it_3.4",
+      "kind": "additional_exercise",
+      "number": "3.4",
+      "topic": "Second order rate effect",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The conversion of molecules X to Y follows second order kinetics. If concentration of X is increased to three times how will it affect the rate of formation of Y ?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The reaction $X \\rightarrow Y$ follows second order kinetics.\nSo the rate equation is:\nRate $=k[\\mathrm{X}]^{2}(1)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $[\\mathrm{X}]=a \\mathrm{~mol} \\mathrm{~L}^{-1}$. Then equation (1) becomes:\nRate $_{1}=k .(a)^{2}$\n\n$$\n=k a^{2}\n$$\n\nIf the concentration of X is increased to three times, $[\\mathrm{X}]=3 a \\mathrm{~mol} \\mathrm{~L}^{-1}$\nNow the rate equation is:\n\n$$\n\\begin{aligned}\n& \\text { Rate }=k(3 a)^{2} \\\\\n& =9\\left(k a^{2}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "So the rate of formation increases by 9 times."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "The rate of formation of Y will increase by 9 times."
+        }
+      ]
+    },
+    {
+      "id": "it_3.5",
+      "kind": "additional_exercise",
+      "number": "3.5",
+      "topic": "First order half-life time",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A first order reaction has a rate constant $1.15 \\times 10^{-3} \\mathrm{~s}^{-1}$. How long will 5 g of this reactant take to reduce to 3 g?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "From the question, we know:\nInitial amount = 5 g\nFinal concentration $=3 \\mathrm{~g}$\nRate constant $=1.1510^{-3} \\mathrm{~s}^{-1}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We know that for a $1^{\\text {st }}$ order reaction,\n\n$$\n\\begin{aligned}\nt & =\\frac{2.303}{k} \\log \\frac{[\\mathrm{R}]_{0}}{[\\mathrm{R}]} \\\\\n& =\\frac{2.303}{1.15 \\times 10^{-3}} \\log \\frac{5}{3} \\\\\n& =\\frac{2.303}{1.15 \\times 10^{-3}} \\times 0.2219 \\\\\n= & 444.38 \\mathrm{~s} \\\\\n= & 444 \\mathrm{~s} \\text { (approx) }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$t = 444 \\mathrm{~s}$ (approx)"
+        }
+      ]
+    },
+    {
+      "id": "it_3.6",
+      "kind": "additional_exercise",
+      "number": "3.6",
+      "topic": "Rate constant from half-life",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Time required to decompose $\\mathrm{SO}_{2} \\mathrm{Cl}_{2}$ to half of its initial amount is 60 minutes. If the decomposition is a first order reaction, calculate the rate constant of the reaction."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We know that for a $1^{\\text {st }}$ order reaction,\n\n$$\nt_{1 / 2}=\\frac{0.693}{k}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that $\\mathrm{t}_{1 / 2}=60 \\mathrm{~min}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\therefore k & =\\frac{0.693}{t_{1 / 2}} \\\\\n& =\\frac{0.693}{60} \\\\\n& =0.01155 \\mathrm{~min}^{-1} \\\\\n& =1.155 \\mathrm{~min}^{-1}\n\\end{aligned}\n$$\n\n$$\n\\text { Or } k=1.925 \\times 10^{-4} \\mathrm{~s}^{-1}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$k = 1.925 \\times 10^{-4} \\mathrm{~s}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "it_3.7",
+      "kind": "additional_exercise",
+      "number": "3.7",
+      "topic": "Temperature effect on rate constant",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What will be the effect of temperature on rate constant ?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The rate constant of a reaction nearly doubles with a $10^{\\circ}$ rise in temperature. The exact dependence of reaction rate on temperature is given by the Arrhenius equation:\n\n$$\nk=\\mathrm{Ae}^{-\\mathrm{Ea} / R T}\n$$\n\nWhere,\nA is the Arrhenius factor or the frequency factor\n$T$ is the temperature\n$R$ is the gas constant\n$E_{\\mathrm{a}}$ is the activation energy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_3.8",
+      "kind": "additional_exercise",
+      "number": "3.8",
+      "topic": "Activation energy calculation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The rate of the chemical reaction doubles for an increase of 10K in absolute temperature from 298K. Calculate $E_{\\mathrm{a}}$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that $T_{1}=298 \\mathrm{~K}$\n\n$$\n\\begin{aligned}\n& \\therefore T_{2}=(298+10) \\mathrm{K} \\\\\n& =308 \\mathrm{~K}\n\\end{aligned}\n$$\n\nWe also know the rate of the reaction doubles when temperature increases by 10°.\nSo let us take $k_{1}=k$ and $k_{2}=2 k$.\nAlso, $R=8.314 \\mathrm{~J} \\mathrm{~K}^{-1} \\mathrm{~mol}^{-1}$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now substitute these values in the equation:\n\n$$\n\\log \\frac{k_{2}}{k_{1}}=\\frac{E_{a}}{2.303 R}\\left[\\frac{T_{2}-T_{1}}{T_{1} T_{2}}\\right]\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We get:\n\n$$\n\\begin{aligned}\n& \\log \\frac{2 k}{k}=\\frac{E_{\\mathrm{a}}}{2.303 \\times 8.314}\\left[\\frac{10}{298 \\times 308}\\right] \\\\\n& \\Rightarrow \\log 2=\\frac{E_{\\mathrm{a}}}{2.303 \\times 8.314}\\left[\\frac{10}{298 \\times 308}\\right] \\\\\n& \\Rightarrow E_{\\mathrm{a}}=\\frac{2.303 \\times 8.314 \\times 298 \\times 308 \\times \\log 2}{10} \\\\\n& =52897.78 \\mathrm{~J} \\mathrm{~mol}^{-1} \\\\\n& =52.9 \\mathrm{~kJ} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "note_type": "tip",
+          "label": "Tip",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Note: There is a slight variation between this answer and the one given in the NCERT textbook."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$E_{a} = 52.9 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$"
+        }
+      ]
+    },
+    {
+      "id": "it_3.9",
+      "kind": "additional_exercise",
+      "number": "3.9",
+      "topic": "Fraction of molecules with activation energy",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The activation energy for the reaction\n$$\n2 \\mathrm{HI}(\\mathrm{g}) \\rightarrow \\mathrm{H}_{2}+\\mathrm{I}_{2}(\\mathrm{g})\n$$\nis $209.5 \\mathrm{~kJ} \\mathrm{~mol}^{-1}$ at 581 K .Calculate the fraction of molecules of reactants having energy equal to or greater than activation energy?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "In the given case:\n\n$$\n\\begin{aligned}\n& E_{\\mathrm{a}}=209.5 \\mathrm{~kJ} \\mathrm{~mol}^{-1}=209500 \\mathrm{~J} \\mathrm{~mol}^{-1} \\\\\n& T=581 \\mathrm{~K} \\\\\n& R=8.314 \\mathrm{JK}^{-1} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, the fraction of molecules of reactants having energy equal to or greater than activation energy is given as:\n\n$$\n\\begin{aligned}\n& x=\\mathrm{e}^{-E a / R T} \\\\\n& \\Rightarrow \\ln x=-E_{\\mathrm{a}} / R T\n\\end{aligned}\n$$\n\n$$\n\\Rightarrow \\log x=-\\frac{E_{\\mathrm{a}}}{2.303 R T}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\Rightarrow \\log x=\\frac{209500 \\mathrm{~J} \\mathrm{~mol}^{-1}}{2.303 \\times 8.314 \\mathrm{JK}^{-1} \\mathrm{~mol}^{-1} \\times 581}=18.8323\n$$\n\nNow, $x=\\operatorname{Antilog}(18.8323)$\n\n$$\n\\begin{aligned}\n& =\\text { Anti } \\log \\overline{19} .1677 \\\\\n& =1.471 \\times 10^{-19}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$x = 1.471 \\times 10^{-19}$"
+        }
+      ]
+    }
+  ]
+}
