@@ -1,0 +1,3838 @@
+{
+  "front": {
+    "title": "Coordination Compounds",
+    "chapter": "5"
+  },
+  "items": [
+    {
+      "id": "ex_5.1",
+      "kind": "example",
+      "number": "5.1",
+      "topic": "Secondary valence from AgCl precipitation data",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "On the basis of the following observations made with aqueous solutions, assign secondary valences to metals in the following compounds:"
+        },
+        {
+          "type": "table",
+          "html": "| Formula | Moles of AgCl precipitated per mole of the compounds with excess $\\mathbf{A g N O}_{\\mathbf{3}}$ |\n| :--- | :--- |\n| (i) $\\mathrm{PdCl}_{2} .4 \\mathrm{NH}_{3}$ | 2 |\n| (ii) $\\mathrm{NiCl}_{2} \\cdot 6 \\mathrm{H}_{2} \\mathrm{O}$ | 2 |\n| (iii) $\\mathrm{PtCl}_{4} .2 \\mathrm{HCl}$ | 0 |\n| (iv) $\\mathrm{CoCl}_{3} .4 \\mathrm{NH}_{3}$ | 1 |\n| (v) $\\mathrm{PtCl}_{2} .2 \\mathrm{NH}_{3}$ | 0 |"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) Secondary 4\n(ii) Secondary 6\n(iii) Secondary 6\n(iv) Secondary 6\n(v) Secondary 4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_5.2",
+      "kind": "example",
+      "number": "5.2",
+      "topic": "Writing formulas from IUPAC names of complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write the formulas for the following coordination compounds:\n\n(a) tetraammineaquachloridocobalt(III) chloride\n(b) potassium tetrahydroxidozincate(II)\n(c) potassium trioxalatoaluminate(III)\n(d) dichloridobis(ethane-1,2-diamine)cobalt(III)\n(e) tetracarbonylnickel(0)"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(a)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "tetraammineaquachloridocobalt(III) chloride"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{4}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right) \\mathrm{Cl}\\right] \\mathrm{Cl}_{2}$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{4}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right) \\mathrm{Cl}\\right] \\mathrm{Cl}_{2}$"
+            }
+          ]
+        },
+        {
+          "label": "(b)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "potassium tetrahydroxidozincate(II)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\mathrm{K}_{2}\\left[\\mathrm{Zn}(\\mathrm{OH})_{4}\\right]$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{2}\\left[\\mathrm{Zn}(\\mathrm{OH})_{4}\\right]$"
+            }
+          ]
+        },
+        {
+          "label": "(c)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "potassium trioxalatoaluminate(III)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Al}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Al}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$"
+            }
+          ]
+        },
+        {
+          "label": "(d)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "dichloridobis(ethane-1,2-diamine)cobalt(III)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{CoCl}_{2}(\\mathrm{en})_{2}\\right]^{+}$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{CoCl}_{2}(\\mathrm{en})_{2}\\right]^{+}$"
+            }
+          ]
+        },
+        {
+          "label": "(e)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "tetracarbonylnickel(0)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "ex_5.3",
+      "kind": "example",
+      "number": "5.3",
+      "topic": "Writing IUPAC names of coordination compounds",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write the IUPAC names of the following coordination compounds:\n(a) $\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}\\left(\\mathrm{NO}_{2}\\right)\\right]$\n(b) $\\mathrm{K}_{3}\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$\n(c) $\\left[\\mathrm{CoCl}_{2}(\\mathrm{en})_{2}\\right] \\mathrm{Cl}$\n(d) $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{CO}_{3}\\right)\\right] \\mathrm{Cl}$\n(e) $\\mathrm{Hg}\\left[\\mathrm{Co}(\\mathrm{SCN})_{4}\\right]$"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(a)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}\\left(\\mathrm{NO}_{2}\\right)\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "diamminechloridonitrito-N-platinum(II)"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "diamminechloridonitrito-N-platinum(II)"
+            }
+          ]
+        },
+        {
+          "label": "(b)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "potassium trioxalatochromate(III)"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "potassium trioxalatochromate(III)"
+            }
+          ]
+        },
+        {
+          "label": "(c)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{CoCl}_{2}(\\mathrm{en})_{2}\\right] \\mathrm{Cl}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "dichloridobis(ethane-1,2-diamine)cobalt(III) chloride"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "dichloridobis(ethane-1,2-diamine)cobalt(III) chloride"
+            }
+          ]
+        },
+        {
+          "label": "(d)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{CO}_{3}\\right)\\right] \\mathrm{Cl}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "pentaamminecarbonatocobalt(III) chloride"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "pentaamminecarbonatocobalt(III) chloride"
+            }
+          ]
+        },
+        {
+          "label": "(e)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Hg}\\left[\\mathrm{Co}(\\mathrm{SCN})_{4}\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "mercury (I) tetrathiocyanato-S-cobaltate(III)"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "mercury (I) tetrathiocyanato-S-cobaltate(III)"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "ex_5.4",
+      "kind": "example",
+      "number": "5.4",
+      "topic": "Absence of geometrical isomerism in tetrahedral complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Why is geometrical isomerism not possible in tetrahedral complexes having two different types of unidentate ligands coordinated with the central metal ion?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Tetrahedral complexes do not show geometrical isomerism. This is because the unidentate ligands attached to the central metal atom always have the same relative positions with respect to each other."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_5.5",
+      "kind": "example",
+      "number": "5.5",
+      "topic": "Geometrical isomers of a mixed-ligand octahedral ion",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Draw structures of geometrical isomers of $\\left[\\mathrm{Fe}\\left(\\mathrm{NH}_{3}\\right)_{2}(\\mathrm{CN})_{4}\\right]^{-}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "cis\n\ntrans"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_5.6",
+      "kind": "example",
+      "number": "5.6",
+      "topic": "Identifying the chiral (optically active) isomer",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Out of the following two coordination entities which is chiral (optically active)?\n(a) cis- $\\left[\\mathrm{CrCl}_{2}(\\mathrm{ox})_{2}\\right]^{3-}$\n(b) trans- $\\left[\\mathrm{CrCl}_{2}(\\mathrm{ox})_{2}\\right]^{3-}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The two entities are represented as\n\n(a) cis - $\\left[\\mathrm{CrCl}_{2}(\\mathrm{ox})_{2}\\right]^{3-}$\n\n(b) trans $-\\left[\\mathrm{CrCl}_{2}(\\mathrm{ox})_{2}\\right]^{3-}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Out of the two, (a) cis - $\\left[\\mathrm{CrCl}_{2}(\\mathrm{ox})_{2}\\right]^{3-}$ is chiral (optically active)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_5.7",
+      "kind": "example",
+      "number": "5.7",
+      "topic": "Predicting geometry from magnetic moment",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The spin only magnetic moment of $\\left[\\mathrm{MnBr}_{4}\\right]^{2-}$ is 5.9 BM. Predict the geometry of the complex ion ?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The coordination number of $\\mathrm{Mn}^{2+}$ ion in the complex ion is 4. So the complex ion will be either tetrahedral ( $s p^{3}$ hybridisation) or square planar ( $d s p^{2}$ hybridisation)."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The magnetic moment of the complex ion is 5.9 BM. This value matches five unpaired electrons in the $d$ orbitals. A tetrahedral shape allows five unpaired electrons, but a square planar shape does not."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "So the complex ion is tetrahedral in shape, not square planar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.1",
+      "kind": "exercise",
+      "number": "5.1",
+      "topic": "Werner's postulates and bonding",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Explain the bonding in coordination compounds in terms of Werner's postulates."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Werner's postulates explain the bonding in coordination compounds as follows:\n\n(i) A metal shows two types of valencies: primary and secondary. Negative ions satisfy primary valencies. Both negative ions and neutral molecules can satisfy secondary valencies."
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "note_type": "tip",
+          "label": "Modern terminology",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(In modern terms, primary valency is the oxidation number of the metal ion. Secondary valency is the coordination number of the metal ion."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) A metal ion has a fixed number of secondary valencies around the central atom. These valencies point in specific directions in space, giving the coordination compound its definite geometry.\n(iii) Primary valencies are usually ionizable. Secondary valencies are non-ionizable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.2",
+      "kind": "exercise",
+      "number": "5.2",
+      "topic": "Complex formation vs simple ion tests",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\mathrm{FeSO}_{4}$ solution mixed with $\\left(\\mathrm{NH}_{4}\\right)_{2} \\mathrm{SO}_{4}$ solution in 1:1 molar ratio gives the test of $\\mathrm{Fe}^{2+}$ ion but $\\mathrm{CuSO}_{4}$ solution mixed with aqueous ammonia in 1:4 molar ratio does not give the test of $\\mathrm{Cu}^{2+}$ ion. Explain why?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\left(\\mathrm{NH}_{4}\\right)_{2} \\mathrm{SO}_{4}+\\mathrm{FeSO}_{4}+6 \\mathrm{H}_{2} \\mathrm{O} \\longrightarrow \\mathrm{FeSO}_{4} \\cdot\\left(\\mathrm{NH}_{4}\\right)_{2} \\mathrm{SO}_{4} \\cdot 6 \\mathrm{H}_{2} \\mathrm{O}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Mohr's salt"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\mathrm{CuSO}_{4}+4 \\mathrm{NH}_{3}+5 \\mathrm{H}_{2} \\mathrm{O} \\longrightarrow\\left[\\mathrm{Cu}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right] \\mathrm{SO}_{4} \\cdot 5 \\mathrm{H}_{2} \\mathrm{O}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "tetraamminocopper(ii) sulphate\nBoth $\\quad \\mathrm{FeSO}_{4} \\cdot\\left(\\mathrm{NH}_{4}\\right)_{2} \\mathrm{SO}_{4} \\cdot 6 \\mathrm{H}_{2} \\mathrm{O}$ and $\\left[\\mathrm{Cu}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right] \\mathrm{SO}_{4} \\cdot 5 \\mathrm{H}_{2} \\mathrm{O}$ are addition compounds. The only major difference is that the former is a double salt, while the latter is a coordination compound.\n\nA double salt is an addition compound. It is stable in the solid state, but breaks up into its constituent ions when dissolved. These compounds show the individual properties of their constituents. For example, $\\mathrm{FeSO}_{4} \\cdot\\left(\\mathrm{NH}_{4}\\right)_{2} \\mathrm{SO}_{4} \\cdot 6 \\mathrm{H}_{2} \\mathrm{O}$ breaks into $\\mathrm{Fe}^{2+}, \\mathrm{NH}^{4+}$ and $\\mathrm{SO}_{4}{ }^{2-}$ ions. So it gives a positive test for $\\mathrm{Fe}^{2+}$ ions. A coordination compound is an addition compound that keeps its identity both in the solid state and in solution. Here, the individual properties of the constituents are lost. This happens because $\\left[\\mathrm{Cu}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right] \\mathrm{SO}_{4} \\cdot 5 \\mathrm{H}_{2} \\mathrm{O}$ does not show the test for $\\mathrm{Cu}^{2+}$. The ions present in the $\\left[\\mathrm{Cu}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right] \\mathrm{SO}_{4} \\cdot 5 \\mathrm{H}_{2} \\mathrm{O}$ are $\\left[\\mathrm{Cu}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right]^{2+}$ and $\\mathrm{SO}_{4}{ }^{2-}$ solution of\n-"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.3",
+      "kind": "exercise",
+      "number": "5.3",
+      "topic": "Basic coordination compound terminology",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Explain with two examples each of the following: coordination entity, ligand, coordination number, coordination polyhedron, homoleptic and heteroleptic."
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Coordination entity:\n\nA coordination entity is a charged species — it carries either a positive or a negative charge. In a coordination entity, a suitable number of neutral molecules or negative ions (called ligands) surround the central atom or ion. For example:\n\n$$\n\\begin{array}{ll}\n{\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{2+},\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{4+}} & =\\text { cationic complex } \\\\\n{\\left[\\mathrm{PtCl}_{4}\\right]^{2-},\\left[\\mathrm{Ag}(\\mathrm{CN})_{2}\\right]^{-}} & =\\text {anionic complex } \\\\\n{\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right],\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{4} \\mathrm{Cl}_{2}\\right]} & =\\text { neutral complex }\n\\end{array}\n$$"
+                }
+              ],
+              "label": "Coordination entity"
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Ligands\n\nNeutral molecules or negatively charged ions that surround the metal atom in a coordination entity or a coordinal complex are called ligands. For example,\n$\\ddot{\\mathrm{N}} \\mathrm{H}_{3}, \\mathrm{H}_{2} \\ddot{\\mathrm{O}}, \\mathrm{Cl}^{-},-\\mathrm{OH}$. Ligands are usually polar and have at least one unshared pair of valence electrons."
+                }
+              ],
+              "label": "Ligands"
+            }
+          ]
+        },
+        {
+          "label": "(iii)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Coordination number:\n\nThe coordination number of a metal atom is the total number of ligands (neutral molecules or negative ions) attached to it in the coordination sphere. It is also called its ligancy.\n\nFor example:\n\n(a) In the complex $\\mathrm{K}_{2}\\left[\\mathrm{PtCl}_{6}\\right]$, six chloride ions are attached to Pt in the coordination sphere. So the coordination number of Pt is 6.\n(b) Similarly, in the complex $\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right] \\mathrm{Cl}_{2}$, the coordination number of the central atom $(\\mathrm{Ni})$ is 4."
+                }
+              ],
+              "label": "Coordination number"
+            }
+          ]
+        },
+        {
+          "label": "(vi)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Coordination polyhedron:\n\nThe coordination polyhedron is the spatial arrangement of the ligands that are directly attached to the central metal ion in the coordination sphere. For example:\n\n\n\nTetrahedral"
+                }
+              ],
+              "label": "Coordination polyhedron"
+            }
+          ]
+        },
+        {
+          "label": "(v)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Homoleptic complexes:\n\nThese are complexes in which the metal ion is bound to only one kind of donor group. For example: $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+},\\left[\\mathrm{PtCl}_{4}\\right]^{2-}$ etc."
+                }
+              ],
+              "label": "Homoleptic complexes"
+            }
+          ]
+        },
+        {
+          "label": "(vi)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Heteroleptic complexes:\n\nThese are complexes in which the central metal ion is bound to more than one type of donor group.\n\nFor example: $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{4} \\mathrm{Cl}_{2}\\right]^{+},\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right]^{2+}$"
+                }
+              ],
+              "label": "Heteroleptic complexes"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.4",
+      "kind": "exercise",
+      "number": "5.4",
+      "topic": "Types of ligands",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is meant by unidentate, didentate and ambidentate ligands? Give two examples for each."
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(a)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Unidentate ligands: Ligands with only one donor site are called unidentate ligands. For example, ${ } \\ddot{\\mathrm{N}} \\mathrm{H}_{3}, \\mathrm{Cl}^{-}$ etc."
+                }
+              ],
+              "label": "Unidentate ligands"
+            }
+          ]
+        },
+        {
+          "label": "(b)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Didentate ligands: Ligands that have two donor sites are called didentate ligands. For e.g.,\n(a) Ethane-1,2-diamine\n\n(b) Oxalate ion"
+                }
+              ],
+              "label": "Didentate ligands"
+            }
+          ]
+        },
+        {
+          "label": "(c)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Ambidentate ligands:\n\nLigands that can attach themselves to the central metal atom through two different atoms are called ambidentate ligands. For example:\n\n(a)\n\n\n(b)"
+                }
+              ],
+              "label": "Ambidentate ligands"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.5",
+      "kind": "exercise",
+      "number": "5.5",
+      "topic": "Oxidation numbers in complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Specify the oxidation numbers of the metals in the following coordination entities:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)(\\mathrm{CN})(\\mathrm{en})_{2}\\right]^{2+}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)(\\mathrm{CN})(\\mathrm{en})_{2}\\right]^{2+}$\n\nLet the oxidation number of Co be $x$.\nThe charge on the complex is +2 .\n\n$$\n\\begin{array}{cccc}\n{\\left[\\begin{array}{ccc}\n\\mathrm{Co} & \\left(\\mathrm{H}_{2} \\mathrm{O}\\right) & (\\mathrm{CN}) \\\\\n\\downarrow & \\downarrow & \\downarrow \\\\\nx+0 & \\downarrow\n\\end{array}(\\mathrm{en})_{2}\\right]^{2+}} \\\\\n& x-1=+2 \\\\\n& x=+3\n\\end{array}\n$$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{CoBr}_{2}(\\mathrm{en})_{2}\\right]^{+}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& {\\left[\\begin{array}{lll}\n\\mathrm{Co} & (\\mathrm{Br})_{2} & \\left.(\\mathrm{en})_{2}\\right]^{2+} \\\\\n\\downarrow & \\downarrow & \\downarrow\n\\end{array}\\right.} \\\\\n& x+2(-1)+2(0)=+1 \\\\\n& x-2=+1 \\\\\n& x=+3\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{PtCl}_{4}\\right]^{2-}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Pt}(\\mathrm{Cl})_{4}\\right]^{2-}$\nLet the oxidation number of Pt be $x$.\nThe charge on the complex is -2.\n\n$$\n\\begin{aligned}\n& {\\left[\\begin{array}{cc}\n\\mathrm{Pt} & (\\mathrm{Cl})_{4}\n\\end{array}\\right]^{2-}} \\\\\n& \\downarrow \\\\\n& \\downarrow \\\\\n& x+4(-1)=-2 x \\\\\n& =+2\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]$\n$$\n\\begin{gathered}\n\\text { i.e., }\\left[\\begin{array}{ll}\n\\mathrm{Fe} & (\\mathrm{CN})_{6}\n\\end{array}\\right]^{3-} \\\\\n\\downarrow \\quad \\downarrow \\\\\nx+6(-1)=-3 \\\\\nx=+3\n\\end{gathered}\n$$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_{3}\\right)_{3} \\mathrm{Cl}_{3}\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& {\\left[\\begin{array}{ccc}\n\\mathrm{Cr} & \\left(\\mathrm{NH}_{3}\\right)_{3} & \\mathrm{Cl}_{3}\n\\end{array}\\right]} \\\\\n& \\downarrow \\\\\n& \\downarrow \\\\\n& x+3(0)+3(-1)=0 \\\\\n& \\quad x-3=0 \\\\\n& \\quad x=+3\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.6",
+      "kind": "exercise",
+      "number": "5.6",
+      "topic": "IUPAC formulas from names",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Using IUPAC norms write the formulas for the following:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Tetrahydroxidozincate(II)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\quad\\left[\\mathrm{Zn}(\\mathrm{OH})\\right]^{2-}$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Potassium tetrachloridopalladate(II)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\quad \\mathrm{K}_{2}\\left[\\mathrm{PdCl}_{4}\\right]$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Diamminedichloridoplatinum(II)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\operatorname{Pt}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}_{2}\\right]$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Potassium tetracyanidonickelate(II)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\mathrm{K}_{2}\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Pentaamminenitrito-O-cobalt(III)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Co}(\\mathrm{ONO})\\left(\\mathrm{NH}_{3}\\right)_{5}\\right]^{2+}$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(vi)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Hexaamminecobalt(III) sulphate"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]_{2}\\left(\\mathrm{SO}_{4}\\right)_{3}$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(vii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Potassium tri(oxalato)chromate(III)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(viii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Hexaammineplatinum(IV)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\operatorname{Pt}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{4+}$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ix)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Tetrabromidocuprate(II)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Cu}(\\mathrm{Br})_{4}\\right]^{2-}$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(x)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Pentaamminenitrito-N-cobalt(III)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Co}\\left[\\mathrm{NO}_{2}\\right)\\left(\\mathrm{NH}_{3}\\right)_{5}\\right]^{2+}$"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.7",
+      "kind": "exercise",
+      "number": "5.7",
+      "topic": "IUPAC names from formulas",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Using IUPAC norms write the systematic names of the following:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right] \\mathrm{Cl}_{3}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Hexaamminecobalt(III) chloride"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}\\left(\\mathrm{NH}_{2} \\mathrm{CH}_{3}\\right)\\right] \\mathrm{Cl}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Diamminechlorido(methylamine) platinum(II) chloride"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Ti}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Hexaquatitanium(III) ion"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{4} \\mathrm{Cl}\\left(\\mathrm{NO}_{2}\\right)\\right] \\mathrm{Cl}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Tetraamminichloridonitrito-N-Cobalt(III) chloride"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Mn}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Hexaquamanganese(II) ion"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(vi)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{NiCl}_{4}\\right]^{2-}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Tetrachloridonickelate(II) ion"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(vii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right] \\mathrm{Cl}_{2}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Hexaamminenickel(II) chloride"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(viii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}(\\mathrm{en})_{3}\\right]^{3+}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Tris(ethane-1, 2-diammine) cobalt(III) ion"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ix)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Tetracarbonylnickel(0)"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.8",
+      "kind": "exercise",
+      "number": "5.8",
+      "topic": "Isomerism in coordination compounds",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "List various types of isomerism possible for coordination compounds, giving an example of each."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_158.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_159.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(a) Geometric isomerism:\n\nThis type of isomerism is common in heteroleptic complexes. It arises because the ligands can have different possible geometric arrangements. For example:\n\nCis-isomer\n\nTrans-isomer"
+            }
+          ],
+          "label": "Geometric isomerism"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(b) Optical isomerism:\n\nThis type of isomerism arises in chiral molecules. The isomers are mirror images of each other, and they cannot be superimposed on one another."
+            }
+          ],
+          "label": "Optical isomerism"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(c) Linkage isomerism: This type of isomerism is found in complexes that contain ambidentate ligands. For example:\n$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right] \\mathrm{Cl}_{2}$ and $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}(\\mathrm{ONO}) \\mathrm{Cl}_{2}\\right.$\nYellow form Red form (d)"
+            }
+          ],
+          "label": "Linkage isomerism"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Coordination isomerism:\nThis type of isomerism arises when ligands are interchanged between the cationic and anionic entities of different metal ions present in the complex.\n$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]\\left[\\mathrm{Cr}(\\mathrm{CN})_{6}\\right]$ and $\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]\\left[\\mathrm{Co}(\\mathrm{CN})_{6}\\right](\\mathbf{e})$"
+            }
+          ],
+          "label": "Coordination isomerism"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Ionization isomerism:\nThis type of isomerism arises when a counter ion replaces a ligand within the coordination sphere. So complexes with the same composition, but that give different ions when dissolved in water, are called ionization isomers. For example,\n$\\left.\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{SO}_{4}\\right) \\mathrm{Br}$ and $\\left.\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Br}\\right] \\mathrm{SO}_{4}$."
+            }
+          ],
+          "label": "Ionization isomerism"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(f) Solvate isomerism:\nSolvate isomers differ in whether the solvent molecule is directly bonded to the metal ion, or is simply present as a free solvent molecule in the crystal lattice.\n$\\left[\\mathrm{Cr}\\left[\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right] \\mathrm{Cl}_{3}\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{Cl}_{2} . \\mathrm{H}_{2} \\mathrm{O}\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{5} \\mathrm{Cl}_{2}\\right] \\mathrm{Cl} .2 \\mathrm{H}_{2} \\mathrm{O}$\nViolet Blue-green Dark green"
+            }
+          ],
+          "label": "Solvate isomerism"
+        }
+      ]
+    },
+    {
+      "id": "q_5.9",
+      "kind": "exercise",
+      "number": "5.9",
+      "topic": "Counting geometrical isomers",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "How many geometrical isomers are possible in the following coordination entities?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_200.jpg",
+          "caption": "Structure of [Cr(C2O4)3]3- - part (i), no geometrical isomer possible (bidentate ligand)"
+        },
+        {
+          "src": "images/fig_5_201.jpg",
+          "caption": "Facial and meridional geometrical isomers of [Co(NH3)3Cl3] - part (ii)"
+        }
+      ],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "For $\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$, no geometric isomer is possible as it is a bidentate ligand."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{3} \\mathrm{Cl}_{3}\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{3} \\mathrm{Cl}_{3}\\right]$\nTwo geometrical isomers are possible.\n\nFacial\n\nMeridional"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.10",
+      "kind": "exercise",
+      "number": "5.10",
+      "topic": "Optical isomer structures",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Draw the structures of optical isomers of:"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_160.jpg",
+          "caption": "Optical isomers (dextro) of [Cr(C2O4)3]3- - part (i)"
+        },
+        {
+          "src": "images/fig_5_161.jpg",
+          "caption": "Optical isomers (laevo, mirror image) of [Cr(C2O4)3]3- - part (i)"
+        },
+        {
+          "src": "images/fig_5_163.jpg",
+          "caption": "Optical isomers of [PtCl2(en)2]2+ - part (ii)"
+        },
+        {
+          "src": "images/fig_5_164.jpg",
+          "caption": "Optical isomers of [Cr(NH3)2Cl2(en)]+ - part (iii)"
+        },
+        {
+          "src": "images/fig_5_165.jpg",
+          "caption": "Optical isomers of [Cr(NH3)2Cl2(en)]+ (second geometric arrangement) - part (iii)"
+        }
+      ],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{PtCl}_{2}(\\mathrm{en})_{2}\\right]^{2+}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{PtCl}_{2}(\\mathrm{en})_{2}\\right]^{2+}$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}_{2}(\\text { en })\\right]^{+}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}_{2}(\\mathrm{en})\\right]^{+}$"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.11",
+      "kind": "exercise",
+      "number": "5.11",
+      "topic": "Geometrical and optical isomers",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Draw all the isomers (geometrical and optical) of:"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_166.jpg",
+          "caption": "Optical isomers of trans-[CoCl2(en)2]+ - part (i)"
+        },
+        {
+          "src": "images/fig_5_167.jpg",
+          "caption": "Optical isomers of cis-[CoCl2(en)2]+ - part (i)"
+        },
+        {
+          "src": "images/fig_5_168.jpg",
+          "caption": "Trans and cis isomers of [Co(NH3)Cl(en)2]2+ - part (ii)"
+        },
+        {
+          "src": "images/fig_5_169.jpg",
+          "caption": "Optical isomer of cis-[Co(NH3)Cl(en)2]2+ - part (ii)"
+        },
+        {
+          "src": "images/fig_5_170.jpg",
+          "caption": "Geometrical isomer of [Co(NH3)2Cl2(en)]+ - part (iii)"
+        },
+        {
+          "src": "images/fig_5_172.jpg",
+          "caption": "Optical isomer of [Co(NH3)2Cl2(en)]+ - part (iii)"
+        }
+      ],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{CoCl}_{2}(\\mathrm{en})_{2}\\right]^{+}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{CoCl}_{2}(\\text { en })_{2}\\right]^{+}$\n\n\n\nIn total, three isomers are possible.\n\nTrans [CoCl2(en)2]+ isomer - optically inactive (Superimposable mirror images).\nCis [CoCl2(en)2]+ isomer - optically active (Non-superimposable mirror images)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right) \\mathrm{Cl}(\\mathrm{en})_{2}\\right]^{2+}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right) \\mathrm{Cl}(\\text { en })_{2}\\right]^{2+}$\n\nTrans-isomers are optically inactive.\nCis-isomers are optically active."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}_{2}(\\mathrm{en})\\right]^{+}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}_{2}(\\mathrm{en})\\right]^{+}$"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.12",
+      "kind": "exercise",
+      "number": "5.12",
+      "topic": "Geometrical and optical isomers of a Pt complex",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write all the geometrical isomers of $\\left[\\operatorname{Pt}\\left(\\mathrm{NH}_{3}\\right)(\\mathrm{Br})(\\mathrm{Cl})(\\mathrm{py})\\right]$ and how many of these will exhibit optical isomers?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_173.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_174.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_175.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)(\\mathrm{Br})(\\mathrm{Cl})(\\mathrm{py})\\right.$\n\n\n\nNone of the above isomers show optical isomerism. Tetrahedral complexes rarely show optical isomerism — they do so only when unsymmetrical chelating agents are present."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.13",
+      "kind": "exercise",
+      "number": "5.13",
+      "topic": "Copper sulphate reactions with KF and KCl",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Aqueous copper sulphate solution (blue in colour) gives:\n(i) a green precipitate with aqueous potassium fluoride and\n(ii) a bright green solution with aqueous potassium chloride. Explain these experimental results."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Aqueous $\\mathrm{CuSO}_{4}$ exists as $\\left[\\mathrm{Cu}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{4}\\right] \\mathrm{SO}_{4}$. It is blue because of the $\\left[\\mathrm{Cu}\\left[\\mathrm{H}_{2} \\mathrm{O}\\right)_{4}\\right]^{2+}$ ions present."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) When KF is added:\n$$\n\\left[\\mathrm{Cu}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{4}\\right]^{2+}+4 \\mathrm{~F}^{-} \\longrightarrow \\underset{\\text { (green) }}{\\left[\\mathrm{Cu}(\\mathrm{~F})_{4}\\right]^{2-}+4 \\mathrm{H}_{2} \\mathrm{O}}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) When KCl is added:\n$$\n\\begin{gathered}\n{\\left[\\mathrm{Cu}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{4}\\right]^{2+}+4 \\mathrm{Cl}^{-} \\longrightarrow\\left[\\mathrm{CuCl}_{4}\\right]^{2-}+4 \\mathrm{H}_{2} \\mathrm{O}} \\\\\n\\text { (bright green) }\n\\end{gathered}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "In both cases, the weak field ligand water is replaced by $\\mathrm{F}^{-}$ and $\\mathrm{Cl}^{-}$ ions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.14",
+      "kind": "exercise",
+      "number": "5.14",
+      "topic": "Copper-cyanide complex and sulphide test",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is the coordination entity formed when excess of aqueous KCN is added to an aqueous solution of copper sulphate? Why is it that no precipitate of copper sulphide is obtained when $\\mathrm{H}_{2} \\mathrm{~S}(\\mathrm{~g})$ is passed through this solution?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\mathrm{CuSO}_{4(a q)}+4 \\mathrm{KCN}_{(a q)} \\longrightarrow \\mathrm{K}_{2}\\left[\\mathrm{Cu}(\\mathrm{CN})_{4}\\right]_{(a q)}+\\mathrm{K}_{2} \\mathrm{SO}_{4(a q)} \\\\\n& \\text {.e., }\\left[\\mathrm{Cu}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{4}\\right]^{2+}+4 \\mathrm{CN}^{-} \\longrightarrow\\left[\\mathrm{Cu}(\\mathrm{CN})_{4}\\right]^{2-}+4 \\mathrm{H}_{2} \\mathrm{O}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "So the coordination entity formed is $\\mathrm{K}_{2}\\left[\\mathrm{Cu}(\\mathrm{CN})_{4}\\right] . \\mathrm{K}_{2}\\left[\\mathrm{Cu}(\\mathrm{CN})_{4}\\right]_{\\text {is a }}$, a very stable complex. It does not ionize to give $\\mathrm{Cu}^{2+}$ ions in water. So $\\mathrm{Cu}^{2+}$ ions are not precipitated when $\\mathrm{H}_{2} \\mathrm{~S}_{(g)}$ is passed through the solution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.15",
+      "kind": "exercise",
+      "number": "5.15",
+      "topic": "Valence bond theory of bonding",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Discuss the nature of bonding in the following coordination entities on the basis of valence bond theory:"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_176.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_177.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_178.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_179.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_180.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_181.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_182.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_183.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_184.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_185.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_186.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_187.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        },
+        {
+          "src": "images/fig_5_188.jpg",
+          "caption": "Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)"
+        }
+      ],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{4-}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{4-}$"
+                }
+              ]
+            },
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "In this coordination complex, iron is in the +II oxidation state.\n$\\mathrm{Fe}^{2+}$: Electronic configuration is $3 d^{6}$ Orbitals\nof $\\mathrm{Fe}^{2+}$ ion:"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\mathrm{CN}^{-}$ is a strong field ligand, so it causes the unpaired $3 d$ electrons to pair up."
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "There are six ligands around the central metal ion, so the most feasible hybridization is $d^{2} s p^{3} . d^{2} s p^{3}$. The hybridized orbitals of $\\mathrm{Fe}^{2+}$ are:"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "6 electron pairs from $\\mathrm{CN}^{-}$ ions occupy the six hybrid $d^{2} s p^{3}$ orbitals.\nThen,"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "So the geometry of the complex is octahedral, and the complex is diamagnetic (it has no unpaired electrons)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{FeF}_{6}\\right]^{3-}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{FeF}_{6}\\right]^{3-}$"
+                }
+              ]
+            },
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "In this complex, the oxidation state of Fe is +3.\nOrbitals of $\\mathrm{Fe}^{+3}$ ion:"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "There are $6 \\mathrm{~F}^{-}$ ions. So it can undergo either $d^{2} s p^{3}$ or $s p^{3} d^{2}$ hybridization. $\\mathrm{F}^{-}$ is a weak field ligand, so it does not cause pairing of the electrons in the $3 d$ orbital. So the most feasible hybridization is $s p^{3} d^{2}$.\nThe $s p^{3} d^{2}$ hybridized orbitals of Fe are:"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "So the geometry of the complex is octahedral."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$"
+                }
+              ]
+            },
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Cobalt is in the +3 oxidation state in this complex.\nOrbitals of $\\mathrm{Co}^{3+}$ ion:"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Oxalate is a weak field ligand, so it cannot cause the $3 d$ orbital electrons to pair up. Since there are 6 ligands, the hybridization must be either $s p^{3} d^{2}$ or $d^{2} s p^{3}$. $s p^{3} d^{2}$ hybridization of $\\mathrm{Co}^{3+:}$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The 6 electron pairs from the 3 oxalate ions (oxalate is a bidentate ligand) occupy these $s p^{3} d^{2}$ orbitals."
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "So the geometry of the complex is octahedral."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{CoF}_{6}\\right]^{3-}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{CoF}_{6}\\right]^{3-}$"
+                }
+              ]
+            },
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Cobalt is in the +3 oxidation state.\nOrbitals of $\\mathrm{Co}^{3+}$ ion:"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Fluoride ion is also a weak field ligand, so it cannot cause the $3 d$ electrons to pair up.\nAs a result, the $\\mathrm{Co}^{3+}$ ion undergoes $s p^{3} d^{2}$ hybridization. The $s p^{3} d^{2}$\nhybridized orbitals of $\\mathrm{Co}^{3+}$ ion are:"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "So the geometry of the complex is octahedral, and it is paramagnetic."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.16",
+      "kind": "exercise",
+      "number": "5.16",
+      "topic": "d orbital splitting diagram",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Draw figure to show the splitting of $d$ orbitals in an octahedral crystal field."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_189.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "In an octahedral field, the $d$ orbitals split so that $d_{x^{2}-y^{2}}$ and $d_{z^{2}}$ rise in energy and form the $e_{g}$ level, while $d_{x y}, d_{y z}$ and $d_{z x}$ fall in energy and form the $t_{2 g}$ level."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.17",
+      "kind": "exercise",
+      "number": "5.17",
+      "topic": "Spectrochemical series",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is spectrochemical series? Explain the difference between a weak field ligand and a strong field ligand."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "A spectrochemical series arranges common ligands in increasing order of their crystal-field splitting energy (CFSE) values. Ligands on the right-hand side of the series are strong field ligands. Ligands on the left-hand side are weak field ligands. Strong field ligands cause more splitting in the $d$ orbitals than weak field ligands."
+            }
+          ],
+          "label": "Spectrochemical series"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\mathrm{I}-<\\mathrm{Br}^{-}<\\mathrm{S}^{2-}<\\mathrm{SCN}^{-}<\\mathrm{Cl}^{-}<\\mathrm{N}_{3}<\\mathrm{F}^{-}<\\mathrm{OH}^{-}<\\mathrm{C}_{2} \\mathrm{O}_{4}^{2-} \\sim \\mathrm{H}_{2} \\mathrm{O}<\\mathrm{NCS}^{-} \\sim \\mathrm{H}^{-}<\\mathrm{CN}^{-}<\\mathrm{NH}_{3} \\\\\n& <\\text { en } \\sim \\mathrm{SO}_{3}^{2-}<\\mathrm{NO}_{2}^{-}<\\text {phen }<\\mathrm{CO}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "Ligand order"
+        }
+      ]
+    },
+    {
+      "id": "q_5.18",
+      "kind": "exercise",
+      "number": "5.18",
+      "topic": "Crystal field splitting energy",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is crystal field splitting energy? How does the magnitude of $\\Delta_{\\mathrm{o}}$ decide the actual configuration of $d$ orbitals in a coordination entity?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The degenerate $d$-orbitals (in a spherical field environment) split into two levels, $e_{g}$ and $t_{2 \\mathrm{~g}}$, when ligands are present. This splitting is called crystal-field splitting. The energy difference between the two levels ( $e_{\\mathrm{g}}$ and $t_{2 \\mathrm{~g}}$ ) is called the crystal-field splitting energy. It is denoted by $\\Delta_{\\mathrm{o}}$."
+            }
+          ],
+          "label": "Crystal field splitting energy"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "After the orbitals split, electrons start filling them. First, 1 electron each fills the three $t_{2 \\mathrm{~g}}$ orbitals. Then the fourth electron can go in two ways: it can enter the $e_{\\mathrm{g}}$ orbital, giving an $t_{2 \\mathrm{~g}}{ }^{3} e_{\\mathrm{g}}{ }^{1}$-like electronic configuration, or it can pair up in the $t_{2 g}$ orbitals, giving an $t_{2 g}{ }^{4} e_{g}{ }^{0}$-like electronic configuration. If the $\\Delta_{\\mathrm{o}}$ value of a ligand is less than the pairing energy ( P ), the electron enters the $e_{\\mathrm{g}}$ orbital. If the $\\Delta_{\\mathrm{o}}$ value of a ligand is more than the pairing energy (P), the electron enters the $t_{2 \\mathrm{~g}}$ orbital."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.19",
+      "kind": "exercise",
+      "number": "5.19",
+      "topic": "Paramagnetism vs diamagnetism explanation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\left[\\mathrm{Cr}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$ is paramagnetic while $\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-}$ is diamagnetic. Explain why?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_190.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_191.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_192.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_193.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Cr is in the +3 oxidation state, i.e., $d^{3}$ configuration. Also, $\\mathrm{NH}_{3}$ is a weak field ligand. It does not cause pairing of electrons in the $3 d$ orbital. $\\mathrm{Cr}^{3+}$\n\nSo it undergoes $d^{2} s p^{3}$ hybridization, and the electrons in the $3 d$ orbitals stay unpaired. Hence, it is paramagnetic.\n\nIn $\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-}$, Ni is in the +2 oxidation state, i.e., $d^{8}$ configuration.\n$\\mathrm{Ni}^{2+}$\n\n\n\n$\\mathrm{CN}^{-}$ is a strong field ligand. It causes pairing of the $3 d$ orbital electrons. Then $\\mathrm{Ni}^{2+}$ undergoes $d s p^{2}$ hybridization.\n\nAs there are no unpaired electrons, it is diamagnetic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.20",
+      "kind": "exercise",
+      "number": "5.20",
+      "topic": "Colour of nickel complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A solution of $\\left[\\mathrm{Ni}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$ is green but a solution of $\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-}$ is colourless. Explain."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "In $\\left[\\mathrm{Ni}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$, $\\mathrm{H}_{2} \\ddot{\\mathrm{O}}$ is a weak field ligand. So there are unpaired electrons in $\\mathrm{Ni}^{2+}$. In this complex, the $d$ electrons can be excited from the lower energy level to the higher energy level, i.e., $d-d$ transition is possible. Hence, $\\left[\\mathrm{Ni}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$ is coloured. In $\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-}$, all the electrons are paired because $\\mathrm{CN}^{-}$ is a strong field ligand. So $d-d$ transition is not possible in $\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-}$. Hence, it is colourless."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.21",
+      "kind": "exercise",
+      "number": "5.21",
+      "topic": "Colour difference in iron complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{4-}$ and $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$ are of different colours in dilute solutions. Why?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The colour of a coordination compound depends on the magnitude of the crystal-field splitting energy, $\\Delta$. This CFSE in turn depends on the nature of the ligand. In the case of $\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{4-}$ and $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$, the colour differs because the CFSE differs. Now, $\\mathrm{CN}^{-}$ is a strong field ligand with a higher CFSE value than water. This means the energy absorbed for the intra $d-d$ transition also differs. Hence, the transmitted colour also differs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.22",
+      "kind": "exercise",
+      "number": "5.22",
+      "topic": "Bonding in metal carbonyls",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Discuss the nature of bonding in metal carbonyls."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_194.jpg",
+          "caption": "Synergic bonding in metal carbonyls"
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The metal-carbon bonds in metal carbonyls have both $\\sigma$ and $\\pi$ character. A $\\sigma$ bond forms when the carbonyl carbon donates a lone pair of electrons to a vacant orbital on the metal. A $\\pi$ bond forms when a pair of electrons from the filled metal $d$ orbital is donated into the vacant anti-bonding $\\pi^{*}$ orbital (this is also called back bonding of the carbonyl group). The $\\sigma$ bond strengthens the $\\pi$ bond, and vice versa. This creates a synergic effect from the metal-ligand bonding, which strengthens the bond between CO and the metal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_5.23",
+      "kind": "exercise",
+      "number": "5.23",
+      "topic": "Oxidation state, d-orbital occupation, coordination number",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Give the oxidation state, $d$ orbital occupation and coordination number of the central metal ion in the following complexes:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Co}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Co}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$"
+                }
+              ]
+            },
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The central metal ion is Co.\nIts coordination number is 6 ."
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The oxidation state can be given as:\n\n$$\n\\begin{aligned}\n& x-6=-3 x \\\\\n& =+3\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The $d$ orbital occupation for $\\mathrm{Co}^{3+}$ is $t_{2 \\mathrm{~g}}{ }^{6} e_{g}{ }^{0 .}$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "cis- $\\left[\\mathrm{CrCl}_{2}(\\mathrm{en})_{2}\\right] \\mathrm{Cl}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "cis- $\\left[\\mathrm{Cr}(\\mathrm{en})_{2} \\mathrm{Cl}_{2}\\right] \\mathrm{Cl}$"
+                }
+              ]
+            },
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The central metal ion is Cr.\n\nThe coordination number is 6 ."
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The oxidation state can be given as:\n\n$$\n\\begin{aligned}\n& x+2(0)+2(-1)=+1 \\\\\n& x-2=+1 x=+3\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The $d$ orbital occupation for $\\mathrm{Cr}^{3+}$ is $t_{2 g}{ }^{3}$."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left(\\mathrm{NH}_{4}\\right)_{2}\\left[\\mathrm{CoF}_{4}\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left(\\mathrm{NH}_{4}\\right)_{2}\\left[\\mathrm{CoF}_{4}\\right]$"
+                }
+              ]
+            },
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The central metal ion is Co.\nThe coordination number is 4."
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The oxidation state can be given as:\n\n$$\n\\begin{aligned}\n& x-4=-2 x \\\\\n& =+2\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The $d$ orbital occupation for $\\mathrm{Co}^{2+}$ is $e_{g}{ }^{4} t_{2 \\mathrm{~g}}{ }^{3 .}$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Mn}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right] \\mathrm{SO}_{4}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Mn}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right] \\mathrm{SO}_{4}$"
+                }
+              ]
+            },
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The central metal ion is Mn.\nThe coordination number is 6 . The"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "oxidation state can be given as: $x+$\n\n$$\n0=+2 x=+2\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The $d$ orbital occupation for Mn is $t_{2 \\mathrm{~g}}{ }^{3} e g^{2}$."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.24",
+      "kind": "exercise",
+      "number": "5.24",
+      "topic": "IUPAC names and complex properties",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write down the IUPAC name for each of the following complexes and indicate the oxidation state, electronic configuration and coordination number. Also give stereochemistry and magnetic moment of the complex:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{2}\\right] \\cdot 3 \\mathrm{H}_{2} \\mathrm{O}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Potassium diaquadioxalatochromate (III) trihydrate.\n\nOxidation state of chromium $=3$\nElectronic configuration: $3 d^{3}: t_{2 \\mathrm{~g}}{ }^{3}$\nCoordination number = 6\nShape: octahedral Stereochemistry:\n\nTrans\n\nCis\n\nTrans is optically inactive\n\nCis is optically active\nMagnetic moment, $\\mu$"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n=\\sqrt{n(n+2)}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& =\\sqrt{3(3+2)} \\\\\n& =\\sqrt{15} \\\\\n& \\sim 4 \\mathrm{BM}\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}_{-}\\right] \\mathrm{Cl}_{2}$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{Cl}_{2}$\nIUPAC name: Pentaamminechloridocobalt(III) chloride\nOxidation state of $\\mathrm{Co}=+3$\nCoordination number $=6$ Shape:\noctahedral.\nElectronic configuration $d^{6}: t_{2 g}{ }^{6}$.\nStereochemistry:\n\n2 isomers\n\nMagnetic Moment $=0$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{CrCl}_{3}(\\mathrm{py})_{3}\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\mathrm{CrCl}_{3}(\\mathrm{py})_{3}$\nIUPAC name: Trichloridotripyridinechromium (III)\nOxidation state of chromium $=+3$\nElectronic configuration for $d^{3}=t_{2 \\mathrm{~g}}{ }^{3}$\nCoordination number $=6$ Shape:\noctahedral.\nStereochemistry:\n\nFacial isomer\n\nMeriodional isomer\nBoth isomers are optically active. Therefore, a total of 4 isomers exist."
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Magnetic moment, $\\mu=\\sqrt{n(n+2)}$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& =\\sqrt{3(3+2)} \\\\\n& =\\sqrt{15} \\\\\n& \\sim 4 \\mathrm{BM}\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Cs}\\left[\\mathrm{FeCl}_{4}\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\mathrm{Cs}\\left[\\mathrm{FeCl}{ }_{4}\\right]$\nIUPAC name: Caesium tetrachloroferrate (III)\nOxidation state of $\\mathrm{Fe}=+3$\nElectronic configuration of $d^{6}=e_{g}{ }^{2} t_{2 \\mathrm{~g}}{ }^{3}$\nCoordination number = 4\nShape: tetrahedral\nStereochemistry: optically inactive Magnetic\nmoment:"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& =\\sqrt{n(n+2)} \\\\\n& =\\sqrt{5(5+2)} \\\\\n& =\\sqrt{35} \\sim 6 \\mathrm{BM}\n\\end{aligned}\n$$"
+                }
+              ],
+              "label": "Magnetic moment"
+            }
+          ]
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{4}\\left[\\mathrm{Mn}(\\mathrm{CN})_{6}\\right]$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$\\mathrm{K}_{4}\\left[\\mathrm{Mn}(\\mathrm{CN})_{6}\\right]$\nPotassium hexacyanomanganate(II)\nOxidation state of manganese $=+2$\nElectronic configuration: $d^{5+}: t_{2 g}{ }^{5}$\nCoordination number $=6$ Shape:\noctahedral.\n\nStreochemistry: optically inactive"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Magnetic moment, $\\mu=\\sqrt{n(n+2)}$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& =\\sqrt{1(1+2)} \\\\\n& =\\sqrt{3} \\\\\n& =1.732 \\mathrm{BM}\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.25",
+      "kind": "exercise",
+      "number": "5.25",
+      "topic": "Violet colour of titanium complex (CFT)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Explain the violet colour of the complex $\\left[\\mathrm{Ti}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$ on the basis of crystal field theory."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.26",
+      "kind": "exercise",
+      "number": "5.26",
+      "topic": "Chelate effect",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is meant by the chelate effect? Give an example."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_195.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "When a ligand attaches to a metal ion in a way that forms a ring, the metal-ligand association becomes more stable. In other words, complexes with chelate rings are more stable than complexes without rings. This is called the chelate effect."
+            }
+          ],
+          "label": "Chelate effect"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For example:"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{gathered}\n\\mathrm{Ni}_{(a q)}^{2+}+6 \\mathrm{NH}_{3(a q)} \\longleftrightarrow\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]_{(a q)}^{2+} \\\\\n\\log \\beta=7.99 \\\\\n\\mathrm{Ni}_{(a q)}^{2+}+3 \\mathrm{en}_{(a q)} \\longleftrightarrow\\left[\\mathrm{Ni}(\\mathrm{en})_{3}\\right]_{(a q)}^{2+} \\\\\n\\log \\beta=18.1 \\\\\n\\text { (more stable) }\n\\end{gathered}\n$$"
+            }
+          ],
+          "label": "Example"
+        }
+      ]
+    },
+    {
+      "id": "q_5.27",
+      "kind": "exercise",
+      "number": "5.27",
+      "topic": "Applications of coordination compounds",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Discuss briefly giving an example in each case the role of coordination compounds in:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "biological systems"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Role of coordination compounds in biological systems:\n\nPhotosynthesis happens because of the chlorophyll pigment, which is a coordination compound of magnesium. In the human body too, several coordination compounds play important roles. For example, haemoglobin, the oxygen-carrier in blood, is a coordination compound of iron."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "medicinal chemistry and"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Role of coordination compounds in medicinal chemistry:\n\nCertain coordination compounds of platinum (for example, cis-platin) are used to inhibit the growth of tumours."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "analytical chemistry"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Role of coordination compounds in analytical chemistry:\n\nDuring salt analysis, many basic radicals are detected using the colour changes they show with different reagents. These colour changes happen because the basic radicals form coordination compounds, or complexes, with different ligands."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "extraction/metallurgy of metals."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Role of coordination compounds in extraction or metallurgy of metals:\n\nExtracting some metals from their ores involves forming complexes. For example, in aqueous solution, gold combines with cyanide ions to form $\\left[\\mathrm{Au}(\\mathrm{CN})_{2}\\right]$. Gold is later extracted from this solution by adding zinc metal."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_5.28",
+      "kind": "exercise",
+      "number": "5.28",
+      "topic": "Ions from cobalt ammine chloride in solution",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "How many ions are produced from the complex $\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6} \\mathrm{Cl}_{2}$ in solution?\n(i) 6\n(ii) 4\n(iii) 3\n(iv) 2"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The given complex can be written as $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right] \\mathrm{Cl}_{2}$.\n\nThus, $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{+}$ along with two $\\mathrm{Cl}^{-}$ ions are produced."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "(iii)"
+        }
+      ]
+    },
+    {
+      "id": "q_5.29",
+      "kind": "exercise",
+      "number": "5.29",
+      "topic": "Highest magnetic moment ion",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Amongst the following ions which one has the highest magnetic moment value?\n(i) $\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$\n(ii) $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$\n(iii) $\\left[\\mathrm{Zn}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "No. of unpaired electrons in $\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}=3$"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Then, $\\mu$\n$$\n=\\sqrt{n(n+2)}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& =\\sqrt{3(3+2)} \\\\\n& =\\sqrt{15} \\\\\n& \\sim 4 \\mathrm{BM}\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(ii)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "No. of unpaired electrons in $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}=4$"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Then, $\\mu$\n$$\n=\\sqrt{4(4+2)}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\n& =\\sqrt{24} \\\\\n& \\sim 5 \\mathrm{BM}\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(iii)",
+          "prompt": [],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "No. of unpaired electrons in $\\left[\\mathrm{Zn}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}=0$"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Hence, $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}$ has the highest magnetic moment value."
+        }
+      ]
+    },
+    {
+      "id": "q_5.30",
+      "kind": "exercise",
+      "number": "5.30",
+      "topic": "Most stable complex among options",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Amongst the following, the most stable complex is\n(i) $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$\n(ii) $\\left[\\mathrm{Fe}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$\n(iii) $\\left[\\mathrm{Fe}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$\n(iv) $\\left[\\mathrm{FeCl}_{6}\\right]^{3-}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The stability of a complex increases with chelation. So the most stable complex is $\\left[\\mathrm{Fe}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]^{3-}$.\n\nThen,"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_198.jpg",
+          "caption": "A single oxalate (bidentate) ligand binding motif"
+        },
+        {
+          "type": "figure",
+          "src": "images/fig_5_199.jpg",
+          "caption": "Structure of [Fe(C2O4)3]3-, the most stable complex, showing all three chelating oxalate ligands"
+        }
+      ]
+    },
+    {
+      "id": "q_5.31",
+      "kind": "exercise",
+      "number": "5.31",
+      "topic": "Wavelength order for nickel complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What will be the correct order for the wavelengths of absorption in the visible region for the following:\n$$\n\\left[\\mathrm{Ni}\\left(\\mathrm{NO}_{2}\\right)_{6}\\right]^{4-},\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{2+},\\left[\\mathrm{Ni}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+} ?\n$$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The central metal ion is the same in all three complexes. So the absorption in the visible region depends on the ligands."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The CFSE values of the ligands increase in the spectrochemical series in the following order:\n\n$$\n\\mathrm{H}_{2} \\mathrm{O}<\\mathrm{NH}_{3}<\\mathrm{NO}_{2}^{-}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "So the crystal-field splitting will be in the following order:\n\n$$\n\\Delta_{{ }_{\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)}}<\\Delta_{{ }_{\\left(\\mathrm{NH}_{3}\\right)}}<\\Delta_{{ }^{\\circ}}{ }_{\\left(\\mathrm{NO}_{2}{ }^{-}\\right)}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, the wavelengths of absorption in the visible region will be in the order:\n\n$$\n\\left[\\mathrm{Ni}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}>\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{2+}>\\left[\\mathrm{Ni}\\left(\\mathrm{NO}_{2}\\right)_{6}\\right]^{4-}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.1",
+      "kind": "additional_exercise",
+      "number": "5.1",
+      "topic": "Formulas from IUPAC names",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write the formulas for the following coordination compounds:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "tetraamminediaquacobalt(III) chloride"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "potassium tetracyanidonickelate(II)"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "tris(ethane-1,2-diamine) chromium(III) chloride"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "amminebromidochloridonitrito-N-platinate(II)"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "dichloridobis(ethane-1,2-diamine)platinum(IV) nitrate"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(vi)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "iron(III) hexacyanidoferrate(II)"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $\\quad\\left[\\mathrm{CO}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}\\left(\\mathrm{NH}_{3}\\right)_{4}\\right] \\mathrm{Cl}_{3}$\n(ii) $\\mathrm{K}_{2}\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]$\n(iii) $\\left[\\mathrm{Cr}(\\mathrm{en})_{3}\\right] \\mathrm{Cl}_{3}$\n(vi) $\\left[\\mathrm{Pt}(\\mathrm{NH})_{3} \\mathrm{BrCl}\\left(\\mathrm{NO}_{2}\\right)\\right]^{-}$\n(v) $\\quad\\left[\\mathrm{PtCl}_{2}(\\mathrm{en})_{2}\\right]\\left(\\mathrm{NO}_{3}\\right)_{2}$\n(vi) $\\quad \\mathrm{Fe}_{4}\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]_{3}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.2",
+      "kind": "additional_exercise",
+      "number": "5.2",
+      "topic": "IUPAC names of coordination compounds",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write the IUPAC names of the following coordination compounds:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right] \\mathrm{Cl}_{3}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{Cl}_{2}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{3}\\left[\\mathrm{Fe}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{3}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(v)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}_{2}\\left[\\mathrm{PdCl}_{4}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(vi)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)_{2} \\mathrm{Cl}\\left(\\mathrm{NH}_{2} \\mathrm{CH}_{3}\\right)\\right] \\mathrm{Cl}$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) Hexaamminecobalt(III) chloride\n(ii) Pentaamminechloridocobalt(III) chloride\n(iii) Potassium hexacyanoferrate(III)\n(iv) Potassium trioxalatoferrate(III)\n(v) Potassium tetrachloridopalladate(II)\n(vi) Diamminechlorido(methylamine)platinum(II) chloride"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.3",
+      "kind": "additional_exercise",
+      "number": "5.3",
+      "topic": "Isomerism types and structures",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Indicate the types of isomerism exhibited by the following complexes and draw the structures for these isomers:"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_127.jpg",
+          "caption": "Two optical isomers of [Co(en)3]Cl3"
+        }
+      ],
+      "parts": [
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{K}\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{2}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(ii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}(\\mathrm{en})_{3}\\right] \\mathrm{Cl}_{3}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iii)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right]\\left(\\mathrm{NO}_{3}\\right)_{2}$"
+            }
+          ],
+          "solution_blocks": []
+        },
+        {
+          "label": "(iv)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "$\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)\\left(\\mathrm{H}_{2} \\mathrm{O}\\right) \\mathrm{Cl}_{2}\\right]$"
+            }
+          ],
+          "solution_blocks": []
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. $\\mathrm{K}\\left[\\mathrm{Cr}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{2}\\left(\\mathrm{C}_{2} \\mathrm{O}_{4}\\right)_{2}\\right]$ can exist as both geometrical (cis- and trans-) isomers. The cis-isomer can also have optical isomers.\n\nGeometrical isomers\n\nTrans\n\nCis\n\nThe trans-isomer is optically inactive, but the cis-isomer is optically active.\n\n(ii) Two optical isomers exist for $\\left[\\mathrm{Co}(\\mathrm{en})_{3}\\right] \\mathrm{Cl}_{3}$.\n\nTwo optical isomers are possible for this structure.\n\n(iii) $\\left[\\mathrm{CO}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right]\\left(\\mathrm{NO}_{3}\\right)_{2}$\nA pair of optical isomers:\n\nIt can also show linkage isomerism."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\left[\\mathrm{CO}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right]\\left(\\mathrm{NO}_{3}\\right)_{2} \\text { and }\\left[\\mathrm{CO}\\left(\\mathrm{NH}_{3}\\right)_{5}(\\mathrm{ONO})\\right]\\left(\\mathrm{NO}_{3}\\right)_{2}\n$$"
+            }
+          ],
+          "label": "Linkage isomerism"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It can also show ionization isomerism."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{2}\\right)\\right]\\left(\\mathrm{NO}_{3}\\right)_{2} \\quad\\left[\\mathrm{CO}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{NO}_{3}\\right)\\right]\\left(\\mathrm{NO}_{3}\\right)\\left(\\mathrm{NO}_{2}\\right)\n$$"
+            }
+          ],
+          "label": "Ionization isomerism"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) $\\left[\\mathrm{Pt}\\left(\\mathrm{NH}_{3}\\right)\\left(\\mathrm{H}_{2} \\mathrm{O}\\right) \\mathrm{Cl}_{2}\\right]$ can exist as geometrical (cis-, trans-) isomers.\n\nCis\n\nTrans"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.4",
+      "kind": "additional_exercise",
+      "number": "5.4",
+      "topic": "Evidence for ionisation isomerism",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Give evidence that $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{SO}_{4}$ and $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{5}\\left(\\mathrm{SO}_{4}\\right)\\right] \\mathrm{Cl}$ are ionisation isomers."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "When ionization isomers are dissolved in water, they ionize to give different ions. These ions then react differently with different reagents to give different products."
+            }
+          ],
+          "label": "Principle"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\left[\\mathrm{CO}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{SO}_{4}+\\mathrm{Ba}^{2+} \\longrightarrow \\mathrm{BaSO}_{4} \\downarrow\n$$\n\nWhite precipitate\n\n$$\n\\left[\\mathrm{CO}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{Cl}\\right] \\mathrm{SO}_{4}+\\mathrm{Ag}^{+} \\longrightarrow \\text { No reaction }\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& {\\left[\\mathrm{CO}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{SO}_{4}\\right] \\mathrm{Cl}+\\mathrm{Ba}^{2+} \\longrightarrow \\text { No reaction }} \\\\\n& {\\left[\\mathrm{CO}\\left(\\mathrm{NH}_{3}\\right)_{5} \\mathrm{SO}_{4}\\right] \\mathrm{Cl}+\\mathrm{Ag}^{+} \\longrightarrow \\quad \\mathrm{AgCl} \\downarrow}\n\\end{aligned}\n$$\n\nWhite precipitate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.5",
+      "kind": "additional_exercise",
+      "number": "5.5",
+      "topic": "VBT and magnetism of Ni complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Explain on the basis of valence bond theory that $\\left[\\mathrm{Ni}(\\mathrm{CN})_{4}\\right]^{2-}$ ion with square planar structure is diamagnetic and the $\\left[\\mathrm{NiCl}_{4}\\right]^{2-}$ ion with tetrahedral geometry is paramagnetic."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_128.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_129.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_130.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_131.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_132.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_133.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_134.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Ni is in the +2 oxidation state, i.e., in $\\mathrm{d}^{8}$ configuration.\nd ${ }^{8}$ configuration:"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "There are $4 \\mathrm{CN}^{-}$ ions. So it can have either a tetrahedral or a square planar geometry. Since $\\mathrm{CN}^{-}$ ion is a strong field ligand, it pairs up the unpaired $3 d$ electrons."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It then undergoes $\\mathrm{dsp}^{2}$ hybridization. Since all electrons are paired, it is diamagnetic. In the case of $[\\mathrm{NiCl}_{4}]^{2-}, \\mathrm{Cl}^{-}$ ion, it is a weak field ligand. So it does not pair up the unpaired $3 d$ electrons. So it undergoes $s p^{3}$ hybridization."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since there are 2 unpaired electrons here, it is paramagnetic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.6",
+      "kind": "additional_exercise",
+      "number": "5.6",
+      "topic": "Paramagnetism of NiCl4 vs Ni(CO)4",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$5.6\\left[\\mathrm{NiCl}_{4}\\right]^{2-}$ is paramagnetic while $\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$ is diamagnetic though both are tetrahedral. Why?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_135.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_136.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Though both $\\left[\\mathrm{NiCl}_{4}\\right]^{2-}$ and $\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$ are tetrahedral, their magnetic behaviour is different. This is because the ligands are different. $\\mathrm{Cl}^{-}$ is a weak field ligand, so it does not pair up the unpaired $3 d$ electrons. So $\\left[\\mathrm{NiCl}_{4}\\right]^{2-}$ is paramagnetic."
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "In $\\mathrm{Ni}(\\mathrm{CO})_{4}$, Ni is in the zero oxidation state, i.e., it has a $3 d^{8} 4 s^{2 .}$ configuration."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "But CO is a strong field ligand. So it pairs up the unpaired $3 d$ electrons. It also shifts the 4 s electrons to the 3 d orbital, giving $s p^{3}$ hybridization. Since no unpaired electrons are left, $\\left[\\mathrm{Ni}(\\mathrm{CO})_{4}\\right]$ is diamagnetic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.7",
+      "kind": "additional_exercise",
+      "number": "5.7",
+      "topic": "Paramagnetism of aqua vs cyanido iron complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$5.7\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$ is strongly paramagnetic whereas $\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{3-}$ is weakly paramagnetic. Explain."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_137.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_138.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "In both $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$ and $\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{3-}$, Fe is in the +3 oxidation state, i.e., in $d^{5}$ configuration."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since $\\mathrm{CN}^{-}$ is a strong field ligand, it pairs up the unpaired electrons. So only one unpaired electron is left in the $d$-orbital.\n\n\nSo,"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\mu & =\\sqrt{n(n+2)} \\\\\n& =\\sqrt{1(1+2)} \\\\\n& =\\sqrt{3} \\\\\n& =1.732 \\mathrm{BM}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "But $\\mathrm{H}_{2} \\mathrm{O}$ is a weak field ligand. So it cannot pair up the electrons. This means the number of unpaired electrons is 5.\n\nSo,"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\mu & =\\sqrt{n(n+2)} \\\\\n& =\\sqrt{5(5+2)} \\\\\n& =\\sqrt{35} \\\\\n& \\simeq 6 \\mathrm{BM}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, $\\left[\\mathrm{Fe}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{3+}$ is strongly paramagnetic, while $\\left[\\mathrm{Fe}(\\mathrm{CN})_{6}\\right]^{3-}$ is weakly paramagnetic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.8",
+      "kind": "additional_exercise",
+      "number": "5.8",
+      "topic": "Inner vs outer orbital complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Explain $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$ is an inner orbital complex whereas $\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{2+}$ is an outer orbital complex."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_139.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_140.jpg",
+          "caption": "4s"
+        },
+        {
+          "src": "images/fig_5_141.jpg",
+          "caption": "$4 p$"
+        },
+        {
+          "src": "images/fig_5_142.jpg",
+          "caption": "$4 d$"
+        },
+        {
+          "src": "images/fig_5_143.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_144.jpg",
+          "caption": "$4 s$"
+        },
+        {
+          "src": "images/fig_5_145.jpg",
+          "caption": "$4 p$"
+        },
+        {
+          "src": "images/fig_5_146.jpg",
+          "caption": "$4 d$"
+        },
+        {
+          "src": "images/fig_5_147.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_148.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/fig_5_149.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "table",
+          "html": "| $\\left[\\mathrm{Co}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{3+}$ | $\\left[\\mathrm{Ni}\\left(\\mathrm{NH}_{3}\\right)_{6}\\right]^{2+}$ |\n| :--- | :--- |\n| Oxidation state of cobalt $=+3$ | Oxidation state of $\\mathrm{Ni}=+2$ |\n| Electronic configuration of cobalt $=d^{6}$ | Electronic configuration of nickel $=d^{8}$ |"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{NH}_{3}$ being a strong field ligand causes the\n\n\n\n\n\npairing. Therefore, Ni can undergo $d^{2} s p^{3}$\n\nIf $\\mathrm{NH}_{3}$ causes the pairing, then only one $3 d$ hybridization. orbital is empty. Thus, it cannot undergo\n\n\n$d^{2} s p^{3}$ hybridization. Therefore, it undergoes $s p^{3} d^{2}$ hybridization.\nHence, it is an inner orbital complex.\n\n\n\nHence, it forms an outer orbital complex."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.9",
+      "kind": "additional_exercise",
+      "number": "5.9",
+      "topic": "Unpaired electrons in square planar Pt(CN)4",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Predict the number of unpaired electrons in the square planar $\\left[\\mathrm{Pt}(\\mathrm{CN})_{4}\\right]^{2-}$ ion."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_5_150.jpg",
+          "caption": ""
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\left[\\mathrm{Pt}(\\mathrm{CN})_{4}\\right]^{2-}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "In this complex, Pt is in the +2 state. It has a square planar structure. So it undergoes $\\mathrm{dsp}^{2}$ hybridization. The electronic configuration of $\\operatorname{Pd}(+2)$ is $5 d^{8}$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{CN}^{-}$ is a strong field ligand, so it pairs up the unpaired electrons. So there are no unpaired electrons in $\\left[\\operatorname{Pt}(\\mathrm{CN})_{4}\\right]^{2-}$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "it_5.10",
+      "kind": "additional_exercise",
+      "number": "5.10",
+      "topic": "CFT and unpaired electrons in Mn complexes",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The hexaquo manganese(II) ion contains five unpaired electrons, while the hexacyanoion contains only one unpaired electron. Explain using Crystal Field Theory."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\left[\\mathrm{Mn}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+}\n$$\n\n$$\n\\left[\\mathrm{Mn}(\\mathrm{CN})_{6}\\right]^{4-}\n$$\n\nMn is in the +2 oxidation state. Mn is in the +2 oxidation state.\n\nThe electronic configuration is $\\mathrm{d}^{5}$. The electronic configuration is $\\mathrm{d}^{5}$. The crystal field is octahedral. Cyanide is The crystal field is octahedral. Water is a a strong field ligand. Therefore, the weak field ligand. Therefore, the arrangement of the electrons in arrangement of the electrons in\n\n$$\n\\left[\\mathrm{Mn}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)_{6}\\right]^{2+} \\quad \\text { is t2g3eg2. }\n$$\n\n$$\n\\left[\\mathrm{Mn}(\\mathrm{CN})_{6}\\right]^{4-} \\text { is }\n$$\n\nT2g5eg0.\n\nHence, hexaaquo manganese (II) ion has five unpaired electrons, while hexacyano ion has only one unpaired electron."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
