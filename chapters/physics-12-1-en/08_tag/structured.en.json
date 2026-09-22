@@ -1,0 +1,2099 @@
+{
+ "front": {
+  "title": "Electric Charges and Fields",
+  "chapter": "1"
+ },
+ "items": [
+  {
+   "id": "ex_1.1",
+   "kind": "example",
+   "number": "1.1",
+   "topic": "Rate of charge accumulation",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "If $10^{9}$ electrons move out of a body to another body every second, how much time is required to get a total charge of 1 C on the other body?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "In one second $10^{9}$ electrons move out of the body. Therefore the charge given out in one second is $1.6 \\times 10^{-19} \\times 10^{9} \\mathrm{C}=1.6 \\times 10^{-10} \\mathrm{C}$. The time required to accumulate a charge of 1 C can then be estimated to be $1 \\mathrm{C} \\div\\left(1.6 \\times 10^{-10} \\mathrm{C} / \\mathrm{s}\\right)=6.25 \\times 10^{9} \\mathrm{~s}=6.25 \\times 10^{9} \\div(365 \\times 24 \\times$ 3600) years $=198$ years. Thus to collect a charge of one coulomb, from a body from which $10^{9}$ electrons move out every second, we will need approximately 200 years. One coulomb is, therefore, a very large unit for many practical purposes.\n"
+      }
+     ]
+    },
+    {
+     "type": "note",
+     "note_type": "tip",
+     "label": "Electrons in a cubic centimetre",
+     "flow": [
+      {
+       "type": "text",
+       "text": "It is, however, also important to know what is roughly the number of electrons contained in a piece of one cubic centimetre of a material. A cubic piece of copper of side 1 cm contains about $2.5 \\times 10^{24}$ electrons."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "approximately 200 years"
+    }
+   ]
+  },
+  {
+   "id": "ex_1.2",
+   "kind": "example",
+   "number": "1.2",
+   "topic": "Charge in a cup of water",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "How much positive and negative charge is there in a cup of water?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Let us assume that the mass of one cup of water is 250 g . The molecular mass of water is 18 g . Thus, one mole ( $=6.02 \\times 10^{23}$ molecules) of water is 18 g . Therefore the number of molecules in one cup of water is $(250 / 18) \\times 6.02 \\times 10^{23}$.\n\nEach molecule of water contains two hydrogen atoms and one oxygen atom, i.e., 10 electrons and 10 protons. Hence the total positive and total negative charge has the same magnitude. It is equal to $(250 / 18) \\times 6.02 \\times 10^{23} \\times 10 \\times 1.6 \\times 10^{-19} \\mathrm{C}=1.34 \\times 10^{7} \\mathrm{C}$."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$1.34 \\times 10^{7} \\mathrm{C}$ (each of the total positive and total negative charge)"
+    }
+   ]
+  },
+  {
+   "id": "ex_1.3",
+   "kind": "example",
+   "number": "1.3",
+   "topic": "Coulomb force versus gravitational force",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Coulomb's law for electrostatic force between two point charges and Newton's law for gravitational force between two stationary point masses, both have inverse-square dependence on the distance between the charges and masses respectively."
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Compare the strength of these forces by determining the ratio of their magnitudes (i) for an electron and a proton and (ii) for two protons."
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "flow": [
+        {
+         "type": "text",
+         "text": "(i) The electric force between an electron and a proton at a distance $r$ apart is:\n$$\nF_{e}=-\\frac{1}{4 \\pi \\varepsilon_{0}} \\frac{e^{2}}{r^{2}}\n$$\nwhere the negative sign indicates that the force is attractive. The corresponding gravitational force (always attractive) is:\n$$\nF_{G}=-G \\frac{m_{p} m_{e}}{r^{2}}\n$$\nwhere $m_{p}$ and $m_{e}$ are the masses of a proton and an electron respectively.\n$$\n\\left|\\frac{F_{e}}{F_{G}}\\right|=\\frac{e^{2}}{4 \\pi \\varepsilon_{0} G m_{p} m_{e}}=2.4 \\times 10^{39}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "substitute",
+       "flow": [
+        {
+         "type": "text",
+         "text": "(ii) On similar lines, the ratio of the magnitudes of electric force to the gravitational force between two protons at a distance $r$ apart is:\n$$\n\\left|\\frac{F_{e}}{F_{G}}\\right|=\\frac{e^{2}}{4 \\pi \\varepsilon_{0} G m_{p} m_{p}}=1.3 \\times 10^{36}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Note that the signs of the two forces are different. For two protons, the gravitational force is attractive in nature and the Coulomb force is repulsive. The actual values of these forces between two protons inside a nucleus (distance between two protons is $\\sim 10^{-15} \\mathrm{~m}$ inside a nucleus) are $F_{\\mathrm{e}} \\sim 230 \\mathrm{~N}$, whereas, $F_{\\mathrm{G}} \\sim 1.9 \\times 10^{-34} \\mathrm{~N}$.\n\nThe (dimensionless) ratio of the two forces shows that electrical forces are enormously stronger than the gravitational forces."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\left|\\frac{F_{e}}{F_{G}}\\right|=2.4 \\times 10^{39}$ (electron-proton); $=1.3 \\times 10^{36}$ (two protons)"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Estimate the accelerations of electron and proton due to the electrical force of their mutual attraction when they are $1 \\AA\\left(=10^{-10} \\mathrm{~m}\\right)$ apart? ( $m_{p}=1.67 \\times 10^{-27} \\mathrm{~kg}, m_{e}=9.11 \\times 10^{-31} \\mathrm{~kg}$ )"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "The electric force F exerted by a proton on an electron is same in magnitude to the force exerted by an electron on a proton; however, the masses of an electron and a proton are different. Thus, the magnitude of force is\n$$\n\\begin{aligned}\n|\\mathbf{F}| & =\\frac{1}{4 \\pi \\varepsilon_{0}} \\frac{e^{2}}{r^{2}}=8.987 \\times 10^{9} \\mathrm{Nm}^{2} / \\mathrm{C}^{2} \\times\\left(1.6 \\times 10^{-19} \\mathrm{C}\\right)^{2} /\\left(10^{-10} \\mathrm{~m}\\right)^{2} \\\\\n& =2.3 \\times 10^{-8} \\mathrm{~N}\n\\end{aligned}\n$$\nUsing Newton's second law of motion, $F=m a$, the acceleration that an electron will undergo is\n$a=2.3 \\times 10^{-8} \\mathrm{~N} / 9.11 \\times 10^{-31} \\mathrm{~kg}=2.5 \\times 10^{22} \\mathrm{~m} / \\mathrm{s}^{2}$\n\nComparing this with the value of acceleration due to gravity, we can conclude that the effect of gravitational field is negligible on the motion of electron and it undergoes very large accelerations under the action of Coulomb force due to a proton.\n\nThe value for acceleration of the proton is\n$2.3 \\times 10^{-8} \\mathrm{~N} / 1.67 \\times 10^{-27} \\mathrm{~kg}=1.4 \\times 10^{19} \\mathrm{~m} / \\mathrm{s}^{2}$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$a_{e}=2.5 \\times 10^{22} \\mathrm{~m/s^2}$; $a_{p}=1.4 \\times 10^{19} \\mathrm{~m/s^2}$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "ex_1.4",
+   "kind": "example",
+   "number": "1.4",
+   "topic": "Charge redistribution between touching spheres",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "A charged metallic sphere A is suspended by a nylon thread. Another charged metallic sphere B held by an insulating handle is brought close to A such that the distance between their centres is 10 cm, as shown in Fig. 1.4(a). The resulting repulsion of A is noted (for example, by shining a beam of light and measuring the deflection of its shadow on a screen). Spheres A and B are touched by uncharged spheres C and D respectively, as shown in Fig. 1.4(b). C and D are then removed and B is brought closer to A to a distance of 5.0 cm between their centres, as shown in Fig. 1.4(c). What is the expected repulsion of A on the basis of Coulomb's law? Spheres A and C and spheres B and D have identical sizes. Ignore the sizes of A and B in comparison to the separation between their centres."
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_19.jpg",
+     "caption": "FIGURE 1.4"
+    }
+   ],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Let the original charge on sphere A be $q$ and that on B be $q^{\\prime}$. At a distance $r$ between their centres, the magnitude of the electrostatic force on each is given by\n$$\nF=\\frac{1}{4 \\pi \\varepsilon_{0}} \\frac{q q^{\\prime}}{r^{2}}\n$$\nneglecting the sizes of spheres A and B in comparison to $r$. When an identical but uncharged sphere C touches A, the charges redistribute on A and C and, by symmetry, each sphere carries a charge $q / 2$. Similarly, after D touches B, the redistributed charge on each is $q^{\\prime} / 2$. Now, if the separation between A and B is halved, the magnitude of the electrostatic force on each is\n$$\nF^{\\prime}=\\frac{1}{4 \\pi \\varepsilon_{0}} \\frac{(q / 2)\\left(q^{\\prime} / 2\\right)}{(r / 2)^{2}}=\\frac{1}{4 \\pi \\varepsilon_{0}} \\frac{\\left(q q^{\\prime}\\right)}{r^{2}}=F\n$$\nThus the electrostatic force on A, due to B, remains unaltered."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$F' = F$ (unaltered)"
+    }
+   ]
+  },
+  {
+   "id": "ex_1.5",
+   "kind": "example",
+   "number": "1.5",
+   "topic": "Net force at the centroid of a triangle",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Consider three charges $q_{1}, q_{2}, q_{3}$ each equal to $q$ at the vertices of an equilateral triangle of side $l$. What is the force on a charge $Q$ (with the same sign as $q$ ) placed at the centroid of the triangle, as shown in Fig. 1.6?"
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_21.jpg",
+     "caption": "FIGURE 1.6"
+    }
+   ],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "In the given equilateral triangle ABC of sides of length $l$, if we draw a perpendicular AD to the side BC, from A, $\\mathrm{AD}=\\mathrm{AC} \\cos 30^{\\circ}=(\\sqrt{3} / 2) l$ and the distance AO of the centroid O is $(2 / 3) \\mathrm{AD}=(1 / \\sqrt{3}) l$. By symmetry $\\mathrm{AO}=\\mathrm{BO}=\\mathrm{CO}$.\n\nThus,\nForce $\\mathbf{F}_{\\mathbf{1}}$ on $Q$ due to charge $q$ at $\\mathrm{A}=\\frac{3}{4 \\pi \\varepsilon_{0}} \\frac{Q q}{l^{2}}$ along AO\nForce $\\mathbf{F}_{2}$ on $Q$ due to charge $q$ at $\\mathrm{B}=\\frac{3}{4 \\pi \\varepsilon_{0}} \\frac{Q q}{l^{2}}$ along BO\nForce $\\mathbf{F}_{\\mathbf{3}}$ on $Q$ due to charge $q$ at $\\mathrm{C}=\\frac{3}{4 \\pi \\varepsilon_{0}} \\frac{Q q}{l^{2}}$ along CO\n\nThe resultant of forces $\\mathbf{F}_{2}$ and $\\mathbf{F}_{3}$ is $\\frac{3}{4 \\pi \\varepsilon_{0}} \\frac{Q q}{l^{2}}$ along $O A$, by the parallelogram law. Therefore, the total force on $Q=\\frac{3}{4 \\pi \\varepsilon_{0}} \\frac{Q q}{l^{2}}(\\hat{\\mathbf{r}}-\\hat{\\mathbf{r}})$\n= 0, where $\\hat{\\mathbf{r}}$ is the unit vector along OA.\n\nIt is clear also by symmetry that the three forces will sum to zero. Suppose that the resultant force was non-zero but in some direction. Consider what would happen if the system was rotated through 60° about O."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "zero"
+    }
+   ]
+  },
+  {
+   "id": "ex_1.6",
+   "kind": "example",
+   "number": "1.6",
+   "topic": "Forces on q, q, -q at a triangle's vertices",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Consider the charges $q, q$, and $-q$ placed at the vertices of an equilateral triangle, as shown in Fig. 1.7. What is the force on each charge?"
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_22.jpg",
+     "caption": "FIGURE 1.7"
+    }
+   ],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "The forces acting on charge $q$ at A due to charges $q$ at B and $-q$ at C are $\\mathbf{F}_{12}$ along BA and $\\mathbf{F}_{13}$ along AC respectively, as shown in Fig. 1.7. By the parallelogram law, the total force $\\mathbf{F}_{1}$ on the charge $q$ at A is given by\n$\\mathbf{F}_{1}=F \\hat{\\mathbf{r}}_{1}$ where $\\hat{\\mathbf{r}}_{1}$ is a unit vector along BC.\n\nThe force of attraction or repulsion for each pair of charges has the same magnitude $F=\\frac{q^{2}}{4 \\pi \\varepsilon_{0} l^{2}}$\n\nThe total force $\\mathbf{F}_{2}$ on charge $q$ at B is thus $\\mathbf{F}_{2}=F \\hat{\\mathbf{r}}_{2}$, where $\\hat{\\mathbf{r}}_{2}$ is a unit vector along AC.\n\nSimilarly the total force on charge $-q$ at C is $\\mathbf{F}_{3}=\\sqrt{3} F \\hat{\\mathbf{n}}$, where $\\hat{\\mathbf{n}}$ is the unit vector along the direction bisecting the $\\angle \\mathrm{BCA}$.\n\nIt is interesting to see that the sum of the forces on the three charges is zero, i.e.,\n$$\n\\mathbf{F}_{1}+\\mathbf{F}_{2}+\\mathbf{F}_{3}=0\n$$\nThe result is not at all surprising. It follows straight from the fact that Coulomb's law is consistent with Newton's third law. The proof is left to you as an exercise."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$\\mathbf{F}_{1}+\\mathbf{F}_{2}+\\mathbf{F}_{3}=0$"
+    }
+   ]
+  },
+  {
+   "id": "ex_1.7",
+   "kind": "example",
+   "number": "1.7",
+   "topic": "Fall time of an electron and a proton in a field",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "An electron falls through a distance of 1.5 cm in a uniform electric field of magnitude $2.0 \\times 10^{4} \\mathrm{~N} \\mathrm{C}^{-1}$ [Fig. 1.10(a)]. The direction of the field is reversed keeping its magnitude unchanged and a proton falls through the same distance [Fig. 1.10(b)]. Compute the time of fall in each case. Contrast the situation with that of 'free fall under gravity'."
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_24.jpg",
+     "caption": "FIGURE 1.10"
+    }
+   ],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "In Fig. 1.10(a) the field is upward, so the negatively charged electron experiences a downward force of magnitude $e E$ where $E$ is the magnitude of the electric field. The acceleration of the electron is\n$$\na_{e}=e E / m_{e}\n$$\nwhere $m_{e}$ is the mass of the electron.\n\nStarting from rest, the time required by the electron to fall through a distance $h$ is given by $t_{e}=\\sqrt{\\frac{2 h}{a_{e}}}=\\sqrt{\\frac{2 h m_{e}}{e E}}$\nFor $e=1.6 \\times 10^{-19} \\mathrm{C}, m_{\\mathrm{e}}=9.11 \\times 10^{-31} \\mathrm{~kg}$,\n$$\n\\begin{aligned}\n& E=2.0 \\times 10^{4} \\mathrm{~N} \\mathrm{C}^{-1}, h=1.5 \\times 10^{-2} \\mathrm{~m} \\\\\n& t_{\\mathrm{e}}=2.9 \\times 10^{-9} \\mathrm{~s}\n\\end{aligned}\n$$\n\nIn Fig. 1.10 (b), the field is downward, and the positively charged proton experiences a downward force of magnitude $e E$. The acceleration of the proton is\n$$\na_{p}=e E / m_{p}\n$$\nwhere $m_{p}$ is the mass of the proton; $m_{p}=1.67 \\times 10^{-27} \\mathrm{~kg}$. The time of fall for the proton is\n$$\nt_{p}=\\sqrt{\\frac{2 h}{a_{p}}}=\\sqrt{\\frac{2 h m_{p}}{e E}}=1.3 \\times 10^{-7} \\mathrm{~s}\n$$\n\nThus, the heavier particle (proton) takes a greater time to fall through the same distance. This is in basic contrast to the situation of 'free fall under gravity' where the time of fall is independent of the mass of the body. Note that in this example we have ignored the acceleration due to gravity in calculating the time of fall. To see if this is justified, let us calculate the acceleration of the proton in the given electric field:\n$$\n\\begin{aligned}\na_{p} & =\\frac{e E}{m_{p}} \\\\\n& =\\frac{\\left(1.6 \\times 10^{-19} \\mathrm{C}\\right) \\times\\left(2.0 \\times 10^{4} \\mathrm{~N} \\mathrm{C}^{-1}\\right)}{1.67 \\times 10^{-27} \\mathrm{~kg}} \\\\\n& =1.9 \\times 10^{12} \\mathrm{~m} \\mathrm{~s}^{-2}\n\\end{aligned}\n$$\nwhich is enormous compared to the value of $g\\left(9.8 \\mathrm{~m} \\mathrm{~s}^{-2}\\right)$, the acceleration due to gravity. The acceleration of the electron is even greater. Thus, the effect of acceleration due to gravity can be ignored in this example."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$t_{e}=2.9 \\times 10^{-9} \\mathrm{~s}$; $t_{p}=1.3 \\times 10^{-7} \\mathrm{~s}$"
+    }
+   ]
+  },
+  {
+   "id": "ex_1.8",
+   "kind": "example",
+   "number": "1.8",
+   "topic": "Electric field at three points near a dipole",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Two point charges $q_{1}$ and $q_{2}$, of magnitude $+10^{-8} \\mathrm{C}$ and $-10^{-8} \\mathrm{C}$, respectively, are placed 0.1 m apart. Calculate the electric fields at points A, B and C shown in Fig. 1.11."
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_25.jpg",
+     "caption": "FIGURE 1.11"
+    }
+   ],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "The electric field vector $\\mathbf{E}_{1 \\mathrm{~A}}$ at A due to the positive charge $q_{1}$ points towards the right and has a magnitude\n$$\nE_{1 \\mathrm{~A}}=\\frac{\\left(9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2}\\right) \\times\\left(10^{-8} \\mathrm{C}\\right)}{(0.05 \\mathrm{~m})^{2}}=3.6 \\times 10^{4} \\mathrm{~N} \\mathrm{C}^{-1}\n$$\n\nThe electric field vector $\\mathbf{E}_{2 \\mathrm{~A}}$ at A due to the negative charge $q_{2}$ points towards the right and has the same magnitude. Hence the magnitude of the total electric field $E_{\\mathrm{A}}$ at A is\n$$\nE_{\\mathrm{A}}=E_{1 \\mathrm{~A}}+E_{2 \\mathrm{~A}}=7.2 \\times 10^{4} \\mathrm{~N} \\mathrm{C}^{-1}\n$$\n$\\mathbf{E}_{\\mathrm{A}}$ is directed toward the right.\n\nThe electric field vector $\\mathbf{E}_{1 \\mathrm{~B}}$ at B due to the positive charge $q_{1}$ points towards the left and has a magnitude\n$$\nE_{1 \\mathrm{~B}}=\\frac{\\left(9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2}\\right) \\times\\left(10^{-8} \\mathrm{C}\\right)}{(0.05 \\mathrm{~m})^{2}}=3.6 \\times 10^{4} \\mathrm{~N} \\mathrm{C}^{-1}\n$$\n\nThe electric field vector $\\mathbf{E}_{2 \\mathrm{~B}}$ at B due to the negative charge $q_{2}$ points towards the right and has a magnitude\n$$\nE_{2 \\mathrm{~B}}=\\frac{\\left(9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2}\\right) \\times\\left(10^{-8} \\mathrm{C}\\right)}{(0.15 \\mathrm{~m})^{2}}=4 \\times 10^{3} \\mathrm{~N} \\mathrm{C}^{-1}\n$$\n\nThe magnitude of the total electric field at B is $E_{\\mathrm{B}}=E_{1 \\mathrm{~B}}-E_{2 \\mathrm{~B}}=3.2 \\times 10^{4} \\mathrm{~N} \\mathrm{C}^{-1}$\n$\\mathbf{E}_{\\mathrm{B}}$ is directed towards the left.\n\nThe magnitude of each electric field vector at point C, due to charge $q_{1}$ and $q_{2}$ is\n$$\nE_{1 \\mathrm{C}}=E_{2 \\mathrm{C}}=\\frac{\\left(9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2}\\right) \\times\\left(10^{-8} \\mathrm{C}\\right)}{(0.10 \\mathrm{~m})^{2}}=9 \\times 10^{3} \\mathrm{~N} \\mathrm{C}^{-1}\n$$\n\nThe directions in which these two vectors point are indicated in Fig. 1.11. The resultant of these two vectors is\n$$\nE_{C}=E_{1 c} \\cos \\frac{\\pi}{3}+E_{2 c} \\cos \\frac{\\pi}{3}=9 \\times 10^{3} \\mathrm{~N} \\mathrm{C}^{-1}\n$$\n$\\mathbf{E}_{\\mathrm{C}}$ points towards the right."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$E_{A}=7.2 \\times 10^{4} \\mathrm{~N} \\mathrm{C}^{-1}$; $E_{B}=3.2 \\times 10^{4} \\mathrm{~N} \\mathrm{C}^{-1}$; $E_{C}=9 \\times 10^{3} \\mathrm{~N} \\mathrm{C}^{-1}$"
+    }
+   ]
+  },
+  {
+   "id": "ex_1.9",
+   "kind": "example",
+   "number": "1.9",
+   "topic": "Dipole field on the axis and equatorial plane",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Two charges $\\pm 10 \\mu \\mathrm{C}$ are placed 5.0 mm apart. Determine the electric field at (a) a point P on the axis of the dipole 15 cm away from its centre O on the side of the positive charge, as shown in Fig. 1.18(a), and (b) a point $\\mathrm{Q}, 15 \\mathrm{~cm}$ away from O on a line passing through O and normal to the axis of the dipole, as shown in Fig. 1.18(b)."
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_31.jpg",
+     "caption": "FIGURE 1.18"
+    }
+   ],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Determine the electric field at a point P on the axis of the dipole 15 cm away from its centre O on the side of the positive charge, as shown in Fig. 1.18(a)."
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Field at P due to charge $+10 \\mu \\mathrm{C}$\n$$\n\\begin{aligned}\n& =\\frac{10^{-5} \\mathrm{C}}{4 \\pi\\left(8.854 \\times 10^{-12} \\mathrm{C}^{2} \\mathrm{~N}^{-1} \\mathrm{~m}^{-2}\\right)} \\times \\frac{1}{(15-0.25)^{2} \\times 10^{-4} \\mathrm{~m}^{2}} \\\\\n& =4.13 \\times 10^{6} \\mathrm{~N} \\mathrm{C}^{-1} \\text { along } \\mathrm{BP}\n\\end{aligned}\n$$\n\nField at P due to charge $-10 \\mu \\mathrm{C}$\n$$\n\\begin{aligned}\n& =\\frac{10^{-5} \\mathrm{C}}{4 \\pi\\left(8.854 \\times 10^{-12} \\mathrm{C}^{2} \\mathrm{~N}^{-1} \\mathrm{~m}^{-2}\\right)} \\times \\frac{1}{(15+0.25)^{2} \\times 10^{-4} \\mathrm{~m}^{2}} \\\\\n& =3.86 \\times 10^{6} \\mathrm{~N} \\mathrm{C}^{-1} \\text { along PA }\n\\end{aligned}\n$$\n\nThe resultant electric field at P due to the two charges at A and B is $=2.7 \\times 10^{5} \\mathrm{~N} \\mathrm{C}^{-1}$ along BP.\n\nIn this example, the ratio OP/OB is quite large $(=60)$. Thus, we can expect to get approximately the same result as above by directly using the formula for electric field at a far-away point on the axis of a dipole. For a dipole consisting of charges $\\pm q, 2 a$ distance apart, the electric field at a distance $r$ from the centre on the axis of the dipole has a magnitude"
+        }
+       ]
+      },
+      {
+       "type": "formula",
+       "stage": "key_formula",
+       "label": "Key formula",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\nE=\\frac{2 p}{4 \\pi \\varepsilon_{0} r^{3}} \\quad(r / a \\gg 1)\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "where $p=2 a q$ is the magnitude of the dipole moment.\n\nThe direction of electric field on the dipole axis is always along the direction of the dipole moment vector (i.e., from $-q$ to $q$ ). Here, $p=10^{-5} \\mathrm{C} \\times 5 \\times 10^{-3} \\mathrm{~m}=5 \\times 10^{-8} \\mathrm{C} \\mathrm{m}$\nTherefore,\n$$\nE=\\frac{2 \\times 5 \\times 10^{-8} \\mathrm{Cm}}{4 \\pi\\left(8.854 \\times 10^{-12} \\mathrm{C}^{2} \\mathrm{~N}^{-1} \\mathrm{~m}^{-2}\\right)} \\times \\frac{1}{(15)^{3} \\times 10^{-6} \\mathrm{~m}^{3}}=2.6 \\times 10^{5} \\mathrm{~N} \\mathrm{C}^{-1}\n$$\nalong the dipole moment direction AB, which is close to the result obtained earlier."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$E=2.6 \\times 10^{5} \\mathrm{~N} \\mathrm{C}^{-1}$ along AB"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Determine the electric field at a point Q, 15 cm away from O on a line passing through O and normal to the axis of the dipole, as shown in Fig. 1.18(b)."
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Field at Q due to charge $+10 \\mu \\mathrm{C}$ at B\n$$\n\\begin{aligned}\n& =\\frac{10^{-5} \\mathrm{C}}{4 \\pi\\left(8.854 \\times 10^{-12} \\mathrm{C}^{2} \\mathrm{~N}^{-1} \\mathrm{~m}^{-2}\\right)} \\times \\frac{1}{\\left[15^{2}+(0.25)^{2}\\right] \\times 10^{-4} \\mathrm{~m}^{2}} \\\\\n& =3.99 \\times 10^{6} \\mathrm{~N} \\mathrm{C}^{-1} \\text { along BQ }\n\\end{aligned}\n$$\n\nField at Q due to charge $-10 \\mu \\mathrm{C}$ at A\n$$\n\\begin{aligned}\n& =\\frac{10^{-5} \\mathrm{C}}{4 \\pi\\left(8.854 \\times 10^{-12} \\mathrm{C}^{2} \\mathrm{~N}^{-1} \\mathrm{~m}^{-2}\\right)} \\times \\frac{1}{\\left[15^{2}+(0.25)^{2}\\right] \\times 10^{-4} \\mathrm{~m}^{2}} \\\\\n& =3.99 \\times 10^{6} \\mathrm{~N} \\mathrm{C}^{-1} \\text { along } \\mathrm{QA}\n\\end{aligned}\n$$\n\nClearly, the components of these two forces with equal magnitudes cancel along the direction OQ but add up along the direction parallel to BA. Therefore, the resultant electric field at Q due to the two charges at A and B is\nAs in (a), we can expect to get approximately the same result by directly using the formula for dipole field at a point on the normal to the axis of the dipole:\n$$\n\\begin{aligned}\n& =2 \\times \\frac{0.25}{\\sqrt{15^{2}+(0.25)^{2}}} \\times 3.99 \\times 10^{6} \\mathrm{~N} \\mathrm{C}^{-1} \\text { along } \\mathrm{BA} \\\\\n& =1.33 \\times 10^{5} \\mathrm{~N} \\mathrm{C}^{-1} \\text { along BA. }\n\\end{aligned}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "formula",
+       "stage": "key_formula",
+       "label": "Key formula",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& E=\\frac{p}{4 \\pi \\varepsilon_{0} r^{3}} \\quad(r / a \\gg 1) \\\\\n= & \\frac{5 \\times 10^{-8} \\mathrm{Cm}}{4 \\pi\\left(8.854 \\times 10^{-12} \\mathrm{C}^{2} \\mathrm{~N}^{-1} \\mathrm{~m}^{-2}\\right)} \\times \\frac{1}{(15)^{3} \\times 10^{-6} \\mathrm{~m}^{3}} \\\\\n= & 1.33 \\times 10^{5} \\mathrm{~N} \\mathrm{C}^{-1}\n\\end{aligned}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "The direction of electric field in this case is opposite to the direction of the dipole moment vector. Again, the result agrees with that obtained before."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$E=1.33 \\times 10^{5} \\mathrm{~N} \\mathrm{C}^{-1}$ along BA"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "ex_1.10",
+   "kind": "example",
+   "number": "1.10",
+   "topic": "Flux and enclosed charge in a cube",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "The electric field components in Fig. 1.24 are $E_{x}=\\alpha x^{1 / 2}, E_{y}=E_{z}=0$, in which $\\alpha=800 \\mathrm{~N} / \\mathrm{C} \\mathrm{m}^{1 / 2}$. Calculate (a) the flux through the cube, and (b) the charge within the cube. Assume that $a=0.1 \\mathrm{~m}$."
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_37.jpg",
+     "caption": "FIGURE 1.24"
+    }
+   ],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Calculate the flux through the cube."
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Since the electric field has only an $x$ component, for faces perpendicular to $x$ direction, the angle between $\\mathbf{E}$ and $\\Delta \\mathbf{S}$ is $\\pm \\pi / 2$. Therefore, the flux $\\phi=\\mathbf{E} . \\Delta \\mathbf{S}$ is separately zero for each face of the cube except the two shaded ones. Now the magnitude of the electric field at the left face is\n$E_{L}=\\alpha x^{1 / 2}=\\alpha a^{1 / 2}$\n( $x=a$ at the left face).\nThe magnitude of electric field at the right face is\n$E_{R}=\\alpha x^{1 / 2}=\\alpha(2 a)^{1 / 2}$\n( $x=2 a$ at the right face).\nThe corresponding fluxes are\n$$\n\\begin{aligned}\n\\phi_{L} & =\\mathbf{E}_{L} \\cdot \\Delta \\mathbf{S}=\\Delta S \\mathbf{E}_{L} \\cdot \\hat{\\mathbf{n}}_{L}=E_{L} \\Delta S \\cos \\theta=-E_{L} \\Delta S, \\text { since } \\theta=180^{\\circ} \\\\\n& =-E_{L} a^{2} \\\\\n\\phi_{R} & =\\mathbf{E}_{R} \\cdot \\Delta \\mathbf{S}=E_{R} \\Delta S \\cos \\theta=E_{R} \\Delta S, \\text { since } \\theta=0^{\\circ} \\\\\n& =E_{R} a^{2}\n\\end{aligned}\n$$\nNet flux through the cube\n$$\n\\begin{aligned}\n& =\\phi_{R}+\\phi_{L}=E_{R} a^{2}-E_{L} a^{2}=a^{2}\\left(E_{R}-E_{L}\\right)=\\alpha a^{2}\\left[(2 a)^{1 / 2}-a^{1 / 2}\\right] \\\\\n& =\\alpha a^{5 / 2}(\\sqrt{2}-1) \\\\\n& =800(0.1)^{5 / 2}(\\sqrt{2}-1) \\\\\n& =1.05 \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}\n\\end{aligned}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$1.05 \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}$"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Calculate the charge within the cube."
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "We can use Gauss's law to find the total charge $q$ inside the cube. We have $\\phi=q / \\varepsilon_{0}$ or $q=\\phi \\varepsilon_{0}$. Therefore,\n$$\nq=1.05 \\times 8.854 \\times 10^{-12} \\mathrm{C}=9.27 \\times 10^{-12} \\mathrm{C} .\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$q=9.27 \\times 10^{-12} \\mathrm{C}$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "ex_1.11",
+   "kind": "example",
+   "number": "1.11",
+   "topic": "Flux through a cylinder in a uniform field",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "An electric field is uniform, and in the positive $x$ direction for positive $x$, and uniform with the same magnitude but in the negative $x$ direction for negative $x$. It is given that $\\mathbf{E}=200 \\hat{\\mathbf{i}} \\mathrm{~N} / \\mathrm{C}$ for $x>0$ and $\\mathbf{E}=-200 \\hat{\\mathbf{i}} \\mathrm{~N} / \\mathrm{C}$ for $x<0$. A right circular cylinder of length 20 cm and radius 5 cm has its centre at the origin and its axis along the $x$-axis so that one face is at $x=+10 \\mathrm{~cm}$ and the other is at $x=-10 \\mathrm{~cm}$ (Fig. 1.25). (a) What is the net outward flux through each flat face? (b) What is the flux through the side of the cylinder? (c) What is the net outward flux through the cylinder? (d) What is the net charge inside the cylinder?"
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_38.jpg",
+     "caption": "FIGURE 1.25"
+    }
+   ],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the net outward flux through each flat face?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "We can see from the figure that on the left face $\\mathbf{E}$ and $\\Delta \\mathbf{S}$ are parallel. Therefore, the outward flux is\n$$\n\\begin{aligned}\n& \\phi_{L}=\\mathbf{E} \\cdot \\Delta \\mathbf{S}=-200 \\hat{\\mathbf{i}} \\cdot \\Delta \\mathbf{S} \\\\\n& =+200 \\Delta S, \\text { since } \\hat{\\mathbf{i}} \\cdot \\Delta \\mathbf{S}=-\\Delta \\mathrm{S} \\\\\n& =+200 \\times \\pi(0.05)^{2}=+1.57 \\mathrm{Nm}^{2} \\mathrm{C}^{-1}\n\\end{aligned}\n$$\nOn the right face, $\\mathbf{E}$ and $\\Delta \\mathbf{S}$ are parallel and therefore $\\phi_{R}=\\mathbf{E} \\cdot \\Delta \\mathbf{S}=+1.57 \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}$."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\phi_{L}=\\phi_{R}=+1.57 \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}$"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the flux through the side of the cylinder?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "For any point on the side of the cylinder $\\mathbf{E}$ is perpendicular to $\\Delta \\mathbf{S}$ and hence $\\mathbf{E} \\cdot \\Delta \\mathbf{S}=0$. Therefore, the flux out of the side of the cylinder is zero."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "zero"
+      }
+     ]
+    },
+    {
+     "label": "c",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the net outward flux through the cylinder?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Net outward flux through the cylinder $\\phi=1.57+1.57+0=3.14 \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$\\phi=3.14 \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}$"
+      }
+     ]
+    },
+    {
+     "label": "d",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the net charge inside the cylinder?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "The net charge within the cylinder can be found by using Gauss's law which gives\n$$\n\\begin{aligned}\nq & =\\varepsilon_{0} \\phi \\\\\n& =3.14 \\times 8.854 \\times 10^{-12} \\mathrm{C} \\\\\n& =2.78 \\times 10^{-11} \\mathrm{C}\n\\end{aligned}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$q=2.78 \\times 10^{-11} \\mathrm{C}$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "ex_1.12",
+   "kind": "example",
+   "number": "1.12",
+   "topic": "Field in an early model of the atom",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "An early model for an atom considered it to have a positively charged point nucleus of charge $Z e$, surrounded by a uniform density of negative charge up to a radius $R$. The atom as a whole is neutral. For this model, what is the electric field at a distance $r$ from the nucleus?"
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_41.jpg",
+     "caption": "FIGURE 1.29"
+    }
+   ],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "flow": [
+      {
+       "type": "text",
+       "text": "The charge distribution for this model of the atom is as shown in Fig. 1.29. The total negative charge in the uniform spherical charge distribution of radius $R$ must be $-Z e$, since the atom (nucleus of charge $Z e+$ negative charge) is neutral. This immediately gives us the negative charge density $\\rho$, since we must have\n$$\n\\frac{4 \\pi R^{3}}{3} \\rho=0-Z e\n$$\nor $\\quad \\rho=-\\frac{3 Z e}{4 \\pi R^{3}}$\n\nTo find the electric field $\\mathbf{E}(\\mathbf{r})$ at a point P which is a distance $r$ away from the nucleus, we use Gauss's law. Because of the spherical symmetry of the charge distribution, the magnitude of the electric field $\\mathbf{E}(\\mathbf{r})$ depends only on the radial distance, no matter what the direction of r. Its direction is along (or opposite to) the radius vector r from the origin to the point P . The obvious Gaussian surface is a spherical surface centred at the nucleus. We consider two situations, namely, $r<R$ and $r>R$.\n\n(i) $r<R$ : The electric flux $\\phi$ enclosed by the spherical surface is\n$$\n\\phi=E(r) \\times 4 \\pi r^{2}\n$$\nwhere $E(r)$ is the magnitude of the electric field at $r$. This is because the field at any point on the spherical Gaussian surface has the same direction as the normal to the surface there, and has the same magnitude at all points on the surface.\n\nThe charge $q$ enclosed by the Gaussian surface is the positive nuclear charge and the negative charge within the sphere of radius $r$,\n$$\n\\text { i.e., } q=Z e+\\frac{4 \\pi r^{3}}{3} \\rho\n$$\nSubstituting for the charge density $\\rho$ obtained earlier, we have\n$$\nq=Z e-Z e \\frac{r^{3}}{R^{3}}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "Key formula",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Gauss's law then gives,\n$$\nE(r)=\\frac{Z e}{4 \\pi \\varepsilon_{0}}\\left(\\frac{1}{r^{2}}-\\frac{r}{R^{3}}\\right) ; \\quad r<R\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "The electric field is directed radially outward.\n\n(ii) $r>R$ : In this case, the total charge enclosed by the Gaussian spherical surface is zero since the atom is neutral. Thus, from Gauss's law,\n$$\nE(r) \\times 4 \\pi r^{2}=0 \\text { or } E(r)=0 ; \\quad r>R\n$$\nAt $r=R$, both cases give the same result: $E=0$."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "for $r<R$, $E(r)=\\frac{Ze}{4\\pi\\varepsilon_0}\\left(\\frac{1}{r^2}-\\frac{r}{R^3}\\right)$ (radially outward); for $r>R$, $E(r)=0$; at $r=R$ also $E=0$"
+    }
+   ]
+  },
+  {
+   "id": "q_1.1",
+   "kind": "exercise",
+   "number": "1.1",
+   "topic": "Force between two charged spheres",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "What is the force between two small charged spheres having charges of $2 \\times 10^{-7} \\mathrm{C}$ and $3 \\times 10^{-7} \\mathrm{C}$ placed 30 cm apart in air?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Repulsive force of magnitude $6 \\times 10^{-3} \\mathrm{~N}$\nCharge on the first sphere, $q_{1}=2 \\times 10^{-7} \\mathrm{C}$\nCharge on the second sphere, $q_{2}=3 \\times 10^{-7} \\mathrm{C}$\nDistance between the spheres, $r=30 \\mathrm{~cm}=0.3 \\mathrm{~m}$"
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "Key formula",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Electrostatic force between the spheres is given by the relation,\n$$\nF=\\frac{q_{1} q_{2}}{4 \\pi \\epsilon_{0} r^{2}}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Where, $\\epsilon_{0}=$ Permittivity of free space\n$$\n\\begin{aligned}\n& \\frac{1}{4 \\pi \\epsilon_{0}}=9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2} \\\\\n& F=\\frac{9 \\times 10^{9} \\times 2 \\times 10^{-7} \\times 3 \\times 10^{-7}}{(0.3)^{2}}=6 \\times 10^{-3} \\mathrm{~N}\n\\end{aligned}\n$$\nHence, force between the two small charged spheres is $6 \\times 10^{-3} \\mathrm{~N}$. The charges are of same nature. Hence, force between them will be repulsive."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$6 \\times 10^{-3} \\mathrm{~N}$ (repulsive)"
+    }
+   ]
+  },
+  {
+   "id": "q_1.2",
+   "kind": "exercise",
+   "number": "1.2",
+   "topic": "Distance and force between charged spheres",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "The electrostatic force on a small sphere of charge $0.4 \\mu \\mathrm{C}$ due to another small sphere of charge $-0.8 \\mu \\mathrm{C}$ in air is 0.2 N ."
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the distance between the two spheres?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Electrostatic force on the first sphere, $F=0.2 \\mathrm{~N}$\nCharge on this sphere, $q_{1}=0.4 \\mu \\mathrm{C}=0.4 \\times 10^{-6} \\mathrm{C}$\nCharge on the second sphere, $q_{2}=-0.8 \\mu \\mathrm{C}=-0.8 \\times 10^{-6} \\mathrm{C}$"
+        }
+       ]
+      },
+      {
+       "type": "formula",
+       "stage": "key_formula",
+       "label": "Key formula",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Electrostatic force between the spheres is given by the relation,\n$$\nF=\\frac{q_{1} q_{2}}{4 \\pi \\epsilon_{0} r^{2}}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Where, $\\epsilon_{0}=$ Permittivity of free space\nAnd, $\\frac{1}{4 \\pi \\epsilon_{0}}=9 \\times 10^{9} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-2}$\n$$\n\\begin{aligned}\nr^{2} & =\\frac{q_{1} q_{2}}{4 \\pi \\epsilon_{0} F} \\\\\n& =\\frac{0.4 \\times 10^{-6} \\times 8 \\times 10^{-6} \\times 9 \\times 10^{9}}{0.2} \\\\\n& =144 \\times 10^{-4} \\\\\nr & =\\sqrt{144 \\times 10^{-4}}=0.12 \\mathrm{~m}\n\\end{aligned}\n$$\nThe distance between the two spheres is 0.12 m."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "0.12 m"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the force on the second sphere due to the first?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Both the spheres attract each other with the same force. Therefore, the force on the second sphere due to the first is 0.2 N."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "0.2 N (attractive)"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_1.3",
+   "kind": "exercise",
+   "number": "1.3",
+   "topic": "Dimensionless ratio ke^2/Gm_e m_p",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Check that the ratio $k e^{2} / G m_{e} m_{p}$ is dimensionless. Look up a Table of Physical Constants and determine the value of this ratio. What does the ratio signify?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "The given ratio is $\\frac{k e^{2}}{\\mathrm{G} m_{\\mathrm{e}} m_{\\mathrm{p}}}$.\nWhere,\nG = Gravitational constant\nIts unit is $\\mathrm{N} \\mathrm{m}^{2} \\mathrm{~kg}^{-2}$.\n$m_{\\mathrm{e}}$ and $m_{\\mathrm{p}}=$ Masses of electron and proton.\nTheir unit is kg .\n$e=$ Electric charge.\nIts unit is C.\n$$\n\\begin{aligned}\nk & =A \\text { constant } \\\\\n& =\\frac{1}{4 \\pi \\epsilon_{0}}\n\\end{aligned}\n$$\n$\\epsilon_{0}=$ Permittivity of free space\nIts unit is $\\mathrm{N} \\mathrm{m}^{2} \\mathrm{C}^{-2}$.\nTherefore, unit of the given ratio $\\frac{k e^{2}}{\\mathrm{G} m_{\\mathrm{e}} m_{\\mathrm{p}}}=\\frac{\\left[\\mathrm{Nm}^{2} \\mathrm{C}^{-2}\\right]\\left[\\mathrm{C}^{-2}\\right]}{\\left[\\mathrm{Nm}^{2} \\mathrm{~kg}^{-2}\\right][\\mathrm{kg}][\\mathrm{kg}]}$\n$$\n=\\mathrm{M}^{0} \\mathrm{~L}^{0} \\mathrm{~T}^{0}\n$$\nHence, the given ratio is dimensionless.\n$$\n\\begin{aligned}\n& e=1.6 \\times 10^{-19} \\mathrm{C} \\\\\n& \\mathrm{G}=6.67 \\times 10^{-11} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{~kg}^{-2} \\\\\n& m_{\\mathrm{e}}=9.1 \\times 10^{-31} \\mathrm{~kg} \\\\\n& m_{\\mathrm{p}}=1.66 \\times 10^{-27} \\mathrm{~kg}\n\\end{aligned}\n$$\nHence, the numerical value of the given ratio is\n$$\n\\frac{k e^{2}}{\\mathrm{G} m_{e} m_{p}}=\\frac{9 \\times 10^{9} \\times\\left(1.6 \\times 10^{-19}\\right)^{2}}{6.67 \\times 10^{-11} \\times 9.1 \\times 10^{-3} \\times 1.67 \\times 10^{-22}} \\approx 2.3 \\times 10^{39}\n$$\nThis is the ratio of electric force to the gravitational force between a proton and an electron, keeping distance between them constant."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "dimensionless; $\\approx 2.3 \\times 10^{39}$ (ratio of electric to gravitational force between a proton and an electron)"
+    }
+   ]
+  },
+  {
+   "id": "q_1.4",
+   "kind": "exercise",
+   "number": "1.4",
+   "topic": "Quantisation of electric charge",
+   "prompt": [],
+   "figures": [],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Explain the meaning of the statement 'electric charge of a body is quantised'."
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Electric charge of a body is quantized. This means that only integral $(1,2, \\ldots ., n)$ number of electrons can be transferred from one body to the other. Charges are not transferred in fraction. Hence, a body possesses total charge only in integral multiples of electric charge."
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Why can one ignore quantisation of electric charge when dealing with macroscopic i.e., large scale charges?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "In macroscopic or large scale charges, the charges used are huge as compared to the magnitude of electric charge. Hence, quantization of electric charge is of no use on macroscopic scale. Therefore, it is ignored and it is considered that electric charge is continuous."
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_1.5",
+   "kind": "exercise",
+   "number": "1.5",
+   "topic": "Conservation of charge on rubbing",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "When a glass rod is rubbed with a silk cloth, charges appear on both. A similar phenomenon is observed with many other pairs of bodies. Explain how this observation is consistent with the law of conservation of charge."
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Rubbing produces charges of equal magnitude but of opposite nature on the two bodies because charges are created in pairs. This phenomenon of charging is called charging by friction. The net charge on the system of two rubbed bodies is zero. This is because equal amount of opposite charges annihilate each other. When a glass rod is rubbed with a silk cloth, opposite natured charges appear on both the bodies. This phenomenon is in consistence with the law of conservation of energy. A similar phenomenon is observed with many other pairs of bodies."
+      }
+     ]
+    }
+   ],
+   "answer": []
+  },
+  {
+   "id": "q_1.6",
+   "kind": "exercise",
+   "number": "1.6",
+   "topic": "Net force at the centre of a charged square",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Four point charges $q_{\\mathrm{A}}=2 \\mu \\mathrm{C}, q_{\\mathrm{B}}=-5 \\mu \\mathrm{C}, q_{\\mathrm{C}}=2 \\mu \\mathrm{C}$, and $q_{\\mathrm{D}}=-5 \\mu \\mathrm{C}$ are located at the corners of a square ABCD of side 10 cm. What is the force on a charge of $1 \\mu \\mathrm{C}$ placed at the centre of the square?"
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_0.jpg",
+     "caption": ""
+    }
+   ],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "The given figure shows a square of side 10 cm with four charges placed at its corners. O is the centre of the square.\nWhere,\n(Sides) $\\mathrm{AB}=\\mathrm{BC}=\\mathrm{CD}=\\mathrm{AD}=10 \\mathrm{~cm}$\n(Diagonals) $\\mathrm{AC}=\\mathrm{BD}=10 \\sqrt{2} \\mathrm{~cm}$\n$\\mathrm{AO}=\\mathrm{OC}=\\mathrm{DO}=\\mathrm{OB}=5 \\sqrt{2} \\mathrm{~cm}$\nA charge of amount $1 \\mu \\mathrm{C}$ is placed at point O .\nThe repulsion between A and O is equal and opposite to the repulsion between C and O, so they cancel. Likewise, the attraction between B and O is equal and opposite to the attraction between D and O, so they also cancel. So the net force from the four corner charges on $1 \\mu \\mathrm{C}$ charge at centre O is zero."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "zero"
+    }
+   ]
+  },
+  {
+   "id": "q_1.7",
+   "kind": "exercise",
+   "number": "1.7",
+   "topic": "Continuity and non-crossing of field lines",
+   "prompt": [],
+   "figures": [],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "An electrostatic field line is a continuous curve. That is, a field line cannot have sudden breaks. Why not?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "An electrostatic field line is a continuous curve because a charge experiences a continuous force when traced in an electrostatic field. The field line cannot have sudden breaks because the charge moves continuously and does not jump from one point to the other."
+        }
+       ]
+      }
+     ],
+     "answer": []
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Explain why two field lines never cross each other at any point?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "If two field lines cross each other at a point, then electric field intensity will show two directions at that point. This is not possible. Hence, two field lines never cross each other."
+        }
+       ]
+      }
+     ],
+     "answer": []
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_1.8",
+   "kind": "exercise",
+   "number": "1.8",
+   "topic": "Electric field at the midpoint of two charges",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Two point charges $q_{\\mathrm{A}}=3 \\mu \\mathrm{C}$ and $q_{\\mathrm{B}}=-3 \\mu \\mathrm{C}$ are located 20 cm apart in vacuum."
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_1.jpg",
+     "caption": ""
+    }
+   ],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the electric field at the midpoint O of the line AB joining the two charges?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "The situation is represented in the given figure. O is the mid-point of line AB.\nDistance between the two charges, $\\mathrm{AB}=20 \\mathrm{~cm}$\n$$\n\\therefore \\mathrm{AO}=\\mathrm{OB}=10 \\mathrm{~cm}\n$$\nNet electric field at point $\\mathrm{O}=E$\nElectric field at point O caused by $+3 \\mu \\mathrm{C}$ charge,\n$$\nE_{1}=\\frac{3 \\times 10^{-6}}{4 \\pi \\epsilon_{0}(\\mathrm{AO})^{2}}=\\frac{3 \\times 10^{-6}}{4 \\pi \\epsilon_{0}\\left(10 \\times 10^{-2}\\right)^{2}} \\mathrm{~N} / \\mathrm{C} \\text { along } \\mathrm{OB}\n$$\nWhere,\n$$\n\\begin{aligned}\n& \\epsilon_{0}=\\text { Permittivity of free space } \\\\\n& \\frac{1}{4 \\pi \\epsilon_{0}}=9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2}\n\\end{aligned}\n$$\nMagnitude of electric field at point O caused by $-3 \\mu \\mathrm{C}$ charge,\n$$\n\\begin{aligned}\n& E_{2}=\\left|\\frac{-3 \\times 10^{-6}}{4 \\pi \\epsilon_{0}(\\mathrm{OB})^{2}}\\right|=\\frac{3 \\times 10^{-6}}{4 \\pi \\epsilon_{0}\\left(10 \\times 10^{-2}\\right)^{2}} \\mathrm{~N} / \\mathrm{C} \\quad \\text { along } \\mathrm{OB} \\\\\n& \\therefore E=E_{1}+E_{2} \\\\\n& =2 \\times\\left[\\left(9 \\times 10^{9}\\right) \\times \\frac{3 \\times 10^{-6}}{\\left(10 \\times 10^{-2}\\right)^{2}}\\right] \\quad \\text { [Since the values of } E_{1} \\text { and } E_{2} \\text { are same, the value is multiplied with } 2] \\\\\n& =5.4 \\times 10^{6} \\mathrm{~N} / \\mathrm{C} \\text { along } \\mathrm{OB}\n\\end{aligned}\n$$\nTherefore, the electric field at mid-point O is $5.4 \\times 10^{6} \\mathrm{~N} \\mathrm{C}^{-1}$ along OB."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$5.4 \\times 10^{6} \\mathrm{~N} \\mathrm{C}^{-1}$ along OB"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "If a negative test charge of magnitude $1.5 \\times 10^{-9} \\mathrm{C}$ is placed at this point, what is the force experienced by the test charge?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "A test charge of amount $1.5 \\times 10^{-9} \\mathrm{C}$ is placed at mid-point O.\n$$\nq=1.5 \\times 10^{-9} \\mathrm{C}\n$$\nForce experienced by the test charge $=F$\n$$\n\\begin{aligned}\n& \\therefore F=q E \\\\\n& =1.5 \\times 10^{-9} \\times 5.4 \\times 10^{6} \\\\\n& =8.1 \\times 10^{-3} \\mathrm{~N}\n\\end{aligned}\n$$\nThe force is directed along line OA. This is because the negative test charge is repelled by the charge placed at point B but attracted towards point A.\nTherefore, the force experienced by the test charge is $8.1 \\times 10^{-3} \\mathrm{~N}$ along OA."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$8.1 \\times 10^{-3} \\mathrm{~N}$ along OA"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_1.9",
+   "kind": "exercise",
+   "number": "1.9",
+   "topic": "Total charge and dipole moment of a system",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "A system has two charges $q_{\\mathrm{A}}=2.5 \\times 10^{-7} \\mathrm{C}$ and $q_{\\mathrm{B}}=-2.5 \\times 10^{-7} \\mathrm{C}$ located at points A: $(0,0,-15 \\mathrm{~cm})$ and B: ( $0,0,+15 \\mathrm{~cm}$ ), respectively. What are the total charge and electric dipole moment of the system?"
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_2.jpg",
+     "caption": ""
+    }
+   ],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Both the charges can be located in a coordinate frame of reference as shown in the given figure.\nAt A, amount of charge, $q_{\\mathrm{A}}=2.5 \\times 10^{-7} \\mathrm{C}$\nAt B, amount of charge, $q_{\\mathrm{B}}=-2.5 \\times 10^{-7} \\mathrm{C}$\nTotal charge of the system,\n$$\n\\begin{aligned}\n& q=q_{\\mathrm{A}}+q_{\\mathrm{B}} \\\\\n& =2.5 \\times 10^{7} \\mathrm{C}-2.5 \\times 10^{-7} \\mathrm{C} \\\\\n& =0\n\\end{aligned}\n$$\nDistance between two charges at points A and B ,\n$$\nd=15+15=30 \\mathrm{~cm}=0.3 \\mathrm{~m}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "Key formula",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Electric dipole moment of the system is given by,\n$$\n\\begin{aligned}\n& p=q_{\\mathrm{A}} \\times d=q_{\\mathrm{B}} \\times d \\\\\n& =2.5 \\times 10^{-7} \\times 0.3 \\\\\n& =7.5 \\times 10^{-8} \\mathrm{C} \\mathrm{~m} \\text { along positive } z \\text {-axis }\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Therefore, the electric dipole moment of the system is $7.5 \\times 10^{-8} \\mathrm{C} \\mathrm{m}$ along positive $z$-axis."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "total charge $=0$; dipole moment $=7.5 \\times 10^{-8} \\mathrm{C\\,m}$ along positive $z$-axis"
+    }
+   ]
+  },
+  {
+   "id": "q_1.10",
+   "kind": "exercise",
+   "number": "1.10",
+   "topic": "Torque on a dipole in a uniform field",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "An electric dipole with dipole moment $4 \\times 10^{-9} \\mathrm{C} \\mathrm{m}$ is aligned at 30° with the direction of a uniform electric field of magnitude $5 \\times 10^{4} \\mathrm{NC}^{-1}$. Calculate the magnitude of the torque acting on the dipole."
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Electric dipole moment, $p=4 \\times 10^{-9} \\mathrm{C} \\mathrm{m}$\nAngle made by $p$ with a uniform electric field, $\\theta=30^{\\circ}$\nElectric field, $E=5 \\times 10^{4} \\mathrm{~N} \\mathrm{C}^{-1}$"
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "Key formula",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Torque acting on the dipole is given by the relation,\n$$\n\\begin{aligned}\n\\tau & =p E \\sin \\theta \\\\\n& =4 \\times 10^{-9} \\times 5 \\times 10^{4} \\times \\sin 30 \\\\\n& =20 \\times 10^{-5} \\times \\frac{1}{2} \\\\\n& =10^{-4} \\mathrm{Nm}\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Therefore, the magnitude of the torque acting on the dipole is $10^{-4} \\mathrm{~N} \\mathrm{~m}$."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$10^{-4} \\mathrm{~N\\,m}$"
+    }
+   ]
+  },
+  {
+   "id": "q_1.11",
+   "kind": "exercise",
+   "number": "1.11",
+   "topic": "Electrons and mass transferred by friction",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "A polythene piece rubbed with wool is found to have a negative charge of $3 \\times 10^{-7} \\mathrm{C}$."
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Estimate the number of electrons transferred (from which to which?)"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "When polythene is rubbed against wool, a number of electrons get transferred from wool to polythene. Hence, wool becomes positively charged and polythene becomes negatively charged.\nAmount of charge on the polythene piece, $q=-3 \\times 10^{-7} \\mathrm{C}$\nAmount of charge on an electron, $e=-1.6 \\times 10^{-19} \\mathrm{C}$\nNumber of electrons transferred from wool to polythene $=n$\n$n$ can be calculated using the relation,\n$$\n\\begin{aligned}\n& q=n e \\\\\n& n=\\frac{q}{e} \\\\\n& =\\frac{-3 \\times 10^{-7}}{-1.6 \\times 10^{-19}} \\\\\n& =1.87 \\times 10^{12}\n\\end{aligned}\n$$\nTherefore, the number of electrons transferred from wool to polythene is $1.87 \\times 10^{12}$."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$1.87 \\times 10^{12}$ electrons, transferred from wool to polythene"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Is there a transfer of mass from wool to polythene?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Yes.\nThere is a transfer of mass taking place. This is because an electron has mass,\n$$\nm_{e}=9.1 \\times 10^{-31} \\mathrm{~kg}\n$$\nTotal mass transferred to polythene from wool,\n$$\n\\begin{aligned}\n& m=m_{e} \\times n \\\\\n& =9.1 \\times 10^{-31} \\times 1.85 \\times 10^{12} \\\\\n& =1.706 \\times 10^{-18} \\mathrm{~kg}\n\\end{aligned}\n$$\nHence, a negligible amount of mass is transferred from wool to polythene."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "yes; $1.706 \\times 10^{-18} \\mathrm{~kg}$ (negligible)"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_1.12",
+   "kind": "exercise",
+   "number": "1.12",
+   "topic": "Repulsion between charged copper spheres",
+   "prompt": [],
+   "figures": [],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Two insulated charged copper spheres A and B have their centres separated by a distance of 50 cm. What is the mutual force of electrostatic repulsion if the charge on each is $6.5 \\times 10^{-7} \\mathrm{C}$ ? The radii of A and B are negligible compared to the distance of separation."
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Charge on sphere A, $q_{\\mathrm{A}}=$ Charge on sphere B, $q_{\\mathrm{B}}=6.5 \\times 10^{-7} \\mathrm{C}$\nDistance between the spheres, $r=50 \\mathrm{~cm}=0.5 \\mathrm{~m}$"
+        }
+       ]
+      },
+      {
+       "type": "formula",
+       "stage": "key_formula",
+       "label": "Key formula",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Force of repulsion between the two spheres,\n$$\nF=\\frac{q_{\\mathrm{A}} q_{\\mathrm{B}}}{4 \\pi \\epsilon_{0} r^{2}}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Where,\n$$\n\\begin{aligned}\n& \\epsilon_{0}=\\text { Free space permittivity } \\\\\n& \\frac{1}{4 \\pi \\epsilon_{0}}=9 \\times 10^{9} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-2} \\\\\n& \\quad F=\\frac{9 \\times 10^{9} \\times\\left(6.5 \\times 10^{-7}\\right)^{2}}{(0.5)^{2}} \\\\\n& \\therefore \\\\\n& =1.52 \\times 10^{-2} \\mathrm{~N}\n\\end{aligned}\n$$\nTherefore, the force between the two spheres is $1.52 \\times 10^{-2} \\mathrm{~N}$."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$1.52 \\times 10^{-2} \\mathrm{~N}$"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the force of repulsion if each sphere is charged double the above amount, and the distance between them is halved?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "After doubling the charge, charge on sphere A, $q_{\\mathrm{A}}=$ Charge on sphere B, $q_{\\mathrm{B}}=2 \\times 6.5 \\times$ $10^{-7} \\mathrm{C}=1.3 \\times 10^{-6} \\mathrm{C}$\nThe distance between the spheres is halved.\n$$\n\\therefore \\quad r=\\frac{0.5}{2}=0.25 \\mathrm{~m}\n$$\nForce of repulsion between the two spheres,\n$$\n\\begin{aligned}\n& F=\\frac{q_{\\mathrm{A}} q_{\\mathrm{B}}}{4 \\pi \\epsilon_{0} r^{2}} \\\\\n& =\\frac{9 \\times 10^{9} \\times 1.3 \\times 10^{-6} \\times 1.3 \\times 10^{-6}}{(0.25)^{2}} \\\\\n& =16 \\times 1.52 \\times 10^{-2} \\\\\n& =0.243 \\mathrm{~N}\n\\end{aligned}\n$$\nTherefore, the force between the two spheres is 0.243 N ."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "0.243 N"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_1.13",
+   "kind": "exercise",
+   "number": "1.13",
+   "topic": "Charge-to-mass ratio from particle tracks",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Figure 1.30 shows tracks of three charged particles in a uniform electrostatic field. Give the signs of the three charges. Which particle has the highest charge to mass ratio?"
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_42.jpg",
+     "caption": "FIGURE 1.30"
+    },
+    {
+     "src": "images/fig_physics-12-1_3.jpg",
+     "caption": ""
+    }
+   ],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Opposite charges attract each other and same charges repel each other. It can be observed that particles 1 and 2 both move towards the positively charged plate and repel away from the negatively charged plate. Hence, these two particles are negatively charged. It can also be observed that particle 3 moves towards the negatively charged plate and repels away from the positively charged plate. Hence, particle 3 is positively charged.\nThe charge to mass ratio (emf) is directly proportional to the displacement or amount of deflection for a given velocity. Since the deflection of particle 3 is the maximum, it has the highest charge to mass ratio."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "particles 1 and 2 are negative, particle 3 is positive; particle 3 has the highest charge-to-mass ratio"
+    }
+   ]
+  },
+  {
+   "id": "q_1.14",
+   "kind": "exercise",
+   "number": "1.14",
+   "topic": "Flux through a square in a uniform field",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Consider a uniform electric field $\\mathbf{E}=3 \\times 10^{3} \\hat{\\mathbf{i}} \\mathrm{~N} / \\mathrm{C}$."
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the flux of this field through a square of 10 cm on a side whose plane is parallel to the $y z$ plane?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Electric field intensity, $\\vec{E}=3 \\times 10^{3} \\hat{\\mathrm{i}} \\mathrm{N} / \\mathrm{C}$\nMagnitude of electric field intensity, $|\\vec{E}|=3 \\times 10^{3} \\mathrm{~N} / \\mathrm{C}$\nSide of the square, $s=10 \\mathrm{~cm}=0.1 \\mathrm{~m}$\nArea of the square, $A=\\mathrm{s}^{2}=0.01 \\mathrm{~m}^{2}$\nThe plane of the square is parallel to the $y-z$ plane. Hence, angle between the unit vector normal to the plane and electric field, $\\theta=0^{\\circ}$"
+        }
+       ]
+      },
+      {
+       "type": "formula",
+       "stage": "key_formula",
+       "label": "Key formula",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Flux $(\\Phi)$ through the plane is given by the relation,\n$$\n\\begin{aligned}\n& \\Phi=|\\vec{E}| A \\cos \\theta \\\\\n& =3 \\times 10^{3} \\times 0.01 \\times \\cos 0^{\\circ} \\\\\n& =30 \\mathrm{~N} \\mathrm{~m}^{2} / \\mathrm{C}\n\\end{aligned}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$30 \\mathrm{~N} \\mathrm{~m}^{2} / \\mathrm{C}$"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the flux through the same square if the normal to its plane makes a 60° angle with the $x$-axis?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Plane makes an angle of $60^{\\circ}$ with the $x$-axis. Hence, $\\theta=60^{\\circ}$\n$$\n\\begin{aligned}\n& \\text { Flux, } \\Phi=|\\vec{E}| A \\cos \\theta \\\\\n& =3 \\times 10^{3} \\times 0.01 \\times \\cos 60^{\\circ}\n\\end{aligned}\n$$\n$$\n=30 \\times \\frac{1}{2}=15 \\mathrm{~N} \\mathrm{~m}^{2} / \\mathrm{C}\n$$"
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$15 \\mathrm{~N} \\mathrm{~m}^{2} / \\mathrm{C}$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_1.15",
+   "kind": "exercise",
+   "number": "1.15",
+   "topic": "Net flux through a cube in a uniform field",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "What is the net flux of the uniform electric field of Exercise 1.14 through a cube of side 20 cm oriented so that its faces are parallel to the coordinate planes?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "All the faces of a cube are parallel to the coordinate axes. Therefore, the number of field lines entering the cube is equal to the number of field lines piercing out of the cube. As a result, net flux through the cube is zero."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "zero"
+    }
+   ]
+  },
+  {
+   "id": "q_1.16",
+   "kind": "exercise",
+   "number": "1.16",
+   "topic": "Net charge from flux through a black box",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Careful measurement of the electric field at the surface of a black box indicates that the net outward flux through the surface of the box is $8.0 \\times 10^{3} \\mathrm{Nm}^{2} / \\mathrm{C}$."
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the net charge inside the box?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "given",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Net outward flux through the surface of the box, $\\Phi=8.0 \\times 10^{3} \\mathrm{~N} \\mathrm{~m}^{2} / \\mathrm{C}$"
+        }
+       ]
+      },
+      {
+       "type": "formula",
+       "stage": "key_formula",
+       "label": "Key formula",
+       "flow": [
+        {
+         "type": "text",
+         "text": "For a body containing net charge $q$, flux is given by the relation,\n$$\n\\phi=\\frac{q}{\\epsilon_{0}}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "$$\n\\begin{aligned}\n& \\in_{0}=\\text { Permittivity of free space } \\\\\n& =8.854 \\times 10^{-12} \\mathrm{~N}^{-1} \\mathrm{C}^{2} \\mathrm{~m}^{-2}\n\\end{aligned}\n$$\n$$\n\\begin{aligned}\n& q=\\in_{0} \\Phi \\\\\n& =8.854 \\times 10^{-12} \\times 8.0 \\times 10^{3} \\\\\n& =7.08 \\times 10^{-8} \\\\\n& =0.07 \\mu \\mathrm{C}\n\\end{aligned}\n$$\nTherefore, the net charge inside the box is $0.07 \\mu \\mathrm{C}$."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$0.07 \\mu \\mathrm{C}$"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "If the net outward flux through the surface of the box were zero, could you conclude that there were no charges inside the box? Why or Why not?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "No\nNet flux piercing out through a body depends on the net charge contained in the body. If net flux is zero, then it can be inferred that net charge inside the body is zero. The body may have equal amount of positive and negative charges."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "No - zero net flux only means zero net charge; the body may still hold equal amounts of positive and negative charge"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_1.17",
+   "kind": "exercise",
+   "number": "1.17",
+   "topic": "Flux through a square face of a cube",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "A point charge $+10 \\mu \\mathrm{C}$ is a distance 5 cm directly above the centre of a square of side 10 cm, as shown in Fig. 1.31. What is the magnitude of the electric flux through the square? (Hint: Think of the square as one face of a cube with edge 10 cm.)"
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_43.jpg",
+     "caption": "FIGURE 1.31"
+    },
+    {
+     "src": "images/fig_physics-12-1_4.jpg",
+     "caption": ""
+    }
+   ],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "flow": [
+      {
+       "type": "text",
+       "text": "The square can be considered as one face of a cube of edge 10 cm with a centre where charge $q$ is placed."
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "Key formula",
+     "flow": [
+      {
+       "type": "text",
+       "text": "According to Gauss's theorem for a cube, total electric flux is through all its six faces.\n$$\n\\phi_{\\text {Total }}=\\frac{q}{\\epsilon_{0}}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Hence, electric flux through one face of the cube i.e., through the square, $\\quad \\phi=\\frac{\\phi_{\\text {Total }}}{6}$\n$$\n=\\frac{1}{6} \\frac{q}{\\epsilon_{0}}\n$$\nWhere,\n$$\n\\begin{aligned}\n& \\epsilon_{0}=\\text { Permittivity of free space } \\\\\n& =8.854 \\times 10^{-12} \\mathrm{~N}^{-1} \\mathrm{C}^{2} \\mathrm{~m}^{-2} \\\\\n& q=10 \\mu \\mathrm{C}=10 \\times 10^{-6} \\mathrm{C} \\\\\n& \\quad \\phi=\\frac{1}{6} \\times \\frac{10 \\times 10^{-6}}{8.854 \\times 10^{-12}} \\\\\n& =1.88 \\times 10^{5} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}\n\\end{aligned}\n$$\nTherefore, electric flux through the square is $1.88 \\times 10^{5} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}$."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$1.88 \\times 10^{5} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}$"
+    }
+   ]
+  },
+  {
+   "id": "q_1.18",
+   "kind": "exercise",
+   "number": "1.18",
+   "topic": "Flux through a cubic Gaussian surface",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "A point charge of $2.0 \\mu \\mathrm{C}$ is at the centre of a cubic Gaussian surface 9.0 cm on edge. What is the net electric flux through the surface?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "Key formula",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Net electric flux ( $\\Phi_{\\mathrm{Net}}$ ) through the cubic surface is given by,\n$$\n\\phi_{\\mathrm{Net}}=\\frac{q}{\\epsilon_{0}}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Where,\n$$\n\\begin{aligned}\n& \\epsilon_{0}=\\text { Permittivity of free space } \\\\\n& =8.854 \\times 10^{-12} \\mathrm{~N}^{-1} \\mathrm{C}^{2} \\mathrm{~m}^{-2} \\\\\n& q=\\text { Net charge contained inside the cube }=2.0 \\mu \\mathrm{C}=2 \\times 10^{-6} \\mathrm{C}\n\\end{aligned}\n$$\n$$\n\\begin{aligned}\n& \\therefore \\phi_{\\mathrm{Net}}=\\frac{2 \\times 10^{-6}}{8.854 \\times 10^{-12}} \\\\\n& =2.26 \\times 10^{5} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}\n\\end{aligned}\n$$\nThe net electric flux through the surface is $2.26 \\times 10^{5} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}$."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$2.26 \\times 10^{5} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-1}$"
+    }
+   ]
+  },
+  {
+   "id": "q_1.19",
+   "kind": "exercise",
+   "number": "1.19",
+   "topic": "Flux and charge from a spherical Gaussian surface",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "A point charge causes an electric flux of $-1.0 \\times 10^{3} \\mathrm{Nm}^{2} / \\mathrm{C}$ to pass through a spherical Gaussian surface of 10.0 cm radius centred on the charge."
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "If the radius of the Gaussian surface were doubled, how much flux would pass through the surface?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Electric flux, $\\Phi=-1.0 \\times 10^{3} \\mathrm{~N} \\mathrm{~m}^{2} / \\mathrm{C}$\nRadius of the Gaussian surface,\n$$\nr=10.0 \\mathrm{~cm}\n$$\nElectric flux piercing out through a surface depends on the net charge enclosed inside a body. It does not depend on the size of the body. If the radius of the Gaussian surface is doubled, then the flux passing through the surface remains the same i.e., $-10^{3} \\mathrm{~N} \\mathrm{~m}^{2} / \\mathrm{C}$."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$-1.0 \\times 10^{3} \\mathrm{~N} \\mathrm{~m}^{2} / \\mathrm{C}$ (unchanged)"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the value of the point charge?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "formula",
+       "stage": "key_formula",
+       "label": "Key formula",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Electric flux is given by the relation,\n$$\n\\phi=\\frac{q}{\\epsilon_{0}}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Where,\n$$\n\\begin{aligned}\n& q=\\text { Net charge enclosed by the spherical surface } \\\\\n& \\in_{0}=\\text { Permittivity of free space }=8.854 \\times 10^{-12} \\mathrm{~N}^{-1} \\mathrm{C}^{2} \\mathrm{~m}^{-2} \\\\\n& \\therefore q=\\phi \\epsilon_{0} \\\\\n& =-1.0 \\times 10^{3} \\times 8.854 \\times 10^{-12}\n\\end{aligned}\n$$\n$$\n\\begin{aligned}\n& =-8.854 \\times 10^{-9} \\mathrm{C} \\\\\n& =-8.854 \\mathrm{nC}\n\\end{aligned}\n$$\nTherefore, the value of the point charge is -8.854 nC."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$-8.854 \\mathrm{nC}$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_1.20",
+   "kind": "exercise",
+   "number": "1.20",
+   "topic": "Net charge on a conducting sphere from field",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "A conducting sphere of radius 10 cm has an unknown charge. If the electric field 20 cm from the centre of the sphere is $1.5 \\times 10^{3} \\mathrm{~N} / \\mathrm{C}$ and points radially inward, what is the net charge on the sphere?"
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "Key formula",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Electric field intensity $(E)$ at a distance $(d)$ from the centre of a sphere containing net charge $q$ is given by the relation,\n$$\nE=\\frac{q}{4 \\pi \\epsilon_{0} d^{2}}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Where,\n$$\nq=\\text { Net charge }=1.5 \\times 10^{3} \\mathrm{~N} / \\mathrm{C}\n$$\n$d=$ Distance from the centre $=20 \\mathrm{~cm}=0.2 \\mathrm{~m}$\n$$\n\\epsilon_{0}=\\text { Permittivity of free space }\n$$\nAnd, $\\frac{1}{4 \\pi \\epsilon_{0}}=9 \\times 10^{9} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-2}$\n$$\n\\begin{aligned}\n& \\therefore q=E\\left(4 \\pi \\epsilon_{0}\\right) d^{2} \\\\\n& =\\frac{1.5 \\times 10^{3} \\times(0.2)^{2}}{9 \\times 10^{9}} \\\\\n& =6.67 \\times 10^{-9} \\mathrm{C} \\\\\n& =6.67 \\mathrm{nC}\n\\end{aligned}\n$$\nTherefore, the net charge on the sphere is 6.67 nC."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "6.67 nC"
+    }
+   ]
+  },
+  {
+   "id": "q_1.21",
+   "kind": "exercise",
+   "number": "1.21",
+   "topic": "Charge and flux of a uniformly charged sphere",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "A uniformly charged conducting sphere of 2.4 m diameter has a surface charge density of $80.0 \\mu \\mathrm{C} / \\mathrm{m}^{2}$."
+    }
+   ],
+   "figures": [],
+   "parts": [
+    {
+     "label": "a",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "Find the charge on the sphere."
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Diameter of the sphere, $d=2.4 \\mathrm{~m}$\nRadius of the sphere, $r=1.2 \\mathrm{~m}$\nSurface charge density, $\\sigma=80.0 \\mu \\mathrm{C} / \\mathrm{m}^{2}=80 \\times 10^{-6} \\mathrm{C} / \\mathrm{m}^{2}$\nTotal charge on the surface of the sphere,\n$$\n\\begin{aligned}\n& Q=\\text { Charge density × Surface area } \\\\\n& =\\sigma \\times 4 \\pi r^{2} \\\\\n& =80 \\times 10^{-6} \\times 4 \\times 3.14 \\times(1.2)^{2} \\\\\n& =1.447 \\times 10^{-3} \\mathrm{C}\n\\end{aligned}\n$$\nTherefore, the charge on the sphere is $1.447 \\times 10^{-3} \\mathrm{C}$."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$1.447 \\times 10^{-3} \\mathrm{C}$"
+      }
+     ]
+    },
+    {
+     "label": "b",
+     "prompt": [
+      {
+       "type": "text",
+       "text": "What is the total electric flux leaving the surface of the sphere?"
+      }
+     ],
+     "solution_blocks": [
+      {
+       "type": "formula",
+       "stage": "key_formula",
+       "label": "Key formula",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Total electric flux ( $\\phi_{\\text {Total }}$ ) leaving out the surface of a sphere containing net charge $Q$ is given by the relation,\n$$\n\\phi_{\\text {TOtal }}=\\frac{Q}{\\epsilon_{0}}\n$$"
+        }
+       ]
+      },
+      {
+       "type": "step",
+       "stage": "conclusion",
+       "flow": [
+        {
+         "type": "text",
+         "text": "Where,\n$$\n\\begin{aligned}\n& \\in_{0}=\\text { Permittivity of free space } \\\\\n& =8.854 \\times 10^{-12} \\mathrm{~N}^{-1} \\mathrm{C}^{2} \\mathrm{~m}^{-2}\n\\end{aligned}\n$$\n$$\n\\begin{aligned}\n& Q=1.447 \\times 10^{-3} \\mathrm{C} \\\\\n& \\phi_{\\text {Total }}=\\frac{1.44 \\times 10^{-3}}{8.854 \\times 10^{-12}} \\\\\n& =1.63 \\times 10^{8} \\mathrm{~N} \\mathrm{C}^{-1} \\mathrm{~m}^{2}\n\\end{aligned}\n$$\nTherefore, the total electric flux leaving the surface of the sphere is $1.63 \\times 10^{8} \\mathrm{~N} \\mathrm{C}^{-1} \\mathrm{~m}^{2}$."
+        }
+       ]
+      }
+     ],
+     "answer": [
+      {
+       "type": "text",
+       "text": "$1.63 \\times 10^{8} \\mathrm{~N} \\mathrm{C}^{-1} \\mathrm{~m}^{2}$"
+      }
+     ]
+    }
+   ],
+   "solution_blocks": [],
+   "answer": []
+  },
+  {
+   "id": "q_1.22",
+   "kind": "exercise",
+   "number": "1.22",
+   "topic": "Linear charge density from the field of a line charge",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "An infinite line charge produces a field of $9 \\times 10^{4} \\mathrm{~N} / \\mathrm{C}$ at a distance of 2 cm. Calculate the linear charge density."
+    }
+   ],
+   "figures": [],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "Key formula",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Electric field produced by the infinite line charges at a distance $d$ having linear charge density $\\lambda$ is given by the relation,\n$$\n\\begin{aligned}\n& E=\\frac{\\lambda}{2 \\pi \\epsilon_{0} d} \\\\\n& \\lambda=2 \\pi \\epsilon_{0} d E\n\\end{aligned}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Where,\n$$\n\\begin{aligned}\n& d=2 \\mathrm{~cm}=0.02 \\mathrm{~m} \\\\\n& E=9 \\times 10^{4} \\mathrm{~N} / \\mathrm{C}\n\\end{aligned}\n$$\n$\\epsilon_{0}=$ Permittivity of free space\n$$\n\\begin{aligned}\n& \\frac{1}{4 \\pi \\epsilon_{0}}=9 \\times 10^{9} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-2} \\\\\n& \\lambda=\\frac{0.02 \\times 9 \\times 10^{4}}{2 \\times 9 \\times 10^{9}} \\\\\n& =10 \\mu \\mathrm{C} / \\mathrm{m}\n\\end{aligned}\n$$\nTherefore, the linear charge density is $10 \\mu \\mathrm{C} / \\mathrm{m}$."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$10 \\mu \\mathrm{C} / \\mathrm{m}$"
+    }
+   ]
+  },
+  {
+   "id": "q_1.23",
+   "kind": "exercise",
+   "number": "1.23",
+   "topic": "Electric field between and outside two charged plates",
+   "prompt": [
+    {
+     "type": "text",
+     "text": "Two large, thin metal plates are parallel and close to each other. On their inner faces, the plates have surface charge densities of opposite signs and of magnitude $17.0 \\times 10^{-22} \\mathrm{C} / \\mathrm{m}^{2}$. What is $\\mathbf{E}$ : (a) in the outer region of the first plate, (b) in the outer region of the second plate, and (c) between the plates?"
+    }
+   ],
+   "figures": [
+    {
+     "src": "images/fig_physics-12-1_5.jpg",
+     "caption": ""
+    }
+   ],
+   "parts": [],
+   "solution_blocks": [
+    {
+     "type": "step",
+     "stage": "given",
+     "flow": [
+      {
+       "type": "text",
+       "text": "The situation is represented in the following figure.\nA and B are two parallel plates close to each other. Outer region of plate A is labelled as I, outer region of plate B is labelled as III, and the region between the plates, A and B, is labelled as II.\nCharge density of plate $\\mathrm{A}, \\sigma=17.0 \\times 10^{-22} \\mathrm{C} / \\mathrm{m}^{2}$\nCharge density of plate $\\mathrm{B}, \\sigma=-17.0 \\times 10^{-22} \\mathrm{C} / \\mathrm{m}^{2}$\nIn the regions, I and III, electric field $E$ is zero. This is because charge is not enclosed by the respective plates."
+      }
+     ]
+    },
+    {
+     "type": "formula",
+     "stage": "key_formula",
+     "label": "Key formula",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Electric field $E$ in region II is given by the relation,\n$$\nE=\\frac{\\sigma}{\\epsilon_{0}}\n$$"
+      }
+     ]
+    },
+    {
+     "type": "step",
+     "stage": "conclusion",
+     "flow": [
+      {
+       "type": "text",
+       "text": "Where,\n$$\n\\epsilon_{0}=\\text { Permittivity of free space }=8.854 \\times 10^{-12} \\mathrm{~N}^{-1} \\mathrm{C}^{2} \\mathrm{~m}^{-2}\n$$\n$$\n\\begin{aligned}\n& E=\\frac{17.0 \\times 10^{-22}}{8.854 \\times 10^{-12}} \\\\\n\\therefore & 1.92 \\times 10^{-10} \\mathrm{~N} / \\mathrm{C}\n\\end{aligned}\n$$\nTherefore, electric field between the plates is $1.92 \\times 10^{-10} \\mathrm{~N} / \\mathrm{C}$."
+      }
+     ]
+    }
+   ],
+   "answer": [
+    {
+     "type": "text",
+     "text": "$E=0$ in the outer regions of both plates; $E=1.92 \\times 10^{-10} \\mathrm{~N} / \\mathrm{C}$ between the plates"
+    }
+   ]
+  }
+ ]
+}

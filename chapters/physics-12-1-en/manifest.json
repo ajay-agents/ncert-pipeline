@@ -1,0 +1,357 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-18T10:49:02.727202+00:00",
+    "inputs": {
+      "chapter.en.pdf": "98d70bae91f30035",
+      "solutions.en.pdf": "ebfbdf8057d7e855"
+    },
+    "counts": {
+      "chapter.en": {
+        "pages": 36,
+        "chars": 45085,
+        "dollar_spans": 866,
+        "tables": 0,
+        "images": 15
+      },
+      "solutions.en": {
+        "pages": 44,
+        "chars": 117549,
+        "dollar_spans": 1956,
+        "tables": 5,
+        "images": 29
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-medium build for physics-12-1 (वैद्युत आवेश तथा क्षेत्र / Electric Charges and Fields), kept in its own separate chapter directory (physics-12-1-en) per explicit user instruction, rather than adding chapter.en.pdf/solutions.en.pdf into the existing bilingual physics-12-1 directory - the Hindi-only physics-12-1 chapter (already complete through stage 10, multiple correction passes) was left completely untouched. This directory is English-only (no chapter.hi.pdf/solutions.hi.pdf) - step_1/PROMPT.md flags a missing-Hindi-PDF configuration as one to stop and ask about, but the user's own immediately preceding instruction was the explicit directive to build exactly this (a separate, English-only folder), so proceeding without a further prompt."
+  },
+  {
+    "stage": "mathpix_correction",
+    "at": "2026-09-18T10:50:06.369819+00:00",
+    "inputs": {
+      "chapter.en.pdf": "ebfbdf8057d7e855",
+      "solutions.en.pdf": "98d70bae91f30035"
+    },
+    "counts": {},
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "The two source PDFs the user provided were swapped relative to their filenames: \"Chapter 1 Electric Charges And Fields.pdf\" (copied in as chapter.en.pdf) actually contained the worked question-and-answer solutions content, while \"physics_ch1_eng.pdf\" (copied in as solutions.en.pdf) actually contained the real textbook chapter narrative (\"1.1 Introduction...\"). Caught during the stage-1 sanity check (chapter.en.md opened with \"Question 1.1: ... Answer ...\" instead of introductory prose) and confirmed independently by the user in the same turn. Swapped both the raw PDFs and the already-converted 01_mathpix/*.md files (no need to re-run the Mathpix conversion - the extracted content itself was correct, only the chapter/solutions labels were swapped). The mathpix manifest entry immediately before this one has its chapter.en/solutions.en counts swapped relative to the corrected files - see this entry as the correction of record."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-18T11:07:50.943075+00:00",
+    "inputs": {
+      "chapter.en.md": "5a230f6ca568a7ef",
+      "solutions.en.md": "99f612c8500304d0"
+    },
+    "counts": {
+      "examples": 12,
+      "exercises": 23,
+      "raw_solutions": 34,
+      "matched": 23,
+      "orphan_solutions": 10,
+      "dropped_old_exercise": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts_examples_exercises",
+      "gate_counts_raw_solutions",
+      "gate_counts_final",
+      "gate_solutions_present_en"
+    ],
+    "model_calls": 3,
+    "notes": "English-only extraction for physics-12-1-en (Electric Charges and Fields), structurally parallel to the existing Hindi-only physics-12-1 chapter: 12 examples (ex_1.1-ex_1.12), 23 exercises (q_1.1-q_1.23), 0 additional_exercise items - the rationalised textbook PDF has no ADDITIONAL EXERCISES section (confirmed by grep: no '1.24'-'1.34' or 'ADDITIONAL' heading anywhere in 01_mathpix/chapter.en.md's own EXERCISES section). No Hindi files in this directory, so match.align_languages()/gate_bilingual are skipped entirely per CLAUDE.md's single-language note. solutions.en.md (the un-rationalised solutions manual) required hand-verified pairing rather than a trust-the-numbers join - see match_report.md's 'hand_verified_correction' entry: its own Question 1.13 is a dropped old exercise with no textbook match, and everything from its Q1.14 onward runs +1 ahead of the current textbook numbering. This is the exact 'Rationalised edition' failure mode step_2/PROMPT.md warns about (previously seen in physics-12-3/physics-12-5) - resolved here by content comparison against chapter.en.md's own EXERCISES text before the numeric join, not by trusting needs_review (which a naive number-only join would NOT have flagged, since every number 1.1-1.23 would have 'matched' something, just the wrong content from Q1.14 onward). Two known inherited mathpix OCR artifacts were left exactly as produced (per step_2/extract.md's 'keep math exactly as Mathpix produced it, even if broken') for stage 5 to verify against the source PDF rather than silently corrected here: sol_1.11 part b's mass-transfer line multiplies by '1.85 x 10^12' where part a computed n='1.87 x 10^12' (a pre-existing inconsistency already present in the official solutions manual's own printed text, not a mathpix artifact - left untouched, faithful to source per Rule 1); sol_1.21's charge computation prints '6.67 x 10^9 C' immediately followed by '= 6.67 nC' in the same derivation (self-contradictory by 18 orders of magnitude - almost certainly mathpix misreading a superscript minus sign in the source PDF), and the source text never states the sphere's charge is negative despite the field pointing radially inward. Both flagged here rather than 'fixed' at this stage, since stage 5 is where corrections get verified against the actual PDF page image and recorded as a proper Correction, not stage 2."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-18T11:08:46.491927+00:00",
+    "inputs": {
+      "chapter.en.md": "14938f519c31ddf7"
+    },
+    "counts": {
+      "en": {
+        "examples_bytes": 30524,
+        "examples_items": 12,
+        "qa_bytes": 35224,
+        "qa_items": 23
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-only split (no chapter.hi.md present in this directory). 12 example items -> 03_split/examples.en.md, 23 exercise items -> 03_split/qa.en.md (0 additional_exercise items - the rationalised textbook has none for this chapter). Round-trip verified: both files re-parse cleanly and their item counts sum to the merged chapter's 35 items exactly."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-18T11:10:26.520550+00:00",
+    "inputs": {
+      "examples.en.md": "130ba8b62e57b7e4",
+      "qa.en.md": "6ea379d525ffb99e"
+    },
+    "counts": {
+      "en": {
+        "combined_bytes": 65616,
+        "combined_items": 35
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-only combine (no *.hi.md present). Reunited 03_split/examples.en.md (12) + qa.en.md (23) into 04_combined/combined.en.md (35), original order preserved (examples first). Round-trip verified: re-parses cleanly, item count matches stage 3's combined total exactly. mdio.merge_by_id(en_chapter, None) took its documented single-language early-return path (hi_chapter is None)."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-18T11:19:18.261240+00:00",
+    "inputs": {
+      "combined.en.md": "14938f519c31ddf7",
+      "chapter.en.pdf": "ebfbdf8057d7e855",
+      "solutions.en.pdf": "98d70bae91f30035"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "corrections_held": 0,
+      "by_type": {
+        "extraction_fidelity_ocr": 1
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_en",
+      "gate_counts_final"
+    ],
+    "model_calls": 6,
+    "notes": "Verified all 12 examples and all 23 exercises against the actual source PDF pages (200dpi renders of chapter.en.pdf and solutions.en.pdf, read directly - never against the Mathpix markdown alone). English-only chapter, so only the English PDFs apply; no Hindi verification pass. All 12 examples' question and solution text matched chapter.en.pdf exactly - zero corrections. All 23 exercises' question text matched chapter.en.pdf's own EXERCISES section exactly. Solutions content matched solutions.en.pdf exactly except one extraction fidelity slip (applied, see corrections.md): q_1.11 part (b)'s m_e line. Two INHERITED defects in the official solutions manual itself were found and deliberately left uncorrected pending explicit user sign-off (not folded into this high-confidence batch, per step_5/verify.md's narrow same-page-self-contradiction exception): (1) q_1.11 part (b) states 'm_e = 9.1 x 10^-3 kg' where the very next line's own calculation correctly uses 10^-31 - confirmed via solutions.en.pdf page 9's text layer, not a mathpix artifact; (2) q_1.20 (solutions.en.pdf page 18, its own 'Question 1.21') computes 'q = 6.67 x 10^9 C' immediately followed by '= 6.67 nC' in the same derivation - also confirmed via the PDF's text layer. Neither affects final_answer, which already states the physically-correct concluding value in both cases (1.706e-18 kg negligible mass; 6.67 nC). Flagged to user for a decision, not auto-corrected."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-18T11:20:53.825634+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "2edff29a06d7af26"
+    },
+    "counts": {
+      "corrections_applied": 2,
+      "corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_en",
+      "gate_counts_final"
+    ],
+    "model_calls": 0,
+    "notes": "Second verify pass, applying the two same-page-self-contradiction fixes flagged (but deliberately not auto-applied) in the first verify manifest entry, after obtaining the user's explicit sign-off per step_5/verify.md's narrow exception clause. q_1.11 part (b): 'm_e = 9.1 x 10^-3 kg' -> '9.1 x 10^-31 kg'. q_1.20: 'q = 6.67 x 10^9 C' -> '6.67 x 10^-9 C'. Both items' final_answer fields were already stating the physically-correct concluding values before this pass and are unchanged."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-18T11:26:49.174887+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "2edff29a06d7af26"
+    },
+    "counts": {
+      "items_simplified": 3,
+      "fields_unchanged": 48,
+      "restore_failed": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen_en",
+      "gate_answers_unchanged_en",
+      "gate_math_parity_en"
+    ],
+    "model_calls": 35,
+    "notes": "English-only chapter - gate_bilingual skipped per CLAUDE.md's single-language note (as in stages 2-5); no chapter.verified.hi.md exists in this directory. Read all 12 examples' and 23 exercises' solution fields against step_6/simplify.md's Do/Do-not list; most of this chapter's solution prose is already the plain, student-facing NCERT-solutions register, so per simplify.md's explicit 'return unchanged is a valid outcome, better than churn' guidance only 3 fields were rewritten: ex_1.3 part (a) ('However, it may be mentioned here that' -> 'Note that' - textbook to plain register), q_1.3 ('unitof' -> 'unit of' - a run-together word inherited from the source PDF's own typesetting, a whitespace/readability fix not a content change), and q_1.6 (tightened a three-sentence cancellation explanation into two shorter sentences, re-checked against its own 'net force ... is zero' conclusion per simplify.md's comparative-sentence-reordering warning to confirm the A/C and B/D pairing was preserved exactly). Every edit went through protect.freeze()/restore() and an additional post-hoc protected-span multiset check (same spans, same counts, before and after) - no number, unit, sign, formula or figure reference was touched anywhere. No question text touched anywhere (examples or exercises, item-level or sub-part) - verified by gate_question_text_frozen. No final answer touched anywhere - verified by gate_answers_unchanged."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-18T11:36:04.096442+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "b5a1ce69bb383dbf"
+    },
+    "counts": {
+      "bytes": 64400,
+      "edits_applied": 20
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "protect_parity_stage6_vs_stage7"
+    ],
+    "model_calls": 1,
+    "notes": "English-only chapter (no chapter.simplified.hi.md in this directory). Read all 12 examples' and 23 exercises' solution fields against step_7/format.md's vocabulary and judgement-call notes. Applied :::formula{label=\"Key formula\"} (RULES.md's fixed label, since each is the governing-equation step of one worked solution's own flow) to every clean 'X is given by the relation, $$...$$' derivation - 14 exercises (q_1.1, 1.2a, 1.9, 1.10, 1.12a, 1.14a, 1.16a, 1.17, 1.18, 1.19b, 1.20, 1.21b, 1.22, 1.23) and 3 examples (ex_1.9a, ex_1.9b, ex_1.12). Wrapped ex_1.1's tangential copper-electron-count remark in :::note{type=\"tip\"} (a freeform label - a standalone aside, not part of any one worked solution's given/formula/substitute/conclusion flow). Wrapped ex_1.3(a)'s two parallel sub-results ((i) electron-proton, (ii) proton-proton ratios) as bare :::step{n=\"1\"}/:::step{n=\"2\"} - deliberately unlabelled, since they are parallel branches, not sequential given/substitute/conclusion stages the fixed vocabulary describes. No second, redundant whole-item :::solution artifact found on any multi-part item in this chapter (this build's stage-2 join always attached solutions at the part level for multi-part items, never duplicated at item level) - nothing to flag for stage 8 on that front. Left every other solution field - given-value listings, plain substitution arithmetic, concluding sentences, and the short conceptual answers with no formula at all (q_1.4, q_1.5, q_1.6, q_1.7, q_1.13, q_1.15, q_1.16b, q_1.19a, and most examples' connective prose) - as plain paragraph text inside the existing :::solution container, per format.md's explicit 'forcing structure onto ordinary prose is worse than leaving it unmarked.' Not a single word, digit, symbol or table cell was changed anywhere - every edit was a pure container insertion around already-present text, verified by protect.parity showing zero drift between stage 6 and stage 7."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T11:39:26.095576+00:00",
+    "inputs": {
+      "structured.en.md": "aacc3e1b67f8fe4e"
+    },
+    "counts": {
+      "items": 35,
+      "parts": 30,
+      "distinct_figures": 17,
+      "stage_distribution": {
+        "given": 13,
+        "key_formula": 17,
+        "substitute": 1,
+        "conclusion": 50
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "fresh_count_match"
+    ],
+    "model_calls": 35,
+    "notes": "English-only chapter. Walked 07_format/structured.en.md's container tree into 08_tag/structured.en.json. given/key_formula stages came for free from the 3 explicit :::formula and 0 :::concept blocks added at stage 7 (this chapter's exercises state their key relation directly without a separate 'given' concept block upstream - the given-values listings were left as plain text at stage 7, so they surface here as position-inferred 'given'-stage step blocks, not :::concept blocks - a legitimate outcome per step_7/format.md's 'leave as plain paragraph text' guidance, not a gap). ex_1.3(a)'s two deliberately-unlabelled :::step blocks (n=1/n=2, two parallel sub-results rather than sequential given/conclusion stages) fell to the position rule: with exactly 2 stageable blocks in that part's solution, the first inferred 'given' and the second 'conclusion' - a reasonable but not perfectly descriptive fit, flagged here rather than silently accepted, since neither sub-result is really 'the given data' or 'the conclusion' of the other. No :::table blocks anywhere in this chapter. No duplicate whole-item trailing solution artifact on any multi-part item (confirmed again at stage 7) - every multi-part item's item-level solution_blocks is correctly empty, with all content living in its parts. No हल opener to strip (English chapter; the source's 'Solution' word was already captured as the container's own label= attribute at stage 2, never embedded in the text itself). Gate passed: fresh item/part/figure counts taken directly from structured.en.md match the just-written JSON exactly (35 items, all figure src values identical)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T11:41:45.914476+00:00",
+    "inputs": {
+      "structured.en.md": "aacc3e1b67f8fe4e"
+    },
+    "counts": {
+      "items": 35,
+      "parts": 30,
+      "distinct_figures": 17,
+      "stage_distribution": {
+        "given": 13,
+        "key_formula": 17,
+        "substitute": 1,
+        "conclusion": 50
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "fresh_count_match"
+    ],
+    "model_calls": 35,
+    "notes": "English-only chapter. Walked 07_format/structured.en.md's container tree into 08_tag/structured.en.json. given/key_formula stages came for free from the 3 explicit :::formula and 0 :::concept blocks added at stage 7 (this chapter's exercises state their key relation directly without a separate 'given' concept block upstream - the given-values listings were left as plain text at stage 7, so they surface here as position-inferred 'given'-stage step blocks, not :::concept blocks - a legitimate outcome per step_7/format.md's 'leave as plain paragraph text' guidance, not a gap). ex_1.3(a)'s two deliberately-unlabelled :::step blocks (n=1/n=2, two parallel sub-results rather than sequential given/conclusion stages) sit alongside a third, unwrapped trailing remark paragraph in that same part's solution - three stageable blocks total, so the position rule gave n=1 (electron-proton ratio) 'given', n=2 (proton-proton ratio) 'substitute', and the trailing remark 'conclusion'. Flagged here rather than silently accepted: neither ratio is really 'the given data' for the other, and 'substitute' is a loose fit for what's actually a second, parallel sub-result - an honest limitation of position-only inference on genuinely parallel (not sequential) sub-results, not a bug in the rule's mechanical application. No :::table blocks anywhere in this chapter. No duplicate whole-item trailing solution artifact on any multi-part item (confirmed again at stage 7) - every multi-part item's item-level solution_blocks is correctly empty, with all content living in its parts. No हल opener to strip (English chapter; the source's 'Solution' word was already captured as the container's own label= attribute at stage 2, never embedded in the text itself). Gate passed: fresh item/part/figure counts taken directly from structured.en.md match the just-written JSON exactly (35 items, all figure src values identical)."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-18T11:49:10.004388+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "b60a71adfca3c5f6"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "items": [
+        "q_1.14"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity_en",
+      "gate_counts_final"
+    ],
+    "model_calls": 0,
+    "notes": "Late catch during stage 9's mandatory manual read-back (not a stage-5 session): q_1.14's item-level question text had '\\hat{\\mathbf{1}}' (digit one) where both chapter.en.pdf p.42 and solutions.en.pdf p.13 clearly show the unit vector î - confirmed again directly against both page renders already on file from stage 5. My own stage-2 transcription slip, not an inherited source defect. Fixed via the normal Correction/apply_corrections() path, not a hand-edit."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-18T11:49:10.010855+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "5c91abb405e1fa7c"
+    },
+    "counts": {
+      "items": [
+        "q_1.14"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen_en"
+    ],
+    "model_calls": 0,
+    "notes": "Propagated the q_1.14 i-hat fix into 06_simplify via a direct, verified-unique text substitution (not a re-run of stage 6's own simplification pass)."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-18T11:49:10.020195+00:00",
+    "inputs": {
+      "structured.en.md": "0753507ed092a477"
+    },
+    "counts": {
+      "items": [
+        "q_1.14"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "protect_parity"
+    ],
+    "model_calls": 0,
+    "notes": "Propagated the same q_1.14 i-hat fix into 07_format/structured.en.md via a direct, verified-unique text substitution; tag._parse and protect.parity both re-confirmed clean."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-18T11:49:17.839045+00:00",
+    "inputs": {
+      "structured.en.md": "0753507ed092a477"
+    },
+    "counts": {
+      "items": 35,
+      "parts": 30,
+      "distinct_figures": 17,
+      "stage_distribution": {
+        "given": 13,
+        "key_formula": 17,
+        "substitute": 1,
+        "conclusion": 50
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "fresh_count_match"
+    ],
+    "model_calls": 35,
+    "notes": "English-only chapter. Walked 07_format/structured.en.md's container tree into 08_tag/structured.en.json. given/key_formula stages came for free from the 3 explicit :::formula and 0 :::concept blocks added at stage 7 (this chapter's exercises state their key relation directly without a separate 'given' concept block upstream - the given-values listings were left as plain text at stage 7, so they surface here as position-inferred 'given'-stage step blocks, not :::concept blocks - a legitimate outcome per step_7/format.md's 'leave as plain paragraph text' guidance, not a gap). ex_1.3(a)'s two deliberately-unlabelled :::step blocks (n=1/n=2, two parallel sub-results rather than sequential given/conclusion stages) sit alongside a third, unwrapped trailing remark paragraph in that same part's solution - three stageable blocks total, so the position rule gave n=1 (electron-proton ratio) 'given', n=2 (proton-proton ratio) 'substitute', and the trailing remark 'conclusion'. Flagged here rather than silently accepted: neither ratio is really 'the given data' for the other, and 'substitute' is a loose fit for what's actually a second, parallel sub-result - an honest limitation of position-only inference on genuinely parallel (not sequential) sub-results, not a bug in the rule's mechanical application. No :::table blocks anywhere in this chapter. No duplicate whole-item trailing solution artifact on any multi-part item (confirmed again at stage 7) - every multi-part item's item-level solution_blocks is correctly empty, with all content living in its parts. No हल opener to strip (English chapter; the source's 'Solution' word was already captured as the container's own label= attribute at stage 2, never embedded in the text itself). Gate passed: fresh item/part/figure counts taken directly from structured.en.md match the just-written JSON exactly (35 items, all figure src values identical)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-18T12:09:54.340026+00:00",
+    "inputs": {
+      "structured.en.json": "960cfba88d34359d"
+    },
+    "counts": {
+      "html_bytes": 141914,
+      "css_bytes": 16991,
+      "items_rendered": 35,
+      "figures_rendered": 17
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "figure_src_resolves_on_disk",
+      "figure_src_json_vs_html_match",
+      "numeric_readback_question_final_answer_vs_html",
+      "console_errors"
+    ],
+    "model_calls": 1,
+    "notes": "Hand-authored plain static HTML/CSS (no Claude Design canvas), adapted from maths-12-5's own working latex.py/render_page.py (the most recent, most bug-fixed prior chapter) rather than built from scratch, per step_9/PROMPT.md. English throughout (lang=\"en\", LABEL_EN pill labels, Example/Question prefixes, two sections: Examples then Questions and Solutions - no per-प्रश्नावली sub-sectioning needed, unlike the Maths chapters this was adapted from, since NCERT Physics chapters have one combined EXERCISES section). CSS started from solutions-chapter-1.css (the shared base) plus only the accumulated additions this chapter genuinely needs (.s23 flex-column fix, .s81/.s82 replacing unsafe .s22, .s86-89 plain-box answer variants, .s90/.s92/.s93 glued-fraction and aligned-block wrappers, break-inside:avoid on .s31/.s90/.s14, the 700px mobile breakpoint) - dropped the maths-12-5-specific matrix/determinant CSS (.s94-98/.sD1-3) entirely as irrelevant dead weight for this chapter's arithmetic-only content. Before trusting the reused converter, grepped this chapter's own 06_simplify/chapter.simplified.en.md for every \\[a-zA-Z]+ command actually used and diffed against the converter's macro table per step_9/PROMPT.md's explicit mandate - found and fixed real gaps a Maths chapter's own converter never needed: epsilon/varepsilon (permittivity, 58x combined), rho/sigma/tau, capital Delta/Phi, \\hat and \u000bec accent commands (unit vectors/vector notation, 20x combined), sim/gg/approx/AA/angle. Two chapter-specific symbol overrides after checking every occurrence in this chapter's own content first (never speculatively): \\circ -> degree sign, not function composition (all 9 occurrences are angle degrees); \\in -> epsilon, not set membership (all 4 occurrences are a mathpix OCR artifact misreading epsilon-zero, confirmed against the surrounding \"Permittivity of free space\" text each time). Ran a full read-back pass of the converter against all 446 real math spans in the chapter before trusting it (zero stray backslashes / unhandled commands). Caught and fixed six further issues during visual QA (not caught by any automated check): (1) topic-label text fracturing mid-word in the narrow badge column (CSS overflow-wrap/word-break fix); (2) \"i.e.\" and \"Fig. N\" sentence-splitter mis-fires treating those periods as sentence boundaries (abbreviation-guard fix); (3) the telescoped-enumeration prompt-stripping helper computing the last clause's end position from a separately-.strip()'d copy's length rather than tracking the position directly in the original string, leaving a stray \"?\" behind on a 4-clause item (ex_1.11); (4) on the mobile breakpoint specifically, a negative exponent/coefficient's ASCII hyphen wrapping away from its own digit (a plain \"-\" is a valid browser soft-break point, like \"well-known\") - fixed with a non-breaking hyphen; (5) the \u000bec accent's combining-character rendering as a tofu box in this font stack (STIX Two Text has no glyph for U+20D7, unlike the far more common combining circumflex \\hat already used) - switched to a CSS-positioned arrow; (6) the boxed-answer blob-vs-plain-box length threshold stripping entire \"$...$\" spans as zero-length before counting, so a multi-clause answer written as several separate math spans (ex_1.8's E_A/E_B/E_C) always chose the organic-blob box regardless of actual rendered length - fixed to count the digits/units inside each span. Also caught and fixed, via the proper verify->simplify->format->tag propagation (not a stage-9 patch), a genuine stage-2 transcription error surfaced while reading q_1.14's prompt closely: \\hat{\\mathbf{1}} (digit one) where both source PDFs clearly show the unit vector i-hat - see the separate verify_correction/format_correction manifest entries for that fix. Full manual read-back performed per step_9/PROMPT.md's mandatory, non-automatable check: every question and final_answer in 06_simplify/chapter.simplified.en.md read against the rendered page (12 examples, 23 exercises, all multi-part items individually), plus a numeric-token script cross-check (all found). Every figure src verified to resolve against the actual 09_design/images/ output directory (not a scratch copy) and to match exactly between the JSON and the rendered HTML (17/17 both ways). Zero browser console errors on the rendered page."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-18T12:12:03.079970+00:00",
+    "inputs": {
+      "final.en.html": "72d32fbba40827e9"
+    },
+    "counts": {
+      "page_count": 25,
+      "file_size_bytes": 1340204,
+      "numeric_tokens_checked": 293,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "English-only chapter, no Devanagari - the emulate_media(screen) fix was still applied unconditionally per step_10/PROMPT.md's own instruction (a standing per-export fix, not re-diagnosed per chapter), and the known reph/ToUnicode-CMap limitation documented there does not apply to this chapter's content (no Devanagari reph sequences at all). Playwright/Chromium export with print_background=True, prefer_css_page_size=True, after waiting for document.fonts.ready. Page count, blank-page and numeric read-back gates all run against the PDF's own extracted text (fitz), not assumed carried over from stage 9's HTML check - read-back normalizes unicode superscript digits with an inserted separator before each run (the documented base+exponent merge trap, e.g. \"10³⁹\" naively -> \"1039\" hiding a standalone \"39\") before numeric comparison."
+  }
+]

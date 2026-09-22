@@ -1,0 +1,1759 @@
+{
+  "front": {
+    "title": "Electrostatic Potential and Capacitance",
+    "chapter": "2"
+  },
+  "items": [
+    {
+      "id": "ex_2.1",
+      "kind": "example",
+      "number": "2.1",
+      "topic": "Potential and work done near a point charge",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "(a) Calculate the potential at a point P due to a charge of $4 \\times 10^{-7} \\mathrm{C}$ located 9 cm away.\n(b) Hence obtain the work done in bringing a charge of $2 \\times 10^{-9} \\mathrm{C}$ from infinity to the point P. Does the answer depend on the path along which the charge is brought?"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Calculate the potential at a point P due to a charge of $4 \\times 10^{-7} \\mathrm{C}$ located 9 cm away."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "Key formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\nV & =\\frac{1}{4 \\pi \\varepsilon_{0}} \\frac{Q}{r}=9 \\times 10^{9} \\mathrm{Nm}^{2} \\mathrm{C}^{-2} \\times \\frac{4 \\times 10^{-7} \\mathrm{C}}{0.09 \\mathrm{~m}} \\\\\n& =4 \\times 10^{4} \\mathrm{~V}\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$V=4 \\times 10^{4} \\mathrm{~V}$"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Hence obtain the work done in bringing a charge of $2 \\times 10^{-9} \\mathrm{C}$ from infinity to the point P. Does the answer depend on the path along which the charge is brought?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "Key formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\nW & =q V=2 \\times 10^{-9} \\mathrm{C} \\times 4 \\times 10^{4} \\mathrm{~V} \\\\\n& =8 \\times 10^{-5} \\mathrm{~J}\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "No, the work done does not depend on the path. Any small path can be split into two perpendicular parts: one along r, and one perpendicular to r. The work done along the perpendicular part is zero."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$W=8 \\times 10^{-5} \\mathrm{~J}$; no, work done is path independent"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.2",
+      "kind": "example",
+      "number": "2.2",
+      "topic": "Point of zero potential between two charges",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Two charges $3 \\times 10^{-8} \\mathrm{C}$ and $-2 \\times 10^{-8} \\mathrm{C}$ are located 15 cm apart. At what point on the line joining the two charges is the electric potential zero? Take the potential at infinity to be zero."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_6.jpg",
+          "caption": "FIGURE 2.7"
+        }
+      ],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let us take the origin O at the location of the positive charge, with the line joining the two charges as the $x$-axis and the negative charge on the right of the origin (Fig. 2.7).\n\nLet P be the required point on the $x$-axis where the potential is zero, with $x$ its $x$-coordinate. The potentials from the two charges cannot add up to zero for $x<0$, so $x$ must be positive."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "If $x$ lies between O and A , we have\n$$\n\\frac{1}{4 \\pi \\varepsilon_{0}} \\frac{3 \\times 10^{-8}}{x \\times 10^{-2}}-\\frac{2 \\times 10^{-8}}{(15-x) \\times 10^{-2}}=0\n$$\nwhere $x$ is in cm. That is,\n$$\n\\frac{3}{x}-\\frac{2}{15-x}=0\n$$\nwhich gives $x=9 \\mathrm{~cm}$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "If $x$ lies on the extended line OA, the required condition is\n$$\n\\frac{3}{x}-\\frac{2}{x-15}=0\n$$\nwhich gives\n$$\nx=45 \\mathrm{~cm}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "So the electric potential is zero at 9 cm and at 45 cm from the positive charge, on the side of the negative charge. This uses the convention that potential is zero at infinity."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "zero at 9 cm and at 45 cm from the positive charge, on the side of the negative charge"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.3",
+      "kind": "example",
+      "number": "2.3",
+      "topic": "Signs of potential and work along field lines",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Figures 2.8 (a) and (b) show the field lines of a positive and negative point charge respectively.\n(a) Give the signs of the potential difference $V_{\\mathrm{P}}-V_{\\mathrm{O}}$; $V_{\\mathrm{B}}-V_{\\mathrm{A}}$.\n(b) Give the sign of the potential energy difference of a small negative charge between the points Q and $\\mathrm{P} ; \\mathrm{A}$ and B .\n(c) Give the sign of the work done by the field in moving a small positive charge from Q to P .\n(d) Give the sign of the work done by the external agency in moving a small negative charge from B to A.\n(e) Does the kinetic energy of a small negative charge increase or decrease in going from B to A?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_7.jpg",
+          "caption": "FIGURE 2.8"
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Give the signs of the potential difference $V_{\\mathrm{P}}-V_{\\mathrm{O}}$; $V_{\\mathrm{B}}-V_{\\mathrm{A}}$."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "As $V \\propto \\frac{1}{r}, V_{P}>V_{Q}$. Thus, $\\left(V_{P}-V_{Q}\\right)$ is positive. Also $V_{B}$ is less negative than $V_{A}$. Thus, $V_{B}>V_{A}$ or ( $V_{B}-V_{A}$ ) is positive."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "both $\\left(V_{P}-V_{O}\\right)$ and $\\left(V_{B}-V_{A}\\right)$ are positive"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Give the sign of the potential energy difference of a small negative charge between the points Q and $\\mathrm{P} ; \\mathrm{A}$ and B ."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "A small negative charge will be attracted towards positive charge. The negative charge moves from higher potential energy to lower potential energy. Therefore the sign of potential energy difference of a small negative charge between Q and P is positive.\nSimilarly, $(\\text { P.E. })_{\\mathrm{A}}>(\\text { P.E. })_{\\mathrm{B}}$ and hence sign of potential energy differences is positive."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "positive in both cases"
+            }
+          ]
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Give the sign of the work done by the field in moving a small positive charge from Q to P ."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "In moving a small positive charge from Q to P , work has to be done by an external agency against the electric field. Therefore, work done by the field is negative."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "negative"
+            }
+          ]
+        },
+        {
+          "label": "d",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Give the sign of the work done by the external agency in moving a small negative charge from B to A."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "In moving a small negative charge from B to A work has to be done by the external agency. It is positive."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "positive"
+            }
+          ]
+        },
+        {
+          "label": "e",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Does the kinetic energy of a small negative charge increase or decrease in going from B to A?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Due to force of repulsion on the negative charge, velocity decreases and hence the kinetic energy decreases in going from B to A."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "decreases"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.4",
+      "kind": "example",
+      "number": "2.4",
+      "topic": "Work to assemble charges on a square",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Four charges are arranged at the corners of a square ABCD of side $d$, as shown in Fig. 2.15. (a) Find the work required to put together this arrangement. (b) A charge $q_{0}$ is brought to the centre E of the square, the four charges being held fixed at its corners. How much extra work is needed to do this?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_14.jpg",
+          "caption": "FIGURE 2.15"
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Find the work required to put together this arrangement."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The work done depends only on the final arrangement of the charges, not on how we bring them together. So we find the work needed for one way of assembling them: bring $+q$ to A first, then the charges $-q,+q$ and $-q$ to B, C and D respectively. We add up the work in four steps:"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Bringing charge $+q$ to A, with no charge anywhere else, needs zero work."
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Bringing $-q$ to B, with $+q$ already at A, needs (charge at B) × (potential at B due to charge $+q$ at A):\n$$\n=-q \\times \\frac{q}{4 \\pi \\varepsilon_{0} d}=-\\frac{q^{2}}{4 \\pi \\varepsilon_{0} d}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Bringing charge $+q$ to C, with $+q$ at A and $-q$ at B, needs (charge at C) × (potential at C due to the charges at A and B):\n$$\n\\begin{aligned}\n& =+q \\frac{+q}{4 \\pi \\varepsilon_{0} d \\sqrt{2}}+\\frac{-q}{4 \\pi \\varepsilon_{0} d} \\\\\n& =\\frac{-q^{2}}{4 \\pi \\varepsilon_{0} d} 1-\\frac{1}{\\sqrt{2}}\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "substitute",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Bringing $-q$ to D, with $+q$ at $\\mathrm{A},-q$ at B, and $+q$ at C, needs (charge at D$) \\times($ tential at D due to the charges at A, B and C):\n$$\n\\begin{aligned}\n& =-q \\frac{+q}{4 \\pi \\varepsilon_{0} d}+\\frac{-q}{4 \\pi \\varepsilon_{0} d \\sqrt{2}}+\\frac{q}{4 \\pi \\varepsilon_{0} d} \\\\\n& =\\frac{-q^{2}}{4 \\pi \\varepsilon_{0} d} 2-\\frac{1}{\\sqrt{2}}\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Adding the work from steps (i)-(iv) gives the total work required:\n$$\n\\begin{aligned}\n& =\\frac{-q^{2}}{4 \\pi \\varepsilon_{0} d}(0)+(1)+1-\\frac{1}{\\sqrt{2}}+2-\\frac{1}{\\sqrt{2}} \\\\\n& =\\frac{-q^{2}}{4 \\pi \\varepsilon_{0} d}(4-\\sqrt{2})\n\\end{aligned}\n$$\nThis depends only on how the charges are arranged, not on the order in which we bring them together — by definition, this is the total electrostatic energy of the charges.\n(Students may try calculating the same energy in a different order and check that it comes out the same.)"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$\\dfrac{-q^{2}}{4 \\pi \\varepsilon_{0} d}(4-\\sqrt{2})$"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "A charge $q_{0}$ is brought to the centre E of the square, the four charges being held fixed at its corners. How much extra work is needed to do this?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The extra work necessary to bring a charge $q_{0}$ to the point E when the four charges are at $\\mathrm{A}, \\mathrm{B}, \\mathrm{C}$ and D is $q_{0} \\times$ (electrostatic potential at E due to the charges at $\\mathrm{A}, \\mathrm{B}, \\mathrm{C}$ and D ). The electrostatic potential at E is clearly zero since potential due to A and C is cancelled by that due to B and D. Hence, no work is required to bring any charge to point E."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "zero"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.5",
+      "kind": "example",
+      "number": "2.5",
+      "topic": "Potential energy of two charges in a field",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "(a) Determine the electrostatic potential energy of a system consisting of two charges $7 \\mu \\mathrm{C}$ and $-2 \\mu \\mathrm{C}$ (and with no external field) placed at ( $-9 \\mathrm{~cm}, 0,0$ ) and ( $9 \\mathrm{~cm}, 0,0$ ) respectively.\n(b) How much work is required to separate the two charges infinitely away from each other?\n(c) Suppose that the same system of charges is now placed in an external electric field $E=A\\left(1 / r^{2}\\right) ; A=9 \\times 10^{5} \\mathrm{NC}^{-1} \\mathrm{~m}^{2}$. What would the electrostatic energy of the configuration be?"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Determine the electrostatic potential energy of a system consisting of two charges $7 \\mu \\mathrm{C}$ and $-2 \\mu \\mathrm{C}$ (and with no external field) placed at ( $-9 \\mathrm{~cm}, 0,0$ ) and ( $9 \\mathrm{~cm}, 0,0$ ) respectively."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$U=\\frac{1}{4 \\pi \\varepsilon_{0}} \\frac{q_{1} q_{2}}{r}=9 \\times 10^{9} \\times \\frac{7 \\times(-2) \\times 10^{-12}}{0.18}=-0.7 \\mathrm{~J}$."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$U=-0.7 \\mathrm{~J}$"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "How much work is required to separate the two charges infinitely away from each other?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$W=U_{2}-U_{1}=0-U=0-(-0.7)=0.7 \\mathrm{~J}$."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$W=0.7 \\mathrm{~J}$"
+            }
+          ]
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Suppose that the same system of charges is now placed in an external electric field $E=A\\left(1 / r^{2}\\right) ; A=9 \\times 10^{5} \\mathrm{NC}^{-1} \\mathrm{~m}^{2}$. What would the electrostatic energy of the configuration be?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The mutual interaction energy of the two charges remains unchanged. In addition, there is the energy of interaction of the two charges with the external electric field. We find,\n$$\nq_{1} V\\left(\\mathbf{r}_{1}\\right)+q_{2} V\\left(\\mathbf{r}_{2}\\right)=A \\frac{7 \\mu \\mathrm{C}}{0.09 \\mathrm{~m}}+A \\frac{-2 \\mu \\mathrm{C}}{0.09 \\mathrm{~m}}\n$$\nand the net electrostatic energy is\n$$\n\\begin{array}{r}\nq_{1} V\\left(\\mathbf{r}_{1}\\right)+q_{2} V\\left(\\mathbf{r}_{2}\\right)+\\frac{q_{1} q_{2}}{4 \\pi \\varepsilon_{0} r_{12}}=A \\frac{7 \\mu \\mathrm{C}}{0.09 \\mathrm{~m}}+A \\frac{-2 \\mu \\mathrm{C}}{0.09 \\mathrm{~m}}-0.7 \\mathrm{~J} \\\\\n=70-20-0.7=49.3 \\mathrm{~J}\n\\end{array}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$49.3 \\mathrm{~J}$"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.6",
+      "kind": "example",
+      "number": "2.6",
+      "topic": "Heat released reorienting dipoles in a field",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A molecule of a substance has a permanent electric dipole moment of magnitude $10^{-29} \\mathrm{C} \\mathrm{m}$. A mole of this substance is polarised (at low temperature) by applying a strong electrostatic field of magnitude $10^{6} \\mathrm{~V} \\mathrm{~m}^{-1}$. The direction of the field is suddenly changed by an angle of 60°. Estimate the heat released by the substance in aligning its dipoles along the new direction of the field. For simplicity, assume 100\\% polarisation of the sample."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "Given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The dipole moment of each molecule is $=10^{-29} \\mathrm{C} \\mathrm{m}$. One mole of the substance has $6 \\times 10^{23}$ molecules, so the total dipole moment of all the molecules is $p=6 \\times 10^{23} \\times 10^{-29} \\mathrm{C} \\mathrm{m}$ $=6 \\times 10^{-6} \\mathrm{C} \\mathrm{m}$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Initial potential energy, $U_{i}=-p E \\cos \\theta=-6 \\times 10^{-6} \\times 10^{6} \\cos 0^{\\circ}=-6 \\mathrm{~J}$. Final potential energy (when $\\theta=60^{\\circ}$), $U_{f}=-6 \\times 10^{-6} \\times 10^{6} \\cos 60^{\\circ}=-3 \\mathrm{~J}$. Change in potential energy $=-3 \\mathrm{~J}-(-6 \\mathrm{~J})=3 \\mathrm{~J}$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "Conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "So there is a loss in potential energy — this must be the energy released by the substance as heat while its dipoles align."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$3 \\mathrm{~J}$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.7",
+      "kind": "example",
+      "number": "2.7",
+      "topic": "Conductors, insulators and electrostatic safety",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "(a) A comb run through one's dry hair attracts small bits of paper. Why?\nWhat happens if the hair is wet or if it is a rainy day? (Remember, a paper does not conduct electricity.)\n(b) Ordinary rubber is an insulator. But special rubber tyres of aircraft are made slightly conducting. Why is this necessary?\n(c) Vehicles carrying inflammable materials usually have metallic ropes touching the ground during motion. Why?\n(d) A bird perches on a bare high power line, and nothing happens to the bird. A man standing on the ground touches the same line and gets a fatal shock. Why?"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "A comb run through one's dry hair attracts small bits of paper. Why? What happens if the hair is wet or if it is a rainy day? (Remember, a paper does not conduct electricity.)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "This is because the comb gets charged by friction. The molecules in the paper gets polarised by the charged comb, resulting in a net force of attraction. If the hair is wet, or if it is rainy day, friction between hair and the comb reduces. The comb does not get charged and thus it will not attract small bits of paper."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "charging by friction polarises the paper's molecules, giving a net attractive force; wet hair reduces friction, so the comb no longer charges and no longer attracts the paper"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Ordinary rubber is an insulator. But special rubber tyres of aircraft are made slightly conducting. Why is this necessary?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "To let the charge built up by friction flow safely to the ground. If too much static electricity builds up, it can spark and start a fire."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "to conduct away friction-produced charge before it sparks and causes fire"
+            }
+          ]
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Vehicles carrying inflammable materials usually have metallic ropes touching the ground during motion. Why?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Reason similar to (b)."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "same reason as (b) - to conduct away friction-produced charge safely to the ground"
+            }
+          ]
+        },
+        {
+          "label": "d",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "A bird perches on a bare high power line, and nothing happens to the bird. A man standing on the ground touches the same line and gets a fatal shock. Why?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Current passes only when there is difference in potential."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "the bird's two feet are at (nearly) the same potential, so no current flows through it; the man, in contact with the line and the ground, spans a large potential difference"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.8",
+      "kind": "example",
+      "number": "2.8",
+      "topic": "Capacitance with a partial dielectric slab",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A slab of material of dielectric constant $K$ has the same area as the plates of a parallel-plate capacitor but has a thickness $(3 / 4) d$, where $d$ is the separation of the plates. How is the capacitance changed when the slab is inserted between the plates?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $E_{0}=V_{0} / d$ be the electric field between the plates when there is no dielectric and the potential difference is $V_{0}$. If the dielectric is now inserted, the electric field in the dielectric will be $E=E_{0} / K$. The potential difference will then be\n$$\n\\begin{aligned}\n& V=E_{0}\\left(\\frac{1}{4} d\\right)+\\frac{E_{0}}{K}\\left(\\frac{3}{4} d\\right) \\\\\n& =E_{0} d\\left(\\frac{1}{4}+\\frac{3}{4 K}\\right)=V_{0} \\frac{K+3}{4 K}\n\\end{aligned}\n$$\nThe potential difference decreases by the factor $(K+3) / 4 K$ while the free charge $Q_{0}$ on the plates remains unchanged. The capacitance thus increases"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "Capacitance with the slab",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nC=\\frac{Q_{0}}{V}=\\frac{4 K}{K+3} \\frac{Q_{0}}{V_{0}}=\\frac{4 K}{K+3} C_{0}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$C=\\dfrac{4K}{K+3}C_0$"
+        }
+      ]
+    },
+    {
+      "id": "ex_2.9",
+      "kind": "example",
+      "number": "2.9",
+      "topic": "Equivalent capacitance and charge in a network",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A network of four $10 \\mu \\mathrm{~F}$ capacitors is connected to a 500 V supply, as shown in Fig. 2.29. Determine (a) the equivalent capacitance of the network and (b) the charge on each capacitor. (Note, the charge on a capacitor is the charge on the plate with higher potential, equal and opposite to the charge on the plate with lower potential.)"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_28.jpg",
+          "caption": "FIGURE 2.29"
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Determine the equivalent capacitance of the network."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "In the given network, $C_{1}, C_{2}$ and $C_{3}$ are connected in series. The effective capacitance $\\mathrm{C}^{\\prime}$ of these three capacitors is given by"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "Key formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\frac{1}{C^{\\prime}}=\\frac{1}{C_{1}}+\\frac{1}{C_{2}}+\\frac{1}{C_{3}}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "For $C_{1}=C_{2}=C_{3}=10 \\mu \\mathrm{~F}, C^{\\prime}=(10 / 3) \\mu \\mathrm{~F}$. The network has $C^{\\prime}$ and $C_{4}$ connected in parallel. Thus, the equivalent capacitance $C$ of the network is\n$$\nC=C^{\\prime}+C_{4}=\\frac{10}{3}+10 \\quad \\mu \\mathrm{~F}=13.3 \\mu \\mathrm{~F}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$C=13.3 \\mu \\mathrm{~F}$"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Determine the charge on each capacitor."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Clearly, from the figure, the charge on each of the capacitors, $C_{1}$, $C_{2}$ and $C_{3}$ is the same, say $Q$. Let the charge on $C_{4}$ be $Q^{\\prime}$. Now, since the potential difference across AB is $Q / C_{1}$, across BC is $Q / C_{2}$, across CD is $Q / C_{3}$, we have\n$$\n\\frac{Q}{C_{1}}+\\frac{Q}{C_{2}}+\\frac{Q}{C_{3}}=500 \\mathrm{~V}\n$$\nAlso, $Q^{\\prime} / C_{4}=500 \\mathrm{~V}$."
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "This gives for the given value of the capacitances,\n$$\n\\begin{aligned}\n& Q=500 \\mathrm{~V} \\times \\frac{10}{3} \\mu \\mathrm{~F}=1.7 \\times 10^{-3} \\mathrm{C} \\text { and } \\\\\n& Q^{\\prime}=500 \\mathrm{~V} \\times 10 \\mu \\mathrm{~F}=5.0 \\times 10^{-3} \\mathrm{C}\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$Q=1.7 \\times 10^{-3} \\mathrm{C}$ on $C_1$, $C_2$, $C_3$; $Q'=5.0 \\times 10^{-3} \\mathrm{C}$ on $C_4$"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "ex_2.10",
+      "kind": "example",
+      "number": "2.10",
+      "topic": "Energy stored when capacitors are connected",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "(a) A 900 pF capacitor is charged by 100 V battery [Fig. 2.31(a)]. How much electrostatic energy is stored by the capacitor? (b) The capacitor is disconnected from the battery and connected to another 900 pF capacitor [Fig. 2.31(b)]. What is the electrostatic energy stored by the system?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_30.jpg",
+          "caption": "FIGURE 2.31"
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "A 900 pF capacitor is charged by 100 V battery [Fig. 2.31(a)]. How much electrostatic energy is stored by the capacitor?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The charge on the capacitor is\n$$\nQ=C V=900 \\times 10^{-12} \\mathrm{~F} \\times 100 \\mathrm{~V}=9 \\times 10^{-8} \\mathrm{C}\n$$\nThe energy stored by the capacitor is\n$$\n\\begin{aligned}\n& =(1 / 2) \\mathrm{CV}^{2}=(1 / 2) Q V \\\\\n& =(1 / 2) \\times 9 \\times 10^{-8} \\mathrm{C} \\times 100 \\mathrm{~V}=4.5 \\times 10^{-6} \\mathrm{~J}\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$4.5 \\times 10^{-6} \\mathrm{~J}$"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "The capacitor is disconnected from the battery and connected to another 900 pF capacitor [Fig. 2.31(b)]. What is the electrostatic energy stored by the system?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "In the steady state, both capacitors have their positive plates at the same potential, and their negative plates at the same potential. Let this common potential difference be $\\mathrm{V}^{\\prime}$, so the charge on each capacitor is $Q^{\\prime}=C V^{\\prime}$. Charge conservation gives $Q^{\\prime}=Q / 2$, so $V^{\\prime}=V / 2$. The total energy of the system is\n$$\n=2 \\times \\frac{1}{2} Q^{\\prime} V^{\\prime}=\\frac{1}{4} Q V=2.25 \\times 10^{-6} \\mathrm{~J}\n$$\nSo no charge is lost in going from (a) to (b), but the final energy is only half the initial energy."
+                }
+              ]
+            },
+            {
+              "type": "note",
+              "note_type": "tip",
+              "label": "Where did the energy go?",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "There is a brief transient period before the system settles into (b). During this time, a transient current flows from the first capacitor to the second, and energy is lost as heat and electromagnetic radiation."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$2.25 \\times 10^{-6} \\mathrm{~J}$ (half the initial energy; the rest is lost as heat and electromagnetic radiation during the transient)"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.1",
+      "kind": "exercise",
+      "number": "2.1",
+      "topic": "Zero-potential point between two charges",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Two charges $5 \\times 10^{-8} \\mathrm{C}$ and $-3 \\times 10^{-8} \\mathrm{C}$ are located 16 cm apart. At what point(s) on the line joining the two charges is the electric potential zero? Take the potential at infinity to be zero."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_31.jpg",
+          "caption": null
+        },
+        {
+          "src": "images/fig_physics-12-2_32.jpg",
+          "caption": null
+        }
+      ],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "Given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "There are two charges,\n$$\n\\begin{aligned}\n& q_{1}=5 \\times 10^{-8} \\mathrm{C} \\\\\n& q_{2}=-3 \\times 10^{-8} \\mathrm{C}\n\\end{aligned}\n$$\nDistance between the two charges, $d=16 \\mathrm{~cm}=0.16 \\mathrm{~m}$\nLet the electric potential ( $V$ ) at point P be zero. Potential at point P is the sum of potentials caused by charges $q_{1}$ and $q_{2}$ respectively.\n$$\n\\therefore V=\\frac{q_{1}}{4 \\pi \\epsilon_{0} r}+\\frac{q_{2}}{4 \\pi \\epsilon_{0}(d-r)}\n$$\nWhere,\n$$\n\\epsilon_{0}=\\text { Permittivity of free space }\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Consider a point P on the line joining the two charges, as shown in the given figure. $r=$ Distance of point P from charge $q_{1}$."
+            },
+            {
+              "type": "figure",
+              "src": "images/fig_physics-12-2_31.jpg",
+              "caption": null
+            },
+            {
+              "type": "text",
+              "text": "For $V=0$, equation (i) reduces to\n$$\n\\begin{aligned}\n& \\frac{q_{1}}{4 \\pi \\epsilon_{0} r}=-\\frac{q_{2}}{4 \\pi \\epsilon_{0}(d-r)} \\\\\n& \\frac{q_{1}}{r}=\\frac{-q_{2}}{d-r} \\\\\n& \\frac{5 \\times 10^{-8}}{r}=-\\frac{\\left(-3 \\times 10^{-8}\\right)}{(0.16-r)} \\\\\n& \\frac{0.16}{r}-1=\\frac{3}{5} \\\\\n& \\frac{0.16}{r}=\\frac{8}{5} \\\\\n& \\therefore r=0.1 \\mathrm{~m}=10 \\mathrm{~cm}\n\\end{aligned}\n$$\nTherefore, the potential is zero at a distance of 10 cm from the positive charge between the charges."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Suppose point P is outside the system of two charges at a distance $s$ from the negative charge, where potential is zero, as shown in the following figure."
+            },
+            {
+              "type": "figure",
+              "src": "images/fig_physics-12-2_32.jpg",
+              "caption": null
+            },
+            {
+              "type": "text",
+              "text": "For this arrangement, potential is given by,\n$$\nV=\\frac{q_{1}}{4 \\pi \\epsilon_{0} s}+\\frac{q_{2}}{4 \\pi \\epsilon_{0}(s-d)}\n$$\nFor $V=0$, equation (ii) reduces to\n$$\n\\begin{aligned}\n& \\frac{q_{1}}{4 \\pi \\epsilon_{0} s}=-\\frac{q_{2}}{4 \\pi \\epsilon_{0}(s-d)} \\\\\n& \\frac{q_{1}}{s}=\\frac{-q_{2}}{s-d} \\\\\n& \\frac{5 \\times 10^{-8}}{s}=-\\frac{\\left(-3 \\times 10^{-8}\\right)}{(s-0.16)} \\\\\n& 1-\\frac{0.16}{s}=\\frac{3}{5} \\\\\n& \\frac{0.16}{s}=\\frac{2}{5} \\\\\n& \\therefore s=0.4 \\mathrm{~m}=40 \\mathrm{~cm}\n\\end{aligned}\n$$\nTherefore, the potential is zero at a distance of 40 cm from the positive charge outside the system of charges."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "zero at 10 cm from the positive charge (between the charges) and at 40 cm from the positive charge (outside the system, beyond the negative charge)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2",
+      "kind": "exercise",
+      "number": "2.2",
+      "topic": "Potential at the centre of a charged hexagon",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A regular hexagon of side 10 cm has a charge $5 \\mu \\mathrm{C}$ at each of its vertices. Calculate the potential at the centre of the hexagon."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_33.jpg",
+          "caption": null
+        }
+      ],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "label": "Given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The given figure shows six equal amount of charges, $q$, at the vertices of a regular hexagon.\nWhere,\nCharge, $q=5 \\mu \\mathrm{C}=5 \\times 10^{-6} \\mathrm{C}$\nSide of the hexagon, $l=\\mathrm{AB}=\\mathrm{BC}=\\mathrm{CD}=\\mathrm{DE}=\\mathrm{EF}=\\mathrm{FA}=10 \\mathrm{~cm}$\nDistance of each vertex from centre $\\mathrm{O}, d=10 \\mathrm{~cm}$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "Key formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Electric potential at point O,\n$$\nV=\\frac{6 \\times q}{4 \\pi \\epsilon_{0} d}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Where,\n$\\epsilon_{0}=$ Permittivity of free space\n$$\n\\begin{aligned}\n& \\frac{1}{4 \\pi \\epsilon_{0}}=9 \\times 10^{9} \\mathrm{~N} \\mathrm{C}^{-2} \\mathrm{~m}^{-2} \\\\\n& \\therefore V=\\frac{6 \\times 9 \\times 10^{9} \\times 5 \\times 10^{-6}}{0.1} \\\\\n& \\quad=2.7 \\times 10^{6} \\mathrm{~V}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "Conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, the potential at the centre of the hexagon is $2.7 \\times 10^{6} \\mathrm{~V}$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$2.7 \\times 10^{6} \\mathrm{~V}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.3",
+      "kind": "exercise",
+      "number": "2.3",
+      "topic": "Equipotential surface of two equal opposite charges",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Two charges $2 \\mu \\mathrm{C}$ and $-2 \\mu \\mathrm{C}$ are placed at points A and B 6 cm apart."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_physics-12-2_34.jpg",
+          "caption": null
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Identify an equipotential surface of the system."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "An equipotential surface is the plane on which total potential is zero everywhere. This plane is normal to line AB . The plane is located at the mid-point of line AB because the magnitude of charges is the same."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "the plane normal to AB through its mid-point"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "What is the direction of the electric field at every point on this surface?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "The direction of the electric field at every point on this surface is normal to the plane in the direction of AB."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "normal to the plane, in the direction of AB"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.4",
+      "kind": "exercise",
+      "number": "2.4",
+      "topic": "Electric field of a charged spherical conductor",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A spherical conductor of radius 12 cm has a charge of $1.6 \\times 10^{-7} \\mathrm{C}$ distributed uniformly on its surface. What is the electric field"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "inside the sphere"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Radius of the spherical conductor, $r=12 \\mathrm{~cm}=0.12 \\mathrm{~m}$\nCharge is uniformly distributed over the conductor, $q=1.6 \\times 10^{-7} \\mathrm{C}$\nElectric field inside a spherical conductor is zero. This is because if there is field inside the conductor, then charges will move to neutralize it."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "zero"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "just outside the sphere"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "Key formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Electric field $E$ just outside the conductor is given by the relation,\n$$\nE=\\frac{q}{4 \\pi \\epsilon_{0} r^{2}}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Where,\n$$\n\\begin{aligned}\n& \\epsilon_{0}=\\text { Permittivity of free space } \\\\\n& \\frac{\\frac{1}{4 \\pi \\epsilon_{0}}}{}=9 \\times 10^{9} \\mathrm{~N} \\mathrm{~m}^{2} \\mathrm{C}^{-2} \\\\\n& \\therefore E=\\frac{1.6 \\times 10^{-7} \\times 9 \\times 10^{-9}}{(0.12)^{2}} \\\\\n& \\quad=10^{5} \\mathrm{~N} \\mathrm{C}^{-1}\n\\end{aligned}\n$$\nTherefore, the electric field just outside the sphere is $10^{5} \\mathrm{~N} \\mathrm{C}^{-1}$."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$10^{5} \\mathrm{~N} \\mathrm{C}^{-1}$"
+            }
+          ]
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "at a point 18 cm from the centre of the sphere?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Electric field at a point 18 m from the centre of the sphere $=E_{1}$\nDistance of the point from the centre, $d=18 \\mathrm{~cm}=0.18 \\mathrm{~m}$"
+                }
+              ]
+            },
+            {
+              "type": "formula",
+              "stage": "key_formula",
+              "label": "Key formula",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "$$\n\\begin{aligned}\nE_{1} & =\\frac{q}{4 \\pi \\epsilon_{0} d^{2}} \\\\\n& =\\frac{9 \\times 10^{9} \\times 1.6 \\times 10^{-7}}{\\left(18 \\times 10^{-2}\\right)^{2}} \\\\\n& =4.4 \\times 10^{4} \\mathrm{~N} / \\mathrm{C}\n\\end{aligned}\n$$"
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Therefore, the electric field at a point 18 cm from the centre of the sphere is\n$4.4 \\times 10^{4} \\mathrm{~N} / \\mathrm{C}$."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$4.4 \\times 10^{4} \\mathrm{~N} / \\mathrm{C}$"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.5",
+      "kind": "exercise",
+      "number": "2.5",
+      "topic": "Capacitance with halved gap and dielectric",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A parallel plate capacitor with air between the plates has a capacitance of 8 pF ( $1 \\mathrm{pF}=10^{-12} \\mathrm{~F}$ ). What will be the capacitance if the distance between the plates is reduced by half, and the space between them is filled with a substance of dielectric constant 6?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Capacitance between the parallel plates of the capacitor, $\\mathrm{C}=8 \\mathrm{pF}$\nInitially, distance between the parallel plates was $d$ and it was filled with air. Dielectric constant of air, $k=1$\nCapacitance, $C$, is given by the formula,"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "Capacitance with air",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nC & =\\frac{k \\in_{0} A}{d} \\\\\n& =\\frac{\\in_{0} A}{d}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Where,\n$$\n\\begin{aligned}\n& A=\\text { Area of each plate } \\\\\n& \\epsilon_{0}=\\text { Permittivity of free space }\n\\end{aligned}\n$$\nIf distance between the plates is reduced to half, then new distance, $d=\\frac{d}{2}$\nDielectric constant of the substance filled in between the plates, $k^{\\prime}=6$\nHence, capacitance of the capacitor becomes"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "Capacitance with dielectric, halved gap",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nC^{\\prime}=\\frac{k^{\\prime} \\in_{0} A}{d^{\\prime}}=\\frac{6 \\in_{0} A}{\\frac{d}{2}}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Taking ratios of equations (i) and (ii), we obtain\n$$\n\\begin{aligned}\nC^{\\prime} & =2 \\times 6 C \\\\\n& =12 C \\\\\n& =12 \\times 8=96 \\mathrm{pF}\n\\end{aligned}\n$$\nTherefore, the capacitance between the plates is 96 pF."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$96 \\mathrm{pF}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.6",
+      "kind": "exercise",
+      "number": "2.6",
+      "topic": "Series capacitors: total capacitance and voltage",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Three capacitors each of capacitance 9 pF are connected in series."
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "What is the total capacitance of the combination?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Capacitance of each of the three capacitors, $C=9 \\mathrm{pF}$\nEquivalent capacitance $\\left(C^{\\prime}\\right)$ of the combination of the capacitors is given by the relation,\n$$\n\\begin{aligned}\n\\frac{1}{C^{\\prime}} & =\\frac{1}{C}+\\frac{1}{C}+\\frac{1}{C} \\\\\n& =\\frac{1}{9}+\\frac{1}{9}+\\frac{1}{9}=\\frac{3}{9}=\\frac{1}{3} \\\\\n\\therefore C^{\\prime} & =3 \\mu \\mathrm{~F}\n\\end{aligned}\n$$\nTherefore, total capacitance of the combination is $3 \\mu \\mathrm{~F}$."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$3 \\mu \\mathrm{~F}$"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "What is the potential difference across each capacitor if the combination is connected to a 120 V supply?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Supply voltage, $V=100 \\mathrm{~V}$\nPotential difference $\\left(V^{\\prime}\\right)$ across each capacitor is equal to one-third of the supply voltage.\n$$\n\\therefore V^{\\prime}=\\frac{V}{3}=\\frac{120}{3}=40 \\mathrm{~V}\n$$\nTherefore, the potential difference across each capacitor is 40 V ."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$40 \\mathrm{~V}$"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.7",
+      "kind": "exercise",
+      "number": "2.7",
+      "topic": "Parallel capacitors: total capacitance and charge",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Three capacitors of capacitances 2 pF, 3 pF and 4 pF are connected in parallel."
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "What is the total capacitance of the combination?"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Capacitances of the given capacitors are\n$$\n\\begin{aligned}\n& C_{1}=2 \\mathrm{pF} \\\\\n& C_{2}=3 \\mathrm{pF} \\\\\n& C_{3}=4 \\mathrm{pF}\n\\end{aligned}\n$$\nFor the parallel combination of the capacitors, equivalent capacitor $C^{\\prime}$ is given by the algebraic sum,\n$$\nC^{\\prime}=2+3+4=9 \\mathrm{pF}\n$$\nTherefore, total capacitance of the combination is 9 pF."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$9 \\mathrm{pF}$"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Determine the charge on each capacitor if the combination is connected to a 100 V supply."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Supply voltage, $V=100 \\mathrm{~V}$\nThe voltage through all the three capacitors is same $=V=100 \\mathrm{~V}$\nCharge on a capacitor of capacitance $C$ and potential difference $V$ is given by the relation,\n$$\nq=V C\n$$\nFor $\\mathrm{C}=2 \\mathrm{pF}$,\n$$\n\\text { Charge }=V C=100 \\times 2=200 \\mathrm{pC}=2 \\times 10^{-10} \\mathrm{C}\n$$\nFor $\\mathrm{C}=3 \\mathrm{pF}$,\n$$\n\\text { Charge }=V C=100 \\times 3=300 \\mathrm{pC}=3 \\times 10^{-10} \\mathrm{C}\n$$\nFor $\\mathrm{C}=4 \\mathrm{pF}$,\nCharge $=V C=100 \\times 4=200 \\mathrm{pC}=4 \\times 10^{-10} \\mathrm{C}$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$2 \\times 10^{-10} \\mathrm{C}$ on the 2 pF capacitor; $3 \\times 10^{-10} \\mathrm{C}$ on the 3 pF capacitor; $4 \\times 10^{-10} \\mathrm{C}$ on the 4 pF capacitor"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.8",
+      "kind": "exercise",
+      "number": "2.8",
+      "topic": "Parallel plate capacitor: capacitance and charge",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "In a parallel plate capacitor with air between the plates, each plate has an area of $6 \\times 10^{-3} \\mathrm{~m}^{2}$ and the distance between the plates is 3 mm. Calculate the capacitance of the capacitor. If this capacitor is connected to a 100 V supply, what is the charge on each plate of the capacitor?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Area of each plate of the parallel plate capacitor, $A=6 \\times 10^{-3} \\mathrm{~m}^{2}$\nDistance between the plates, $d=3 \\mathrm{~mm}=3 \\times 10^{-3} \\mathrm{~m}$\nSupply voltage, $V=100 \\mathrm{~V}$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "Key formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Capacitance $C$ of a parallel plate capacitor is given by,\n$$\nC=\\frac{\\in_{0} A}{d}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Where,\n$$\n\\begin{aligned}\n& \\epsilon_{0}=\\text { Permittivity of free space } \\\\\n& =8.854 \\times 10^{-12} \\mathrm{~N}^{-1} \\mathrm{~m}^{-2} \\mathrm{C}^{-2}\n\\end{aligned}\n$$\n$$\n\\begin{aligned}\n\\therefore C & =\\frac{8.854 \\times 10^{-12} \\times 6 \\times 10^{-3}}{3 \\times 10^{-3}} \\\\\n& =17.71 \\times 10^{-12} \\mathrm{~F} \\\\\n& =17.71 \\mathrm{pF}\n\\end{aligned}\n$$\nPotential $V$ is related with the charge $q$ and capacitance $C$ as\n$$\n\\begin{aligned}\nV= & \\frac{q}{C} \\\\\n\\therefore q & =V C \\\\\n& =100 \\times 17.71 \\times 10^{-12} \\\\\n& =1.771 \\times 10^{-9} \\mathrm{C}\n\\end{aligned}\n$$\nTherefore, capacitance of the capacitor is 17.71 pF and charge on each plate is $1.771 \\times$ $10^{-9} \\mathrm{C}$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$C=17.71 \\mathrm{pF}$; $q=1.771 \\times 10^{-9} \\mathrm{C}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.9",
+      "kind": "exercise",
+      "number": "2.9",
+      "topic": "Mica sheet inserted with supply connected/disconnected",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Explain what would happen if in the capacitor given in Exercise 2.8, a 3 mm thick mica sheet (of dielectric constant = 6) were inserted between the plates,"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "while the voltage supply remained connected."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Dielectric constant of the mica sheet, $k=6$\nInitial capacitance, $C=1.771 \\times 10^{-11} \\mathrm{~F}$\nNew capacitance, $C^{\\prime}=k C=6 \\times 1.771 \\times 10^{-11}=106 \\mathrm{pF}$\nSupply voltage, $V=100 \\mathrm{~V}$\nNew charge, $q^{\\prime}=C^{\\prime} V=6 \\times 1.771 \\times 10^{-9}=1.06 \\times 10^{-8} \\mathrm{C}$\nPotential across the plates remains 100 V."
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "$C'=106 \\mathrm{pF}$; $q'=1.06 \\times 10^{-8} \\mathrm{C}$; potential remains 100 V"
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "after the supply was disconnected."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Dielectric constant, $k=6$\nInitial capacitance, $C=1.771 \\times 10^{-11} \\mathrm{~F}$\nNew capacitance, $C^{\\prime}=k C=6 \\times 1.771 \\times 10^{-11}=106 \\mathrm{pF}$\nIf supply voltage is removed, then there will be no effect on the amount of charge in the plates.\nCharge $=1.771 \\times 10^{-9} \\mathrm{C}$\nPotential across the plates is given by,\n$$\n\\begin{aligned}\n\\therefore V^{\\prime} & =\\frac{q}{C^{\\prime}} \\\\\n& =\\frac{1.771 \\times 10^{-9}}{106 \\times 10^{-12}} \\\\\n& =16.7 \\mathrm{~V}\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "charge unchanged at $1.771 \\times 10^{-9} \\mathrm{C}$; $V'=16.7 \\mathrm{~V}$"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": [],
+      "answer": []
+    },
+    {
+      "id": "q_2.10",
+      "kind": "exercise",
+      "number": "2.10",
+      "topic": "Energy stored in a charged capacitor",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A 12pF capacitor is connected to a 50V battery. How much electrostatic energy is stored in the capacitor?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Capacitor of the capacitance, $C=12 \\mathrm{pF}=12 \\times 10^{-12} \\mathrm{~F}$\nPotential difference, $V=50 \\mathrm{~V}$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "Key formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Electrostatic energy stored in the capacitor is given by the relation,\n$$\n\\begin{aligned}\nE & =\\frac{1}{2} C V^{2} \\\\\n& =\\frac{1}{2} \\times 12 \\times 10^{-12} \\times(50)^{2} \\\\\n& =1.5 \\times 10^{-8} \\mathrm{~J}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, the electrostatic energy stored in the capacitor is $1.5 \\times 10^{-8} \\mathrm{~J}$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$1.5 \\times 10^{-8} \\mathrm{~J}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.11",
+      "kind": "exercise",
+      "number": "2.11",
+      "topic": "Energy lost connecting two capacitors",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "A 600pF capacitor is charged by a 200V supply. It is then disconnected from the supply and is connected to another uncharged 600 pF capacitor. How much electrostatic energy is lost in the process?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Capacitance of the capacitor, $C=600 \\mathrm{pF}$\nPotential difference, $V=200 \\mathrm{~V}$\nElectrostatic energy stored in the capacitor is given by,"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "label": "Key formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\nE & =\\frac{1}{2} C V^{2} \\\\\n& =\\frac{1}{2} \\times\\left(600 \\times 10^{-12}\\right) \\times(200)^{2} \\\\\n& =1.2 \\times 10^{-5} \\mathrm{~J}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "If supply is disconnected from the capacitor and another capacitor of capacitance $C=600$ pF is connected to it, then equivalent capacitance $\\left(C^{\\prime}\\right)$ of the combination is given by,\n$$\n\\begin{aligned}\n\\frac{1}{C^{\\prime}} & =\\frac{1}{C}+\\frac{1}{C} \\\\\n& =\\frac{1}{600}+\\frac{1}{600}=\\frac{2}{600}=\\frac{1}{300} \\\\\n\\therefore C^{\\prime} & =300 \\mathrm{pF}\n\\end{aligned}\n$$\nNew electrostatic energy can be calculated as\n$$\n\\begin{aligned}\nE^{\\prime} & =\\frac{1}{2} \\times C^{\\prime} \\times V^{2} \\\\\n& =\\frac{1}{2} \\times 300 \\times(200)^{2} \\\\\n& =0.6 \\times 10^{-5} \\mathrm{~J}\n\\end{aligned}\n$$\nLoss in electrostatic energy $=E-E^{\\prime}$\n$$\n\\begin{aligned}\n& =1.2 \\times 10^{-5}-0.6 \\times 10^{-5} \\\\\n& =0.6 \\times 10^{-5} \\\\\n& =6 \\times 10^{-6} \\mathrm{~J}\n\\end{aligned}\n$$\nTherefore, the electrostatic energy lost in the process is $6 \\times 10^{-6} \\mathrm{~J}$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$6 \\times 10^{-6} \\mathrm{~J}$"
+        }
+      ]
+    }
+  ]
+}

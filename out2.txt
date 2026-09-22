@@ -1,0 +1,31 @@
+= −8.854 × 10−9 C
+= −8.854 nC
+Therefore, the value of the po
+Question 1.21:
+A conducting sphere of radiu
+from the centre of the sphere 
+charge on the sphere?
+Answer
+Electric field intensity (E) at 
+charge q is given by the relat
+Where,
+q = Net charge = 1.5 × 103 N
+d = Distance from the centre 
+∈0 = Permittivity of free spac
+And,
+= 9 × 109 N m2 C
+∴
+= 6.67 × 109 C
+= 6.67 nC
+oint charge is −8.854 nC.
+us 10 cm has an unknown charge. If the electric f
+is 1.5 × 103 N/C and points radially inward, wh
+a distance (d) from the centre of a sphere contai
+tion,
+N/C
+= 20 cm = 0.2 m
+ce
+C−2
+field 20 cm 
+at is the net 
+ining net 

@@ -1,0 +1,94 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-21T08:35:03.394630+00:00",
+    "inputs": {
+      "chapter.en.pdf": "9bea19084fa95e10",
+      "solutions.en.pdf": "a6177d9ba698efb2"
+    },
+    "counts": {
+      "chapter.en": {
+        "pages": 29,
+        "chars": 73613,
+        "dollar_spans": 1038,
+        "tables": 6,
+        "images": 25
+      },
+      "solutions.en": {
+        "pages": 32,
+        "chars": 41063,
+        "dollar_spans": 804,
+        "tables": 0,
+        "images": 6
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-medium build for physics-12-4 (Moving Charges and Magnetism), kept in its own separate chapter directory (physics-12-4-en) matching the three prior English-medium builds this session's own precedent - the Hindi-only physics-12-4 chapter (already built) is left completely untouched. This directory is English-only (no chapter.hi.pdf/solutions.hi.pdf) - per the user's own explicit instruction, same as before. The user's two source files were named misleadingly, again - confirmed directly by reading each file's own first-page text BEFORE naming anything in 00_raw: 'Chapter 4 Moving Charges And Magnetism.pdf' (369KB, 32 pages) opens with 'Question 4.1: ... Answer' - this is actually the SOLUTIONS manual, copied into 00_raw as solutions.en.pdf. 'physics_ch4_eng.pdf' (3.7MB, 29 pages) opens with '4.1 INTRODUCTION ... Oersted noticed that a current in a straight wire caused a noticeable deflection' - this is the real TEXTBOOK, copied into 00_raw as chapter.en.pdf."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-21T08:44:22.384107+00:00",
+    "inputs": {
+      "chapter.en.md": "4d12b788747bed46",
+      "solutions.en.md": "133f2fd8f8228dea"
+    },
+    "counts": {
+      "examples": 12,
+      "exercises": 13,
+      "raw_solutions": 28,
+      "matched": 13,
+      "orphan_solutions": 15,
+      "final_items": 40
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "physics-12-4-en: 12 examples (ex_4.1-ex_4.12), 13 exercises (q_4.1-q_4.13), 28 raw solutions in the official manual (Question 4.1-4.28). Verified a CLEAN 1:1 mapping for exercises 2.1-... wait 4.1-4.13 against solutions 4.1-4.13 by direct content comparison at multiple points (e.g. Exercise 4.11/Q4.11 both specify the same electron-in-magnetic-field setup; Exercise 4.13/Q4.13 both specify the same 30-turn coil problem with matching numbers) - matching physics-12-2-en's own clean-mapping precedent, NOT physics-12-1-en's offset or physics-12-3-en's scattered-renumbering pattern. No renumbering correction needed before the join. Solutions 4.14-4.28 (15 items) are genuine orphan additional-exercise content beyond the current textbook's own 13 exercises (Helmholtz coils, toroid, cyclotron-radius conceptual questions, galvanometer conversion, etc.) - a normal, expected outcome, not an error. Only one genuine markdown table exists anywhere in the source chapter.en.md (the SUMMARY section's physical-quantities table) and it is NOT part of any Example or Exercise - correctly left out of extraction (stage 2 only extracts Examples/Exercises/Solutions, not front/back matter). No table exists in solutions.en.md at all (0 per stage-1 stats). Content anomaly flagged, not fixed: Exercise 4.11's own textbook question text gives the electron charge as e=1.5x10^-19 C (a genuine textbook typo - the correct value, and the one the solutions manual Q4.11 itself uses throughout its derivation, is 1.6x10^-19 C) - transcribed verbatim per Rule 4 (exercise text immutable) and Rule 5 (nothing invented); flagged here for stage 5 to handle via its own proper verification mechanism, not silently corrected at this stage."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-21T09:54:13.467201+00:00",
+    "inputs": {
+      "chapter.en.md": "2d9a79fd3e0497a0"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 12,
+        "bytes": 20493
+      },
+      "qa.en": {
+        "items": 28,
+        "bytes": 48166
+      },
+      "total_items_in": 40
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise + additional_exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 40 items (12 + 28) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-21T09:55:18.841356+00:00",
+    "inputs": {
+      "examples.en.md": "7d0e2c91da9b4a51",
+      "qa.en.md": "1629fe218de771e3"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 40,
+        "bytes": 68525
+      },
+      "examples_in": 12,
+      "qa_in": 28
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order - plain reunion by disjoint id, not a fresh match. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 40 items equal examples.en.md's 12 + qa.en.md's 28 exactly."
+  }
+]

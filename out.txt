@@ -1,0 +1,20 @@
+Is there a transfer of mass from wool to polythene?
+Answer
+When polythene is rubbed against wool, a number of electrons get transferred from wool 
+to polythene. Hence, wool becomes positively charged and polythene becomes negatively 
+charged.
+Amount of charge on the polythene piece, q = −3 × 10−7 C
+Amount of charge on an electron, e = −1.6 × 10−19 C
+Number of electrons transferred from wool to polythene = n
+n can be calculated using the relation,
+q = ne
+= 1.87 × 1012
+Therefore, the number of electrons transferred from wool to polythene is 1.87 × 1012.
+Yes.
+There is a transfer of mass taking place. This is because an electron has mass,
+me = 9.1 × 10−3 kg
+Total mass transferred to polythene from wool,
+m = me × n
+= 9.1 × 10−31 × 1.85 × 1012
+= 1.706 × 10−18 kg
+Hence, a negligible amount of mass is transferred from wool to polythene.

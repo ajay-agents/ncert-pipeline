@@ -1,0 +1,333 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-18T13:17:09.926521+00:00",
+    "inputs": {
+      "chapter.en.pdf": "d69c4f007bde6809",
+      "solutions.en.pdf": "990147d582b3f6f0"
+    },
+    "counts": {
+      "chapter.en": {
+        "pages": 36,
+        "chars": 87842,
+        "dollar_spans": 1560,
+        "tables": 5,
+        "images": 31
+      },
+      "solutions.en": {
+        "pages": 47,
+        "chars": 59721,
+        "dollar_spans": 1282,
+        "tables": 0,
+        "images": 12
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-medium build for physics-12-2 (Electrostatic Potential and Capacitance), kept in its own separate chapter directory (physics-12-2-en) matching physics-12-1-en's own precedent - the Hindi-only physics-12-2 chapter (already built) is left completely untouched. This directory is English-only (no chapter.hi.pdf/solutions.hi.pdf) - per the user's own explicit instruction, same as physics-12-1-en. The user's two source files were named misleadingly - confirmed directly by reading each file's own first-page text BEFORE naming anything in 00_raw (not assumed from filename, and not repeating the physics-12-1-en swap-then-fix cycle): 'Chapter 2 Electrostatic Potential And Capacitance.pdf' (606KB, 47 pages) opens with 'Question 2.1: ... Answer' - this is actually the SOLUTIONS manual, copied into 00_raw as solutions.en.pdf. 'physics_ch2_eng.pdf' (3.9MB, 36 pages) opens with '2.1 Introduction ... Chapter Two ELECTROSTATIC POTENTIAL AND CAPACITANCE' - this is the real TEXTBOOK, copied into 00_raw as chapter.en.pdf."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-18T13:39:40.462660+00:00",
+    "inputs": {
+      "chapter.en.md": "7af6c3cf92baec07",
+      "solutions.en.md": "661e0a476767bd87"
+    },
+    "counts": {
+      "examples": 10,
+      "exercises": 11,
+      "raw_solutions": 37,
+      "matched": 11,
+      "orphan_solutions": 26
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts_examples_exercises",
+      "gate_counts_raw_solutions",
+      "gate_counts_final",
+      "gate_solutions_present_en"
+    ],
+    "model_calls": 3,
+    "notes": "English-only extraction for physics-12-2-en (Electrostatic Potential and Capacitance), structurally parallel to the existing Hindi-only physics-12-2 chapter: 10 examples (ex_2.1-ex_2.10), 11 exercises (q_2.1-q_2.11), 0 additional_exercise items on the exercises side - the rationalised textbook PDF has no ADDITIONAL EXERCISES section (confirmed: 01_mathpix/chapter.en.md's own EXERCISES section ends cleanly at 2.11, exactly at EOF). No Hindi files in this directory, so match.align_languages()/gate_bilingual are skipped entirely per CLAUDE.md's single-language note. Unlike physics-12-1-en, this chapter's solutions.en.md needed NO hand correction: sol_2.1-sol_2.11 map cleanly 1:1 to q_2.1-q_2.11, confirmed by direct content comparison (not just number counting) at several points across the range - see match_report.md's 'hand_verified_check' note. sol_2.12-sol_2.37 (26 items) are genuine additional-exercise content with no counterpart anywhere in the rationalised textbook and fall out as clean orphans. Two pre-existing defects in the official solutions manual's own printed text were transcribed verbatim rather than silently fixed (Rule 1/Rule 5 - flagged here for stage 5 to assess against the source PDF): sol_2.7's charge on the 4pF capacitor is printed as '200pC' immediately after computing '100x4=200pC=4x10^-10 C' - 100x4 is 400 and 4x10^-10 C is 400pC, not 200pC, an arithmetic slip already present in the source; sol_2.15 has a stray bare 'C' on its own line right before the 'Question 2.16:' heading, kept as printed rather than silently dropped."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-18T13:44:04.458658+00:00",
+    "inputs": {
+      "chapter.en.md": "5de0a69c28215d6a"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 10,
+        "bytes": 22562
+      },
+      "qa.en": {
+        "items": 11,
+        "bytes": 15478
+      },
+      "total_items_in": 21
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 21 items (10 + 11) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-18T13:46:31.127397+00:00",
+    "inputs": {
+      "examples.en.md": "b43c866042bbf456",
+      "qa.en.md": "ed09e394959696a7"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 21,
+        "bytes": 37884
+      },
+      "examples_in": 10,
+      "qa_in": 11
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order (examples then exercises) - plain reunion by disjoint id, not a fresh match, since both files came from the same stage-2 source. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 21 items equal examples.en.md's 10 + qa.en.md's 11 exactly - nothing gained or lost."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-18T13:54:13.675757+00:00",
+    "inputs": {
+      "combined.en.md": "5de0a69c28215d6a",
+      "chapter.en.pdf": "d69c4f007bde6809",
+      "solutions.en.pdf": "990147d582b3f6f0"
+    },
+    "counts": {
+      "items_checked": 21,
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "genuine_source_defects_confirmed_unchanged": 2
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 7,
+    "notes": "Verified all 21 items (10 examples, 11 exercises) against rendered page images (fitz pixmaps, since pdftoppm/poppler is unavailable in this environment for the Read tool's native PDF rendering) of 00_raw/chapter.en.pdf (examples + exercise question text, pages 5-32 and 35-36) and 00_raw/solutions.en.pdf (Q2.1-Q2.11, pages 1-12) - not the mathpix markdown, which is the artefact being checked. Every number, exponent, unit, sub-part and figure reference matched the source exactly; zero extraction defects found, zero Corrections needed. Two apparent numeric anomalies (q_2.6's solution says \"V=100V\" despite the question specifying a 120V supply; q_2.7's solution computes \"100x4=200pC\" for the 4pF capacitor, an arithmetic slip - should be 400pC) were confirmed via direct visual inspection of solutions.en.pdf pages 7 and 8-9 to be genuinely printed that way in the official NCERT solutions manual, not mathpix/OCR artefacts - left untouched per verify.md's rule that a textbook's own error is not this stage's call to fix. (A third anomaly flagged at stage 2, a stray bare \"C\" in raw sol_2.15, belongs to an orphan additional-exercise item never merged into this chapter's q_2.1-q_2.11 - not applicable here.) No same-page unit-type self-contradiction (verify.md's narrow AskUserQuestion exception) was found; both confirmed defects are the same-value-conflicts-with-itself kind the rule explicitly says to leave alone."
+  },
+  {
+    "stage": "extract_match_correction",
+    "at": "2026-09-18T14:00:18.483128+00:00",
+    "inputs": {
+      "chapter.en.md": "63e5d904bc6aa389"
+    },
+    "counts": {
+      "items_fixed": 2,
+      "q_2.1_solution_chars": {
+        "before": 291,
+        "after": 1909
+      },
+      "q_2.2_solution_chars": {
+        "before": 94,
+        "after": 806
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Found and fixed a genuine stage-2 data-integrity bug, caught only at stage 6 (a fork correctly refused to simplify corrupted input and halted instead), then independently re-verified before fixing: q_2.1 and q_2.2's item-level solution text was silently truncated right at the sentence immediately preceding their inline source-PDF figure reference - the entire algebraic derivation and final numeric working was missing from both, even though each item's separately-authored final_answer field happened to already hold the correct boxed result, which is how this slipped past stage 5's per-item PDF verification (that stage evidently checked the final answer, not full derivation completeness - a real gap in that pass, not caught by any gate, since gate_math_parity/gate_counts only check structural counts, not prose completeness). A full scan of all 21 items' solution tails against their known correct source endings (from this session's own earlier direct verbatim reads of solutions.en.md) confirmed the bug is isolated to exactly these two items - no other item shows a mid-derivation cutoff. Fixed via pipeline.mdio.markdown_to_chapter() -> mutate Item.solution.en for q_2.1/q_2.2 with the verbatim full text (matching this file's own convention of both figures placed as separate :::figure blocks before :::solution, so the inline \"![](...)\" markdown lines from the raw solutions.en.md source are correctly omitted from the reconstructed prose, not literally re-inserted) -> pipeline.render.render() -> overwrite 02_extract/chapter.en.md, never hand-edited directly. Round-trip verified via tag._parse and a full diff confirming every other item's solution/part text is byte-identical to before this fix. Stages 3 (split), 4 (combine) and 5 (verify) must be re-run against this corrected chapter.en.md before stage 6 proceeds - their existing outputs still carry the truncated text."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-18T14:00:30.918691+00:00",
+    "inputs": {
+      "chapter.en.md": "63e5d904bc6aa389"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 10,
+        "bytes": 22562
+      },
+      "qa.en": {
+        "items": 11,
+        "bytes": 17865
+      },
+      "total_items_in": 21
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 21 items (10 + 11) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-18T14:00:31.329233+00:00",
+    "inputs": {
+      "examples.en.md": "b43c866042bbf456",
+      "qa.en.md": "9206c3ca460cb132"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 21,
+        "bytes": 40271
+      },
+      "examples_in": 10,
+      "qa_in": 11
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order (examples then exercises) - plain reunion by disjoint id, not a fresh match, since both files came from the same stage-2 source. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 21 items equal examples.en.md's 10 + qa.en.md's 11 exactly - nothing gained or lost."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-18T14:01:49.035068+00:00",
+    "inputs": {
+      "combined.en.md": "63e5d904bc6aa389",
+      "chapter.en.pdf": "d69c4f007bde6809",
+      "solutions.en.pdf": "990147d582b3f6f0"
+    },
+    "counts": {
+      "items_checked": 21,
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "genuine_source_defects_confirmed_unchanged": 2
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Second verify pass, re-run after fixing a stage-2 truncation bug in q_2.1 and q_2.2 (see the extract_match_correction manifest entry) and re-running stages 3-4 against the corrected 02_extract/chapter.en.md. This pass carries no new Corrections - the fix was applied at its source (stage 2), not here, since it was a transcription defect (missing text), not a PDF-vs-extraction mismatch of the kind step_5/verify.md addresses. Both corrected items were independently re-verified byte-for-byte against solutions.en.pdf (pages 1-2 for q_2.1, pages 3-4 for q_2.2, rendered via fitz pixmap and read visually) before this pass - full derivations now match the official manual exactly. The two genuine official-manual defects already confirmed in the first verify pass (q_2.6 states V=100V despite a 120V supply; q_2.7 computes 100x4=200pC, an arithmetic slip that should be 400pC) remain correctly unchanged per Rule 1/verify.md - neither is the unit-type self-contradiction exception requiring user sign-off."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-21T05:42:14.683899+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "63e5d904bc6aa389"
+    },
+    "counts": {
+      "items_simplified_fields": 6,
+      "fields_unchanged": 35,
+      "restore_failed": 0
+    },
+    "gates_failed": {
+      "gate_bilingual": "skipped (English-only build)"
+    },
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 6,
+    "notes": "Simplified 6 solution fields for plainer register / shorter sentences (ex_2.1(b), ex_2.2 item, ex_2.4(a), ex_2.6 item, ex_2.7(b), ex_2.10(b) item), all via pipeline.protect.freeze()/restore() - every protected math/unit token from the original reproduced exactly once in the rewritten prose, verified programmatically before restore(), never hand-typed math. All other fields (15 of 21 items untouched, plus the non-simplified parts of the 6 touched items) left unchanged - already terse Given/Formula/Answer register with nothing to gain from rewriting, matching physics-12-1-en's own precedent of touching only a small deliberate subset rather than churning every field. ex_2.3(a) was deliberately left completely untouched despite having clear textbook-register prose, because it carries the exact comparative-sentence structure (\"V_B is less negative than V_A ... V_B>V_A\") that step_6/simplify.md documents as having caused a real silently-reversed-relationship bug on this exact chapter's Hindi sibling once already - not worth the risk for a sentence that was already clear. ex_2.4(a)'s reworded prose preserves a pre-existing OCR artifact verbatim inside token M14 ($) \\times($ tential - an mathpix-garbled \"potential\") unchanged, since fixing source defects is stage 5's job, not stage 6's."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-21T05:51:21.032047+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "061a6b429dfe576d"
+    },
+    "counts": {
+      "structured.en": {
+        "bytes": 39612,
+        "items": 21
+      }
+    },
+    "gates_failed": {
+      "tag_parse": "PASS"
+    },
+    "gates_passed": [
+      "protect_parity"
+    ],
+    "model_calls": 1,
+    "notes": "18 structural edits applied across 12 of 21 items (ex_2.1, ex_2.2, ex_2.4, ex_2.6, ex_2.8, ex_2.9, ex_2.10, q_2.1, q_2.2, q_2.4, q_2.5, q_2.8, q_2.10, q_2.11): :::formula wraps for reusable key-formula lines, :::step splits for genuinely multi-stage derivations (ex_2.2 and q_2.1 each have two independent scenarios; ex_2.4(a) has its own explicit (i)-(iv) sub-derivation; ex_2.9(b) splits equation setup from substitution), :::concept{label=\"Given\"} + fixed given/key-formula/substitute/conclusion labelling for q_2.2 and ex_2.6 where that shape is genuinely present, and one :::note{type=\"tip\"} for ex_2.10(b)'s \"where did the energy go\" aside (already a remark in the source, not invented). The remaining 9 items (ex_2.3, ex_2.5, ex_2.7, q_2.3, q_2.6, q_2.7, q_2.9) were left as plain paragraph text - already short/single-stage, or (ex_2.3, ex_2.7) purely conceptual reasoning with no given/formula/substitute shape to mark up. q_2.1 (explicitly directed): each of its two source figures (fig_31 for the between-charges scenario, fig_32 for the outside-the-system scenario) moved from the item-level pre-solution position stage 4 placed both at, into its own :::step, at the exact point the solution text refers to \"the given figure\"/\"the following figure\" - same src, same id, no duplication, matching format.md's figure-repositioning rule. KNOWN ARTIFACT (per format.md's judgement-call section): q_2.3 has a duplicate trailing whole-item :::solution after its two labelled parts (\"The situation is represented in the given figure.\") that just re-narrates content already covered in part (a)'s solution - left exactly as extracted, NOT deleted or reconciled. Stage 8 should render only q_2.3's per-part solutions and treat this trailing item-level one as the redundant copy. The two genuine official-manual defects already confirmed and left untouched in stages 5-6 (q_2.6 \"V=100V\" despite 120V supply; q_2.7 \"100x4=200pC\" arithmetic slip) were not touched or re-flagged here - already documented upstream. No wording, digit, symbol or table cell was changed anywhere - confirmed via protect.parity (no drift) and a full per-item question/final_answer byte-identity check against the stage-6 input."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-21T06:00:49.707605+00:00",
+    "inputs": {
+      "structured.en.md": "b23ff29cdbffec3e"
+    },
+    "counts": {
+      "items": 21,
+      "parts": 31,
+      "distinct_figures": 9,
+      "stage_distribution": {
+        "key_formula": 12,
+        "conclusion": 38,
+        "given": 13,
+        "substitute": 10
+      }
+    },
+    "gates_failed": {
+      "reparsed_counts_match_fresh_markdown_count": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Serialized via a deterministic Python walker (pipeline.tag._parse tree -> JSON), not hand-typed - matches _shared/RULES.md Rule 2 (only the given/key-formula/substitute/conclusion stage judgment is a judgment call; everything else here is mechanical). q_2.3's known duplicate-trailing item-level :::solution (just \"The situation is represented in the given figure.\", after its two labelled parts) was explicitly excluded from item-level solution_blocks per the rule that parts are authoritative when non-empty - confirmed via an allowlist check that raises if any OTHER item is found with both parts and a stray item-level solution, so this exclusion can never silently apply to an unexamined item. q_2.1's two figures (fig_31 for the between-charges scenario, fig_32 for the outside-the-system scenario) were correctly captured in their own steps' flows via recursive flow-walking. No noise (leading \"Solution:\" opener, empty note labels) needed stripping in this chapter - none was present as literal flow text. Figure src values kept exactly as \"images/fig_physics-12-2_N.jpg\", never stripped to a bare filename. Gate re-parsed the written JSON and compared item/part/figure counts against a FRESH direct count from structured.en.md (not counts held in memory while writing) - all three matched exactly."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-21T06:18:50.636403+00:00",
+    "inputs": {
+      "structured.en.md": "b23ff29cdbffec3e"
+    },
+    "counts": {
+      "items": 21,
+      "parts": 31,
+      "distinct_figures": 9,
+      "stage_distribution": {
+        "key_formula": 12,
+        "conclusion": 38,
+        "given": 13,
+        "substitute": 10
+      }
+    },
+    "gates_failed": {
+      "reparsed_counts_match_fresh_markdown_count": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Serialized via a deterministic Python walker (pipeline.tag._parse tree -> JSON), not hand-typed - matches _shared/RULES.md Rule 2 (only the given/key-formula/substitute/conclusion stage judgment is a judgment call; everything else here is mechanical). q_2.3's known duplicate-trailing item-level :::solution (just \"The situation is represented in the given figure.\", after its two labelled parts) was explicitly excluded from item-level solution_blocks per the rule that parts are authoritative when non-empty - confirmed via an allowlist check that raises if any OTHER item is found with both parts and a stray item-level solution, so this exclusion can never silently apply to an unexamined item. q_2.1's two figures (fig_31 for the between-charges scenario, fig_32 for the outside-the-system scenario) were correctly captured in their own steps' flows via recursive flow-walking. No noise (leading \"Solution:\" opener, empty note labels) needed stripping in this chapter - none was present as literal flow text. Figure src values kept exactly as \"images/fig_physics-12-2_N.jpg\", never stripped to a bare filename. Gate re-parsed the written JSON and compared item/part/figure counts against a FRESH direct count from structured.en.md (not counts held in memory while writing) - all three matched exactly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-21T06:22:29.561205+00:00",
+    "inputs": {
+      "structured.en.json": "be56d941157b7607"
+    },
+    "counts": {
+      "final.en.html_bytes": 95439,
+      "final.en.css_bytes": 16991,
+      "figures_embedded": 9
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored plain static HTML/CSS, reusing physics-12-1-en own converter/render_page.py (same subject+language, closest prior chapter) and its final.en.css (base solutions-chapter-1.css + its own additions: .s81/.s82 flex stack/row, .s23 flex-column fix, .s86-.s89 plain-rect boxed-answer variants + ~30-char threshold, break-inside:avoid on .s31/.s90/.s14, @media 700px mobile block) as the starting basis, per step_9/PROMPT.md. Macro-table gap check (grepped 06_simplify/chapter.simplified.en.md for every \\[a-zA-Z]+ command): found and fixed two gaps not covered by the reused converter - \\dfrac (aliased to \frac) and \\propto (mapped to the proportional-to symbol). No \\oint/\\sum/\begin{gathered}/\begin{cases} present in this chapter's own 21 used items. Confirmed \\epsilon/\u000barepsilon both map correctly (examples use varepsilon, exercises/solutions use epsilon), \\in correctly overridden as the epsilon-zero OCR artifact (not set membership), \\circ correctly overridden as degree sign (not composition) - both overrides already proven correct for this exact chapter per step_9/PROMPT.md's own documented history. Three real bugs caught via Playwright visual QA and fixed: (1) literal \"**Answer:**\" markdown prefix leaking onto the page - stage 8's serializer had not stripped it (mdio.py's own _strip_answer_prefix() convention was missed); fixed by adding the same strip to the stage 8 script and regenerating structured.en.json (re-gated, still PASS: 21 items/31 parts/9 figures unchanged). (2) q_2.1's two figures (nested inside their own steps' flows, not item-level siblings) were being rendered TWICE - once via the item-level \"figures before solution\" row (which blindly renders every entry in the JSON's flat figures inventory) and again in their correct nested position; fixed by excluding any figure src already found nested inside a solution_blocks flow from that item-level row. (3) A trailing parenthetical remark ending in \".)\" (ex_2.4a's \"...comes out the same.)\") had its sentence-splitter treat the period as a boundary, stranding a lone \")\" as its own one-character line; fixed by folding a \".\" immediately followed by a closing bracket into the same sentence. Mandatory manual read-back: numeric-token script confirmed all 202 tokens from 06_simplify/chapter.simplified.en.md (not the JSON) present in the rendered HTML text (post unicode-hyphen normalization for U+2212/U+2011 exponent signs); also visually read 5 screenshotted items spanning every structural pattern in this chapter (single-solution, two-figure multi-step, dense 6-block multi-part, the q_2.3 duplicate-solution-artifact case, note-pill + plain-vs-blob boxed-answer threshold) plus a mobile (375px) viewport check - all correct. The two known genuine official-manual defects (q_2.6 \"V=100V\" vs 120V supply; q_2.7 \"100x4=200pC\" arithmetic slip) confirmed rendering exactly as printed, untouched. All 9 figures verified via os.path.exists against the real 09_design/images/ directory."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-21T06:26:33.439856+00:00",
+    "inputs": {
+      "final.en.html": "18df0a3d2ffb82cf"
+    },
+    "counts": {
+      "page_count": 18,
+      "file_size_bytes": 862074,
+      "numeric_tokens_checked": 202,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "English-only chapter, no Devanagari - the standing emulate_media(screen) fix was still applied unconditionally per step_10/PROMPT.md (a per-export fix, not re-diagnosed per chapter), and the known reph/ToUnicode-CMap limitation documented there does not apply (no Devanagari content at all). Playwright/Chromium export with print_background=True, prefer_css_page_size=True, after waiting for document.fonts.ready. Page count, blank-page and numeric read-back gates all run against the PDF's own extracted text (fitz), not assumed carried over from stage 9's HTML check - read-back normalizes unicode superscript digits with an inserted separator before each run (the documented base+exponent merge trap) before numeric comparison."
+  }
+]
