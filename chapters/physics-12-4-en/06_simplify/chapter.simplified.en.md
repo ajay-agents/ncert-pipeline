@@ -30,7 +30,7 @@ B & =\frac{m g}{I l} \\
 & =\frac{0.2 \times 9.8}{2 \times 1.5}=0.65 \mathrm{~T}
 \end{aligned}
 $$
-Note that it would have been sufficient to specify $\mathrm{m} / \mathrm{l}$, the mass per unit length of the wire. The earth's magnetic field is approximately $4 \times 10^{-5} \mathrm{~T}$ and we have ignored it.
+Specifying $\mathrm{m} / \mathrm{l}$, the mass per unit length, would have been enough. We have ignored the earth's magnetic field, about $4 \times 10^{-5} \mathrm{~T}$.
 :::
 
 :::answer
@@ -132,7 +132,7 @@ The direction of the field is in the $+z$-direction. This is so since,
 $$
 \mathrm{d} \boldsymbol{l} \times \mathbf{r}=\Delta x \hat{\mathbf{i}} \times y \hat{\mathbf{j}}=y \Delta x(\hat{\mathbf{i}} \times \hat{\mathbf{j}})=y \Delta x \hat{\mathbf{k}}
 $$
-We remind you of the following cyclic property of cross-products,
+Recall the cyclic property of cross products:
 $$
 \hat{\mathbf{i}} \times \hat{\mathbf{j}}=\hat{\mathbf{k}} ; \hat{\mathbf{j}} \times \hat{\mathbf{k}}=\hat{\mathbf{i}} ; \hat{\mathbf{k}} \times \hat{\mathbf{i}}=\hat{\mathbf{j}}
 $$
@@ -335,7 +335,7 @@ f & =I \mathrm{~B} \\
 & =1 \times 3 \times 10^{-5}=3 \times 10^{-5} \mathrm{~N} \mathrm{~m}^{-1}
 \end{aligned}
 $$
-This is larger than the value $2 \times 10^{-7} \mathrm{Nm}^{-1}$ quoted in the definition of the ampere. Hence it is important to eliminate the effect of the earth's magnetic field and other stray fields while standardising the ampere.
+This is larger than the $2 \times 10^{-7} \mathrm{Nm}^{-1}$ in the ampere's own definition, so the earth's field and other stray fields must be eliminated when standardising the ampere.
 The direction of the force is downwards. This direction may be obtained by the directional property of cross product of vectors.
 :::
 
@@ -1150,7 +1150,7 @@ $$
 & \approx 8000 \mathrm{~A} / \mathrm{m}
 \end{aligned}
 $$
-If the length of the coil is taken as 50 cm, radius 4 cm, number of turns 400, and current 10 A, then these values are not unique for the given purpose. There is always a possibility of some adjustments with limits.
+One possible design: length 50 cm, radius 4 cm, 400 turns, current 10 A. These values are not unique - there is room to adjust them within the given limits.
 :::
 
 :::answer

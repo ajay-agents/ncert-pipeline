@@ -210,9 +210,6 @@ Same magnitude of B but opposite in direction to that in (b).
 Consider a tightly wound 100 turn coil of radius 10 cm, carrying a current of 1 A. What is the magnitude of the magnetic field at the centre of the coil?
 :::
 
-:::figure{src="images/fig_physics-12-4_12.jpg" id="fig_physics-12-4_12"}
-:::
-
 :::solution{label="Solution"}
 Since the coil is tightly wound, we may take each circular element to have the same radius $R=10 \mathrm{~cm}=0.1 \mathrm{~m}$. The number of turns $N=100$. The magnitude of the magnetic field is,
 $$
@@ -598,7 +595,7 @@ For the ideal ammeter with zero resistance, $I=3 / 3=1.00 \mathrm{~A}$
 
 ## Questions and Solutions
 
-:::question{number="4.1" kind="exercise" id="q_4.1"}
+:::question{number="4.1" kind="exercise" id="q_4.1" topic="Magnetic field at centre of a circular coil"}
 #### Question 4.1
 
 :::prompt
@@ -635,7 +632,7 @@ Hence, the magnitude of the magnetic field is $3.14 \times 10^{-4} \mathrm{~T}$.
 
 :::
 
-:::question{number="4.2" kind="exercise" id="q_4.2"}
+:::question{number="4.2" kind="exercise" id="q_4.2" topic="Magnetic field near a long straight wire"}
 #### Question 4.2
 
 :::prompt
@@ -668,7 +665,7 @@ Hence, the magnitude of the magnetic field at a point 20 cm from the wire is $3.
 
 :::
 
-:::question{number="4.3" kind="exercise" id="q_4.3"}
+:::question{number="4.3" kind="exercise" id="q_4.3" topic="Field direction from a north-south wire"}
 #### Question 4.3
 
 :::prompt
@@ -697,7 +694,7 @@ The point is located normal to the wire length at a distance of 2.5 m. The direc
 
 :::
 
-:::question{number="4.4" kind="exercise" id="q_4.4"}
+:::question{number="4.4" kind="exercise" id="q_4.4" topic="Field below an overhead power line"}
 #### Question 4.4
 
 :::prompt
@@ -727,7 +724,7 @@ The current is flowing from East to West. The point is below the power line. Hen
 
 :::
 
-:::question{number="4.5" kind="exercise" id="q_4.5"}
+:::question{number="4.5" kind="exercise" id="q_4.5" topic="Force per unit length on an angled wire"}
 #### Question 4.5
 
 :::prompt
@@ -755,7 +752,7 @@ Hence, the magnetic force per unit length on the wire is $0.6 \mathrm{~N} \mathr
 
 :::
 
-:::question{number="4.6" kind="exercise" id="q_4.6"}
+:::question{number="4.6" kind="exercise" id="q_4.6" topic="Force on a wire inside a solenoid"}
 #### Question 4.6
 
 :::prompt
@@ -784,7 +781,7 @@ Hence, the magnetic force on the wire is $8.1 \times 10^{-2} \mathrm{~N}$. The d
 
 :::
 
-:::question{number="4.7" kind="exercise" id="q_4.7"}
+:::question{number="4.7" kind="exercise" id="q_4.7" topic="Force between two parallel current-carrying wires"}
 #### Question 4.7
 
 :::prompt
@@ -819,7 +816,7 @@ The magnitude of force is $2 \times 10^{-5} \mathrm{~N}$. This is an attractive 
 
 :::
 
-:::question{number="4.8" kind="exercise" id="q_4.8"}
+:::question{number="4.8" kind="exercise" id="q_4.8" topic="Magnetic field inside a multi-layer solenoid"}
 #### Question 4.8
 
 :::prompt
@@ -855,7 +852,7 @@ Hence, the magnitude of the magnetic field inside the solenoid near its centre i
 
 :::
 
-:::question{number="4.9" kind="exercise" id="q_4.9"}
+:::question{number="4.9" kind="exercise" id="q_4.9" topic="Torque on a suspended square coil"}
 #### Question 4.9
 
 :::prompt
@@ -890,7 +887,7 @@ Hence, the magnitude of the torque experienced by the coil is 0.96 N m.
 
 :::
 
-:::question{number="4.10" kind="exercise" id="q_4.10"}
+:::question{number="4.10" kind="exercise" id="q_4.10" topic="Comparing sensitivity of two moving-coil meters"}
 #### Question 4.10
 
 :::prompt
@@ -954,7 +951,7 @@ Hence, the ratio of voltage sensitivity of $\mathrm{M}_{2}$ to $\mathrm{M}_{1}$ 
 
 :::
 
-:::question{number="4.11" kind="exercise" id="q_4.11"}
+:::question{number="4.11" kind="exercise" id="q_4.11" topic="Radius of an electron's circular orbit"}
 #### Question 4.11
 
 :::prompt
@@ -995,7 +992,7 @@ Hence, the radius of the circular orbit of the electron is 4.2 cm.
 
 :::
 
-:::question{number="4.12" kind="exercise" id="q_4.12"}
+:::question{number="4.12" kind="exercise" id="q_4.12" topic="Frequency of revolution of an orbiting electron"}
 #### Question 4.12
 
 :::prompt
@@ -1040,7 +1037,7 @@ Hence, the frequency of the electron is around 18 MHz and is independent of the 
 
 :::
 
-:::question{number="4.13" kind="exercise" id="q_4.13"}
+:::question{number="4.13" kind="exercise" id="q_4.13" topic="Counter torque on a suspended circular coil"}
 #### Question 4.13
 
 :::prompt
@@ -1077,7 +1074,7 @@ It can be inferred from relation (i) that the magnitude of the applied torque is
 
 ## Additional Questions
 
-:::question{number="4.14" kind="additional_exercise" id="sol_4.14"}
+:::question{number="4.14" kind="additional_exercise" id="sol_4.14" topic="Net field from two concentric opposing coils"}
 #### Additional Question 4.14
 
 :::prompt
@@ -1130,7 +1127,7 @@ $$
 
 :::
 
-:::question{number="4.15" kind="additional_exercise" id="sol_4.15"}
+:::question{number="4.15" kind="additional_exercise" id="sol_4.15" topic="Designing a solenoid for a target field"}
 #### Additional Question 4.15
 
 :::prompt
@@ -1162,7 +1159,7 @@ If the length of the coil is taken as 50 cm, radius 4 cm, number of turns 400, a
 
 :::
 
-:::question{number="4.16" kind="additional_exercise" id="sol_4.16"}
+:::question{number="4.16" kind="additional_exercise" id="sol_4.16" topic="Field on the axis of Helmholtz coils"}
 #### Additional Question 4.16
 
 :::prompt
@@ -1236,7 +1233,7 @@ Hence, it is proved that the field on the axis around the mid-point between the 
 
 :::
 
-:::question{number="4.17" kind="additional_exercise" id="sol_4.17"}
+:::question{number="4.17" kind="additional_exercise" id="sol_4.17" topic="Magnetic field inside and outside a toroid"}
 #### Additional Question 4.17
 
 :::prompt
@@ -1276,7 +1273,7 @@ Magnetic field in the empty space surrounded by the toroid is zero.
 
 :::
 
-:::question{number="4.18" kind="additional_exercise" id="sol_4.18"}
+:::question{number="4.18" kind="additional_exercise" id="sol_4.18" topic="Conceptual questions on charged particles in fields"}
 #### Additional Question 4.18
 
 :::prompt
@@ -1298,7 +1295,7 @@ An electron travelling from West to East enters a chamber having a uniform elect
 
 :::
 
-:::question{number="4.19" kind="additional_exercise" id="sol_4.19"}
+:::question{number="4.19" kind="additional_exercise" id="sol_4.19" topic="Trajectory of an accelerated electron in a field"}
 #### Additional Question 4.19
 
 :::prompt
@@ -1369,7 +1366,7 @@ Hence, the electron has a helical trajectory of radius 0.5 mm along the magnetic
 
 :::
 
-:::question{number="4.20" kind="additional_exercise" id="sol_4.20"}
+:::question{number="4.20" kind="additional_exercise" id="sol_4.20" topic="Identifying a charged particle from field balance"}
 #### Additional Question 4.20
 
 :::prompt
@@ -1413,7 +1410,7 @@ This value of specific charge $e / m$ is equal to the value of deuteron or deute
 
 :::
 
-:::question{number="4.21" kind="additional_exercise" id="sol_4.21"}
+:::question{number="4.21" kind="additional_exercise" id="sol_4.21" topic="Magnetic field balancing a suspended rod's weight"}
 #### Additional Question 4.21
 
 :::prompt
@@ -1452,7 +1449,7 @@ $$
 
 :::
 
-:::question{number="4.22" kind="additional_exercise" id="sol_4.22"}
+:::question{number="4.22" kind="additional_exercise" id="sol_4.22" topic="Force per unit length between starter-motor wires"}
 #### Additional Question 4.22
 
 :::prompt
@@ -1486,7 +1483,7 @@ Since the direction of the current in the wires is opposite, a repulsive force e
 
 :::
 
-:::question{number="4.23" kind="additional_exercise" id="sol_4.23"}
+:::question{number="4.23" kind="additional_exercise" id="sol_4.23" topic="Force on a wire through a cylindrical field"}
 #### Additional Question 4.23
 
 :::prompt
@@ -1553,7 +1550,7 @@ Hence, a force of 1.68 N acts in a vertically downward direction on the wire.
 
 :::
 
-:::question{number="4.24" kind="additional_exercise" id="sol_4.24"}
+:::question{number="4.24" kind="additional_exercise" id="sol_4.24" topic="Torque and equilibrium of a rectangular loop"}
 #### Additional Question 4.24
 
 :::prompt
@@ -1648,7 +1645,7 @@ Whereas, in case (f), the direction of $I \vec{A}$ and $\vec{B}$ is opposite. Th
 
 :::
 
-:::question{number="4.25" kind="additional_exercise" id="sol_4.25"}
+:::question{number="4.25" kind="additional_exercise" id="sol_4.25" topic="Torque, force and per-electron force on a coil"}
 #### Additional Question 4.25
 
 :::prompt
@@ -1688,7 +1685,7 @@ Hence, the average force on each electron is $5 \times 10^{-25} \mathrm{~N}$.
 
 :::
 
-:::question{number="4.26" kind="additional_exercise" id="sol_4.26"}
+:::question{number="4.26" kind="additional_exercise" id="sol_4.26" topic="Solenoid current needed to support a wire's weight"}
 #### Additional Question 4.26
 
 :::prompt
@@ -1734,7 +1731,7 @@ Hence, the current flowing through the solenoid is 108 A.
 
 :::
 
-:::question{number="4.27" kind="additional_exercise" id="sol_4.27"}
+:::question{number="4.27" kind="additional_exercise" id="sol_4.27" topic="Converting a galvanometer into a voltmeter"}
 #### Additional Question 4.27
 
 :::prompt
@@ -1764,7 +1761,7 @@ Hence, a resistor of resistance $5988 \Omega$ is to be connected in series with 
 
 :::
 
-:::question{number="4.28" kind="additional_exercise" id="sol_4.28"}
+:::question{number="4.28" kind="additional_exercise" id="sol_4.28" topic="Converting a galvanometer into an ammeter"}
 #### Additional Question 4.28
 
 :::prompt

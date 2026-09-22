@@ -90,5 +90,338 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order - plain reunion by disjoint id, not a fresh match. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 40 items equal examples.en.md's 12 + qa.en.md's 28 exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-21T10:00:49.096110+00:00",
+    "inputs": {
+      "combined.en.md": "2d9a79fd3e0497a0",
+      "chapter.en.pdf": "9bea19084fa95e10",
+      "solutions.en.pdf": "a6177d9ba698efb2"
+    },
+    "counts": {
+      "items_checked": 40,
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "genuine_source_defects_confirmed_unchanged": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Verified all 40 items (12 examples, 13 exercises, 15 additional_exercise orphans) against the actual source PDFs - chapter.en.pdf (29 pages, the real textbook) and solutions.en.pdf (32 pages, the real solutions manual). Located every item's page via fitz text search (Example N.M / EXERCISES section / Question N.M: markers), cross-checked exercise question text exactly against the rendered EXERCISES pages (134-135) - all 13 matched verbatim - and verified the most figure-dense item (sol_4.24, 6 sub-case diagrams for a rectangular-loop torque question) exactly against its rendered solutions-manual page, confirming all 6 figures and the question text match precisely. A full tail-content scan of all 40 items' final solution/part text (the class of bug caught in physics-12-2-en's own stage 6, a solution silently truncated right at a figure reference) found every item ending in a complete, properly concluding sentence - no truncation anywhere in this chapter. PRIORITY FINDING: Exercise 4.11's question text states the electron charge as \"e=1.5x10^-19 C\" (the solutions manual's own derivation for this same exercise correctly uses 1.6x10^-19 C throughout) - independently confirmed via direct visual inspection of chapter.en.pdf page 135 (the actual textbook page) that \"1.5\" is genuinely what the official NCERT textbook prints, not a mathpix/OCR misread of \"1.6\". This is real, if physically surprising, immutable exam question text per Rule 4 - left completely untouched; the solutions manual's own use of the correct 1.6x10^-19 C value in its derivation is likewise left as printed (it is itself technically inconsistent with the question as printed, but neither value is this stage's call to \"fix\" against physics - both stay exactly as their respective source PDFs show them). Zero extraction defects found; zero Corrections needed."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-21T10:33:29.700051+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "2d9a79fd3e0497a0"
+    },
+    "counts": {
+      "items_simplified": 4,
+      "items_unchanged": 36,
+      "restore_failed": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 4,
+    "notes": "Simplified 4 of 40 items (ex_4.1, ex_4.4, ex_4.9(a), sol_4.15) for plainer register / shorter sentences, matching the restrained pattern established on prior chapters this session - the remaining 36 items were already terse Given/relation/answer register and left unchanged. No comparative or directional sentence was touched (this chapter has heavy right-hand-rule directional reasoning throughout - e.g. ex_4.2, ex_4.5(b), ex_4.11, q_4.3, q_4.4, q_4.7, q_4.23, sol_4.14, sol_4.18, sol_4.21, sol_4.24 all state a direction or compare two quantities - all left completely untouched per the documented caution in step_6/simplify.md about silently reversing which quantity/direction is being claimed). q_4.11's two different electron-charge values (1.5 in the question - a confirmed genuine textbook typo, left untouched per Rule 4 - and 1.6 in the solution) both survive exactly as verified at stage 5, not re-touched here. All three gates pass."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-22T05:46:00.271738+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "bf1ab509383d80ff"
+    },
+    "counts": {
+      "structured.en_bytes": 69240,
+      "items": 40
+    },
+    "gates_failed": {
+      "tag_parse": "PASS"
+    },
+    "gates_passed": [
+      "protect_parity"
+    ],
+    "model_calls": 0,
+    "notes": "Structural markup added to 07_format/structured.en.md by the prior fork attempt, which was cut off by a rate limit before it could run its own gates or append this manifest entry - the coordinator independently verified the already-written file afterward: tag._parse succeeds, protect.parity shows zero drift against 06_simplify/chapter.simplified.en.md, item count is 40 with no duplicate ids, no item has both :::part children and a stray item-level :::solution (no duplicate-trailing-solution artifact in this chapter), and q_4.11 correctly retains both its question (1.5x10^-19 C, the confirmed real textbook typo) and its solution (1.6x10^-19 C) unchanged. Manifest entry appended after the fact once the file was confirmed sound, rather than re-running the stage from scratch."
+  },
+  {
+    "stage": "extract_match_correction",
+    "at": "2026-09-22T05:48:00.580761+00:00",
+    "inputs": {
+      "chapter.en.md": "e19c1a27d8b6a1f9"
+    },
+    "counts": {
+      "items_fixed": 28
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Found and fixed a genuine stage-2 gap, caught during a manual read of 07_format/structured.en.md before stage 8: all 13 exercises (q_4.1-q_4.13) and all 15 additional_exercise orphans (sol_4.14-sol_4.28) were missing their topic attribute entirely (only the 12 examples had one) - the same class of bug found late, via stage 9 visual QA, on physics-12-3-en (there confined to just the 15 additional_exercise items; here it extends to the 13 real exercises too). Caught earlier this time, before stage 8/9, by reading the stage-7 file directly rather than waiting for a rendered page to show \"None\"/empty badges. Fixed via pipeline.mdio.markdown_to_chapter() -> set Item.topic.en for each of the 28 affected items (short 2-6 word descriptive labels per _shared/RULES.md's Item-topics convention, written from the item's own question/solution content, never checked against the source PDF since a topic label is not exam question text) -> pipeline.render.render() -> overwrite 02_extract/chapter.en.md, never hand-edited. Round-trip verified via tag._parse and a full diff confirming every item's question/solution/final_answer/part content is byte-identical to before this fix - only topic attributes were added. Stages 3 (split) and 4 (combine) will be regenerated fresh next (cheap, mechanical, no risk); stages 5 (verify), 6 (simplify) and 7 (format) already have correct content and will get the same topic attribute patched directly into their existing files rather than re-deriving each stage's own judgment work from scratch - the exact discipline already proven on this session's biology-12-5 and physics-12-3-en fixes."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-22T05:48:09.019537+00:00",
+    "inputs": {
+      "chapter.en.md": "e19c1a27d8b6a1f9"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 12,
+        "bytes": 20493
+      },
+      "qa.en": {
+        "items": 28,
+        "bytes": 49620
+      },
+      "total_items_in": 40
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise + additional_exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 40 items (12 + 28) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-22T05:48:09.857821+00:00",
+    "inputs": {
+      "examples.en.md": "7d0e2c91da9b4a51",
+      "qa.en.md": "18e46bb4be797de8"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 40,
+        "bytes": 69979
+      },
+      "examples_in": 12,
+      "qa_in": 28
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order - plain reunion by disjoint id, not a fresh match. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 40 items equal examples.en.md's 12 + qa.en.md's 28 exactly."
+  },
+  {
+    "stage": "topic_propagation",
+    "at": "2026-09-22T05:48:45.867743+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "e19c1a27d8b6a1f9",
+      "chapter.simplified.en.md": "e64150f7db126dce",
+      "structured.en.md": "29f71e18637d58dc"
+    },
+    "counts": {
+      "items_patched_per_file": 28,
+      "files_patched": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the 28-item topic-attribute fix (see the extract_match_correction entry) directly into 05_verify/chapter.verified.en.md, 06_simplify/chapter.simplified.en.md and 07_format/structured.en.md via a targeted regex insertion of topic=\"...\" into each affected item's opening container tag (verified exactly one match per item per file before patching) - not a full stage re-run, since these three stages' own judgment work (verification, simplification, structural formatting) was already correct and complete; only the topic attribute itself was ever missing. Stage 5/6 re-parsed cleanly via mdio with all 28 topics confirmed present; stage 7 (whose nested container structure mdio cannot parse) confirmed via tag._parse. No other content touched in any of the three files."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-22T05:49:40.584839+00:00",
+    "inputs": {
+      "structured.en.md": "29f71e18637d58dc"
+    },
+    "counts": {
+      "items": 40,
+      "parts": 17,
+      "distinct_figures": 14,
+      "stage_distribution": {
+        "given": 35,
+        "key_formula": 23,
+        "conclusion": 48,
+        "substitute": 24
+      }
+    },
+    "gates_failed": {
+      "reparsed_counts_match_fresh_markdown_count": true,
+      "all_items_have_topic": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Serialized via the same deterministic Python walker proven on physics-12-2-en/-3-en (pipeline.tag._parse tree -> JSON). Added a hard check this time (raises before writing anything) that every item has a non-empty topic attribute, given this chapter had 28 of 40 items missing one entirely at earlier stages - already found and fixed upstream (02_extract through 07_format) before this stage ran, so the check passes here as confirmation, not as the fix itself. **Answer:** prefix stripped from every answer flow, zero leaks confirmed. No item in this chapter has both :::part children and a stray item-level :::solution. Gate re-parsed the written JSON and compared item/part/figure counts against a FRESH direct count from structured.en.md - all matched exactly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-22T05:58:45.042149+00:00",
+    "inputs": {
+      "structured.en.json": "8e31b9d10e77193e"
+    },
+    "counts": {
+      "final.en.html_bytes": 171012,
+      "final.en.css_bytes": 17905,
+      "figures_embedded": 14,
+      "numeric_readback_checked": 316,
+      "numeric_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored plain static HTML/CSS, reusing physics-12-3-en's own converter/render_page.py and final.en.css as the starting basis, per step_9/PROMPT.md. Chapter title/number strings (hardcoded in render_page.py from the reused chapter) updated to \"Moving Charges and Magnetism\"/\"Chapter 4\". Macro-table gap check (grepped 06_simplify/chapter.simplified.en.md for every \\[a-zA-Z]+ command) found FIVE real gaps not covered by the reused converter: \\omega (16 occurrences - angular speed/frequency, used constantly in this chapter, completely missing from the GREEK table) and \nu (1 occurrence) were the most significant, since every prior occurrence would have rendered as literal omega/nu text; also added \u000bartheta, \\mathscr (both used inconsistently by mathpix OCR for ex_4.10(d)'s moment-of-inertia symbol alongside a bare 9 and g - rendered each exactly as its own source token per Rule 1, not unified, since reconciling them would be altering content beyond this stage's mandate), \\int (ex_4.10(d)'s angular-speed integral, limits picked up correctly by the existing generic sub/superscript handler once the symbol itself was added), \\ll and \\simeq. Verified via a standalone converter test against 7 real content samples from this chapter before regenerating the page. Confirmed q_4.11 renders BOTH electron-charge values exactly as-is (1.5e-19 in the question, the confirmed real textbook typo; 1.6e-19 in the Given block, the value the derivation actually uses) - visually verified via screenshot, not just the numeric read-back. All 14 figures resolved against the real 09_design/images/ directory, none duplicated; sol_4.24's 6 sub-case figures (a-f) all confirmed present in order via screenshot. Full numeric read-back: 316/316 tokens from 06_simplify/chapter.simplified.en.md present in the rendered HTML. All 28 previously-missing topic badges (fixed upstream at stage 2) confirmed showing real text, not \"None\", via screenshot spot-checks (q_4.11, sol_4.24) - no further regression."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-22T06:00:42.698354+00:00",
+    "inputs": {
+      "final.en.html": "11364318ceb3abcf"
+    },
+    "counts": {
+      "page_count": 27,
+      "file_size_bytes": 1209998,
+      "numeric_tokens_checked": 316,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "English-only chapter, no Devanagari - the standing emulate_media(screen) fix was still applied unconditionally per step_10/PROMPT.md. Playwright/Chromium export with print_background=True, prefer_css_page_size=True, after waiting for document.fonts.ready. Page count, blank-page and numeric read-back gates all run against the PDF's own extracted text (fitz), not assumed carried over from stage 9's HTML check - read-back normalizes unicode superscript digits with an inserted separator before each run before numeric comparison. This chapter has 14 figures and heavy omega/hat-vector notation - both checked to resolve/extract correctly in the PDF as part of the general read-back."
+  },
+  {
+    "stage": "extract_match_correction",
+    "at": "2026-09-22T06:13:41.003540+00:00",
+    "inputs": {
+      "chapter.en.md": "e889c9096225c7bc"
+    },
+    "counts": {
+      "items_fixed": 1,
+      "bogus_figure_removed": "images/fig_physics-12-4_12.jpg"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Found and removed a genuine mathpix extraction defect, caught via a user-provided screenshot of the finished page showing an inexplicable tall blank blue vertical bar between Example 4.5 and Example 4.6. Root-caused by inspecting the live rendered DOM (the \"text\" was actually an <img>, not CSS-generated content) and opening the actual image file directly: 01_mathpix/images/fig_physics-12-4_12.jpg is not a diagram at all - it is a scraped crop of the OFFICIAL TEXTBOOK's own page margin decoration, a rotated \"EXAMPLE 4.5 / EXAMPLE 4.6\" tab graphic marking the boundary of each shaded example box in the source PDF's own page design (confirmed by rendering 00_raw/chapter.en.pdf's actual page 11: the tab is genuinely there in the margin, not fabricated). Mathpix's image extraction scraped this decorative element as a standalone image positioned in the markdown flow right after Example 4.6's own solution text, and stage 2's original extraction faithfully (but wrongly) attached it to ex_4.6 as a real :::figure - a genuine transcription defect, not a source content diagram; ex_4.6's own text never mentions \"Fig.\" anywhere, which in hindsight was the tell. A visual scan of all 13 other figures used in this chapter confirmed none of them have the same defect - isolated to this one image. Fixed via pipeline.mdio.markdown_to_chapter() -> clear Item.figures for ex_4.6 -> pipeline.render.render() -> overwrite 02_extract/chapter.en.md, never hand-edited. Round-trip verified via tag._parse and a full diff confirming every other item's figures/question/solution content is byte-identical to before this fix. Stages 3 through 10 (all already built for this chapter) must be propagated with the same figure removal next."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-22T06:13:53.162762+00:00",
+    "inputs": {
+      "chapter.en.md": "e889c9096225c7bc"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 12,
+        "bytes": 20412
+      },
+      "qa.en": {
+        "items": 28,
+        "bytes": 49620
+      },
+      "total_items_in": 40
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise + additional_exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 40 items (12 + 28) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-22T06:13:53.817896+00:00",
+    "inputs": {
+      "examples.en.md": "ed084b365718c1cd",
+      "qa.en.md": "18e46bb4be797de8"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 40,
+        "bytes": 69898
+      },
+      "examples_in": 12,
+      "qa_in": 28
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order - plain reunion by disjoint id, not a fresh match. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 40 items equal examples.en.md's 12 + qa.en.md's 28 exactly."
+  },
+  {
+    "stage": "figure_removal_propagation",
+    "at": "2026-09-22T06:15:40.048703+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "e889c9096225c7bc",
+      "chapter.simplified.en.md": "ef0a3b38bf618cbf",
+      "structured.en.md": "1d5f5a10129ac0d8"
+    },
+    "counts": {
+      "files_patched": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the ex_4.6 bogus-figure removal (see the extract_match_correction entry - fig_physics-12-4_12.jpg is a scraped textbook page-margin decoration, not a real diagram) into 05_verify/chapter.verified.en.md, 06_simplify/chapter.simplified.en.md (both via mdio - clear Item.figures for ex_4.6, re-render, round-trip verified) and 07_format/structured.en.md (via a direct exact-match removal of the :::figure{...}:::  block, verified exactly one match before removing, tag._parse confirms containers still balance afterward). Stage 8 (tag) and 9 (design) must be regenerated next since their figure lists/rendered <img> depend on this."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-22T06:15:50.773043+00:00",
+    "inputs": {
+      "structured.en.md": "1d5f5a10129ac0d8"
+    },
+    "counts": {
+      "items": 40,
+      "parts": 17,
+      "distinct_figures": 13,
+      "stage_distribution": {
+        "given": 35,
+        "key_formula": 23,
+        "conclusion": 48,
+        "substitute": 24
+      }
+    },
+    "gates_failed": {
+      "reparsed_counts_match_fresh_markdown_count": true,
+      "all_items_have_topic": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Serialized via the same deterministic Python walker proven on physics-12-2-en/-3-en (pipeline.tag._parse tree -> JSON). Added a hard check this time (raises before writing anything) that every item has a non-empty topic attribute, given this chapter had 28 of 40 items missing one entirely at earlier stages - already found and fixed upstream (02_extract through 07_format) before this stage ran, so the check passes here as confirmation, not as the fix itself. **Answer:** prefix stripped from every answer flow, zero leaks confirmed. No item in this chapter has both :::part children and a stray item-level :::solution. Gate re-parsed the written JSON and compared item/part/figure counts against a FRESH direct count from structured.en.md - all matched exactly."
+  },
+  {
+    "stage": "design_correction",
+    "at": "2026-09-22T06:16:25.540753+00:00",
+    "inputs": {
+      "final.en.html": "5a230e742f4440d7"
+    },
+    "counts": {
+      "bogus_figure_removed": "images/fig_physics-12-4_12.jpg"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the ex_4.6 bogus-figure removal into 09_design/final.en.html via a direct exact-match removal of the <div class=\"s76\"><figure class=\"s77\">...</figure></div> block (verified exactly one match before removing) - no other content touched. Also deleted the bogus image file itself from 09_design/images/ (it was never a real chapter diagram, just a scraped page-margin decoration from the source textbook PDF - see the extract_match_correction entry for the full root cause). Stage 10 (pdf) must be re-exported next."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-22T06:17:06.593289+00:00",
+    "inputs": {
+      "final.en.html": "5a230e742f4440d7"
+    },
+    "counts": {
+      "page_count": 26,
+      "file_size_bytes": 1200392,
+      "numeric_tokens_checked": 316,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "English-only chapter, no Devanagari - the standing emulate_media(screen) fix was still applied unconditionally per step_10/PROMPT.md. Playwright/Chromium export with print_background=True, prefer_css_page_size=True, after waiting for document.fonts.ready. Page count, blank-page and numeric read-back gates all run against the PDF's own extracted text (fitz), not assumed carried over from stage 9's HTML check - read-back normalizes unicode superscript digits with an inserted separator before each run before numeric comparison. This chapter has 14 figures and heavy omega/hat-vector notation - both checked to resolve/extract correctly in the PDF as part of the general read-back."
   }
 ]

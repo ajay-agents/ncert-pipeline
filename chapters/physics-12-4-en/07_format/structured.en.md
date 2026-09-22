@@ -23,6 +23,8 @@ FIGURE 4.3
 
 :::solution{label="Solution"}
 From Eq. (4.4), we find that there is an upward force F, of magnitude $Il B$. For mid-air suspension, this must be balanced by the force due to gravity:
+
+:::formula{label="Key formula"}
 $$
 \begin{aligned}
 m g & =I l B \\
@@ -30,7 +32,9 @@ B & =\frac{m g}{I l} \\
 & =\frac{0.2 \times 9.8}{2 \times 1.5}=0.65 \mathrm{~T}
 \end{aligned}
 $$
-Note that it would have been sufficient to specify $\mathrm{m} / \mathrm{l}$, the mass per unit length of the wire. The earth's magnetic field is approximately $4 \times 10^{-5} \mathrm{~T}$ and we have ignored it.
+:::
+
+Specifying $\mathrm{m} / \mathrm{l}$, the mass per unit length, would have been enough. We have ignored the earth's magnetic field, about $4 \times 10^{-5} \mathrm{~T}$.
 :::
 
 :::answer
@@ -91,6 +95,8 @@ What is the radius of the path of an electron (mass $9 \times 10^{-31} \mathrm{~
 
 :::solution{label="Solution"}
 Using Eq. (4.5) we find
+
+:::formula{label="Key formula"}
 $$
 \begin{aligned}
 r & =m v /(q B)=9 \times 10^{-31} \mathrm{~kg} \times 3 \times 10^{7} \mathrm{~m} \mathrm{~s}^{-1} /\left(1.6 \times 10^{-19} \mathrm{C} \times 6 \times 10^{-4} \mathrm{~T}\right) \\
@@ -100,6 +106,7 @@ E & =(1 / 2) m v^{2}=(1 / 2) 9 \times 10^{-31} \mathrm{~kg} \times 9 \times 10^{
 & \approx 4 \times 10^{-16} \mathrm{~J}=2.5 \mathrm{keV} .
 \end{aligned}
 $$
+:::
 :::
 
 :::answer
@@ -120,6 +127,7 @@ FIGURE 4.8
 :::
 
 :::solution{label="Solution"}
+:::formula{label="Key formula"}
 $$
 \begin{aligned}
 & |\mathrm{d} \mathbf{B}|=\frac{\mu_{0}}{4 \pi} \frac{I \mathrm{~d} l \sin \theta}{r^{2}} \text { [using Eq. (4.7)] } \\
@@ -128,11 +136,13 @@ $$
 & |\mathrm{~d} \mathbf{B}|=\frac{10^{-7} \times 10 \times 10^{-2}}{25 \times 10^{-2}}=4 \times 10^{-8} \mathrm{~T}
 \end{aligned}
 $$
+:::
+
 The direction of the field is in the $+z$-direction. This is so since,
 $$
 \mathrm{d} \boldsymbol{l} \times \mathbf{r}=\Delta x \hat{\mathbf{i}} \times y \hat{\mathbf{j}}=y \Delta x(\hat{\mathbf{i}} \times \hat{\mathbf{j}})=y \Delta x \hat{\mathbf{k}}
 $$
-We remind you of the following cyclic property of cross-products,
+Recall the cyclic property of cross products:
 $$
 \hat{\mathbf{i}} \times \hat{\mathbf{j}}=\hat{\mathbf{k}} ; \hat{\mathbf{j}} \times \hat{\mathbf{k}}=\hat{\mathbf{i}} ; \hat{\mathbf{k}} \times \hat{\mathbf{i}}=\hat{\mathbf{j}}
 $$
@@ -212,9 +222,12 @@ Consider a tightly wound 100 turn coil of radius 10 cm, carrying a current of 1 
 
 :::solution{label="Solution"}
 Since the coil is tightly wound, we may take each circular element to have the same radius $R=10 \mathrm{~cm}=0.1 \mathrm{~m}$. The number of turns $N=100$. The magnitude of the magnetic field is,
+
+:::formula{label="Key formula"}
 $$
 B=\frac{\mu_{0} N I}{2 R}=\frac{4 \pi \times 10^{-7} \times 10^{2} \times 1}{2 \times 10^{-1}}=2 \pi \times 10^{-4}=6.28 \times 10^{-4} \mathrm{~T}
 $$
+:::
 :::
 
 :::answer
@@ -246,6 +259,8 @@ $$
 & I_{e}=\text { Current enclosed by the loop }=I
 \end{aligned}
 $$
+
+:::step{n="1"}
 The result is the familiar expression for a long straight wire
 $$
 \begin{aligned}
@@ -254,6 +269,9 @@ $$
 & B \propto \frac{1}{r} \quad(r>a)
 \end{aligned}
 $$
+:::
+
+:::step{n="2"}
 Now the current enclosed $I_{e}$ is not $I$, but is less than this value. Since the current distribution is uniform, the current enclosed is,
 $$
 I_{e}=I \frac{\pi r^{2}}{\pi a^{2}}=\frac{I r^{2}}{a^{2}}
@@ -265,6 +283,7 @@ $$
 & B \propto r \quad(r<a)
 \end{aligned}
 $$
+:::
 
 Figure (4.14) shows a plot of the magnitude of $\mathbf{B}$ with distance $r$ from the centre of the wire. The direction of the field is tangential to the respective circular loop (1 or 2) and given by the right-hand rule described earlier in this section.
 :::
@@ -288,6 +307,8 @@ $$
 n=\frac{500}{0.5}=1000 \text { turns } / \mathrm{m}
 $$
 The length $l=0.5 \mathrm{~m}$ and radius $r=0.01 \mathrm{~m}$. Thus, $l / a=50$ i.e., $l \gg a$. Hence, we can use the long solenoid formula, namely, Eq. (4.20)
+
+:::formula{label="Key formula"}
 $$
 \begin{aligned}
 B & =\mu_{o} n I \\
@@ -295,6 +316,7 @@ B & =\mu_{o} n I \\
 & =6.28 \times 10^{-3} \mathrm{~T}
 \end{aligned}
 $$
+:::
 :::
 
 :::answer
@@ -329,13 +351,17 @@ $$
 \theta=90^{\circ}
 $$
 Hence,
+
+:::formula{label="Key formula"}
 $$
 \begin{aligned}
 f & =I \mathrm{~B} \\
 & =1 \times 3 \times 10^{-5}=3 \times 10^{-5} \mathrm{~N} \mathrm{~m}^{-1}
 \end{aligned}
 $$
-This is larger than the value $2 \times 10^{-7} \mathrm{Nm}^{-1}$ quoted in the definition of the ampere. Hence it is important to eliminate the effect of the earth's magnetic field and other stray fields while standardising the ampere.
+:::
+
+This is larger than the $2 \times 10^{-7} \mathrm{Nm}^{-1}$ in the ampere's own definition, so the earth's field and other stray fields must be eliminated when standardising the ampere.
 The direction of the force is downwards. This direction may be obtained by the directional property of cross product of vectors.
 :::
 
@@ -388,12 +414,16 @@ $$
 B=\frac{\mu_{0} N I}{2 R}
 $$
 Here, $N=100 ; I=3.2 \mathrm{~A}$, and $R=0.1 \mathrm{~m}$. Hence,
+
+:::formula{label="Key formula"}
 $$
 \begin{aligned}
 B & =\frac{4 \pi \times 10^{-7} \times 3.2}{2 \times 10^{-1}}=\frac{4 \times 10^{-5} \times 10}{2 \times 10^{-1}} \quad(\text { using } \pi \times 3.2=10) \\
 & =2 \times 10^{-3} \mathrm{~T}
 \end{aligned}
 $$
+:::
+
 The direction is given by the right-hand thumb rule.
 :::
 
@@ -448,6 +478,7 @@ What is the angular speed acquired by the coil when it has rotated by 90°? The 
 :::
 
 :::solution
+:::step{n="1"}
 From Newton's second law,
 $$
 9 \frac{\mathrm{~d} \omega}{\mathrm{~d} t}=m B \sin \theta
@@ -460,6 +491,9 @@ Using this,
 $$
 \vartheta \omega \mathrm{d} \omega=m B \sin \theta \mathrm{~d} \theta
 $$
+:::
+
+:::step{n="2"}
 Integrating from $\theta=0$ to $\theta=\pi / 2$,
 $$
 \begin{aligned}
@@ -468,6 +502,7 @@ $$
 & \omega_{f}=\left(\frac{2 m B}{g}\right)^{1 / 2}=\left(\frac{2 \times 20}{10^{-1}}\right)^{1 / 2}=20 \mathrm{~s}^{-1}
 \end{aligned}
 $$
+:::
 :::
 
 :::answer
@@ -603,13 +638,19 @@ A circular coil of wire consisting of 100 turns, each of radius 8.0 cm carries a
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Number of turns on the circular coil, $n=100$
 Radius of each turn, $r=8.0 \mathrm{~cm}=0.08 \mathrm{~m}$
 Current flowing in the coil, $I=0.4 \mathrm{~A}$
+:::
+
+:::formula{label="Key formula"}
 Magnitude of the magnetic field at the centre of the coil is given by the relation,
 $$
 |\mathbf{B}|=\frac{\mu_{0}}{4 \pi} \frac{2 \pi n I}{r}
 $$
+:::
+
 Where,
 $$
 \begin{aligned}
@@ -640,12 +681,18 @@ A long straight wire carries a current of 35 A. What is the magnitude of the fie
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Current in the wire, $I=35 \mathrm{~A}$
 Distance of a point from the wire, $r=20 \mathrm{~cm}=0.2 \mathrm{~m}$
+:::
+
+:::formula{label="Key formula"}
 Magnitude of the magnetic field at this point is given as:
 $$
 { }_{B}=\frac{\mu_{0}}{4 \pi} \frac{2 I}{r}
 $$
+:::
+
 Where,
 $$
 \mu_{0}=\text { Permeability of free space }=4 \pi \times 10^{-7} \mathrm{~T} \mathrm{~m} \mathrm{~A}^{-1}
@@ -673,10 +720,16 @@ A long straight wire in the horizontal plane carries a current of 50 A in north 
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Current in the wire, $I=50 \mathrm{~A}$
 A point is 2.5 m away from the East of the wire.
 ∴ Magnitude of the distance of the point from the wire, $r=2.5 \mathrm{~m}$.
+:::
+
+:::formula{label="Key formula"}
 Magnitude of the magnetic field at that point is given by the relation, $B=\frac{\mu_{0} 2 I}{4 \pi r}$
+:::
+
 Where,
 $\mu_{0}$ = Permeability of free space $=4 \pi \times 10^{-7} \mathrm{Tm} \mathrm{A}^{-1}$
 $$
@@ -702,12 +755,18 @@ A horizontal overhead power line carries a current of 90 A in east to west direc
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Current in the power line, $I=90 \mathrm{~A}$
 Point is located below the power line at distance, $r=1.5 \mathrm{~m}$
+:::
+
+:::formula{label="Key formula"}
 Hence, magnetic field at that point is given by the relation,
 $$
 B=\frac{\mu_{0} 2 I}{4 \pi r}
 $$
+:::
+
 Where,
 $$
 \begin{aligned}
@@ -732,9 +791,13 @@ What is the magnitude of magnetic force per unit length on a wire carrying a cur
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Current in the wire, $I=8 \mathrm{~A}$
 Magnitude of the uniform magnetic field, $B=0.15 \mathrm{~T}$
 Angle between the wire and magnetic field, $\theta=30^{\circ}$.
+:::
+
+:::formula{label="Key formula"}
 Magnetic force per unit length on the wire is given as:
 $$
 \begin{aligned}
@@ -743,6 +806,8 @@ $$
 & =0.6 \mathrm{~N} \mathrm{~m}^{-1}
 \end{aligned}
 $$
+:::
+
 Hence, the magnetic force per unit length on the wire is $0.6 \mathrm{~N} \mathrm{~m}^{-1}$.
 :::
 
@@ -760,10 +825,14 @@ A 3.0 cm wire carrying a current of 10 A is placed inside a solenoid perpendicul
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Length of the wire, $l=3 \mathrm{~cm}=0.03 \mathrm{~m}$
 Current flowing in the wire, $I=10 \mathrm{~A}$
 Magnetic field, $B=0.27 \mathrm{~T}$
 Angle between the current and magnetic field, $\theta=90^{\circ}$
+:::
+
+:::formula{label="Key formula"}
 Magnetic force exerted on the wire is given as:
 $$
 \begin{aligned}
@@ -772,6 +841,8 @@ $$
 & =8.1 \times 10^{-2} \mathrm{~N}
 \end{aligned}
 $$
+:::
+
 Hence, the magnetic force on the wire is $8.1 \times 10^{-2} \mathrm{~N}$. The direction of the force can be obtained from Fleming's left hand rule.
 :::
 
@@ -789,14 +860,20 @@ Two long and parallel straight wires A and B carrying currents of 8.0 A and 5.0 
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Current flowing in wire $\mathrm{A}, I_{\mathrm{A}}=8.0 \mathrm{~A}$
 Current flowing in wire $\mathrm{B}, I_{\mathrm{B}}=5.0 \mathrm{~A}$
 Distance between the two wires, $r=4.0 \mathrm{~cm}=0.04 \mathrm{~m}$
 Length of a section of wire A, $l=10 \mathrm{~cm}=0.1 \mathrm{~m}$
+:::
+
+:::formula{label="Key formula"}
 Force exerted on length $l$ due to the magnetic field is given as:
 $$
 B=\frac{\mu_{0} 2 I_{\mathrm{A}} I_{\mathrm{B}} l}{4 \pi r}
 $$
+:::
+
 Where,
 $$
 \mu_{0}=\text { Permeability of free space }=4 \pi \times 10^{-7} \mathrm{~T} \mathrm{~m} \mathrm{~A}^{-1}
@@ -824,15 +901,21 @@ A closely wound solenoid 80 cm long has 5 layers of windings of 400 turns each. 
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Length of the solenoid, $l=80 \mathrm{~cm}=0.8 \mathrm{~m}$
 There are five layers of windings of 400 turns each on the solenoid.
 ∴ Total number of turns on the solenoid, $N=5 \times 400=2000$
 Diameter of the solenoid, $D=1.8 \mathrm{~cm}=0.018 \mathrm{~m}$
 Current carried by the solenoid, $I=8.0 \mathrm{~A}$
+:::
+
+:::formula{label="Key formula"}
 Magnitude of the magnetic field inside the solenoid near its centre is given by the relation,
 $$
 B=\frac{\mu_{0} N I}{l}
 $$
+:::
+
 Where,
 $$
 \mu_{0}=\text { Permeability of free space }=4 \pi \times 10^{-7} \mathrm{~T} \mathrm{~m} \mathrm{~A}^{-1}
@@ -860,15 +943,21 @@ A square coil of side 10 cm consists of 20 turns and carries a current of 12 A. 
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Length of a side of the square coil, $l=10 \mathrm{~cm}=0.1 \mathrm{~m}$
 Current flowing in the coil, $I=12 \mathrm{~A}$
 Number of turns on the coil, $n=20$
 Angle made by the plane of the coil with magnetic field, $\theta=30^{\circ}$
 Strength of magnetic field, $B=0.80 \mathrm{~T}$
+:::
+
+:::formula{label="Key formula"}
 Magnitude of the magnetic torque experienced by the coil in the magnetic field is given by the relation,
 $$
 \tau=n B I A \sin \theta
 $$
+:::
+
 Where,
 $$
 \begin{aligned}
@@ -905,6 +994,7 @@ Determine the ratio of (a) current sensitivity and (b) voltage sensitivity of $\
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 For moving coil meter $\mathrm{M}_{1}$:
 Resistance, $R_{1}=10 \Omega$
 Number of turns, $N_{1}=30$
@@ -917,6 +1007,9 @@ Number of turns, $N_{2}=42$
 Area of cross-section, $A_{2}=1.8 \times 10^{-3} \mathrm{~m}^{2}$
 Magnetic field strength, $B_{2}=0.50 \mathrm{~T}$
 Spring constant, $K_{2}=K$
+:::
+
+:::step{n="1"}
 Current sensitivity of $\mathrm{M}_{1}$ is given as:
 $$
 I_{\mathrm{s} 1}=\frac{N_{1} B_{1} A_{1}}{K_{1}}
@@ -930,6 +1023,9 @@ $$
 \end{aligned}
 $$
 Hence, the ratio of current sensitivity of $\mathrm{M}_{2}$ to $\mathrm{M}_{1}$ is 1.4.
+:::
+
+:::step{n="2"}
 Voltage sensitivity for $\mathrm{M}_{2}$ is given as:
 $$
 V_{\mathrm{s} 2}=\frac{N_{2} B_{2} A_{2}}{K_{2} R_{2}}
@@ -943,6 +1039,7 @@ $$
 \end{aligned}
 $$
 Hence, the ratio of voltage sensitivity of $\mathrm{M}_{2}$ to $\mathrm{M}_{1}$ is 1.
+:::
 :::
 
 :::answer
@@ -959,11 +1056,15 @@ In a chamber, a uniform magnetic field of 6.5 $\mathrm{G}\left(1 \mathrm{G}=10^{
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Magnetic field strength, $B=6.5 \mathrm{G}=6.5 \times 10^{-4} \mathrm{~T}$
 Speed of the electron, $v=4.8 \times 10^{6} \mathrm{~m} / \mathrm{s}$
 Charge on the electron, $e=1.6 \times 10^{-19} \mathrm{C}$
 Mass of the electron, $m_{e}=9.1 \times 10^{-31} \mathrm{~kg}$
 Angle between the shot electron and magnetic field, $\theta=90^{\circ}$
+:::
+
+:::step{n="1"}
 Magnetic force exerted on the electron in the magnetic field is given as:
 $$
 F=e v B \sin \theta
@@ -973,6 +1074,9 @@ Hence, centripetal force exerted on the electron,
 $$
 F_{\mathrm{c}}=\frac{m v^{2}}{r}
 $$
+:::
+
+:::step{n="2" label="Substitute"}
 In equilibrium, the centripetal force exerted on the electron is equal to the magnetic force i.e.,
 $$
 \begin{aligned}
@@ -983,7 +1087,11 @@ r & =\frac{m v}{B e \sin \theta} \\
 & =4.2 \times 10^{-2} \mathrm{~m}=4.2 \mathrm{~cm}
 \end{aligned}
 $$
+:::
+
+:::step{n="3" label="Conclusion"}
 Hence, the radius of the circular orbit of the electron is 4.2 cm.
+:::
 :::
 
 :::answer
@@ -1000,6 +1108,7 @@ In Exercise 4.11 obtain the frequency of revolution of the electron in its circu
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Magnetic field strength, $B=6.5 \times 10^{-4} \mathrm{~T}$
 Charge of the electron, $e=1.6 \times 10^{-19} \mathrm{C}$
 Mass of the electron, $m_{e}=9.1 \times 10^{-31} \mathrm{~kg}$
@@ -1007,6 +1116,9 @@ Velocity of the electron, $v=4.8 \times 10^{6} \mathrm{~m} / \mathrm{s}$
 Radius of the orbit, $r=4.2 \mathrm{~cm}=0.042 \mathrm{~m}$
 Frequency of revolution of the electron $=v$
 Angular frequency of the electron $=\omega=2 \pi \nu$
+:::
+
+:::step{n="1"}
 Velocity of the electron is related to the angular frequency as:
 $$
 v=r \omega
@@ -1020,6 +1132,9 @@ $$
 \end{aligned}
 $$
 This expression for frequency is independent of the speed of the electron.
+:::
+
+:::step{n="2" label="Conclusion"}
 On substituting the known values in this expression, we get the frequency as:
 $$
 \begin{aligned}
@@ -1029,6 +1144,7 @@ v & =\frac{6.5 \times 10^{-4} \times 1.6 \times 10^{-19}}{2 \times 3.14 \times 9
 \end{aligned}
 $$
 Hence, the frequency of the electron is around 18 MHz and is independent of the speed of the electron.
+:::
 :::
 
 :::answer
@@ -1046,6 +1162,7 @@ Hence, the frequency of the electron is around 18 MHz and is independent of the 
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Number of turns on the circular coil, $n=30$
 Radius of the coil, $r=8.0 \mathrm{~cm}=0.08 \mathrm{~m}$
 Area of the coil $=\pi r^{2}=\pi(0.08)^{2}=0.0201 \mathrm{~m}^{2}$
@@ -1055,6 +1172,9 @@ Angle between the field lines and normal with the coil surface,
 $$
 \theta=60^{\circ}
 $$
+:::
+
+:::formula{label="Key formula"}
 The coil experiences a torque in the magnetic field. Hence, it turns. The counter torque applied to prevent the coil from turning is given by the relation,
 $$
 \begin{aligned}
@@ -1063,6 +1183,8 @@ $$
 & =3.133 \mathrm{~N} \mathrm{~m}
 \end{aligned}
 $$
+:::
+
 It can be inferred from relation (i) that the magnitude of the applied torque is not dependent on the shape of the coil. It depends on the area of the coil. Hence, the answer would not change if the circular coil in the above case is replaced by a planar coil of some irregular shape that encloses the same area.
 :::
 
@@ -1082,12 +1204,16 @@ Two concentric circular coils X and Y of radii 16 cm and 10 cm, respectively, li
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Radius of coil X, $r_{1}=16 \mathrm{~cm}=0.16 \mathrm{~m}$
 Radius of coil Y, $r_{2}=10 \mathrm{~cm}=0.1 \mathrm{~m}$
 Number of turns of on coil X, $n_{1}=20$
 Number of turns of on coil Y, $n_{2}=25$
 Current in coil X, $I_{1}=16 \mathrm{~A}$
 Current in coil Y, $I_{2}=18 \mathrm{~A}$
+:::
+
+:::step{n="1"}
 Magnetic field due to coil X at their centre is given by the relation,
 $$
 B_{1}=\frac{\mu_{0} n_{1} I_{1}}{2 r_{1}}
@@ -1102,6 +1228,9 @@ $$
 & =4 \pi \times 10^{-4} \mathrm{~T}(\text { towards East })
 \end{aligned}
 $$
+:::
+
+:::step{n="2"}
 Magnetic field due to coil Y at their centre is given by the relation,
 $$
 \begin{aligned}
@@ -1110,6 +1239,9 @@ B_{2} & =\frac{\mu_{0} n_{2} I_{2}}{2 r_{2}} \\
 & =9 \pi \times 10^{-4} \mathrm{~T} \text { (towards West) }
 \end{aligned}
 $$
+:::
+
+:::step{n="3" label="Conclusion"}
 Hence, net magnetic field can be obtained as:
 $$
 \begin{aligned}
@@ -1119,6 +1251,7 @@ B & =B_{2}-B_{1} \\
 & =1.57 \times 10^{-3} \mathrm{~T} \text { (towards West) }
 \end{aligned}
 $$
+:::
 :::
 
 :::answer
@@ -1135,10 +1268,14 @@ A magnetic field of $100 \mathrm{G}\left(1 \mathrm{G}=10^{-4} \mathrm{~T}\right)
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Magnetic field strength, $B=100 \mathrm{G}=100 \times 10^{-4} \mathrm{~T}$
 Number of turns per unit length, $n=1000$ turns $\mathrm{m}^{-1}$
 Current flowing in the coil, $I=15 \mathrm{~A}$
 Permeability of free space, $\mu_{0}=4 \pi \times 10^{-7} \mathrm{TmA}^{-1}$
+:::
+
+:::formula{label="Key formula"}
 Magnetic field is given by the relation,
 $$
 B=\mu_{0} n I
@@ -1150,7 +1287,9 @@ $$
 & \approx 8000 \mathrm{~A} / \mathrm{m}
 \end{aligned}
 $$
-If the length of the coil is taken as 50 cm, radius 4 cm, number of turns 400, and current 10 A, then these values are not unique for the given purpose. There is always a possibility of some adjustments with limits.
+:::
+
+One possible design: length 50 cm, radius 4 cm, 400 turns, current 10 A. These values are not unique - there is room to adjust them within the given limits.
 :::
 
 :::answer
@@ -1176,9 +1315,13 @@ $$
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Radius of circular coil $=R$
 Number of turns on the coil $=N$
 Current in the coil $=I$
+:::
+
+:::step{n="1"}
 Magnetic field at a point on its axis at distance $x$ is given by the relation,
 $$
 B=\frac{\mu_{0} I R^{2} N}{2\left(x^{2}+R^{2}\right)^{\frac{3}{2}}}
@@ -1192,6 +1335,9 @@ $$
 \therefore B=\frac{\mu_{0} I R^{2} N}{2 R^{3}}=\frac{\mu_{0} I N}{2 R}
 $$
 This is the familiar result for magnetic field at the centre of the coil.
+:::
+
+:::step{n="2"}
 Radii of two parallel co-axial circular coils $=R$
 Number of turns on each coil $=N$
 Current in both coils $=I$
@@ -1207,6 +1353,9 @@ Also, the other coil is at a distance of $2^{\frac{R}{2}-d}$ from point Q.
 $$
 B_{2}=\frac{\mu_{0} N I R^{2}}{2\left[\left(\frac{R}{2}-d\right)^{2}+R^{2}\right]^{\frac{3}{2}}}
 $$
+:::
+
+:::step{n="3"}
 Total magnetic field,
 $$
 \begin{aligned}
@@ -1216,6 +1365,9 @@ B & =B_{1}+B_{2} \\
 & =\frac{\mu_{0} I R^{2}}{2} \times\left(\frac{5 R^{2}}{4}\right)^{-\frac{3}{2}}\left[\left(1+\frac{4}{5} \frac{d^{2}}{R^{2}}-\frac{4}{5} \frac{d}{R}\right)^{-\frac{3}{2}}+\left(1+\frac{4}{5} \frac{d^{2}}{R^{2}}+\frac{4}{5} \frac{d}{R}\right)^{-\frac{3}{2}}\right]
 \end{aligned}
 $$
+:::
+
+:::step{n="4" label="Conclusion"}
 For $d \ll R$, neglecting the factor $\frac{d^{2}}{R^{2}}$, we get:
 $$
 \begin{aligned}
@@ -1225,6 +1377,7 @@ $$
 \end{aligned}
 $$
 Hence, it is proved that the field on the axis around the mid-point between the coils is uniform.
+:::
 :::
 
 :::answer
@@ -1241,15 +1394,21 @@ A toroid has a core (non-ferromagnetic) of inner radius 25 cm and outer radius 2
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Inner radius of the toroid, $r_{1}=25 \mathrm{~cm}=0.25 \mathrm{~m}$
 Outer radius of the toroid, $r_{2}=26 \mathrm{~cm}=0.26 \mathrm{~m}$
 Number of turns on the coil, $N=3500$
 Current in the coil, $I=11 \mathrm{~A}$
 Magnetic field outside a toroid is zero. It is non-zero only inside the core of a toroid.
+:::
+
+:::formula{label="Key formula"}
 Magnetic field inside the core of a toroid is given by the relation,
 $$
 B=\frac{\mu_{0} N I}{l}
 $$
+:::
+
 Where,
 $$
 \mu_{0}=\text { Permeability of free space }=4 \pi \times 10^{-7} \mathrm{TmA}^{-1}
@@ -1303,11 +1462,15 @@ An electron emitted by a heated cathode and accelerated through a potential diff
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Magnetic field strength, $B=0.15 \mathrm{~T}$
 Charge on the electron, $e=1.6 \times 10^{-19} \mathrm{C}$
 Mass of the electron, $m=9.1 \times 10^{-31} \mathrm{~kg}$
 Potential difference, $V=2.0 \mathrm{kV}=2 \times 10^{3} \mathrm{~V}$
 Thus, kinetic energy of the electron $=e V$
+:::
+
+:::step{n="1"}
 $$
 \begin{aligned}
 & \Rightarrow e V=\frac{1}{2} m v^{2} \\
@@ -1332,6 +1495,9 @@ $$
 & r=\frac{m v}{B e}
 \end{aligned}
 $$
+:::
+
+:::step{n="2"}
 From equations (1) and (2), we get
 $$
 \begin{aligned}
@@ -1343,6 +1509,9 @@ r & =\frac{m}{B e}\left[\frac{2 e V}{m}\right]^{\frac{1}{2}} \\
 \end{aligned}
 $$
 Hence, the electron has a circular trajectory of radius 1.0 mm normal to the magnetic field.
+:::
+
+:::step{n="3" label="Conclusion"}
 When the field makes an angle $\theta$ of 30° with initial velocity, the initial velocity will be,
 $$
 v_{1}=v \sin \theta
@@ -1359,6 +1528,7 @@ r_{1 .} & =\frac{m v_{1}}{B e} \\
 $$
 Hence, the electron has a helical trajectory of radius 0.5 mm along the magnetic field direction.
 :::
+:::
 
 :::answer
 **Answer:** (a) circular, radius 1.0 mm; (b) helical, radius 0.5 mm
@@ -1374,6 +1544,7 @@ A magnetic field set up using Helmholtz coils (described in Exercise 4.16) is un
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Magnetic field, $B=0.75 \mathrm{~T}$
 Accelerating voltage, $V=15 \mathrm{kV}=15 \times 10^{3} \mathrm{~V}$
 Electrostatic field, $E=9 \times 10^{5} \mathrm{~V} \mathrm{~m}^{-1}$
@@ -1381,6 +1552,9 @@ Mass of the electron $=m$
 Charge of the electron $=e$
 Velocity of the electron $=v$
 Kinetic energy of the electron $=e V$
+:::
+
+:::step{n="1"}
 $$
 \begin{aligned}
 & \Rightarrow \frac{1}{2} m v^{2}=e V \\
@@ -1394,6 +1568,9 @@ $$
 & v=\frac{E}{B}
 \end{aligned}
 $$
+:::
+
+:::step{n="2" label="Conclusion"}
 Putting equation (2) in equation (1), we get
 $$
 \begin{aligned}
@@ -1402,6 +1579,7 @@ $$
 \end{aligned}
 $$
 This value of specific charge $e / m$ is equal to the value of deuteron or deuterium ions. This is not a unique answer. Other possible answers are $\mathrm{He}^{++} \mathrm{Li}^{++}$, etc.
+:::
 :::
 
 :::answer
@@ -1420,10 +1598,14 @@ What will be the total tension in the wires if the direction of current is rever
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Length of the rod, $l=0.45 \mathrm{~m}$
 Mass suspended by the wires, $m=60 \mathrm{~g}=60 \times 10^{-3} \mathrm{~kg}$
 Acceleration due to gravity, $\mathrm{g}=9.8 \mathrm{~m} / \mathrm{s}^{2}$
 Current in the rod flowing through the wire, $I=5 \mathrm{~A}$
+:::
+
+:::step{n="1"}
 Magnetic field $(B)$ is equal and opposite to the weight of the wire i.e.,
 $$
 \begin{aligned}
@@ -1433,6 +1615,9 @@ B I l & =m \mathrm{~g} \\
 \end{aligned}
 $$
 A horizontal magnetic field of 0.26 T normal to the length of the conductor should be set up in order to get zero tension in the wire. The magnetic field should be such that Fleming's left hand rule gives an upward magnetic force.
+:::
+
+:::step{n="2" label="Conclusion"}
 If the direction of the current is revered, then the force due to magnetic field and the weight of the wire acts in a vertically downward direction.
 ∴ Total tension in the wire $=B I l+m \mathrm{~g}$
 $$
@@ -1441,6 +1626,7 @@ $$
 & =1.176 \mathrm{~N}
 \end{aligned}
 $$
+:::
 :::
 
 :::answer
@@ -1457,13 +1643,19 @@ The wires which connect the battery of an automobile to its starting motor carry
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Current in both wires, $I=300 \mathrm{~A}$
 Distance between the wires, $r=1.5 \mathrm{~cm}=0.015 \mathrm{~m}$
 Length of the two wires, $l=70 \mathrm{~cm}=0.7 \mathrm{~m}$
+:::
+
+:::formula{label="Key formula"}
 Force between the two wires is given by the relation,
 $$
 F=\frac{\mu_{0} I^{2}}{2 \pi r}
 $$
+:::
+
 Where,
 $$
 \mu_{0}=\text { Permeability of free space }=4 \pi \times 10^{-7} \mathrm{TmA}^{-1}
@@ -1494,9 +1686,13 @@ the wire in the N-S direction is lowered from the axis by a distance of 6.0 cm?
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Magnetic field strength, $B=1.5 \mathrm{~T}$
 Radius of the cylindrical region, $r=10 \mathrm{~cm}=0.1 \mathrm{~m}$
 Current in the wire passing through the cylindrical region, $I=7 \mathrm{~A}$
+:::
+
+:::step{n="1"}
 If the wire intersects the axis, then the length of the wire is the diameter of the cylindrical region.
 Thus, $l=2 r=0.2 \mathrm{~m}$
 Angle between magnetic field and current, $\theta=90^{\circ}$
@@ -1509,6 +1705,9 @@ $$
 \end{aligned}
 $$
 Hence, a force of 2.1 N acts on the wire in a vertically downward direction.
+:::
+
+:::step{n="2"}
 New length of the wire after turning it to the Northeast-Northwest direction can be given as::
 $$
 l_{1}=\frac{l}{\sin \theta}
@@ -1524,6 +1723,9 @@ F & =B I l_{1} \sin \theta \\
 \end{aligned}
 $$
 Hence, a force of 2.1 N acts vertically downward on the wire. This is independent of angle $\theta$ because $l \sin \theta$ is fixed.
+:::
+
+:::step{n="3" label="Conclusion"}
 The wire is lowered from the axis by distance, $d=6.0 \mathrm{~cm}$
 Let $l_{2}$ be the new length of the wire.
 $$
@@ -1542,6 +1744,7 @@ F_{2} & =B I l_{2} \\
 \end{aligned}
 $$
 Hence, a force of 1.68 N acts in a vertically downward direction on the wire.
+:::
 :::
 
 :::answer
@@ -1582,6 +1785,7 @@ A uniform magnetic field of 3000 G is established along the positive $z$-directi
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Magnetic field strength, $B=3000 \mathrm{G}=3000 \times 10^{-4} \mathrm{~T}=0.3 \mathrm{~T}$
 Length of the rectangular loop, $l=10 \mathrm{~cm}$
 Width of the rectangular loop, $b=5 \mathrm{~cm}$
@@ -1591,6 +1795,9 @@ A=l \times b=10 \times 5=50 \mathrm{~cm}^{2}=50 \times 10^{-4} \mathrm{~m}^{2}
 $$
 Current in the loop, $I=12 \mathrm{~A}$
 Now, taking the anti-clockwise direction of the current as positive and vise-versa:
+:::
+
+:::step{n="1" label="Case (a)"}
 Torque, $\vec{\tau}=I \vec{A} \times \vec{B}$
 From the given figure, it can be observed that $A$ is normal to the $y-z$ plane and $B$ is directed along the $z$-axis.
 $$
@@ -1600,6 +1807,9 @@ $$
 \end{aligned}
 $$
 The torque is $1.8 \times 10^{-2} \mathrm{~N} \mathrm{~m}$ along the negative $y$-direction. The force on the loop is zero because the angle between $A$ and $B$ is zero.
+:::
+
+:::step{n="2" label="Case (b)"}
 This case is similar to case (a). Hence, the answer is the same as (a).
 Torque $\tau=I \vec{A} \times \vec{B}$
 From the given figure, it can be observed that $A$ is normal to the $x-z$ plane and $B$ is directed along the $z$-axis.
@@ -1610,6 +1820,9 @@ $$
 \end{aligned}
 $$
 The torque is $1.8 \times 10^{-2} \mathrm{~N} \mathrm{~m}$ along the negative $x$ direction and the force is zero.
+:::
+
+:::step{n="3" label="Case (c)"}
 Magnitude of torque is given as:
 $$
 \begin{aligned}
@@ -1619,6 +1832,9 @@ $$
 \end{aligned}
 $$
 Torque is $1.8 \times 10^{-2} \mathrm{~N} \mathrm{~m}$ at an angle of 240° with positive $x$ direction. The force is zero.
+:::
+
+:::step{n="4" label="Case (d)"}
 Torque $\tau=I \vec{A} \times \vec{B}$
 $$
 \begin{aligned}
@@ -1627,6 +1843,9 @@ $$
 \end{aligned}
 $$
 Hence, the torque is zero. The force is also zero.
+:::
+
+:::step{n="5" label="Case (e)"}
 Torque $\tau=I \vec{A} \times \vec{B}$
 $$
 \begin{aligned}
@@ -1635,8 +1854,12 @@ $$
 \end{aligned}
 $$
 Hence, the torque is zero. The force is also zero.
+:::
+
+:::step{n="6" label="Conclusion"}
 In case (e), the direction of $I \vec{A}$ and $\vec{B}$ is the same and the angle between them is zero. If displaced, they come back to an equilibrium. Hence, its equilibrium is stable.
 Whereas, in case (f), the direction of $I \vec{A}$ and $\vec{B}$ is opposite. The angle between them is $180^{\circ}$. If disturbed, it does not come back to its original position. Hence, its equilibrium is unstable.
+:::
 :::
 
 :::answer
@@ -1657,12 +1880,17 @@ average force on each electron in the coil due to the magnetic field?
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Number of turns on the circular coil, $n=20$
 Radius of the coil, $r=10 \mathrm{~cm}=0.1 \mathrm{~m}$
 Magnetic field strength, $B=0.10 \mathrm{~T}$
 Current in the coil, $I=5.0 \mathrm{~A}$
+:::
+
 The total torque on the coil is zero because the field is uniform.
 The total force on the coil is zero because the field is uniform.
+
+:::step{n="1" label="Substitute"}
 Cross-sectional area of copper coil, $A=10^{-5} \mathrm{~m}^{2}$
 Number of free electrons per cubic meter in copper, $N=10^{29} / \mathrm{m}^{3}$
 Charge on the electron, $e=1.6 \times 10^{-19} \mathrm{C}$
@@ -1676,7 +1904,11 @@ v_{d} & =\text { Drift velocity of electrons } \\
 & =\frac{0.10 \times 5.0}{10^{29} \times 10^{-5}}=5 \times 10^{-25} \mathrm{~N}
 \end{aligned}
 $$
+:::
+
+:::step{n="2" label="Conclusion"}
 Hence, the average force on each electron is $5 \times 10^{-25} \mathrm{~N}$.
+:::
 :::
 
 :::answer
@@ -1693,6 +1925,7 @@ A solenoid 60 cm long and of radius 4.0 cm has 3 layers of windings of 300 turns
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Length of the solenoid, $L=60 \mathrm{~cm}=0.6 \mathrm{~m}$
 Radius of the solenoid, $r=4.0 \mathrm{~cm}=0.04 \mathrm{~m}$
 It is given that there are 3 layers of windings of 300 turns each.
@@ -1701,7 +1934,12 @@ Length of the wire, $l=2 \mathrm{~cm}=0.02 \mathrm{~m}$
 Mass of the wire, $m=2.5 \mathrm{~g}=2.5 \times 10^{-3} \mathrm{~kg}$
 Current flowing through the wire, $i=6 \mathrm{~A}$
 Acceleration due to gravity, $\mathrm{g}=9.8 \mathrm{~m} / \mathrm{s}^{2}$
+:::
+
+:::formula{label="Key formula"}
 Magnetic field produced inside the solenoid, $B=\frac{\mu_{0} n I}{L}$
+:::
+
 Where,
 $$
 \mu_{0}=\text { Permeability of free space }=4 \pi \times 10^{-7} \mathrm{TmA}^{-1}
@@ -1739,12 +1977,16 @@ A galvanometer coil has a resistance of $12 \Omega$ and the metre shows full sca
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Resistance of the galvanometer coil, $G=12 \Omega$
 Current for which there is full scale deflection, ${ }^{I} \mathrm{~g}=3 \mathrm{~mA}=3 \times 10^{-3} \mathrm{~A}$
 Range of the voltmeter is 0, which needs to be converted to 18 V.
 $$
 \therefore V=18 \mathrm{~V}
 $$
+:::
+
+:::formula{label="Key formula"}
 Let a resistor of resistance $R$ be connected in series with the galvanometer to convert it into a voltmeter. This resistance is given as:
 $$
 \begin{aligned}
@@ -1752,6 +1994,8 @@ R & =\frac{V}{I_{\mathrm{g}}}-\mathrm{G} \\
 & =\frac{18}{3 \times 10^{-3}}-12=6000-12=5988 \Omega
 \end{aligned}
 $$
+:::
+
 Hence, a resistor of resistance $5988 \Omega$ is to be connected in series with the galvanometer.
 :::
 
@@ -1769,6 +2013,7 @@ A galvanometer coil has a resistance of $15 \Omega$ and the metre shows full sca
 :::
 
 :::solution{label="Solution"}
+:::concept{label="Given"}
 Resistance of the galvanometer coil, $G=15 \Omega$
 Current for which the galvanometer shows full scale deflection,
 $$
@@ -1778,6 +2023,9 @@ Range of the ammeter is 0, which needs to be converted to 6 A.
 $$
 \text { ∴ Current, } I=6 \mathrm{~A}
 $$
+:::
+
+:::formula{label="Key formula"}
 A shunt resistor of resistance $S$ is to be connected in parallel with the galvanometer to convert it into an ammeter. The value of $S$ is given as:
 $$
 \begin{aligned}
@@ -1787,6 +2035,8 @@ S & =\frac{6 \times 10^{-2}}{6-0.004}=\frac{0.06}{5.996} \\
 \approx & 0.01 \Omega=10 \mathrm{~m} \Omega
 \end{aligned}
 $$
+:::
+
 Hence, a $10 \mathrm{~m} \Omega$ shunt resistor is to be connected in parallel with the galvanometer.
 :::
 

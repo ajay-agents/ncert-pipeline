@@ -1,0 +1,318 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-22T06:21:49.922889+00:00",
+    "inputs": {
+      "chapter.en.pdf": "7ec2926362f9193e",
+      "solutions.en.pdf": "6d4f1dc0a37edbd4"
+    },
+    "counts": {
+      "chapter.en": {
+        "pages": 18,
+        "chars": 41362,
+        "dollar_spans": 406,
+        "tables": 12,
+        "images": 10
+      },
+      "solutions.en": {
+        "pages": 29,
+        "chars": 37217,
+        "dollar_spans": 588,
+        "tables": 0,
+        "images": 1
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-medium build for physics-12-5 (Magnetism and Matter), kept in its own separate chapter directory (physics-12-5-en) matching the four prior English-medium builds this session's own precedent - the Hindi-only physics-12-5 chapter (already built) is left completely untouched. This directory is English-only (no chapter.hi.pdf/solutions.hi.pdf) - per the user's own explicit instruction, same as before. The user's two source files were named misleadingly, again - confirmed directly by reading each file's own first-page text BEFORE naming anything in 00_raw: 'Chapter 5 Magnetism And Matter.pdf' (337KB, 29 pages) opens with 'Question 5.1: ... Answer the following questions regarding earth's magnetism' - this is actually the SOLUTIONS manual, copied into 00_raw as solutions.en.pdf. 'physics_ch5_eng.pdf' (1.9MB, 18 pages) opens with '5.1 INTRODUCTION ... Magnetic phenomena are universal in nature' - this is the real TEXTBOOK, copied into 00_raw as chapter.en.pdf. Given physics-12-4-en's own recent lesson (a mathpix-scraped page-margin decoration wrongly attached as a real figure to an item), pay extra attention at stage 2 to confirming every figure genuinely belongs to the item it's attached to, not just copying every image mathpix happened to extract near an item's text."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-22T10:42:03.719012+00:00",
+    "inputs": {
+      "chapter.en.md": "ba077038412aed4b",
+      "solutions.en.md": "97e7d610c6a5be70"
+    },
+    "counts": {
+      "examples": 5,
+      "exercises": 7,
+      "raw_solutions": 25,
+      "matched": 7,
+      "orphan_solutions": 18,
+      "final_items": 30
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts_pre_join",
+      "gate_counts_final",
+      "gate_solutions_present"
+    ],
+    "model_calls": 8,
+    "notes": "English-medium extraction for physics-12-5 (Magnetism and Matter). Textbook has 5 examples and 7 exercises (5.1-5.7); solutions manual has 25 raw questions (Q1-Q25). This chapter hits the exact scattered-mismatch pattern _shared/RULES.md documents for it by name: only 7 of 25 solutions-manual entries match a real rationalised exercise, non-contiguously (raw Q1-2 before the first match, Q9-11 between two matches, Q13-25 all orphaned after the last one) - an entire earlier-edition Earth's-magnetism/hysteresis/Curie's-law section the 2023-24 rationalisation cut from this chapter outright. Independently content-verified (not just number-matched) every one of the 7 real pairings by reading both documents side by side: Ex 5.1<-Q3, 5.2<-Q4, 5.3<-Q5, 5.4<-Q6, 5.5<-Q7, 5.6<-Q8, 5.7<-Q12. join_solutions() was deliberately NOT used for these 7 pairs - its number-only matching via norm_num() would silently collide (raw \"3\" normalises to \"5.3\", colliding with the chapter's own unrelated real exercise 5.3) rather than just failing to match, exactly as step_2/PROMPT.md warns for this chapter by name; the merge was built by hand from content-verified pairs instead, per that same instruction. The other 18 raw solutions (Q1, Q2, Q9-11, Q13-25) are genuine orphans, kept as additional_exercise items under their own raw solutions-manual numbers (sol_5.1, sol_5.2, sol_5.9-5.11, sol_5.13-5.25) - not renumbered to fit the chapter's own 5.N scheme, matching physics-12-3-en's own precedent for handling orphans. Table handling: the raw chapter.en.md sanity count reported 12 \"| :---\" occurrences, which are actually just 3 real tables (one 3-column \"dipole analogy\" table, one 3-column dia/para/ferro classification table, one 6-column physical-quantities summary table) - all three are pure narrative content outside any Example/EXERCISES section, matching physics-12-4-en's own precedent; none belong in any item, all correctly excluded. Figure handling: of 10 images in chapter.en.md, only 2 are genuinely referenced by an Example's own text - fig_3 (Fig 5.4, Example 5.2's magnetised-needle configurations) and fig_6 (Fig 5.6, Example 5.3's field-line diagrams). fig_4 (positioned right after Example 5.2's solution) is a decorative Gauss biography portrait, NOT a diagram - excluded, exactly the class of bug physics-12-4-en hit for real (a scraped page decoration wrongly attached as a figure) - caught here by actually checking. The remaining 7 images (fig_0,1,2,5,7,8,9) are chapter-narrative diagrams (bar magnet field lines, solenoid comparison, domain pictures, etc.) outside any Example - correctly excluded, none attached to any item. The solutions manual's own 1 image (fig_physics-12-5_10.jpg, a hysteresis B-H curve) is genuinely referenced inside orphan sol_5.17's own solution text and kept there.\n\nTwo genuine mathpix ordering/scattering defects found and reassembled (never invented content - only repositioned text already present verbatim in the raw source, per Rule 5): (1) Example 5.5's own PROMPT text was scattered to a footnote definition at the very end of the whole document (a mathpix footnote-marker artifact), while its SOLUTION stayed inline at the point in section 5.4 where the footnote marker originally sat - reassembled into proper prompt+solution order. (2) Example 5.4's own part (c) PROMPT text (\"Does a bar magnet exert a torque on itself due to its own field? Does one element of a current-carrying wire exert a force on another element of the same wire?\") was misplaced into the middle of Example 5.3's solution block (interposed between its own printed (f) and (g) items) - meanwhile Example 5.4's own prompt was missing part (c) entirely (jumping straight from (b) to (d)) while its SOLUTION already correctly had all four parts (a)-(d). Removed the stray sentence from Example 5.3's solution (confirmed it never belonged there - Example 5.3 is entirely about identifying wrong/right field-line diagrams) and inserted it as Example 5.4's part (c) prompt, matching where its solution (c) already sat.\n\nOne genuine textbook cross-reference quirk, NOT a mathpix error - present identically in both source documents, so transcribed verbatim rather than corrected: Exercise 5.4 (and raw Question 6, its matched solution) both say \"the solenoid in Exercise 5.5\", but the actual solenoid setup being referred to is described in Exercise 5.3, not 5.5 - an un-updated cross-reference number left over from a pre-rationalisation numbering. Flagged, not fixed, per Rule 4/5.\n\nOne genuine content gap in the raw source, left as-is per Rule 5 (nothing invented): orphan sol_5.25's own solution text is itself garbled/incomplete in the mathpix source (several \"is given as\" / \"we get:\" lines with no expression following, and a concluding sentence \"Therefore, of the two relations, is in accordance with classical physics\" missing which relation it means) - transcribed exactly as broken, per step_2/extract.md's \"do not fix, complete or improve; extract it as-is\" - no :::answer block was written for it since there is no genuine stated conclusion to transcribe (this item is an orphan, not part of the final 7 matched exercises, so it does not affect chapter correctness). Also noted: Q5.1's own answer restates the earth's dipole moment as \"$8 \\times 1022$\" (a mathpix exponent-formatting slip, missing the ^{} braces around \"22\") - transcribed verbatim; also an orphan, does not affect the final 7 exercises."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-22T10:43:06.925988+00:00",
+    "inputs": {
+      "chapter.en.md": "ba077038412aed4b",
+      "solutions.en.md": "97e7d610c6a5be70"
+    },
+    "counts": {
+      "examples": 5,
+      "exercises": 7,
+      "raw_solutions": 25,
+      "matched": 7,
+      "orphan_solutions": 18,
+      "final_items": 30
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts_pre_join",
+      "gate_counts_final",
+      "gate_solutions_present"
+    ],
+    "model_calls": 8,
+    "notes": "English-medium extraction for physics-12-5 (Magnetism and Matter). Textbook has 5 examples and 7 exercises (5.1-5.7); solutions manual has 25 raw questions (Q1-Q25). This chapter hits the exact scattered-mismatch pattern _shared/RULES.md documents for it by name: only 7 of 25 solutions-manual entries match a real rationalised exercise, non-contiguously (raw Q1-2 before the first match, Q9-11 between two matches, Q13-25 all orphaned after the last one) - an entire earlier-edition Earth's-magnetism/hysteresis/Curie's-law section the 2023-24 rationalisation cut from this chapter outright. Independently content-verified (not just number-matched) every one of the 7 real pairings by reading both documents side by side: Ex 5.1<-Q3, 5.2<-Q4, 5.3<-Q5, 5.4<-Q6, 5.5<-Q7, 5.6<-Q8, 5.7<-Q12. join_solutions() was deliberately NOT used for these 7 pairs - its number-only matching via norm_num() would silently collide (raw \"3\" normalises to \"5.3\", colliding with the chapter's own unrelated real exercise 5.3) rather than just failing to match, exactly as step_2/PROMPT.md warns for this chapter by name; the merge was built by hand from content-verified pairs instead, per that same instruction. The other 18 raw solutions (Q1, Q2, Q9-11, Q13-25) are genuine orphans, kept as additional_exercise items under their own raw solutions-manual numbers (sol_5.1, sol_5.2, sol_5.9-5.11, sol_5.13-5.25) - not renumbered to fit the chapter's own 5.N scheme, matching physics-12-3-en's own precedent for handling orphans. Table handling: the raw chapter.en.md sanity count reported 12 \"| :---\" occurrences, which are actually just 3 real tables (one 3-column \"dipole analogy\" table, one 3-column dia/para/ferro classification table, one 6-column physical-quantities summary table) - all three are pure narrative content outside any Example/EXERCISES section, matching physics-12-4-en's own precedent; none belong in any item, all correctly excluded. Figure handling: of 10 images in chapter.en.md, only 2 are genuinely referenced by an Example's own text - fig_3 (Fig 5.4, Example 5.2's magnetised-needle configurations) and fig_6 (Fig 5.6, Example 5.3's field-line diagrams). fig_4 (positioned right after Example 5.2's solution) is a decorative Gauss biography portrait, NOT a diagram - excluded, exactly the class of bug physics-12-4-en hit for real (a scraped page decoration wrongly attached as a figure) - caught here by actually checking. The remaining 7 images (fig_0,1,2,5,7,8,9) are chapter-narrative diagrams (bar magnet field lines, solenoid comparison, domain pictures, etc.) outside any Example - correctly excluded, none attached to any item. The solutions manual's own 1 image (fig_physics-12-5_10.jpg, a hysteresis B-H curve) is genuinely referenced inside orphan sol_5.17's own solution text and kept there.\n\nTwo genuine mathpix ordering/scattering defects found and reassembled (never invented content - only repositioned text already present verbatim in the raw source, per Rule 5): (1) Example 5.5's own PROMPT text was scattered to a footnote definition at the very end of the whole document (a mathpix footnote-marker artifact), while its SOLUTION stayed inline at the point in section 5.4 where the footnote marker originally sat - reassembled into proper prompt+solution order. (2) Example 5.4's own part (c) PROMPT text (\"Does a bar magnet exert a torque on itself due to its own field? Does one element of a current-carrying wire exert a force on another element of the same wire?\") was misplaced into the middle of Example 5.3's solution block (interposed between its own printed (f) and (g) items) - meanwhile Example 5.4's own prompt was missing part (c) entirely (jumping straight from (b) to (d)) while its SOLUTION already correctly had all four parts (a)-(d). Removed the stray sentence from Example 5.3's solution (confirmed it never belonged there - Example 5.3 is entirely about identifying wrong/right field-line diagrams) and inserted it as Example 5.4's part (c) prompt, matching where its solution (c) already sat.\n\nOne genuine textbook cross-reference quirk, NOT a mathpix error - present identically in both source documents, so transcribed verbatim rather than corrected: Exercise 5.4 (and raw Question 6, its matched solution) both say \"the solenoid in Exercise 5.5\", but the actual solenoid setup being referred to is described in Exercise 5.3, not 5.5 - an un-updated cross-reference number left over from a pre-rationalisation numbering. Flagged, not fixed, per Rule 4/5.\n\nOne genuine content gap in the raw source, left as-is per Rule 5 (nothing invented): orphan sol_5.25's own solution text is itself garbled/incomplete in the mathpix source (several \"is given as\" / \"we get:\" lines with no expression following, and a concluding sentence \"Therefore, of the two relations, is in accordance with classical physics\" missing which relation it means) - transcribed exactly as broken, per step_2/extract.md's \"do not fix, complete or improve; extract it as-is\" - no :::answer block was written for it since there is no genuine stated conclusion to transcribe (this item is an orphan, not part of the final 7 matched exercises, so it does not affect chapter correctness). Also noted: Q5.1's own answer restates the earth's dipole moment as \"$8 \\times 1022$\" (a mathpix exponent-formatting slip, missing the ^{} braces around \"22\") - transcribed verbatim; also an orphan, does not affect the final 7 exercises."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-22T10:48:49.669716+00:00",
+    "inputs": {
+      "chapter.en.md": "f4b983e3688efdef"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 5,
+        "bytes": 12774
+      },
+      "qa.en": {
+        "items": 25,
+        "bytes": 45374
+      },
+      "total_items_in": 30
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise + additional_exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 30 items (5 + 25) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-22T10:49:29.113068+00:00",
+    "inputs": {
+      "examples.en.md": "9ee4ba86caf48db7",
+      "qa.en.md": "06a74c04f0dc39e5"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 30,
+        "bytes": 58052
+      },
+      "examples_in": 5,
+      "qa_in": 25
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order - plain reunion by disjoint id, not a fresh match. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 30 items equal examples.en.md's 5 + qa.en.md's 25 exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-22T10:54:19.148124+00:00",
+    "inputs": {
+      "combined.en.md": "f4b983e3688efdef",
+      "chapter.en.pdf": "7ec2926362f9193e",
+      "solutions.en.pdf": "6d4f1dc0a37edbd4"
+    },
+    "counts": {
+      "items_checked": 30,
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "stage2_reconstructions_reverified_against_pdf": 3,
+      "genuine_source_defects_confirmed_unchanged": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 8,
+    "notes": "Verified all 30 items against the actual source PDFs (chapter.en.pdf, 18 pages, and solutions.en.pdf, 29 pages), with particular focus on re-verifying stage 2's three text-reconstruction fixes (ex_5.4 part c's prompt recovered from inside ex_5.3's solution; ex_5.5's prompt recovered from a scattered footnote position) against the actual rendered PDF page images, not just re-trusting stage 2's own report - all three independently confirmed correct, word for word, against the real textbook pages (144 and 146). The q_5.4 \"solenoid in Exercise 5.5\" cross-reference (the real setup is in Exercise 5.3) is confirmed genuinely printed that way in the official textbook's own EXERCISES section (page 152) - a real textbook inconsistency, left untouched per Rule 1. fig_physics-12-5_4.jpg is confirmed to be a Karl Friedrich Gauss biographical portrait (standard NCERT sidebar content), correctly excluded from every item - not a repeat of physics-12-4-en's bogus-figure bug. Two flagged content anomalies both confirmed as genuine printing defects in the official solutions manual itself (sol_5.25's missing equations/empty parens on page 27; sol_5.1's \"8 x 1022\" missing exponent superscript on page 1), not mathpix OCR failures - both correctly left exactly as printed. Zero Corrections needed - no genuine extraction-vs-PDF mismatch found anywhere in this chapter. A full tail-scan of all 30 items found no truncation."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-22T10:58:15.831388+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "f4b983e3688efdef"
+    },
+    "counts": {
+      "items_simplified": 3,
+      "items_unchanged": 27,
+      "restore_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 3,
+    "notes": "Simplified 3 of 30 items for plainer register: ex_5.1 part (d) (pure prose, no protected tokens), sol_5.16 (pure prose, no protected tokens), sol_5.17 (one protected token for \"$B-H$\", freeze/restore round-tripped and verified). The other 27 items were left unchanged as already-terse Given/formula/Answer style solutions, matching this session's established pattern across every prior chapter. Two genuine official-manual/textbook defects deliberately left completely untouched, not re-flagged: q_5.4's \"solenoid in Exercise 5.5\" cross-reference typo (real setup is Exercise 5.3), and sol_5.25's garbled/incomplete solution (missing expressions after \"is given as\"/\"we get:\"). Every comparative/directional sentence touched during simplification (sol_5.16's dip-angle-in-Britain-style claims: \"greater when cooled\", \"slightly greater than an empty core\", \"greater for a lower field\") had its exact original direction preserved word-for-word per step_6/simplify.md's documented caution - re-checked against the surrounding sentences after rewriting, not just reworded in isolation. English-only build, no chapter.verified.hi.md exists; gate_bilingual skipped."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-22T11:05:18.520858+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "2682922a732420eb"
+    },
+    "counts": {
+      "structured.en_bytes": 57018,
+      "structural_edits": 13,
+      "items": 30
+    },
+    "gates_failed": {
+      "tag_parse": "PASS"
+    },
+    "gates_passed": [
+      "protect_parity"
+    ],
+    "model_calls": 0,
+    "notes": "13 structural edits applied across 15 of 30 items (ex_5.2(a), ex_5.5, q_5.1, q_5.3, q_5.4, sol_5.9, sol_5.10, sol_5.11, sol_5.17, sol_5.21, sol_5.23, sol_5.24 - plus the given/formula splits within those): :::concept{label=\"Given\"} + :::formula{label=\"Key formula\"} wraps for items with a clean given-info-then-derivation shape, :::step splits for sol_5.9's two genuinely separate calculations (magnetic moment, then moment of inertia). The remaining 15 items (all conceptual items with no formula derivation worth isolating - ex_5.1, ex_5.3, ex_5.4, sol_5.1, sol_5.2, sol_5.16, sol_5.18-20, sol_5.22, sol_5.25, plus q_5.2/5.5/5.6/5.7 whose solutions stay combined at item level rather than split per part, matching how the source itself presents them per stage 5's own confirmation) were left as plain text, matching this session's established restraint principle - not forcing structure onto prose that does not call for it. sol_5.17's figure (fig_physics-12-5_10.jpg) moved from its item-level pre-solution position to its actual reference point inside the solution (\"shown in the figure below\") - same src, same id, no duplication. The two genuine official-manual/textbook defects (q_5.4's \"Exercise 5.5\" cross-reference typo; sol_5.25's garbled/incomplete solution) were left completely untouched - neither was restructured or touched by any of the edits above. No item in this chapter has both :::part children and a stray item-level :::solution (the known duplicate-trailing artifact) - q_5.2/5.5/5.6/5.7 have parts with NO solution of their own plus one combined item-level solution, which is a different, valid shape (not a redundant second copy), left exactly as extracted, matching stage 5's own note that this is how the source presents them. protect.parity confirms zero drift - no wording changed anywhere, only structure added."
+  },
+  {
+    "stage": "extract_match_correction",
+    "at": "2026-09-22T11:08:01.224876+00:00",
+    "inputs": {
+      "chapter.en.md": "b9a88a469ced0c9a"
+    },
+    "counts": {
+      "title_fixed": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Found and fixed a genuine stage-2 gap: the Chapter object's title field was never set during extraction, so pipeline.render.render()'s own fallback (chapter.title.get(lang) or f\"Chapter {chapter_number}\") silently produced the generic \"Chapter 5\" as both the YAML front-matter title and the page's own \"# Chapter 5\" H1 heading, all the way through every downstream stage. Confirmed the real title directly from the raw mathpix source (01_mathpix/chapter.en.md opens with \"## MAGNETISM AND ## MATTER\"). Fixed via pipeline.mdio.markdown_to_chapter() -> set Chapter.title.en -> pipeline.render.render() -> overwrite 02_extract/chapter.en.md, never hand-edited. Round-trip verified via tag._parse and a full diff confirming every item's question/solution content is byte-identical to before this fix - only the title changed. Stages 3 through 7 (all already built for this chapter) must be propagated with the same title fix next."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-22T11:08:09.580387+00:00",
+    "inputs": {
+      "chapter.en.md": "b9a88a469ced0c9a"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 5,
+        "bytes": 12796
+      },
+      "qa.en": {
+        "items": 25,
+        "bytes": 45396
+      },
+      "total_items_in": 30
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise + additional_exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 30 items (5 + 25) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-22T11:08:10.025956+00:00",
+    "inputs": {
+      "examples.en.md": "bd4ede356cff83b5",
+      "qa.en.md": "8a434b84b07dc97c"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 30,
+        "bytes": 58074
+      },
+      "examples_in": 5,
+      "qa_in": 25
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md, in original number order - plain reunion by disjoint id, not a fresh match. No model call. English-only build, no chapter.hi.md to combine. Round-trip verified: tag._parse balances, and combined.en.md's 30 items equal examples.en.md's 5 + qa.en.md's 25 exactly."
+  },
+  {
+    "stage": "title_propagation",
+    "at": "2026-09-22T11:08:29.409165+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "b9a88a469ced0c9a",
+      "chapter.simplified.en.md": "6ce0c1ba300a294d",
+      "structured.en.md": "745906684abe06c3"
+    },
+    "counts": {
+      "files_patched": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Propagated the chapter-title fix (see the extract_match_correction entry - \"Chapter 5\" -> \"Magnetism and Matter\") into 05_verify/chapter.verified.en.md, 06_simplify/chapter.simplified.en.md and 07_format/structured.en.md via a direct exact-match replacement of both the YAML front-matter title: line and the \"# Chapter 5\" H1 heading line (each verified count==1 before replacing) - no other content touched, tag._parse confirms containers still balance in all three files."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-22T11:10:02.313546+00:00",
+    "inputs": {
+      "structured.en.md": "745906684abe06c3"
+    },
+    "counts": {
+      "items": 30,
+      "parts": 19,
+      "distinct_figures": 3,
+      "stage_distribution": {
+        "conclusion": 36,
+        "given": 12,
+        "key_formula": 11,
+        "substitute": 2
+      }
+    },
+    "gates_failed": {
+      "reparsed_counts_match_fresh_markdown_count": true,
+      "all_items_have_topic": true
+    },
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Serialized via the same deterministic Python walker proven on prior physics chapters. This chapter introduced a genuinely new shape not seen before: q_5.2, q_5.5, q_5.6 and q_5.7 each have 2 parts whose OWN solution_blocks are empty, with the real combined answer living only at item level - the opposite of the known duplicate-trailing-solution artifact (where per-part content is authoritative and a trailing item-level copy is redundant). The serializer was extended with a COMBINED_AT_ITEM_LEVEL allowlist (checked against any_part_has_solution) to correctly KEEP the item-level solution_blocks for these 4 items rather than discarding real content - confirmed via an explicit non-empty assertion on all 4 before writing. A defensive check also now raises if ANY OTHER item is found with this same parts-without-solutions shape but is not in the allowlist, so this can never silently misfire on an unexamined item. No item in this chapter has the OTHER (true duplicate-restatement) pattern. Gate re-parsed the written JSON and compared item/part/figure counts against a FRESH direct count from structured.en.md - all matched exactly."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-22T11:19:36.819223+00:00",
+    "inputs": {
+      "structured.en.json": "7aba80fa7751c31e"
+    },
+    "counts": {
+      "final.en.html_bytes": 113180,
+      "final.en.css_bytes": 17905,
+      "figures_embedded": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "Hand-authored plain static HTML/CSS, reusing physics-12-4-en own converter/render_page.py and its final.en.css as the starting basis. Macro-table gap check (grepped 06_simplify/chapter.simplified.en.md for every \\[a-zA-Z]+ command): found and fixed one gap - \\cong (used once, ex_5.5 part c, \"M cong 8x10^5 A/m\"), added as the approximately-equal-to symbol. Trig functions (sin/cos/tan), Delta/approx/sim/circ/therefore/quad and both aligned/array environments already covered by the reused converter, confirmed sufficient - no other gaps found. Two real bugs caught and fixed via direct inspection, both before relying on any automated check to catch them: (1) the copied render_page.py had the PREVIOUS chapter's title/chapter number (\"Moving Charges and Magnetism\", \"Chapter 4\") hardcoded as literal strings in two places (the page <title> and the s2/s3/s4 header block) instead of reading DATA[\"front\"][\"title\"]/[\"chapter\"] dynamically - fixed by introducing CHAPTER_TITLE/CHAPTER_NUM module-level variables read from the JSON and interpolating them in both places. (2) q_5.2/5.5/5.6/5.7's combined-at-item-level solution (each has 2 parts with empty solution_blocks of their own, per stage 8's own documented new shape) was being silently dropped entirely - render_item()'s parts-loop branch never fell back to the item-level solution_blocks/answer when no part actually carried its own solution, so these 4 items rendered their part prompts followed by nothing at all. Fixed by adding an any_part_has_solution check: render each part's own solution stack only when at least one part actually has one, otherwise render the item-level solution_blocks/answer as one combined stack after all the part prompts. Verified via direct HTML inspection (all 4 items now show a populated Conclusion pill + boxed answer) and a Playwright screenshot of q_5.2 confirming the fix visually. All 3 real figures (fig_3 on ex_5.2, fig_6 on ex_5.3, fig_10 on sol_5.17) confirmed resolving against the real 09_design/images/ directory, each appearing exactly once, visually confirmed via screenshot for ex_5.2 and sol_5.17. Page title/heading confirmed reading \"Magnetism and Matter\"/\"Chapter 5\", not the leftover \"Chapter 4\". ex_5.4's reassembled part (c) confirmed rendering as completely normal content via screenshot. Both protected official-manual/textbook defects (q_5.4's \"Exercise 5.5\" cross-reference typo, sol_5.25's garbled ending) confirmed present unchanged in the rendered HTML. Full numeric read-back against 06_simplify/chapter.simplified.en.md: 180/180 tokens present. ex_5.1's 4-part telescoped-enumeration item-level prompt correctly left un-stripped by the conservative safety fallback (every clause must be a confirmed substring match to strip; declining here is the designed-safe outcome, not a bug, matching the same behavior already confirmed correct on physics-12-3-en)."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-22T11:23:42.342595+00:00",
+    "inputs": {
+      "final.en.html": "82f19b5a11801326"
+    },
+    "counts": {
+      "page_count": 25,
+      "file_size_bytes": 1010013,
+      "numeric_tokens_checked": 180,
+      "numeric_tokens_missing": 0,
+      "blank_pages": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "English-only chapter, no Devanagari - the standing emulate_media(screen) fix was still applied unconditionally per step_10/PROMPT.md. Playwright/Chromium export with print_background=True, prefer_css_page_size=True, after waiting for document.fonts.ready. Page count, blank-page and numeric read-back gates all run against the PDF's own extracted text (fitz), not assumed carried over from stage 9's HTML check. This chapter's two protected official-manual defects (q_5.4's cross-reference typo, sol_5.25's garbled ending) and its combined-at-item-level solution items (q_5.2/5.5/5.6/5.7) were both fixed and independently re-verified at stage 9 before this export - both checked to survive correctly in the PDF text as part of the general read-back."
+  }
+]

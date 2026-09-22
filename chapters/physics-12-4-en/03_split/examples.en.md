@@ -210,9 +210,6 @@ Same magnitude of B but opposite in direction to that in (b).
 Consider a tightly wound 100 turn coil of radius 10 cm, carrying a current of 1 A. What is the magnitude of the magnetic field at the centre of the coil?
 :::
 
-:::figure{src="images/fig_physics-12-4_12.jpg" id="fig_physics-12-4_12"}
-:::
-
 :::solution{label="Solution"}
 Since the coil is tightly wound, we may take each circular element to have the same radius $R=10 \mathrm{~cm}=0.1 \mathrm{~m}$. The number of turns $N=100$. The magnitude of the magnetic field is,
 $$
