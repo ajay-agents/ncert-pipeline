@@ -1,8 +1,8 @@
 # Match report
 
-- **questions:** 21
-- **solutions:** 21
-- **matched:** 21
+- **exercise_questions:** 21
+- **exercise_solutions_extracted:** 21
+- **matched_by_number:** 21
 ## unmatched_questions (0)
 
 ## orphan_solutions (0)
@@ -10,3 +10,9 @@
 ## duplicate_solutions (0)
 
 ## needs_review (0)
+
+- **gate_solutions_present_issues:** 5
+## gate_solutions_present_expected_gaps (1)
+- q_2.2, q_2.3, q_2.9, q_2.13, q_2.14: each of these is a "draw a labelled diagram" question whose entire answer in the source IS the diagram (a :::figure with its own caption) - no separate solution text exists in the source manual for any of these. Matches the established precedent from chemistry-12-4 (q_4.16-style figure-only answers): not a genuine content gap, just a non-textual answer the gate cannot see.
+
+- **notes:** Simple 1:1 numeric correspondence (bare 1-21 in both the chapter's own Exercises section and the solutions manual), confirmed clean by both the automated join_solutions() report (0 needs_review) AND an explicit manual content spot-check of all 21 matched pairs side-by-side, per step_2/PROMPT.md's own standing warning. This chapter has no Examples or Intext Questions sections (confirmed at stage 1) - only 21 end-of-chapter Exercises, needing just two extraction passes. This chapter has a richer multi-part structure than biology-12-1: q_2.1 (Fill in the blanks, 11 parts a-k), q_2.15 (Name the functions, 5 parts), q_2.16 (True/False + corrections, 7 parts) - all three extracted and joined correctly, verified by directly inspecting every part's attached solution content (55 total item+part solution fields spot-checked, not just trusting the join_solutions() report). A genuine source-document mislabeling was correctly navigated during extraction (not a pipeline bug): the solutions manual prints a duplicate, wrongly-numbered "Answer 14:" heading directly after Question 15's own text (should read "Answer 15:") - the solutions extraction sub-agent correctly recognized this content belongs to Question 15 by its position (it answers Q15's own 5 sub-parts about corpus luteum/endometrium/acrosome/sperm tail/fimbriae, not a repeat of Q14's already-separate, correctly-labelled Graafian-follicle-diagram answer) and assigned it number="2.15" accordingly, verified correct by the coordinator's own re-inspection of both q_2.14 and q_2.15's final content. Unlike biology-12-1's own stage 2, this extraction had NO silent-content-loss structural bugs (no sibling-:::solution-block issue, no bare :::table-instead-of-:::solution issue) - confirmed by directly parsing the raw extraction output through pipeline.tag._parse() and checking every item's child container list before merging, the same verification method that caught bio1's 2 bugs. 5 items (q_2.2, q_2.3, q_2.9, q_2.13, q_2.14) genuinely have no solution text at all - each is a "draw a labelled diagram" question whose entire answer in the source is the diagram itself (a :::figure block with its own caption, e.g. "Transerve section of the ovary"), correctly triggering gate_solutions_present but matching an established, accepted pattern from a prior chapter (figure-only answers are a real content shape, not a gap) - not fixed, documented here. Several genuine source-document typos/oddities flagged for stage 5, none corrected here per Rule 1: q_2.1(j)'s stray inserted word "fertilization" (already flagged at stage 1); q_2.15(a)'s "Grafiaan follicle" misspelling (inconsistent with q_2.14's own correct "Graafian"); q_2.13's figure caption "Transerve section" (typo for "Transverse", inconsistent with q_2.5's own correctly-spelled caption); q_2.4's solution text describing "leydig cells of the seminiferous tubules" (biologically imprecise phrasing, contradicted by q_2.5's own more careful wording - a genuine textbook inconsistency, not an extraction error).

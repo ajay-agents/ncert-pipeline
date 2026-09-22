@@ -333,5 +333,207 @@
     ],
     "model_calls": 0,
     "notes": "Hindi-only chapter. Exported 09_design/final.hi.html to PDF via Playwright/Chromium (page.goto the file's own file:// path, waited on document.fonts.ready, called page.emulate_media(media='screen') before page.pdf(), print_background=True + prefer_css_page_size=True, no explicit format/width/height) per step_10/PROMPT.md. Gates: 7 pages (sane for 18 items), 0 blank pages, and the mandated numeric read-back (digits from every question/final_answer in 06_simplify/chapter.simplified.hi.md via mdio.markdown_to_chapter, re-run against the PDF's own extracted text with the superscript-run separator fix) found both of this chapter's 2 distinct numeric tokens (7, 8 - from q_1.6's '7-koshiya, 8-nyukilyet') with none missing. Went further than the mandated check and also ran a full verbatim-text read-back (all 18 questions + 4 part questions as exact substrings of the PDF's extracted text, since this chapter's content is almost entirely non-numeric prose and the digit-only check alone would have been very weak evidence here) - 16 of 22 matched exactly; the other 6 initially looked missing but all 6 turned out to be the SAME known category of Chromium PDF-export bug already documented in step_10/PROMPT.md for the 'reph' (र्) case, just a different conjunct pattern: 3 were resolved by that exact documented reph-stripping workaround, and a NEW pattern was found and confirmed for the other 3 - a doubled vowel-sign matra in the extracted text layer for a conjunct ('्व' or '्र') immediately followed by a matra, e.g. 'द्वारा' (dwara) extracts as 'द्वाारा' (10/10 occurrences chapter-wide) and 'भ्रूण' (bhrun) extracts as 'भ्रूूण' (38/38 occurrences chapter-wide) - always the same doubling, never a one-off. Rendered both PDF pages containing these words at 300-400dpi and confirmed the VISUAL text is completely correct in both cases - this is an extraction/CMap-layer-only artifact, the same category as the already-documented reph bug, not a content defect and not something this chapter's own HTML/CSS caused. The mandated numeric-only gate is correctly unaffected by this (digits are never part of the affected conjunct+matra sequences), so it is not a stage-blocking failure; flagging it here per the reph bug's own precedent ('flag this to the user rather than silently shipping around it') since it affects copy-paste/search/re-extraction of this specific PDF, same as the reph case, just a different trigger pattern. No hand-edit was made to the PDF or its export call to work around this - a real fix means either post-processing the exported ToUnicode CMap directly or a different PDF-generation pipeline, neither attempted here."
+  },
+  {
+    "stage": "mathpix",
+    "at": "2026-09-22T05:42:46.496408+00:00",
+    "inputs": {
+      "chapter.en.pdf": "7d0768460f2d219a",
+      "solutions.en.pdf": "c4ef2a0c591f9642"
+    },
+    "counts": {
+      "chapter_pages": 23,
+      "solutions_pages": 10,
+      "chapter_chars": 44775,
+      "solutions_chars": 13210,
+      "chapter_dollar_spans": 1,
+      "solutions_dollar_spans": 0,
+      "chapter_table_rows": 0,
+      "solutions_table_rows": 17,
+      "chapter_image_refs": 18,
+      "solutions_image_refs": 2,
+      "images_downloaded_total": 42,
+      "images_orphaned": 0,
+      "devanagari_in_english_files": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track added alongside biology-12-1's pre-existing, already-complete Hindi-only track (all 10 stages done in a prior session, 2026-09-14) - same pattern as the 5 chemistry chapters just completed. User explicitly confirmed via AskUserQuestion: English-only, same as before. Both new PDFs independently verified before trusting them as source (chapter.en.pdf is unusually large, 40MB vs chemistry chapters' ~3.5MB, but page count is normal at 23 pages - almost certainly high-resolution embedded images throughout, consistent with Biology being figure-heavy and low on math per _shared/RULES.md's own subject notes; not a sign of wrong/bloated content): chapter.en.pdf page 1 confirmed genuine NCERT Class 12 Biology 'Chapter 1: Sexual Reproduction in Flowering Plants' (23 pages); solutions.en.pdf page 1 confirmed genuine matching solutions manual, labelled '(Chapter - 2) (Sexual Reproduction in Flowering Plants) (Class - XII)' - the same Rationalised-edition chapter-numbering offset pattern already confirmed 5 times running in the chemistry chapters, here for the first time in Biology (10 pages, 2,367,938 bytes). Unlike every one of those 5 chemistry chapters, the individual QUESTION numbers themselves are NOT chapter-prefixed (bare '1'-'18' in both the chapter's own Exercises section and the solutions manual, not '1.1'-'1.18'), so the offset carries no risk of a hidden number collision at stage 2 - confirmed by direct comparison that both documents number their own 18 questions identically and in the same order, no rationalised-edition mismatch. This chapter has NO worked 'Example' items at all (a real, expected difference from every physics/chemistry chapter so far - biology chapters in this curriculum don't carry a separate solved-example section, confirmed by grep finding zero 'Example N.N' headings anywhere, only the word 'example' used conversationally in running prose) and NO separate 'Intext Questions' section either (confirmed by grep - chapter goes straight from expository text through '## SUMMARY' to '## EXERCISES', no intermediate in-chapter question blocks) - so stage 2 extraction for this chapter will be simpler in shape than every chemistry chapter just completed: one exercises-question extraction pass plus one solutions extraction pass, no examples/intext passes needed. This is a genuine content-shape fact about the chapter, not a gap - confirmed by cross-checking against the chapter's own already-completed Hindi track. Sanity-checked clean with no red flags requiring stage-1 intervention: chapter.en.md (44,775 chars, comfortably over the 5000-char threshold; 1 lone $ span and 0 tables, both expected for a low-math Biology chapter, not a defect) and solutions.en.md (13,210 chars; 17 table rows from Q2's microsporogenesis-vs-megasporogenesis comparison table; 0 Devanagari in either file). 18 exercises in chapter.en.md exactly match 18 Question/Answer pairs in solutions.en.md, confirmed via grep - a clean 1:1 correspondence with no gaps, no interspersed extras, no missing numbers (unlike every one of the 5 chemistry chapters' own solutions manuals, which each carried at least one genuine orphan/mismatch). All 42 downloaded images (18 in chapter.en.md, 2 in solutions.en.md, the remaining 22 already referenced in the pre-existing chapter.hi.md/solutions.hi.md) are referenced somewhere across the 4 language/document files - 0 orphans, a clean image-download run. No base64/imgSvg embedded-blob defects found (confirmed via grep for 'imgSvg'/'base64' in both files, 0 hits) - the chemistry-12-5-specific mathpix chemical-structure-recognition defect class does not apply here, as expected for a non-chemistry subject. One cosmetic, harmless mathpix layout artifact noted but not requiring a fix: a figure reference (fig_1_22, Figure 1.1) is inserted mid-sentence in the chapter's own expository prose ('...commonly cultivated at [FIGURE] homes and in gardens...'), reflecting the source PDF's own sidebar image placement - harmless since this expository prose section is never extracted as a pipeline item anyway (only the Exercises section's own 18 questions get extracted), unlike a chemistry chapter's mid-sentence heading-splice defects which DID require fixing since they fell inside actual worked-example content."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-22T05:49:56.322764+00:00",
+    "inputs": {
+      "chapter.en.md": "cc7890c308a457a0",
+      "solutions.en.md": "baef69099804bfbc"
+    },
+    "counts": {
+      "exercise_questions": 18,
+      "exercise_solutions_extracted": 18,
+      "matched": 18,
+      "needs_review": 0,
+      "total_items": 18,
+      "gate_counts": "pass",
+      "gate_solutions_present_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 2,
+    "notes": "2 extraction sub-agent batches dispatched per step_2/extract.md (18 end-of-chapter exercises; 18 solutions) - this chapter has no Examples or Intext Questions sections at all (confirmed at stage 1), so only these two passes were needed, unlike every chemistry chapter's 4-5 passes. Bare 1-18 numbering in both documents (no chapter-prefix collision risk) produced a clean, genuinely correct 18/18 automated join - confirmed not just by the clean join_solutions() report but by an explicit manual content spot-check of all 18 matched question/solution pairs side-by-side, per step_2/PROMPT.md's own standing warning not to trust a clean report alone. Fixed 2 real, silent-content-loss structural bugs in the raw extraction output before merging (caught by directly parsing the extraction file through pipeline.mdio and inspecting the resulting Item objects, not by trusting the sub-agents' own self-reports): (1) q_1.4's answer was split across two sibling :::solution blocks with a :::figure between them - mdio.py's _node_to_item() only ever reads the FIRST :::solution child, silently dropping the second, much longer block (the entire bulleted list of ovule parts); fixed by merging into one block. (2) q_1.2 and all 4 of q_1.13's parts had their actual comparison-table answer content wrapped in a standalone :::table container - a stage-7+ vocabulary word markdown_to_items() doesn't read at this pre-stage-7 extraction stage - silently discarding q_1.2's entire core answer and leaving all 4 of q_1.13's parts with a completely empty solution despite real content existing in the source; fixed by converting each into plain markdown-table text inside a proper :::solution block, the correct pre-stage-7 convention. Verified both fixes by re-parsing and confirming complete, non-empty content for every affected item/part. No genuine OCR/content defects requiring stage-5 attention beyond what stage 1 already flagged (minor spacing artifacts, Q7's garbled phrasing) - none corrected here per Rule 1."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-22T05:50:53.055218+00:00",
+    "inputs": {
+      "chapter.en.md": "b5e17164b378a0e3"
+    },
+    "counts": {
+      "total_items": 18,
+      "examples_items": 0,
+      "examples_bytes": 147,
+      "qa_items": 18,
+      "qa_bytes": 16229
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-only split (this chapter's Hindi track was already split/combined/verified/simplified/formatted/tagged/designed/exported in a prior session; English is a separate track added afterward). This chapter has 0 example-kind items (no worked Examples section exists at all - confirmed at stage 1), so examples.en.md is an empty (0-item) document; all 18 items are kind=exercise. Pure mechanical render() call, no model involved, per step_3/PROMPT.md."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-22T05:52:31.285901+00:00",
+    "inputs": {
+      "examples.en.md": "34c7d2070fea561c",
+      "qa.en.md": "b5e17164b378a0e3"
+    },
+    "counts": {
+      "examples_items": 0,
+      "qa_items": 18,
+      "combined_items": 18,
+      "combined_bytes": 16229
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-only combine (Hindi track already fully processed in a prior session; this is the separate English track added afterward). Pure mechanical reunion of stage 3's two split files back into one Chapter, no model involved, per step_4/PROMPT.md."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-22T05:57:55.564686+00:00",
+    "inputs": {
+      "combined.en.md": "b5e17164b378a0e3",
+      "chapter.en.pdf": "7d0768460f2d219a",
+      "solutions.en.pdf": "c4ef2a0c591f9642"
+    },
+    "counts": {
+      "corrections_applied_high_confidence": 1,
+      "corrections_held": 0,
+      "gate_math_parity_issues": 0,
+      "gate_counts": "pass",
+      "items_verified": 18
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 2,
+    "notes": "2 verification sub-agent batches dispatched per step_5/verify.md (q_1.1-1.9, q_1.10-1.18), each given exact chapter.en.pdf page ranges (all 18 questions fit on just 2 pages, 22-23) and solutions.en.pdf page ranges pre-mapped by the coordinator via a contact-sheet grid render (both PDFs have no text layer, confirmed empty pdftotext/fitz extraction - scanned images only, same as every chemistry chapter's solutions manual). Only 1 high-confidence correction found and applied across all 18 items - by far the cleanest chapter verified this project so far (every chemistry chapter needed 5-10+ corrections plus multiple structural fixes): q_1.8's solution had a dropped hyphen ('selfpollination' -> 'self-pollination'), confirmed against the PDF's own line-wrap hyphenation and against the correctly-hyphenated form used elsewhere in the same answer and in q_1.7/q_1.9. 0 held. Both figures (fig_1_40 ovule diagram on q_1.4, fig_1_41 embryo sac diagram on q_1.6) confirmed present, correctly attached, and accurately captioned - no figure-reference gaps found anywhere (a first for this project; every chemistry chapter needed at least one figure restored or relinked at this stage). q_1.13's 4-part comparison-table answer (hypocotyl/epicotyl, coleoptile/coleorrhiza, integument/testa, perisperm/pericarp) confirmed complete and accurate against the source PDF's own Answer 13 tables - the stage-2 :::table extraction bug fix held up correctly through to this stage. Two genuine source-document artifacts confirmed and correctly left untouched per the 'should_be must match the PDF, not what you think is correct' rule: q_1.4's 'based swollen part' (almost certainly a textbook typo for 'basal', but printed this way in the source itself) and q_1.8's run-on 'hasthecapability' (a genuine source-document typesetting quirk, verified present in the PDF itself, not an extraction error). One punctuation-style judgment call flagged by a sub-agent but not corrected (q_1.7's extracted text omits an en dash the PDF has between 'Viola' and 'chasmogamous') - treated as style per Rule 6, not meaning-changing, consistent with the rule's own guidance to ignore punctuation-style differences. gate_math_parity: 0 issues. gate_counts: pass (18 exercise items, matching expectation exactly)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-22T06:16:16.938739+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "867eb2f21bb9c432"
+    },
+    "counts": {
+      "items_simplified": 17,
+      "items_unchanged": 1,
+      "items_restore_failed": 0,
+      "gate_question_text_frozen": "pass",
+      "gate_answers_unchanged": "pass",
+      "gate_math_parity": "pass",
+      "gate_bilingual": "skipped (English-only track)"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "1 simplification sub-agent batch (all 18 items in one dispatch, vs the 4 batches every chemistry chapter needed - this chapter's small size, 18 items with no examples/intext, made a single batch practical). Freezing/restoring done by the coordinator in Python per item (18 separate freeze/restore calls). All 18 restored cleanly on the first attempt - 0 protection tokens lost, duplicated, or invented. 17 items had solution prose genuinely reworded (shorter sentences, plainer register); 1 (q_1.13) correctly left unchanged at the item level - its 4 parts' solutions are each just a single protection token (a bare comparison table with no surrounding prose), nothing to simplify. The sub-agent explicitly flagged 3 comparative/positional-mapping solutions (q_1.6's micropylar/chalazal-end embryo-sac cell fates, q_1.11's triple-fusion gamete pairing, q_1.14's false/true fruit definitions) as high-risk for the exact silent-reversal failure mode step_6/simplify.md documents from a prior chapter, and confirmed it preserved each pairing's original order while shortening sentences - no relationship was reversed. One judgment call reviewed and accepted, not reverted: q_1.7 and q_1.8's substantial sentence restructuring incidentally also repaired two source-document typesetting artifacts stage 5 had explicitly left untouched ('hasthecapability', 'self- incompatibility' with a stray space). Distinguished from the chemistry-12-4 precedent where a simplify batch was reverted for re-litigating a settled stage-5 decision: THAT case was an isolated typo-only edit with no other change to the surrounding text (pure re-litigation); THIS case is an incidental byproduct of substantial, independently-justified plain-register restructuring of the whole sentence (breaking a long run-on into short sentences, per simplify.md's own core mandate) - the spacing artifact simply didn't survive the rewrite, rather than being targeted for its own sake. No fact or meaning changed either way. Accepted as legitimate simplification, not reverted. Gates: gate_question_text_frozen, gate_answers_unchanged and gate_math_parity all pass with 0 issues against 05_verify/chapter.verified.en.md. gate_bilingual skipped (English-only track, matching every stage so far)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-22T06:23:20.862199+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "de811e6c1e1e4d43"
+    },
+    "counts": {
+      "items": 18,
+      "output_bytes": 16417,
+      "tag_parse": "pass",
+      "protect_parity_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "1 formatting sub-agent batch (all 18 items in one dispatch) per step_7/format.md - no wording, digit, symbol or table cell changed anywhere, verified by the batch's own regex scan for byte-identical outer containers/prose before hand-back. This chapter is descriptive/definitional (Biology, no math), so the fixed given/key-formula/substitute/conclusion vocabulary genuinely didn't fit any of the 18 answers - correctly not forced anywhere, per format.md's own guidance and RULES.md's carve-out that a standalone definition/step not part of a worked-solution flow may use a freeform label instead. Structure applied: :::concept{label=...} for 9 standalone definitions (self-incompatibility, bagging technique, false vs true fruit, emasculation, parthenocarpy, tapetum, apomixis, chasmogamous/cleistogamous flowers - 2 concepts in q_1.7, monosporic development, parts of the ovule, triple fusion); :::step with freeform labels for 3 genuinely multi-stage process descriptions (q_1.3's pollen development sequence, q_1.6's three-mitotic-division embryo-sac formation, q_1.11's pollen-tube-growth -> syngamy -> triple-fusion sequence); :::table for the 5 comparison-table answers (q_1.2 plus q_1.13's 4 parts). No :::formula used anywhere (no math in this chapter). 3 items (q_1.1, q_1.8, q_1.12) correctly left as plain prose - already direct, self-evident answers with no genuine sub-structure. No formatted freeform :::step label happens to collide with the fixed given/key-formula/substitute/conclusion vocabulary strings (confirmed - none of 'Three mitotic divisions'/'Egg apparatus and antipodal cells'/'Polar nuclei'/'Pollen tube growth'/'Syngamy'/'Triple fusion and endosperm formation' matches serialize.py's _label_to_stage() lookup table), so stage 8 will correctly fall back to positional given/substitute/conclusion inference for pill coloring while preserving each freeform label as supplementary text - the same dual-tagging mechanism already used successfully in prior chapters for this exact shape. Checked every item for the 'duplicate whole-item solution trailing after labelled parts' artifact and the 'solution shape doesn't fit the 4-stage model' flag format.md asks about - neither applies to any of the 18 items. Both of this chapter's figures (fig_1_40 on q_1.4, fig_1_41 on q_1.6) were left at their stage-4 position since neither solution explicitly names its figure by citation ('as shown in Fig. ...'), per format.md's citation-based move rule - flagged by the sub-agent as a visual-layout judgment call for stage 9's awareness, not a correctness issue. Gates: tag._parse succeeds and finds all 18 item containers; protect.parity shows 0 structural-drift issues between 06_simplify/chapter.simplified.en.md and 07_format/structured.en.md."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-22T06:24:53.117614+00:00",
+    "inputs": {
+      "structured.en.md": "2ff9cc6b4de9f0b4"
+    },
+    "counts": {
+      "items": 18,
+      "parts": 4,
+      "figures": 2,
+      "stage_given": 16,
+      "stage_key_formula": 0,
+      "stage_substitute": 10,
+      "stage_conclusion": 15,
+      "gate_item_count": "pass",
+      "gate_part_count": "pass",
+      "gate_figure_count": "pass"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "No model calls - fully mechanical via pipeline/serialize.py's structured_md_to_json(), unchanged from every prior chapter. All three fresh-vs-JSON counts matched on the first run (18 items, 4 parts, 2 figures) - no gate-script bug this time (chemistry-12-5's figure-count false-mismatch was a bug in the coordinator's own verification script, already fixed and reused correctly here). 0 key_formula blocks, as expected for a chapter with no math - the freeform-labelled :::step/:::concept blocks stage 7 wrote all correctly fell back to positional given/substitute/conclusion inference (none of their freeform labels collided with the fixed vocabulary strings, confirmed at stage 7). Spot-checked: q_1.13's 4 parts each correctly serialize their table-only answer as a single solution_blocks entry of type 'table' (no stage, as expected for a table); q_1.4's figure and its concept/step solution blocks all present and correctly structured."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-22T06:31:23.691121+00:00",
+    "inputs": {
+      "structured.en.json": "0423ea38c701c9c0"
+    },
+    "counts": {
+      "html_bytes": 37407,
+      "items_rendered": 18,
+      "figures_copied": 2,
+      "figures_missing": 0,
+      "numeric_tokens_readback_checked": 2,
+      "numeric_tokens_readback_missing": 0,
+      "raw_latex_leak_scan_hits": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hand-authored plain static HTML/CSS. No saved build_page_bio1.py existed from this chapter's own prior (Hindi-track) session, and the saved bio2-5 build scripts turned out to be stale - they import convert_math()/_html_escape() from latex_convert.py, functions that no longer exist there (the module was refactored during the chemistry chapters' own work into flow_text_to_lines/render_text_with_math/latex_to_html/render_markdown_table). Adapted from chemistry-12-5's own up-to-date build script instead (same base template, same current shared latex_convert.py), not from the stale bio-subject scripts, since it already carries every accumulated fix documented in step_9/PROMPT.md. Base CSS copied byte-identical from chemistry-12-5's own final.en.css. Macro-coverage check (mandatory before trusting a reused converter, per step_9/PROMPT.md): 0 LaTeX commands used anywhere in this chapter's own 06_simplify/chapter.simplified.en.md - no new symbols needed, as expected for a Biology chapter with essentially no math content. One genuine rendering improvement made (not a bug fix, a design enhancement specific to this chapter's own descriptive/process-heavy shape): when stage 8's position-based given/substitute/conclusion inference merges several distinctly-labelled :::step/:::concept blocks into one visual pill (this chapter has several such cases - q_1.6's 3 embryo-sac-formation steps, q_1.11's 3 fertilisation steps, q_1.7's 2 flower-type concepts - since position-based inference has no way to know they deserve separate pills), the original page-builder logic (reused as-is from chemistry-12-5, which never had this shape since every chemistry solution's middle blocks were unlabelled) would have silently discarded every individual block's own freeform label, showing one bare generic 'Substitute' pill over anonymous merged paragraphs. Added a small enhancement: when a merged group's blocks carry their own distinct labels, each block's content gets its own bold inline lead-in ('Three mitotic divisions: ...', 'Egg apparatus and antipodal cells: ...', 'Polar nuclei: ...') under the shared pill, preserving the structural work stage 7 did instead of flattening it - verified via before/after screenshots of q_1.6. Verification performed: (1) all 2 figure srcs resolve via os.path.exists against the REAL 09_design/images output directory, 0 missing; (2) numeric-token read-back (every digit-bearing token from 06_simplify/chapter.simplified.en.md's question/final_answer fields) - 2/2 found (this chapter has very few numbers, matching its descriptive nature); (3) automated scan of the full rendered HTML for leftover raw LaTeX/corruption artifacts - 0 hits across all 18 items; (4) manual visual read-back via Playwright screenshots of 4 representative items (q_1.2's comparison table, q_1.4's ovule diagram + concept structure, q_1.6's multi-labelled substitute group, q_1.13's 4 part-level comparison tables) - all render cleanly and correctly, including confirming the intentional design rule that an explicit :::concept block is always tagged 'given' regardless of its position (q_1.4's step+concept both land in one 'Given' pill by design, per step_8/PROMPT.md's own rule, not a bug)."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-22T06:33:12.569675+00:00",
+    "inputs": {
+      "final.en.html": "210e02edc354e754"
+    },
+    "counts": {
+      "page_count": 7,
+      "pdf_bytes": 493218,
+      "blank_pages": 0,
+      "numeric_tokens_readback_checked": 0,
+      "numeric_tokens_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export pass via Playwright/Chromium, same settings as every prior chapter (print_background=True, prefer_css_page_size=True, document.fonts.ready wait, emulate_media(media='screen') applied unconditionally per standing practice even though this English-only chapter has no Devanagari content to trigger the specific bug that fix guards against). Gates: page count 7 (sane for an 18-item, low-figure chapter); 0 blank pages; numeric read-back re-run against the PDF's own extracted text found 0 qualifying tokens (the gate's own regex only counts decimals/3+-digit integers, and this chapter's only 2 numeric tokens - both confirmed present at stage 9 - are short and don't meet that stricter threshold; not a gap, this chapter is genuinely close to number-free). This chapter is English-only, so the known Devanagari reph ('र्') ToUnicode-CMap extraction bug documented in step_10/PROMPT.md does not apply. No CALIBRATION re-run needed. This completes all 10 stages of biology-12-1's English track."
   }
 ]

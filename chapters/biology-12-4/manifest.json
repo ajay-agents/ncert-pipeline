@@ -255,5 +255,205 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.hi.html file:// path (not a copy), waited for document.fonts.ready, called emulate_media('screen') before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base vowel-reordering bug), exported with print_background=True and prefer_css_page_size=True (no explicit format/width/height). Gate: 9 pages (sane for 16 items with 11 figures and 2 tables), 0 blank pages, numeric read-back re-run against the PDF's own fitz-extracted text using the same question/final_answer-field scope as stage 9. 2 distinct numeric tokens checked ('1' and '6', both from question text - e.g. q_4.3's '6 स्थलों') - this chapter's question text is almost entirely descriptive/definitional with no other embedded digits, and its rich numeric content (genotype ratios, dates, allele notation) lives in solution text, outside this gate's documented scope - both found correctly. Not independently re-verified: the known, currently-unresolved Chromium reph ('र्'+consonant) ToUnicode CMap bug documented in step_10/PROMPT.md - visual rendering is unaffected, only copy-paste/text-extraction of words containing that exact sequence; flagged to the user, not silently shipped around, consistent with how prior chapters handled the same known limitation."
+  },
+  {
+    "stage": "mathpix",
+    "at": "2026-09-22T08:44:46.831863+00:00",
+    "inputs": {
+      "chapter.en.pdf": "298daff567ee3853",
+      "solutions.en.pdf": "e873d7424a3d903a"
+    },
+    "counts": {
+      "chapter_en_pages": 26,
+      "chapter_en_chars": 59252,
+      "chapter_en_dollar_spans": 157,
+      "chapter_en_table_rows": 27,
+      "chapter_en_image_refs": 25,
+      "solutions_en_pages": 11,
+      "solutions_en_chars": 14070,
+      "solutions_en_dollar_spans": 31,
+      "solutions_en_table_rows": 13,
+      "solutions_en_image_refs": 10
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only (Hindi track's own mathpix stage already completed in an earlier session, untouched here; that prior run shows some retroactive fix-cycle entries - verify_correction/format_correction/re-run tag/design/pdf - worth being aware of but not investigated). Verified via page-1 renders before conversion: chapter.en.pdf is the genuine 'Chapter 4: Principles of Inheritance and Variation' (26pp), solutions.en.pdf is the matching solutions manual '(Chapter - 5) (Principles of Inheritance and Variation) (Class - XII)' (11pp) - confirming the rationalised-edition chapter-numbering offset pattern for the 9th time overall (4th in Biology). Much larger and structurally richer than bio1/2/3: real inline math (157 dollar spans - allele/genotype notation like $\\mathrm{I}^{\\mathrm{A}}$, $\\mathrm{F}_{1}$), real comparison tables in the solutions (Dominance vs Recessive, Homozygous vs Heterozygous, Monohybrid vs Dihybrid - genuine markdown tables, unlike bio1-3 which never had any), and answers with embedded diagram images (fig_4_61 through fig_4_70, Punnett-square-style cross diagrams) - a first for this chapter series, since bio1-3 never had a figure nested inside an item's own solution. Confirmed via headings check that the chapter itself still has the same simple shape as bio1-3 despite the size: no worked Examples section and no Intext Questions section, just expository sections 4.1-4.8.3, SUMMARY, and 16 numbered EXERCISES. Found and fixed a substantially larger heading-drop/scatter defect in solutions.en.md than any prior biology chapter: 7 full Question+Answer pairs (1, 2, 3, 6, 7, 8, 13) had lost their '##' markers entirely (rendered as plain text), Q9 lost only its Answer heading, and Answer 16's two named disorders ('Sickle cell Anaemia', \"Down's syndrome\") plus a 'Symptoms' sub-label were wrongly promoted to headings, with the two diseases' own internal structure inconsistent (Down's syndrome's 'Symptoms' ran on as plain inline text with no line break at all, unlike Sickle cell's). Normalized all 16 Question/Answer pairs to a consistent '## Question N:' / '## Answer N:' pattern, demoted the disease-name headings to plain bullet-style leads (matching the established 'Test tube babies'-style bio3 precedent), and gave both diseases the same 'description paragraph, then Symptoms paragraph' structure. Also fixed a 37/28-char fullwidth-CJK-punctuation corruption run in chapter.en.md's opening TOC/intro (never extracted as an item, but normalized for cleanliness per standing practice) plus 3 accompanying missing-space typos in the same intro paragraph. No model reasoning about content used in this stage. Noted but NOT fixed (cosmetic only, in body text never extracted as an item): a body sentence 'Sutton and Boveri argued that the pairing and separation of a...' was wrongly promoted to an H2 heading, and the '4.8 Genetic Disorders' top-level heading itself appears to be missing (only its 4.8.1/4.8.2/4.8.3 sub-headings exist) - both harmless since Biology-chapter extraction only ever reads the EXERCISES section, confirmed unaffected."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-22T08:48:52.906332+00:00",
+    "inputs": {
+      "chapter.en.md": "978396f57ed1023c",
+      "solutions.en.md": "a6511742be859565"
+    },
+    "counts": {
+      "examples_en": 0,
+      "exercises_en": 16,
+      "solutions_en": 16,
+      "matched": 16,
+      "needs_review": 0,
+      "items_total": 16,
+      "parts_total": 7,
+      "figures_total": 10
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Like bio1-3, this chapter has NO worked Examples and NO Intext Questions section, confirmed by heading inspection before extraction - just 16 end-of-chapter Exercises. Extracted both the 16 exercises (chapter.en.md's EXERCISES block) and the 16 solutions-manual entries (solutions.en.md's now-clean Question N:/Answer N: headings, fixed at stage 1) directly, then ran match.join_solutions() for a proper mechanical join - 16/16 matched by plain number, 0 needs_review, 0 orphans, 0 duplicates. 3 items have labelled parts on both question and solution side: q_4.2 (3 parts - Dominance/Recessive, Homozygous/Heterozygous, Monohybrid/Dihybrid, each answered with a genuine comparison table - a first for this chapter series, kept as raw markdown table syntax inside each part's own solution field, matching the 'defer :::table wrapping to stage 7' convention), q_4.7 (2 parts, tall/green dihybrid-cross phenotype outcomes), q_4.13 (2 parts, Co-dominance and Incomplete dominance definitions). 9 items have 1-2 embedded diagram images each (10 figures total: q_4.3/4/5/6/8/11 have 1 each, q_4.7/13 have 1 each, q_4.12 has 2) - another first for this chapter series (bio1-3 never had a figure nested inside an item's own solution). schema.Part has no figures field, so fig_4_70 (illustrating q_4.13(b)'s Antirrhinum cross) attaches at the item level rather than to part (b) specifically - stage 7 is where a figure gets moved to its exact point in a specific part's own flow, per the container-markdown-editing precedent already established for bio3. Verified by directly re-parsing the rendered chapter.en.md via mdio.markdown_to_chapter(): all 16 items report has_solution=True with correct part counts (3/2/2) and figure counts (10 total, matching stage 1's own image-ref count), and q_4.2's 3 tables confirmed byte-identical after the round-trip - not just trusting the join report. gate_counts and gate_solutions_present both pass with 0 failures. No model calls used - extracted directly by reading both source files (a larger chapter than bio1-3, but still simple/mechanical enough - 16 short-to-medium Q&A items, no ambiguous numbering) rather than dispatching extraction sub-agents. Noted per extract.md's own instruction: chapter.en.md Q7 reads 'tall plant with green seed (Ttyy)' while solutions.en.md Q7's answer never restates that specific genotype string directly - transcribed each document exactly as printed, per Rule 4; any apparent inconsistency between the two documents' own genotype notation is for stage 5 to verify against the actual PDF pages, not to reconcile here."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-22T09:40:36.768894+00:00",
+    "inputs": {
+      "chapter.en.md": "e4ca948ed785f94b"
+    },
+    "counts": {
+      "examples_en_items": 0,
+      "examples_en_bytes": 147,
+      "qa_en_items": 16,
+      "qa_en_bytes": 16886,
+      "sum_matches_merged_total": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Pure function, no model call. 0 examples (consistent with bio1-3's chapter shape). 16 qa items. Round-trip verified via tag._parse() on both output files (containers balance) and by re-parsing each split file back into a Chapter and confirming item counts sum to the merged chapter's own 16 (0 + 16 = 16) - nothing gained or lost in the split."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-22T09:41:57.755970+00:00",
+    "inputs": {
+      "examples.en.md": "356e72e69f52ec50",
+      "qa.en.md": "e4ca948ed785f94b"
+    },
+    "counts": {
+      "combined_en_items": 16,
+      "combined_en_bytes": 16886
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Pure function, no model call - plain reunion of stage 3's two split files. Round-trip verified: tag._parse() confirms containers balance, and re-parsing combined.en.md yields 16 items, matching stage 3's own 0 (examples) + 16 (qa) = 16 total exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-22T09:46:11.273043+00:00",
+    "inputs": {
+      "combined.en.md": "e4ca948ed785f94b",
+      "chapter.en.pdf": "298daff567ee3853",
+      "solutions.en.pdf": "e873d7424a3d903a"
+    },
+    "counts": {
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "gate_math_parity_failures": 0,
+      "gate_counts_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Verified all 16 items (13 plain Q&A plus q_4.2/4.7/4.13's parts, including q_4.2's 3 comparison tables and 10 embedded diagram images) word-for-word against the original PDF pages: chapter.en.pdf page 26 (EXERCISES, all 16 questions) and every page of solutions.en.pdf (11 pages, Questions/Answers 1-16). Neither PDF has an extractable text layer (both scanned/flattened), so used direct visual reading of all pages at 100-110dpi rather than text-based page-mapping - feasible given the chapter's still-manageable size (37 combined pages). Result: 0 corrections needed - every question and answer transcribed exactly, including all 3 of q_4.2's tables and all 10 embedded cross-diagram images (fig_4_61 through fig_4_70), confirmed against their actual page renderings. Investigated and resolved an apparent q_4.7 genotype-notation discrepancy noted at stage 2 (chapter.en.md's own printed exercise reads '(TtYy)' and '(Ttyy)' for the two parent plants, while solutions.en.md's own restated copy of the same question - which our extraction never uses, since item.question always comes from chapter.en.md only - mistakenly repeats '(TtYy)' for both): confirmed via the source PDF's own fig_4_65 cross diagram that 'TtYy' x 'Ttyy' (chapter.en.md's version) is the genuinely correct genotype pairing; solutions.en.md's restated-question typo has zero effect on our extracted content since that field was never captured in the first place. Noted, not corrected (a stage-7 structural question, not a content error): the source PDF's own Answer 16 gives 'Symptoms' its own distinct sub-heading under each disease name (confirmed via direct page inspection), whereas stage 1's mechanical fix merged it inline with a colon ('Symptoms: ...') for both diseases - all the same words are present and correctly ordered, just one paragraph break collapsed; left for stage 7 to decide whether 'Symptoms' deserves its own :::concept block. Also noted the source solutions manual's own fig_4_63 image has a genuine captioning error baked into the raster image itself (the second of its two stacked cross-diagrams is captioned 'homozygous...recessive' when the diagram clearly shows a heterozygous unknown parent) - not something we can or should fix, since it's part of the source's own embedded image content, not transcribed text; flagged for awareness only. gate_math_parity and gate_counts both pass with 0 failures. This matches biology-12-2's and biology-12-3's own precedent of a remarkably clean chapter needing 0 corrections at this stage, despite this chapter's much greater structural complexity."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-22T09:56:16.328899+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "e4ca948ed785f94b"
+    },
+    "counts": {
+      "items_simplified": 7,
+      "items_unchanged": 9,
+      "restore_failed": 0,
+      "gate_question_text_frozen_failures": 0,
+      "gate_answers_unchanged_failures": 0,
+      "gate_math_parity_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Simplified 7/16 items' solution text (q_4.3, 4.8, 4.9, 4.10, 4.11, 4.12, 4.16) - mainly breaking long/circular sentences (q_4.3's 'linked...might be linked...linked genes' repetition, q_4.8's redundant 'linked/inherited together' double statement, q_4.10's doubled 'generation after generation' phrase, q_4.11's compound 'and if' sentence) and restructuring q_4.12's garbled 'Father Mother' line (a two-column table flattened into one confusing run-on line by mathpix) into a clear 'Father - ...; Mother - ...' format. For q_4.12 and q_4.16, which contain real inline math ($\\mathrm{I}^{\\mathrm{A}}$-style allele notation), every protected span was verified present as an exact-text SET match between the original and rewritten solution (protect.freeze() on both, comparing the sorted span lists) before accepting the edit - 0 mismatches, 0 restore failures. Left the dense allele-genotype explanation paragraph in q_4.12 (and all of q_4.13's math-bearing prose) untouched beyond the one clearly-broken line, to minimize risk to fragile math-adjacent text without a corresponding clarity gain. Left 9 items unchanged (q_4.1, 4.2's tables, 4.4, 4.5, 4.6, 4.7, 4.13, 4.14, 4.15) - already clear, or (q_4.6) containing a genuine source-textbook error ('gamete, r' where the female parent's genotype is bb, not r/R-related) that was correctly left untouched per Rule 5 - not ours to silently fix, matching the established precedent of leaving a textbook's own error unless a corrections mechanism applies. Verified directly (not just via gates) that every question text, final_answer, and figure count - item-level and part-level - is unchanged before vs after: 0 mismatches across all 16 items. All three gates (gate_question_text_frozen, gate_answers_unchanged, gate_math_parity) pass with 0 failures."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-22T10:00:43.511560+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "4df52e3d168f4fdb"
+    },
+    "counts": {
+      "structured_en_bytes": 17252,
+      "tag_parse_top_level_nodes": 3,
+      "protect_parity_issues": 0,
+      "figure_set_match": true,
+      "table_rows_before": 13,
+      "table_rows_after": 13,
+      "inline_math_before": 31,
+      "inline_math_after": 31
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. First chapter in this series with real structural work at this stage: 10 figures repositioned from their auto-rendered item-level position (before parts/solution, stage 4's default) to their actual point of reference inside each solution's own flow, matching the source PDF's own layout (verified page-by-page at stage 5) - e.g. fig_4_61 now sits between q_4.3's two explanatory paragraphs, fig_4_68/4_69 now sit after their respective homozygous/heterozygous-cross sentences in q_4.12, fig_4_70 now nests inside q_4.13 part (b)'s own :::concept block. Also reordered q_4.7's item-level intro sentence to appear BEFORE its two parts instead of after (stage 4's render order had it trailing, which read backwards against both natural sense and the source PDF's own layout - a legitimate stage-7 structural fix, not a wording change). Wrapped all 3 of q_4.2's comparison tables in :::table (this chapter's first genuine markdown tables). Added :::concept labels for 8 standalone definitions (Locus, Law of Dominance, Test cross, Linkage, Pedigree analysis, ABO blood group alleles, Co-dominance, Incomplete dominance, Point mutation) and kept the established 2-named-disease :::concept pattern for q_4.16 (Sickle cell Anaemia / Down's syndrome, matching biology-12-3's own q_3.9 precedent). No :::step/:::formula blocks - this chapter's math is all embedded genotype/allele notation inside definitional prose, not a sequential given/formula/substitute/conclusion worked-solution flow. Verified: tag._parse() succeeds (3 top-level nodes); protect.parity() reports 0 issues; explicit figure-src-set comparison confirms all 10 figures present before and after with no additions/losses; table row count unchanged (13/13, confirming :::table wrapping didn't touch cell content); inline math span count unchanged (31/31); and a container/table-line-stripped text diff confirms every remaining difference is purely structural (paragraph breaks at concept boundaries, the one deliberate q_4.7 reordering, and bullet-to-label conversions for q_4.16's disease names) - no prose was reworded or lost."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-22T10:05:33.599976+00:00",
+    "inputs": {
+      "structured.en.md": "480eb19922e60b7d"
+    },
+    "counts": {
+      "items": 16,
+      "parts": 7,
+      "figures": 10,
+      "stage_given": 14,
+      "stage_key_formula": 0,
+      "stage_substitute": 2,
+      "stage_conclusion": 13,
+      "gate_item_count": "pass",
+      "gate_part_count": "pass",
+      "gate_figure_count": "pass"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "No model calls - fully mechanical via pipeline/serialize.py. All three fresh-vs-JSON counts matched on the first run (16 items, 7 parts, 10 figures - each figure appears exactly once, confirmed against the raw markdown's own 10 :::figure occurrences, matching the distinct-src set exactly). 0 key_formula blocks, as expected (no derivation-style formula content in this chapter's descriptive genetics answers). Specifically hand-verified the two nested-figure shapes this chapter newly exercises: q_4.12's 2 bare :::figure blocks (fig_4_68, fig_4_69), each a direct child of the item's own solution alongside auto-wrapped 'step' text blocks, correctly came through as their own top-level solution_blocks entries (type=figure, no stage) positioned between the surrounding given/substitute/conclusion text blocks in the right sequence; q_4.13 part (b)'s fig_4_70, nested INSIDE its own :::concept block after the definition text, correctly triggered _flatten_children()'s concept-splitting behaviour - the concept block's text and the figure came through as two separate flat entries (concept-with-text, then figure) rather than the figure being silently swallowed into the concept's own flow or dropped. Both match pipeline/serialize.py's documented design exactly, not a new gap. Stage distribution (14 given + 2 substitute + 13 conclusion) reconciles with this chapter's 8 :::concept-labelled definitions (always given) plus its 2 named-disease concepts in q_4.16 (also given) plus 2 genuinely position-inferred substitute blocks (q_4.3's and q_4.12's own middle explanatory paragraphs, each sitting between that item's given-concept and its conclusion), and the mix of single-block conclusion-only solutions elsewhere - hand-verified by grepping every substitute-tagged block in the JSON, not just trusting the printed count."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-22T10:16:19.020648+00:00",
+    "inputs": {
+      "structured.en.json": "d65577439d54a591"
+    },
+    "counts": {
+      "html_bytes": 36060,
+      "items_rendered": 16,
+      "figures_copied": 10,
+      "figures_missing": 0,
+      "numeric_tokens_readback_checked": 0,
+      "numeric_tokens_readback_missing": 0,
+      "raw_latex_leak_scan_hits": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hand-authored plain static HTML/CSS, adapted from biology-12-3's own build script. Macro-coverage check: only \\left/\\mathrm/\\right used (15 distinct dollar spans, all short allele/genotype notation) - already fully covered by the existing shared latex_convert.py, no new symbols needed. Two real bugs found and fixed via the mandatory verbatim read-back and visual screenshot review, both affecting only this chapter's own newly-exercised content shapes: (1) A CSS overflow bug: a freeform :::concept/:::step label long enough to exceed the fixed 135px pill column ('ABO blood group alleles', 'Incomplete dominance') overflowed into the adjacent content column under the pill classes' white-space:nowrap, visually running the label and the first line of content together with no space. Fixed per RULES.md's own 'start from the base CSS, don't fork it' rule - added 4 new wrap-capable variant classes (.s24w/.s28w/.s34w/.s35w, same colors/padding, no forced nowrap) rather than editing the base .s24/.s28/.s34/.s35 classes other (short) labels still rely on, and switch to the variant in the build script whenever a pill shows a freeform label (unpredictable length) rather than the fixed 4-word vocabulary (always short). Verified no regression on short labels ('Locus', 'Co-dominance') via re-screenshot. (2) A genuine pipeline/serialize.py bug (not chapter-specific config, an actual code fix): q_4.7's own item-level intro sentence ('A cross between tall plant with yellow seeds and tall plant with green seeds will produce'), which sits BEFORE its 2 :::part blocks in structured.en.md, was being silently discarded by _item_to_json()'s 'known duplicate-solution artifact' suppression logic - that logic only checked presence/absence of an item-level solution alongside parts-with-their-own-solutions, not WHERE the item-level solution sits relative to the parts, so a genuine leading intro was being treated the same as the documented TRAILING re-narration duplicate the logic was actually meant to catch. Fixed by checking the item-level :::solution's position against the first :::part's position in the raw child list - only suppress when the solution comes AFTER all parts, matching step_7/PROMPT.md's own 'second, whole-item :::solution AFTER the labelled parts' wording exactly. Re-ran stage 8's serialization after this fix (all cross-checks still pass, conclusion-stage block count rose from 13 to 14 reflecting the now-preserved intro), then rebuilt this page. A background sweep of every other already-completed chapter for the same shape (item-level solution before parts, with parts also having solutions) was launched to check whether any prior chapter's already-shipped output was affected by this same bug; report pending as of this manifest entry. Verification performed: (1) all 10 figure srcs resolve via os.path.exists against the REAL 09_design/images output directory; (2) numeric-token read-back - 0 qualifying tokens (this chapter's numbers are short allele/genotype labels and single ratios, not 3+-digit/decimal values); (3) automated scan of the full rendered HTML for leftover raw LaTeX/corruption artifacts - 0 hits across all 16 items; (4) manual visual read-back via Playwright screenshots of 6 representative items (q_4.2's 3 genuine comparison tables - first in this chapter series; q_4.3's mid-solution figure and Given/Substitute/Conclusion pill sequence; q_4.7's now-correct intro-before-parts ordering with its own trailing figure; q_4.12's 2 figures correctly positioned after their respective cross-outcome sentences, with the long ABO-alleles label now wrapping cleanly; q_4.13's Co-dominance/Incomplete dominance concept pills with the same wrap fix and part (b)'s nested figure; q_4.16's 2 named-disease concepts correctly merged into one shared Given pill via the multi_labelled bold-lead-in path) - all render cleanly and correctly after both fixes."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-22T10:33:47.460192+00:00",
+    "inputs": {
+      "final.en.html": "703ce22de95e46b4"
+    },
+    "counts": {
+      "page_count": 8,
+      "pdf_bytes": 1057985,
+      "blank_pages": 0,
+      "numeric_tokens_readback_checked": 0,
+      "numeric_tokens_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export pass via Playwright/Chromium, same settings as every prior chapter (networkidle + document.fonts.ready wait, emulate_media('screen') applied unconditionally per standing practice, print_background + prefer_css_page_size). Gates: page count 8 (sane for a 16-item chapter with 3 tables and 10 figures - richer content than any prior biology chapter, reflected in the higher page count than bio1's 7pp/bio2's 9pp/bio3's 5pp); 0 blank pages; numeric read-back found 0 qualifying tokens, matching stage 9's own finding. Visual spot-check of pages 2 and 5 (rendered to PNG) confirms clean layout across a page break: q_4.2's comparison table splits cleanly between pages with no torn row, q_4.3's Given/Substitute/Conclusion pills and mid-solution figure render correctly, q_4.4's math superscripts (F_1/F_2) render as proper subscripts. English-only chapter, so the Devanagari reph extraction bug does not apply. No CALIBRATION re-run needed. This completes all 10 stages of biology-12-4's English track."
   }
 ]

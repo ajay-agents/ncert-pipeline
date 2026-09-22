@@ -1,0 +1,1127 @@
+{
+  "front": {
+    "title": "Human Reproduction",
+    "chapter": "2"
+  },
+  "items": [
+    {
+      "id": "q_2.1",
+      "kind": "exercise",
+      "number": "2.1",
+      "topic": "Fill in the blanks: reproductive terms",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Fill in the blanks:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(a)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Humans reproduce $\\_\\_\\_\\_$ (asexually/sexually)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(a) Humans reproduce sexually."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(b)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Humans are $\\_\\_\\_\\_$ (oviparous, viviparous, ovoviviparous)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(b) Humans are viviparous."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(c)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Fertilisation is $\\_\\_\\_\\_$ in humans (external/internal)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(c) Fertilization is internal in human."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(d)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Male and female gametes are $\\_\\_\\_\\_$ (diploid/haploid)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(d) Male and female gametes are haploid."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(e)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Zygote is $\\_\\_\\_\\_$ (diploid/haploid)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(e) Zygote is diploid."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(f)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "The process of release of ovum from a mature follicle is called $\\_\\_\\_\\_$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(f) The process of release of the ovum from a mature follicle is called ovulation."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(g)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Ovulation is induced by a hormone called $\\_\\_\\_\\_$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(g) Ovulation is induced by a hormone called the luteinizing hormone."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(h)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "The fusion of male and female gametes is called $\\_\\_\\_\\_$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(h) The fusion of the male and the female gametes is called fertilization."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(i)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Fertilisation takes place in $\\_\\_\\_\\_$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(i) Fertilization takes place in the fallopian tube."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(j)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Zygote divides to form $\\_\\_\\_\\_$ which is implanted in uterus."
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(j) The zygote divides to form blastocyst, which is fertilization implanted in uterus."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(k)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "The structure which provides vascular connection between foetus and uterus is called $\\_\\_\\_\\_$"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(k) The structure which provides vascular connection between the fetus and uterus is called placenta."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_2.2",
+      "kind": "exercise",
+      "number": "2.2",
+      "topic": "Male reproductive system diagram",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Draw a labelled diagram of male reproductive system."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_2_42.jpg",
+          "caption": "The male reproductive system"
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_2.3",
+      "kind": "exercise",
+      "number": "2.3",
+      "topic": "Female reproductive system diagram",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Draw a labelled diagram of female reproductive system."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_2_43.jpg",
+          "caption": "The female reproductive system"
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_2.4",
+      "kind": "exercise",
+      "number": "2.4",
+      "topic": "Functions of testis and ovary",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write two major functions each of testis and ovary."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Functions of the Testis\n\n- Testis makes male gametes called spermatozoa. This process is called spermatogenesis.\n- Leydig cells in the seminiferous tubules make the male sex hormone testosterone. Testosterone helps develop secondary sex characteristics in males."
+            }
+          ],
+          "label": "Functions of testis"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Functions of the ovary\n\n- Ovary makes female gametes called ova. This process is called oogenesis.\n- The growing Graffian follicles make the female sex hormone estrogen. Estrogen helps develop secondary sex characteristics in females."
+            }
+          ],
+          "label": "Functions of ovary"
+        }
+      ]
+    },
+    {
+      "id": "q_2.5",
+      "kind": "exercise",
+      "number": "2.5",
+      "topic": "Seminiferous tubule structure",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Describe the structure of a seminiferous tubule."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_2_44.jpg",
+          "caption": "Transverse section of seminiferous tubules"
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Sperms are produced in the testes inside a highly coiled structure called the seminiferous tubule. These tubules lie in the testicular lobules. Germinal epithelium lines each seminiferous tubule. This epithelium has two types of cells: spermatogonia and Sertoli cells. Spermatogonia are male germ cells. They undergo meiotic divisions to form primary spermatocytes. Primary spermatocytes further divide to form secondary spermatocytes, and then spermatids. Spermatids later change into male gametes called spermatozoa. Sertoli cells are known as the nurse cells of the testes because they nourish the germ cells. Large polygonal cells, called interstitial cells or Leydig cells, lie just next to the seminiferous tubules. These cells secrete the male hormone testosterone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.6",
+      "kind": "exercise",
+      "number": "2.6",
+      "topic": "Spermatogenesis process",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is spermatogenesis? Briefly describe the process of spermatogenesis."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_2_45.jpg",
+          "caption": "Process of spermatogenesis"
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Spermatogenesis is the process of forming sperms from immature germ cells in males. It takes place in the seminiferous tubules inside the testes."
+            }
+          ],
+          "label": "Definition"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "A diploid spermatogonium (male germ cell) grows in size to form a diploid primary spermatocyte."
+            }
+          ],
+          "label": "Primary spermatocyte formation"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This diploid primary spermatocyte undergoes the first meiotic division (meiosis I), a reductional division, to form two equal haploid secondary spermatocytes."
+            }
+          ],
+          "label": "Meiosis I"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Each secondary spermatocyte then undergoes the second meiotic division (meiosis II) to form two equal haploid spermatids. So, one diploid spermatogonium produces four haploid spermatids."
+            }
+          ],
+          "label": "Meiosis II"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "These spermatids change into spermatozoa (sperm) through a process called spermiogenesis."
+            }
+          ],
+          "label": "Spermiogenesis"
+        }
+      ]
+    },
+    {
+      "id": "q_2.7",
+      "kind": "exercise",
+      "number": "2.7",
+      "topic": "Hormones regulating spermatogenesis",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Name the hormones involved in regulation of spermatogenesis."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "FSH (follicle-stimulating hormone) and LH (luteinizing hormone) are secreted by gonadotropin releasing hormone from the hypothalamus. These hormones regulate the process of spermatogenesis. FSH acts on Sertoli cells, while LH acts on Leydig cells of the testis, stimulating spermatogenesis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.8",
+      "kind": "exercise",
+      "number": "2.8",
+      "topic": "Spermiogenesis and spermiation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Define spermiogenesis and spermiation."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Spermiogenesis\nIt is the process in which spermatids change into mature spermatozoa (sperm)."
+            }
+          ],
+          "label": "Spermiogenesis"
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Spermiation\nIt is the process in which mature spermatozoa are released from the Sertoli cells into the lumen of the seminiferous tubules."
+            }
+          ],
+          "label": "Spermiation"
+        }
+      ]
+    },
+    {
+      "id": "q_2.9",
+      "kind": "exercise",
+      "number": "2.9",
+      "topic": "Sperm structure diagram",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Draw a labelled diagram of sperm."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_2_46.jpg",
+          "caption": "Sperm cell"
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_2.10",
+      "kind": "exercise",
+      "number": "2.10",
+      "topic": "Components of seminal plasma",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What are the major components of seminal plasma?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Semen, produced in males, is made up of sperms and seminal plasma. The seminal plasma mainly contains mucus, sperms, and various secretions of the accessory glands. It is rich in fructose, calcium, ascorbic acid, and certain enzymes, which nourish and protect the sperms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.11",
+      "kind": "exercise",
+      "number": "2.11",
+      "topic": "Functions of male accessory ducts and glands",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What are the major functions of male accessory ducts and glands?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The male accessory ducts are the vasa efferentia, epididymis, vas deferens, and rete testis. They help transport and temporarily store sperms. The male accessory glands, on the other hand, are the seminal vesicles, prostate glands, and bulbourethral glands. These glands secrete fluids that lubricate the reproductive system and the sperms. The sperms mix with this fluid, which makes it easier for them to move into the female body. The fluid is rich in fructose, ascorbic acid, and certain enzymes, which nourish and activate the sperms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.12",
+      "kind": "exercise",
+      "number": "2.12",
+      "topic": "Oogenesis process",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is oogenesis? Give a brief account of oogenesis."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_2_47.jpg",
+          "caption": "Process of oogenesis"
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Oogenesis is the process of forming a mature ovum from the oogonia in females. It takes place in the ovaries."
+            }
+          ],
+          "label": "Definition"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "A diploid oogonium, or egg mother cell, grows in size and changes into a diploid primary oocyte."
+            }
+          ],
+          "label": "Primary oocyte formation"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This diploid primary oocyte undergoes the first meiotic division, meiosis I or reductional division, to form two unequal haploid cells. The smaller cell is known as the first polar body, while the larger cell is known as the secondary oocyte."
+            }
+          ],
+          "label": "Meiosis I"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This secondary oocyte undergoes the second meiotic division, meiosis II or equational division, to give rise to a second polar body and an ovum."
+            }
+          ],
+          "label": "Meiosis II"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "So, in the process of oogenesis, one diploid oogonium produces a single haploid ovum, along with two or three polar bodies."
+            }
+          ],
+          "label": "Summary"
+        }
+      ]
+    },
+    {
+      "id": "q_2.13",
+      "kind": "exercise",
+      "number": "2.13",
+      "topic": "Ovary section diagram",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Draw a labelled diagram of a section through ovary."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_2_48.jpg",
+          "caption": "Transerve section of the ovary"
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_2.14",
+      "kind": "exercise",
+      "number": "2.14",
+      "topic": "Graafian follicle diagram",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Draw a labelled diagram of a Graafian follicle?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_2_49.jpg",
+          "caption": "Structure of the Graafian follicle"
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_2.15",
+      "kind": "exercise",
+      "number": "2.15",
+      "topic": "Functions of reproductive structures",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Name the functions of the following:"
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(a)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Corpus luteum"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(a) Corpus luteum - The corpus luteum forms from the ruptured Graafian follicle. It secretes the hormone progesterone during the luteal phase of the menstrual cycle. High levels of progesterone stop the secretion of FSH and LH, which prevents ovulation. It also lets the endometrium of the uterus grow and prepare itself for implantation."
+                }
+              ],
+              "label": "Corpus luteum"
+            }
+          ]
+        },
+        {
+          "label": "(b)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Endometrium"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(b) Endometrium - It is the innermost lining of the uterus. It is rich in glands and changes cyclically through the phases of the menstrual cycle to prepare for implantation of the embryo."
+                }
+              ],
+              "label": "Endometrium"
+            }
+          ]
+        },
+        {
+          "label": "(c)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Acrosome"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(c) Acrosome - It is a cap-like structure present at the front part of the sperm head. It contains the enzyme hyaluronidase, which breaks down the outer membrane of the egg, helping the sperm penetrate the egg during fertilization."
+                }
+              ],
+              "label": "Acrosome"
+            }
+          ]
+        },
+        {
+          "label": "(d)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Sperm tail"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(d) Sperm tail - It is the longest region of the sperm that facilitates the movement of the sperm inside the female reproductive tract."
+                }
+              ],
+              "label": "Sperm tail"
+            }
+          ]
+        },
+        {
+          "label": "(e)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Fimbriae"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "concept",
+              "stage": "given",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(e) Fimbriae - These are finger-like projections at the ovarian end of the fallopian tube. Their cilia beat and help collect the ovum after ovulation."
+                }
+              ],
+              "label": "Fimbriae"
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_2.16",
+      "kind": "exercise",
+      "number": "2.16",
+      "topic": "True or False: reproductive physiology",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Identify True/False statements. Correct each false statement to make it true."
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "(a)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Androgens are produced by Sertoli cells. (True/False)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(a) Androgens are produced by Sertoli cells. (False)\nAndrogens are produced by Leydig cells found in seminiferous tubules of the testis."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(b)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Spermatozoa get nutrition from Sertoli cells. (True/False)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(b) Spermatozoa get nutrition from Sertoli cells. (True)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(c)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Leydig cells are found in ovary. (True/False)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(c) Leydig cells are found in ovary. (False)\n\nLeydig cells are found in the seminiferous tubules of the testis."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(d)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Leydig cells synthesise androgens. (True/False)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(d) Leydig cells synthesise androgens. (True)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(e)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Oogenesis takes place in corpus luteum. (True/False)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(e) Oogenesis takes place in corpus luteum. (False) Oogenesis takes place in the ovary."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(f)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Menstrual cycle ceases during pregnancy. (True/False)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(f) Menstrual cycle ceases during pregnancy. (True)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "(g)",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "Presence or absence of hymen is not a reliable indicator of virginity or sexual experience. (True/False)"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(g) Presence or absence of the hymen is not a reliable indicator of virginity or sexual experience. (True)"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_2.17",
+      "kind": "exercise",
+      "number": "2.17",
+      "topic": "Menstrual cycle and its hormones",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is menstrual cycle? Which hormones regulate menstrual cycle?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The menstrual cycle is a series of cyclic physiologic changes in the female reproductive tract in primates. The whole cycle takes about 28 days to complete. At the end of the cycle, the uterine endometrium breaks down and is released as blood and mucous through the vagina. This is known as menses."
+            }
+          ],
+          "label": "Definition"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Four hormones regulate the menstrual cycle: follicle stimulating hormone (FSH), luteinizing hormone (LH), estrogen, and progesterone. During the follicular phase, the anterior pituitary gland secretes more FSH and LH. Under the influence of RH (releasing hormone) from the hypothalamus, FSH stimulates the conversion of a primary follicle into a Graafian follicle. As the level of LH gradually rises, the follicle grows further and secretes estrogen. Estrogen inhibits the secretion of FSH and stimulates the secretion of luteinizing hormone. It also causes the uterine endometrium to thicken."
+            }
+          ],
+          "label": "Follicular phase"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "When the level of LH rises sharply, it causes the Graafian follicle to rupture and release the ovum into the fallopian tube."
+            }
+          ],
+          "label": "Ovulation"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The ruptured Graafian follicle then changes into the corpus luteum, which starts secreting progesterone during the luteal phase. Progesterone helps maintain and prepare the endometrium for implantation of the embryo. High levels of progesterone in the blood decrease the secretion of LH and FSH, and so inhibit further ovulation."
+            }
+          ],
+          "label": "Luteal phase"
+        }
+      ]
+    },
+    {
+      "id": "q_2.18",
+      "kind": "exercise",
+      "number": "2.18",
+      "topic": "Parturition and its hormones",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is parturition? Which hormones are involved in induction of parturition?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Parturition is the process of giving birth to a baby once the development of the foetus is complete in the mother's womb. Two hormones are involved in this process: oxytocin and relaxin. Oxytocin causes the smooth muscles of the myometrium of the uterus to contract, which pushes the full-term foetus toward the birth canal. Relaxin, on the other hand, relaxes the pelvic ligaments and prepares the uterus for childbirth."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.19",
+      "kind": "exercise",
+      "number": "2.19",
+      "topic": "Sex determination and daughters",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "In our society the women are often blamed for giving birth to daughters. Can you explain why this is not correct?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "All human beings have 23 pairs of chromosomes. Human males have 22 pairs of autosomes and one sex chromosome, which can be X or Y. Human females, on the contrary, have 22 pairs of autosomes and only the X sex chromosome. The sex of a child is determined by the type of male gamete (X or Y), which fuses with the X chromosome of the female.\nIf the fertilizing sperm carries an X chromosome, the baby will be a girl; if it carries a Y chromosome, the baby will be a boy.\nHence, it is incorrect to blame a woman for the sex of the child."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.20",
+      "kind": "exercise",
+      "number": "2.20",
+      "topic": "Ovulation and twin births",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "How many eggs are released by a human ovary in a month? How many eggs do you think would have been released if the mother gave birth to identical twins? Would your answer change if the twins born were fraternal?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "An ovary releases one egg every month. When two babies are born together, they are called twins. Twins are usually formed from a single egg, by the separation of early blastomeres after the first zygotic cleavage. Because they come from the same egg, the babies formed have the same genetic make-up and are called identical twins.\n\nFraternal twins, however, develop from two separate eggs. This happens when two eggs (one from each ovary) are released at the same time and get fertilized by two separate sperms. Since they come from two different eggs, the babies developed have different genes and are therefore called non-identical, or fraternal, twins."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.21",
+      "kind": "exercise",
+      "number": "2.21",
+      "topic": "Ovulation in multiple births",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "How many eggs do you think were released by the ovary of a female dog which gave birth to 6 puppies?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Dogs and rodents are polyovulatory species. In these species, more than one ovum is released from the ovary at the time of ovulation. So, to produce six puppies, the ovary of the female dog must have released six eggs."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

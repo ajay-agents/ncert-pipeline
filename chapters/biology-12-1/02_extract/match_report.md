@@ -1,9 +1,8 @@
 # Match report
 
-- **language:** hi (Hindi-only chapter, no English source PDFs)
-- **questions:** 18
-- **solutions:** 18
-- **matched:** 18
+- **exercise_questions:** 18
+- **exercise_solutions_extracted:** 18
+- **matched_by_number:** 18
 ## unmatched_questions (0)
 
 ## orphan_solutions (0)
@@ -12,43 +11,5 @@
 
 ## needs_review (0)
 
-## gate_counts_failed (0)
-
-## gate_solutions_present_hi_failed (1)
-- q_1.4: no solution (hi)
-
-## gate_bilingual_failed (34)
-- q_1.1: question missing a language
-- q_1.1: solution missing a language
-- q_1.2: question missing a language
-- q_1.2: solution missing a language
-- q_1.3: question missing a language
-- q_1.3: solution missing a language
-- q_1.4: question missing a language
-- q_1.5: question missing a language
-- q_1.5: solution missing a language
-- q_1.6: question missing a language
-- q_1.6: solution missing a language
-- q_1.7: question missing a language
-- q_1.7: solution missing a language
-- q_1.8: question missing a language
-- q_1.8: solution missing a language
-- q_1.9: question missing a language
-- q_1.9: solution missing a language
-- q_1.10: question missing a language
-- q_1.10: solution missing a language
-- q_1.11: question missing a language
-- q_1.11: solution missing a language
-- q_1.12: question missing a language
-- q_1.12: solution missing a language
-- q_1.13: question missing a language
-- q_1.14: question missing a language
-- q_1.14: solution missing a language
-- q_1.15: question missing a language
-- q_1.15: solution missing a language
-- q_1.16: question missing a language
-- q_1.16: solution missing a language
-- q_1.17: question missing a language
-- q_1.17: solution missing a language
-- q_1.18: question missing a language
-- q_1.18: solution missing a language
+- **gate_solutions_present_issues:** 0
+- **notes:** Simple 1:1 numeric correspondence (bare 1-18 in both the chapter's own Exercises section and the solutions manual, no chapter-prefix collision risk unlike every one of the 5 chemistry chapters just completed) - confirmed clean by both the automated join_solutions() report (0 needs_review) AND by an explicit manual content spot-check of all 18 matched pairs side-by-side (not just trusting the clean automated report), per step_2/PROMPT.md's own standing warning that a clean join report alone is not sufficient. This chapter has no Examples or Intext Questions sections at all (confirmed at stage 1) - only the 18 end-of-chapter Exercises, so this stage needed only two extraction passes (exercises, solutions), not the four a chemistry chapter typically needs. Fixed 2 real, silent-content-loss structural bugs in the raw extraction sub-agent output before merging, both caught by directly parsing the extraction file through pipeline.mdio and inspecting the resulting Item objects rather than trusting the sub-agent's own self-report of correctness: (1) q_1.4 had its answer split across TWO separate sibling :::solution blocks (opening sentence, then [figure], then the actual detailed list of ovule parts) - mdio.py's _node_to_item() only ever reads the FIRST :::solution child of a container (_child_dicts(children, solution)[0]), so the second, much longer block (the entire bulleted list of ovule parts - Funiculus/Hilum/Integuments/Micropyle/Nucellus/Chalazal) was being silently dropped entirely. Fixed by merging both paragraphs into ONE :::solution block, with the figure kept as a sibling. (2) q_1.2 (item-level) and all 4 of q_1.13's parts had their actual comparison-table content wrapped in a standalone :::table container - a stage 7+ vocabulary word that mdio.markdown_to_items()/_node_to_item() does not recognize or read at all at this pre-stage-7 extraction stage (only :::prompt/:::part/:::solution/:::answer/:::figure are read); the table content was being silently discarded completely, leaving q_1.2's solution missing its entire core comparative answer and all 4 of q_1.13's parts with a completely EMPTY solution (None) despite the real answer content existing in the source. Fixed by converting each bare :::table block into plain markdown-table text embedded directly inside a proper :::solution block (the correct pre-stage-7 convention - explicit :::table wrapping is introduced later, at stage 7). Verified all fixes by re-parsing the corrected file through mdio.markdown_to_items() directly and confirming non-empty, complete content for every affected item/part before proceeding to the join. No genuine OCR/content defects requiring stage-5 flagging beyond what was already noted at stage 1 (minor spacing artifacts like "7 -celled", "self- incompatibility"; Q7's garbled "namely Oxalis and Viola chasmogamous and cleistogamous flowers" phrasing) - none corrected here per Rule 1, left for stage 5 verification against the source PDFs.

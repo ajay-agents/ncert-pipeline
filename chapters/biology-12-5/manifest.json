@@ -418,5 +418,205 @@
     ],
     "model_calls": 0,
     "notes": "Re-exported 10_pdf/final.hi.pdf after propagating the q_5.10 subject-swap correction (प्रोमोटर -> प्रेरक) through 05_verify/06_simplify/07_format/08_tag/09_design. Same export method as the original pdf stage: Playwright/Chromium, real file:// path, document.fonts.ready wait, emulate_media(screen) (the standing Devanagari pre-base vowel-reordering fix), print_background=True, prefer_css_page_size=True. Gates re-run against the fresh PDF's own fitz-extracted text (page count, blank pages, numeric read-back scoped to question/final_answer fields, matching the original pdf stage's own scope). Independently confirmed the corrected word \"प्रेरक\" is present and the old wrong phrase \"प्रोमोटर कोशिका में प्रवेश\" no longer appears anywhere in the exported PDF's extracted text."
+  },
+  {
+    "stage": "mathpix",
+    "at": "2026-09-22T10:46:14.316183+00:00",
+    "inputs": {
+      "chapter.en.pdf": "21d77cdaf37c11b2",
+      "solutions.en.pdf": "275badb5eeb6c5ff"
+    },
+    "counts": {
+      "chapter_en_pages": 31,
+      "chapter_en_chars": 66541,
+      "chapter_en_dollar_spans": 48,
+      "chapter_en_image_refs": 24,
+      "solutions_en_pages": 9,
+      "solutions_en_chars": 13995,
+      "solutions_en_dollar_spans": 13,
+      "solutions_en_table_rows": 11,
+      "solutions_en_image_refs": 5
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only (Hindi track's own mathpix stage already completed in an earlier session with several retroactive fix cycles of its own - verify_correction/simplify_correction/format_correction/tag_correction/design_correction/pdf_correction - untouched here). Verified via page-1 renders before conversion: chapter.en.pdf is the genuine 'Chapter 5: Molecular Basis of Inheritance' (31pp), solutions.en.pdf is the matching solutions manual '(Chapter - 6) (Molecular Basis of Inheritance) (Class - XII)' (9pp) - confirming the rationalised-edition chapter-numbering offset pattern for the 10th time overall (5th in Biology). Figure numbering uses plain fig_5_N (chapter='5'), distinct from the pre-existing Hindi track's own fig_bio12-5_N naming - no collision risk, same images/ directory. This is the most content-dense biology chapter yet: real DNA/RNA base-sequence notation (5'-...-3' strings that must be transcribed with total precision - a single wrong base letter would be far more consequential here than an ordinary prose typo), Greek-letter factor notation (sigma/rho for transcription initiation/termination factors), superscript isotope notation (32P/35S for the Hershey-Chase experiment), and this chapter's own comparison tables echoing chemistry-style structure. Confirmed via headings check the chapter itself still has no worked Examples/Intext Questions section - just expository sections 5.1-5.10, SUMMARY, and 14 numbered EXERCISES. Found and fixed the MOST extensive heading-drop defect of any chapter in this series: 12 of 14 Question/Answer pairs (1,2,3,4,5,8,9,11,12,13,14 - all but 6,7,10) had lost at least one of their '##' markers entirely (rendered as plain text), plus two genuine mid-sentence tears requiring merge (a sentence split with a spurious blank line mid-word in q_5.9's ribosome answer; q_5.8's part (c) prompt text running directly into 'Answer 8:' with no line break at all). Normalized all 14 pairs to a consistent '## Question N:' / '## Answer N:' pattern and fixed 2 minor part-label spacing typos ('(b)mRNA'->'(b) mRNA', '(c)Template'->'(c) Template') matching the already-correct '(a) Repetitive DNA...' spacing. Also fixed a 44-char fullwidth-CJK-punctuation corruption run plus its accompanying missing-space typos in chapter.en.md's opening TOC/intro (never extracted as an item, normalized for cleanliness per standing practice). No model reasoning about content used in this stage. FLAGGED FOR MANDATORY STAGE-5 VERIFICATION (not fixed now, per stage separation - content correctness against the source PDF is stage 5's job, not stage 1's): (1) chapter.en.md's own q_5.3 EXERCISES text reads the DNA-strand direction as '$5^{\\prime}-8^{\\prime}$' - confirmed via direct page-31 image inspection that the actual printed textbook reads '5'->3'' (an arrow, not a hyphen, and a '3' not an '8') - a clear mathpix digit/glyph misread requiring a formal stage-5 correction, not a silent stage-1 edit; (2) solutions.en.md's q_5.14(c) 'STOP codon (VAA, UAG, and UGA)' - 'VAA' is almost certainly a V/U OCR confusion for the real stop codon 'UAA'; (3) q_5.9's '23s $r$-RNA' notation looks like unusual math-wrapping of what should probably read '23S rRNA' - needs checking against the actual page image; (4) every long DNA/RNA base sequence in this chapter (q_5.3/5.4's repeated ATGC/TACG strings) needs a full character-by-character check against the source PDF at stage 5, not just a skim, given how easily a single wrong base could hide in a long repetitive string - flagging this as a standing chapter-specific risk area for whichever session runs stage 5."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-22T10:51:17.793314+00:00",
+    "inputs": {
+      "chapter.en.md": "81d58e7791e32011",
+      "solutions.en.md": "2d1c09b88668f8f6"
+    },
+    "counts": {
+      "examples_en": 0,
+      "exercises_en": 14,
+      "solutions_en": 14,
+      "matched": 14,
+      "needs_review": 0,
+      "items_total": 14,
+      "parts_total": 10,
+      "figures_total": 5
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Like bio1-4, no worked Examples/Intext Questions section - just 14 end-of-chapter Exercises. Extracted both the 14 exercises and 14 solutions-manual entries directly, then ran match.join_solutions() - 14/14 matched by plain number, 0 needs_review, 0 orphans, 0 duplicates. 3 items have parts: q_5.8 (3 parts, each with its own genuine comparison table - Repetitive/Satellite DNA, mRNA/tRNA, Template/Coding strand), q_5.11 (3 parts, plain definitions - Promoter/tRNA/Exons), q_5.14 (4 parts, plain descriptions - Transcription/Polymorphism/Translation/Bioinformatics, with 2 figures - fig_5_27 illustrating part (a)'s transcription process, fig_5_28 illustrating part (c)'s translation process - both attached at the item level since schema.Part has no figures field, matching the established bio4 precedent). DNA/RNA base sequences (q_5.3's and q_5.4's repeated ATGC/TACG/AUGC 28-base strings, appearing both in the question and restated in the answer) were transcribed and then independently re-verified character-by-character via direct re-parsing of the rendered markdown - byte-identical to the source mathpix text in every restatement, given how easily a single wrong base could hide in a long repetitive string. The chapter.en.md's own flagged '$5^{\\prime}-8^{\\prime}$' OCR-misread (already confirmed wrong against the actual PDF page at stage 1) was preserved verbatim in the extracted question text per Rule 4 - not fixed here, left for stage 5's formal correction mechanism. Verified by directly re-parsing the rendered chapter.en.md: all 14 items report has_solution=True with correct part counts (3/3/4) and figure counts (5 total, matching stage 1's own image-ref count) - not just trusting the join report. gate_counts and gate_solutions_present both pass with 0 failures. No model calls used - extracted directly by reading both source files."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-22T11:01:51.252406+00:00",
+    "inputs": {
+      "chapter.en.md": "4e523c5f606425f6"
+    },
+    "counts": {
+      "examples_en_items": 0,
+      "examples_en_bytes": 129,
+      "qa_en_items": 14,
+      "qa_en_bytes": 16483,
+      "sum_matches_merged_total": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Pure function, no model call. 0 examples (consistent with bio1-4's chapter shape). 14 qa items. Round-trip verified via tag._parse() on both output files (containers balance) and by re-parsing each split file back into a Chapter and confirming item counts sum to the merged chapter's own 14 (0 + 14 = 14) - nothing gained or lost."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-22T11:08:30.122425+00:00",
+    "inputs": {
+      "examples.en.md": "0f2533840ac26eed",
+      "qa.en.md": "4e523c5f606425f6"
+    },
+    "counts": {
+      "combined_en_items": 14,
+      "combined_en_bytes": 16483
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Pure function, no model call - plain reunion of stage 3's two split files. Round-trip verified: tag._parse() confirms containers balance, and re-parsing combined.en.md yields 14 items, matching stage 3's own 0 (examples) + 14 (qa) = 14 total exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-22T11:13:20.805072+00:00",
+    "inputs": {
+      "combined.en.md": "2e6ef0dda5bd5ad2",
+      "chapter.en.pdf": "21d77cdaf37c11b2",
+      "solutions.en.pdf": "275badb5eeb6c5ff"
+    },
+    "counts": {
+      "corrections_applied": 1,
+      "corrections_held": 0,
+      "figure_captions_fixed_directly": 2,
+      "gate_math_parity_failures": 0,
+      "gate_counts_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Verified all 14 items (11 plain Q&A plus q_5.8/5.11/5.14's parts, including q_5.8's 3 comparison tables and all of the chapter's DNA/RNA base sequences) word-for-word against every page of both source PDFs, rendered at 130dpi (300dpi zoomed crops for the base-sequence lines specifically, given how easily a single wrong letter could hide in a long repetitive ATGC/TACG/AUGC string). 1 correction applied (high confidence): q_5.3's question field '$5^{\\prime}-8^{\\prime}$' -> '$5^{\\prime} \\rightarrow 3^{\\prime}$' - a genuine mathpix misread (arrow read as hyphen, '3' read as '8'), confirmed against chapter.en.pdf page 26 and independently cross-confirmed via solutions.en.pdf's own restated version of the same question ('5'->3' direction'). 2 missing figure captions fixed directly in combined.en.md (no corrections.md field exists for captions, per established precedent): fig_5_27 -> 'Process of transcription', fig_5_28 -> 'Translation of proteins' - both confirmed against their actual printed captions on solutions.en.pdf pages 8-9. Investigated and RESOLVED both of stage 1's other flagged concerns as non-issues, confirmed by direct page reading rather than assumption: (1) '23s $r$-RNA' is genuinely printed with an italicized 'r' in the source (page 5) - not an OCR error, correctly transcribed as-is, no fix needed; (2) 'STOP codon (VAA, UAG, and UGA)' - confirmed 'VAA' is exactly what the OFFICIAL solutions manual itself prints (page 9), a genuine error in the source's own answer key (the real stop codon is UAA), not a mathpix defect - left unchanged per Rule 5, matching the established precedent that a textbook's own error is not ours to silently fix. Every DNA/RNA base sequence (q_5.3's and q_5.4's 28-base ATGC/TACG/AUGC strings, in both the question and every restatement in the answer) verified character-by-character against 300dpi zoomed page crops - all confirmed byte-identical to the source. gate_math_parity and gate_counts both pass with 0 failures."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-22T11:16:14.105954+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "ae295f5a54a131fa"
+    },
+    "counts": {
+      "items_simplified": 3,
+      "items_unchanged": 11,
+      "restore_failed": 0,
+      "gate_question_text_frozen_failures": 0,
+      "gate_answers_unchanged_failures": 0,
+      "gate_math_parity_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Deliberately conservative simplification rate (3/14 items, lower than every prior biology chapter) given this chapter's content shape: dense DNA/RNA sequences, embedded math (allele/isotope/factor notation), and - now confirmed at stage 5 - at least 2 genuine factual errors already baked into the OFFICIAL source text itself (q_5.2's 'adenine and guanine are always present in equal numbers' should logically read 'adenine and thymine'; q_5.10's operator/promoter/regulator genes mislabelled as 'structural genes') that must NOT be silently corrected during rewording - simplification stage has no license to alter facts, only phrasing, so any paragraph containing one of these errors was left completely untouched to avoid the appearance of quietly fixing content that isn't ours to fix. Simplified: q_5.2 (only the FIRST paragraph's compound sentence restructured for clarity - 'the number of adenine molecules is equal to thymine molecules and...' split into two clearer clauses; every subsequent math-heavy line, including the flagged 'adenine and guanine' sentence, left byte-for-byte unchanged), q_5.9 (plain-register tightening, 'acts as the site where...takes place' -> 'is the site where...takes place', 'comes in contact with' -> 'binds to' - the standalone '$r$' math token preserved exactly), q_5.14 part (d) Bioinformatics (split one long, dense sentence about HGP data management into two shorter ones - no math content, pure prose). Left all math/sequence-heavy items (q_5.3, 5.4's DNA/RNA sequences; q_5.5, 5.6, 5.7's isotope notation; q_5.8's tables; q_5.11, 5.12, 5.13; q_5.14 parts (a)/(b)/(c)) completely unchanged - already reasonably clear, and the risk of disturbing delicate sequence/math-adjacent text for marginal clarity gain wasn't worth it. Every math span verified present as an exact-text SET match (protect.freeze() comparison) before accepting each of the 3 changed fields - 0 mismatches, 0 restore failures. Explicitly spot-checked after rendering: the confirmed-genuine 'VAA' source error and every DNA/RNA base sequence string are still present, byte-identical, in the simplified output. Verified directly that every question text, final_answer, and figure count - item-level and part-level - is unchanged before vs after: 0 mismatches across all 14 items. All three gates pass with 0 failures."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-22T11:25:04.727520+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "e683ac9f58756f6a"
+    },
+    "counts": {
+      "structured_en_bytes": 17073,
+      "tag_parse_top_level_nodes": 3,
+      "protect_parity_issues": 0,
+      "figure_set_match": true,
+      "table_rows_before": 11,
+      "table_rows_after": 11,
+      "inline_math_before": 13,
+      "inline_math_after": 13
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Repositioned all 5 figures from their auto-rendered pre-solution position into their actual point of reference inside each solution's flow, matching the source PDF's own layout (verified page-by-page at stage 5): fig_5_24 and fig_5_26 now sit at the end of q_5.5/q_5.10's solutions; fig_5_25 (with its 'Hershey and Chase experiment' caption) now sits at the end of q_5.7's solution; fig_5_27/fig_5_28 (with their 'Process of transcription'/'Translation of proteins' captions, added at stage 5) now nest inside q_5.14 parts (a) and (c) respectively, matching the source's own per-part diagram placement. Wrapped all 3 of q_5.8's comparison tables in :::table. Added :::concept labels for 9 standalone definitions (Chargaff's rule, Types of nucleic acid polymerases, Functions of ribosome, Promoter, tRNA, Exons, and q_5.14's own Transcription/Polymorphism/Translation/Bioinformatics opening-sentence definitions - 4 parts each wrapped consistently: definition sentence as :::concept, detailed explanation as trailing plain prose). Consolidated q_5.13's 'Application' sub-heading and its 4 bullets (originally split into 2 blank-line-separated groups) into one :::concept{label='Applications'} block - the bare word 'Application' is now represented as the container's label attribute rather than literal body text, matching the established bio3/bio4 pattern of demoting a body sub-heading into a container label. No :::step/:::formula blocks - this chapter's math is embedded isotope/allele/factor notation inside definitional prose, not a sequential given/formula/substitute/conclusion worked-solution flow (q_5.3/5.4's DNA-sequence derivations were deliberately left as plain narrative text rather than forced into that shape, since they're direct base-pairing lookups, not a multi-stage calculation). Verified: tag._parse() succeeds (3 top-level nodes); protect.parity() reports 0 issues; figure-src-set comparison confirms all 5 figures present before and after; table row count unchanged (11/11); inline math span count unchanged (13/13); all 4 DNA/RNA base sequences (28-base ATGC/TACG/GCAT/AUGC strings) confirmed still present verbatim; and a container/table-line-stripped text diff confirms every remaining difference is purely structural (paragraph breaks at concept boundaries, figure captions relocating with their figures, and the 'Application' heading-to-label conversion) - no prose was reworded or lost, and neither of the two confirmed genuine source-text errors (q_5.2's 'guanine' vs 'thymine' logic slip, q_5.14(c)'s 'VAA' stop codon) was touched."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-22T11:28:48.090058+00:00",
+    "inputs": {
+      "structured.en.md": "b8433bd05bb2ea22"
+    },
+    "counts": {
+      "items": 14,
+      "parts": 10,
+      "figures": 5,
+      "stage_given": 14,
+      "stage_key_formula": 0,
+      "stage_substitute": 0,
+      "stage_conclusion": 13,
+      "gate_item_count": "pass",
+      "gate_part_count": "pass",
+      "gate_figure_count": "pass"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "No model calls - fully mechanical via pipeline/serialize.py. All three fresh-vs-JSON counts matched on the first run (14 items, 10 parts, 5 figures - each figure appears exactly once, confirmed against the raw markdown's own 5 :::figure occurrences). 0 key_formula/substitute blocks, as expected for a chapter with no sequential given/formula/substitute/conclusion worked flow anywhere. Stage distribution (14 given + 13 conclusion) hand-verified item-by-item against the JSON's own per-item block breakdown (not just trusting the printed totals): items with only a trailing plain paragraph after a leading intro sentence (q_5.2, q_5.6, q_5.14's 4 parts) contribute both a given AND a conclusion; items whose ENTIRE solution is one or more :::concept blocks with nothing after (q_5.9, q_5.11's 3 parts, q_5.13) contribute only given blocks (the position-based 'last block = conclusion' rule never fires, since an explicit :::concept always overrides to given regardless of position); items with no concept at all (q_5.1, 5.3, 5.4, 5.5, 5.7, 5.10, 5.12 - single flowing paragraph) contribute a single conclusion block. Also explicitly re-verified in the final JSON that all 4 DNA/RNA base sequences and the confirmed-genuine 'VAA' source error survived serialization byte-for-byte, given how easily either could be silently corrupted by a container-tree walk."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-22T11:36:04.356546+00:00",
+    "inputs": {
+      "structured.en.json": "4ebdd36090637be4"
+    },
+    "counts": {
+      "html_bytes": 35641,
+      "items_rendered": 14,
+      "figures_copied": 5,
+      "figures_missing": 0,
+      "numeric_tokens_readback_checked": 0,
+      "numeric_tokens_readback_missing": 0,
+      "raw_latex_leak_scan_hits": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hand-authored plain static HTML/CSS, adapted from biology-12-4's own build script (already carrying the CSS pill-wrap-variant fix and the answer-only-part fallback). Macro-coverage check: \\left/\\mathrm/\\right/\\prime/\\rho/\\rightarrow/\\sigma all already covered by the existing shared latex_convert.py (added for earlier chemistry chapters) - no new symbols needed. One real rendering bug found and fixed via the mandatory visual read-back: the 'multi_labelled' bold-lead-in path (built for process-stage labels sharing a pill, e.g. bio1's 'Three mitotic divisions') glued a block's label directly onto its own first rendered line with no line break - fine for plain prose, but produced an awkward 'Label: - item' reading when that first line was itself a bullet-list item (q_5.6's 'Types of nucleic acid polymerases: - DNA-dependent DNA polymerases', q_5.13's 'Applications: - It is used in forensic science...'). Fixed by detecting a bullet-prefixed first line and putting the label on its own line above the intact list instead of gluing them. Confirmed via re-render that this is a genuine no-op for biology-12-4's own already-shipped page (byte-identical HTML hash before/after applying the same fix there) - none of its multi-labelled groups happen to start with a bullet - so no re-export needed for that chapter; propagated the fix into its build script anyway for lineage consistency. Verification performed: (1) all 5 figure srcs resolve via os.path.exists against the REAL 09_design/images output directory; (2) numeric-token read-back - 0 qualifying tokens (this chapter's own numbers are percentages/short DNA-position figures, not 3+-digit/decimal values); (3) automated scan of the full rendered HTML for leftover raw LaTeX/corruption artifacts - 0 hits across all 14 items; (4) manual visual read-back via Playwright screenshots of 6 representative items (q_5.2's Chargaff's-rule concept pill with its math-heavy working intact including the confirmed source error; q_5.3's corrected '5′ → 3′' question text and all 3 DNA sequences rendering correctly; q_5.6 and q_5.13 confirming the bullet-label fix; q_5.8's 3 genuine comparison tables; q_5.14's 4 parts with both figures correctly positioned with their captions and the 'VAA' source error, Mg²⁺/σ/ρ notation, all rendering correctly) - all render cleanly and correctly."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-22T11:43:10.050922+00:00",
+    "inputs": {
+      "final.en.html": "74f49a258c194cfa"
+    },
+    "counts": {
+      "page_count": 8,
+      "pdf_bytes": 686257,
+      "blank_pages": 0,
+      "numeric_tokens_readback_checked": 0,
+      "numeric_tokens_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export pass via Playwright/Chromium, same settings as every prior chapter. Gates: page count 8 (sane for a 14-item chapter with 3 tables, 5 figures, and dense DNA/RNA sequence content); 0 blank pages; numeric read-back found 0 qualifying tokens, matching stage 9's own finding. Chapter-specific extra check given this chapter's precision requirements: re-extracted the exported PDF's own text layer and confirmed all 4 DNA/RNA base sequences (28-base ATGC/TACG/GCAT/AUGC strings) and the confirmed-genuine 'VAA' source error are present byte-for-byte in the PDF's extractable text, not just the pre-export HTML - the export pass itself is a real second rendering step that could in principle corrupt this kind of exact-character content even if the HTML was correct. Visual spot-check of page 2 (rendered to PNG) confirms clean layout: q_5.4's mRNA sequence derivation, q_5.5's semi-conservative replication figure, and q_5.6's fixed bullet-label rendering ('Types of nucleic acid polymerases:' on its own line above the list) all render correctly. English-only chapter, so the Devanagari reph extraction bug does not apply. No CALIBRATION re-run needed. This completes all 10 stages of biology-12-5's English track."
   }
 ]

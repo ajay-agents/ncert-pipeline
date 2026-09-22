@@ -247,5 +247,244 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.hi.html file:// path (not a copy), waited for document.fonts.ready, called emulate_media('screen') before page.pdf() (the standing fix for Chromium's print-media Devanagari pre-base vowel-reordering bug), exported with print_background=True and prefer_css_page_size=True (no explicit format/width/height). Gate: 10 pages (sane for 21 items), 0 blank pages, numeric read-back re-run against the PDF's own fitz-extracted text (not assumed carried over from stage 9's HTML check) using the same question/final_answer-field scope as stage 9. Only 1 numeric token checked - this chapter's fill-in-the-blank (q_2.1) and true/false (q_2.16) final_answer fields are all words ('लैंगिक', 'सही', 'गलत', etc.), not numbers, and the chapter's own real numeric content (chromosome counts in q_2.19's solution, an ovulation-day figure in q_2.17's solution) lives in solution text, outside this gate's documented question/final_answer-only scope - q_2.21's question ('6 बच्चों को जन्म दिया है') is the sole numeric token in scope, found correctly. Not independently re-verified: the known, currently-unresolved Chromium reph ('र्'+consonant) ToUnicode CMap bug documented in step_10/PROMPT.md - visual rendering is unaffected, only copy-paste/text-extraction of words containing that exact sequence; flagged to the user, not silently shipped around, consistent with how prior chapters handled the same known limitation."
+  },
+  {
+    "stage": "mathpix",
+    "at": "2026-09-22T06:40:24.092762+00:00",
+    "inputs": {
+      "chapter.en.pdf": "af54d04d91211405",
+      "solutions.en.pdf": "69422cdcd823166b"
+    },
+    "counts": {
+      "chapter_pages": 15,
+      "solutions_pages": 11,
+      "chapter_chars": 30197,
+      "solutions_chars": 13843,
+      "chapter_dollar_spans": 12,
+      "solutions_dollar_spans": 11,
+      "chapter_table_rows": 0,
+      "solutions_table_rows": 0,
+      "chapter_image_refs": 18,
+      "solutions_image_refs": 8,
+      "images_downloaded_total": 50,
+      "images_orphaned": 0,
+      "devanagari_in_english_files": 0,
+      "fullwidth_cjk_chars_normalized": 42
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track added alongside biology-12-2's pre-existing, already-complete Hindi-only track (all 10 stages done in a prior session, 2026-09-17). User explicitly confirmed via AskUserQuestion: English-only, same as before. Both new PDFs independently verified before trusting them as source: chapter.en.pdf page 1 confirmed genuine NCERT Class 12 Biology 'Chapter 2: Human Reproduction' (15 pages, again unusually large at 64MB - high-resolution embedded images, matching biology-12-1's own pattern, not a content problem); solutions.en.pdf page 1 confirmed genuine matching solutions manual, labelled '(Chapter - 3) (Human Reproduction) (Class - XII)' - the same Rationalised-edition chapter-numbering offset pattern confirmed for a 7th time now (5x chemistry, 2x biology), and again harmless here since individual question numbers are bare 1-21 in both documents, not chapter-prefixed. Fixed one real, isolated mathpix defect before extraction: a 42-character run of full-width CJK punctuation (，．（） instead of ASCII ,.()）confined to lines 1-17 of chapter.en.md (the table-of-contents list and opening paragraph, e.g. '2．1 The Male Reproductive System' and 'gametes（fertilisation）') - the same defect class already fixed once in chemistry-12-5, confirmed via regex scan to occur nowhere else in either file; normalized to ASCII. This affected text is expository/table-of-contents prose never extracted as a pipeline item anyway (only the Exercises section is extracted), so this was precautionary cleanup, not a content-blocking fix. This chapter has NO worked Examples and NO Intext Questions sections (confirmed via grep, same shape as biology-12-1) - just expository text, a Summary, and 21 end-of-chapter Exercises. New content SHAPE not seen in biology-12-1: this chapter's own exercise questions include several multi-part structures beyond simple labelled sub-parts - Q1 is an 11-part 'Fill in the blanks' question (a)-(k), Q15 has 5 sub-parts asking to name functions, Q16 has 7 True/False sub-statements requiring correction of any false ones - all will need careful part-level extraction at stage 2. Also several questions (2, 3, 9, 13, 14) ask only to 'draw a labelled diagram' with no other text expected in the answer - matches biology-12-1's own q_1.4/q_1.6 shape (answer is primarily a figure). 21 exercises in chapter.en.md exactly match 21 Question/Answer pairs in solutions.en.md via direct grep listing (no gaps, no extras) - a clean 1:1 correspondence, though note grep -c with a ^-anchored pattern initially undercounted due to inconsistent heading markup (bare 'Question N:' vs '## Question N:' - same cosmetic mathpix inconsistency already seen in biology-12-1, harmless since both forms mark a clear boundary). All 50 downloaded images (18 in chapter.en.md, 8 in solutions.en.md, the remaining 24 already referenced in the pre-existing chapter.hi.md/solutions.hi.md) are referenced somewhere - 0 orphans. No base64/imgSvg embedded-blob defects found. One genuine source-document oddity spotted and flagged for stage 5 (not fixed now, per Rule 1): Answer 1(j) reads 'The zygote divides to form blastocyst, which is fertilization implanted in uterus' - the word 'fertilization' appears to be a genuine solutions-manual insertion error (the question's own blank template reads '...form ____, which is implanted in uterus', with no second blank for a second term) - confirmed present in the source PDF image itself, not a mathpix artifact."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-22T06:51:01.831700+00:00",
+    "inputs": {
+      "chapter.en.md": "a7b988d68088bc79",
+      "solutions.en.md": "9e4786fe4a2b69de"
+    },
+    "counts": {
+      "exercise_questions": 21,
+      "exercise_solutions_extracted": 21,
+      "matched": 21,
+      "needs_review": 0,
+      "total_items": 21,
+      "total_parts": 23,
+      "gate_counts": "pass",
+      "gate_solutions_present_issues": 5,
+      "genuine_figure_only_answers": 5
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 2,
+    "notes": "2 extraction sub-agent batches per step_2/extract.md (21 exercises; 21 solutions) - no Examples/Intext Questions in this chapter. Bare 1-21 numbering in both documents produced a clean, genuinely correct 21/21 join - confirmed by an explicit content spot-check of all 21 pairs plus all 23 parts (11+5+7 across q_2.1/q_2.15/q_2.16), not just the clean automated report. Richer multi-part structure than biology-12-1: q_2.1 (Fill in the blanks, 11 parts), q_2.15 (Name the functions, 5 parts), q_2.16 (True/False + corrections, 7 parts) - all extracted and joined correctly. Navigated a genuine source-document mislabeling correctly (not a pipeline bug): the solutions manual prints a duplicate, wrongly-numbered 'Answer 14:' heading directly after Question 15's own text (should read 'Answer 15:') - the extraction sub-agent correctly recognized this content belongs to Question 15 by position, not by its own (wrong) printed label, verified correct by the coordinator's own re-check. Unlike biology-12-1, this extraction had NO silent-content-loss structural bugs (no sibling-:::solution issue, no bare :::table issue) - confirmed by parsing the raw extraction through tag._parse() and checking every item's child list before merging, the same method that caught biology-12-1's 2 bugs. 5 items (q_2.2, q_2.3, q_2.9, q_2.13, q_2.14) genuinely have no solution text - each is a 'draw a labelled diagram' question whose entire answer is the diagram itself; correctly trips gate_solutions_present but matches an established accepted pattern (figure-only answers), not a gap. Several genuine source typos/inconsistencies flagged for stage 5, none corrected here: q_2.1(j)'s stray 'fertilization' word (already flagged at stage 1), q_2.15(a)'s 'Grafiaan' misspelling, q_2.13's 'Transerve' caption typo, q_2.4's biologically imprecise Leydig-cell phrasing (contradicted by q_2.5's own wording)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-22T06:51:31.244575+00:00",
+    "inputs": {
+      "chapter.en.md": "e6fe72b20df40f28"
+    },
+    "counts": {
+      "total_items": 21,
+      "examples_items": 0,
+      "examples_bytes": 105,
+      "qa_items": 21,
+      "qa_bytes": 18021
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-only split (this chapter's Hindi track was already split/combined/verified/simplified/formatted/tagged/designed/exported in a prior session; English is a separate track added afterward). This chapter has 0 example-kind items (no worked Examples section exists at all - confirmed at stage 1), so examples.en.md is an empty (0-item) document; all 18 items are kind=exercise. Pure mechanical render() call, no model involved, per step_3/PROMPT.md."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-22T06:52:22.571307+00:00",
+    "inputs": {
+      "examples.en.md": "bfbc7b87be4a4941",
+      "qa.en.md": "e6fe72b20df40f28"
+    },
+    "counts": {
+      "examples_items": 0,
+      "qa_items": 21,
+      "combined_items": 21,
+      "combined_bytes": 18021
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-only combine (Hindi track already fully processed in a prior session; this is the separate English track added afterward). Pure mechanical reunion of stage 3's two split files back into one Chapter, no model involved, per step_4/PROMPT.md."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-22T07:00:32.740950+00:00",
+    "inputs": {
+      "combined.en.md": "286dc83c9d582c04",
+      "chapter.en.pdf": "af54d04d91211405",
+      "solutions.en.pdf": "69422cdcd823166b"
+    },
+    "counts": {
+      "corrections_applied_high_confidence": 0,
+      "corrections_held": 0,
+      "figure_captions_added_directly": 2,
+      "gate_counts": "pass",
+      "items_verified": 21
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 2,
+    "notes": "2 verification sub-agent batches (q_2.1-2.10, q_2.11-2.21) per step_5/verify.md, given exact chapter.en.pdf pages (all 21 questions fit on just 2 pages, 14-15) and solutions.en.pdf pages pre-mapped via a contact-sheet grid render (both PDFs scanned, no text layer). Both batches returned 0 corrections at any confidence level - every question/part/solution/answer field matched the source PDFs verbatim, including all 11 parts of q_2.1, all 5 of q_2.15, all 7 of q_2.16. Explicitly re-confirmed the stage-2 mislabeling handling: solutions.en.pdf page 8 genuinely prints a wrongly-numbered 'Answer 14:' heading directly after 'Question 15:' (Question 14 already has its own separate, correctly-labelled answer on page 7) - the batch confirmed q_2.15's extracted content matches this mislabeled-but-positionally-correct source content word for word. One genuine gap found and fixed directly (not via a correction block, since no field exists to address a figure caption per verify.md's own 'Addressing a field' section): fig_2_45 (q_2.6's spermatogenesis diagram) and fig_2_46 (q_2.9's sperm diagram) both had empty caption text in 04_combined/combined.en.md despite the source solutions.en.pdf carrying real captions ('Process of spermatogenesis', 'Sperm cell') - added both captions directly to combined.en.md before rendering chapter.verified.en.md, matching the same class of fix as any other stage-5-discovered gap with no formal correction mechanism. Confirmed and left untouched, all genuine source-document artifacts already flagged at stages 1-2: q_2.1(j)'s stray 'fertilization' insertion; q_2.15(a)'s 'Grafiaan' misspelling; q_2.13's 'Transerve' caption typo; the 'Leydig cells...seminiferous tubules' phrasing (confirmed, via this stage's own re-check, to be a CONSISTENT term this specific solutions manual uses identically in both q_2.4 and q_2.16, not a one-off error or contradiction as initially suspected at stage 2). gate_counts: pass (21 exercise items). No math-parity gate run this stage since 0 model corrections were applied (nothing to diff against) - the only content change (2 figure captions) was additive and verified by direct round-trip re-parse (21 items, consistent before and after)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-22T07:06:24.997717+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "286dc83c9d582c04"
+    },
+    "counts": {
+      "items_simplified": 14,
+      "items_unchanged": 7,
+      "items_restore_failed": 0,
+      "gate_question_text_frozen": "pass",
+      "gate_answers_unchanged": "pass",
+      "gate_math_parity": "pass",
+      "gate_bilingual": "skipped (English-only track)"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "1 simplification sub-agent batch (all 21 items in one dispatch). All 21 restored cleanly, 0 protection tokens lost/duplicated/invented. 14 items had solution prose genuinely reworded at the item level (13 flat items plus q_2.15, whose parts (a)/(b)/(c)/(e) were reworded while (d) was left unchanged); 7 correctly left unchanged (q_2.1's 11 fill-in-the-blank parts and q_2.16's 7 True/False parts are already terse with no real prose to simplify - counted as unchanged at the item level since none of their individual parts changed; q_2.2/2.3/2.9/2.13/2.14 have no solution text at all, not applicable). The sub-agent proactively re-checked every comparative/cause-effect passage against simplify.md's own documented reversal failure mode (Sertoli/Leydig/germ-cell role assignments in q_2.5-2.7, the polar-body/secondary-oocyte size distinction in q_2.12, every hormone-feedback direction in q_2.17, the X/Y-sperm to girl/boy mapping in q_2.19, and the one-egg/two-egg to identical/fraternal-twins mapping in q_2.20 specifically flagged as the closest analogue to the documented physics-12-2 failure case) - confirmed no relationship was reversed anywhere. Correctly left q_2.1(j)'s confirmed genuine source garble ('fertilization implanted') untouched, recognizing it as a content/verification matter already settled at stages 1/2/5, not a register issue for stage 6 to touch. Gates: gate_question_text_frozen, gate_answers_unchanged and gate_math_parity all pass with 0 issues against 05_verify/chapter.verified.en.md. gate_bilingual skipped (English-only track)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-22T07:12:26.584640+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "2ce09199554198dc"
+    },
+    "counts": {
+      "items": 21,
+      "output_bytes": 18521,
+      "tag_parse": "pass",
+      "protect_parity_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "1 formatting sub-agent batch (all 21 items) per step_7/format.md - no wording, digit, symbol or table cell changed anywhere. Same descriptive/definitional shape as biology-12-1: fixed given/key-formula/substitute/conclusion vocabulary genuinely doesn't fit this chapter's content, correctly not forced anywhere. Structure applied: :::concept{label=...} for standalone definitions (q_2.4's testis/ovary function lists, q_2.8's spermiogenesis/spermiation definitions, all 5 of q_2.15's parts); :::step with freeform process-stage labels for 3 genuine multi-stage biological narratives (q_2.6's spermatogenesis: 'Primary spermatocyte formation'/'Meiosis I'/'Meiosis II'/'Spermiogenesis'; q_2.12's oogenesis, same 4-stage shape; q_2.17's menstrual cycle: 'Follicular phase'/'Ovulation'/'Luteal phase') - the same freeform-labelling pattern already used successfully in biology-12-1, which stage 9's page-builder already has a dedicated rendering enhancement for (per-block bold lead-in labels within a merged position-inferred pill, added during biology-12-1's own stage 9). 11 items (q_2.1's 11 fill-in-blank parts, q_2.16's 7 True/False parts, and 5 single-paragraph descriptive items: q_2.5/2.7/2.10/2.11/2.18/2.19/2.20/2.21) correctly left as plain prose - already terse or single-flowing-paragraph with no genuine sub-structure, per format.md's own 'don't force structure onto ordinary prose' guidance. 5 items (q_2.2/2.3/2.9/2.13/2.14) have no :::solution at all (figure-only answers) and were left completely untouched. No :::formula or :::table used anywhere (no math, no tables in this chapter's content). Checked every multi-part item for the known 'trailing whole-item solution' artifact - none found. No figure was moved since none of this chapter's solutions explicitly cite their own figure by number. Gates: tag._parse succeeds and finds all 21 item containers; protect.parity shows 0 structural-drift issues between 06_simplify/chapter.simplified.en.md and 07_format/structured.en.md."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-22T07:14:23.221334+00:00",
+    "inputs": {
+      "structured.en.md": "0b1a142871130ac2"
+    },
+    "counts": {
+      "items": 21,
+      "parts": 23,
+      "figures": 8,
+      "stage_given": 12,
+      "stage_key_formula": 0,
+      "stage_substitute": 8,
+      "stage_conclusion": 29,
+      "gate_item_count": "pass",
+      "gate_part_count": "pass",
+      "gate_figure_count": "pass"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "No model calls - fully mechanical via pipeline/serialize.py. All three fresh-vs-JSON counts matched on the first run (21 items, 23 parts, 8 figures). 0 key_formula blocks, as expected for a math-free chapter. Spot-checked q_2.6's 5-block spermatogenesis sequence (given/Definition, then 3 substitute-stage steps each keeping its own freeform label 'Primary spermatocyte formation'/'Meiosis I'/'Meiosis II', then a labelled conclusion step 'Spermiogenesis') and q_2.15's 5 parts (each a concept block correctly tagged stage=given per step_8/PROMPT.md's own rule that an explicit :::concept is always given regardless of position, with its own term-name label preserved) - all correctly structured and ready for stage 9's per-block sub-label rendering."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-22T07:21:47.738192+00:00",
+    "inputs": {
+      "structured.en.json": "fabf450ccdde7dbf"
+    },
+    "counts": {
+      "html_bytes": 43366,
+      "items_rendered": 21,
+      "figures_copied": 8,
+      "figures_missing": 0,
+      "numeric_tokens_readback_checked": 1,
+      "numeric_tokens_readback_missing": 0,
+      "raw_latex_leak_scan_hits": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hand-authored plain static HTML/CSS, adapted directly from biology-12-1's own up-to-date build script (which already carries the per-block sub-label rendering enhancement built for exactly this chapter shape) - no code changes needed this time, confirming that enhancement generalizes correctly to a second chapter's own multi-labelled-step content without further work. Base CSS copied byte-identical from biology-12-1's own final.en.css. Macro-coverage check: 0 real LaTeX commands used (the 11 '$...$' spans are all q_2.1's own fill-in-the-blank '\\_\\_\\_\\_' marker, confirmed rendering correctly as a blank line via the existing converter, no new symbol support needed). Verification performed: (1) all 8 figure srcs resolve via os.path.exists against the REAL 09_design/images output directory, 0 missing; (2) numeric-token read-back - 1/1 found (this chapter has only 1 qualifying numeric token, matching its descriptive nature); (3) automated scan of the full rendered HTML for leftover raw LaTeX/corruption artifacts - 0 hits across all 21 items; (4) manual visual read-back via Playwright screenshots of 4 representative items (q_2.1's 11-part fill-in-the-blanks with each part correctly showing its own single-block 'Conclusion' pill, q_2.6's spermatogenesis with 3 sub-labelled steps sharing one 'Substitute' pill plus a distinctly-labelled 'Spermiogenesis' conclusion pill, q_2.15's 5 definition parts, q_2.17's menstrual cycle with 'Follicular phase'/'Ovulation' sharing one Substitute pill and 'Luteal phase' getting its own dedicated pill) - all render cleanly and correctly. Confirmed q_2.15(a)'s 'Grafiaan' misspelling (flagged at stages 1/2/5 as a genuine source typo) was naturally corrected to 'Graafian' as an incidental byproduct of stage 6's own legitimate prose rewording of that specific answer (same accepted pattern as biology-12-1's own 'hasthecapability' fix - not a targeted isolated correction), while q_2.1(j)'s confirmed genuine 'fertilization implanted' garble (which stage 6 did NOT substantially reword) correctly persisted unchanged onto the final page, exactly as expected given verify.md's own rule that a textbook's error is not ours to silently fix."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-22T07:24:45.294110+00:00",
+    "inputs": {
+      "final.en.html": "193647cdbc6279bc"
+    },
+    "counts": {
+      "page_count": 9,
+      "pdf_bytes": 816976,
+      "blank_pages": 0,
+      "numeric_tokens_readback_checked": 0,
+      "numeric_tokens_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export pass via Playwright/Chromium, same settings as every prior chapter. Gates: page count 9 (sane for a 21-item, 8-figure chapter); 0 blank pages; numeric read-back found 0 qualifying tokens (this gate's stricter regex only counts decimals/3+-digit integers; this chapter's own numeric content is sparse and short, matching stage 9's own finding of 1 qualifying token overall - not a gap). English-only chapter, so the Devanagari reph extraction bug does not apply. No CALIBRATION re-run needed. This completes all 10 stages of biology-12-2's English track."
+  },
+  {
+    "stage": "design_correction",
+    "at": "2026-09-22T08:21:40.567521+00:00",
+    "inputs": {
+      "structured.en.json": "fabf450ccdde7dbf"
+    },
+    "counts": {
+      "html_bytes": 43318,
+      "items_affected": 4,
+      "bare_slash_occurrences_fixed": 12
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Retroactive fix, discovered while building biology-12-3's stage 9 page. Root cause: the shared latex_convert.py's plain-prose escape path (_escape_prose, used for ALL text outside a $...$ math span) was unconditionally calling the same operator-padding function used for actual math content (_finish_plain_text), which wraps a bare '/' in non-breaking spaces on both sides - correct for a real division inside math, wrong for everyday English punctuation like 'True/False' or 'asexually/sexually', which this chapter's question text uses (a math-free Biology chapter routes 100% of its text through the prose path, so every bare '/' in it was affected). This visibly inserted a space into 4 items' own immutable question text on the already-shipped page: q_2.1(a)/(c)/(d)/(e)'s fill-in-the-blank prompts ('asexually / sexually', 'external / internal', 'diploid / haploid' x2) and all 7 of q_2.16's True/False sub-prompts ('True / False' -> should read 'True/False'). Fixed by splitting _finish_plain_text into two functions: _normalize_whitespace (newline/space collapsing only, now used by _escape_prose for plain prose) and _finish_plain_text (unchanged, still does the operator padding, now called only from inside the actual math-conversion buffer flush, where a bare '/' genuinely is a division). Rebuilt final.en.html with the fixed converter; re-ran the full stage-9 checklist (image resolution - 8/8 still resolve, numeric read-back - 1/1 still found, HTML artifact scan - 0 hits) with 0 new regressions. Also confirmed biology-12-1 has no bare-slash-in-prose content, so its own already-shipped page was never affected by this bug despite sharing the same converter."
+  },
+  {
+    "stage": "pdf_correction",
+    "at": "2026-09-22T08:21:40.569582+00:00",
+    "inputs": {
+      "final.en.html": "fc104bc8c2032d07"
+    },
+    "counts": {
+      "pdf_bytes": 816727,
+      "page_count": 9,
+      "blank_pages": 0,
+      "numeric_tokens_readback_checked": 0,
+      "numeric_tokens_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Re-export following the design_correction fix above (bare-slash-in-prose spacing bug). Mechanical Playwright re-export, same settings as the original stage-10 pass. Page count unchanged (9), 0 blank pages, all gates pass."
   }
 ]

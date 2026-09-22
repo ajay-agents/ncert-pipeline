@@ -293,5 +293,194 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Re-exported via Playwright/Chromium from the corrected 09_design/final.hi.html, following step_10/PROMPT.md exactly. 6 pages, 0 blank. Directly confirmed via fitz text extraction that the old reversed-direction sentence is absent and the corrected sentence is present, on PDF page 4."
+  },
+  {
+    "stage": "mathpix",
+    "at": "2026-09-22T07:37:30.847044+00:00",
+    "inputs": {
+      "chapter.en.pdf": "ef03cc524d286eb3",
+      "solutions.en.pdf": "fea0cd1f36e6bb54"
+    },
+    "counts": {
+      "chapter_en_pages": 10,
+      "chapter_en_chars": 22579,
+      "solutions_en_pages": 6,
+      "solutions_en_chars": 10151,
+      "chapter_en_image_refs": 5
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only (Hindi track's own mathpix stage already completed in an earlier session, untouched here). Verified via page-1 renders before conversion: chapter.en.pdf is the genuine 'Chapter 3: Reproductive Health' (10pp), solutions.en.pdf is the matching solutions manual '(Chapter - 4) (Reproductive Health) (Class - XII)' (6pp) - confirming the rationalised-edition chapter-numbering offset pattern for the 8th time overall (3rd in Biology). Figure numbering continued correctly from the Hindi track's own images/ dir (fig_3_0..fig_3_5 already existed from Hindi; English conversion added fig_3_6..fig_3_10, matching chapter.en.md's own 5 image refs). Found and fixed 2 defect classes in chapter.en.md's opening TOC/intro section (chars 0-1439, never extracted as an item since Biology chapters only extract Exercises): a 37-character fullwidth-CJK-punctuation corruption run (same recurring Mathpix defect class seen in every earlier chapter), hand-normalized to ASCII with correct English spacing/quoting restored by direct textual comparison against standard phrasing (an initial blind regex-based spacing fix introduced new bugs - 'fig_3_6. jpg', \"let' s\", 'i. e.,' - caught on review and corrected by hand instead of trusting the regex). Found and fixed a substantially larger heading-drop/scatter defect in solutions.en.md: Answers 1-3 and both Questions and Answers 10-12 had lost their '##' heading markers entirely (rendered as plain body text instead, e.g. bare 'Answer 1:' immediately following the question sentence with no line break), while conversely 3 bullet-list items under Answer 9 ('Test tube babies', 'Gamete Intra fallopian transfer (GIFT)', 'Intra Cytoplasmic sperm injection (ICSI)') had been wrongly promoted to '##' headings. Normalized all 12 Question/Answer pairs to a consistent '## Question N:' / '## Answer N:' heading pattern (matching the already-correct Q4-Q9 style) and demoted the 3 mis-promoted bullets back to plain list items (matching the 4th, already-correct 'Artificial insemination' bullet in the same list) - this was mechanical normalization to match an already-established correct pattern elsewhere in the same file, not content judgement. Confirmed chapter.en.md's EXERCISES section (12 numbered questions, verbatim) and solutions.en.md's now-consistent 12 Question/Answer headings line up 1:1 before handing off to stage 2. No model reasoning about content used in this stage."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-22T07:42:26.645558+00:00",
+    "inputs": {
+      "chapter.en.md": "2302a79ed1d12375",
+      "solutions.en.md": "5b2c80cbeb55ed77"
+    },
+    "counts": {
+      "examples_en": 0,
+      "exercises_en": 12,
+      "solutions_en": 12,
+      "matched": 12,
+      "needs_review": 0,
+      "items_total": 12,
+      "parts_total": 8
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only (no align_languages - established English-only scope for this session, matching biology-12-1/12-2). Like both prior Biology chapters, this chapter has NO worked Examples and NO separate Intext Questions section - just expository text, a Summary, and 12 end-of-chapter Exercises, confirmed by direct inspection of chapter.en.md's headings before extraction. Extracted both the 12 exercises (chapter.en.md's EXERCISES block) and the 12 solutions-manual entries (solutions.en.md's now-clean Question N:/Answer N: headings, fixed at stage 1) directly, then ran match.join_solutions() for a proper mechanical join rather than hand-assembling the merge - 12/12 matched by plain number, 0 needs_review, 0 orphans, 0 duplicates (numbers are bare 1-12 with no rationalised-edition offset collision risk, consistent with bio1/bio2). Q11 ('State True/False with explanation') and Q12 ('Correct the following statements') both have 4 labelled (a)-(d) parts on both the question and solution side; join_solutions()'s equal-length zip correctly attached each part's own solution/final_answer - verified by directly re-parsing the rendered chapter.en.md via mdio.markdown_to_chapter() and confirming all 12 items report has_solution=True with the right part counts (4/4 for q_3.11 and q_3.12), not just trusting the join report. No figures needed extraction - all 5 of chapter.en.md's image refs (fig_3_6..fig_3_10) sit in expository body text before the EXERCISES section, none inside any of the 12 questions themselves. gate_counts and gate_solutions_present both pass with 0 failures for the merged chapter. No model calls used - content was simple and small enough (12 short descriptive Q&A items, no math, no ambiguous numbering) to extract directly by reading both source files rather than dispatching extraction sub-agents."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-22T07:43:49.062245+00:00",
+    "inputs": {
+      "chapter.en.md": "deeaf3f5535ccb3f"
+    },
+    "counts": {
+      "examples_en_items": 0,
+      "examples_en_bytes": 107,
+      "qa_en_items": 12,
+      "qa_en_bytes": 11675,
+      "sum_matches_merged_total": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Pure function, no model call - mdio.markdown_to_chapter() + render.render() with kind filters. 0 examples (consistent with bio1/bio2's chapter shape - no worked Examples section in this chapter). 12 qa items. Round-trip verified via tag._parse() on both output files (containers balance) and by re-parsing each split file back into a Chapter and confirming item counts sum to the merged chapter's own 12 (0 + 12 = 12) - nothing gained or lost in the split."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-22T07:49:03.238274+00:00",
+    "inputs": {
+      "examples.en.md": "e0e53285a7846489",
+      "qa.en.md": "deeaf3f5535ccb3f"
+    },
+    "counts": {
+      "combined_en_items": 12,
+      "combined_en_bytes": 11675
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Pure function, no model call - plain reunion of stage 3's two split files via mdio.markdown_to_chapter() + render.render(), not a fresh match. Round-trip verified: tag._parse() confirms containers balance, and re-parsing combined.en.md yields 12 items, matching stage 3's own 0 (examples) + 12 (qa) = 12 total exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-22T07:52:39.028677+00:00",
+    "inputs": {
+      "combined.en.md": "deeaf3f5535ccb3f",
+      "chapter.en.pdf": "ef03cc524d286eb3",
+      "solutions.en.pdf": "fea0cd1f36e6bb54"
+    },
+    "counts": {
+      "corrections_applied": 0,
+      "corrections_held": 0,
+      "gate_math_parity_failures": 0,
+      "gate_counts_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Verified all 12 items (10 plain Q&A, plus q_3.11's 4 True/False parts and q_3.12's 4 correction parts) word-for-word against the original PDF pages: chapter.en.pdf page 10 (EXERCISES, all 12 questions) and every page of solutions.en.pdf (6 pages, Questions/Answers 1-12), rendered to PNG at 150dpi and read directly rather than trusting the Mathpix markdown (solutions.en.pdf has no extractable text layer - a scanned/flattened PDF - so text-based page-mapping was not possible; used direct visual reading of all 6 pages instead, which was feasible given the chapter's small size). Result: 0 corrections needed - every question and answer transcribed exactly, including Answer 9's 4 sub-items (Test tube babies/GIFT/ICSI/Artificial insemination, confirming the stage-1 decision to demote 3 of these from wrongly-promoted headings back to plain bullets was correct - they are visually distinguished in the source but are structurally part of one answer, not separate Q&A items) and q_3.11(c)'s inline 'False'-then-explanation formatting. No figures needed verification - none of the 12 items reference any figure (all 5 of the chapter's images sit in pre-Exercises body text). gate_math_parity and gate_counts both pass with 0 failures. This matches biology-12-2's own precedent of a remarkably clean chapter needing 0 corrections at this stage."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-22T07:56:20.402675+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "deeaf3f5535ccb3f"
+    },
+    "counts": {
+      "items_simplified": 10,
+      "items_unchanged": 2,
+      "restore_failed": 0,
+      "gate_question_text_frozen_failures": 0,
+      "gate_answers_unchanged_failures": 0,
+      "gate_math_parity_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only (no gate_bilingual - established English-only scope). Simplified 10/12 items' solution text (q_3.1, 3.3, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10 at item level; q_3.11 via part (c)'s solution; q_3.12 via part (d)'s solution) - mainly breaking long or grammatically awkward compound/run-on sentences into shorter plain-register ones (e.g. q_3.5's 'The factor leading to... are control of diseases, awareness and spread of education...' subject-verb-mismatched list-in-one-sentence; q_3.7's nested 'only those contraceptive methods can be used that prevent...' construction; q_3.9's GIFT paragraph's single long sentence). Left 2 items unchanged (q_3.2, q_3.4) plus several individual part-solutions and q_3.9's ICSI/Artificial-insemination paragraphs - already clear short sentences, matching the rule that unchanged is a valid, preferred outcome over churn. Every field passed through protect.freeze()/restore() before and after (this chapter's plain descriptive prose has almost no protected spans - no math, no tables, no chemistry, no unit-bearing numbers matching the protect.py pattern list - so freezing was largely a no-op safety net rather than doing real masking work here, as expected for a Biology chapter with no numeric/math content in its exercise solutions). 0 restore failures. Verified directly (not just via gates) that every question text and every final_answer field, item-level and part-level, is byte-identical before vs after - 0 mismatches across all 12 items. All three gates (gate_question_text_frozen, gate_answers_unchanged, gate_math_parity) pass with 0 failures."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-22T08:02:58.359387+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "22bd5fb2556227b3"
+    },
+    "counts": {
+      "structured_en_bytes": 11684,
+      "tag_parse_top_level_nodes": 3,
+      "protect_parity_issues": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. This chapter has no math, formulas or tables (consistent with bio1/bio2), so all added structure uses freeform :::concept{label=...} wrapping only - no :::step or :::formula blocks needed (no sequential worked-solution or given/key-formula/substitute/conclusion flow exists in any of these 12 descriptive answers). Wrapped 4 single-topic bulleted lists in their own :::concept block (q_3.2 'Aspects needing attention', q_3.4 'Areas of improvement', q_3.5 'Major reasons') matching the established bio1 precedent (q_1.4's 'Parts of the ovule'). Wrapped q_3.9's 4 named assisted-reproduction techniques (Test tube babies, GIFT, ICSI, Artificial insemination) as 4 separate :::concept blocks, matching bio2's precedent of separate :::concept blocks for 'Functions of testis'/'Functions of ovary' under one solution. Left the remaining 6 items (q_3.1, 3.3, 3.6, 3.7, 3.8, 3.10) and all of q_3.11/q_3.12's part-level solutions as plain paragraph text - single-paragraph answers with no distinct sub-topic or list to set apart, matching the rule that forcing structure onto ordinary prose is worse than leaving it unmarked. No figures to reposition (none of the 12 items reference any figure). Verified: tag._parse() succeeds (3 top-level nodes, consistent with every prior stage's own parse of this file), protect.parity() between stage 6 and stage 7 text shows 0 issues, and a container-stripped text diff confirms every wording change is purely structural (a paragraph break inserted to mark a concept-block boundary, or a bullet marker moved into a concept's label attribute) - no prose was reworded or lost."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-22T08:10:57.562906+00:00",
+    "inputs": {
+      "structured.en.md": "2a08e439c2f1056f"
+    },
+    "counts": {
+      "items": 12,
+      "parts": 8,
+      "figures": 0,
+      "stage_given": 11,
+      "stage_key_formula": 0,
+      "stage_substitute": 0,
+      "stage_conclusion": 13,
+      "gate_item_count": "pass",
+      "gate_part_count": "pass",
+      "gate_figure_count": "pass"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "No model calls - fully mechanical via pipeline/serialize.py. All three fresh-vs-JSON counts matched on the first run (12 items, 8 parts, 0 figures - this chapter has no figures inside any item, confirmed at stage 2). 0 key_formula/substitute blocks, as expected for a math-free chapter with no sequential worked-solution flow anywhere. 11 given + 13 conclusion reconciles exactly: every :::concept block is hardcoded stage=given regardless of position (7 concept blocks: q_3.2 x1, q_3.4 x1, q_3.5 x1, q_3.9 x4), plus 4 leading intro-paragraph 'step' blocks that happen to land in the given position by position-inference too (q_3.2, q_3.4, q_3.5, q_3.9's own intro sentences) = 11 given; the remaining 13 solutions are each a single stageable block (6 whole-paragraph items + q_3.5's own trailing paragraph + q_3.11(b)/(c) + q_3.12(a)-(d)), each correctly inferred as conclusion under the single-block rule. Verified by hand-tracing this distribution against the actual structured.en.md content, not just trusting the printed counts."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-22T08:27:55.137256+00:00",
+    "inputs": {
+      "structured.en.json": "d046e81e1a7b1e8b"
+    },
+    "counts": {
+      "html_bytes": 25328,
+      "items_rendered": 12,
+      "figures_copied": 0,
+      "figures_missing": 0,
+      "numeric_tokens_readback_checked": 0,
+      "numeric_tokens_readback_missing": 0,
+      "raw_latex_leak_scan_hits": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hand-authored plain static HTML/CSS, adapted directly from biology-12-2's own build script (build_page_bio2_en.py), which already carries the per-block sub-label rendering enhancement needed for q_3.9's 4 named techniques. Base CSS copied byte-identical from biology-12-2's own final.en.css. Macro-coverage check: 0 LaTeX commands, 0 dollar spans (fully math-free chapter, confirmed) - no math-conversion concerns at all. New render-script fix this chapter: q_3.11 parts (a) and (d) are bare True/False items with an :::answer but ZERO :::solution text (the source gives no explanation for these two, only 'True'/'True') - render_solution_blocks() previously returned an empty string immediately whenever a part's solution_blocks list was empty, silently dropping the boxed answer entirely for these 2 parts with nothing on the page indicating anything was missing. Fixed by adding a fallback path that renders a standalone Conclusion pill holding just the boxed answer when solution_blocks is empty but an answer is present. Two shared-module (latex_convert.py) bugs found and fixed via this chapter's mandatory verbatim question-text read-back (neither caught by the numeric read-back, since neither touches a digit): (1) the plain-prose escape path was unconditionally applying the same operator-padding used for real math division to a bare '/' in ordinary English text, turning 'True/False' into 'True / False' and similarly for q_3.9's 'GIFT'/'ICSI' etc; fixed by splitting the old _finish_plain_text into a prose-only _normalize_whitespace (no operator padding) and a math-only _finish_plain_text (operator padding retained, now only reached from inside actual math-span conversion). (2) The sentence-line splitter's decimal-point-guarded regex had no guard against a genuine multi-letter initialism like 'E. T. techniques' (q_3.12 (d)'s own question text), splitting it into 'In E.' + 'T. techniques...' across two separate lines; fixed by requiring BOTH the word before AND the word after a candidate '. ' boundary to look like a single-letter-plus-period token before suppressing the split - deliberately NOT suppressing on a single-sided match alone, since that would have wrongly merged biology-12-2's own genuine 'X or Y. Human females...' sentence boundary (confirmed unchanged after this fix - re-verified biology-12-2's own already-shipped page and PDF still splits that sentence correctly, re-exported with 0 byte change from the prior correction pass). Both shared-module fixes were also retroactively cascaded to biology-12-2's own already-completed 09_design/final.en.html and 10_pdf/final.en.pdf (see that chapter's own 'design_correction'/'pdf_correction' manifest entries) - biology-12-1 confirmed unaffected by either bug (no bare-slash-in-prose content, no initialism-chain content). Verification performed for biology-12-3 itself: (1) 0 figures to resolve (this chapter has none); (2) numeric-token read-back - 0 qualifying tokens (chapter has no 3+-digit or decimal numbers anywhere, matching its purely descriptive content); (3) full verbatim question-text and final-answer read-back via mdio.markdown_to_chapter() against the rendered HTML - 0 mismatches across all 12 items and all part-level fields, confirming the two fixes above resolved every discrepancy found; (4) automated scan for leftover raw LaTeX/corruption artifacts - 0 hits; (5) manual visual read-back via Playwright screenshots of 5 representative items (q_3.2 and q_3.5's single-concept/multi-block Given+Conclusion pills, q_3.9's 4 named techniques sharing one Given pill, q_3.11's 4 True/False parts including the 2 answer-only parts now correctly showing their boxed answer, q_3.12's 4 correction parts including part (d)'s fixed 'E. T.' text) - all render cleanly and correctly."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-22T08:32:37.213576+00:00",
+    "inputs": {
+      "final.en.html": "925c8968c44dfba2"
+    },
+    "counts": {
+      "page_count": 5,
+      "pdf_bytes": 329072,
+      "blank_pages": 0,
+      "numeric_tokens_readback_checked": 0,
+      "numeric_tokens_readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export pass via Playwright/Chromium, same settings as every prior chapter (networkidle + document.fonts.ready wait, emulate_media('screen') applied unconditionally per standing practice, print_background + prefer_css_page_size, no explicit format/width/height). Gates: page count 5 (sane for a 12-item, purely descriptive/no-figure chapter - shorter than bio1's 7pp/bio2's 9pp, consistent with this being the shortest of the three biology chapters so far); 0 blank pages; numeric read-back found 0 qualifying tokens (this chapter has no 3+-digit or decimal numbers anywhere in its content, matching stage 9's own finding - not a gap). Superscript-exponent separator fix applied to the normalization regex per standing practice, though moot here (no exponents in this chapter's content). English-only chapter, so the Devanagari reph extraction bug does not apply. Visual spot-check of page 1 (rendered to PNG) confirms clean layout: correct pill colors/labels, badge cycling, item dividers. No CALIBRATION re-run needed (stage 10 doesn't change pre-stage-7 flat markdown). This completes all 10 stages of biology-12-3's English track."
   }
 ]

@@ -343,8 +343,29 @@ def _item_to_json(node: dict, lang: str) -> dict[str, Any]:
     # the chapter's entire worked answer for that item (caught for real via
     # this stage's own figure-count gate on chemistry-12-3's q_3.15, whose
     # two graphs live inside that item-level solution).
+    #
+    # The duplicate artifact is specifically a TRAILING whole-item solution
+    # (step_7/PROMPT.md's own wording: "a second, whole-item :::solution
+    # AFTER the labelled parts"). An item-level :::solution placed BEFORE
+    # its :::part blocks is a different, genuine shape - shared setup or an
+    # intro sentence the parts each build on (e.g. "A cross between X and Y
+    # will produce", followed by per-part phenotype answers) - and suppressing
+    # it just because the parts also carry their own solutions would drop
+    # real, non-duplicate content. Caught for real on biology-12-4's q_4.7.
+    def _first_child_index(name: str) -> int | None:
+        for i, c in enumerate(node["children"]):
+            if isinstance(c, dict) and c["name"] == name:
+                return i
+        return None
+
+    solution_idx = _first_child_index("solution")
+    part_idx = _first_child_index("part")
+    solution_before_parts = (
+        solution_idx is not None and part_idx is not None and solution_idx < part_idx
+    )
     parts_have_solutions = any(p.get("solution_blocks") for p in parts)
-    solution_blocks = [] if (parts and parts_have_solutions) else (
+    suppress_as_duplicate = parts and parts_have_solutions and not solution_before_parts
+    solution_blocks = [] if suppress_as_duplicate else (
         build_solution_blocks(solution_nodes[0]["children"], lang) if solution_nodes else [])
 
     default_kind = "example" if node["name"] == "example" else "exercise"
