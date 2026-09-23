@@ -1,0 +1,4055 @@
+{
+  "front": {
+    "title": "Relations and Functions",
+    "chapter": "1"
+  },
+  "items": [
+    {
+      "id": "ex_1.1",
+      "kind": "example",
+      "number": "1.1",
+      "topic": "Empty and universal relations",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let A be the set of all students of a boys school. Show that the relation R in A given by $\\mathrm{R}=\\{(a, b): a$ is sister of $b\\}$ is the empty relation and $\\mathrm{R}^{\\prime}=\\{(a, b):$ the difference between heights of $a$ and $b$ is less than 3 meters\\} is the universal relation."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since the school is boys school, no student of the school can be sister of any student of the school. Hence, $\\mathrm{R}=\\phi$, showing that R is the empty relation. It is also obvious that the difference between heights of any two students of the school has to be less than 3 meters. This shows that $\\mathrm{R}^{\\prime}=\\mathrm{A} \\times \\mathrm{A}$ is the universal relation."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.2",
+      "kind": "example",
+      "number": "1.2",
+      "topic": "Equivalence relation - congruent triangles",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let T be the set of all triangles in a plane with R a relation in T given by $\\mathrm{R}=\\left\\{\\left(\\mathrm{T}_{1}, \\mathrm{~T}_{2}\\right): \\mathrm{T}_{1}\\right.$ is congruent to $\\left.\\mathrm{T}_{2}\\right\\}$. Show that R is an equivalence relation."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "R is reflexive, since every triangle is congruent to itself. Further, $\\left(\\mathrm{T}_{1}, \\mathrm{~T}_{2}\\right) \\in \\mathrm{R} \\Rightarrow \\mathrm{T}_{1}$ is congruent to $\\mathrm{T}_{2} \\Rightarrow \\mathrm{~T}_{2}$ is congruent to $\\mathrm{T}_{1} \\Rightarrow\\left(\\mathrm{~T}_{2}, \\mathrm{~T}_{1}\\right) \\in \\mathrm{R}$. Hence, R is symmetric. Moreover, $\\left(\\mathrm{T}_{1}, \\mathrm{~T}_{2}\\right),\\left(\\mathrm{T}_{2}, \\mathrm{~T}_{3}\\right) \\in \\mathrm{R} \\Rightarrow \\mathrm{T}_{1}$ is congruent to $\\mathrm{T}_{2}$ and $\\mathrm{T}_{2}$ is congruent to $\\mathrm{T}_{3} \\Rightarrow \\mathrm{~T}_{1}$ is congruent to $\\mathrm{T}_{3} \\Rightarrow\\left(\\mathrm{~T}_{1}, \\mathrm{~T}_{3}\\right) \\in \\mathrm{R}$. Therefore, R is an equivalence relation."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.3",
+      "kind": "example",
+      "number": "1.3",
+      "topic": "Symmetric but not equivalence - perpendicular lines",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let L be the set of all lines in a plane and R be the relation in L defined as $\\mathrm{R}=\\left\\{\\left(\\mathrm{L}_{1}, \\mathrm{~L}_{2}\\right): \\mathrm{L}_{1}\\right.$ is perpendicular to $\\left.\\mathrm{L}_{2}\\right\\}$. Show that R is symmetric but neither reflexive nor transitive."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_maths-12-1_0.jpg",
+          "caption": "Fig 1.1"
+        }
+      ],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "R is not reflexive, as a line $\\mathrm{L}_{1}$ can not be perpendicular to itself, i.e., ( $\\mathrm{L}_{1}, \\mathrm{~L}_{1}$ ) $\\notin \\mathrm{R}$. R is symmetric as $\\left(\\mathrm{L}_{1}, \\mathrm{~L}_{2}\\right) \\in \\mathrm{R}$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{array}{ll}\n\\Rightarrow & \\mathrm{L}_{1} \\text { is perpendicular to } \\mathrm{L}_{2} \\\\\n\\Rightarrow & \\mathrm{~L}_{2} \\text { is perpendicular to } \\mathrm{L}_{1} \\\\\n\\Rightarrow & \\left(\\mathrm{~L}_{2}, \\mathrm{~L}_{1}\\right) \\in \\mathrm{R} .\n\\end{array}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "R is not transitive. Indeed, if $\\mathrm{L}_{1}$ is perpendicular to $\\mathrm{L}_{2}$ and\n\n![](images/fig_maths-12-1_0.jpg)\nFig 1.1\n\n$\\mathrm{L}_{2}$ is perpendicular to $\\mathrm{L}_{3}$, then $\\mathrm{L}_{1}$ can never be perpendicular to $\\mathrm{L}_{3}$. In fact, $\\mathrm{L}_{1}$ is parallel to $\\mathrm{L}_{3}$, i.e., $\\left(\\mathrm{L}_{1}, \\mathrm{~L}_{2}\\right) \\in \\mathrm{R},\\left(\\mathrm{L}_{2}, \\mathrm{~L}_{3}\\right) \\in \\mathrm{R}$ but $\\left(\\mathrm{L}_{1}, \\mathrm{~L}_{3}\\right) \\notin \\mathrm{R}$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.4",
+      "kind": "example",
+      "number": "1.4",
+      "topic": "Reflexive but not equivalence relation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the relation R in the set $\\{1,2,3\\}$ given by $\\mathrm{R}=\\{(1,1),(2,2)$, $(3,3),(1,2),(2,3)\\}$ is reflexive but neither symmetric nor transitive."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$R$ is reflexive, since $(1,1),(2,2)$ and $(3,3)$ lie in $R$. Also, $R$ is not symmetric, as $(1,2) \\in \\mathrm{R}$ but $(2,1) \\notin \\mathrm{R}$. Similarly, R is not transitive, as $(1,2) \\in \\mathrm{R}$ and $(2,3) \\in \\mathrm{R}$ but $(1,3) \\notin \\mathrm{R}$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.5",
+      "kind": "example",
+      "number": "1.5",
+      "topic": "Equivalence relation - divisibility by 2",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the relation R in the set $\\mathbf{Z}$ of integers given by\n\n$$\n\\mathrm{R}=\\{(a, b): 2 \\text { divides } a-b\\}\n$$\n\nis an equivalence relation."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "R is reflexive, as 2 divides $(a-a)$ for all $a \\in \\mathbf{Z}$. Further, if $(a, b) \\in \\mathrm{R}$, then 2 divides $a-b$. Therefore, 2 divides $b-a$. Hence, $(b, a) \\in \\mathrm{R}$, which shows that R is symmetric. Similarly, if $(a, b) \\in \\mathrm{R}$ and $(b, c) \\in \\mathrm{R}$, then $a-b$ and $b-c$ are divisible by 2. Now, $a-c=(a-b)+(b-c)$ is even (Why?). So, $(a-c)$ is divisible by 2 . This shows that R is transitive. Thus, R is an equivalence relation in $\\mathbf{Z}$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.6",
+      "kind": "example",
+      "number": "1.6",
+      "topic": "Equivalence relation - odd/even parity",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let R be the relation defined in the set $\\mathrm{A}=\\{1,2,3,4,5,6,7\\}$ by $\\mathrm{R}=\\{(a, b):$ both $a$ and $b$ are either odd or even $\\}$. Show that R is an equivalence relation. Further, show that all the elements of the subset \\{1,3,5,7\\} are related to each other and all the elements of the subset \\{2, 4, 6\\} are related to each other, but no element of the subset \\{1, 3, 5, 7\\} is related to any element of the subset \\{2, 4, 6\\}."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Take any element $a$ in A. Both $a$ and $a$ must be either odd or even, so $(a, a) \\in \\mathrm{R}$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Next, if $(a, b) \\in \\mathrm{R} \\Rightarrow$ then both $a$ and $b$ must be either odd or even, so $\\Rightarrow(b, a) \\in \\mathrm{R}$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Similarly, if $(a, b) \\in \\mathrm{R}$ and $(b, c) \\in \\mathrm{R} \\Rightarrow$ then all elements $a, b, c$ must be either even or odd at the same time, so $\\Rightarrow(a, c) \\in \\mathrm{R}$. Hence, R is an equivalence relation."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "All elements of $\\{1,3,5,7\\}$ are related to each other, since they are all odd. In the same way, all elements of the subset \\{2, 4, 6\\} are related to each other, since they are all even. No element of \\{1, 3, 5, 7\\} is related to any element of \\{2, 4, 6\\}, because elements of \\{1, 3, 5, 7\\} are odd while elements of \\{2, 4, 6\\} are even."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.7",
+      "kind": "example",
+      "number": "1.7",
+      "topic": "One-one but not onto - roll numbers",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let A be the set of all 50 students of Class X in a school. Let $f: \\mathrm{A} \\rightarrow \\mathbf{N}$ be function defined by $f(x)=$ roll number of the student $x$. Show that $f$ is one-one but not onto."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "No two different students of the class can have same roll number. Therefore, $f$ must be one-one. We can assume without any loss of generality that roll numbers of students are from 1 to 50 . This implies that 51 in N is not roll number of any student of the class, so that 51 can not be image of any element of X under $f$. Hence, $f$ is not onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.8",
+      "kind": "example",
+      "number": "1.8",
+      "topic": "One-one but not onto - f(x)=2x on N",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the function $f: \\mathbf{N} \\rightarrow \\mathbf{N}$, given by $f(x)=2 x$, is one-one but not onto."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The function $f$ is one-one, for $f\\left(x_{1}\\right)=f\\left(x_{2}\\right) \\Rightarrow 2 x_{1}=2 x_{2} \\Rightarrow x_{1}=x_{2}$. Further, $f$ is not onto, as for $1 \\in \\mathbf{N}$, there does not exist any $x$ in $\\mathbf{N}$ such that $f(x)=2 x=1$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.9",
+      "kind": "example",
+      "number": "1.9",
+      "topic": "Bijective function - f(x)=2x on R",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove that the function $f: \\mathbf{R} \\rightarrow \\mathbf{R}$, given by $f(x)=2 x$, is one-one and onto."
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_maths-12-1_2.jpg",
+          "caption": "Fig 1.3"
+        }
+      ],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f$ is one-one, as $f\\left(x_{1}\\right)=f\\left(x_{2}\\right) \\Rightarrow 2 x_{1}=2 x_{2} \\Rightarrow x_{1}=x_{2}$. Also, given any real number $y$ in R, there exists $\\frac{y}{2}$ in R such that $f\\left(\\frac{y}{2}\\right)=2 .\\left(\\frac{y}{2}\\right)=y$. Hence, $f$ is onto.\n\n![](images/fig_maths-12-1_2.jpg)\nFig 1.3"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.10",
+      "kind": "example",
+      "number": "1.10",
+      "topic": "Onto but not one-one function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the function $f: \\mathbf{N} \\rightarrow \\mathbf{N}$, given by $f(1)=f(2)=1$ and $f(x)=x-1$, for every $x>2$, is onto but not one-one."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f$ is not one-one, as $f(1)=f(2)=1$. But $f$ is onto, as given any $y \\in \\mathbf{N}, y \\neq 1$, we can choose $x$ as $y+1$ such that $f(y+1)=y+1-1=y$. Also for $1 \\in \\mathbf{N}$, we have $f(1)=1$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.11",
+      "kind": "example",
+      "number": "1.11",
+      "topic": "Neither one-one nor onto - f(x)=x^2",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the function $f: \\mathbf{R} \\rightarrow \\mathbf{R}$, defined as $f(x)=x^{2}$, is neither one-one nor onto."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since $f(-1)=1=f(1), f$ is not oneone. Also, the element - 2 in the co-domain $\\mathbf{R}$ is not image of any element $x$ in the domain $\\mathbf{R}$ (Why?). Therefore $f$ is not onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.12",
+      "kind": "example",
+      "number": "1.12",
+      "topic": "Bijective piecewise function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that $f: \\mathbf{N} \\rightarrow \\mathbf{N}$, given by\n\n$$\nf(x)=\\begin{aligned}\n& x+1, \\text { if } x \\text { is odd, } \\\\\n& x-1, \\text { if } x \\text { is even }\n\\end{aligned}\n$$\n\nis both one-one and onto.\n\n![](images/fig_maths-12-1_3.jpg)\nThe image of 1 and -1 under $\\boldsymbol{f}$ is 1.\n\nFig 1.4"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_maths-12-1_3.jpg",
+          "caption": "Fig 1.4"
+        }
+      ],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Suppose $f\\left(x_{1}\\right)=f\\left(x_{2}\\right)$. If $x_{1}$ is odd and $x_{2}$ is even, then $x_{1}+1=x_{2}-1$, i.e., $x_{2}-x_{1}=2$, which is impossible. In the same way, $x_{1}$ being even and $x_{2}$ being odd can also be ruled out, by a similar argument. So both $x_{1}$ and $x_{2}$ must be either odd or even.\nSuppose both $x_{1}$ and $x_{2}$ are odd. Then $f\\left(x_{1}\\right)=f\\left(x_{2}\\right) \\Rightarrow x_{1}+1=x_{2}+1 \\Rightarrow x_{1}=x_{2}$. Suppose instead both $x_{1}$ and $x_{2}$ are even. Then also $f\\left(x_{1}\\right)=f\\left(x_{2}\\right) \\Rightarrow x_{1}-1=x_{2}-1 \\Rightarrow x_{1}=x_{2}$. So $f$ is one-one.\nAlso, any odd number $2 r+1$ in the co-domain $\\mathbf{N}$ is the image of $2 r+2$ in the domain $\\mathbf{N}$, and any even number $2 r$ in the co-domain $\\mathbf{N}$ is the image of $2 r-1$ in the domain $\\mathbf{N}$. So $f$ is onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.13",
+      "kind": "example",
+      "number": "1.13",
+      "topic": "Onto implies one-one on finite set",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that an onto function $f:\\{1,2,3\\} \\rightarrow\\{1,2,3\\}$ is always one-one."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Suppose $f$ is not one-one. Then there exists two elements, say 1 and 2 in the domain whose image in the co-domain is same. Also, the image of 3 under $f$ can be only one element. Therefore, the range set can have at the most two elements of the co-domain $\\{1,2,3\\}$, showing that $f$ is not onto, a contradiction. Hence, $f$ must be one-one."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.14",
+      "kind": "example",
+      "number": "1.14",
+      "topic": "One-one implies onto on finite set",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that a one-one function $f:\\{1,2,3\\} \\rightarrow\\{1,2,3\\}$ must be onto."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since $f$ is one-one, three elements of $\\{1,2,3\\}$ must be taken to 3 different elements of the co-domain $\\{1,2,3\\}$ under $f$. Hence, $f$ has to be onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.15",
+      "kind": "example",
+      "number": "1.15",
+      "topic": "Composition of finite functions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f:\\{2,3,4,5\\} \\rightarrow\\{3,4,5,9\\}$ and $g:\\{3,4,5,9\\} \\rightarrow\\{7,11,15\\}$ be functions defined as $f(2)=3, f(3)=4, f(4)=f(5)=5$ and $g(3)=g(4)=7$ and $g(5)=g(9)=11$. Find $g o f$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We have $\\operatorname{gof}(2)=g(f(2))=g(3)=7, \\operatorname{gof}(3)=g(f(3))=g(4)=7$, $\\operatorname{gof}(4)=g(f(4))=g(5)=11$ and $\\operatorname{gof}(5)=g(5)=11$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.16",
+      "kind": "example",
+      "number": "1.16",
+      "topic": "gof not equal to fog",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find $g o f$ and $f o g$, if $f: \\mathbf{R} \\rightarrow \\mathbf{R}$ and $g: \\mathbf{R} \\rightarrow \\mathbf{R}$ are given by $f(x)=\\cos x$ and $g(x)=3 x^{2}$. Show that $g o f \\neq f o g$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We have $g o f(x)=g(f(x))=g(\\cos x)=3(\\cos x)^{2}=3 \\cos ^{2} x$. Similarly, $f o g(x)=f(g(x))=f\\left(3 x^{2}\\right)=\\cos \\left(3 x^{2}\\right)$. Note that $3 \\cos ^{2} x \\neq \\cos 3 x^{2}$, for $x=0$. Hence, gof $\\neq$ fog ."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.17",
+      "kind": "example",
+      "number": "1.17",
+      "topic": "Invertible function and its inverse",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f: \\mathbf{N} \\rightarrow \\mathrm{Y}$ be a function defined as $f(x)=4 x+3$, where, $\\mathrm{Y}=\\{y \\in \\mathbf{N}: y=4 x+3$ for some $x \\in \\mathbf{N}\\}$. Show that $f$ is invertible. Find the inverse."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Consider an arbitrary element $y$ of Y. By the definition of Y, $y=4 x+3$ for some $x$ in the domain $\\mathbf{N}$. So $x=\\frac{(y-3)}{4}$.\nDefine $g: \\mathrm{Y} \\rightarrow \\mathbf{N}$ by"
+            },
+            {
+              "type": "text",
+              "text": "$$\ng(y)=\\frac{(y-3)}{4} . \\text { Now, } g \\circ f(x)=g(f(x))=g(4 x+3)=\\frac{(4 x+3-3)}{4}=x \\text { and }\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f o g(y)=f(g(y))=f\\left(\\frac{(y-3)}{4}\\right)=\\frac{4(y-3)}{4}+3=y-3+3=y$. This shows $g o f=\\mathrm{I}_{\\mathrm{N}}$ and $f o g=\\mathrm{I}_{\\mathrm{Y}}$. So $f$ is invertible, and $g$ is the inverse of $f$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.18",
+      "kind": "example",
+      "number": "1.18",
+      "topic": "Intersection of equivalence relations",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "If $R_{1}$ and $R_{2}$ are equivalence relations in a set $A$, show that $R_{1} \\cap R_{2}$ is also an equivalence relation."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since $\\mathrm{R}_{1}$ and $\\mathrm{R}_{2}$ are equivalence relations, $(a, a) \\in \\mathrm{R}_{1}$, and $(a, a) \\in \\mathrm{R}_{2} \\forall a \\in \\mathrm{~A}$. This implies that $(a, a) \\in \\mathrm{R}_{1} \\cap \\mathrm{R}_{2}, \\forall a$, showing $\\mathrm{R}_{1} \\cap \\mathrm{R}_{2}$ is reflexive. Further, $(a, b) \\in \\mathrm{R}_{1} \\cap \\mathrm{R}_{2} \\Rightarrow(a, b) \\in \\mathrm{R}_{1}$ and $(a, b) \\in \\mathrm{R}_{2} \\Rightarrow(b, a) \\in \\mathrm{R}_{1}$ and $(b, a) \\in \\mathrm{R}_{2} \\Rightarrow$ $(b, a) \\in \\mathrm{R}_{1} \\cap \\mathrm{R}_{2}$, hence, $\\mathrm{R}_{1} \\cap \\mathrm{R}_{2}$ is symmetric. Similarly, $(a, b) \\in \\mathrm{R}_{1} \\cap \\mathrm{R}_{2}$ and $(b, c) \\in \\mathrm{R}_{1} \\cap \\mathrm{R}_{2} \\Rightarrow(a, c) \\in \\mathrm{R}_{1}$ and $(a, c) \\in \\mathrm{R}_{2} \\Rightarrow(a, c) \\in \\mathrm{R}_{1} \\cap \\mathrm{R}_{2}$. This shows that $\\mathrm{R}_{1} \\cap \\mathrm{R}_{2}$ is transitive. Thus, $\\mathrm{R}_{1} \\cap \\mathrm{R}_{2}$ is an equivalence relation."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.19",
+      "kind": "example",
+      "number": "1.19",
+      "topic": "Equivalence relation on ordered pairs",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let R be a relation on the set A of ordered pairs of positive integers defined by $(x, y) \\mathrm{R}(u, v)$ if and only if $x v=y u$. Show that R is an equivalence relation."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Clearly, $(x, y) \\mathrm{R}(x, y), \\forall(x, y) \\in \\mathrm{A}$, since $x y=y x$. This shows that R is reflexive. Further, $(x, y) \\mathrm{R}(u, v) \\Rightarrow x v=y u \\Rightarrow u y=v x$ and hence $(u, v) \\mathrm{R}(x, y)$. This shows that R is symmetric. Similarly, $(x, y) \\mathrm{R}(u, v)$ and $(u, v) \\mathrm{R}(a, b) \\Rightarrow x v=y u$ and $u b=v a \\Rightarrow x v \\frac{a}{u}=y u \\frac{a}{u} \\Rightarrow x v \\frac{b}{v}=y u \\frac{a}{u} \\Rightarrow x b=y a$ and hence $(x, y) \\mathrm{R}(a, b)$. Thus, R is transitive. Thus, R is an equivalence relation."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.20",
+      "kind": "example",
+      "number": "1.20",
+      "topic": "Equality of two relations",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $\\mathrm{X}=\\{1,2,3,4,5,6,7,8,9\\}$. Let $\\mathrm{R}_{1}$ be a relation in X given by $\\mathrm{R}_{1}=\\left\\{(x, y): x-y\\right.$ is divisible by 3\\} and $\\mathrm{R}_{2}$ be another relation on X given by $\\mathrm{R}_{2}=\\{(x, y):\\{x, y\\} \\subset\\{1,4,7\\}\\}$ or $\\{x, y\\} \\subset\\{2,5,8\\}$ or $\\left.\\{x, y\\} \\subset\\{3,6,9\\}\\right\\}$. Show that $\\mathrm{R}_{1}=\\mathrm{R}_{2}$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Note that the characteristic of sets $\\{1,4,7\\},\\{2,5,8\\}$ and $\\{3,6,9\\}$ is that difference between any two elements of these sets is a multiple of 3 . Therefore, $(x, y) \\in \\mathrm{R}_{1} \\Rightarrow x-y$ is a multiple of $3 \\Rightarrow\\{x, y\\} \\subset\\{1,4,7\\}$ or $\\{x, y\\} \\subset\\{2,5,8\\}$ or $\\{x, y\\} \\subset\\{3,6,9\\} \\Rightarrow(x, y) \\in \\mathrm{R}_{2}$. Hence, $\\mathrm{R}_{1} \\subset \\mathrm{R}_{2}$. Similarly, $\\{x, y\\} \\in \\mathrm{R}_{2} \\Rightarrow\\{x, y\\}$\n$\\subset\\{1,4,7\\}$ or $\\{x, y\\} \\subset\\{2,5,8\\}$ or $\\{x, y\\} \\subset\\{3,6,9\\} \\Rightarrow x-y$ is divisible by $3 \\Rightarrow\\{x, y\\} \\in \\mathrm{R}_{1}$. This shows that $\\mathrm{R}_{2} \\subset \\mathrm{R}_{1}$. Hence, $\\mathrm{R}_{1}=\\mathrm{R}_{2}$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.21",
+      "kind": "example",
+      "number": "1.21",
+      "topic": "Equivalence relation from a function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f: \\mathrm{X} \\rightarrow \\mathrm{Y}$ be a function. Define a relation R in X given by $\\mathrm{R}=\\{(a, b): f(a)=f(b)\\}$. Examine whether R is an equivalence relation or not."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For every $a \\in \\mathrm{X},(a, a) \\in \\mathrm{R}$, since $f(a)=f(a)$, showing that R is reflexive. Similarly, $(a, b) \\in \\mathrm{R} \\Rightarrow f(a)=f(b) \\Rightarrow f(b)=f(a) \\Rightarrow(b, a) \\in \\mathrm{R}$. Therefore, R is symmetric. Further, $(a, b) \\in \\mathrm{R}$ and $(b, c) \\in \\mathrm{R} \\Rightarrow f(a)=f(b)$ and $f(b)=f(c) \\Rightarrow f(a)$ $=f(c) \\Rightarrow(a, c) \\in \\mathrm{R}$, which implies that R is transitive. Hence, R is an equivalence relation."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.22",
+      "kind": "example",
+      "number": "1.22",
+      "topic": "Counting one-one functions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the number of all one-one functions from set $\\mathrm{A}=\\{1,2,3\\}$ to itself."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "One-one function from \\{1, 2, 3\\} to itself is simply a permutation on three symbols $1,2,3$. Therefore, total number of one-one maps from $\\{1,2,3\\}$ to itself is same as total number of permutations on three symbols $1,2,3$ which is $3!=6$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.23",
+      "kind": "example",
+      "number": "1.23",
+      "topic": "Counting relations with given constraints",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $\\mathrm{A}=\\{1,2,3\\}$. Then show that the number of relations containing $(1,2)$ and $(2,3)$ which are reflexive and transitive but not symmetric is three."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The smallest relation $\\mathrm{R}_{1}$ containing $(1,2)$ and $(2,3)$ that is reflexive and transitive but not symmetric is \\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 3), (1, 3)\\}."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "If we add the pair $(2,1)$ to $\\mathrm{R}_{1}$, we get $\\mathrm{R}_{2}$. The relation $\\mathrm{R}_{2}$ is reflexive and transitive but not symmetric."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "In the same way, adding $(3,2)$ to $\\mathrm{R}_{1}$ gives the relation $\\mathrm{R}_{3}$, with the same property."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We cannot add both pairs $(2,1),(3,2)$, or just the single pair $(3,1)$, to $\\mathrm{R}_{1}$ at the same time. Doing so would force us to add the remaining pair to keep transitivity, and the relation would then also become symmetric, which we do not want."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "So the total number of such relations is three."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.24",
+      "kind": "example",
+      "number": "1.24",
+      "topic": "Counting equivalence relations",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the number of equivalence relation in the set $\\{1,2,3\\}$ containing $(1,2)$ and $(2,1)$ is two."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The smallest equivalence relation $\\mathrm{R}_{1}$ containing ( 1,2 ) and ( 2,1 ) is $\\{(1,1)$, $(2,2),(3,3),(1,2),(2,1)\\}$. This leaves only 4 pairs: $(2,3),(3,2)$, $(1,3)$ and $(3,1)$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Suppose we add just one of them, say $(2,3)$, to $\\mathrm{R}_{1}$. Then symmetry forces us to also add $(3,2)$, and transitivity then forces us to add $(1,3)$ and $(3,1)$ too."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "So the only equivalence relation bigger than $\\mathrm{R}_{1}$ is the universal relation. Hence, the total number of equivalence relations containing $(1,2)$ and $(2,1)$ is two."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.25",
+      "kind": "example",
+      "number": "1.25",
+      "topic": "Sum of onto functions not onto",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider the identity function $\\mathrm{I}_{\\mathbf{N}}: \\mathbf{N} \\rightarrow \\mathbf{N}$ defined as $\\mathrm{I}_{\\mathbf{N}}(x)=x \\forall x \\in \\mathbf{N}$. Show that although $\\mathrm{I}_{\\mathrm{N}}$ is onto but $\\mathrm{I}_{\\mathrm{N}}+\\mathrm{I}_{\\mathrm{N}}: \\mathbf{N} \\rightarrow \\mathbf{N}$ defined as\n\n$$\n\\left(\\mathrm{I}_{\\mathrm{N}}+\\mathrm{I}_{\\mathrm{N}}\\right)(x)=\\mathrm{I}_{\\mathrm{N}}(x)+\\mathrm{I}_{\\mathrm{N}}(x)=x+x=2 x \\text { is not onto. }\n$$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Clearly $\\mathrm{I}_{\\mathrm{N}}$ is onto. But $\\mathrm{I}_{\\mathrm{N}}+\\mathrm{I}_{\\mathrm{N}}$ is not onto, as we can find an element 3 in the co-domain $\\mathbf{N}$ such that there does not exist any $x$ in the domain $\\mathbf{N}$ with $\\left(\\mathrm{I}_{\\mathrm{N}}+\\mathrm{I}_{\\mathrm{N}}\\right)(x)=2 x=3$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "ex_1.26",
+      "kind": "example",
+      "number": "1.26",
+      "topic": "Sum of one-one functions not one-one",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider a function $f:\\left[0, \\frac{\\pi}{2}\\right] \\rightarrow \\mathbf{R}$ given by $f(x)=\\sin x$ and $g:\\left[0, \\frac{\\pi}{2}\\right] \\rightarrow \\mathbf{R}$ given by $g(x)=\\cos x$. Show that $f$ and $g$ are one-one, but $f+g$ is not one-one."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since for any two distinct elements $x_{1}$ and $x_{2}$ in $\\left[0, \\frac{\\pi}{2}\\right], \\sin x_{1} \\neq \\sin x_{2}$ and $\\cos x_{1} \\neq \\cos x_{2}$, both $f$ and $g$ must be one-one. But $(f+g)(0)=\\sin 0+\\cos 0=1$ and $(f+g)\\left(\\frac{\\pi}{2}\\right)=\\sin \\frac{\\pi}{2}+\\cos \\frac{\\pi}{2}=1$. Therefore, $f+g$ is not one-one."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.1",
+      "kind": "exercise",
+      "number": "1.1",
+      "topic": "Reflexive symmetric transitive - five relations",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Determine whether each of the following relations are reflexive, symmetric and transitive:\n    (i) Relation R in the set $\\mathrm{A}=\\{1,2,3, \\ldots, 13,14\\}$ defined as\n$$\n\\mathrm{R}=\\{(x, y): 3 x-y=0\\}\n$$\n    (ii) Relation R in the set N of natural numbers defined as\n$$\n\\mathrm{R}=\\{(x, y): y=x+5 \\text { and } x<4\\}\n$$\n    (iii) Relation R in the set $\\mathrm{A}=\\{1,2,3,4,5,6\\}$ as\n$$\n\\mathrm{R}=\\{(x, y): y \\text { is divisible by } x\\}\n$$\n    (iv) Relation R in the set $\\mathbf{Z}$ of all integers defined as\n$$\n\\mathrm{R}=\\{(x, y): x-y \\text { is an integer }\\}\n$$\n    (v) Relation R in the set A of human beings in a town at a particular time given by\n        (a) $\\mathrm{R}=\\{(x, y): x$ and $y$ work at the same place $\\}$\n        (b) $\\mathrm{R}=\\{(x, y): x$ and $y$ live in the same locality $\\}$\n        (c) $\\mathrm{R}=\\{(x, y): x$ is exactly 7 cm taller than $y\\}$\n        (d) $\\mathrm{R}=\\{(x, y): x$ is wife of $y\\}$\n        (e) $\\mathrm{R}=\\{(x, y): x$ is father of $y\\}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) $R=\\{(1,3),(2,6),(3,9),(4,12)\\}$\n$R$ is not reflexive because $(1,1),(2,2) \\ldots$ and $(14,14) \\notin R$.\nR is not symmetric because $(1,3) \\in R$, but $(3,1) \\notin R$.[since $3(3) \\neq 0]$.\nR is not transitive because $(1,3),(3,9) \\in R$, but $(1,9) \\notin R .[3(1)-9 \\neq 0]$.\nHence, R is neither reflexive nor symmetric nor transitive."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(ii) $R=\\{(1,6),(2,7),(3,8)\\}$\nR is not reflexive because $(1,1) \\notin R$.\nR is not symmetric because $(1,6) \\in R$ but $(6,1) \\notin R$.\nR is not transitive because there isn't any ordered pair in R such that $(x, y),(y, z) \\in R$, so $(x, z) \\notin R$.\nHence, R is neither reflexive nor symmetric nor transitive."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iii) $R=\\{(x, y): y$ is divisible by $x\\}$\nWe know that any number other than 0 is divisible by itself.\nThus, $(x, x) \\in R$\nSo, $R$ is reflexive.\n\n$(2,4) \\in R \\quad$ [because 4 is divisible by 2 ]\nBut $(4,2) \\notin R$ [since 2 is not divisible by 4]\nSo, R is not symmetric.\nLet $(x, y)$ and $(y, z) \\in R$. So, y is divisible by x and z is divisible by y .\nSo, z is divisible by $\\mathrm{x} \\Rightarrow(x, z) \\in R$\nSo, R is transitive.\nSo, $R$ is reflexive and transitive but not symmetric."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(iv) $R=\\{(x, y): x-y$ is an integer $\\}$\nFor $x \\in \\mathrm{Z},(x, x) \\notin R$ because $x-x=0$ is an integer.\nSo, R is reflexive.\nFor, $x, y \\in Z$, if $x, y \\in \\mathrm{R}$, then $x-y$ is an integer $\\Rightarrow(y-x)$ is an integer.\nSo, $(y, x) \\in R$\nSo, R is symmetric.\nLet $(x, y)$ and $(y, z) \\in R$, where $x, y, z \\in \\mathrm{Z}$.\n$\\Rightarrow(x-y)$ and $(y-z)$ are integers.\n$\\Rightarrow x-z=(x-y)+(y-z)$ is an integer.\nSo, R is transitive.\nSo, $R$ is reflexive, symmetric and transitive."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(v)\n\na) $R=\\{(x, y): x$ and $y$ work at the same place $\\}$\nR is reflexive because $(x, x) \\in R$\nR is symmetric because ,\nIf $(x, y) \\in R$, then $x$ and y work at the same place and y and $x$ also work at the same place. $(y, x) \\in R$.\nR is transitive because,\nLet $(x, y),(y, z) \\in R$\n$x$ and $y$ work at the same place and $y$ and $z$ work at the same place.\n\nThen, $x$ and $z$ also works at the same place. $(x, z) \\in R$.\nHence, R is reflexive, symmetric and transitive.\n\nb) $R=\\{(x, y): x$ and $y$ live in the same locality $\\}$\nR is reflexive because $(x, x) \\in R$\nR is symmetric because,\nIf $(x, y) \\in R$, then $x$ and y live in the same locality and y and $x$ also live in the same locality $(y, x) \\in R$.\nR is transitive because,\n\nLet $(x, y),(y, z) \\in R$\n$x$ and $y$ live in the same locality and $y$ and $z$ live in the same locality.\n\nThen $x$ and $z$ also live in the same locality. $(x, z) \\in R$.\nHence, R is reflexive, symmetric and transitive.\n\nc) $R=\\{(x, y): x$ is exactly 7 cm taller than $y\\}$\nR is not reflexive because $(x, x) \\notin R$.\nR is not symmetric because,\nIf $(x, y) \\in R$, then $x$ is exactly $7 c m$ taller than y and y is clearly not taller than $x$ .$(y, x) \\notin R$.\nR is not transitive because,\nLet $(x, y),(y, z) \\in R$\n$x$ is exactly $7 c m$ taller than y and $y$ is exactly $7 c m$ taller than $z$.\nThen $x$ is exactly $14 c m$ taller than $z .(x, z) \\notin R$\nHence, R is neither reflexive nor symmetric nor transitive.\nd) $R=\\{(x, y): x$ is wife of $y\\}$\nR is not reflexive because $(x, x) \\notin R$.\nR is not symmetric because,\nLet $(x, y) \\in R, x$ is the wife of $y$ and $y$ is not the wife of $x .(y, x) \\notin R$.\nR is not transitive because,\nLet $(x, y),(y, z) \\in R$\n$x$ is wife of y and $y$ is wife of $z$, which is not possible.\n$$\n(x, z) \\notin R .\n$$\nHence, R is neither reflexive nor symmetric nor transitive.\ne) $R=\\{(x, y): x$ is father of $y\\}$\nR is not reflexive because $(x, x) \\notin R$.\nR is not symmetric because,\nLet $(x, y) \\in R, x$ is the father of $y$ and $y$ is not the father of $x .(y, x) \\notin R$.\nR is not transitive because,\nLet $(x, y),(y, z) \\in R$\n$x$ is father of y and $y$ is father of $z, x$ is not father of $z .(x, z) \\notin R$.\nHence, R is neither reflexive nor symmetric nor transitive."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.2",
+      "kind": "exercise",
+      "number": "1.2",
+      "topic": "Relation neither reflexive symmetric nor transitive",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the relation R in the set $\\mathbf{R}$ of real numbers, defined as $\\mathrm{R}=\\left\\{(a, b): a \\leq b^{2}\\right\\}$ is neither reflexive nor symmetric nor transitive."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& R=\\left\\{(a, b): a \\leq b^{2}\\right\\} \\\\\n& \\left(\\frac{1}{2}, \\frac{1}{2}\\right) \\notin R \\text { because } \\frac{1}{2}>\\left(\\frac{1}{2}\\right)^{2}\n\\end{aligned}\n$$\n\nR is not reflexive.\n\n$$\n\\begin{aligned}\n& (1,4) \\in R \\text { as } 1<4 \\text {. But } 4 \\text { is not less than } 1^{2} \\text {. } \\\\\n& (4,1) \\notin R\n\\end{aligned}\n$$\n\nR is not symmetric.\n\n$$\n\\begin{aligned}\n& (3,2)(2,1.5) \\in R \\quad\\left[\\text { Because } 3<2^{2}=4 \\text { and } 2<(1.5)^{2}=2.25\\right] \\\\\n& 3>(1.5)^{2}=2.25 \\\\\n& \\therefore(3,1.5) \\notin R\n\\end{aligned}\n$$\n\nR is not transitive.\nR is neither reflective nor symmetric nor transitive."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.3",
+      "kind": "exercise",
+      "number": "1.3",
+      "topic": "Relation b = a+1 properties",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Check whether the relation R defined in the set $\\{1,2,3,4,5,6\\}$ as $\\mathrm{R}=\\{(a, b): b=a+1\\}$ is reflexive, symmetric or transitive."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& A=\\{1,2,3,4,5,6\\} \\\\\n& R=\\{(a, b): b=a+1\\} \\\\\n& R=\\{(1,2),(2,3),(3,4),(4,5),(5,6)\\}\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& (a, a) \\notin R, a \\in A \\\\\n& (1,1),(2,2),(3,3),(4,4),(5,5) \\notin R\n\\end{aligned}\n$$\n\n$R$ is not reflexive.\n\n$$\n(1,2) \\in R \\text {, but }(2,1) \\notin R\n$$\n\nR is not symmetric.\n\n$$\n\\begin{aligned}\n& (1,2),(2,3) \\in R \\\\\n& (1,3) \\notin R\n\\end{aligned}\n$$\n\n$R$ is not transitive.\n\nR is neither reflective nor symmetric nor transitive."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.4",
+      "kind": "exercise",
+      "number": "1.4",
+      "topic": "Relation a <= b properties",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the relation R in $\\mathbf{R}$ defined as $\\mathrm{R}=\\{(a, b): a \\leq b\\}$, is reflexive and transitive but not symmetric."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& R=\\{(a, b): a \\leq b\\} \\\\\n& (a, a) \\in R\n\\end{aligned}\n$$\n\nR is reflexive.\n\n$$\n\\begin{aligned}\n& (2,4) \\in R(\\text { as } 2<4) \\\\\n& (4,2) \\notin R(\\text { as } 4>2)\n\\end{aligned}\n$$\n\nR is not symmetric.\n\n$$\n\\begin{aligned}\n& (a, b),(b, c) \\in R \\\\\n& a \\leq b \\text { and } b \\leq c \\\\\n& \\Rightarrow a \\leq c \\\\\n& \\Rightarrow(a, c) \\in R\n\\end{aligned}\n$$\n\nR is transitive.\n$R$ is reflexive and transitive but not symmetric."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.5",
+      "kind": "exercise",
+      "number": "1.5",
+      "topic": "Relation a <= b^3 properties",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Check whether the relation R in $\\mathbf{R}$ defined by $\\mathrm{R}=\\left\\{(a, b): a \\leq b^{3}\\right\\}$ is reflexive, symmetric or transitive."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& R=\\left\\{(a, b): a \\leq b^{3}\\right\\} \\\\\n& \\left(\\frac{1}{2}, \\frac{1}{2}\\right) \\notin R, \\text { since } \\frac{1}{2}>\\left(\\frac{1}{2}\\right)^{3}\n\\end{aligned}\n$$\n\nR is not reflexive.\n\n$$\n\\begin{aligned}\n& (1,2) \\in R\\left(\\text { as } 1<2^{3}=8\\right) \\\\\n& (2,1) \\notin R\\left(\\text { as } 2^{3}>1=8\\right)\n\\end{aligned}\n$$\n\n$R$ is not symmetric.\n\n$$\n\\begin{aligned}\n& \\left(3, \\frac{3}{2}\\right),\\left(\\frac{3}{2}, \\frac{6}{5}\\right) \\in R, \\text { since } 3<\\left(\\frac{3}{2}\\right)^{3} \\text { and } \\frac{2}{3}<\\left(\\frac{6}{2}\\right)^{3} \\\\\n& \\left(3, \\frac{6}{5}\\right) \\notin R 3>\\left(\\frac{6}{5}\\right)^{3}\n\\end{aligned}\n$$\n\nR is not transitive.\nR is neither reflexive nor symmetric nor transitive."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.6",
+      "kind": "exercise",
+      "number": "1.6",
+      "topic": "Symmetric relation on {1,2,3}",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the relation R in the set $\\{1,2,3\\}$ given by $\\mathrm{R}=\\{(1,2),(2,1)\\}$ is symmetric but neither reflexive nor transitive."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& A=\\{1,2,3\\} \\\\\n& R=\\{(1,2),(2,1)\\} \\\\\n& (1,1),(2,2),(3,3) \\notin R\n\\end{aligned}\n$$\n\nR is not reflexive.\n\n$$\n(1,2) \\in R \\text { and }(2,1) \\in R\n$$\n\n$R$ is symmetric.\n\n$$\n\\begin{aligned}\n& (1,2) \\in R \\text { and }(2,1) \\in R \\\\\n& (1,1) \\in R\n\\end{aligned}\n$$\n\nR is not transitive.\nR is symmetric, but not reflexive or transitive."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.7",
+      "kind": "exercise",
+      "number": "1.7",
+      "topic": "Equivalence relation - same page count",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the relation R in the set A of all the books in a library of a college, given by $\\mathrm{R}=\\{(x, y): x$ and $y$ have same number of pages $\\}$ is an equivalence relation."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nR=\\{(x, y): x \\text { and } y \\text { have same number of pages }\\}\n$$\n\nR is reflexive since $(x, x) \\in R$ as $x$ and $x$ have same number of pages.\n\nR is reflexive.\n\n$$\n(x, y) \\in R\n$$\n\n$x$ and y have same number of pages and y and $x$ have same number of pages $(y, x) \\in R$ R is symmetric.\n\n$$\n(x, y) \\in R,(y, z) \\in R\n$$\n\n$x$ and $y$ have same number of pages, $y$ and $z$ have same number of pages. Then $x$ and $z$ have same number of pages.\n\n$$\n(x, z) \\in R\n$$\n\nR is transitive.\n$R$ is an equivalence relation."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.8",
+      "kind": "exercise",
+      "number": "1.8",
+      "topic": "Equivalence relation - |a-b| even",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the relation R in the set $\\mathrm{A}=\\{1,2,3,4,5\\}$ given by\n$\\mathrm{R}=\\{(a, b):|a-b|$ is even $\\}$, is an equivalence relation. Show that all the elements of $\\{1,3,5\\}$ are related to each other and all the elements of \\{2,4\\} are related to each other. But no element of $\\{1,3,5\\}$ is related to any element of $\\{2,4\\}$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& a \\in A \\\\\n& |a-a|=0(\\text { which is even })\n\\end{aligned}\n$$\n\nR is reflective.\n\n$$\n\\begin{aligned}\n& (a, b) \\in R \\\\\n& \\Rightarrow|a-b|[\\text { is even }] \\\\\n& \\Rightarrow|-(a-b)|=|b-a|[\\text { is even }] \\\\\n& (b, a) \\in R\n\\end{aligned}\n$$\n\nR is symmetric.\n\n$$\n\\begin{aligned}\n& (a, b) \\in R \\text { and }(b, c) \\in \\mathrm{R} \\\\\n& \\Rightarrow|a-b| \\text { is even and }|b-c| \\text { is even } \\\\\n& \\Rightarrow(a-b) \\text { is even and }(b-c) \\text { is even } \\\\\n& \\Rightarrow(a-c)=(a+b)+(b-c) \\text { is even }\n\\end{aligned}\n$$\n\n$\\Rightarrow|a-b|$ is even\n\n$$\n\\Rightarrow(a, c) \\in R\n$$\n\nR is transitive.\n$R$ is an equivalence relation."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "All elements of $\\{1,3,5\\}$ are related to each other because they are all odd. So, the modulus of the difference between any two elements is even.\n\nSimilarly, all elements $\\{2,4\\}$ are related to each other because they are all even.\nNo element of $\\{1,3,5\\}$ is related to any elements of $\\{2,4\\}$ as all elements of $\\{1,3,5\\}$ are odd and all elements of $\\{2,4\\}$ are even. So, the modulus of the difference between the two elements will not be even."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.9",
+      "kind": "exercise",
+      "number": "1.9",
+      "topic": "Equivalence relation - multiple of 4",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that each of the relation R in the set $\\mathrm{A}=\\{x \\in \\mathbf{Z}: 0 \\leq x \\leq 12\\}$, given by\n    (i) $\\mathrm{R}=\\{(a, b):|a-b|$ is a multiple of 4$\\}$\n    (ii) $\\mathrm{R}=\\{(a, b): a=b\\}$\nis an equivalence relation. Find the set of all elements related to 1 in each case."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nA=\\{x \\in Z: 0 \\leq x \\leq 12\\}=\\{0,1,2,3,4,5,6,7,8,9,10,11,12\\}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. $$\n\\begin{aligned}\n& R=\\{(a, b):|a-b| \\text { is a mutiple of } 4\\} \\\\\n& a \\in A,(a, a) \\in R \\quad[|a-a|=0 \\text { is a multiple of } 4]\n\\end{aligned}\n$$\n$R$ is reflexive.\n$$\n\\begin{aligned}\n& (a, b) \\in R \\Rightarrow|a-b|[\\text { is a multiple of } 4] \\\\\n& \\Rightarrow|-(a-b)|=|b-a|[\\text { is a multiple of } 4] \\\\\n& (b, a) \\in R\n\\end{aligned}\n$$\n$R$ is symmetric.\n$$\n\\begin{aligned}\n& (a, b) \\in R \\text { and }(b, c) \\in R \\\\\n& \\Rightarrow|a-b| \\text { is a multiple of } 4 \\text { and }|b-c| \\text { is a multiple of } 4 \\\\\n& \\Rightarrow(a-b) \\text { is a multiple of } 4 \\text { and }(b-c) \\text { is a multiple of } 4 \\\\\n& \\Rightarrow(a-c)=(a-b)+(b-c) \\text { is a multiple of } 4 \\\\\n& \\Rightarrow|a-c| \\text { is a multiple of } 4\n\\end{aligned}\n$$\n\n$$\n\\Rightarrow(a, c) \\in R\n$$\n\nR is transitive.\n$R$ is an equivalence relation.\nThe set of elements related to 1 is $\\{1,5,9\\}$ as\n$|1-1|=0$ is a multiple of 4 .\n$|5-1|=4$ is a multiple of 4.\n$|9-1|=8$ is a multiple of 4."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. $\\quad R=\\{(a, b): a=b\\}$\n$a \\in A,(a, a) \\in R \\quad[$ since $\\mathrm{a}=\\mathrm{a}]$\n$R$ is reflective.\n\n$$\n\\begin{aligned}\n& (a, b) \\in R \\\\\n& \\Rightarrow a=b \\\\\n& \\Rightarrow b=a \\\\\n& \\Rightarrow(b, a) \\in R\n\\end{aligned}\n$$\n\n$R$ is symmetric.\n\n$$\n\\begin{aligned}\n& (a, b) \\in R \\text { and }(b, c) \\in \\mathrm{R} \\\\\n& \\Rightarrow a=b \\text { and } b=c \\\\\n& \\Rightarrow a=c \\\\\n& \\Rightarrow(a, c) \\in R\n\\end{aligned}\n$$\n\nR is transitive.\nR is an equivalence relation.\nThe set of elements related to 1 is $\\{1\\}$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.10",
+      "kind": "exercise",
+      "number": "1.10",
+      "topic": "Examples of relations with given properties",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Give an example of a relation. Which is\n\n(i) Symmetric but neither reflexive nor transitive.\n(ii) Transitive but neither reflexive nor symmetric.\n(iii) Reflexive and symmetric but not transitive.\n(iv) Reflexive and transitive but not symmetric.\n(v) Symmetric and transitive but not reflexive."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i.\n\n$$\n\\begin{aligned}\n& A=\\{5,6,7\\} \\\\\n& R=\\{(5,6),(6,5)\\} \\\\\n& (5,5),(6,6),(7,7) \\notin R\n\\end{aligned}\n$$\nR is not reflexive as $(5,5),(6,6),(7,7) \\notin R$ $(5,6),(6,5) \\in R$ and $(6,5) \\in R, R$ is symmetric.\n$$\n\\Rightarrow(5,6),(6,5) \\in R \\text {, but }(5,5) \\notin R\n$$\nR is not transitive.\nRelation $R$ is symmetric but not reflexive or transitive."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. $\\quad R=\\{(a, b): a<b\\}$\n$$\na \\in R,(a, a) \\notin R[\\text { since } a \\text { cannot be less than itself }]\n$$\nR is not reflexive.\n$$\n(1,2) \\in R(\\text { as } 1<2)\n$$\nBut 2 is not less than 1\n$$\n\\therefore(2,1) \\notin R\n$$\nR is not symmetric.\n$$\n\\begin{aligned}\n& (a, b),(b, c) \\in R \\\\\n& \\Rightarrow a<b \\text { and } b<c \\\\\n& \\Rightarrow a<c \\\\\n& \\Rightarrow(a, c) \\in R\n\\end{aligned}\n$$\nR is transitive.\nRelation $R$ is transitive but not reflexive and symmetric."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iii. $A=\\{4,6,8\\}$\n$$\nA=\\{(4,4),(6,6),(8,8),(4,6),(6,8),(8,6)\\}\n$$\nR is reflexive since $a \\in A,(a, a) \\in R$\n$R$ is symmetric since $(a, b) \\in R$\n$$\n\\Rightarrow(b, a) \\in R \\quad \\text { for } a, b \\in R\n$$\n$R$ is not transitive since $(4,6),(6,8) \\in R, \\operatorname{but}(4,8) \\notin R$\n$R$ is reflexive and symmetric but not transitive."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iv. $R=\\left\\{(a, b): a^{3}>b^{3}\\right\\}$\n$$\n(a, a) \\in R\n$$\n$R$ is reflexive.\n$$\n\\begin{aligned}\n& (2,1) \\in R \\\\\n& \\operatorname{But}(1,2) \\notin R\n\\end{aligned}\n$$\n\n∴ R is not symmetric.\n\n$$\n\\begin{aligned}\n& (a, b),(b, c) \\in R \\\\\n& \\Rightarrow a^{3} \\geq b^{3} \\text { and } b^{3}<c^{3} \\\\\n& \\Rightarrow a^{3}<c^{3} \\\\\n& \\Rightarrow(a, c) \\in R\n\\end{aligned}\n$$\n\n∴ R is transitive.\nR is reflexive and transitive but not symmetric"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "v.\n\n$$\nA=\\{1,3,5\\} \\quad \\text { Define a Relation } \\mathrm{R}\n$$\n\nOn A.\n\n$$\n\\begin{gathered}\nR: A \\rightarrow A \\\\\nR=\\{(1,3)(3,1)(1,1)(3,3)\\}\n\\end{gathered}\n$$\n\nRelation $R$ is not Reflexive as $(5,5) \\not \\subset R$\nRelation $R$ is Symmetric as\n\n$$\n(1,3) \\in R \\Rightarrow(3,1) \\in R\n$$\n\nRelation $R$ is Transitive\n\n$$\n\\begin{aligned}\n& (a, b) \\in R,(b, c) \\in R \\Rightarrow(a, c) \\in R \\\\\n& (3,1) \\in R,(1,1) \\in R \\Rightarrow(3,1) \\in R\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "## Alternative Answer\n\n$R=(a, b): a$ is brother of $b$ \\{suppose $a$ and $b$ are male\\}\nRef $\\rightarrow a$ is not brother of $a$\nSo, $(a, a) \\not \\subset R$\nRelation $R$ is not Reflexive\nSymmetric → a is brother of b so\n$b$ is brother of $a$\n\n$$\na, b \\in \\mathrm{R} \\Rightarrow(b, a) \\in \\mathrm{R}\n$$\n\nTransitive → a is brother of b and\n$b$ is brother of $c$ so\n$a$ is brother of $c$\n\n$$\n(a, b) \\in R,(b, c) \\in R \\Rightarrow(a, c) \\in R\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.11",
+      "kind": "exercise",
+      "number": "1.11",
+      "topic": "Equivalence relation - equidistant points",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the relation R in the set A of points in a plane given by $\\mathrm{R}=\\{(\\mathrm{P}, \\mathrm{Q}):$ distance of the point P from the origin is same as the distance of the point Q from the origin\\}, is an equivalence relation. Further, show that the set of all points related to a point $\\mathrm{P} \\neq(0,0)$ is the circle passing through P with origin as centre."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$R=\\{(P, Q)$ : Distance of the point P from the origin is same as the distance of the point Q from the origin $\\}$\nClearly, $(P, P) \\in R$\nR is reflexive.\n\n$$\n(P, Q) \\in R\n$$\n\nClearly R is symmetric.\n\n$$\n(P, Q),(Q, S) \\in R\n$$\n\n⇒ The distance of $P$ and $Q$ from the origin is the same and also, the distance of $Q$ and $S$ from the origin is the same.\n⇒ The distance of $P$ and $S$ from the origin is the same.\n\n$$\n(P, S) \\in R\n$$\n\nR is transitive.\nR is an equivalence relation."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The set of points related to $P \\neq(0,0)$ will be those points whose distance from origin is same as distance of $P$ from the origin.\n\nSet of points forms a circle with the centre as origin and this circle passes through $P$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.12",
+      "kind": "exercise",
+      "number": "1.12",
+      "topic": "Equivalence relation - similar triangles",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the relation $R$ defined in the set $A$ of all triangles as $R=\\left\\{\\left(T_{1}, T_{2}\\right): T_{1}\\right.$ is similar to $\\left.\\mathrm{T}_{2}\\right\\}$, is equivalence relation. Consider three right angle triangles $\\mathrm{T}_{1}$ with sides 3, 4, 5, $\\mathrm{T}_{2}$ with sides 5, 12, 13 and $\\mathrm{T}_{3}$ with sides 6, 8, 10. Which triangles among $\\mathrm{T}_{1}, \\mathrm{~T}_{2}$ and $\\mathrm{T}_{3}$ are related?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nR=\\left\\{\\left(T_{1}, T_{2}\\right): T_{1} \\text { is similar to } T_{2}\\right\\}\n$$\n\nR is reflexive since every triangle is similar to itself.\n\n$$\n\\text { If }\\left(T_{1}, T_{2}\\right) \\in R \\text {, then } T_{1} \\text { is similar to } T_{2} \\text {. }\n$$\n\n$T_{2}$ is similar to $T_{1}$.\n\n$$\n\\Rightarrow\\left(T_{2}, T_{1}\\right) \\in R\n$$\n\nR is symmetric.\n\n$$\n\\left(T_{1}, T_{2}\\right),\\left(T_{2}, T_{3}\\right) \\in R\n$$\n\nis similar to $T_{2}$ and $T_{2}$ is similar to $T_{3}$.\n$\\therefore T_{1}$ is similar to $T_{3}$.\n$\\Rightarrow\\left(T_{1}, T_{3}\\right) \\in R$\n∴ R is transitive."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\frac{3}{6}=\\frac{4}{8}=\\frac{5}{10}=\\left(\\frac{1}{2}\\right)$\n∴ Corresponding sides of triangles $T_{1 \\text { and }} T_{3}$ are in the same ratio.\nTriangle $T_{1}$ is similar to triangle $T_{3}$.\nHence, $T_{1}$ is related to $T_{3}$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.13",
+      "kind": "exercise",
+      "number": "1.13",
+      "topic": "Equivalence relation - polygon sides",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the relation R defined in the set A of all polygons as $\\mathrm{R}=\\left\\{\\left(\\mathrm{P}_{1}, \\mathrm{P}_{2}\\right)\\right.$ : $P_{1}$ and $P_{2}$ have same number of sides\\}, is an equivalence relation. What is the set of all elements in A related to the right angle triangle T with sides 3, 4 and 5?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$R=\\left\\{\\left(P_{1}, P_{2}\\right): P_{1}\\right.$ and $P_{2}$ have same number of sides $\\}$\n$\\left(P_{1}, P_{2}\\right) \\in R$ as same polygon has same number of sides.\n∴ R is reflexive.\n\n$$\n\\left(P_{1}, P_{2}\\right) \\in R\n$$\n\n$\\Rightarrow P_{1}$ and $P_{2}$ have same number of sides.\n$\\Rightarrow P_{2}$ and $P_{1}$ have same number of sides.\n\n$$\n\\Rightarrow\\left(P_{2}, P_{1}\\right) \\in R\n$$\n\n∴ R is symmetric.\n\n$$\n\\left(P_{1}, P_{2}\\right),\\left(P_{2}, P_{3}\\right) \\in R\n$$\n\n$\\Rightarrow P_{1}$ and $P_{2}$ have same number of sides.\n$P_{2}$ and $P_{3}$ have same number of sides.\n$\\Rightarrow P_{1}$ and $P_{3}$ have same number of sides.\n\n$$\n\\Rightarrow\\left(P_{1}, P_{3}\\right) \\in R\n$$\n\n$\\therefore \\mathrm{R}$ is transitive.\n$R$ is an equivalence relation."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The elements in A related to right-angled triangle (T) with sides 3,4,5 are those polygons which have three sides.\nSet of all elements in a related to triangle T is the set of all triangles."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.14",
+      "kind": "exercise",
+      "number": "1.14",
+      "topic": "Equivalence relation - parallel lines",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let L be the set of all lines in XY plane and R be the relation in L defined as $\\mathrm{R}=\\left\\{\\left(\\mathrm{L}_{1}, \\mathrm{~L}_{2}\\right): \\mathrm{L}_{1}\\right.$ is parallel to $\\left.\\mathrm{L}_{2}\\right\\}$. Show that R is an equivalence relation. Find the set of all lines related to the line $y=2 x+4$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nR=\\left\\{\\left(L_{1}, L_{2}\\right): L_{1} \\text { is parallel to } \\mathrm{L}_{2}\\right\\}\n$$\n\nR is reflexive as any line $L_{1}$ is parallel to itself i.e., $\\left(L_{1}, L_{2}\\right) \\in R$\n\n$$\n\\begin{aligned}\n& \\text { If }\\left(L_{1}, L_{2}\\right) \\in R, \\text { then } \\\\\n& \\Rightarrow L_{1} \\text { is parallel to } L_{2} . \\\\\n& \\Rightarrow L_{2} \\text { is parallel to } L_{1} .\n\\end{aligned}\n$$\n\n$$\n\\Rightarrow\\left(L_{2}, L_{1}\\right) \\in R\n$$\n\n∴ R is symmetric.\n\n$$\n\\begin{aligned}\n& \\left(L_{1}, L_{2}\\right),\\left(L_{2}, L_{3}\\right) \\in R \\\\\n& \\Rightarrow L_{1} \\text { is parallel to } L_{2} \\\\\n& \\Rightarrow L_{2} \\text { is parallel to } L_{3} \\\\\n& \\therefore L_{1} \\text { is parallel to } L_{3} . \\\\\n& \\Rightarrow\\left(L_{1}, L_{3}\\right) \\in R \\\\\n& \\therefore R \\text { is transitive. }\n\\end{aligned}\n$$\n\nR is an equivalence relation."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Set of all lines related to the line $y=2 x+4$ is the set of all lines that are parallel to the line $y=2 x+4$.\nSlope of the line $y=2 x+4$ is $m=2$.\nLine parallel to the given line is in the form $y=2 x+c$, where $c \\in R$.\nSet of all lines related to the given line is given by $y=2 x+c$, where $c \\in R$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.15",
+      "kind": "exercise",
+      "number": "1.15",
+      "topic": "MCQ - relation properties on {1,2,3,4}",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let R be the relation in the set $\\{1,2,3,4\\}$ given by $\\mathrm{R}=\\{(1,2),(2,2),(1,1),(4,4)$, (1, 3), (3, 3), (3, 2)\\}. Choose the correct answer.\n    (A) R is reflexive and symmetric but not transitive.\n    (B) R is reflexive and transitive but not symmetric.\n    (C) R is symmetric and transitive but not reflexive.\n    (D) R is an equivalence relation."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& R=\\{(1,2)(2,2),(1,1),(4,4),(1,3),(3,3),(3,2)\\} \\\\\n& (a, a) \\in R \\text { for every } a \\in\\{1,2,3.4\\}\n\\end{aligned}\n$$\n\n∴ R is reflexive.\n\n$$\n(1,2) \\in R \\text { but }(2,1) \\notin R\n$$\n\n∴ R is not symmetric.\n\n$$\n(a, b),(b, c) \\in R \\text { for all } a, b, c \\in\\{1,2,3,4\\}\n$$\n\n∴ R is not transitive.\nR is reflexive and transitive but not symmetric.\n\nThe correct answer is B."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "B"
+        }
+      ]
+    },
+    {
+      "id": "q_1.16",
+      "kind": "exercise",
+      "number": "1.16",
+      "topic": "MCQ - relation membership a=b-2",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let R be the relation in the set $\\mathbf{N}$ given by $\\mathrm{R}=\\{(a, b): a=b-2, b>6\\}$. Choose the correct answer.\n(A) $(2,4) \\in \\mathrm{R}$\n(B) $(3,8) \\in \\mathrm{R}$\n(C) $(6,8) \\in \\mathrm{R}$\n(D) $(8,7) \\in \\mathrm{R}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nR=\\{(a, b): a=b-2, b>6\\}\n$$\n\nNow,\n\n$$\n\\begin{aligned}\n& b>6,(2,4) \\notin R \\\\\n& 3 \\neq 8-2 \\\\\n& \\therefore(3,8) \\notin R \\text { and as } 8 \\neq 7-2 \\\\\n& \\therefore(8,7) \\notin R\n\\end{aligned}\n$$\n\nConsider $(6,8)$\n\n$$\n\\begin{aligned}\n& 8>6 \\text { and } 6=8-2 \\\\\n& \\therefore(6,8) \\in R\n\\end{aligned}\n$$\n\nThe correct answer is C ."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "C"
+        }
+      ]
+    },
+    {
+      "id": "q_1.17",
+      "kind": "exercise",
+      "number": "1.17",
+      "topic": "One-one onto - reciprocal function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the function $f: \\mathbf{R}_{*} \\rightarrow \\mathbf{R}_{*}$ defined by $f(x)=\\frac{1}{x}$ is one-one and onto, where $\\mathbf{R}_{*}$ is the set of all non-zero real numbers. Is the result true, if the domain $\\mathbf{R}_{*}$ is replaced by $\\mathbf{N}$ with co-domain being same as $\\mathbf{R}_{*}$ ?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: R_{\\bullet} \\rightarrow R_{\\bullet}$ is by $f(x)=\\frac{1}{x}$\nFor one-one:\n\n$$\n\\begin{aligned}\n& x, y \\in R_{\\cdot} \\text { such that } f(x)=f(y) \\\\\n& \\Rightarrow \\frac{1}{x}=\\frac{1}{y} \\\\\n& \\Rightarrow x=y\n\\end{aligned}\n$$\n\n$\\therefore f$ is one-one.\nFor onto:\nFor $y \\in R$, there exists $x=\\frac{1}{y} \\in R_{\\bullet}[$ as $y \\notin 0]$ such that\n\n$$\nf(x)=\\frac{1}{\\left(\\frac{1}{y}\\right)}=y\n$$\n\n$\\therefore f$ is onto.\nGiven function $f$ is one-one and onto."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Consider function $g: N \\rightarrow R_{\\bullet \\text { defined by }} g(x)=\\frac{1}{x}$\nWe have, $g\\left(x_{1}\\right)=g\\left(x_{2}\\right) \\Rightarrow \\frac{1}{x_{1}}=\\frac{1}{x_{2}} \\Rightarrow x_{1}=x_{2}$\n$\\therefore g$ is one-one.\n$g$ is not onto as for $1.2 \\in R_{\\bullet}$ there exist any $x$ in $N$ such that $g(x)=\\frac{1}{1.2}$\nFunction $g$ is one-one but not onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.18",
+      "kind": "exercise",
+      "number": "1.18",
+      "topic": "Injectivity and surjectivity of x^2, x^3",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Check the injectivity and surjectivity of the following functions:\n    (i) $f: \\mathbf{N} \\rightarrow \\mathbf{N}$ given by $f(x)=x^{2}$\n    (ii) $f: \\mathbf{Z} \\rightarrow \\mathbf{Z}$ given by $f(x)=x^{2}$\n    (iii) $f: \\mathbf{R} \\rightarrow \\mathbf{R}$ given by $f(x)=x^{2}$\n    (iv) $f: \\mathbf{N} \\rightarrow \\mathbf{N}$ given by $f(x)=x^{3}$\n    (v) $f: \\mathbf{Z} \\rightarrow \\mathbf{Z}$ given by $f(x)=x^{3}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. For $f: N \\rightarrow N$ given by $f(x)=x^{2}$\n$$\n\\begin{aligned}\n& x, y \\in N \\\\\n& f(x)=f(y) \\Rightarrow x^{2}=y^{2} \\Rightarrow x=y\n\\end{aligned}\n$$\n$\\therefore f$ is injective.\n\n$2 \\in N$. But, there does not exist any $x$ in $N$ such that $f(x)=x^{2}=2$\n$\\therefore f$ is not surjective\nFunction $f$ is injective but not surjective."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. $\\quad f: Z \\rightarrow Z$ given by $f(x)=x^{2}$\n$f(-1)=f(1)=1$ but $-1 \\neq 1$\n$\\therefore f$ is not injective.\n$-2 \\in Z$ But, there does not exist any $x \\in Z$ such that $f(x)=-2 \\Rightarrow x^{2}=-2$\n$\\therefore f$ is not surjective.\nFunction $f$ is neither injective nor surjective."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iii. $\\quad f: R \\rightarrow R$ given by $f(x)=x^{2}$\n$f(-1)=f(1)=1$ but $-1 \\neq 1$\n$\\therefore f$ is not injective.\n$-2 \\in Z$ But, there does not exist any $x \\in Z$ such that $f(x)=-2 \\Rightarrow x^{2}=-2$\n$\\therefore f$ is not surjective.\nFunction $f$ is neither injective nor surjective."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iv. $\\quad f: N \\rightarrow N$ given by $f(x)=x^{3}$\n$x, y \\in N$\n$f(x)=f(y) \\Rightarrow x^{3}=y^{3} \\Rightarrow x=y$\n$\\therefore f$ is injective.\n$2 \\in N$. But, there does not exist any $x$ in $N$ such that $f(x)=x^{3}=2$\n$\\therefore f$ is not surjective\nFunction $f$ is injective but not surjective."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "v. $\\quad f: Z \\rightarrow Z$ given by $f(x)=x^{3}$\n$x, y \\in Z$\n$f(x)=f(y) \\Rightarrow x^{3}=y^{3} \\Rightarrow x=y$\n$\\therefore f$ is injective.\n$2 \\in Z$. But, there does not exist any $x$ in $Z$ such that $f(x)=x^{3}=2$\n$\\therefore f$ is not surjective.\nFunction $f$ is injective but not surjective."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.19",
+      "kind": "exercise",
+      "number": "1.19",
+      "topic": "Greatest integer function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove that the Greatest Integer Function $f: \\mathbf{R} \\rightarrow \\mathbf{R}$, given by $f(x)=[x]$, is neither one-one nor onto, where $[x]$ denotes the greatest integer less than or equal to $x$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: R \\rightarrow R$ given by $f(x)=[x]$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nf(1.2)=[1.2]=1, f(1.9)=[1.9]=1\n$$\n\n$\\therefore f(1.2)=f(1.9)$, but $1.2 \\neq 1.9$\n$\\therefore f$ is not one-one."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Consider $0.7 \\in R$\n$f(x)=[x]$ is an integer. There does not exist any element $x \\in R$ such that $f(x)=0.7$\n$\\therefore f$ is not onto.\nThe greatest integer function is neither one-one nor onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.20",
+      "kind": "exercise",
+      "number": "1.20",
+      "topic": "Modulus function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the Modulus Function $f: \\mathbf{R} \\rightarrow \\mathbf{R}$, given by $f(x)=|x|$, is neither oneone nor onto, where $|x|$ is $x$, if $x$ is positive or 0 and $|x|$ is $-x$, if $x$ is negative."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: R \\rightarrow R$ is $f(x)=|x|=\\left\\{\\begin{array}{l}\\mathrm{x}, \\text { if } \\mathrm{x} \\geq 0 \\\\ -x, \\text { if } \\mathrm{x}<0\\end{array}\\right\\}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nf(-1)=|-1|=1 \\text { and } f(1)=|1|=1\n$$\n\n$\\therefore f(-1)=f(1)$ but $-1 \\neq 1$\n$\\therefore f$ is not one-one."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Consider $-1 \\in R$\n$f(x)=|x|$ is non-negative. There exist any element $x$ in domain $R$ such that $f(x)=|x|=-1$\n$\\therefore f$ is not onto.\nThe modulus function is neither one-one nor onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.21",
+      "kind": "exercise",
+      "number": "1.21",
+      "topic": "Signum function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the Signum Function $f: \\mathbf{R} \\rightarrow \\mathbf{R}$, given by\n$$\nf(x)=\\begin{array}{r}\n1, \\text { if } x>0 \\\\\n0, \\text { if } x=0 \\\\\n1, \\text { if } x<0\n\\end{array}\n$$\nis neither one-one nor onto."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: R \\rightarrow R$ is"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nf(x)=\\left\\{\\begin{array}{l}\n1, \\text { if } \\mathrm{x}>0 \\\\\n0, \\text { if } \\mathrm{x}=0 \\\\\n-1, \\text { if } \\mathrm{x}<0\n\\end{array}\\right\\}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f(1)=f(2)=1$, but $1 \\neq 2$\n$\\therefore f$ is not one-one."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f(x)$ takes only 3 values $(1,0,-1)$ for the element -2 in co-domain\nR, there does not exist any $x$ in domain R such that $f(x)=-2$.\n$\\therefore f$ is not onto.\nThe signum function is neither one-one nor onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.22",
+      "kind": "exercise",
+      "number": "1.22",
+      "topic": "One-one function on finite sets",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $\\mathrm{A}=\\{1,2,3\\}, \\mathrm{B}=\\{4,5,6,7\\}$ and let $f=\\{(1,4),(2,5),(3,6)\\}$ be a function from A to B . Show that $f$ is one-one."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nA=\\{1,2,3\\}, B=\\{4,5,6,7\\}\n$$\n\n$f: A \\rightarrow B$ is defined as $f=\\{(1,4),(2,5),(3,6)\\}$\n$\\therefore f(1)=4, f(2)=5, f(3)=6$\nIt is seen that the images of distinct elements of $A$ under $f$ are distinct.\n$\\therefore f$ is one-one."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.23",
+      "kind": "exercise",
+      "number": "1.23",
+      "topic": "One-one, onto or bijective functions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "In each of the following cases, state whether the function is one-one, onto or bijective. Justify your answer.\n    (i) $f: \\mathbf{R} \\rightarrow \\mathbf{R}$ defined by $f(x)=3-4 x$\n    (ii) $f: \\mathbf{R} \\rightarrow \\mathbf{R}$ defined by $f(x)=1+x^{2}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. $\\quad f: R \\rightarrow R$ defined by $f(x)=3-4 x$\n$x_{1}, x_{2} \\in R$ such that $f\\left(x_{1}\\right)=f\\left(x_{2}\\right)$\n$\\Rightarrow 3-4 x_{1}=3-4 x_{2}$\n$\\Rightarrow-4 x=-4 x_{2}$\n$\\Rightarrow x_{1}=x_{2}$\n$\\therefore f$ is one-one.\nFor any real number $(y)$ in $R$, there exists $\\frac{3-y}{4}$ in $R$ such that $f\\left(\\frac{3-y}{4}\\right)=3-4\\left(\\frac{3-y}{4}\\right)=y$\n$\\therefore f$ is onto.\nHence, $f$ is bijective."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. $\\quad f: R \\rightarrow R$ defined by $f(x)=1+x^{2}$\n$x_{1}, x_{2} \\in R$ such that $f\\left(x_{1}\\right)=f\\left(x_{2}\\right)$\n$\\Rightarrow 1+x_{1}{ }^{2}=1+x_{2}{ }^{2}$\n$\\Rightarrow x_{1}{ }^{2}=x_{2}{ }^{2}$\n$\\Rightarrow x_{1}= \\pm x_{2}$\n$\\therefore f\\left(x_{1}\\right)=f\\left(x_{2}\\right)$ does not imply that $x_{1}=x_{2}$\nConsider $f(1)=f(-1)=2$\n$\\therefore f$ is not one-one.\nConsider an element -2 in co domain $R$.\nIt is seen that $f(x)=1+x^{2}$ is positive for all $x \\in R$.\n$\\therefore f$ is not onto.\nHence, $f$ is neither one-one nor onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.24",
+      "kind": "exercise",
+      "number": "1.24",
+      "topic": "Bijective function A x B to B x A",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let A and B be sets. Show that $f: \\mathrm{A} \\times \\mathrm{B} \\rightarrow \\mathrm{B} \\times \\mathrm{A}$ such that $f(a, b)=(b, a)$ is bijective function."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: A \\times B \\rightarrow B \\times A$ is defined as $(a, b)=(b, a)$.\n$\\left(a_{1}, b_{1}\\right),\\left(a_{2}, b_{2}\\right) \\in A \\times B$ such that $f\\left(a_{1}, b_{1}\\right)=f\\left(a_{2}, b_{2}\\right)$\n\n$$\n\\begin{aligned}\n& \\Rightarrow\\left(b_{1}, a_{1}\\right)=\\left(b_{2}, a_{2}\\right) \\\\\n& \\Rightarrow b_{1}=b_{2} \\text { and } a_{1}=a_{2} \\\\\n& \\Rightarrow\\left(a_{1}, b_{1}\\right)=\\left(a_{2}, b_{2}\\right) \\\\\n& \\therefore f \\text { is one-one. } \\\\\n& (b, a) \\in B \\times A \\text { there exist }(a, b) \\in A \\times B \\text { such that } f(a, b)=(b, a) \\\\\n& \\therefore f \\text { is onto. } \\\\\n& f \\text { is bijective. }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.25",
+      "kind": "exercise",
+      "number": "1.25",
+      "topic": "Bijective piecewise function (garbled source)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f: \\mathbf{N} \\rightarrow \\mathbf{N}$ be defined by $f(n)=\\left\\{\\begin{array}{ll}\\frac{n+1}{2}, & \\text { if } n \\text { is odd } \\\\\\frac{n}{2}, & \\text { if } n \\text { is even }\\end{array}\\right.$ for all $n \\in \\mathbf{N}$.\nState whether the function $f$ is bijective. Justify your answer."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nf(n)=\\left\\{\\begin{array}{l}\n\\frac{n+1}{2}, \\text { if } n \\text { is odd } \\\\\n\\frac{n}{2}, \\text { if } n \\text { is even }\n\\end{array}\\right\\} \\text { for all } n \\in N .\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& f(1)=\\frac{1+1}{2}=1 \\text { and } f(2)=\\frac{2}{2}=1 \\\\\n& f(1)=f(2), \\text { where } 1 \\neq 2\n\\end{aligned}\n$$\n\n$\\therefore f$ is not one-one."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Consider a natural number $n$ in co domain $N$.\n\nCase I: $n$ is odd\n\n$$\n\\begin{aligned}\n& \\therefore n=2 r+1 \\text { for some } r \\in N \\text { there exists } 4 r+1 \\in N \\text { such that } \\\\\n& f(4 r+1)=\\frac{4 r+1+1}{2}=2 r+1\n\\end{aligned}\n$$\n\nCase II: $n$ is even\n\n$$\n\\begin{aligned}\n& \\therefore n=2 r \\text { for some } r \\in N \\text { there exists } 4 r \\in N \\text { such that } \\\\\n& f(4 r)=\\frac{4 r}{2}=2 r \\\\\n& \\therefore f \\text { is onto. }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f$ is not a bijective function."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.26",
+      "kind": "exercise",
+      "number": "1.26",
+      "topic": "One-one onto - rational function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $\\mathrm{A}=\\mathbf{R}-\\{3\\}$ and $\\mathrm{B}=\\mathbf{R}-\\{1\\}$. Consider the function $f: \\mathrm{A} \\rightarrow \\mathrm{B}$ defined by $f(x)=\\left(\\frac{x-2}{x-3}\\right)$. Is $f$ one-one and onto? Justify your answer."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& A=R-\\{3\\}, B=R-\\{1\\} \\text { and } f: A \\rightarrow B \\text { defined by } f(x)=\\left(\\frac{x-2}{x-3}\\right) \\\\\n& x, y \\in A \\text { such that } f(x)=f(y) \\\\\n& \\Rightarrow \\frac{x-2}{x-3}=\\frac{y-2}{y-3} \\\\\n& \\Rightarrow(x-2)(y-3)=(y-2)(x-3) \\\\\n& \\Rightarrow x y-3 x-2 y+6=x y-3 y-2 x+6 \\\\\n& \\Rightarrow-3 x-2 y=-3 y-2 x \\\\\n& \\Rightarrow 3 x-2 x=3 y-2 y \\\\\n& \\Rightarrow x=y \\\\\n& \\therefore f \\text { is one-one. }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $y \\in B=R-\\{1\\}$, then $y \\neq 1$\nThe function $f$ is onto if there exists $x \\in A$ such that $f(x)=y$.\nNow,\n\n$$\n\\begin{aligned}\n& f(x)=y \\\\\n& \\Rightarrow \\frac{x-2}{x-3}=y \\\\\n& \\Rightarrow x-2=x y-3 y \\\\\n& \\Rightarrow x(1-y)=-3 y+2 \\\\\n& \\Rightarrow x=\\frac{2-3 y}{1-y} \\in A \\quad[y \\neq 1]\n\\end{aligned}\n$$\n\nThus, for any $y \\in B$, there exists $\\frac{2-3 y}{1-y} \\in A$ such that\n\n$$\nf\\left(\\frac{2-3 y}{1-y}\\right)=\\frac{\\left(\\frac{2-3 y}{1-y}\\right)-2}{\\left(\\frac{2-3 y}{1--y}\\right)-3}=\\frac{2-3 y-2+2 y}{2-3 y-3+3 y}=\\frac{-y}{-1}=y\n$$\n\n$\\therefore f$ is onto.\nHence, the function is one-one and onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.27",
+      "kind": "exercise",
+      "number": "1.27",
+      "topic": "MCQ - f(x) = x^4",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f: \\mathbf{R} \\rightarrow \\mathbf{R}$ be defined as $f(x)=x^{4}$. Choose the correct answer.\n(A) $f$ is one-one onto\n(B) $f$ is many-one onto\n(C) $f$ is one-one but not onto\n(D) $f$ is neither one-one nor onto."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: R \\rightarrow R$ defined as $f(x)=x^{4}$\n$x, y \\in R$ such that $f(x)=f(y)$\n$\\Rightarrow x^{4}=y^{4}$\n$\\Rightarrow x= \\pm y$\n$\\therefore f(x)=f(y)$ does not imply that $x=y$.\nFor example $f(1)=f(-1)=1$\n$\\therefore f$ is not one-one."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Consider an element 2 in co domain $R$ there does not exist any $x$ in domain $R$ such that $f(x)=2$.\n$\\therefore f$ is not onto.\nFunction $f$ is neither one-one nor onto.\nThe correct answer is D."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "D"
+        }
+      ]
+    },
+    {
+      "id": "q_1.28",
+      "kind": "exercise",
+      "number": "1.28",
+      "topic": "MCQ - f(x) = 3x",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f: \\mathbf{R} \\rightarrow \\mathbf{R}$ be defined as $f(x)=3 x$. Choose the correct answer.\n(A) $f$ is one-one onto\n(B) $f$ is many-one onto\n(C) $f$ is one-one but not onto\n(D) $f$ is neither one-one nor onto."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: R \\rightarrow R$ defined as $f(x)=3 x$\n$x, y \\in R$ such that $f(x)=f(y)$\n$\\Rightarrow 3 x=3 y$\n$\\Rightarrow x=y$\n$\\therefore f$ is one-one."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For any real number $y$ in co domain R, there exist $\\frac{y}{3}$ in R such that $f\\left(\\frac{y}{3}\\right)=3\\left(\\frac{y}{3}\\right)=y$\n$\\therefore f$ is onto.\nHence, function $f$ is one-one and onto.\nThe correct answer is A."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "A"
+        }
+      ]
+    },
+    {
+      "id": "q_1.29",
+      "kind": "exercise",
+      "number": "1.29",
+      "topic": "One-one onto function x/(1+|x|)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the function $f: \\mathbf{R} \\rightarrow\\{x \\in \\mathbf{R}:-1<x<1\\}$ defined by $f(x)=\\frac{x}{1+|x|}$, $x \\in \\mathbf{R}$ is one one and onto function."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: R \\rightarrow\\{x \\in R:-1<x<1\\}$ is defined by $f(x)=\\frac{x}{1+|x|}, x \\in R$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For one-one:\n\n$$\nf(x)=f(y) \\quad \\text { where } x, y \\in R\n$$\n\n$$\n\\Rightarrow \\frac{x}{1+|x|}=\\frac{y}{1+|y|}\n$$\n\nIf $x$ is positive and $y$ is negative,\n\n$$\n\\begin{aligned}\n& \\frac{x}{1+|x|}=\\frac{y}{1+|y|} \\\\\n& \\Rightarrow 2 x y=x-y\n\\end{aligned}\n$$\n\nSince, $x$ is positive and $y$ is negative,\n\n$$\nx>y \\Rightarrow x-y>0\n$$\n\n$2 x y$ is negative.\n\n$$\n2 x y \\neq x-y\n$$\n\nCase of $x$ being positive and $y$ being negative, can be ruled out.\n$\\therefore x$ and $y$ have to be either positive or negative.\nIf $x$ and $y$ are positive,\n\n$$\n\\begin{aligned}\n& f(x)=f(y) \\\\\n& \\Rightarrow \\frac{x}{1+x}=\\frac{y}{1+y} \\\\\n& \\Rightarrow x-x y=y-x y \\\\\n& \\Rightarrow x=y \\\\\n& \\therefore f \\text { is one-one. }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For onto:\n\nLet $y \\in R$ such that $-1<y<1$.\nIf $x$ is negative, then there exists $x=\\frac{y}{1+y} \\in R$ such that\n\n$$\nf(x)=f\\left(\\frac{y}{1+y}\\right)=\\frac{\\left(\\frac{y}{1+y}\\right)}{1+\\left|\\frac{y}{1+y}\\right|}=\\frac{\\frac{y}{1+y}}{1+\\left(\\frac{-y}{1+y}\\right)}=\\frac{y}{1+y-y}=y\n$$\n\nIf $x$ is positive, then there exists $x=\\frac{y}{1-y} \\in R$ such that\n\n$$\nf(x)=f\\left(\\frac{y}{1-y}\\right)=\\frac{\\left(\\frac{y}{1-y}\\right)}{1+\\left|\\frac{y}{1-y}\\right|}=\\frac{\\frac{y}{1-y}}{1+\\left(\\frac{y}{1-y}\\right)}=\\frac{y}{1-y+y}=y\n$$\n\n$\\therefore f$ is onto.\nHence, $f$ is one-one and onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.30",
+      "kind": "exercise",
+      "number": "1.30",
+      "topic": "Injective function x^3",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that the function $f: \\mathbf{R} \\rightarrow \\mathbf{R}$ given by $f(x)=x^{3}$ is injective."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nf: R \\rightarrow R \\text { is defined by } f(x)=x^{3}\n$$\n\nFor one-one:\n\n$$\n\\begin{aligned}\n& f(x)=f(y) \\quad \\text { where } x, y \\in R \\\\\n& x^{3}=y^{3} \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots \\ldots . .(1)\n\\end{aligned}\n$$\n\nWe need to show that $x=y$\nSuppose $x \\neq y$, their cubes will also not be equal.\n\n$$\n\\Rightarrow x^{3} \\neq y^{3}\n$$\n\nThis will be contradiction to (1).\n$\\therefore x=y$. Hence, $f$ is injective."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.31",
+      "kind": "exercise",
+      "number": "1.31",
+      "topic": "Equivalence relation on power set",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Given a non empty set X , consider $\\mathrm{P}(\\mathrm{X})$ which is the set of all subsets of X . Define the relation R in P(X) as follows:\nFor subsets A, B in P(X), ARB if and only if $\\mathrm{A} \\subset \\mathrm{B}$. Is R an equivalence relation on P(X)? Justify your answer."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since every set is a subset of itself, $A R A$ for all $A \\in P(X)$.\n$\\therefore R$ is reflexive."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $A R B \\Rightarrow A \\subset B$\nThis cannot be implied to $B \\subset A$.\nIf $A=\\{1,2\\}$ and $B=\\{1,2,3\\}$, then it cannot be implied that $B$ is related to $A$.\n$\\therefore R$ is not symmetric."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "If $A R B$ and $B R C$, then $A \\subset B$ and $B \\subset C$.\n\n$$\n\\begin{aligned}\n& \\Rightarrow A \\subset C \\\\\n& \\Rightarrow A R C\n\\end{aligned}\n$$\n\n$\\therefore R$ is transitive."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$R$ is not an equivalence relation as it is not symmetric."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.32",
+      "kind": "exercise",
+      "number": "1.32",
+      "topic": "Counting onto functions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the number of all onto functions from the set $\\{1,2,3, \\ldots \\ldots, n\\}$ to itself."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Onto functions from the set $\\{1,2,3, \\ldots, n\\}$ to itself is simply a permutation on $n$ symbols $1,2,3, \\ldots, n$.\nThus, the total number of onto maps from $\\{1,2,3, \\ldots, n\\}$ to itself is the same as the total number of permutations on $n$ symbols $1,2,3, \\ldots, n$, which is $n!$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.33",
+      "kind": "exercise",
+      "number": "1.33",
+      "topic": "Equal functions check",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $\\mathrm{A}=\\{-1,0,1,2\\}, \\mathrm{B}=\\{-4,-2,0,2\\}$ and $f, g: \\mathrm{A} \\rightarrow \\mathrm{B}$ be functions defined by $f(x)=x^{2}-x, x \\in \\mathrm{~A}$ and $g(x)=2\\left|x-\\frac{1}{2}\\right|-1, x \\in \\mathrm{~A}$. Are $f$ and $g$ equal? Justify your answer. (Hint: One may note that two functions $f: \\mathrm{A} \\rightarrow \\mathrm{B}$ and $g: \\mathrm{A} \\rightarrow \\mathrm{B}$ such that $f(a)=g(a) \\forall a \\in \\mathrm{~A}$, are called equal functions)."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that $A=\\{-1,0,1,2\\}, B=\\{-4,-2,0,2\\}$\nAlso, $f, g: A \\rightarrow B$ is defined by $x^{2}-x, x \\in A$ and $g(x)=2\\left|x-\\frac{1}{2}\\right|-1, x \\in A$.\n\n$$\n\\begin{aligned}\n& f(-1)=(-1)^{2}-(-1)=1+1=2 \\\\\n& g(-1)=2\\left|(-1)-\\frac{1}{2}\\right|-1=2\\left(\\frac{3}{2}\\right)-1=3-1=2 \\\\\n& \\Rightarrow f(-1)=g(-1) \\\\\n& f(0)=(0)^{2}-0=0 \\\\\n& g(0)=2\\left|0-\\frac{1}{2}\\right|-1=2\\left(\\frac{1}{2}\\right)-1=1-1=0 \\\\\n& \\Rightarrow f(0)=g(0)\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& f(1)=(1)^{2}-1=0 \\\\\n& g(1)=2\\left|1-\\frac{1}{2}\\right|-1=2\\left(\\frac{1}{2}\\right)-1=1-1=0 \\\\\n& \\Rightarrow f(1)=g(1)\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& f(2)=(2)^{2}-2=2 \\\\\n& g(2)=2\\left|2-\\frac{1}{2}\\right|-1=2\\left(\\frac{3}{2}\\right)-1=3-1=2 \\\\\n& \\Rightarrow f(2)=g(2) \\\\\n& \\therefore f(a)=g(a) \\quad \\forall a \\in A\n\\end{aligned}\n$$\n\nHence, the functions $f$ and $g$ are equal."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "q_1.34",
+      "kind": "exercise",
+      "number": "1.34",
+      "topic": "MCQ - reflexive symmetric not transitive count",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $\\mathrm{A}=\\{1,2,3\\}$. Then number of relations containing $(1,2)$ and $(1,3)$ which are reflexive and symmetric but not transitive is\n(A) 1\n(B) 2\n(C) 3\n(D) 4"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The given set is $A=\\{1,2,3\\}$.\nThe smallest relation containing $(1,2)$ and $(1,3)_{\\text {which }}$ are reflexive and symmetric but not transitive is given by,\n\n$$\nR=\\{(1,1),(2,2),(3,3),(1,2),(1,3),(2,1),(3,1)\\}\n$$\n\nThis is because relation $R$ is reflexive as $\\{(1,1),(2,2),(3,3)\\} \\in R$.\nRelation $R$ is symmetric as $\\{(1,2),(2,1)\\} \\in R$ and $\\{(1,3)(3,1)\\} \\in R$.\nRelation $R$ is transitive as $\\{(3,1),(1,2)\\} \\in R$ but $(3,2) \\notin R$.\nNow, if we add any two pairs $(3,2)$ and $(2,3)$ (or both) to relation $R$, then relation $R$ will become transitive.\nHence, the total number of desired relations is one.\nThe correct answer is A."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "A"
+        }
+      ]
+    },
+    {
+      "id": "q_1.35",
+      "kind": "exercise",
+      "number": "1.35",
+      "topic": "MCQ - equivalence relations containing (1,2)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $\\mathrm{A}=\\{1,2,3\\}$. Then number of equivalence relations containing $(1,2)$ is\n(A) 1\n(B) 2\n(C) 3\n(D) 4"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The given set is $A=\\{1,2,3\\}$.\nThe smallest equivalence relation containing $(1,2)$ is given by;\n\n$$\nR_{1}=\\{(1,1),(2,2),(3,3),(1,2),(2,1)\\}\n$$\n\nNow, we are left with only four pairs i.e., $(2,3),(3,2),(1,3)$ and $(3,1)$.\nIf we odd any one pair $[$ say $(2,3)]$ to $R_{1}$, then for symmetry we must add $(3,2)$. Also, for transitivity we are required to add $(1,3)$ and $(3,1)$.\n\nHence, the only equivalence relation (bigger than $R_{1}$ ) is the universal relation.\nThis shows that the total number of equivalence relations containing $(1,2)$ is two. The correct answer is B."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "B"
+        }
+      ]
+    },
+    {
+      "id": "sol_1.3.1",
+      "kind": "additional_exercise",
+      "number": "EX1.3-1",
+      "topic": "Composition gof of finite functions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f:\\{1,3,4\\} \\rightarrow\\{1,2,5\\}$ and $g:\\{1,2,5\\} \\rightarrow\\{1,3\\}$ be given by $f=\\{(1,2),(3,5),(4,1)\\}$ and $g=\\{(1,3),(2,3),(5,1)\\}$. Write down gof ."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The functions $f:\\{1,3,4\\} \\rightarrow\\{1,2,5\\}$ and $g:\\{1,2,5\\} \\rightarrow\\{1,3\\}$ are $f=\\{(1,2),(3,5),(4,1)\\}$ and $g=\\{(1,3),(2,3),(5,1)\\}$\n\n$$\n\\begin{array}{ll}\ng o f(1)=g[f(1)]=g(2)=3 & {[\\text { as } f(1)=2 \\text { and } g(2)=3]} \\\\\ng o f(3)=g[f(3)]=g(5)=1 & {[\\text { as } f(3)=5 \\text { and } g(5)=1]} \\\\\n\\text { gof }(4)=g[f(4)]=g(1)=3 & {[\\text { as } f(4)=1 \\text { and } g(1)=3]} \\\\\n\\therefore \\text { gof }=\\{(1,3),(3,1),(4,3)\\} &\n\\end{array}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.2",
+      "kind": "additional_exercise",
+      "number": "EX1.3-2",
+      "topic": "Composition distributes over sum and product",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f, g, h$ be functions from $R$ to $R$. Show that\n\n$$\n\\begin{aligned}\n& (f+g) o h=f o h+g o h \\\\\n& (f \\cdot g) o h=(f o h) \\cdot(g o h)\n\\end{aligned}\n$$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n&(f+g) o h=f o h+g o h \\\\\n& \\text { LHS }=[(f+g) o h](x) \\\\\n&=(f+g)[h(x)]=f[h(x)]+g[h(x)] \\\\\n&=(f o h)(x)+g o h(x) \\\\\n&=\\{(f o h)+(g o h)\\}(x)=\\text { RHS } \\\\\n& \\therefore\\{(f+g) o h\\}(x)=\\{(f o h)+(g o h)\\}(x) \\text { for all } x \\in R\n\\end{aligned}\n$$\n\nHence, $(f+g) o h=f o h+g o h$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n(f . g) o h & =(f o h) \\cdot(g o h) \\\\\n\\text { LHS } & =[(f \\cdot g) o h](x) \\\\\n& =(f \\cdot g)[h(x)]=f[h(x)] \\cdot g[h(x)] \\\\\n& =(f o h)(x) \\cdot(g o h)(x) \\\\\n& =\\{(f o h) \\cdot(g o h)\\}(x)=\\text { RHS }\n\\end{aligned}\n$$\n\n$\\therefore[(f . g) o h](x)=\\{(f o h) .(g o h)\\}(x)$ for all $x \\in R$\nHence, $(f . g) o h=(f o h) .(g o h)$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.3",
+      "kind": "additional_exercise",
+      "number": "EX1.3-3",
+      "topic": "gof and fog - modulus and cube root",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find $g o f$ and $f o g$, if\n\ni. $\\quad f(x)=|x|$ and $g(x)=|5 x-2|$\nii. $f(x)=8 x^{3}$ and $g(x)=x^{\\frac{1}{3}}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. $$\n\\begin{aligned}\n& f(x)=|x| \\text { and } g(x)=|5 x-2| \\\\\n& \\therefore g o f(x)=g(f(x))=g(|x|)=|5| x|-2| \\\\\n& f \\circ g(x)=f(g(x))=f(|5 x-2|)=\\|5 x-2\\|=|5 x-2|\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. $f(x)=8 x^{3}$ and $g(x)=x^{\\frac{1}{3}}$\n$$\n\\begin{aligned}\n& \\therefore g o f(x)=g(f(x))=g\\left(8 x^{3}\\right)=\\left(8 x^{3}\\right)^{\\frac{1}{3}}=2 x \\\\\n& f o g(x)=f(g(x))=f\\left(x^{\\frac{1}{3}}\\right)^{3}=8\\left(x^{\\frac{1}{3}}\\right)^{3}=8 x\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.4",
+      "kind": "additional_exercise",
+      "number": "EX1.3-4",
+      "topic": "Self-inverse rational function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "If $f(x)=\\frac{(4 x+3)}{(6 x-4)}, x \\neq \\frac{2}{3}$, show that $f \\circ f(x)=x$, for all $x \\neq \\frac{2}{3}$. What is the reverse of $f$ ?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& (f o f)(x)=f(f(x))=f\\left(\\frac{4 x+3}{6 x-4}\\right) \\\\\n& \\quad=\\frac{4\\left(\\frac{4 x+3}{6 x-4}\\right)+3}{6\\left(\\frac{4 x+3}{6 x-4}\\right)-4}=\\frac{16 x+12+18 x-12}{24 x+18-24 x+16}=\\frac{34 x}{34}=x \\\\\n& \\therefore \\text { fof }(x)=x \\text { for all } x \\neq \\frac{2}{3} \\\\\n& \\Rightarrow \\text { fof }=1\n\\end{aligned}\n$$\n\nHence, the given function $f$ is invertible and the inverse of $f$ is $f$ itself."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.5",
+      "kind": "additional_exercise",
+      "number": "EX1.3-5",
+      "topic": "Checking existence of inverse - three functions",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "State with reason whether the following functions have inverse.\n\ni. $\\quad f:\\{1,2,3,4\\} \\rightarrow\\{10\\}_{\\text {with }} f=\\{(1,10),(2,10),(3,10),(4,10)\\}$\nii. $g:\\{5,6,7,8\\} \\rightarrow\\{1,2,3,4\\}$ with $g=\\{(5,4),(6,3),(7,4),(8,2)\\}$\niii. $\\quad h:\\{2,3,4,5\\} \\rightarrow\\{7,9,11,13\\}$ with $h=\\{(2,7),(3,9),(4,11),(5,13)\\}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. $\\quad f:\\{1,2,3,4\\} \\rightarrow\\{10\\}_{\\text {with }} f=\\{(1,10),(2,10),(3,10),(4,10)\\}$\n$f$ is a many one function as $f(1)=f(2)=f(3)=f(4)=10$\n$\\therefore f$ is not one-one.\nFunction $f$ does not have an inverse."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. $\\quad g:\\{5,6,7,8\\} \\rightarrow\\{1,2,3,4\\}$ with $g=\\{(5,4),(6,3),(7,4),(8,2)\\}$\n$g$ is a many one function as $g(5)=g(7)=4$\n$\\therefore g$ is not one-one.\nFunction $g$ does not have an inverse."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iii. $\\quad h:\\{2,3,4,5\\} \\rightarrow\\{7,9,11,13\\}$ with $h=\\{(2,7),(3,9),(4,11),(5,13)\\}$\nAll distinct elements of the set \\{2,3,4,5\\} have distinct images under $h$.\n$\\therefore h$ is one-one.\n$h$ is onto since for every element $y$ of the set \\{7,9,11,13\\}, there exists an element $x$ in the set \\{2,3,4,5\\}, such that $h(x)=y$.\n$h$ is a one-one and onto function.\nFunction $h$ has an inverse."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.6",
+      "kind": "additional_exercise",
+      "number": "EX1.3-6",
+      "topic": "Inverse of a rational function on [-1,1]",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that $f:[-1,1] \\rightarrow R$, given by $f(x)=\\frac{x}{(x+2)}$ is one-one. Find the inverse of the function $f:[-1,1] \\rightarrow$ Range $f$.\n(Hint: For $y \\in$ Range $f, y=f(x)=\\frac{x}{x+2}$, for some $x$ in $[-1,1], i, e ., \\quad x=\\frac{2 y}{(1-y)}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f:[-1,1] \\rightarrow R$, given by $f(x)=\\frac{x}{(x+2)}$\nFor one-one\n\n$$\n\\begin{aligned}\n& f(x)=f(y) \\\\\n& \\Rightarrow \\frac{x}{x+2}=\\frac{y}{y+2} \\\\\n& \\Rightarrow x y+2 x=x y+2 y \\\\\n& \\Rightarrow 2 x=2 y \\\\\n& \\Rightarrow x=y\n\\end{aligned}\n$$\n\n$\\therefore f$ is a one-one function.\nIt is clear that $f:[-1,1] \\rightarrow R$ is onto.\n\n$$\nf:[-1,1] \\rightarrow R \\text { is one-one and onto and therefore, the inverse of the function } f:[-1,1] \\rightarrow R\n$$\n\nexists."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $g:$ Range $f \\rightarrow[-1,1]$ be the inverse of $f$.\nLet $y$ be an arbitrary element of range $f$.\nSince $f:[-1,1] \\rightarrow$ Range $f$ is onto, we have:\n\n$$\n\\begin{aligned}\n& y=f(x) \\text { for same } x \\in[-1,1] \\\\\n& \\Rightarrow y=\\frac{x}{x+2} \\\\\n& \\Rightarrow x y+2 y=x \\\\\n& \\Rightarrow x(1-y)=2 y \\\\\n& \\Rightarrow x=\\frac{2 y}{1-y}, y \\neq 1\n\\end{aligned}\n$$\n\nNow, let us define $g:$ Range $f \\rightarrow[-1,1]$ as\n\n$$\ng(y)=\\frac{2 y}{1-y}, y \\neq 1\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now,\n\n$$\n\\begin{aligned}\n& (g o f)(x)=g(f(x))=g\\left(\\frac{x}{x+2}\\right)=\\frac{2\\left(\\frac{x}{x+2}\\right)}{1-\\frac{x}{x+2}}=\\frac{2 x}{x+2-x}=\\frac{2 x}{2}=x \\\\\n& (f o g)(x)=f(g(y))=f\\left(\\frac{2 y}{1-y}\\right)=\\frac{\\frac{2 y}{1-y}}{\\frac{2 y}{1-y}+2}=\\frac{2 y}{2 y+2-2 y}=\\frac{2 y}{2}=y \\\\\n& \\therefore g o f=I_{[-1,1]} \\text { and } f o g=I_{\\text {Range } f} \\\\\n& \\therefore f^{-1}=g \\\\\n& \\Rightarrow f^{-1}(y)=\\frac{2 y}{1-y}, y \\neq 1\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.7",
+      "kind": "additional_exercise",
+      "number": "EX1.3-7",
+      "topic": "Invertible linear function 4x+3",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider $f: R \\rightarrow R$ given by $f(x)=4 x+3$. Show that $f$ is invertible. Find the inverse of $f$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nf: R \\rightarrow R \\text { given by } f(x)=4 x+3\n$$\n\nFor one-one\n\n$$\n\\begin{aligned}\n& f(x)=f(y) \\\\\n& \\Rightarrow 4 x+3=4 y+3 \\\\\n& \\Rightarrow 4 x=4 y \\\\\n& \\Rightarrow x=y\n\\end{aligned}\n$$\n\n$\\therefore f$ is a one-one function."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For onto\n\n$$\n\\begin{aligned}\n& y \\in R, \\text { let } y=4 x+3 \\\\\n& \\Rightarrow x=\\frac{y-3}{4} \\in R\n\\end{aligned}\n$$\n\nTherefore, for any $y \\in R$, there exists $x=\\frac{y-3}{4} \\in R$ such that\n\n$$\nf(x)=f\\left(\\frac{y-3}{4}\\right)=4\\left(\\frac{y-3}{4}\\right)+3=y\n$$\n\n$\\therefore f$ is onto."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, f is one-one and onto and therefore, $f^{-1}$ exists.\nLet us define $g: R \\rightarrow R$ by $g(x)=\\frac{y-3}{4}$\n\nNow,\n\n$$\n\\begin{aligned}\n& (g o f)(x)=g(f(x))=g(4 x+3)=\\frac{(4 x+3)-3}{4}=x \\\\\n& (f o g)(y)=f(g(y))=f\\left(\\frac{y-3}{4}\\right)=4\\left(\\frac{y-3}{4}\\right)+3=y-3+3=y \\\\\n& \\therefore g o f=f o g=\\mathrm{I}_{R}\n\\end{aligned}\n$$\n\nHence, $f$ is invertible and the inverse of $f$ is given by"
+            },
+            {
+              "type": "text",
+              "text": "$$\nf^{-1}(y)=g(y)=\\frac{y-3}{4} .\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.8",
+      "kind": "additional_exercise",
+      "number": "EX1.3-8",
+      "topic": "Invertible function x^2+4 on non-negative reals",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider $f: R_{+} \\rightarrow[4, \\infty)$ given by $f(x)=x^{2}+4$. Show that $f$ is invertible with inverse $f^{-1}$ of given $f$ by $f^{-1}(y)=\\sqrt{y-4}$, where $R_{+}$is the set of all non-negative real numbers."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nf: R_{+} \\rightarrow[4, \\infty) \\text { given by } f(x)=x^{2}+4\n$$\n\nFor one-one:\n\n$$\n\\begin{aligned}\n& \\text { Let } f(x)=f(y) \\\\\n& \\Rightarrow x^{2}+4=y^{2}+4 \\\\\n& \\Rightarrow x^{2}=y^{2} \\\\\n& \\Rightarrow x=y \\quad \\quad[\\text { as } x \\in R]\n\\end{aligned}\n$$\n\n$\\therefore f$ is a one -one function."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For onto:\nFor $y \\in[4, \\infty)$, let $y=x^{2}+4$\n\n$$\n\\begin{aligned}\n& \\Rightarrow x^{2}=y-4 \\geq 0 \\quad[\\text { as } y \\geq 4] \\\\\n& \\Rightarrow x=\\sqrt{y-4} \\geq 0\n\\end{aligned}\n$$\n\nTherefore, for any $y \\in R$, there exists $x=\\sqrt{y-4} \\in R$ such that\n\n$$\n\\begin{aligned}\n& f(x)=f(\\sqrt{y-4})=(\\sqrt{y-4})^{2}+4=y-4+4=y \\\\\n& \\therefore f \\text { is an onto function. }\n\\end{aligned}\n$$\n\nThus, $f$ is one-one and onto and therefore, $f^{-1}$ exists."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let us define $g:[4, \\infty) \\rightarrow R_{+}$by\n\n$$\ng(y)=\\sqrt{y-4}\n$$\n\nNow, $\\operatorname{gof}(x)=g(f(x))=g\\left(x^{2}+4\\right)=\\sqrt{\\left(x^{2}+4\\right)-4}=\\sqrt{x^{2}}=x$\nAnd $f o g(y)=f(g(y))=f(\\sqrt{y-4})=(\\sqrt{y-4})^{2}+4=(y-4)+4=y$\n\n$$\n\\therefore g o f=f o g=\\mathrm{I}_{R}\n$$\n\nHence, $f$ is invertible and the inverse of $f$ is given by"
+            },
+            {
+              "type": "text",
+              "text": "$$\nf^{-1}(y)=g(y)=\\sqrt{y-4} .\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.9",
+      "kind": "additional_exercise",
+      "number": "EX1.3-9",
+      "topic": "Invertible quadratic function 9x^2+6x-5",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider $f: R_{+} \\rightarrow[-5, \\infty)$ given by $f(x)=9 x^{2}+6 x-5$. Show that $f$ is invertible with $f^{-1}(y)=\\left(\\frac{(\\sqrt{y+6})-1}{3}\\right)$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\nf: R_{+} \\rightarrow[-5, \\infty) \\text { given by } f(x)=9 x^{2}+6 x-5\n$$\n\nLet $y$ be an arbitrary element of $[-5, \\infty)$.\nLet $y=9 x^{2}+6 x-5$\n\n$$\n\\begin{aligned}\n& \\Rightarrow y=(3 x+1)^{2}-1-5 \\\\\n& \\Rightarrow y=(3 x+1)^{2}-6 \\\\\n& \\Rightarrow(3 x+1)^{2}=y+6 \\\\\n& \\Rightarrow 3 x+1=\\sqrt{y+6} \\quad[\\text { as } y \\geq-5 \\Rightarrow y+6>0] \\\\\n& \\Rightarrow x=\\frac{\\sqrt{y+6}-1}{3}\n\\end{aligned}\n$$\n\n$\\therefore f$ is onto, thereby range $f=[-5, \\infty)$.\nLet us define $g:[-5, \\infty) \\rightarrow R_{+}$as $g(y)=\\frac{\\sqrt{y+6}-1}{3}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We have,\n\n$$\n\\begin{aligned}\n(g \\circ f)(x)=g(f(x)) & =g\\left(9 x^{2}+6 x-5\\right) \\\\\n& =g\\left((3 x+1)^{2}-6\\right) \\\\\n& =\\frac{\\sqrt{(3 x+1)^{2}-6+6}-1}{3} \\\\\n& =\\frac{3 x+1-1}{3}=x\n\\end{aligned}\n$$\n\nAnd,\n\n$$\n\\begin{aligned}\n& \\begin{aligned}\n(f o g)(y)=f(g(y)) & =f\\left(\\frac{\\sqrt{y+6}-1}{3}\\right) \\\\\n& =\\left[3\\left(\\frac{\\sqrt{y+6}-1}{3}\\right)+1\\right]^{2}-6 \\\\\n& =(\\sqrt{y+6})^{2}-6=y+6-6=y\n\\end{aligned} \\\\\n& \\begin{aligned}\n\\therefore \\text { gof }=\\mathrm{I}_{R} \\text { and } f o g & =\\mathrm{I}_{[-5, \\infty)}\n\\end{aligned}\n\\end{aligned}\n$$\n\nHence, $f$ is invertible and the inverse of $f$ is given by"
+            },
+            {
+              "type": "text",
+              "text": "$$\nf^{-1}(y)=g(y)=\\frac{\\sqrt{y+6}-1}{3} .\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.10",
+      "kind": "additional_exercise",
+      "number": "EX1.3-10",
+      "topic": "Uniqueness of the inverse function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f: X \\rightarrow Y$ be an invertible function. Show that $f$ has unique inverse.\n(Hint: suppose $g_{1}$ and $g_{2}$ are two inverses of $f$. Then for all $y \\in Y$, $f_{o g}(y)=\\mathrm{I}_{Y}(y)=f_{o g}(y)$ . Use one-one ness of $f$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $f: X \\rightarrow Y$ be an invertible function.\nAlso suppose $f$ has two inverses ( $g_{1}$ and $g_{2}$ )\nThen, for all $y \\in Y$,\n\n$$\n\\begin{array}{ll}\nf o g_{1}(y)=\\mathrm{I}_{Y}(y)=f o g_{2}(y) & \\\\\n\\Rightarrow f\\left(g_{1}(y)\\right)=f\\left(g_{2}(y)\\right) & \\\\\n\\Rightarrow g_{1}(y)=g_{2}(y) & {[f \\text { is invertible } \\Rightarrow f \\text { is one-one }]} \\\\\n\\Rightarrow g_{1}=g_{2} & {[g \\text { is one-one }]}\n\\end{array}\n$$\n\nHence, $f$ has unique inverse."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.11",
+      "kind": "additional_exercise",
+      "number": "EX1.3-11",
+      "topic": "Inverse of the inverse - finite function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider $f:\\{1,2,3\\} \\rightarrow\\{a, b, c\\}$ given by $f(1)=a, f(2)=b, f(3)=c$. Find $\\left(f^{-1}\\right)^{-1}=f$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Function $f:\\{1,2,3\\} \\rightarrow\\{a, b, c\\}$ given by $f(1)=a, f(2)=b, f(3)=c$\nIf we define $g:\\{a, b, c\\} \\rightarrow\\{1,2,3\\}$ as $g(a)=1, g(b)=2, g(c)=3$\n\n$$\n\\begin{aligned}\n& (f o g)(a)=f(g(a))=f(1)=a \\\\\n& (f o g)(b)=f(g(b))=f(2)=b \\\\\n& (f o g)(c)=f(g(c))=f(3)=c\n\\end{aligned}\n$$\n\nAnd,\n\n$$\n\\begin{aligned}\n& (g \\circ f)(1)=g(f(1))=g(a)=1 \\\\\n& (g \\circ f)(2)=g(f(2))=g(b)=2 \\\\\n& (g \\circ f)(3)=g(f(3))=g(c)=3\n\\end{aligned}\n$$\n\n$$\n\\therefore g o f=\\mathrm{I}_{X} \\quad \\text { and } \\quad f o g=\\mathrm{I}_{Y} \\quad \\text { where } X=\\{(1,2,3)\\} \\text { and } Y=\\{a, b, c\\}\n$$\n\nThus, the inverse of $f$ exists and $f^{-1}=g$.\n\n$$\n\\therefore f^{-1}:\\{a, b, c\\} \\rightarrow\\{1,2,3\\} \\text { is given by, } f^{-1}(a)=1, f^{-1}(b)=2, f^{-1}(c)=3\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We need to find the inverse of $f^{-1}$ i.e., inverse of $g$.\nIf we define $h:\\{1,2,3\\} \\rightarrow\\{a, b, c\\}$ as $h(1)=a, h(2)=b, h(3)=c$\n\n$$\n\\begin{aligned}\n& (g o h)(1)=g(h(1))=g(a)=1 \\\\\n& (g o h)(2)=g(h(2))=g(b)=2 \\\\\n& (g o h)(3)=g(h(3))=g(c)=3\n\\end{aligned}\n$$\n\nAnd,\n\n$$\n\\begin{aligned}\n& (h o g)(a)=h(g(a))=h(1)=a \\\\\n& (h o g)(b)=h(g(b))=h(2)=b \\\\\n& (h o g)(c)=h(g(c))=h(3)=c\n\\end{aligned}\n$$\n\n$$\n\\therefore g o h=\\mathrm{I}_{X} \\quad \\text { and } \\quad h o g=\\mathrm{I}_{Y} \\quad \\text { where } X=\\{(1,2,3)\\} \\text { and } Y=\\{a, b, c\\}\n$$\n\nThus, the inverse of $g$ exists and $g^{-1}=h \\Rightarrow\\left(f^{-1}\\right)^{-1}=h$.\nIt can be noted that $h=f$.\nHence, $\\left(f^{-1}\\right)^{-1}=f$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.12",
+      "kind": "additional_exercise",
+      "number": "EX1.3-12",
+      "topic": "Inverse of the inverse - general proof",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f: X \\rightarrow Y$ be an invertible function. Show that the inverse of $f^{-1}$ is $f$ i.e., $\\left(f^{-1}\\right)^{-1}=f$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $f: X \\rightarrow Y$ be an invertible function.\nThen there exists a function $g: Y \\rightarrow X$ such that $g o f=\\mathrm{I}_{X}$ and $f o g=\\mathrm{I}_{Y}$\nHere, $f^{-1}=g$\nNow, $g o f=\\mathrm{I}_{X}$ and $f o g=\\mathrm{I}_{Y}$\n\n$$\n\\Rightarrow f^{-1} o f=\\mathrm{I}_{X} \\text { and } f o f^{-1}=\\mathrm{I}_{Y}\n$$\n\nHence, $f^{-1}: Y \\rightarrow X$ is invertible and $f^{-1}$ is $f$ i.e., $\\left(f^{-1}\\right)^{-1}=f$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.3.13",
+      "kind": "additional_exercise",
+      "number": "EX1.3-13",
+      "topic": "MCQ - composition (3-x^3)^(1/3)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "If $f: R \\rightarrow R$ is given by $f(x)=\\left(3-x^{3}\\right)^{\\frac{1}{3}}$, then $f \\circ f(x)$ is:\n\nA. $\\frac{1}{x^{3}}$\nB. $x^{3}$\nC. $x$\nD. $\\left(3-x^{3}\\right)$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: R \\rightarrow R$ is given by $f(x)=\\left(3-x^{3}\\right)^{\\frac{1}{3}}$\n\n$$\nf(x)=\\left(3-x^{3}\\right)^{\\frac{1}{3}}\n$$\n\n$$\n\\begin{aligned}\n\\therefore f o f(x)=f(f(x)) & =f\\left(\\left(3-x^{3}\\right)^{\\frac{1}{3}}\\right)=\\left[3-\\left(\\left(3-x^{3}\\right)^{\\frac{1}{3}}\\right)^{3}\\right]^{\\frac{1}{3}} \\\\\n& =\\left[3-\\left(3-x^{3}\\right)\\right]^{\\frac{1}{3}}=\\left(x^{3}\\right)^{\\frac{1}{3}}=x\n\\end{aligned}\n$$\n\n$$\n\\therefore f o f(x)=x\n$$\n\nThe correct answer is C."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "C"
+        }
+      ]
+    },
+    {
+      "id": "sol_1.3.14",
+      "kind": "additional_exercise",
+      "number": "EX1.3-14",
+      "topic": "MCQ - inverse of a rational function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "If $f: R-\\left\\{-\\frac{4}{3}\\right\\} \\rightarrow R$ be a function defined as $f(x)=\\frac{4 x}{3 x+4}$. The inverse of $f$ is the map $g:$ Range $f \\rightarrow R-\\left\\{-\\frac{4}{3}\\right\\}$ given by :\n\nA. $g(y)=\\frac{3 y}{3-4 y}$\nB. $g(y)=\\frac{4 y}{4-3 y}$\nC. $g(y)=\\frac{4 y}{3-4 y}$\nD. $g(y)=\\frac{3 y}{4-3 y}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that $f: R-\\left\\{-\\frac{4}{3}\\right\\} \\rightarrow R$ is defined as $f(x)=\\frac{4 x}{3 x+4}$\nLet $y$ be an arbitrary element of Range $f$.\nThen, there exists $x \\in R-\\left\\{-\\frac{4}{3}\\right\\}$ such that $y=f(x)$.\n\n$$\n\\begin{aligned}\n& \\Rightarrow y=\\frac{4 x}{3 x+4} \\\\\n& \\Rightarrow 3 x y+4 y=4 x \\\\\n& \\Rightarrow x(4-3 y)=4 y \\\\\n& \\Rightarrow x=\\frac{4 y}{4-3 y}\n\\end{aligned}\n$$\n\nDefine $f: R-\\left\\{-\\frac{4}{3}\\right\\} \\rightarrow R \\quad$ as $\\quad g(y)=\\frac{4 y}{4-3 y}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now,\n\n$$\n\\begin{aligned}\n(g o f)(x) & =g(f(x))=g\\left(\\frac{4 x}{3 x+4}\\right) \\\\\n& =\\frac{4\\left(\\frac{4 x}{3 x+4}\\right)}{4-3\\left(\\frac{4 x}{3 x+4}\\right)}=\\frac{16 x}{12 x+16-12 x} \\\\\n& =\\frac{16 x}{16}=x\n\\end{aligned}\n$$\n\nAnd\n\n$$\n\\begin{aligned}\n& (f o g)(x)=(g(x))=f\\left(\\frac{4 y}{4-3 y}\\right) \\\\\n& \\quad=\\frac{4\\left(\\frac{4 y}{4-3 y}\\right)}{3\\left(\\frac{4 y}{4-3 y}\\right)+4}=\\frac{16 y}{12 y+16-12 y} \\\\\n& \\quad=\\frac{16 y}{16}=y \\\\\n& \\therefore g o f=\\mathrm{I}_{R-\\left\\{-\\frac{4}{3}\\right\\}} \\text { and } \\text { fog }=\\mathrm{I}_{\\text {Range f }}\n\\end{aligned}\n$$\n\nThus, $g$ is the inverse of $f$ i.e., $f^{-1}=g$\nHence, the inverse of $f$ is the map $g:$ Range $f \\rightarrow R-\\left\\{-\\frac{4}{3}\\right\\}$, which is given by $g(y)=\\frac{4 y}{4-3 y}$.\nThe correct answer is B."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "B"
+        }
+      ]
+    },
+    {
+      "id": "sol_1.4.1",
+      "kind": "additional_exercise",
+      "number": "EX1.4-1",
+      "topic": "Checking binary operation validity",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Determine whether or not each of the definition of * given below gives a binary operation. In the event that $*$ is not a binary operation, give justification for this.\n\ni. On $\\mathbf{Z}^{+}$, define * by $a^{*} b=a-b$\nii. On $\\mathbf{Z}^{+}$, define * by $a^{*} b=a b$\niii. On R, define *by $a * b=a b^{2}$\niv. On $\\mathbf{Z}^{+}$, define $*$ by $a^{*} b=|a-b|$\nv. On $\\mathbf{Z}^{+}$, define * by $a^{*} b=a$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. On $\\mathbf{Z}^{+}$, define ${ }^{*}$ by $a^{*} b=a-b$\nIt is not a binary operation as the image of $(1,2)$ under * is\n$$\n\\begin{aligned}\n& 1^{*} 2=1-2 \\\\\n& \\Rightarrow-1 \\notin \\mathbf{Z}^{+} .\n\\end{aligned}\n$$\nTherefore, * is not a binary operation."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. On $\\mathbf{Z}^{+}$,define * by $a^{*} b=a b$\nIt is seen that for each $a, b \\in \\mathbf{Z}^{+}$, there is a unique element $a b$ in $\\mathbf{Z}^{+}$.\nThis means that * carries each pair $(a, b)$ to a unique element $a * b=a b$ in $\\mathbf{Z}^{+}$.\nTherefore, * is a binary operation."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iii. On R, define ${ }^{*} a * b=a b^{2}$\nIt is seen that for each $a, b \\in \\mathbf{R}$, there is a unique element $a b^{2}$ in R. This means that * carries each pair $(a, b)$ to a unique element $a * b=a b^{2}$ in $\\mathbf{R}$.\nTherefore, *is a binary operation."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iv. On $\\mathbf{Z}^{+}, \\quad$ define * by $a^{*} b=|a-b|$\nIt is seen that for each $a, b \\in \\mathbf{Z}^{+}$,there is a unique element $|a-b|$ in $\\mathbf{Z}^{+}$. This means that * carries each pair $(a, b)$ to a unique element $a^{*} b=|a-b|$ in $\\mathbf{Z}^{+}$. Therefore, *is a binary operation."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "v. On $\\mathbf{Z}^{+}$, define * by $a^{*} b=a$\n*carries each pair $(a, b)$ to a unique element in $a^{*} b=a$ in $\\mathbf{Z}^{+}$.\nTherefore, * is a binary operation."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.2",
+      "kind": "additional_exercise",
+      "number": "EX1.4-2",
+      "topic": "Commutativity and associativity of operations",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "For each binary operation *defined below, determine whether * is commutative or associative.\n\ni. On $\\mathbf{Z}^{+}$, define $a * b=a-b$\n\nii. On $\\mathbf{Q}$, define $a * b=a b+1$\niii. On $\\mathbf{Q}$, define $a^{*} b=\\frac{a b}{2}$\niv. On $\\mathbf{Z}^{+}$, define $a * b=2^{a b}$\nv. On $\\mathbf{Z}^{+}$, define $a^{*} b=a^{b}$\nvi. On $\\mathbf{R}-\\{-1\\}$, define $a^{*} b=\\frac{a}{b+1}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. On $\\mathbf{Z}^{+}$, define $a * b=a-b$\nIt can be observed that $1 * 2=1-2=-1$ and $2 * 1=2-1=1$.\n$$\n\\therefore 1^{*} 2 \\neq 2^{*} 1 ; \\text { where } 1,2 \\in \\mathbf{Z}\n$$\nHence, the operation * is not commutative.\nAlso,\n$$\n\\begin{aligned}\n& (1 * 2) * 3=(1-2) * 3=-1 * 3=-1-3=-4 \\\\\n& 1 *(2 * 3)=1 *(2-3)=1 *-1=1-(-1)=2 \\\\\n& \\therefore(1 * 2) * 3 \\neq 1 *(2 * 3)\n\\end{aligned}\n$$\nwhere $1,2,3 \\in \\mathbf{Z}$\nHence, the operation * is not associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. On $\\mathbf{Q}$, define $a * b=a b+1$\n$$\n\\begin{array}{ll}\na b=b a & \\text { for all } a, b \\in Q \\\\\n\\Rightarrow a b+1=b a+1 & \\text { for all } a, b \\in Q \\\\\n\\Rightarrow a * b=b^{*} a & \\text { for all } a, b \\in Q\n\\end{array}\n$$\nHence, the operation * is commutative.\n$$\n\\begin{aligned}\n& (1 * 2) * 3=(1 \\times 2+1) * 3=3 * 3=3 \\times 3+1=10 \\\\\n& 1 *(2 * 3)=1 *(2 \\times 3+1)=1 * 7=1 \\times 7+1=8 \\\\\n& \\therefore(1 * 2) * 3 \\neq 1 *(2 * 3)\n\\end{aligned}\n$$\nwhere $1,2,3 \\in \\mathbf{Q}$\nHence, the operation * is not associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iii. On $\\mathbf{Q}$, define $a^{*} b=\\frac{a b}{2}$\n$$\n\\begin{array}{lr}\na b=b a & \\text { for all } a, b \\in Q \\\\\n\\Rightarrow \\frac{a b}{2}=\\frac{a b}{2} & \\text { for all } a, b \\in Q \\\\\n\\Rightarrow a * b=b^{*} a & \\text { for all } a, b \\in Q\n\\end{array}\n$$\nHence, the operation * is commutative.\n\n$$\n(a * b) * c=\\left(\\frac{a b}{2}\\right) * c=\\frac{\\left(\\frac{a b}{2}\\right) c}{2}=\\frac{a b c}{4}\n$$\n\nAnd\n\n$$\n\\begin{aligned}\n& a *(b * c)=a *\\left(\\frac{b c}{2}\\right)=\\frac{a\\left(\\frac{b c}{2}\\right)}{2}=\\frac{a b c}{4} \\\\\n& \\therefore(a * b)^{*} c=a *(b * c)\n\\end{aligned}\n$$\n\nwhere $a, b, c \\in \\mathbf{Q}$\nHence, the operation * is associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iv. On $\\mathbf{Z}^{+}$, define $a^{*} b=2^{a b}$\n\n$$\n\\begin{aligned}\n& a b=b a \\quad \\text { for all } a, b \\in Z \\\\\n& \\Rightarrow 2^{a b}=2^{b a} \\quad \\text { for all } a, b \\in Z \\\\\n& \\Rightarrow a^{*} b=b^{*} a \\quad \\text { for all } a, b \\in Z\n\\end{aligned}\n$$\n\nHence, the operation * is commutative.\n\n$$\n\\begin{aligned}\n& (1 * 2) * 3=2^{1 \\times 2} * 3=4 * 3=2^{4 \\times 3}=2^{12} \\\\\n& 1 *(2 * 3)=1 * 2^{2 \\times 3}=1 * 2^{6}=1 * 64=2^{64} \\\\\n& \\therefore(1 * 2) * 3 \\neq 1 *(2 * 3)\n\\end{aligned}\n$$\n\nwhere $1,2,3 \\in \\mathbf{Z}^{+}$\nHence, the operation * is not associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "v. On $\\mathbf{Z}^{+}$, define $a * b=a^{b}$\n\n$$\n\\begin{aligned}\n& 1 * 2=1^{2}=1 \\\\\n& 2 * 1=2^{1}=2 \\\\\n& \\therefore 1 * 2 \\neq 2 * 1\n\\end{aligned}\n$$\n\nwhere $1,2, \\in \\mathbf{Z}^{+}$\nHence, the operation * is not commutative.\n\n$$\n\\begin{aligned}\n& (2 * 3) * 4=2^{3} * 4=8 * 4=8^{4}=2^{12} \\\\\n& 2 *(3 * 4)=2 * 3^{4}=2 * 81=2^{81} \\\\\n& \\therefore(2 * 3) * 4 \\neq 2 *(3 * 4)\n\\end{aligned}\n$$\n\nwhere $2,3,4 \\in \\mathbf{Z}^{+}$\nHence, the operation * is not associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "vi. On $\\mathbf{R}-\\{-1\\}$, define $a^{*} b=\\frac{a}{b+1}$\n\n$$\n\\begin{aligned}\n& 1 * 2=\\frac{1}{2+1}=\\frac{1}{3} \\\\\n& 2 * 1=\\frac{2}{1+1}=\\frac{2}{2}=1\n\\end{aligned}\n$$\n\n$$\n\\therefore 1 * 2 \\neq 2 * 1\n$$\n\n$$\n\\text { where } 1,2, \\in \\mathbf{R}-\\{-1\\}\n$$\n\nHence, the operation * is not commutative.\n\n$$\n\\begin{aligned}\n& (1 * 2) * 3=\\frac{1}{3} * 3=\\frac{\\frac{1}{3}}{3+1}=\\frac{1}{12} \\\\\n& 1 *(2 * 3)=1 * \\frac{2}{3+1}=1 * \\frac{2}{4}=1 * \\frac{1}{2}=\\frac{1}{\\frac{1}{2}+1}=\\frac{1}{\\frac{3}{2}}=\\frac{2}{3} \\\\\n& \\therefore(1 * 2) * 3 \\neq 1 *(2 * 3)\n\\end{aligned}\n$$\n\n$$\n\\text { where } 1,2,3 \\in \\mathbf{R}-\\{-1\\}\n$$\n\nHence, the operation * is not associative."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.3",
+      "kind": "additional_exercise",
+      "number": "EX1.4-3",
+      "topic": "Operation table - minimum function",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider the binary operation $\\wedge$ on the set $\\{1,2,3,4,5\\}$ defined by $a \\wedge b=\\min \\{a, b\\}$. Write the operation table of the operation ^ ."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The binary operation $\\wedge$ on the set $\\{1,2,3,4,5\\}$ is defined by $a \\wedge b=\\min \\{a, b\\}$ for all $a, b \\in\\{1,2,3,4,5\\}$.\nThe operation table for the given operation $\\wedge$ can be given as:"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "| ^ | 1 | 2 | 3 | 4 | 5 |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | 1 | 1 | 1 | 1 | 1 |\n| 2 | 1 | 2 | 2 | 2 | 2 |\n| 3 | 1 | 2 | 3 | 3 | 3 |\n| 4 | 1 | 2 | 3 | 4 | 4 |\n| 5 | 1 | 2 | 3 | 4 | 5 |"
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.4",
+      "kind": "additional_exercise",
+      "number": "EX1.4-4",
+      "topic": "Operation table - given multiplication table",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider a binary operation * on the set $\\{1,2,3,4,5\\}$ given by the following multiplication table.\n\ni. Compute $(2 * 3) * 4$ and $2 *(3 * 4)$\nii. Is *commutative?\niii. Compute $(2 * 3) *(4 * 5)$.\n(Hint: Use the following table)"
+        },
+        {
+          "type": "table",
+          "html": "| * | 1 | 2 | 3 | 4 | 5 |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | 1 | 1 | 1 | 1 | 1 |\n| 2 | 1 | 2 | 1 | 2 | 1 |\n| 3 | 1 | 1 | 3 | 1 | 1 |\n| 4 | 1 | 2 | 1 | 4 | 1 |\n| 5 | 1 | 1 | 1 | 1 | 5 |"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n(2 * 3) * 4=1 * 4=1\n$$\n\ni. $2 *(3 * 4)=2 * 1=1$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. For every $a, b \\in\\{1,2,3,4,5\\}$, we have $a^{*} b=b^{*} a$. Therefore, * is commutative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iii. $(2 * 3) *(4 * 5)$\n$$\n\\begin{aligned}\n& (2 * 3)=1 \\text { and }(4 * 5)=1 \\\\\n& \\therefore(2 * 3) *(4 * 5)=1 * 1=1\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.5",
+      "kind": "additional_exercise",
+      "number": "EX1.4-5",
+      "topic": "Comparing HCF operation to a given table",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let ${ }^{* \\prime}$ be the binary operation on the set $\\{1,2,3,4,5\\}$ defined by $a^{* \\prime} b=$ H.C.F. of $a$ and $b$. Is the operation *' same as the operation * defined in Exercise 4 above? Justify your answer."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The binary operation on the set $\\{1,2,3,4,5\\}$ is defined by $a^{* \\prime} b=$ H.C.F. of $a$ and $b$. The operation table for the operation ${ }^{* \\prime}$ can be given as:"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "| *' | 1 | 2 | 3 | 4 | 5 |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | 1 | 1 | 1 | 1 | 1 |\n| 2 | 1 | 2 | 1 | 2 | 1 |\n| 3 | 1 | 1 | 3 | 1 | 1 |\n| 4 | 1 | 2 | 1 | 4 | 1 |\n| 5 | 1 | 1 | 1 | 1 | 5 |"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The operation table for the operations *' and * are same. operation ${ }^{* \\prime}$ is same as operation *."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.6",
+      "kind": "additional_exercise",
+      "number": "EX1.4-6",
+      "topic": "LCM operation - properties and identity",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let * be the binary operation on N defined by $a^{*} b=\\mathrm{L} . \\mathrm{C} . \\mathrm{M}$. of $a$ and $b$. Find\n\ni. 5*7,20*16\nii. Is *commutative?\niii. Is *associative?\niv. Find the identity of *in N\nv. Which elements of N are invertible for the operation *?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The binary operation on N is defined by $a^{*} b=$ L.C.M. of $a$ and $b$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. $5^{*} 7=$ L.C.M of 5 and $7=35$\n$20 * 16=$ LCM of 20 and $16=80$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. L.C.M. of $a$ and $b=\\mathrm{LCM}$ of $b$ and $a$ for all $a, b \\in N$\n$$\n\\therefore a * b=b * a\n$$\nOperation * is commutative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iii. For $a, b, c \\in N$\n$$\n\\begin{aligned}\n& \\left(a^{*} b\\right)^{*} c=(\\text { L.C.M. of } a \\text { and } b)^{*} c=\\text { L.C.M. of } a, b, c \\\\\n& a^{*}\\left(b^{*} c\\right)=a^{*}(\\text { L.C.M. of } b \\text { and } c)=\\text { L.C.M. of } a, b, c \\\\\n& \\therefore\\left(a^{*} b\\right)^{*} c=a^{*}\\left(b^{*} c\\right)\n\\end{aligned}\n$$\nOperation *is associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iv. L.C.M. of $a$ and $1=a=$ L.C.M. of 1 and $a$ for all $a \\in N$\n$$\na * 1=a=1 * a \\text { for all } a \\in N\n$$\nTherefore, 1 is the identity of *in N."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "v. An element a in N is invertible with respect to the operation * if there exists an element b in N, such that $a * b=e=b^{*} a$\n$$\ne=1\n$$\nL.C.M. of $a$ and $b=1=\\mathrm{LCM}$ of $b$ and $a$ possible only when $a$ and $b$ are equal to 1 .\n1 is the only invertible element of N with respect to the operation *."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.7",
+      "kind": "additional_exercise",
+      "number": "EX1.4-7",
+      "topic": "LCM on a finite set is not a binary operation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Is * defined on the set \\{1,2,3,4,5\\} by $a^{*} b=\\mathrm{LCM}$ of $a$ and $b$ a binary operation? Justify your answer."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The operation * on the set \\{1,2,3,4,5\\} is defined by $a^{*} b=\\mathrm{LCM}$ of $a$ and $b$.\nThe operation table for the operation ${ }^{* \\prime}$ can be given as:"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "| * | 1 | 2 | 3 | 4 | 5 |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | 1 | 2 | 3 | 4 | 5 |\n| 2 | 2 | 2 | 6 | 4 | 10 |\n| 3 | 3 | 6 | 3 | 12 | 15 |\n| 4 | 4 | 4 | 12 | 4 | 20 |\n| 5 | 5 | 10 | 15 | 20 | 5 |"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& 3 * 2=2 * 3=6 \\notin A, \\\\\n& 5 * 2=2 * 5=10 \\notin A, \\\\\n& 3 * 4=4 * 3=12 \\notin A, \\\\\n& 3 * 5=5 * 3=15 \\notin A, \\\\\n& 4 * 5=5 * 4=20 \\notin A\n\\end{aligned}\n$$\n\nThe given operation *is not a binary operation."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.8",
+      "kind": "additional_exercise",
+      "number": "EX1.4-8",
+      "topic": "HCF operation - commutative, associative, no identity",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let * be the binary operation on N defined by $a^{*} b=$ H.C.F. of $a$ and $b$. Is * commutative? Is * associative? Does there exist identity for this binary operation on N ?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The binary operation * on N defined by $a^{*} b=$ H.C.F. of $a$ and $b$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Commutative",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\therefore a^{*} b=b^{*} a\n$$\n\nOperation * is commutative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Associative",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For all $a, b, c \\in N$,\n\n$$\n\\begin{aligned}\n& \\left(a^{*} b\\right)^{*} c=(\\text { HCF of } a \\text { and } b)^{*} c=\\text { HCF of } a, b, c \\\\\n& a^{*}\\left(b^{*} c\\right)=a^{*}(\\text { HCF. of } b \\text { and } c)=\\text { HCF of } a, b, c \\\\\n& \\therefore\\left(a^{*} b\\right)^{*} c=a^{*}\\left(b^{*} c\\right)\n\\end{aligned}\n$$\n\nOperation * is associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "Identity",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$e \\in N$ will be the identity for the operation ${ }^{*}$ if $a * e=a=e^{*} a$ for all $a \\in N$. But this relation is not true for any $a \\in N$.\nOperation * does not have any identity in N."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.9",
+      "kind": "additional_exercise",
+      "number": "EX1.4-9",
+      "topic": "Commutativity and associativity on Q",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let * be the binary operation on Q of rational numbers as follows:\n\ni. $\\quad a * b=a-b$\nii. $a^{*} b=a^{2}+b^{2}$\niii. $\\quad a * b=a+a b$\niv. $\\quad a * b=(a-b)^{2}$\nv. $a+b=\\frac{a b}{4}$\nvi. $a * b=a b^{2}$\n\nFind which of the binary operations are commutative and which are associative."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. On Q, the operation * is defined as $a^{*} b=a-b$\n$$\n\\frac{1}{2} * \\frac{1}{3}=\\frac{1}{2}-\\frac{1}{3}=\\frac{3-2}{3}=\\frac{1}{6}\n$$\nAnd\n$$\n\\begin{aligned}\n& \\frac{1}{3} * \\frac{1}{2}=\\frac{1}{3}-\\frac{1}{2}=\\frac{2-3}{6}=\\frac{-1}{6} \\\\\n& \\therefore\\left(\\frac{1}{2} * \\frac{1}{3}\\right) \\neq\\left(\\frac{1}{3} * \\frac{1}{2}\\right)\n\\end{aligned}\n$$\nwhere $\\frac{1}{2}, \\frac{1}{3} \\in Q$\nOperation * is not commutative.\n$$\n\\begin{aligned}\n& \\left(\\frac{1}{2} * \\frac{1}{3}\\right) * \\frac{1}{4}=\\left(\\frac{1}{2}-\\frac{1}{3}\\right) * \\frac{1}{4}=\\frac{1}{6} * \\frac{1}{4}=\\frac{1}{6}-\\frac{1}{4}=\\frac{2-3}{12}=\\frac{-1}{12} \\\\\n& \\frac{1}{2} *\\left(\\frac{1}{3} * \\frac{1}{4}\\right)=\\frac{1}{2} *\\left(\\frac{1}{3}-\\frac{1}{4}\\right)=\\frac{1}{2} * \\frac{1}{12}=\\frac{1}{2}-\\frac{1}{12}=\\frac{6-1}{12}=\\frac{5}{12} \\\\\n& \\therefore\\left(\\frac{1}{2} * \\frac{1}{3}\\right) * \\frac{1}{4} \\neq \\frac{1}{2} *\\left(\\frac{1}{3} * \\frac{1}{4}\\right)\n\\end{aligned}\n$$\nOperation * is not associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. On Q, the operation * is defined as $a * b=a^{2}+b^{2}$\nFor $a, b \\in Q$\n$$\n\\begin{aligned}\n& a * b=a^{2}+b^{2}=b^{2}+a^{2}=b^{*} a \\\\\n& \\therefore a * b=b * a\n\\end{aligned}\n$$\nOperation * is commutative.\n$$\n\\begin{aligned}\n& (1 * 2) * 3=\\left(1^{2}+2^{2}\\right) * 3=(1+4) * 3=5 * 3=5^{2}+3^{2}=25+9=34 \\\\\n& 1 *(2 * 3)=1 *\\left(2^{2}+3^{2}\\right)=1 *(4+9)=1 * 13=1^{2}+13^{2}=1+169=170 \\\\\n& \\therefore(1 * 2) * 3 \\neq 1 *(2 * 3) \\quad \\text { where } 1,2,3 \\in Q\n\\end{aligned}\n$$\nOperation * is not associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iii. On Q, the operation * is defined as $a^{*} b=a+a b$\n$$\n\\begin{aligned}\n& 1 * 2=1+1 \\times 2=1+2=3 \\\\\n& 2 * 1=2+2 \\times 1=2+2=4 \\\\\n& \\therefore 1 * 2 \\neq 2 * 1\n\\end{aligned}\n$$\nwhere $1,2 \\in Q$\nOperation * is not commutative.\n$$\n\\begin{aligned}\n& (1 * 2) * 3=(1+1 \\times 2) * 3=3 * 3=3+3 \\times 3=3+9=12 \\\\\n& 1 *(2 * 3)=1 *(2+2 \\times 3)=1 * 8=1+1 \\times 8=1+8=9 \\\\\n& \\therefore(1 * 2) * 3 \\neq 1 *(2 * 3) \\quad \\text { where } 1,2,3 \\in Q\n\\end{aligned}\n$$\nOperation * is not associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "iv. On Q, the operation * is defined as $a * b=(a-b)^{2}$\nFor $a, b \\in Q$\n$$\n\\begin{aligned}\n& a * b=(a-b)^{2} \\\\\n& b * a=(b-a)^{2}=[-(a-b)]^{2}=(a-b)^{2} \\\\\n& \\therefore a * b=b * a\n\\end{aligned}\n$$\nOperation * is commutative.\n$$\n\\begin{aligned}\n& (1 * 2) * 3=(1-2)^{2} * 3=(-1)^{2} * 3=1 * 3=(1-3)^{2}=(-2)^{2}=4 \\\\\n& 1 *(2 * 3)=1 *(2-3)^{2}=1 *(-1)^{2}=1 * 1=(1-1)^{2}=0 \\\\\n& \\therefore(1 * 2) * 3 \\neq 1 *(2 * 3) \\quad \\text { where } 1,2,3 \\in Q\n\\end{aligned}\n$$\nOperation * is not associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "v. On Q, the operation * is defined as $a+b=\\frac{a b}{4}$\nFor $a, b \\in Q$\n$$\n\\begin{aligned}\n& a * b=\\frac{a b}{4}=\\frac{b a}{4}=b * a \\\\\n& \\therefore a * b=b * a\n\\end{aligned}\n$$\nOperation * is commutative.\nFor $a, b, c \\in Q$\n$$\n\\begin{aligned}\n& (a * b) * c=\\frac{a b}{4} * c=\\frac{\\frac{a b}{4} \\cdot c}{4}=\\frac{a b c}{16} \\\\\n& a *(b * c)=a * \\frac{a b}{4}=\\frac{a \\cdot \\frac{a b}{4}}{4}=\\frac{a b c}{16} \\\\\n& \\therefore(a * b) * c=a *(b * c)\n\\end{aligned}\n$$\nwhere $a, b, c \\in Q$\nOperation * is associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "vi. On Q, the operation * is defined as $a * b=a b^{2}$\n$$\n\\begin{aligned}\n& \\frac{1}{2} * \\frac{1}{3}=\\frac{1}{2} \\cdot\\left(\\frac{1}{3}\\right)^{2}=\\frac{1}{2} \\cdot \\frac{1}{9}=\\frac{1}{18} \\\\\n& \\frac{1}{3} * \\frac{1}{2}=\\frac{1}{3} \\cdot\\left(\\frac{1}{2}\\right)^{2}=\\frac{1}{3} \\cdot \\frac{1}{4}=\\frac{1}{12}\n\\end{aligned}\n$$\n$$\n\\therefore\\left(\\frac{1}{2} * \\frac{1}{3}\\right) \\neq\\left(\\frac{1}{3} * \\frac{1}{2}\\right)\n$$\nwhere $\\frac{1}{2}, \\frac{1}{3} \\in Q$\nOperation * is not commutative.\n\n$$\n\\begin{aligned}\n& \\left(\\frac{1}{2} * \\frac{1}{3}\\right) * \\frac{1}{4}=\\left(\\frac{1}{2} \\cdot\\left(\\frac{1}{3}\\right)^{2}\\right) * \\frac{1}{4}=\\frac{1}{18} * \\frac{1}{4}=\\frac{1}{18} \\cdot\\left(\\frac{1}{4}\\right)^{2}=\\frac{1}{18 \\times 16} \\\\\n& \\frac{1}{2} *\\left(\\frac{1}{3} * \\frac{1}{4}\\right)=\\frac{1}{2} *\\left(\\frac{1}{3} \\cdot\\left(\\frac{1}{4}\\right)^{2}\\right)=\\frac{1}{2} * \\frac{1}{48}=\\frac{1}{2} \\cdot\\left(\\frac{1}{48}\\right)^{2}=\\frac{1}{2 \\times(48)^{2}} \\\\\n& \\therefore\\left(\\frac{1}{2} * \\frac{1}{3}\\right) * \\frac{1}{4} \\neq \\frac{1}{2} *\\left(\\frac{1}{3} * \\frac{1}{4}\\right)\n\\end{aligned}\n$$\n\nOperation * is not associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Operations defined in (ii), (iv), (v) are commutative and the operation defined in (v) is associative."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.10",
+      "kind": "additional_exercise",
+      "number": "EX1.4-10",
+      "topic": "Identity element among operations on Q",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find which of the operations given above has identity."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "An element $e \\in Q$ will be the identity element for the operation ${ }^{*}$ if\n\n$$\n\\begin{aligned}\n& a * e=a=e * a, \\text { for all } a \\in Q \\\\\n& a * b=\\frac{a b}{4} \\\\\n& \\Rightarrow a * e=a \\\\\n& \\Rightarrow \\frac{a e}{4}=a \\\\\n& \\Rightarrow e=4\n\\end{aligned}\n$$\n\nSimilarly, it can be checked for $e * a=a$, we get $e=4$ is the identity."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.11",
+      "kind": "additional_exercise",
+      "number": "EX1.4-11",
+      "topic": "Componentwise addition on N x N",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$A=N \\times N$ and $*$ be the binary operation on A defined by $(a, b)^{*}(c, d)=(a+c, b+d)$. Show that * is commutative and associative. Find the identity element for * on $A$, if any."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$A=N \\times N$ and * be the binary operation on A defined by"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Commutative",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& (a, b) *(c, d)=(a+c, b+d) \\\\\n& (a, b) *(c, d) \\in A \\\\\n& a, b, c, d \\in N \\\\\n& (a, b) *(c, d)=(a+c, b+d) \\\\\n& (c, d)^{*}(a, b)=(c+a, d+b)=(a+c, b+d) \\\\\n& \\therefore(a, b) *(c, d)=(c, d) *(a, b)\n\\end{aligned}\n$$\n\nOperation * is commutative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Associative",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, let $(a, b),(c, d),(e, f) \\in A$\n\n$$\n\\begin{aligned}\n& a, b, c, d, e, f \\in N \\\\\n& {[(a, b) *(c, d)] *(e, f)=(a+c, b+d) *(e, f)=(a+c+e, b+d+f)} \\\\\n& (a, b) *[(c, d) *(e, f)]=(a, b) *(c+e, d+f)=(a+c+e, b+d+f) \\\\\n& \\therefore[(a, b) *(c, d)] *(e, f)=(a, b) *[(c, d) *(e, f)]\n\\end{aligned}\n$$\n\nOperation * is associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "Identity",
+          "flow": [
+            {
+              "type": "text",
+              "text": "An element $e=\\left(e_{1}, e_{2}\\right) \\in A$ will be an identity element for the operation $*$ if $a+e=a=e^{*} a$ for all $a=\\left(a_{1}, a_{2}\\right) \\in A$ i.e., $\\left(a_{1}+e_{1}, a_{2}+e_{2}\\right)=\\left(a_{1}, a_{2}\\right)=\\left(e_{1}+a_{1}, e_{2}+a_{2}\\right)$, which is not true for any element in A.\n\nTherefore, the operation * does not have any identity element."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.12",
+      "kind": "additional_exercise",
+      "number": "EX1.4-12",
+      "topic": "True or false - binary operation statements",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "State whether the following statements are true or false. Justify.\n\ni. For an arbitrary binary operation * on a set $\\mathrm{N}, a * a=a$ for all $a \\in N$.\nii. If * is a commutative binary operation on N, then $a *(b * c)=(c * b)^{*} a$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. Define operation * on a set N as $a^{*} a=a$ for all $a \\in N$.\nIn particular, for $a=3$,\n$$\n3 * 3=9 \\neq 3\n$$\nTherefore, statement (i) is false."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. R.H.S. $=\\left(c^{*} b\\right)^{*} a$\n$$\n\\begin{aligned}\n& =\\left(b^{*} c\\right)^{*} a\\left[{ }^{*} \\text { is commutative }\\right] \\\\\n& =a^{*}\\left(b^{*} c\\right) \\text { [Again, as } * \\text { is commutative] } \\\\\n& =\\text { L.H.S. } \\\\\n& \\therefore a^{*}\\left(b^{*} c\\right)=\\left(c^{*} b\\right)^{*} a\n\\end{aligned}\n$$\nTherefore, statement (ii) is true."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.4.13",
+      "kind": "additional_exercise",
+      "number": "EX1.4-13",
+      "topic": "MCQ - commutative but not associative operation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider a binary operation * on N defined as $a^{*} b=a^{3}+b^{3}$. Choose the correct answer.\n\nA. Is * both associative and commutative?\nB. Is * commutative but not associative?\nC. Is * associative but not commutative?\nD. Is * neither commutative nor associative?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "On N, operation *is defined as $a * b=a^{3}+b^{3}$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Commutative",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For all $a, b \\in N$\n\n$$\na^{*} b=a^{3}+b^{3}=b^{3}+a^{3}=b * a\n$$\n\nOperation * is commutative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Associative",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& (1 * 2) * 3=\\left(1^{3}+2^{3}\\right) * 3=(1+8) * 3=9 * 3=9^{3}+3^{3}=729+27=756 \\\\\n& 1 *(2 * 3)=1 *\\left(2^{3}+3^{3}\\right)=1 *(8+27)=1 * 35=1^{3}+35^{3}=1+42875=42876 \\\\\n& \\therefore(1 * 2) * 3 \\neq 1 *(2 * 3)\n\\end{aligned}\n$$\n\nOperation *is not associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, Operation * is commutative, but not associative.\nThe correct answer is B."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "B"
+        }
+      ]
+    },
+    {
+      "id": "sol_1.misc.1",
+      "kind": "additional_exercise",
+      "number": "MISC-1",
+      "topic": "Inverse of f(x) = 10x+7",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f: R \\rightarrow R$ be defined as $f(x)=10 x+7$. Find the function $g: R \\rightarrow R$ such that $g o f=f o g=\\mathrm{I}_{R}$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: R \\rightarrow R$ is defined as $f(x)=10 x+7$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "One-one",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For one-one:\n$$\n\\begin{aligned}\n& f(x)=f(y) \\text { where } x, y \\in R \\\\\n& \\Rightarrow 10 x+7=10 y+7 \\\\\n& \\Rightarrow x=y \\\\\n& \\therefore f \\text { is one-one. }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Onto",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For onto:\n$$\n\\begin{aligned}\n& y \\in R, \\text { Let } y=10 x+7 \\\\\n& \\Rightarrow x=\\frac{y-7}{10} \\in R\n\\end{aligned}\n$$\n\nFor any $y \\in R$, there exists $x=\\frac{y-7}{10} \\in R$ such that\n\n$$\nf(x)=f\\left(\\frac{y-7}{10}\\right)=10\\left(\\frac{y-7}{10}\\right)+7=y-7+7=y\n$$\n\n$\\therefore f$ is onto.\nThus, $f$ is an invertible function."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "Inverse function",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let us define $g: R \\rightarrow R$ as $g(y)=\\frac{y-7}{10}$.\nNow,\n\n$$\ng o f(x)=g(f(x))=g(10 x+7)=\\frac{(10 x+7)-7}{10}=\\frac{10 x}{10}=10\n$$\n\nAnd,\n\n$$\n\\begin{aligned}\n& f o g(y)=f(g(y))=f\\left(\\frac{y-7}{10}\\right)=10\\left(\\frac{y-7}{10}\\right)+7=y-7+7=y \\\\\n& \\therefore g o f=\\mathrm{I}_{R} \\text { and } f o g=\\mathrm{I}_{R}\n\\end{aligned}\n$$\n\nHence, the required function $g: R \\rightarrow R$ as $g(y)=\\frac{y-7}{10}$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.misc.2",
+      "kind": "additional_exercise",
+      "number": "MISC-2",
+      "topic": "Invertible function on whole numbers",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f: W \\rightarrow W$ be defined as $f(n)=n-1$, if is odd and $f(n)=n+1$, if $n$ is even. Show that $f$ is invertible. Find the inverse of f. Here, W is the set of all whole numbers."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: W \\rightarrow W$ is defined as $f(n)=\\left\\{\\begin{array}{l}n-1, \\text { If } n \\text { is odd } \\\\ n+1, \\text { If } n \\text { is even }\\end{array}\\right\\}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "One-one",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For one-one:\n$$\nf(n)=f(m)\n$$\n\nIf $n$ is odd and $m$ is even, then we will have $n-1=m+1$.\n\n$$\n\\Rightarrow n-m=2\n$$\n\nSimilarly, the possibility of $n$ being even and $m$ being odd can also be ignored under a similar argument.\n∴ Both $n$ and $m$ must be either odd or even.\nNow, if both $n$ and $m$ are odd, then we have:\n\n$$\n\\begin{aligned}\n& f(n)=f(m) \\\\\n& \\Rightarrow n-1=m-1 \\\\\n& \\Rightarrow n=m\n\\end{aligned}\n$$\n\nAgain, if both $n$ and $m$ are even, then we have:\n\n$$\n\\begin{aligned}\n& f(n)=f(m) \\\\\n& \\Rightarrow n+1=m+1 \\\\\n& \\Rightarrow n=m\n\\end{aligned}\n$$\n\n$\\therefore f$ is one-one."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Onto",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For onto:\nAny odd number $2 r+1$ in co-domain N is the image of $2 r$ in domain N and any even number $2 r$ in co-domain N is the image of $2 r+1$ in domain N .\n$\\therefore f$ is onto.\n$f$ is an invertible function."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "Inverse function",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let us define $g: W \\rightarrow W$ as $f(m)=\\left\\{\\begin{array}{l}m-1, \\text { If } m \\text { is odd } \\\\ m+1, \\text { If } m \\text { is even }\\end{array}\\right\\}$\nWhen $r$ is odd\n\n$$\ng o f(n)=g(f(n))=g(n-1)=n-1+1=n\n$$\n\nWhen $r$ is even\n$\\operatorname{gof}(n)=g(f(n))=g(n+1)=n+1-1=n$\nWhen $m$ is odd\n\n$$\nf o g(n)=f(g(m))=f(m-1)=m-1+1=m\n$$\n\nWhen $m$ is even\n\n$$\n\\begin{aligned}\n& f o g(m)=f(g(m))=f(m+1)=m+1-1=m \\\\\n& \\therefore g o f=\\mathrm{I}_{W} \\text { and } f o g=\\mathrm{I}_{W}\n\\end{aligned}\n$$\n\n$f$ is invertible and the inverse of $f$ is given by $f^{-1}=g$, which is the same as $f$. inverse of $f$ is $f$ itself."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.misc.3",
+      "kind": "additional_exercise",
+      "number": "MISC-3",
+      "topic": "Composition f(f(x)) for a quadratic",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "If $f: R \\rightarrow R$ be defined as $f(x)=x^{2}-3 x+2$, find $f(f(x))$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$f: R \\rightarrow R$ is defined as $f(x)=x^{2}-3 x+2$.\n\n$$\n\\begin{aligned}\n& f(f(x))=f\\left(x^{2}-3 x+2\\right) \\\\\n& =\\left(x^{2}-3 x+2\\right)^{2}-3\\left(x^{2}-3 x+2\\right)+2 \\\\\n& =\\left(x^{4}+9 x^{2}+4-6 x^{3}-12 x+4 x^{2}\\right)+\\left(-3 x^{2}+9 x-6\\right)+2 \\\\\n& =x^{4}-6 x^{3}+10 x^{2}-3 x\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.misc.6",
+      "kind": "additional_exercise",
+      "number": "MISC-6",
+      "topic": "Injective composition with a non-injective g",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Give examples of two functions $f: N \\rightarrow Z$ and $g: Z \\rightarrow Z$ such that gof is injective but $g$ is not injective.\n(Hint: Consider $f(x)=x$ and $g(x)=|x|$ )"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Define $f: N \\rightarrow Z$ as $f(x)=x$ and $g: Z \\rightarrow Z$ as $g(x)=|x|$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "g is not injective",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let us first show that $g$ is not injective.\n\n$$\n\\begin{aligned}\n& (-1)=|-1|=1 \\\\\n& (1)=|1|=1 \\\\\n& \\therefore(-1)=g(1), \\text { but }-1 \\neq 1\n\\end{aligned}\n$$\n\n$\\therefore g$ is not injective."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "gof is injective",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$g o f: N \\rightarrow Z$ is defined as $g o f(x)=g(f(x))=g(x)=|x|$\n$x, y \\in N$ such that $g o f(x)=g o f(y)$\n\n$$\n\\Rightarrow|x|=|y|\n$$\n\nSince $x, y \\in N$, both are positive.\n$\\therefore|x|=|y|$\n$\\Rightarrow x=y$\n∴ gof is injective."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.misc.7",
+      "kind": "additional_exercise",
+      "number": "MISC-7",
+      "topic": "Onto composition with a non-onto f",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Given examples of two functions $f: N \\rightarrow N$ and $g: N \\rightarrow N$ such that gof is onto but $f$ is not onto.\n(Hint: Consider $f(x)=x+1$ and $g(x)=\\left\\{\\begin{array}{ll}x-1, & \\text { if } x>1 \\\\ 1, & \\text { if } x=1\\end{array}\\right\\}$ )"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Define $f: N \\rightarrow Z$ as $f(x)=x+1$ and $g: Z \\rightarrow Z$ as $g(x)=\\left\\{\\begin{array}{ll}x-1, & \\text { if } x>1 \\\\ 1, & \\text { if } x=1\\end{array}\\right\\}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "f is not onto",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let us first show that $g$ is not onto.\nConsider element 1 in co-domain $N$. This element is not an image of any of the elements in domain $N$.\n$\\therefore f$ is not onto."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "gof is onto",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$g: N \\rightarrow N$ is defined by\n\n$$\n\\operatorname{gof}(x)=g(f(x))=g(x+1)=x+1-1=x \\quad[x \\in N \\Rightarrow x+1>1]\n$$\n\nFor $y \\in N$, there exists $x=y \\in N$ such that $\\operatorname{gof}(x)=y$.\n∴ gof is onto."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.misc.9",
+      "kind": "additional_exercise",
+      "number": "MISC-9",
+      "topic": "Identity and invertible element in a power set",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Given a non-empty set $X$, consider the binary operation *: $\\mathrm{P}(X) \\times \\mathrm{P}(X) \\rightarrow \\mathrm{P}(X)$ given by $A^{*} B=A \\cap B \\forall A, B$ in $P(X)$ is the power set of $X$. Show that $X$ is the identity element for this operation and $X$ is the only invertible element in $P(X)$ with respect to the operation *."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "label": "Identity element",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& \\mathrm{P}(X) \\times \\mathrm{P}(X) \\rightarrow \\mathrm{P}(X) \\text { given by } A^{*} B=A \\cap B \\forall A, B \\text { in } P(X) \\\\\n& A \\cap X=A=X \\cap A \\text { for all } A \\in P(X) \\\\\n& \\Rightarrow A^{*} X=A=X * A \\text { for all } A \\in P(X)\n\\end{aligned}\n$$\n\n$X$ is the identity element for the given binary operation *."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "Invertible element",
+          "flow": [
+            {
+              "type": "text",
+              "text": "An element $A \\in P(X)$ is invertible if there exists $B \\in P(X)$ such that\n\n$$\nA^{*} B=X=B^{*} A \\quad[\\text { As } X \\text { is the identity element }]\n$$\n\nOr\n\n$$\nA \\cap B=X=B \\cap A\n$$\n\nThis case is possible only when $A=X=B$.\n$X$ is the only invertible element in $P(X)$ with respect to the given operation *."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.misc.11",
+      "kind": "additional_exercise",
+      "number": "MISC-11",
+      "topic": "Inverse of a function between finite sets",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $\\mathrm{S}=\\{a, b, c\\}$ and $T=\\{1,2,3\\}$. Find $F^{-1}$ of the following functions $F$ from $S$ to $T$, if it exists.\n\ni. $\\quad F=\\{(a, 3),(b, 2),(c, 1)\\}$\nii. $\\quad F=\\{(a, 2),(b, 1),(c, 1)\\}$"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{S}=\\{a, b, c\\}, T=\\{1,2,3\\}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "i. $\\quad F: S \\rightarrow T$ is defined by $F=\\{(a, 3),(b, 2),(c, 1)\\}$\n$$\n\\Rightarrow F(a)=3, F(b)=2, F(c)=1\n$$\nTherefore, $F^{-1}: T \\rightarrow S$ is given by $F^{-1}=\\{(3, a),(2, b),(1, c)\\}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "ii. $\\quad F: S \\rightarrow T$ is defined by $F=\\{(a, 2),(b, 1),(c, 1)\\}$\nSince, $F(b)=F(c)=1, F$ is not one-one.\nHence, $F$ is not invertible i.e., $F^{-1}$ does not exists."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.misc.12",
+      "kind": "additional_exercise",
+      "number": "MISC-12",
+      "topic": "Commutative, associative, distributive operations",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Consider the binary operations*: $R \\times R \\rightarrow R$ and $o: R \\times R \\rightarrow R$ defined as $a^{*} b=|a-b|$ and $a o b=a, \\forall a, b \\in R$. Show that *is commutative but not associative 0 is associative but not commutative. Further, show that $\\forall a, b, c \\in R, a^{*}(b o c)=\\left(a^{*} b\\right) o\\left(a^{*} c\\right)$. [ If it is so, we say that the operation * distributes over the operation 0 ]. Does 0 distribute over*? Justify your answer."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that ${ }^{*}: R \\times R \\rightarrow R$ and $o: R \\times R \\rightarrow R$ defined as $a^{*} b=|a-b|$ and $a o b=a, \\forall a, b \\in R$. For $a, b \\in R$, we have $a^{*} b=|a-b|$ and $b^{*} a=|b-a|=|-(a-b)|=|a-b|$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Commutativity of *",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\therefore a^{*} b=b^{*} a$\n∴ The operation * is commutative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Associativity of *",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& (1 * 2) * 3=(|1-2|) * 3=1 * 3=|1-3|=2 \\\\\n& 1 *(2 * 3)=1 *(|2-3|)=1 * 1=|1-1|=0 \\\\\n& \\therefore(1 * 2) * 3 \\neq 1 *(2 * 3) \\quad \\text { where } 1,2,3 \\in R \\\\\n& \\therefore \\text { The operation } * \\text { is not associative. }\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Commutativity of o",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, consider the operation 0 :\nIt can be observed that $1 o 2=1$ and $2 o 1=2$.\n\n$$\n\\therefore 1 o 2 \\neq 2 o 1 \\quad(\\text { where } 1,2 \\in R)\n$$\n\n∴ The operation 0 is not commutative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Associativity of o",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $a, b, c \\in R$. Then, we have:\n\n$$\n\\begin{aligned}\n& (a o b) o c=a o c=a \\\\\n& a o(b o c)=a o b=a \\\\\n& \\Rightarrow(a o b) o c=a o(b o c)\n\\end{aligned}\n$$\n\n∴ The operation 0 is associative."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Distributivity: * over o",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, let $a, b, c \\in R$, then we have:\n\n$$\n\\begin{aligned}\n& a *(b o c)=a * b=|a-b| \\\\\n& (a * b) o(a * c)=(|a-b|) o(|a-c|)=|a-b|\n\\end{aligned}\n$$\n\nHence, $a^{*}(b o c)=\\left(a^{*} b\\right) o\\left(a^{*} c\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "Distributivity: o over *",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now,\n\n$$\n\\begin{aligned}\n& 1 o(2 * 3)=1 o(|2-3|)=1 o 1=1 \\\\\n& (1 o 2) *(1 o 3)=1 * 1=|1-1|=0\n\\end{aligned}\n$$\n\n$$\n\\therefore 1 o(2 * 3) \\neq(1 o 2) *(1 o 3) \\quad \\text { where } 1,2,3 \\in R\n$$\n\n∴ The operation 0 does not distribute over*."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.misc.13",
+      "kind": "additional_exercise",
+      "number": "MISC-13",
+      "topic": "Identity and inverses under symmetric difference",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Given a non - empty set $X$, let $*: \\mathrm{P}(X) \\times \\mathrm{P}(X) \\rightarrow \\mathrm{P}(X)$ be defined as $A^{*} B=(A-B) \\cup(B-A)$, $\\forall A, B \\in P(X)$. Show that the empty set $\\Phi$ is the identity for the operation * and all the elements $A$ of $P(X)$ are invertible with $A^{-1}=A$.\n(Hint: $(A-\\Phi) \\cup(\\Phi-A)=A$ and $(A-A) \\cup(A-A)=A^{*} A=\\Phi$ ) ."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that $*: \\mathrm{P}(X) \\times \\mathrm{P}(X) \\rightarrow \\mathrm{P}(X)$ is defined as $A^{*} B=(A-B) \\cup(B-A), \\forall A, B \\in P(X)$ $A \\in P(X)$ then,"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Identity element",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& A^{*} \\Phi=(A-\\Phi) \\cup(\\Phi-A)=A \\cup \\Phi=A \\\\\n& \\Phi^{*} A=(\\Phi-A) \\cup(A-\\Phi)=\\Phi \\cup A=A \\\\\n& \\therefore A^{*} \\Phi=A=\\Phi^{*} A \\quad \\text { for all } A \\in P(X)\n\\end{aligned}\n$$\n\n$\\Phi$ is the identity for the operation *."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "Inverse element",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Element $A \\in P(X)$ will be invertible if there exists $B \\in P(X)$ such that $A^{*} B=\\Phi=B^{*} A \\quad[$ As $\\Phi$ is the identity element $]$\n\n$$\nA^{*} A=(A-A) \\cup(A-A)=\\Phi \\cup \\Phi=\\Phi \\text { for all } A \\in P(X) .\n$$\n\nAll the elements $A$ of $P(X)$ are invertible with $A^{-1}=A$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.misc.14",
+      "kind": "additional_exercise",
+      "number": "MISC-14",
+      "topic": "Identity and inverses - modular addition",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Define a binary operation *on the set \\{0,1,2,3,4,5\\} as\n\n$$\na+b=\\left\\{\\begin{array}{ll}\na+b, & \\text { if } a+b<6 \\\\\na+b-6 & \\text { if } a+b \\geq 6\n\\end{array}\\right\\}\n$$\n\nShow that zero is the identity for this operation and each element $a \\neq 0$ of the set is invertible with $6-a$ being the inverse of $a$."
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $X=\\{0,1,2,3,4,5\\}$\nThe operation *is defined as $a+b=\\left\\{\\begin{array}{ll}a+b, & \\text { if } a+b<6 \\\\ a+b-6, & \\text { if } a+b \\geq 6\\end{array}\\right\\}$\nAn element $e \\in X$ is the identity element for the operation ${ }^{*}$, if $a^{*} e=a=e^{*} a \\quad \\forall a \\in X$ For $a \\in X$,"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "label": "Identity element",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{array}{ll}\na * 0=a+0=a & {[a \\in X \\Rightarrow a+0<6]} \\\\\n0 * a=0+a=a & {[a \\in X \\Rightarrow 0+a<6]} \\\\\n\\therefore a * 0=a=0 * a & \\forall a \\in X\n\\end{array}\n$$\n\nThus, 0 is the identity element for the given operation *."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "label": "Inverse element",
+          "flow": [
+            {
+              "type": "text",
+              "text": "An element $a \\in X$ is invertible if there exists $b \\in X$ such that $a * b=0=b^{*} a$.\ni.e., $\\left\\{\\begin{array}{l}a+b=0=b+a, \\quad \\text { if } a+b<6 \\\\ a+b-6=0=b+a-6 \\quad \\text { if } a+b \\geq 6\\end{array}\\right\\}$\n\n$$\n\\Rightarrow a=-b \\text { or } b=6-a\n$$\n\n$X=\\{0,1,2,3,4,5\\}$ and $a, b \\in X$. Then $a \\neq-b$.\n$\\therefore b=6-a$ is the inverse of $a$ for all $a \\in X$.\nInverse of an element $a \\in X, a \\neq 0$ is $6-a$ i.e., $a-1=6-a$."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.misc.18",
+      "kind": "additional_exercise",
+      "number": "MISC-18",
+      "topic": "Signum and greatest integer composition",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Let $f: R \\rightarrow R$ be the Signum Function defined as\n\n$$\nf(x)=\\left\\{\\begin{array}{l}\n1, x>0 \\\\\n0, x=0 \\\\\n-1, x<0\n\\end{array}\\right\\} \\text { and } g: R \\rightarrow R \\text { be the }\n$$\n\ngreatest integer function given by $g(x)=[x]$, where $[x]$ is greatest integer less than or equal to $x$. Then does fog and gof coincide in $(0,1]$ ?"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that $f: R \\rightarrow R$ be the Signum Function defined as\n\n$$\nf(x)=\\left\\{\\begin{array}{l}\n1, x>0 \\\\\n0, x=0 \\\\\n-1, x<0\n\\end{array}\\right\\}\n$$\n\nAlso $g: R \\rightarrow R$ is defined as $g(x)=[x]$, where $[x]$ is greatest integer less than or equal to $x$. Now let $x \\in(0,1]$,\n\n$$\n[x]=1 \\text { if } x=1 \\text { and }[x]=0 \\text { if } 0<x<1 .\n$$\n\n$$\n\\begin{aligned}\n& \\therefore f \\circ g(x)=f(g(x))=f([x])=\\left\\{\\begin{array}{ll}\nf(1), & \\text { if } x=1 \\\\\nf(0), & \\text { if } x \\in(0,1)\n\\end{array}\\right\\}=\\left\\{\\begin{array}{ll}\n1, & \\text { if } x=1 \\\\\n0, & \\text { if } x \\in(0,1)\n\\end{array}\\right\\} \\\\\n& \\operatorname{gof}(x)=g(f(x)) \\\\\n& =g(1) \\\\\n& =[1]=1\n\\end{aligned}\n$$\n\nThus, when $x \\in(0,1)$, we have $f \\circ g(x)=0$ and $g o f(x)=1$.\nHence, fog and gof does not coincide in (0,1]."
+            }
+          ]
+        }
+      ],
+      "answer": []
+    },
+    {
+      "id": "sol_1.misc.19",
+      "kind": "additional_exercise",
+      "number": "MISC-19",
+      "topic": "MCQ - number of binary operations on {a,b}",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Number of binary operations on the set $\\{a, b\\}$ are\n\nA. 10\nB. 16\nC. 20\nD. 8"
+        }
+      ],
+      "figures": [],
+      "parts": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "A binary operation * on $\\{a, b\\}$ is a function from $\\{a, b\\} \\times\\{a, b\\} \\rightarrow\\{a, b\\}$ i.e., * is a function from $\\{(a, a),(a, b),(b, a),(b, b)\\} \\rightarrow\\{a, b\\}$\nHence, the total number of binary operations on the set $\\{a, b\\}$ is $2^{4}=16$.\nThe correct answer is B."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "B"
+        }
+      ]
+    }
+  ]
+}
