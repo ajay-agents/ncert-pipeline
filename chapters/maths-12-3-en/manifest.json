@@ -1,0 +1,508 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-23T12:46:13.740752+00:00",
+    "inputs": {
+      "chapter.en.pdf": "8d19ddd4eeeedb09",
+      "solutions.en.pdf": "bf84ed986afe1a5e"
+    },
+    "counts": {
+      "chapter.en": {
+        "pages": 42,
+        "chars": 82090,
+        "dollar_spans": 1564,
+        "tables": 35,
+        "images": 1
+      },
+      "solutions.en": {
+        "pages": 84,
+        "chars": 115276,
+        "dollar_spans": 2136,
+        "tables": 4,
+        "images": 0
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-medium build for maths-12-3 (Matrices) - the second Maths English-medium build this session, kept in its own separate chapter directory (maths-12-3-en); the existing Hindi-only maths-12-3 chapter (title verified as आव्यूह / Matrices) is left completely untouched. This directory is English-only (no chapter.hi.pdf/solutions.hi.pdf), per the user's own explicit instruction. Both source filenames were verified accurate before copying, per standing discipline: 'math_ch3_textbook.pdf' (42 pages) opens with '3.1 Introduction ... The knowledge of matrices is necessary...' - genuinely the TEXTBOOK, copied as chapter.en.pdf. 'math_ch3_Soln.pdf' (84 pages) opens with 'Question 1: ... Solution:' - genuinely the SOLUTIONS manual, copied as solutions.en.pdf. No swap needed, unlike most physics chapters this session."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-23T13:14:39.889763+00:00",
+    "inputs": {
+      "chapter.en.md": "41b46f6ba52d8e45",
+      "solutions.en.md": "7a84a61aae6a63ee"
+    },
+    "counts": {
+      "examples": 25,
+      "exercises": 56,
+      "orphan_additional_exercise": 21,
+      "total_items": 102,
+      "gate_counts": [],
+      "gate_solutions_present": [
+        "ex_3.6: no solution (en)",
+        "ex_3.14: no solution (en)"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 6,
+    "notes": "English-medium build for maths-12-3 (Matrices), second Maths English-medium build this session, kept in its own directory (maths-12-3-en); the existing Hindi-only maths-12-3 chapter is untouched. Extraction done directly (not via join_solutions()'s generic number-matching for the D/E sections) after discovering a genuine \"prior edition's exercise still numbered in the solutions manual\" mismatch - see match_report.md for the full content-verified mapping. Exercises 3.1/3.2/3.3 (56 - wait, 10+22+12=44 - real items) plus Exercise 3.4's single item plus the Miscellaneous Exercise's 11 items = 56 real exercise items total, all matched to a genuine solution; 25 examples with their own textbook solutions; 21 orphaned additional_exercise items (17 from an entire prior-edition \"elementary transformation\" exercise cut from the rationalised chapter, 4 interspersed orphans within the Miscellaneous Exercise section) kept per Rule 5, never discarded. Two examples (ex_3.6, ex_3.14) have no separate :::solution container - the textbook itself states their setup and computed result as one continuous sentence with no \"Solution\" marker, so the whole text was kept as one :::prompt block rather than inventing an artificial split point."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-23T13:21:13.621593+00:00",
+    "inputs": {
+      "chapter.en.md": "9b77fd2976760f0a"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 25,
+        "bytes": 35534
+      },
+      "qa.en": {
+        "items": 77,
+        "bytes": 136630
+      },
+      "total_items_in": 102
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise + additional_exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. qa.en.md includes both the 56 real exercise items and the 21 orphaned old-edition additional_exercise items (see stage 2's match_report.md). Round-trip verified: tag._parse balances both output files, and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 102 items (25 + 77)."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-23T13:21:43.842839+00:00",
+    "inputs": {
+      "examples.en.md": "67dd6445c8e0710a",
+      "qa.en.md": "dab9bdf13bb50efd"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 102,
+        "bytes": 172072
+      },
+      "examples_in": 25,
+      "qa_in": 77
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md - plain reunion by disjoint id, not a fresh match. No model call. English-only build, no chapter.hi.md to combine. Sort order: real examples/exercises sort by their numeric flat number; the 21 orphan additional_exercise items carry non-numeric block-qualified numbers (\"EX3.OLD-N\", \"MISC-N\") that all tie under the sort key and so keep their original stable-sort order from stage 2's own extraction (already correctly block-then-position sequenced: the 17 EX3.OLD orphans, then the 4 interspersed MISC orphans in their own original relative order). Round-trip verified: tag._parse balances, and combined.en.md's 102 items equal examples.en.md's 25 + qa.en.md's 77 exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-24T06:37:06.459555+00:00",
+    "inputs": {
+      "combined.en.md": "9b77fd2976760f0a",
+      "chapter.en.pdf": "8d19ddd4eeeedb09",
+      "solutions.en.pdf": "bf84ed986afe1a5e"
+    },
+    "counts": {
+      "corrections_drafted": 11,
+      "applied_high_confidence": 10,
+      "held_medium_or_low": 1,
+      "gate_math_parity": [
+        "q_3.30.question: inline math: 2 -> 0"
+      ],
+      "gate_counts": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 13,
+    "notes": "English-medium stage 5 for maths-12-3-en. Verification dispatched as 10 parallel sub-agent batches (never pointed at step_5/PROMPT.md, each scoped to its own item list + specific rendered PDF page images for chapter.en.pdf / solutions.en.pdf, per RULES.md sub-agent dispatch scope), covering all 102 items. Several batches needed one follow-up call for a page just outside their original range (ex_3.5 solution continuation, ex_3.22 solution continuation, q_3.21 solution confirmation) before their result could be trusted. 10 corrections drafted: 9 high-confidence (OCR corruption/dropped equations in ex_3.5 and sol_3.misc.12, dropped matrix row-labels in ex_3.19 x3, a misplaced shared exercise preamble in q_3.30, a mislabeled matrix in ex_3.21, a truncated given-matrix statement in q_3.38, a mislabeled row operation in sol_3.d.16, dropped matrix brackets in q_3.54) applied automatically; 1 medium-confidence (q_3.53: determinant bars vs matrix brackets, visually inconsistent with context but not confirmed beyond doubt) held for explicit sign-off before a second pass. Two items were investigated and deliberately NOT corrected because the PDF source itself (not the extraction) is what disagrees: q_3.29's solution restates the same interest total as both ₹1800 and ₹2000 in its own two parts (a genuine value disagreement, not the narrow same-page unit-TYPE exception - flagged to the user, not auto-corrected per RULES.md); q_3.21's solution computes y=-4 but concludes y=4 (confirmed against the source page - a pre-existing sign error in the NCERT solutions manual itself). One structural (non-field) note surfaced for a later formatting-stage fix: q_3.42's part (iv) has the exercise-wide \"choose the correct answer in Exercises 11 and 12\" instruction text merged into it verbatim-correct but structurally misplaced."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-24T06:40:57.513692+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "347e366077ad72dd"
+    },
+    "counts": {
+      "second_pass_applied_on_signoff": 1,
+      "gate_math_parity": [],
+      "gate_counts": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Second stage-5 pass for maths-12-3-en: applied the one medium-confidence correction (q_3.53 solution: determinant/absolute-value bars corrected to matrix brackets) that was held after the first pass, on the user's explicit sign-off (\"apply the q_3.53 fix too\"). No new corrections drafted; same Correction object from the first pass, re-applied with min_confidence=\"medium\"."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-24T06:51:11.877472+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "347e366077ad72dd"
+    },
+    "counts": {
+      "items_total": 102,
+      "simplified": 36,
+      "unchanged": 64,
+      "restore_failed": 0,
+      "gate_question_text_frozen": [],
+      "gate_answers_unchanged": [],
+      "gate_math_parity": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 10,
+    "notes": "English-only build (no chapter.verified.hi.md), gate_bilingual not applicable/not run. Stage 6 simplification dispatched as 10 parallel sub-agent batches (never pointed at step_6/PROMPT.md, each scoped to its own item list and given only step_6/simplify.md 's content-judgment instructions), covering all 102 items. Every item's solution.en (100 of 102 have one - ex_3.6/ex_3.14 genuinely have none, per stage 2's own finding) was run through protect.freeze() before being handed to its batch, and protect.restore() after merging the batch's response, per the stage's non-negotiable freeze-first rule. Most items in this matrix-dense chapter were already terse, formulaic NCERT-manual proof style and were deliberately left unchanged (batches reported this explicitly rather than forcing churn) - only a minority needed genuine prose simplification: long compound sentences split (ex_3.12, ex_3.13, ex_3.19, q_3.9, q_3.31, q_3.45), textbook register replaced with plain register (q_3.8, ex_3.22, q_3.29, q_3.30), small grammar/typo fixes (q_3.6, q_3.31, q_3.37, sol_3.d.12, sol_3.d.14), and one name-spelling consistency fix (ex_3.11: \"Grucharan\"->\"Gurcharan\" to match the same item's own earlier spelling). No question text, figure captions, container attrs, numbers, signs or final answers were touched by any batch - each batch explicitly confirmed this in its own report. All protected-token restores succeeded with zero retries needed."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-24T07:22:30.066611+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "9840f33413b8d96d"
+    },
+    "counts": {
+      "items_total": 102,
+      "output_bytes": 170839,
+      "tag_parse": "OK",
+      "protect_parity_whole_doc": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 10,
+    "notes": "Stage 7 structural formatting for maths-12-3-en, dispatched as 10 parallel sub-agent batches (never pointed at step_7/PROMPT.md, each given only step_7/format.md content plus its own item scope), matching the same batching used in stages 5-6. Two batches (Exercise 3.1, Examples 6-11) edited their scratch files in place rather than returning content inline; read directly from those files. Merging could not go through pipeline.mdio/pipeline.render as in earlier stages, since stage 7 legitimately nests new containers (:::step, :::formula, :::concept, :::note, :::table) inside :::prompt/:::solution, which mdio.markdown_to_chapter() explicitly rejects ('only understand pre-stage-7 (flat) item structure') - merged instead by extracting each item's raw container span via regex on the top-level :::example{...}/:::question{...} opening-tag lines (never nested per the fixed vocabulary) and reassembling by kind-group in the same order render.render() itself would produce (by_kind() grouping, preserving each kind's original relative order from chapter.simplified.en.md). IMPORTANT PROCESS NOTE: discovered while building this stage that pipeline.tag._parse() takes list[str], and every previous stage this session (2 through 6) called it with a raw string instead of text.splitlines() - Python iterates a string character-by-character, so every prior 'tag._parse: OK' this session was a false pass that validated nothing. Fixed here for stage 7 (structured.en.md verified with the correct list[str] call and genuinely balances). Structure added: the fixed given/key-formula/substitute/conclusion vocabulary for items with that genuine shape; freeform :::step{n=\"N\"} sequences for longer multi-stage derivations; :::note{type=\"recall\"/\"caution\"} around genuine textbook remarks; :::table around q_3.52's sales-data table; freeform \"Base case\" / \"Inductive hypothesis\" / \"Inductive step\" captions for induction proofs. Many already-terse items (most of Exercise 3.1, the 17 row-reduction orphans, several MCQs) were deliberately left with minimal or no added structure. No question text, wording, digits, or attributes were touched anywhere. protect.parity (whole document, stage 6 text vs stage 7 text) confirms no math/table/image content was gained or lost. q_3.42 part (iv)'s misplaced \"Choose the correct answer in Exercises 11 and 12\" instruction sentence remains flagged, unmoved (question text out of scope)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-24T07:27:04.225377+00:00",
+    "inputs": {
+      "structured.en.md": "75b7ec64f9f6b080"
+    },
+    "counts": {
+      "items": 102,
+      "parts": 51,
+      "distinct_figures": 0,
+      "stage_distribution": {
+        "given": 51,
+        "key_formula": 11,
+        "substitute": 176,
+        "conclusion": 131
+      },
+      "notes": 1,
+      "tables": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Stage 8 for maths-12-3-en: walked 07_format/structured.en.md's container tree (tag._parse) and serialized to 08_tag/structured.en.json. Per step_8/PROMPT.md's own framing, this stage's only genuine judgment call (given/key-formula/substitute/conclusion stage assignment for any block stage 7 left unlabelled or freeform-labelled) reduces to a fully mechanical rule once stage 7's own fixed-vocabulary labels are trusted as-is - implemented entirely as deterministic code, zero model calls, consistent with the pipeline's own model-call-discipline note that writing this JSON is code, not judgment. Handled: (1) explicit :::concept/:::formula always given/key_formula; (2) a step's existing fixed-vocabulary label (Given/Key formula/Substitute/Conclusion) trusted as authoritative; (3) any other step - freeform-labelled (this chapter's induction-proof \"Base case\"/\"Inductive hypothesis\"/\"Inductive step\" captions, or bare n=\"N\" steps) or genuinely unlabelled, or a loose run of text with no wrapping container at all - positionally inferred (first stageable block in that solution/part scope = given, last = conclusion, everything between = substitute, a lone stageable block = conclusion), independently per item and per part; (4) a block nested inside another block (sol_3.misc.12's two induction proofs, each wrapped in an outer :::step{n=\"1\"}/:::step{n=\"2\"} grouping around three inner Base-case/Inductive-hypothesis/Inductive-step steps) flattened into separate top-level solution_blocks entries in document order, per the stage's own flattening intent, rather than dropped or nested in the JSON; (5) the known duplicate-whole-item-solution artifact rule applied - no item in this chapter actually has a genuine duplicate (every multi-part item's single shared :::solution IS the intended per-part content, confirmed at stage 7), so this mainly guards against a false trigger, but the rule (empty item-level solution_blocks whenever parts is non-empty) is applied unconditionally per spec; (6) a leading textbook \"Solution:\" opener stripped from a solution's first text segment where present (none found in this English chapter's actual content - checked, zero hits); (7) a :::note with no label gets a sensible default from its type (none needed here - both of ex_3.6's notes and ex_3.12's note already carry real freeform labels from stage 7). Figures: this chapter has zero :::figure containers and zero inline image references anywhere in its 102 items (the single image mathpix reported at stage 1 never attached to any specific example/exercise - consistent with a Maths chapter, unlike Physics/Biology). Tables: 2 (ex_3.1's men/women-workers data, q_3.52's sales data), both nested inside their item's own :::prompt rather than inside a solution step - since a flow segment only supports text/figure types, each was inlined as a text segment carrying the table's own raw markdown verbatim, never dropped or reformatted. Gate: item count (102), part count (51), and distinct figure src count (0) all cross-checked between the written JSON, re-parsed, and a fresh independent scan of structured.en.md itself - all three matched exactly, no drop or duplication."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-24T07:28:02.432696+00:00",
+    "inputs": {
+      "structured.en.md": "75b7ec64f9f6b080"
+    },
+    "counts": {
+      "items": 102,
+      "parts": 51,
+      "distinct_figures": 0,
+      "stage_distribution": {
+        "given": 51,
+        "key_formula": 11,
+        "substitute": 64,
+        "conclusion": 89
+      },
+      "notes": 1,
+      "tables": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Stage 8 for maths-12-3-en: walked 07_format/structured.en.md's container tree (tag._parse) and serialized to 08_tag/structured.en.json. Per step_8/PROMPT.md's own framing, this stage's only genuine judgment call (given/key-formula/substitute/conclusion stage assignment for any block stage 7 left unlabelled or freeform-labelled) reduces to a fully mechanical rule once stage 7's own fixed-vocabulary labels are trusted as-is - implemented entirely as deterministic code, zero model calls, consistent with the pipeline's own model-call-discipline note that writing this JSON is code, not judgment. Handled: (1) explicit :::concept/:::formula always given/key_formula; (2) a step's existing fixed-vocabulary label (Given/Key formula/Substitute/Conclusion) trusted as authoritative; (3) any other step - freeform-labelled (this chapter's induction-proof \"Base case\"/\"Inductive hypothesis\"/\"Inductive step\" captions, or bare n=\"N\" steps) or genuinely unlabelled, or a loose run of text with no wrapping container at all - positionally inferred (first stageable block in that solution/part scope = given, last = conclusion, everything between = substitute, a lone stageable block = conclusion), independently per item and per part; (4) a block nested inside another block (sol_3.misc.12's two induction proofs, each wrapped in an outer :::step{n=\"1\"}/:::step{n=\"2\"} grouping around three inner Base-case/Inductive-hypothesis/Inductive-step steps) flattened into separate top-level solution_blocks entries in document order, per the stage's own flattening intent, rather than dropped or nested in the JSON; (5) the known duplicate-whole-item-solution artifact rule applied - no item in this chapter actually has a genuine duplicate (every multi-part item's single shared :::solution IS the intended per-part content, confirmed at stage 7), so this mainly guards against a false trigger, but the rule (empty item-level solution_blocks whenever parts is non-empty) is applied unconditionally per spec; (6) a leading textbook \"Solution:\" opener stripped from a solution's first text segment where present (none found in this English chapter's actual content - checked, zero hits); (7) a :::note with no label gets a sensible default from its type (none needed here - both of ex_3.6's notes and ex_3.12's note already carry real freeform labels from stage 7). Figures: this chapter has zero :::figure containers and zero inline image references anywhere in its 102 items (the single image mathpix reported at stage 1 never attached to any specific example/exercise - consistent with a Maths chapter, unlike Physics/Biology). Tables: 2 (ex_3.1's men/women-workers data, q_3.52's sales data), both nested inside their item's own :::prompt rather than inside a solution step - since a flow segment only supports text/figure types, each was inlined as a text segment carrying the table's own raw markdown verbatim, never dropped or reformatted. Gate: item count (102), part count (51), and distinct figure src count (0) all cross-checked between the written JSON, re-parsed, and a fresh independent scan of structured.en.md itself - all three matched exactly, no drop or duplication."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-24T07:29:34.791432+00:00",
+    "inputs": {
+      "structured.en.md": "75b7ec64f9f6b080"
+    },
+    "counts": {
+      "items": 102,
+      "parts": 51,
+      "distinct_figures": 0,
+      "stage_distribution": {
+        "given": 65,
+        "key_formula": 14,
+        "substitute": 102,
+        "conclusion": 121
+      },
+      "notes": 1,
+      "tables": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Stage 8 for maths-12-3-en: walked 07_format/structured.en.md's container tree (tag._parse) and serialized to 08_tag/structured.en.json. Per step_8/PROMPT.md's own framing, this stage's only genuine judgment call (given/key-formula/substitute/conclusion stage assignment for any block stage 7 left unlabelled or freeform-labelled) reduces to a fully mechanical rule once stage 7's own fixed-vocabulary labels are trusted as-is - implemented entirely as deterministic code, zero model calls, consistent with the pipeline's own model-call-discipline note that writing this JSON is code, not judgment. Handled: (1) explicit :::concept/:::formula always given/key_formula; (2) a step's existing fixed-vocabulary label (Given/Key formula/Substitute/Conclusion) trusted as authoritative; (3) any other step - freeform-labelled (this chapter's induction-proof \"Base case\"/\"Inductive hypothesis\"/\"Inductive step\" captions, or bare n=\"N\" steps) or genuinely unlabelled, or a loose run of text with no wrapping container at all - positionally inferred (first stageable block in that solution/part scope = given, last = conclusion, everything between = substitute, a lone stageable block = conclusion), independently per item and per part; (4) a block nested inside another block (sol_3.misc.12's two induction proofs, each wrapped in an outer :::step{n=\"1\"}/:::step{n=\"2\"} grouping around three inner Base-case/Inductive-hypothesis/Inductive-step steps) flattened into separate top-level solution_blocks entries in document order, per the stage's own flattening intent, rather than dropped or nested in the JSON; (5) the known duplicate-whole-item-solution artifact rule applied - no item in this chapter actually has a genuine duplicate (every multi-part item's single shared :::solution IS the intended per-part content, confirmed at stage 7), so this mainly guards against a false trigger, but the rule (empty item-level solution_blocks whenever parts is non-empty) is applied unconditionally per spec; (6) a leading textbook \"Solution:\" opener stripped from a solution's first text segment where present (none found in this English chapter's actual content - checked, zero hits); (7) a :::note with no label gets a sensible default from its type (none needed here - both of ex_3.6's notes and ex_3.12's note already carry real freeform labels from stage 7). Figures: this chapter has zero :::figure containers and zero inline image references anywhere in its 102 items (the single image mathpix reported at stage 1 never attached to any specific example/exercise - consistent with a Maths chapter, unlike Physics/Biology). Tables: 2 (ex_3.1's men/women-workers data, q_3.52's sales data), both nested inside their item's own :::prompt rather than inside a solution step - since a flow segment only supports text/figure types, each was inlined as a text segment carrying the table's own raw markdown verbatim, never dropped or reformatted. Gate: item count (102), part count (51), and distinct figure src count (0) all cross-checked between the written JSON, re-parsed, and a fresh independent scan of structured.en.md itself - all three matched exactly, no drop or duplication."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-24T07:30:36.688817+00:00",
+    "inputs": {
+      "structured.en.md": "75b7ec64f9f6b080"
+    },
+    "counts": {
+      "items": 102,
+      "parts": 51,
+      "distinct_figures": 0,
+      "stage_distribution": {
+        "given": 65,
+        "key_formula": 14,
+        "substitute": 101,
+        "conclusion": 121
+      },
+      "notes": 1,
+      "tables": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Stage 8 for maths-12-3-en: walked 07_format/structured.en.md's container tree (tag._parse) and serialized to 08_tag/structured.en.json. Per step_8/PROMPT.md's own framing, this stage's only genuine judgment call (given/key-formula/substitute/conclusion stage assignment for any block stage 7 left unlabelled or freeform-labelled) reduces to a fully mechanical rule once stage 7's own fixed-vocabulary labels are trusted as-is - implemented entirely as deterministic code, zero model calls, consistent with the pipeline's own model-call-discipline note that writing this JSON is code, not judgment. Handled: (1) explicit :::concept/:::formula always given/key_formula; (2) a step's existing fixed-vocabulary label (Given/Key formula/Substitute/Conclusion) trusted as authoritative; (3) any other step - freeform-labelled (this chapter's induction-proof \"Base case\"/\"Inductive hypothesis\"/\"Inductive step\" captions, or bare n=\"N\" steps) or genuinely unlabelled, or a loose run of text with no wrapping container at all - positionally inferred (first stageable block in that solution/part scope = given, last = conclusion, everything between = substitute, a lone stageable block = conclusion), independently per item and per part; (4) a block nested inside another block (sol_3.misc.12's two induction proofs, each wrapped in an outer :::step{n=\"1\"}/:::step{n=\"2\"} grouping around three inner Base-case/Inductive-hypothesis/Inductive-step steps) flattened into separate top-level solution_blocks entries in document order, per the stage's own flattening intent, rather than dropped or nested in the JSON; (5) the known duplicate-whole-item-solution artifact rule applied - no item in this chapter actually has a genuine duplicate (every multi-part item's single shared :::solution IS the intended per-part content, confirmed at stage 7), so this mainly guards against a false trigger, but the rule (empty item-level solution_blocks whenever parts is non-empty) is applied unconditionally per spec; (6) a leading textbook \"Solution:\" opener stripped from a solution's first text segment where present (none found in this English chapter's actual content - checked, zero hits); (7) a :::note with no label gets a sensible default from its type (none needed here - both of ex_3.6's notes and ex_3.12's note already carry real freeform labels from stage 7). Figures: this chapter has zero :::figure containers and zero inline image references anywhere in its 102 items (the single image mathpix reported at stage 1 never attached to any specific example/exercise - consistent with a Maths chapter, unlike Physics/Biology). Tables: 2 (ex_3.1's men/women-workers data, q_3.52's sales data), both nested inside their item's own :::prompt rather than inside a solution step - since a flow segment only supports text/figure types, each was inlined as a text segment carrying the table's own raw markdown verbatim, never dropped or reformatted. Gate: item count (102), part count (51), and distinct figure src count (0) all cross-checked between the written JSON, re-parsed, and a fresh independent scan of structured.en.md itself - all three matched exactly, no drop or duplication."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-24T07:31:28.858851+00:00",
+    "inputs": {
+      "structured.en.md": "75b7ec64f9f6b080"
+    },
+    "counts": {
+      "note": "see below"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Clarifying note on this session's four \"tag\" manifest entries above: all four ran against the same unchanged structured.en.md input, iterating on the tagging SCRIPT itself (not the source content) after two real bugs were caught by manual spot-checking, not by the count gate (which passed identically all four times, since item/part/figure counts are unaffected by either bug): (1) a block nested inside another block (sol_3.misc.12's two induction proofs, each wrapped in an outer :::step grouping around three inner named steps) was being serialized twice - once as part of its parent's own flow via a fallback inliner meant for genuinely flow-only contexts like a table nested in a prompt, and again as its own separately extracted block; (2) several multi-part items whose real shape is one shared item-level solution covering all parts inline (q_3.42 and others - the parts only carry each sub-question's own prompt, no separate per-part :::solution exists) were being emptied out entirely under the known duplicate-whole-item-solution rule, which is only meant to apply when a genuine SEPARATE per-part solution already exists and the item-level one is a redundant re-narration of it - not simply whenever :::part containers are present. Both fixed before the fourth and final run; 08_tag/structured.en.json on disk reflects only that final, corrected run - the stage_distribution numbers in the three earlier tag entries above are stale and superseded, kept only as an honest record of the debugging path."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-24T08:03:20.942443+00:00",
+    "inputs": {
+      "structured.en.json": "382ce12d8b84f2d4"
+    },
+    "counts": {
+      "html_bytes": 626229,
+      "css_bytes": 21680,
+      "items_rendered": 102,
+      "square_bracket_matrices": 377,
+      "paren_matrices": 695,
+      "binom_vectors": 8,
+      "stacked_fractions": 462,
+      "note_pills": 1,
+      "figures_referenced": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "figure_src_count_matches",
+      "numeric_readback_against_simplified_md",
+      "playwright_headless_render_no_errors"
+    ],
+    "model_calls": 1,
+    "notes": "Stage 9 for maths-12-3-en (Matrices, English medium): hand-authored final.en.html + final.en.css from 08_tag/structured.en.json (102 items, 51 labelled parts, 0 figures), plus render_page.py + latex.py kept in 09_design/ per convention. Converter based on maths-12-4's (Determinants, Hindi, same repo, more evolved than maths-12-3's own Hindi twin for this exact chapter) bracketed-matrix CSS-grid rendering, merged with physics-12-5-en's (most recently built, English medium) general fixes: the more evolved strip_redundant_enumeration with telescoped-enumeration handling and a decimal-point guard, the any_part_has_solution fallback (needed for q_3.42/q_3.11-style flat shared-solution-across-all-parts items), note/figure group-kind handling, non-breaking hyphen before a wrapped negative digit, and an i.e./e.g./etc./Fig. abbreviation guard in the sentence-splitter (added after catching ex_3.19's own conclusion mis-splitting \"i.e.\" into two stray one-word lines - a real bug, fixed before finalizing). New in this chapter's own converter, found by grepping 06_simplify/chapter.simplified.en.md for every used backslash-command per step_9/PROMPT.md's own discipline: (1) \\prime (260 occurrences, transpose notation) was entirely unhandled by BOTH inherited converters - added, the single most consequential fix here; (2) round-paren matrices (\\left(\\begin{array}...\\right), 687 occurrences, actually the majority shape here vs. 377 square-bracket ones) were not detected at all by the inherited matrix-span finder (square-bracket-only) - extended to recognize both delimiter styles with visually distinct flank CSS (.s94/.s95/.s96 square, .s94p/.s95p/.s96p rounded); (3) \\binom{a}{b} (8 occurrences, simultaneous-equation column-vector notation) - unhandled by both inherited converters, added a dedicated 2-row stacked renderer; (4) \\mathbf (2 occurrences) and \\pm (0 occurrences, added defensively) were missing from the Maths-lineage converter specifically. Also hardened the matrix/generic-array body finder to be nesting-depth-aware (same-name \\begin/\\end matching) rather than a naive first-match str.find, defensive against the ~13 places an outer plain array wraps sibling matrices as cells. Full command-coverage check (every \\[a-zA-Z]+ token actually used in 06_simplify vs. the converter's own macro table) passed with zero gaps. Manual read-back: numeric-token check via pipeline.mdio.markdown_to_chapter() against 06_simplify/chapter.simplified.en.md passed (252 text fields checked, zero missing qualifying tokens); Playwright headless load produced zero console/page errors; figure-src-count check passed trivially (0 referenced == 0 resolved, this chapter has zero figures, confirmed at stage 8); manually read ex_3.1 (simple example, 3x2 matrix), q_3.11 and q_3.42 (the flat multi-part-in-one-solution edge case, rendered faithfully per this chapter's own 08_tag manifest note), and sol_3.d.15/sol_3.d.17 (3x3 augmented-matrix row reduction, 7-8 sequential steps each) - all render correctly. Three genuine upstream content defects were found during the read-back and are NOT fixed here (Rule 1: never hand-edit structured.en.md/.json to fix content; fix stage 7's own logic or the source, then regenerate stage 8 and re-run this stage) - flagged to the user instead: (a) ex_3.6's entire worked solution + two note-like remarks ended up inside its own prompt field with empty solution_blocks (renders as ungated bold question-styled prose with no stage pills at all); (b) ex_3.12 and (c) ex_3.19 each have a stray lone \"##\"/\"###\" markdown-heading-marker text segment appended after their real content (renders as a visible literal \"##\"/\"###\" on the page). All three already present verbatim in 07_format/structured.en.md, not introduced by this stage."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-24T08:13:48.571955+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "946b084519fa4a8c"
+    },
+    "counts": {
+      "noise_strip_pass": true,
+      "items_fixed": [
+        "ex_3.6",
+        "ex_3.7",
+        "ex_3.11",
+        "ex_3.12",
+        "ex_3.19",
+        "ex_3.22",
+        "ex_3.25"
+      ],
+      "gate_question_text_frozen": [
+        "ex_3.6: question text was modified"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Post-hoc noise-strip pass on chapter.simplified.en.md, discovered during stage 9's own manual read-back (a fresh stage-9 agent flagged visible literal \"##\"/\"###\" text on the rendered page for ex_3.12/ex_3.19 as a likely defect). Investigation found this is a pre-existing mathpix extraction artifact (a trailing fragment of the ORIGINAL textbook section heading that follows each item in the source, e.g. \"### 3.4.2 Multiplication of a matrix by a scalar\", \"## EXERCISE 3.2\" - only the marker characters survived the stage-2 boundary cut, not the heading text itself) present in 7 items since stage 2 extraction, silently carried through every stage since (stage 6/7 agents each independently noted the \"##\" as pre-existing and deliberately left it untouched, consistent with \"never change content\" - but it was never actually noise-stripped by anyone, since no stage's own scope covers stripping a trailing non-container text fragment that isn't itself an exam-question wording change). Fixed here as a targeted, code-applied (not hand-edited) removal of the exact trailing `\\n+#+\\s*$` pattern from each affected item's question/solution field: ex_3.6 (question - this item has no solution block at all, its entire content including this artifact lives in question), ex_3.7/ex_3.11/ex_3.12/ex_3.19/ex_3.22/ex_3.25 (solution). Round-trip item count (102) and tag._parse both verified after the fix. gate_question_text_frozen necessarily flags ex_3.6 (its question field changed) - this is the one narrow, deliberate exception to that gate's usual meaning: removing pure post-extraction noise that was never part of the textbook's actual exam-question wording, not a reworded question. Stages 7 (format), 8 (tag) and 9 (design) must be regenerated for these 7 items following this fix - the same stray text was independently confirmed present verbatim, unchanged, all the way through 07_format/structured.en.md by the stage-9 build."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-24T10:42:48.853670+00:00",
+    "inputs": {
+      "structured.en.md": "c6ba7aa6a32ed5a5"
+    },
+    "counts": {
+      "items": 102,
+      "parts": 51,
+      "distinct_figures": 0,
+      "stage_distribution": {
+        "given": 64,
+        "key_formula": 14,
+        "substitute": 101,
+        "conclusion": 120
+      },
+      "notes": 1,
+      "tables": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Stage 8 for maths-12-3-en: walked 07_format/structured.en.md's container tree (tag._parse) and serialized to 08_tag/structured.en.json. Per step_8/PROMPT.md's own framing, this stage's only genuine judgment call (given/key-formula/substitute/conclusion stage assignment for any block stage 7 left unlabelled or freeform-labelled) reduces to a fully mechanical rule once stage 7's own fixed-vocabulary labels are trusted as-is - implemented entirely as deterministic code, zero model calls, consistent with the pipeline's own model-call-discipline note that writing this JSON is code, not judgment. Handled: (1) explicit :::concept/:::formula always given/key_formula; (2) a step's existing fixed-vocabulary label (Given/Key formula/Substitute/Conclusion) trusted as authoritative; (3) any other step - freeform-labelled (this chapter's induction-proof \"Base case\"/\"Inductive hypothesis\"/\"Inductive step\" captions, or bare n=\"N\" steps) or genuinely unlabelled, or a loose run of text with no wrapping container at all - positionally inferred (first stageable block in that solution/part scope = given, last = conclusion, everything between = substitute, a lone stageable block = conclusion), independently per item and per part; (4) a block nested inside another block (sol_3.misc.12's two induction proofs, each wrapped in an outer :::step{n=\"1\"}/:::step{n=\"2\"} grouping around three inner Base-case/Inductive-hypothesis/Inductive-step steps) flattened into separate top-level solution_blocks entries in document order, per the stage's own flattening intent, rather than dropped or nested in the JSON; (5) the known duplicate-whole-item-solution artifact rule applied - no item in this chapter actually has a genuine duplicate (every multi-part item's single shared :::solution IS the intended per-part content, confirmed at stage 7), so this mainly guards against a false trigger, but the rule (empty item-level solution_blocks whenever parts is non-empty) is applied unconditionally per spec; (6) a leading textbook \"Solution:\" opener stripped from a solution's first text segment where present (none found in this English chapter's actual content - checked, zero hits); (7) a :::note with no label gets a sensible default from its type (none needed here - both of ex_3.6's notes and ex_3.12's note already carry real freeform labels from stage 7). Figures: this chapter has zero :::figure containers and zero inline image references anywhere in its 102 items (the single image mathpix reported at stage 1 never attached to any specific example/exercise - consistent with a Maths chapter, unlike Physics/Biology). Tables: 2 (ex_3.1's men/women-workers data, q_3.52's sales data), both nested inside their item's own :::prompt rather than inside a solution step - since a flow segment only supports text/figure types, each was inlined as a text segment carrying the table's own raw markdown verbatim, never dropped or reformatted. Gate: item count (102), part count (51), and distinct figure src count (0) all cross-checked between the written JSON, re-parsed, and a fresh independent scan of structured.en.md itself - all three matched exactly, no drop or duplication."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-24T10:48:11.977160+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "8eb7409be646a2f8"
+    },
+    "counts": {
+      "noise_strip_pass_2": true,
+      "items_fixed": [
+        "q_3.10.solution",
+        "q_3.32.solution",
+        "q_3.44.solution",
+        "q_3.45.question",
+        "q_3.45.solution"
+      ]
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Second noise-strip pass, same root cause as the first (see the immediately preceding \"simplify\" manifest entry) - a stage-9 re-render surfaced 4 more locations of the identical pre-existing mathpix extraction artifact, this time at EXERCISE/MISCELLANEOUS section boundaries rather than the earlier fix's EXAMPLE-section ones: q_3.10 (last item of Exercise 3.1, trailing \"## EXERCISE 3.2\"), q_3.32 (last item of Exercise 3.2, trailing \"## EXERCISE 3.3\"), q_3.44 (last item of Exercise 3.3, trailing \"## EXERCISE 3.4\"), q_3.45 (the sole item of Exercise 3.4 - carried it TWICE: \"## Miscellaneous Examples\" trailing its own question field, \"## MISCELLANEOUS EXERCISE\" trailing its solution field). A comprehensive fresh sweep of every item/part question and solution field for this same pattern (not just the 4 flagged locations) confirmed exactly these 5 occurrences and no others anywhere in the chapter - this pass should be the last one needed. Fixed identically to the first pass: code-applied exact-match removal via mdio, round-trip (102 items) and tag._parse both verified clean after."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-24T10:50:14.643867+00:00",
+    "inputs": {
+      "structured.en.md": "fd8ae34732b630d9"
+    },
+    "counts": {
+      "items": 102,
+      "parts": 51,
+      "distinct_figures": 0,
+      "stage_distribution": {
+        "given": 64,
+        "key_formula": 14,
+        "substitute": 101,
+        "conclusion": 116
+      },
+      "notes": 1,
+      "tables": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Stage 8 for maths-12-3-en: walked 07_format/structured.en.md's container tree (tag._parse) and serialized to 08_tag/structured.en.json. Per step_8/PROMPT.md's own framing, this stage's only genuine judgment call (given/key-formula/substitute/conclusion stage assignment for any block stage 7 left unlabelled or freeform-labelled) reduces to a fully mechanical rule once stage 7's own fixed-vocabulary labels are trusted as-is - implemented entirely as deterministic code, zero model calls, consistent with the pipeline's own model-call-discipline note that writing this JSON is code, not judgment. Handled: (1) explicit :::concept/:::formula always given/key_formula; (2) a step's existing fixed-vocabulary label (Given/Key formula/Substitute/Conclusion) trusted as authoritative; (3) any other step - freeform-labelled (this chapter's induction-proof \"Base case\"/\"Inductive hypothesis\"/\"Inductive step\" captions, or bare n=\"N\" steps) or genuinely unlabelled, or a loose run of text with no wrapping container at all - positionally inferred (first stageable block in that solution/part scope = given, last = conclusion, everything between = substitute, a lone stageable block = conclusion), independently per item and per part; (4) a block nested inside another block (sol_3.misc.12's two induction proofs, each wrapped in an outer :::step{n=\"1\"}/:::step{n=\"2\"} grouping around three inner Base-case/Inductive-hypothesis/Inductive-step steps) flattened into separate top-level solution_blocks entries in document order, per the stage's own flattening intent, rather than dropped or nested in the JSON; (5) the known duplicate-whole-item-solution artifact rule applied - no item in this chapter actually has a genuine duplicate (every multi-part item's single shared :::solution IS the intended per-part content, confirmed at stage 7), so this mainly guards against a false trigger, but the rule (empty item-level solution_blocks whenever parts is non-empty) is applied unconditionally per spec; (6) a leading textbook \"Solution:\" opener stripped from a solution's first text segment where present (none found in this English chapter's actual content - checked, zero hits); (7) a :::note with no label gets a sensible default from its type (none needed here - both of ex_3.6's notes and ex_3.12's note already carry real freeform labels from stage 7). Figures: this chapter has zero :::figure containers and zero inline image references anywhere in its 102 items (the single image mathpix reported at stage 1 never attached to any specific example/exercise - consistent with a Maths chapter, unlike Physics/Biology). Tables: 2 (ex_3.1's men/women-workers data, q_3.52's sales data), both nested inside their item's own :::prompt rather than inside a solution step - since a flow segment only supports text/figure types, each was inlined as a text segment carrying the table's own raw markdown verbatim, never dropped or reformatted. Gate: item count (102), part count (51), and distinct figure src count (0) all cross-checked between the written JSON, re-parsed, and a fresh independent scan of structured.en.md itself - all three matched exactly, no drop or duplication."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-24T10:52:48.278218+00:00",
+    "inputs": {
+      "structured.en.md": "d42d64ba660225ee"
+    },
+    "counts": {
+      "items": 102,
+      "parts": 51,
+      "distinct_figures": 0,
+      "stage_distribution": {
+        "given": 64,
+        "key_formula": 14,
+        "substitute": 101,
+        "conclusion": 116
+      },
+      "notes": 1,
+      "tables": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Stage 8 for maths-12-3-en: walked 07_format/structured.en.md's container tree (tag._parse) and serialized to 08_tag/structured.en.json. Per step_8/PROMPT.md's own framing, this stage's only genuine judgment call (given/key-formula/substitute/conclusion stage assignment for any block stage 7 left unlabelled or freeform-labelled) reduces to a fully mechanical rule once stage 7's own fixed-vocabulary labels are trusted as-is - implemented entirely as deterministic code, zero model calls, consistent with the pipeline's own model-call-discipline note that writing this JSON is code, not judgment. Handled: (1) explicit :::concept/:::formula always given/key_formula; (2) a step's existing fixed-vocabulary label (Given/Key formula/Substitute/Conclusion) trusted as authoritative; (3) any other step - freeform-labelled (this chapter's induction-proof \"Base case\"/\"Inductive hypothesis\"/\"Inductive step\" captions, or bare n=\"N\" steps) or genuinely unlabelled, or a loose run of text with no wrapping container at all - positionally inferred (first stageable block in that solution/part scope = given, last = conclusion, everything between = substitute, a lone stageable block = conclusion), independently per item and per part; (4) a block nested inside another block (sol_3.misc.12's two induction proofs, each wrapped in an outer :::step{n=\"1\"}/:::step{n=\"2\"} grouping around three inner Base-case/Inductive-hypothesis/Inductive-step steps) flattened into separate top-level solution_blocks entries in document order, per the stage's own flattening intent, rather than dropped or nested in the JSON; (5) the known duplicate-whole-item-solution artifact rule applied - no item in this chapter actually has a genuine duplicate (every multi-part item's single shared :::solution IS the intended per-part content, confirmed at stage 7), so this mainly guards against a false trigger, but the rule (empty item-level solution_blocks whenever parts is non-empty) is applied unconditionally per spec; (6) a leading textbook \"Solution:\" opener stripped from a solution's first text segment where present (none found in this English chapter's actual content - checked, zero hits); (7) a :::note with no label gets a sensible default from its type (none needed here - both of ex_3.6's notes and ex_3.12's note already carry real freeform labels from stage 7). Figures: this chapter has zero :::figure containers and zero inline image references anywhere in its 102 items (the single image mathpix reported at stage 1 never attached to any specific example/exercise - consistent with a Maths chapter, unlike Physics/Biology). Tables: 2 (ex_3.1's men/women-workers data, q_3.52's sales data), both nested inside their item's own :::prompt rather than inside a solution step - since a flow segment only supports text/figure types, each was inlined as a text segment carrying the table's own raw markdown verbatim, never dropped or reformatted. Gate: item count (102), part count (51), and distinct figure src count (0) all cross-checked between the written JSON, re-parsed, and a fresh independent scan of structured.en.md itself - all three matched exactly, no drop or duplication."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-24T10:53:04.613234+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "8eb7409be646a2f8"
+    },
+    "counts": {
+      "note": "see below"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Additional stage-7-merge fix, found while investigating the stage-9 agent's report of 4 more mathpix-heading-bleed items: while fixing those, discovered a SEPARATE bug of my own in the original raw-text stage-7 merge (not a mathpix artifact) - each batch file had been originally rendered as its own self-contained mini-chapter (via render.render() on a sub-chapter) for its agent to work on, so a batch spanning a kind transition (e.g. batch9 = q_3.45 then sol_3.d.1-17; batch10 = ex_3.23-25 then q_3.46-56 then sol_3.misc.*) had its OWN internally-rendered section-divider text (\"## Questions and Solutions\", \"## Additional Questions\") sitting between those items inside that one batch file. My per-item span-extraction (\"everything from this item's opening tag to the next item's opening tag\") swept each such internal divider into the PRECEDING item's own extracted span. Two distinct symptoms resulted: (1) an item whose own span-trailing divider text happened to be immediately followed by the coordinator's own freshly-inserted top-level divider for that same section produced a visible adjacent duplicate (2 instances found: after ex_3.25, before q_3.1; after q_3.56, before sol_3.d.1 - both fixed by collapsing to one, which happened to land in the structurally correct position both times); (2) q_3.45's own span (extracted from batch9, where sol_3.d.1 immediately follows it) carried a trailing \"## Additional Questions\" divider that had NO adjacent duplicate to collapse against, since q_3.45 is not actually the chapter's last real exercise item (q_3.56 is) - this one rendered as a genuinely wrong, out-of-place \"## Additional Questions\" header sitting mid-exercise-section, between q_3.45 and q_3.46. Fixed by removing that specific leaked fragment via exact-match text surgery (context-scoped to avoid touching the one legitimate \"## Additional Questions\" divider elsewhere in the same document). Verified exhaustively: all three section dividers (Examples/Questions and Solutions/Additional Questions) now occur exactly once each, each immediately followed by the true first item of its own kind group (ex_3.1/q_3.1/sol_3.d.1 respectively) - checked programmatically, not just spot-checked. tag._parse and whole-document protect.parity both re-verified clean. 08_tag/structured.en.json regenerated fresh from this fully corrected file; gate passed (102 items, 51 parts, 0 figures)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-24T10:55:32.892187+00:00",
+    "inputs": {
+      "structured.en.json": "0a6030520399e6b2"
+    },
+    "counts": {
+      "html_bytes": 625410,
+      "css_bytes": 21680,
+      "items_rendered": 102,
+      "square_bracket_matrices": 377,
+      "paren_matrices": 695,
+      "binom_vectors": 8,
+      "stacked_fractions": 462,
+      "note_pills": 1,
+      "figures_referenced": 0,
+      "section_dividers": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "figure_src_count_matches",
+      "numeric_readback_against_simplified_md",
+      "playwright_headless_render_no_errors",
+      "full_json_and_html_sweep_for_stray_heading_fragments",
+      "section_divider_count_and_order"
+    ],
+    "model_calls": 1,
+    "notes": "Stage 9 for maths-12-3-en (Matrices, English medium), final pass after three upstream data-correction rounds by the coordinator. Converter and render script unchanged from the first design pass (based on maths-12-4's bracketed-matrix CSS-grid rendering merged with physics-12-5-en's general fixes; new for this chapter: \\prime transpose handling, round-paren matrix detection - the majority shape here, 687 vs 377 square-bracket - \\binom column-vector rendering, \\mathbf/\\pm, a nesting-depth-aware array-body finder, and an i.e./e.g./etc./Fig. abbreviation guard in the sentence splitter). This entry supersedes the prior 'design' entry, whose input hash was the pre-correction structured.en.json. Re-rendered against the regenerated 08_tag/structured.en.json after the coordinator fixed, in three rounds: (1) 7 items (ex_3.6/7/11/12/19/22/25) each carrying a stray trailing '##'/'###' textbook-section-heading fragment left over from a stage-2 boundary cut; (2) 4 more items at exercise/miscellaneous section boundaries (q_3.10/32/44/45) with the same artifact; (3) a batch-spanning stage-7-merge bug where a span carrying its own section-divider text got swept into the wrong item, causing an adjacent duplicate divider and a spurious '## Additional Questions' header wrongly sitting between q_3.45 and q_3.46, mid-exercise-section. Verification performed after this final regeneration, not reused from an earlier pass: (a) full fresh sweep of every text/label/caption field across all 102 items in the JSON for any stray #/##/### fragment - zero found; (b) same sweep re-run directly against the rendered HTML's plain text - zero stray hash tokens; (c) each of the three section dividers (Examples / Questions and Solutions / Additional Questions) confirmed to appear exactly once, in order, each immediately followed by the true first item of its own kind group (item-order transition check: Example 25 -> Question 1 -> Question 56 -> Additional Question EX3.OLD-1, 102 items total, matching 25/56/21 exactly); (d) q_3.10, q_3.32, q_3.44, q_3.45 and q_3.46 individually re-checked - no stray heading text in either prompt or solution tail, and only an ordinary item-to-item divider (not a section divider) sits between q_3.45 and q_3.46; (e) numeric-token read-back via pipeline.mdio.markdown_to_chapter() against 06_simplify/chapter.simplified.en.md - 252 text fields checked, zero missing qualifying tokens; (f) Playwright headless reload - zero console/page errors; (g) figure-src-count check - 0 referenced == 0 resolved (chapter has zero figures, confirmed at stage 8). ex_3.6/ex_3.14's prompt-only shape (entire content in `prompt`, empty solution_blocks) is confirmed deliberate per the coordinator (NCERT states question+result as one continuous sentence for these two, verified against the textbook page images at stages 2/3/6/7) - rendering reviewed and is coherent/readable, not broken or empty-looking; no render-script change needed or made for this shape."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-24T11:00:22.351823+00:00",
+    "inputs": {
+      "final.en.html": "3ce708715d2f7836"
+    },
+    "counts": {
+      "page_count": 73,
+      "file_bytes": 2458755,
+      "fields_checked": 306,
+      "numeric_tokens_missing": 153,
+      "gate_page_count_sane": true,
+      "gate_no_blank_pages": true,
+      "gate_numeric_readback": false
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical PDF export for maths-12-3-en via Playwright/Chromium (page.pdf, print_background=True, prefer_css_page_size=True, no explicit format/width/height), navigated to the real 09_design output file's own file:// path (not a scratch copy), with an explicit document.fonts.ready wait before export and emulate_media(media=\"screen\") applied unconditionally per step_10/PROMPT.md's own standing instruction (this chapter is English-only with no Devanagari text, so the specific pre-base-vowel-reordering bug that fix targets does not apply here, but the fix is applied as a matter of course for every chapter, not diagnosed per-chapter). No model calls - this stage is fully mechanical, per its own model-call-discipline note. Gate: page count sane, zero blank pages, and a numeric read-back re-run directly against the PDF's own extracted text (via fitz), not assumed carried over from stage 9's HTML-based check - with the superscript-run-merging trap explicitly guarded against (a separator inserted before every run of unicode superscript digits during normalization, so a base number and its exponent never glue into one false token)."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-24T11:01:54.786162+00:00",
+    "inputs": {
+      "final.en.html": "3ce708715d2f7836"
+    },
+    "counts": {
+      "page_count": 73,
+      "file_bytes": 2458755,
+      "fields_checked": 306,
+      "numeric_tokens_missing": 0,
+      "gate_page_count_sane": true,
+      "gate_no_blank_pages": true,
+      "gate_numeric_readback": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Corrected re-run of the numeric read-back gate against the already-exported final.en.pdf (no re-export needed - the PDF itself was correct the first time). The immediately preceding \"pdf\" manifest entry recorded a false gate failure (153 \"missing\" numeric tokens, all negative numbers) caused by a bug in the CHECK, not the PDF: this chapter renders a negative sign as a non-breaking hyphen (U+2011), not ASCII '-' - almost certainly the same \"keep a sign glued to its number\" non-breaking-character logic step_9/PROMPT.md documents for other operators (~, ×, =) applied to a literal minus sign too. Perfectly correct, intentional PDF content; my read-back regex simply didn't recognize U+2011 as a minus sign. Fixed by normalizing every minus-like character (U+2010/2011/2212/2013) to ASCII '-' before token extraction - the exact same class of \"the check was wrong, not the content\" trap step_10/PROMPT.md already documents for unicode superscript-run merging, just a different character class. Re-run clean: 306 fields checked, 0 missing. All three gates now genuinely pass: page count 73 (sane for 102 items), zero blank pages, numeric read-back clean."
+  }
+]

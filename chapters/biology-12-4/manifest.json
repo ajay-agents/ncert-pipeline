@@ -455,5 +455,26 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export pass via Playwright/Chromium, same settings as every prior chapter (networkidle + document.fonts.ready wait, emulate_media('screen') applied unconditionally per standing practice, print_background + prefer_css_page_size). Gates: page count 8 (sane for a 16-item chapter with 3 tables and 10 figures - richer content than any prior biology chapter, reflected in the higher page count than bio1's 7pp/bio2's 9pp/bio3's 5pp); 0 blank pages; numeric read-back found 0 qualifying tokens, matching stage 9's own finding. Visual spot-check of pages 2 and 5 (rendered to PNG) confirms clean layout across a page break: q_4.2's comparison table splits cleanly between pages with no torn row, q_4.3's Given/Substitute/Conclusion pills and mid-solution figure render correctly, q_4.4's math superscripts (F_1/F_2) render as proper subscripts. English-only chapter, so the Devanagari reph extraction bug does not apply. No CALIBRATION re-run needed. This completes all 10 stages of biology-12-4's English track."
+  },
+  {
+    "stage": "external_qa_correction_en",
+    "at": "2026-09-23T11:29:21.760785+00:00",
+    "inputs": {
+      "final.en.html": "ce36ffb2fa7892ae"
+    },
+    "counts": {
+      "corrections_applied": 12,
+      "page_count": 9,
+      "file_size_bytes": 1061667,
+      "blank_pages": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "content_checks"
+    ],
+    "model_calls": 1,
+    "notes": "Applied 12 corrections to the English-medium chapter from an external QA report the user pasted (comparing final.en.pdf against the NCERT textbook and the official solutions PDF; the report identified 17 remaining errors after noting the chapter and Q7 parent-genotype fixes were already correct). The user chose to apply all fully-specified simple corrections plus three more invasive completions/rewrites requiring composed content (Q7's truncated extraction, Q12's unresolved parent genotypes, and Q9/Q14/Q16's conceptual rewrites), after explicit sign-off via AskUserQuestion on each of those four more invasive items; deferred Q8 (the source itself never states the F1 distribution the question asks for - flagging as a genuine source incompleteness per Rule 5, not inventing one). Every correction was independently verified by the coordinator directly against chapters/biology-12-4/00_raw/solutions.en.pdf (rendered at 200dpi) AND chapters/biology-12-4/00_raw/chapter.en.pdf (the actual NCERT textbook, also rendered - used to source the exact correct wording for Q9's Morgan/linkage description (p. 67), Q11's \"heterogamety\" (p. 71), Q14's point-mutation vs frame-shift distinction and beta-globin/chromosome-11 mechanism (pp. 72-75), and Q16's Down's syndrome symptom list (p. 76)) - not taken on the external report's word alone. Applied via proper Correction objects through pipeline.verify.apply_corrections() at stage 5, all held=0 (one expected inline-math count increase on q_4.12 from the genuinely-added genotype content, not a data-loss signal), then propagated via exact-match, uniqueness-verified text substitutions through 06_simplify, 07_format, 08_tag (JSON, re-validated), 09_design (HTML) - each downstream stage required its own container-shape-specific substitution (stage 7 onward split some solutions into per-block/per-sentence containers the plain-markdown correction never touched as one contiguous string, and the JSON/HTML forms needed their own escaping/tag-boundary adjustments). Two additional render-level defects (not content errors, the chapter's own template issues per the report) were separately fixed by direct, surgical inspection: Q7's Punnett-square figure was rendering before its own question prompt (confirmed as an isolated anomaly - all 8 other figure-bearing items in this chapter correctly render prompt-before-figure - swapped the two blocks in 09_design/final.en.html only, no render script exists to regenerate from); Q9's topic badge text \"T.H. Morgan's contribution to genetics\" was wrapping awkwardly in its narrow column, stranding the abbreviation \"T.H.\" alone on its own line - shortened to \"Morgan's contribution to genetics\" (topic labels are freeform per _shared/RULES.md, not exam content) across 05_verify through 09_design. Hindi files left completely untouched. Re-exported 10_pdf/final.en.pdf via Playwright/Chromium and confirmed every corrected phrase appears in the PDF's own extracted text with none of the original wrong phrases surviving."
   }
 ]

@@ -18,7 +18,7 @@ What do you think is the significance of reproductive health in a society?
 :::
 
 :::solution{label="Solution"}
-Reproductive health is the total well-being in all aspects of reproduction. It includes physical, emotional, behavioural, and social well-being. Sexually transmitted diseases, such as AIDS and gonorrhoea, spread from one individual to another through sexual contact. They can also lead to unwanted pregnancies. So, it is necessary to create awareness among people, especially the youth, about various aspects of reproduction. Young individuals are the future of the country, and they are most likely to acquire sexually transmitted diseases. Creating awareness about the available birth control methods, sexually transmitted diseases and their prevention, and gender equality will help build a socially conscious, healthy family. Spreading awareness about uncontrolled population growth and social evils among young individuals will help build a reproductively healthy society.
+Reproductive health is the total well-being in all aspects of reproduction. It includes physical, emotional, behavioural, and social well-being. Sexually transmitted infections, such as AIDS and gonorrhoea, spread from one individual to another through sexual contact. Unprotected sexual intercourse can also lead to unwanted pregnancies. So, it is necessary to create awareness among people, especially the youth, about various aspects of reproduction. Young individuals are the future of the country, and they are most likely to acquire sexually transmitted infections. Creating awareness about the available birth control methods, sexually transmitted infections and their prevention, and gender equality will help build a socially conscious, healthy family. Spreading awareness about uncontrolled population growth and social evils among young individuals will help build a reproductively healthy society.
 :::
 
 :::
@@ -33,8 +33,8 @@ Suggest the aspects of reproductive health which need to be given special attent
 :::solution{label="Solution"}
 Reproductive health is the total well-being in all aspects of reproduction. The aspects which have to be given special attention in the present scenarios are
 
-- Counselling and creating awareness among people, especially the youth, about various aspects of reproductive health, such as sexually transmitted diseases, available contraceptive methods, case of pregnant mothers, adolescence, etc.
-- Providing support and facilities such as medical assistance to people during pregnancy, STDs, abortions, contraceptives, infertility, etc. for building a reproductively healthy society
+- Counselling and creating awareness among people, especially the youth, about various aspects of reproductive health, such as sexually transmitted infections, available contraceptive methods, case of pregnant mothers, adolescence, etc.
+- Providing support and facilities such as medical assistance to people during pregnancy, STIs, abortions, contraceptives, infertility, etc. for building a reproductively healthy society
 :::
 
 :::
@@ -80,12 +80,14 @@ What are the suggested reasons for population explosion?
 :::
 
 :::solution{label="Solution"}
-The human population is increasing day by day, leading to population explosion. It is because of the following two major reasons.
+The human population is increasing day by day, leading to population explosion. It is because of the following reasons.
 
 - Decreased death rate
-- Increased birth rate and longevity
+- Decreased maternal mortality rate (MMR)
+- Decreased infant mortality rate (IMR)
+- Increased number of people in the reproductive age group
 
-The death rate has decreased in the past 50 years. This decrease in death rate and increase in birth rate happened due to several factors: control of diseases, spread of awareness and education, improvement in medical facilities, and ensured food supply during emergencies. All this has also increased the longevity of individuals.
+The death rate, MMR and IMR have all declined in the past 50 years due to several factors: control of diseases, spread of awareness and education, improvement in medical facilities, and ensured food supply during emergencies. Along with this, the number of people in the reproductive age group has increased - together these are the probable reasons for the population explosion.
 :::
 
 :::
@@ -111,7 +113,7 @@ Removal of gonads cannot be considered as a contraceptive option. Why?
 :::
 
 :::solution{label="Solution"}
-Contraceptive devices are used to prevent unwanted pregnancy and to stop the spread of STDs. There are many methods, such as natural, barrier, oral, and surgical methods, that prevent unwanted pregnancy. However, the complete removal of gonads cannot be used as a contraceptive option. This is because it would cause infertility and stop the body from making certain hormones needed for the normal functioning of accessory reproductive parts. So, only those contraceptive methods that prevent fertilization should be used, not methods that make a person infertile forever.
+Contraceptive devices are used to prevent unwanted pregnancy, and condoms specifically also help stop the spread of STIs. There are many methods, such as natural, barrier, oral, and surgical methods, that prevent unwanted pregnancy. However, the complete removal of gonads cannot be used as a contraceptive option. This is because it would cause infertility and stop the body from making certain hormones needed for the normal functioning of accessory reproductive parts. So, only those contraceptive methods that prevent fertilization should be used, not methods that make a person infertile forever.
 :::
 
 :::
@@ -124,7 +126,7 @@ Amniocentesis for sex determination is banned in our country. Is this ban necess
 :::
 
 :::solution{label="Solution"}
-Amniocentesis is a pre-natal diagnostic technique. It is used to determine the sex and metabolic disorders of a developing foetus in the mother's uterus by observing chromosomal patterns. This method was developed to detect any kind of genetic disorder in the foetus. However, this technique is being misused to detect the sex of the child before birth, and the female foetus is then aborted. So, to prevent rising female foeticide, it is necessary to ban the use of amniocentesis for determining the sex of a child.
+Amniocentesis is a pre-natal diagnostic technique in which some of the amniotic fluid surrounding the developing foetus in the mother's uterus is drawn out to analyse the foetal cells and dissolved substances. It is used to determine the sex and genetic disorders of a developing foetus by observing chromosomal patterns. This method was developed to detect any kind of genetic disorder in the foetus. However, this technique is being misused to detect the sex of the child before birth, and the female foetus is then aborted. So, to prevent rising female foeticide, it is necessary to ban the use of amniocentesis for determining the sex of a child.
 :::
 
 :::
@@ -141,7 +143,7 @@ Infertility is the inability of a couple to produce a baby even after unprotecte
 
 - Test tube babies
 
-This involves in-vitro fertilisation, where the sperm meets the egg outside the female body. The zygote that forms is then transferred into the uterus or fallopian tube of a normal female. Babies produced by this method are called test tube babies.
+This involves in-vitro fertilisation, where the sperm meets the egg outside the female body. The zygote or early embryo (with upto 8 blastomeres) is then transferred into the fallopian tube (ZIFT - zygote intra fallopian transfer), while an embryo with more than 8 blastomeres is transferred into the uterus (IUT - intra uterine transfer), of a normal female. Babies produced by this method are called test tube babies.
 
 - Gamete Intra fallopian transfer (GIFT)
 
@@ -166,7 +168,7 @@ What are the measures one has to take to prevent from contracting STDs?
 :::
 
 :::solution{label="Solution"}
-Sexually transmitted diseases (STDs) spread from one individual to another through sexual contact. Adolescents and young adults are at the greatest risk of getting these diseases. So, creating awareness among adolescents about their after-effects can help prevent STDs. Using contraceptives, such as condoms, during intercourse can prevent the transfer of these diseases. Also, sex with unknown or multiple partners should be avoided, as they may carry such diseases. If in doubt, a specialist should be consulted immediately to ensure early detection and cure of the disease.
+Sexually transmitted infections (STIs) spread from one individual to another through sexual contact. Adolescents and young adults are at the greatest risk of getting these infections. So, creating awareness among adolescents about their after-effects can help prevent STIs. Using contraceptives, such as condoms, during intercourse can prevent the transfer of these infections. Also, sex with unknown or multiple partners should be avoided, as they may carry such infections. If in doubt, a specialist should be consulted immediately to ensure early detection and cure of the infection.
 :::
 
 :::
@@ -210,11 +212,11 @@ Complete lactation could help as a natural method of contraception. (True/False)
 :::
 
 :::solution
-Complete lactation, or lactational amenorrhoea, is a natural method of contraception. However, it works only during the lactation period, which lasts up to six months after childbirth.
+Complete lactation, or lactational amenorrhoea, is a natural method of contraception. However, it has been reported to be effective only up to a maximum period of six months following childbirth.
 :::
 
 :::answer
-**Answer:** False
+**Answer:** True
 :::
 
 :::
@@ -245,7 +247,7 @@ Surgical methods of contraception prevent gamete formation.
 :::
 
 :::solution
-Surgical methods of contraception prevent the flow of gamete during intercourse.
+Surgical methods of contraception block gamete transport and thereby prevent conception.
 :::
 
 :::
@@ -256,7 +258,7 @@ All sexually transmitted diseases are completely curable.
 :::
 
 :::solution
-Some of the sexually transmitted diseases are curable if they are detected early and treated properly. AIDS is still an incurable disease.
+Some of the sexually transmitted infections are curable if they are detected early and treated properly. Hepatitis-B, genital herpes and HIV infection (leading to AIDS) are still incurable.
 :::
 
 :::
@@ -278,7 +280,7 @@ In E. T. techniques, embryos are always transferred into the uterus.
 :::
 
 :::solution
-In the embryo transfer technique, 8-celled embryos are transferred into the fallopian tube. Embryos with more than 8 cells are transferred into the uterus.
+In the embryo transfer (ET) technique, embryos with upto 8 blastomeres are transferred into the fallopian tube (ZIFT - zygote intra fallopian transfer), while embryos with more than 8 blastomeres are transferred into the uterus (IUT - intra uterine transfer).
 :::
 
 :::

@@ -93,7 +93,7 @@ A diploid organism is heterozygous for 4 loci, how many types of gametes can be 
 
 :::solution{label="Solution"}
 Locus is a fixed position on a chromosome, occupied by one or more genes. Heterozygous organisms contain different alleles for an allelic pair. So, a diploid organism that is heterozygous at four loci will have four different contrasting characters at four different loci.
-For example, if an organism is heterozygous at four loci with four characters, say Aa, Bb, Cc, Dd, then during meiosis, it will segregate to form 8 separate gametes.
+For example, if an organism is heterozygous at four loci with four characters, say Aa, Bb, Cc, Dd, then during meiosis, it will segregate to form 16 separate gametes.
 
 If the genes are not linked, the diploid organism will produce 16 different gametes. However, if the genes are linked, they are inherited together during meiosis, so the number of different gametes produced will be lower.
 :::
@@ -129,7 +129,7 @@ Define and design a test-cross.
 
 :::solution{label="Solution"}
 Test cross is a cross between an organism with unknown genotype and a recessive parent. It is used to determine whether the individual is homozygous or heterozygous for a trait.
-If the progenies produced by a test cross show 50\% dominant trait and 50\% recessive trait, then the unknown individual is heterozygous for a trait. On the other hand, if the progeny produced shows dominant trait, then the unknown individual is homozygous for a trait.
+If the progenies produced by a test cross show 50\% dominant trait and 50\% recessive trait, then the unknown individual is heterozygous for a trait. On the other hand, if all the progeny produced show dominant trait, then the unknown individual is homozygous for a trait.
 :::
 
 :::
@@ -145,7 +145,7 @@ Using a Punnett Square, workout the distribution of phenotypic features in the f
 :::
 
 :::solution{label="Solution"}
-In guinea pigs, heterozygous male with black coat colour (Bb) is crossed with the female having white coat colour (bb). The male will produce two types of gametes, B and b, while the female will produce only one kind of gamete, r. The genotypic and phenotypic ratio in the progenies of $\mathrm{F}_{1}$ generation will be same i.e., 1:1.
+In guinea pigs, heterozygous male with black coat colour (Bb) is crossed with the female having white coat colour (bb). The male will produce two types of gametes, B and b, while the female will produce only one kind of gamete, b. The genotypic and phenotypic ratio in the progenies of $\mathrm{F}_{1}$ generation will be same i.e., 1:1.
 :::
 
 :::
@@ -183,7 +183,7 @@ one dwarf and green plant
 :::
 
 :::solution{label="Solution"}
-A cross between tall plant with yellow seeds and tall plant with green seeds will produce
+A cross between tall plant with yellow seeds and tall plant with green seeds will produce the following types and proportions of phenotype in the offspring: (a) tall and green plants in a proportion of three out of eight (3/8) (b) dwarf and green plants in a proportion of one out of eight (1/8).
 :::
 
 :::
@@ -204,7 +204,7 @@ Linkage is the coexistence of two or more genes on the same chromosome. Genes th
 
 :::
 
-:::question{number="4.9" kind="exercise" id="q_4.9" topic="T.H. Morgan's contribution to genetics" simplified="True"}
+:::question{number="4.9" kind="exercise" id="q_4.9" topic="Morgan's contribution to genetics" simplified="True"}
 #### Question 4.9
 
 :::prompt
@@ -212,7 +212,7 @@ Briefly mention the contribution of T.H. Morgan in genetics.
 :::
 
 :::solution{label="Solution"}
-Morgan's work is based on fruit flies (Drosophila melanogaster). He formulated the chromosomal theory of linkage. He defined linkage as the co-existence of two or more genes in the same chromosome. He performed dihybrid crosses in Drosophila to show that linked genes are inherited together and are located on the X chromosome. His experiments have also proved that tightly linked genes show very low recombination while loosely linked genes show higher recombination.
+Morgan's work is based on fruit flies (Drosophila melanogaster). He experimentally verified the chromosomal theory of inheritance (first proposed by Sutton and Boveri) and, through dihybrid crosses in Drosophila studying sex-linked genes, found that genes situated on the same chromosome do not segregate independently. He coined the term linkage to describe this physical association of genes on a chromosome, and the term recombination for the generation of non-parental gene combinations. His experiments also showed that tightly linked genes show very low recombination while loosely linked genes show higher recombination.
 :::
 
 :::
@@ -241,7 +241,7 @@ How is sex determined in human beings?
 :::
 
 :::solution{label="Solution"}
-Human beings exhibit male heterogamy. In humans, males (XY) produce two different types of gametes, X and Y. The human female (XX) produces only one type of gamete, containing an X chromosome. The sex of the baby is determined by the type of male gamete that fuses with the female gamete. If the fertilizing sperm contains an X chromosome, the baby produced will be a girl. If it contains a Y chromosome, the baby produced will be a boy. So, it is a matter of chance that determines the sex of a baby. There is an equal probability of the fertilizing sperm carrying an X or Y chromosome. Thus, it is the genetic makeup of the sperm that determines the sex of the baby.
+Human beings exhibit male heterogamety. In humans, males (XY) produce two different types of gametes, X and Y. The human female (XX) produces only one type of gamete, containing an X chromosome. The sex of the baby is determined by the type of male gamete that fuses with the female gamete. If the fertilizing sperm contains an X chromosome, the baby produced will be a girl. If it contains a Y chromosome, the baby produced will be a boy. So, it is a matter of chance that determines the sex of a baby. There is an equal probability of the fertilizing sperm carrying an X or Y chromosome. Thus, it is the genetic makeup of the sperm that determines the sex of the baby.
 :::
 
 :::
@@ -264,7 +264,7 @@ The blood group characteristic in humans is controlled by three set of alleles, 
 So, if the father has blood group A and the mother has blood group B, the possible genotypes of the parents will be: Father - $\mathrm{I}^{\mathrm{A}} \mathrm{I}^{\mathrm{A}}$ or $\mathrm{I}^{\mathrm{A}}$ i; Mother - $\mathrm{I}^{\mathrm{B}} \mathrm{I}^{\mathrm{B}}$ or $\mathrm{I}^{\mathrm{B}} \mathrm{i}$.
 A cross between homozygous parents will produce progeny with AB blood group.
 
-A cross between heterozygous parents will produce progenies with AB blood group $\left(\mathrm{I}^{\mathrm{A}} \mathrm{I}^{\mathrm{B}}\right)$ and O blood group (ii).
+A cross between heterozygous parents will produce progenies with AB blood group $\left(\mathrm{I}^{\mathrm{A}} \mathrm{I}^{\mathrm{B}}\right)$ and O blood group (ii). Since the child in this problem has blood group O (genotype ii), both parents must carry the recessive allele i - the father's genotype is $\mathrm{I}^{\mathrm{A}} \mathrm{i}$ and the mother's genotype is $\mathrm{I}^{\mathrm{B}} \mathrm{i}$. Besides the child with blood group O (ii), the other possible offspring genotypes from this cross are $\mathrm{I}^{\mathrm{A}} \mathrm{I}^{\mathrm{B}}$ (AB blood group), $\mathrm{I}^{\mathrm{A}} \mathrm{i}$ (A blood group), and $\mathrm{I}^{\mathrm{B}} \mathrm{i}$ (B blood group).
 :::
 
 :::
@@ -311,7 +311,7 @@ What is point mutation? Give one example.
 :::
 
 :::solution{label="Solution"}
-Point mutation is a change in a single base pair of DNA by substitution, deletion, or insertion of a single nitrogenous base. An example of point mutation is sickle cell anaemia. It involves mutation in a single base pair in the beta-globin chain of haemoglobin pigment of the blood. Glutamic acid in short arm of chromosome II gets replaced with valine at the sixth position.
+Point mutation is a change in a single base pair of DNA by substitution of one nitrogenous base for another (deletion or insertion of a base instead causes a frame-shift mutation). An example of point mutation is sickle cell anaemia. It involves a single base substitution (from GAG to GUG) at the sixth codon of the beta-globin gene, located on chromosome 11, causing glutamic acid to be replaced by valine at the sixth position of the beta-globin chain of haemoglobin.
 :::
 
 :::
@@ -339,17 +339,17 @@ Mention any two autosomal genetic disorders with their symptoms.
 :::solution{label="Solution"}
 Two autosomal genetic disorders are as follows.
 
-- Sickle cell Anaemia
+- Sickle cell Anaemia (a Mendelian, single-gene disorder)
 
 It is an autosomal linked recessive disorder, which is caused by point mutation in the beta-globin chain of haemoglobin pigment of the blood. The disease is characterized by sickle shaped red blood cells, which are formed due to the mutant haemoglobin molecule. The disease is controlled by $\mathrm{Hb}^{\mathrm{A}}$ and $\mathrm{Hb}^{\mathrm{S}}$ allele. The homozygous individuals with genotype, $\mathrm{Hb}^{\mathrm{S}} \mathrm{Hb}^{\mathrm{S}}$, show the symptoms of this disease while the heterozygous individuals with genotype, $\mathrm{Hb}^{\mathrm{A}} \mathrm{Hb}^{\mathrm{S}}$, are not affected. However, they act as carriers of the disease.
 
 Symptoms: Rapid heart rate, breathlessness, delayed growth and puberty, jaundice, weakness, fever, excessive thirst, chest pain, and decreased fertility are the major symptoms of this disease.
 
-- Down's syndrome
+- Down's syndrome (a chromosomal disorder)
 
 It is an autosomal disorder that is caused by the trisomy of chromosome 21.
 
-Symptoms: The individual is short statured with round head, open mouth, protruding tongue, short neck, slanting eyes, and broad short hands. The individual also shows retarded mental and physical growth.
+Symptoms: The individual is short statured with a small round head, furrowed tongue, and partially open mouth. The palm is broad with a characteristic palm crease. Physical, psychomotor, and mental development is retarded.
 :::
 
 :::

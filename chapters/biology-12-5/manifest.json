@@ -618,5 +618,25 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export pass via Playwright/Chromium, same settings as every prior chapter. Gates: page count 8 (sane for a 14-item chapter with 3 tables, 5 figures, and dense DNA/RNA sequence content); 0 blank pages; numeric read-back found 0 qualifying tokens, matching stage 9's own finding. Chapter-specific extra check given this chapter's precision requirements: re-extracted the exported PDF's own text layer and confirmed all 4 DNA/RNA base sequences (28-base ATGC/TACG/GCAT/AUGC strings) and the confirmed-genuine 'VAA' source error are present byte-for-byte in the PDF's extractable text, not just the pre-export HTML - the export pass itself is a real second rendering step that could in principle corrupt this kind of exact-character content even if the HTML was correct. Visual spot-check of page 2 (rendered to PNG) confirms clean layout: q_5.4's mRNA sequence derivation, q_5.5's semi-conservative replication figure, and q_5.6's fixed bullet-label rendering ('Types of nucleic acid polymerases:' on its own line above the list) all render correctly. English-only chapter, so the Devanagari reph extraction bug does not apply. No CALIBRATION re-run needed. This completes all 10 stages of biology-12-5's English track."
+  },
+  {
+    "stage": "external_qa_correction_en",
+    "at": "2026-09-23T10:54:26.726767+00:00",
+    "inputs": {
+      "final.en.html": "4e3df459920f94c0"
+    },
+    "counts": {
+      "corrections_applied": 7,
+      "page_count": 8,
+      "file_size_bytes": 686337,
+      "blank_pages": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages"
+    ],
+    "model_calls": 0,
+    "notes": "Applied 7 corrections to the English-medium chapter from an external QA report the user pasted (a comparison of final.en.pdf against the NCERT textbook and the official solutions PDF, identifying 19 total discrepancies; the user chose to apply only the 7 \"serious factual/conceptual\" ones this pass, the other 12 (3 incomplete-answer items, 9 notation/precision issues) deferred). Every one of the 7 was independently re-verified by the coordinator directly against chapters/biology-12-5/00_raw/solutions.en.pdf (rendered at 200dpi, read visually) before being treated as genuine - not taken on the external report's word alone, matching this session's standing discipline. All 7 are confirmed printed verbatim in the official solutions manual itself (genuine source errors, not mathpix/OCR artifacts): q_5.8 part (b) claimed mRNA is a template for transcription (should be translation - DNA is transcription's template, mRNA is its product); part (c) claimed thymine is replaced by uracil \"in DNA\" (should be \"in RNA\" - self-contradictory as printed); q_5.10 claimed the lac operon's \"three structural genes\" are operator+promoter+regulator (should be promoter+operator as regulatory regions plus the real three structural genes z/y/a, with the regulator gene i separate - confirmed both by biology fact and by the source's own correctly-drawn p-i-p-o-z-y-a diagram on the same page, which directly contradicts its own adjacent text); q_5.12 claimed HGP completed in 2006 (should be 2003 - 1990 start + 13 years); q_5.14 part (a) claimed the \"sense strand\" acts as template for mRNA synthesis (should be the template/antisense strand) and that RNA polymerase uses \"dNTPs\" (should be NTPs - deoxyribonucleotides are for DNA replication, not RNA synthesis; the source sentence even contradicted its own preceding words); part (c) printed \"STOP codon (VAA, UAG, and UGA)\" - confirmed via direct visual inspection of the source page that it genuinely, legibly prints \"VAA\" (should be UAA), not a mathpix misread. All 7 applied via a proper Correction object through pipeline.verify.apply_corrections() at stage 5 (05_verify/chapter.verified.en.md), all held=0, all gates (math_parity/counts/question_text_frozen/answers_unchanged) clean, then propagated via exact-match, uniqueness-verified text substitutions through 06_simplify, 07_format, 08_tag (JSON, re-validated), 09_design (HTML) - the Hindi files were left completely untouched throughout, since the user's report and request were specifically about final.en.pdf. Re-exported 10_pdf/final.en.pdf via Playwright/Chromium (page count unchanged at 8, no blank pages) and confirmed all 7 corrected phrases appear in the PDF's own extracted text with none of the 7 original wrong phrases surviving. The other 12 items from the external report (3 incomplete answers, 9 notation/precision issues) were NOT applied this pass - the user chose to defer them since the pasted summary did not give full page/text detail for those."
   }
 ]

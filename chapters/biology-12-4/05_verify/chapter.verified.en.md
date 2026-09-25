@@ -81,7 +81,7 @@ Monohybrid and Dihybrid.
 
 :::
 
-:::question{number="4.3" kind="exercise" id="q_4.3" topic="Gametes from a tetra-heterozygous organism"}
+:::question{number="4.3" kind="exercise" id="q_4.3" topic="Gametes from a tetra-heterozygous organism" corrections_applied="1"}
 #### Question 4.3
 
 :::prompt
@@ -93,7 +93,7 @@ A diploid organism is heterozygous for 4 loci, how many types of gametes can be 
 
 :::solution{label="Solution"}
 Locus is a fixed position on a chromosome, which is occupied by a single or more genes. Heterozygous organisms contain different alleles for an allelic pair. Hence, a diploid organism, which is heterozygous at four loci, will have four different contrasting characters at four different loci.
-For example, if an organism is heterozygous at four loci with four characters, say Aa, Bb, Cc, Dd, then during meiosis, it will segregate to form 8 separate gametes.
+For example, if an organism is heterozygous at four loci with four characters, say Aa, Bb, Cc, Dd, then during meiosis, it will segregate to form 16 separate gametes.
 
 If the genes are not linked, then the diploid organism will produce 16 different gametes. However, if the genes are linked, the gametes will reduce their number as the genes might be linked and the linked genes will be inherited together during the process of meiosis.
 :::
@@ -117,7 +117,7 @@ For example, when pea plants with round seeds (RR) are crossed with plants with 
 
 :::
 
-:::question{number="4.5" kind="exercise" id="q_4.5" topic="Test cross definition and design"}
+:::question{number="4.5" kind="exercise" id="q_4.5" topic="Test cross definition and design" corrections_applied="1"}
 #### Question 4.5
 
 :::prompt
@@ -129,12 +129,12 @@ Define and design a test-cross.
 
 :::solution{label="Solution"}
 Test cross is a cross between an organism with unknown genotype and a recessive parent. It is used to determine whether the individual is homozygous or heterozygous for a trait.
-If the progenies produced by a test cross show 50\% dominant trait and 50\% recessive trait, then the unknown individual is heterozygous for a trait. On the other hand, if the progeny produced shows dominant trait, then the unknown individual is homozygous for a trait.
+If the progenies produced by a test cross show 50\% dominant trait and 50\% recessive trait, then the unknown individual is heterozygous for a trait. On the other hand, if all the progeny produced show dominant trait, then the unknown individual is homozygous for a trait.
 :::
 
 :::
 
-:::question{number="4.6" kind="exercise" id="q_4.6" topic="Punnett square for a monohybrid cross"}
+:::question{number="4.6" kind="exercise" id="q_4.6" topic="Punnett square for a monohybrid cross" corrections_applied="1"}
 #### Question 4.6
 
 :::prompt
@@ -145,12 +145,12 @@ Using a Punnett Square, workout the distribution of phenotypic features in the f
 :::
 
 :::solution{label="Solution"}
-In guinea pigs, heterozygous male with black coat colour (Bb) is crossed with the female having white coat colour (bb). The male will produce two types of gametes, B and b, while the female will produce only one kind of gamete, r. The genotypic and phenotypic ratio in the progenies of $\mathrm{F}_{1}$ generation will be same i.e., 1:1.
+In guinea pigs, heterozygous male with black coat colour (Bb) is crossed with the female having white coat colour (bb). The male will produce two types of gametes, B and b, while the female will produce only one kind of gamete, b. The genotypic and phenotypic ratio in the progenies of $\mathrm{F}_{1}$ generation will be same i.e., 1:1.
 :::
 
 :::
 
-:::question{number="4.7" kind="exercise" id="q_4.7" topic="Dihybrid cross phenotype ratio"}
+:::question{number="4.7" kind="exercise" id="q_4.7" topic="Dihybrid cross phenotype ratio" corrections_applied="1"}
 #### Question 4.7
 
 :::prompt
@@ -183,7 +183,7 @@ one dwarf and green plant
 :::
 
 :::solution{label="Solution"}
-A cross between tall plant with yellow seeds and tall plant with green seeds will produce
+A cross between tall plant with yellow seeds and tall plant with green seeds will produce the following types and proportions of phenotype in the offspring: (a) tall and green plants in a proportion of three out of eight (3/8) (b) dwarf and green plants in a proportion of one out of eight (1/8).
 :::
 
 :::
@@ -204,7 +204,7 @@ Linkage is defined as the coexistence of two or more genes in the same chromosom
 
 :::
 
-:::question{number="4.9" kind="exercise" id="q_4.9" topic="T.H. Morgan's contribution to genetics"}
+:::question{number="4.9" kind="exercise" id="q_4.9" topic="Morgan's contribution to genetics" corrections_applied="1"}
 #### Question 4.9
 
 :::prompt
@@ -212,7 +212,7 @@ Briefly mention the contribution of T.H. Morgan in genetics.
 :::
 
 :::solution{label="Solution"}
-Morgan's work is based on fruit flies (Drosophila melanogaster). He formulated the chromosomal theory of linkage. He defined linkage as the co-existence of two or more genes in the same chromosome and performed dihybrid crosses in Drosophila to show that linked genes are inherited together and are located on X-chromosome. His experiments have also proved that tightly linked genes show very low recombination while loosely linked genes show higher recombination.
+Morgan's work is based on fruit flies (Drosophila melanogaster). He experimentally verified the chromosomal theory of inheritance (first proposed by Sutton and Boveri) and, through dihybrid crosses in Drosophila studying sex-linked genes, found that genes situated on the same chromosome do not segregate independently. He coined the term linkage to describe this physical association of genes on a chromosome, and the term recombination for the generation of non-parental gene combinations. His experiments also showed that tightly linked genes show very low recombination while loosely linked genes show higher recombination.
 :::
 
 :::
@@ -230,7 +230,7 @@ Pedigree analysis is a record of occurrence of a trait in several generations of
 
 :::
 
-:::question{number="4.11" kind="exercise" id="q_4.11" topic="Sex determination in humans"}
+:::question{number="4.11" kind="exercise" id="q_4.11" topic="Sex determination in humans" corrections_applied="1"}
 #### Question 4.11
 
 :::prompt
@@ -241,12 +241,12 @@ How is sex determined in human beings?
 :::
 
 :::solution{label="Solution"}
-Human beings exhibit male heterogamy. In humans, males (XY) produce two different types of gametes, X and Y. The human female (XX) produces only one type of gametes containing X chromosomes. The sex of the baby is determined by the type of male gamete that fuses with the female gamete. If the fertilizing sperm contains X chromosome, then the baby produced will be a girl and if the fertilizing sperm contains Y chromosome, then the baby produced will be a boy. Hence, it is a matter of chance that determines the sex of a baby. There is an equal probability of the fertilizing sperm being an X or Y chromosome. Thus, it is the genetic makeup of the sperm that determines the sex of the baby.
+Human beings exhibit male heterogamety. In humans, males (XY) produce two different types of gametes, X and Y. The human female (XX) produces only one type of gametes containing X chromosomes. The sex of the baby is determined by the type of male gamete that fuses with the female gamete. If the fertilizing sperm contains X chromosome, then the baby produced will be a girl and if the fertilizing sperm contains Y chromosome, then the baby produced will be a boy. Hence, it is a matter of chance that determines the sex of a baby. There is an equal probability of the fertilizing sperm being an X or Y chromosome. Thus, it is the genetic makeup of the sperm that determines the sex of the baby.
 :::
 
 :::
 
-:::question{number="4.12" kind="exercise" id="q_4.12" topic="ABO blood group inheritance"}
+:::question{number="4.12" kind="exercise" id="q_4.12" topic="ABO blood group inheritance" corrections_applied="1"}
 #### Question 4.12
 
 :::prompt
@@ -266,7 +266,7 @@ Father Mother
 $\mathrm{I}^{\mathrm{A}} \mathrm{I}^{\mathrm{A}}$ or $\mathrm{I}^{\mathrm{A}}$ i $\mathrm{I}^{\mathrm{B}} \mathrm{I}^{\mathrm{B}}$ or $\mathrm{I}^{\mathrm{B}} \mathrm{i}$
 A cross between homozygous parents will produce progeny with AB blood group.
 
-A cross between heterozygous parents will produce progenies with AB blood group $\left(\mathrm{I}^{\mathrm{A}} \mathrm{I}^{\mathrm{B}}\right)$ and O blood group (ii).
+A cross between heterozygous parents will produce progenies with AB blood group $\left(\mathrm{I}^{\mathrm{A}} \mathrm{I}^{\mathrm{B}}\right)$ and O blood group (ii). Since the child in this problem has blood group O (genotype ii), both parents must carry the recessive allele i - the father's genotype is $\mathrm{I}^{\mathrm{A}} \mathrm{i}$ and the mother's genotype is $\mathrm{I}^{\mathrm{B}} \mathrm{i}$. Besides the child with blood group O (ii), the other possible offspring genotypes from this cross are $\mathrm{I}^{\mathrm{A}} \mathrm{I}^{\mathrm{B}}$ (AB blood group), $\mathrm{I}^{\mathrm{A}} \mathrm{i}$ (A blood group), and $\mathrm{I}^{\mathrm{B}} \mathrm{i}$ (B blood group).
 :::
 
 :::
@@ -305,7 +305,7 @@ Incomplete dominance is a phenomenon in which one allele shows incomplete domina
 
 :::
 
-:::question{number="4.14" kind="exercise" id="q_4.14" topic="Point mutation"}
+:::question{number="4.14" kind="exercise" id="q_4.14" topic="Point mutation" corrections_applied="1"}
 #### Question 4.14
 
 :::prompt
@@ -313,7 +313,7 @@ What is point mutation? Give one example.
 :::
 
 :::solution{label="Solution"}
-Point mutation is a change in a single base pair of DNA by substitution, deletion, or insertion of a single nitrogenous base. An example of point mutation is sickle cell anaemia. It involves mutation in a single base pair in the beta-globin chain of haemoglobin pigment of the blood. Glutamic acid in short arm of chromosome II gets replaced with valine at the sixth position.
+Point mutation is a change in a single base pair of DNA by substitution of one nitrogenous base for another (deletion or insertion of a base instead causes a frame-shift mutation). An example of point mutation is sickle cell anaemia. It involves a single base substitution (from GAG to GUG) at the sixth codon of the beta-globin gene, located on chromosome 11, causing glutamic acid to be replaced by valine at the sixth position of the beta-globin chain of haemoglobin.
 :::
 
 :::
@@ -331,7 +331,7 @@ Sutton and Boveri proposed the chromosomal theory of inheritance in 1902. They l
 
 :::
 
-:::question{number="4.16" kind="exercise" id="q_4.16" topic="Autosomal genetic disorders"}
+:::question{number="4.16" kind="exercise" id="q_4.16" topic="Autosomal genetic disorders" corrections_applied="2"}
 #### Question 4.16
 
 :::prompt
@@ -341,17 +341,17 @@ Mention any two autosomal genetic disorders with their symptoms.
 :::solution{label="Solution"}
 Two autosomal genetic disorders are as follows.
 
-- Sickle cell Anaemia
+- Sickle cell Anaemia (a Mendelian, single-gene disorder)
 
 It is an autosomal linked recessive disorder, which is caused by point mutation in the beta-globin chain of haemoglobin pigment of the blood. The disease is characterized by sickle shaped red blood cells, which are formed due to the mutant haemoglobin molecule. The disease is controlled by $\mathrm{Hb}^{\mathrm{A}}$ and $\mathrm{Hb}^{\mathrm{S}}$ allele. The homozygous individuals with genotype, $\mathrm{Hb}^{\mathrm{S}} \mathrm{Hb}^{\mathrm{S}}$, show the symptoms of this disease while the heterozygous individuals with genotype, $\mathrm{Hb}^{\mathrm{A}} \mathrm{Hb}^{\mathrm{S}}$, are not affected. However, they act as carriers of the disease.
 
 Symptoms: Rapid heart rate, breathlessness, delayed growth and puberty, jaundice, weakness, fever, excessive thirst, chest pain, and decreased fertility are the major symptoms of sickle cell anaemia disease.
 
-- Down's syndrome
+- Down's syndrome (a chromosomal disorder)
 
 It is an autosomal disorder that is caused by the trisomy of chromosome 21.
 
-Symptoms: The individual is short statured with round head, open mouth, protruding tongue, short neck, slanting eyes, and broad short hands. The individual also shows retarded mental and physical growth.
+Symptoms: The individual is short statured with a small round head, furrowed tongue, and partially open mouth. The palm is broad with a characteristic palm crease. Physical, psychomotor, and mental development is retarded.
 :::
 
 :::

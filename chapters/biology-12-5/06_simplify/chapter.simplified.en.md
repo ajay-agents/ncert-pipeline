@@ -166,7 +166,7 @@ mRNA and tRNA
 :::solution
 | mRNA |  | tRNA |
 | :--- | :--- | :--- |
-| 1. | mRNA or messenger RNA acts as a template for the process of transcription. | tRNA or transfer RNA acts as an adaptor molecule that carries a specific amino acid to mRNA for the synthesis of polypeptide. |
+| 1. | mRNA or messenger RNA acts as a template for the process of translation. | tRNA or transfer RNA acts as an adaptor molecule that carries a specific amino acid to mRNA for the synthesis of polypeptide. |
 | 2. | It is a linear molecule. | It has clover leaf shape. |
 :::
 
@@ -180,7 +180,7 @@ Template strand and Coding strand
 :::solution
 | Template strand |  | Coding strand |
 | :--- | :--- | :--- |
-| 1. | Template strand of DNA acts as a template for the synthesis of mRNA during transcription. | Coding strand is a sequence of DNA that has the same base sequence as that of mRNA (except thymine that is replaced by uracil in DNA). |
+| 1. | Template strand of DNA acts as a template for the synthesis of mRNA during transcription. | Coding strand is a sequence of DNA that has the same base sequence as that of mRNA (except thymine that is replaced by uracil in RNA). |
 | 2. | It runs from 3' to 5'. | It runs from 5'to 3'. |
 :::
 
@@ -215,7 +215,7 @@ In the medium where E. coli was growing, lactose was added, which induced the la
 :::
 
 :::solution{label="Solution"}
-Lac operon is a segment of DNA that is made up of three adjacent structural genes, namely, an operator gene, a promoter gene, and a regulator gene. It works in a coordinated manner to metabolize lactose into glucose and galactose.
+Lac operon is a segment of DNA that is made up of a promoter, an operator, and three structural genes (z, y and a); a separate regulator gene (i), located just upstream, controls the operon's activity. It works in a coordinated manner to metabolize lactose into glucose and galactose.
 In lac operon, lactose acts as an inducer. It binds to the repressor and inactivates it. Once the lactose binds to the repressor, RNA polymerase binds to the promoter region. Hence, three structural genes express their product and respective enzymes are produced. These enzymes act on lactose so that lactose is metabolized into glucose and galactose.
 After sometime, when the level of inducer decreases as it is completely metabolized by enzymes, it causes synthesis of the repressor from regulator gene. The repressor binds to the operator gene and prevents RNA polymerase from transcribing the operon. Hence, the transcription is stopped. This type of regulation is known as negative regulation.
 :::
@@ -272,7 +272,7 @@ Why is the Human Genome project called a mega project?
 :::
 
 :::solution{label="Solution"}
-Human genome project was considered to be a mega project because it had a specific goal to sequence every base pair present in the human genome. It took around 13 years for its completion and got accomplished in year 2006. It was a large scale project, which aimed at developing new technology and generating new information in the field of genomic studies. As a result of it, several new areas and avenues have opened up in the field of genetics, biotechnology, and medical sciences. It provided clues regarding the understanding of human biology.
+Human genome project was considered to be a mega project because it had a specific goal to sequence every base pair present in the human genome. It took around 13 years for its completion and got accomplished in year 2003. It was a large scale project, which aimed at developing new technology and generating new information in the field of genomic studies. As a result of it, several new areas and avenues have opened up in the field of genetics, biotechnology, and medical sciences. It provided clues regarding the understanding of human biology.
 :::
 
 :::
@@ -325,7 +325,7 @@ The three important events that occur during the process of transcription are as
 - Elongation
 - Termination
 
-The DNA-dependent RNA polymerase and certain initiation factors $(\sigma)$ bind at the double stranded DNA at the promoter region of the template strand and initiate the process of transcription. RNA polymerase moves along the DNA and leads to the unwinding of DNA duplex into two separate strands. Then, one of the strands, called sense strand, acts as template for mRNA synthesis. The enzyme, RNA polymerase, utilizes nucleoside triphosphates (dNTPs) as raw material and polymerizes them to form mRNA according to the complementary bases present on the template DNA. This process of opening of helix and elongation of polynucleotide chain continues until the enzyme reaches the terminator region. As RNA polymerase reaches the terminator region, the newly synthesized mRNA transcripted along with enzyme is released. Another factor called terminator factor ( $\rho$ ) is required for the termination of the transcription.
+The DNA-dependent RNA polymerase and certain initiation factors $(\sigma)$ bind at the double stranded DNA at the promoter region of the template strand and initiate the process of transcription. RNA polymerase moves along the DNA and leads to the unwinding of DNA duplex into two separate strands. Then, one of the strands, called the template (antisense) strand, acts as template for mRNA synthesis. The enzyme, RNA polymerase, utilizes ribonucleoside triphosphates (NTPs) as raw material and polymerizes them to form mRNA according to the complementary bases present on the template DNA. This process of opening of helix and elongation of polynucleotide chain continues until the enzyme reaches the terminator region. As RNA polymerase reaches the terminator region, the newly synthesized mRNA transcripted along with enzyme is released. Another factor called terminator factor ( $\rho$ ) is required for the termination of the transcription.
 :::
 
 :::
@@ -354,7 +354,7 @@ The process of translation involves three steps.
 - Elongation
 - Termination
 
-During the initiation of the translation, tRNA gets charged when the amino acid binds to it using ATP. The start (initiation) codon (AUG) present on mRNA is recognized only by the charged tRNA. The ribosome acts as an actual site for the process of translation and contains two separate sites in a large subunit for the attachment of subsequent amino acids. The small subunit of ribosome binds to mRNA at the initiation codon (AUG) followed by the large subunit. Then, it initiates the process of translation. During the elongation process, the ribosome moves one codon downstream along with mRNA so as to leave the space for binding of another charged tRNA. The amino acid brought by tRNA gets linked with the previous amino acid through a peptide bond and this process continues resulting in the formation of a polypeptide chain. When the ribosome reaches one or more STOP codon (VAA, UAG, and UGA), the process of translation gets terminated. The polypeptide chain is released and the ribosomes get detached from mRNA.
+During the initiation of the translation, tRNA gets charged when the amino acid binds to it using ATP. The start (initiation) codon (AUG) present on mRNA is recognized only by the charged tRNA. The ribosome acts as an actual site for the process of translation and contains two separate sites in a large subunit for the attachment of subsequent amino acids. The small subunit of ribosome binds to mRNA at the initiation codon (AUG) followed by the large subunit. Then, it initiates the process of translation. During the elongation process, the ribosome moves one codon downstream along with mRNA so as to leave the space for binding of another charged tRNA. The amino acid brought by tRNA gets linked with the previous amino acid through a peptide bond and this process continues resulting in the formation of a polypeptide chain. When the ribosome reaches one or more STOP codon (UAA, UAG, and UGA), the process of translation gets terminated. The polypeptide chain is released and the ribosomes get detached from mRNA.
 :::
 
 :::

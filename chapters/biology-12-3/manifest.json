@@ -482,5 +482,26 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export pass via Playwright/Chromium, same settings as every prior chapter (networkidle + document.fonts.ready wait, emulate_media('screen') applied unconditionally per standing practice, print_background + prefer_css_page_size, no explicit format/width/height). Gates: page count 5 (sane for a 12-item, purely descriptive/no-figure chapter - shorter than bio1's 7pp/bio2's 9pp, consistent with this being the shortest of the three biology chapters so far); 0 blank pages; numeric read-back found 0 qualifying tokens (this chapter has no 3+-digit or decimal numbers anywhere in its content, matching stage 9's own finding - not a gap). Superscript-exponent separator fix applied to the normalization regex per standing practice, though moot here (no exponents in this chapter's content). English-only chapter, so the Devanagari reph extraction bug does not apply. Visual spot-check of page 1 (rendered to PNG) confirms clean layout: correct pill colors/labels, badge cycling, item dividers. No CALIBRATION re-run needed (stage 10 doesn't change pre-stage-7 flat markdown). This completes all 10 stages of biology-12-3's English track."
+  },
+  {
+    "stage": "external_qa_correction_en",
+    "at": "2026-09-23T12:01:49.144109+00:00",
+    "inputs": {
+      "final.en.html": "430fd67a4384f1d8"
+    },
+    "counts": {
+      "corrections_applied": 12,
+      "page_count": 5,
+      "file_size_bytes": 327600,
+      "blank_pages": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "content_checks"
+    ],
+    "model_calls": 1,
+    "notes": "Applied 12 corrections to the English-medium chapter from an external QA report the user pasted (comparing final.en.pdf against the NCERT textbook and the official solutions PDF; the report identified 12 items, all applied - 1 self-contradicting True/False verdict (q_3.11c), 4 numerical/factual precision items, 4 conceptual items including one the report flagged as the PIPELINE'S OWN error (q_3.1, not the source's), and 2 moderate items). Every claim was independently re-verified by the coordinator directly against both chapters/biology-12-3/00_raw/solutions.en.pdf and chapter.en.pdf (the actual NCERT textbook, rendered and read page by page) before being treated as genuine - not taken on the external report's word alone. This caught two important nuances the report got wrong or unverifiable: (1) the report's claimed \"two-year\" infertility criterion for q_3.9/q_3.11(b) does NOT appear anywhere in NCERT's own definition (chapter.en.pdf pp.47-48 say only \"unable to produce children in spite of unprotected sexual co-habitation\") - per genuine user sign-off, this was NOT applied, since adding it would introduce something the verified source does not say; (2) the report's STD-vs-STI claim was only partially right - NCERT's table of contents and one early paragraph (p.42) do say \"STD\", but the chapter's own dedicated section 3.4 is titled \"Sexually Transmitted Infections (STIs)\" and its body uses \"STI\" exclusively (confirmed ~8 times on p.47) - applied STD->STI in our answers per genuine user sign-off, matching the textbook's own dominant, deliberate terminology for this topic, while leaving exercise question text itself untouched throughout (Rule 4). q_3.1's fix is distinct from all the others: stage 5 already matched the source faithfully (\"It can also lead to unwanted pregnancies\" - ambiguous but true, referring to sexual contact, not the diseases); a LATER stage (6, simplify) had itself introduced the error by changing \"It\" to \"They\" while also disambiguating the preceding sentence, inadvertently pinning pregnancy-causing to the diseases specifically (false) - fixed directly at stage 6 onward with clearer wording (\"Unprotected sexual intercourse can also lead to unwanted pregnancies\"), not at stage 5 (which never needed fixing for this specific issue). Applied via proper Correction objects through pipeline.verify.apply_corrections() at stage 5 for all items except q_3.1's \"They\" bug (fixed directly at stage 6), all held=0, all gates clean, then propagated via exact-match, uniqueness-verified text substitutions through 06_simplify, 07_format, 08_tag (JSON, re-validated), 09_design (HTML) - most items required their own container/sentence-split-specific handling at each stage. A real bug was caught and fixed in the coordinator's own propagation tooling mid-task: a shared script only wrote its target file after its ENTIRE pair list succeeded, so any run that hit an assertion failure partway through silently discarded every earlier successful replacement in that same run without persisting them - three items (q_3.7, q_3.11(c)'s solution text, q_3.12(a)) were consequently missing from 09_design/final.en.html despite the script's own log claiming they succeeded; caught by an independent full re-verification pass across every stage before export, not assumed from the propagation script's own reported success. Hindi files left completely untouched. Re-exported 10_pdf/final.en.pdf via Playwright/Chromium and confirmed every corrected phrase appears in the PDF's own extracted text with none of the original wrong phrases surviving."
   }
 ]

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap');
+
+/* ---- base ---- */
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body { margin: 0; background: #ffffff; }
+body { font-family: 'Noto Serif Devanagari', 'STIX Two Text', serif; color: #1b1b1b; }
+sub, sup { padding: 0 1.5px; }
+a { color: #10989e; text-decoration: none; }
+a:hover { color: #0c6b70; text-decoration: underline; }
+img, figure, svg { break-inside: avoid; }
+table { break-inside: auto; }
+
+/* page sheet */
+.sheet { display: block; max-width: 210mm; margin: 0 auto; padding: 9mm; box-sizing: border-box; background: #ffffff; }
+
+@page { size: A4; margin: 9mm; }
+@media print { .sheet { max-width: none; margin: 0; padding: 0; } }
+
+/* ---- generated from the design's inline styles (solutions-chapter-1.css,
+   unmodified - see this file's own additions below for everything this
+   chapter's content needs beyond it) ---- */
+.s1 { font-family:'Noto Serif Devanagari','STIX Two Text',serif; color:#1b1b1b; font-size:12.5px; zoom:0.63; width:1080px; padding-right:30px; box-sizing:border-box; overflow-wrap:break-word; }
+.s2 { text-align:center; margin:0 0 30px; }
+.s3 { font-family:'STIX Two Text',serif; font-weight:700; font-size:38px; line-height:1.2; }
+.s4 { font-size:17px; color:#0c5b5e; margin-top:4px; }
+.s5 { display:flex; justify-content:center; gap:8px; margin-top:12px; }
+.s6 { width:9px; height:9px; border-radius:50%; background:#10989e; }
+.s7 { width:9px; height:9px; border-radius:50%; background:#f5820b; }
+.s8 { width:9px; height:9px; border-radius:50%; background:#e42a63; }
+.s9 { width:9px; height:9px; border-radius:50%; background:#7a3df0; }
+.s10 { display:flex; align-items:center; gap:16px; margin:4px 0 30px; break-before:auto; }
+.s11 { flex:1; border-top:2.4px dashed #10989e; }
+.s12 { font-family:'STIX Two Text',serif; font-weight:700; font-size:23px; color:#10989e; }
+.s13 { display:grid; grid-template-columns:150px 1fr; gap:26px; align-items:start; }
+.s14 { justify-self:center; text-align:center; padding-top:14px; }
+.s15 { position:relative; width:118px; border:1.7px dashed #10989e; border-radius:16px; padding:30px 10px 12px; background:#ffffff; }
+.s16 { position:absolute; top:-23px; left:50%; transform:translateX(-50%); width:46px; height:46px; border-radius:50%; background:#10989e; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; font-family:'STIX Two Text',serif; box-shadow:0 2px 0 rgba(0,0,0,0.08); }
+.s17 { position:relative; background:#10989e; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:44px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s18 { position:absolute; right:-1px; bottom:-1px; width:0; height:0; border-style:solid; border-width:0 0 16px 16px; border-color:transparent transparent #ffffff transparent; }
+.s19 { margin-top:10px; font-size:17px; font-weight:700; color:#0c5b5e; line-height:1.35; }
+.s20 { margin-top:14px; }
+.s21 { margin:0; font-size:21px; font-weight:700; line-height:1.7; text-wrap:pretty; }
+.s22 { display:grid; grid-template-columns:135px 1fr; column-gap:24px; row-gap:16px; align-items:start; margin-top:24px; }
+.s23 { text-align:center; }
+.s24 { display:inline-block; background:#c9f0ec; color:#0d4f52; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s25 { margin-top:12px; }
+.s26 { font-size:17.5px; line-height:1.85; }
+.s27 { margin-bottom:8px; }
+.s28 { display:inline-block; background:#cfe3fb; color:#1d3f6e; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s29 { margin-top:10px; }
+.s30 { display:inline-block; background:#eef4fd; border-radius:10px; padding:6px 14px; }
+.s31 { display:inline-flex; flex-direction:column; align-items:stretch; text-align:center; vertical-align:middle; margin:0 7px; line-height:1.45; font-size:16.5px; }
+.s32 { padding:0 16px 3px; border-bottom:1.8px solid #1b1b1b; white-space:nowrap; }
+.s33 { padding:5px 16px 0; white-space:nowrap; }
+.s34 { display:inline-block; background:#d6efc8; color:#2c5a17; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s35 { display:inline-block; background:#ded4f8; color:#43287d; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s36 { font-size:20px; font-weight:700; line-height:1.6; display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+.s37 { display:inline-block; border:2.6px solid #10989e; border-radius:45% 55% 50% 50% / 60% 55% 45% 50%; padding:4px 20px; font-weight:700; }
+.s38 { transform:translateY(-14px); }
+.s39 { border-top:2.6px dashed #f5820b; margin:32px 0 28px; }
+.s40 { position:relative; width:118px; border:1.7px dashed #f5820b; border-radius:16px; padding:30px 10px 12px; background:#ffffff; }
+.s41 { position:absolute; top:-23px; left:50%; transform:translateX(-50%); width:46px; height:46px; border-radius:50%; background:#f5820b; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; font-family:'STIX Two Text',serif; box-shadow:0 2px 0 rgba(0,0,0,0.08); }
+.s42 { position:relative; background:#f5820b; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:44px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s43 { margin-top:10px; font-size:17px; font-weight:700; color:#9a4e02; line-height:1.35; }
+.s44 { display:inline-block; border:2.6px solid #f5820b; border-radius:45% 55% 50% 50% / 60% 55% 45% 50%; padding:4px 20px; font-weight:700; }
+.s45 { width:100%; height:12px; display:block; margin:30px 0 26px; }
+.s46 { position:relative; width:118px; border:1.7px dashed #e42a63; border-radius:16px; padding:30px 10px 12px; background:#ffffff; }
+.s47 { position:absolute; top:-23px; left:50%; transform:translateX(-50%); width:46px; height:46px; border-radius:50%; background:#e42a63; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; font-family:'STIX Two Text',serif; box-shadow:0 2px 0 rgba(0,0,0,0.08); }
+.s48 { position:relative; background:#e42a63; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:44px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s49 { margin-top:10px; font-size:17px; font-weight:700; color:#a3103f; line-height:1.35; }
+.s50 { display:inline-block; border:2.6px solid #e42a63; border-radius:45% 55% 50% 50% / 60% 55% 45% 50%; padding:4px 20px; font-weight:700; }
+.s51 { border-top:2.6px dashed #7a3df0; margin:32px 0 28px; }
+.s52 { position:relative; width:118px; border:1.7px dashed #7a3df0; border-radius:16px; padding:30px 10px 12px; background:#ffffff; }
+.s53 { position:absolute; top:-23px; left:50%; transform:translateX(-50%); width:46px; height:46px; border-radius:50%; background:#7a3df0; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:700; font-family:'STIX Two Text',serif; box-shadow:0 2px 0 rgba(0,0,0,0.08); }
+.s54 { position:relative; background:#7a3df0; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:44px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s55 { margin-top:10px; font-size:17px; font-weight:700; color:#4a1fa8; line-height:1.35; }
+.s56 { display:inline-block; border:2.6px solid #7a3df0; border-radius:45% 55% 50% 50% / 60% 55% 45% 50%; padding:4px 20px; font-weight:700; }
+.s57 { border-top:2.6px dashed #10989e; margin:32px 0 28px; }
+.s58 { border-top:2.6px dashed #e42a63; margin:32px 0 28px; }
+.s59 { font-weight:700; margin:6px 0 8px; }
+.s60 { overflow-x:auto; }
+.s61 { width:100%; border-collapse:collapse; font-size:15.5px; background:#fff; border-radius:10px; overflow:hidden; }
+.s62 { background:#c9f0ec; color:#0d4f52; font-weight:700; }
+.s63 { text-align:left; padding:8px 11px; }
+.s64 { padding:8px 11px; border-top:1px solid #e6ecec; }
+.s65 { position:relative; background:#f5820b; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:38px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s66 { position:relative; background:#e42a63; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:38px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s67 { position:relative; background:#7a3df0; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:38px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s68 { position:relative; background:#10989e; color:#ffffff; border-radius:10px; padding:2px 6px 6px; font-size:38px; font-weight:800; line-height:1.15; transform:rotate(-1.5deg); font-family:'STIX Two Text',serif; box-shadow:2px 3px 0 rgba(0,0,0,0.14); }
+.s69 { display:flex; align-items:center; gap:16px; margin:44px 0 30px; break-before:page; }
+.s70 { flex:1; border-top:2.4px dashed #f5820b; }
+.s71 { font-family:'STIX Two Text',serif; font-weight:700; font-size:23px; color:#f5820b; }
+.s72 { flex:1; border-top:2.4px dashed #e42a63; }
+.s73 { font-family:'STIX Two Text',serif; font-weight:700; font-size:23px; color:#e42a63; }
+.s74 { display:inline-block; background:#fdeec2; color:#7a5200; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s75 { display:inline-block; background:#fbd6dd; color:#8f1236; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+.s76 { display:flex; flex-wrap:wrap; gap:18px; margin:10px 0; }
+.s77 { margin:0; max-width:290px; }
+.s78 { max-width:100%; border-radius:10px; background:#fff; }
+.s79 { font-size:15px; color:#666; margin-top:6px; }
+.s80 { margin:12px 0; }
+
+/* .s19/.s43/.s49/.s55 (the item badge's topic-text line) inherits .s1's
+   page-wide overflow-wrap:break-word, which is right for a long formula or
+   number but wrong for an ordinary English topic label - a merely-long
+   word that doesn't quite fit this ~100px column gets fractured mid-word
+   instead of wrapping at the next word boundary. Topic labels should only
+   ever break between words. (Same fix already applied in maths-12-1-en.) */
+.s19, .s43, .s49, .s55 { overflow-wrap: normal; word-break: keep-all; }
+
+/* ---- added for this chapter (this chapter's content is richer than the
+   exemplar's own: numbered concepts, notes, genuinely separate multi-part
+   solutions) - .s22's grid assumes exactly-alternating label/content pairs
+   and scatters anything richer across its two columns at random. .s81 is a
+   safe flex-column stack of arbitrary full-width rows; .s82 is one
+   self-contained label+content pair (reusing .s23 for the label cell and
+   .s26/.s36 for the content cell, sized via these child rules) - never
+   .s22 itself for this chapter's content. ---- */
+.s81 { display:flex; flex-direction:column; gap:16px; margin-top:24px; }
+.s82 { display:flex; align-items:flex-start; gap:24px; }
+.s82 > .s23 { flex:0 0 135px; }
+.s82 > .s91 { flex:1; min-width:0; }
+
+/* .s23 holds a pill (.s24/.s28/.s34/.s35/.s74/.s75) and, for given/key-
+   formula, a decorative arrow doodle (.s25/.s29) after it in the markup.
+   With .s23's own base rule (text-align:center only) those two sit as
+   plain inline content - when the pill text is short enough that it and an
+   86px-tall doodle both fit on one shared line, ordinary baseline
+   alignment puts the (much shorter) pill text at the BOTTOM of that tall
+   line and lets the doodle float upward above it, instead of the pill
+   sitting at the top (level with the first line of its paired content) and
+   the doodle trailing below it. Stack them as an explicit column so the
+   pill always renders first/top regardless of the doodle's height;
+   harmless when there's no doodle (a lone pill is a one-item column). */
+.s23 { display:flex; flex-direction:column; align-items:center; gap:4px; }
+
+/* .s37/.s44/.s50/.s56's organic blob border (border-radius as %) assumes a
+   short, single-line boxed answer, same as every boxed answer in the
+   exemplar. This chapter also has longer, multi-clause answers that wrap to
+   2+ lines - on a taller box the same % corner radius scales into a much
+   bigger absolute curve and cuts into the wrapped text. These four are the
+   same colors with a plain, fixed-radius rounded rectangle instead, safe at
+   any height; used automatically once the answer text passes a length
+   threshold. */
+.s86 { display:inline-block; border:2.2px solid #10989e; border-radius:12px; padding:6px 16px; font-weight:700; max-width:100%; }
+.s87 { display:inline-block; border:2.2px solid #f5820b; border-radius:12px; padding:6px 16px; font-weight:700; max-width:100%; }
+.s88 { display:inline-block; border:2.2px solid #e42a63; border-radius:12px; padding:6px 16px; font-weight:700; max-width:100%; }
+.s89 { display:inline-block; border:2.2px solid #7a3df0; border-radius:12px; padding:6px 16px; font-weight:700; max-width:100%; }
+
+/* A stacked one-line fraction (.s31/.s32/.s33) is itself two rows tall
+   (numerator over denominator). Loose in running prose that's fine - it
+   just sits taller than the surrounding text - but wrapped in plain "("")"
+   characters (a sqrt of a fraction) the browser can wrap a line break
+   between the "(" and the fraction, or between the fraction and the ")",
+   tearing the expression apart in a way that reads as broken, not as a
+   line break. .s90 glues the radical sign, its parentheses and its
+   contents into one unit that always wraps (or doesn't) together, and is
+   also used to glue a chain of "= <frac/sqrt> = <frac/sqrt>" into one unit
+   for the same reason. Content this wide rarely happens, but on the rare
+   line it does not fit even as one glued unit, let it scroll within its
+   own line instead of overflowing the page. */
+.s90 { display:inline-flex; align-items:center; white-space:nowrap; max-width:100%; overflow-x:auto; vertical-align:middle; }
+
+/* \begin{aligned}/\begin{array}/\begin{gathered}/\begin{cases} row
+   splitting (this chapter's own second-most-common display-math shape
+   after a genuine matrix - 187 \begin{aligned} blocks, plus every
+   \begin{array} used purely as an alignment/justification column rather
+   than a genuine bracket/paren-wrapped matrix). One row per line, stacked,
+   each row its own line - without this, the generic \begin handler's row
+   spans have no line break between them and multiple stacked equation
+   lines run together onto one visual line. */
+.s92 { display:inline-flex; flex-direction:column; align-items:flex-start; vertical-align:middle; margin:2px 6px; line-height:1.5; max-width:100%; }
+.s93 { white-space:nowrap; max-width:100%; overflow-x:auto; }
+.s92, .s93 { break-inside: avoid; }
+.s26, .s36 { overflow-x:auto; }
+
+/* This page is exported to a fixed PDF (the @page/A4 rules above), not only
+   read in a browser - a fraction or a glued sqrt(fraction) unit can still
+   be torn apart by a PAGE break even once a LINE break can no longer split
+   it, which looks just as broken. The base stylesheet already avoids this
+   for img/figure/svg; extend the same treatment to the multi-row units
+   this chapter adds (fractions, matrices, column-vector binoms). */
+.s31, .s90 { break-inside: avoid; }
+
+/* .s14 (the item badge + topic-text + item doodle column) is compact
+   (~150-200px) regardless of how long the item's own content is, so unlike
+   the item card as a whole (.s13 - genuinely too tall to force onto one
+   page for a long multi-part item) there's no good reason for it to ever
+   split. */
+.s14 { break-inside: avoid; }
+
+/* .s1's fixed width:1080px + zoom:0.63 is a desktop/print-page simulation
+   (the base CSS has no mobile breakpoint at all, only @media print) - on a
+   phone that fixed-width block gets squeezed by the browser to fit the
+   narrow viewport, on top of the already-reduced desktop zoom, shrinking
+   text far past readable. Below this width, drop the fixed width/zoom
+   entirely (every s-class's own literal font-size then displays at full
+   size, which reads fine unzoomed) and reflow the two-column layouts (item
+   badge+content, solution label+content) into a single column so the
+   content area actually gets the phone's full width instead of a squeezed
+   leftover next to a fixed-width label column. */
+@media (max-width: 700px) {
+  .s1 { width:100%; zoom:1; padding-right:0; }
+  .s13 { grid-template-columns:1fr; gap:10px; }
+  .s13 > div:last-child { min-width:0; }
+  .s14 { padding-top:0; }
+  .s82 { flex-direction:column; align-items:stretch; gap:6px; }
+  .s82 > .s23 { flex:0 0 auto; text-align:left; }
+  .s82 > .s91 { width:100%; min-width:0; }
+}
+
+/* Bracketed-matrix rendering (this chapter's single dominant content shape -
+   \left[\begin{array}{colspec}...\end{array}\right], 377 occurrences).
+   .s94 is the whole unit (brackets + grid) as one inline-flex row so it
+   never tears across a line or page break; .s95/.s96 draw the left/right
+   square brackets as plain borders stretched to the grid's full height (not
+   literal "["/"]" glyphs, which don't scale to a multi-row matrix); .s97 is
+   the cell grid itself (column count set per-matrix via an inline style,
+   since it varies matrix to matrix); .s98 is one cell. overflow-x:auto is
+   the same safety net already used for a stacked fraction/sqrt unit too
+   wide for its line - let it scroll within its own line rather than
+   overflow the page. */
+.s94 { display:inline-flex; align-items:stretch; white-space:nowrap; vertical-align:middle; margin:2px 4px; max-width:100%; overflow-x:auto; break-inside:avoid; }
+.s95 { border-left:1.6px solid #1b1b1b; border-top:1.6px solid #1b1b1b; border-bottom:1.6px solid #1b1b1b; width:6px; flex-shrink:0; }
+.s96 { border-right:1.6px solid #1b1b1b; border-top:1.6px solid #1b1b1b; border-bottom:1.6px solid #1b1b1b; width:6px; flex-shrink:0; }
+.s97 { display:grid; gap:3px 12px; align-items:center; padding:4px 8px; font-size:14.5px; }
+.s98 { text-align:center; white-space:nowrap; }
+
+/* Parenthesised-matrix rendering: \left(\begin{array}{colspec}...
+   \end{array}\right) - the SAME genuine-matrix content as .s94-.s96 above,
+   just written in the source with round parens instead of square brackets
+   (687 occurrences here - actually the MAJORITY shape in this chapter's own
+   solutions, "let A = (matrix)" being more common than "[matrix]"). Same
+   grid machinery (.s97/.s98 reused directly), but a rounded flank instead
+   of a square-cornered bracket so the page keeps the same visual
+   distinction the source itself makes between the two delimiter styles. */
+.s94p { display:inline-flex; align-items:stretch; white-space:nowrap; vertical-align:middle; margin:2px 4px; max-width:100%; overflow-x:auto; break-inside:avoid; }
+.s95p { border:1.6px solid #1b1b1b; border-right:none; border-radius:60% 0 0 60% / 50%; width:8px; flex-shrink:0; }
+.s96p { border:1.6px solid #1b1b1b; border-left:none; border-radius:0 60% 60% 0 / 50%; width:8px; flex-shrink:0; }
+
+/* Column-vector \binom{a}{b} (8 occurrences, "solve by matrix method"
+   simultaneous-equation setup, e.g. x\binom{2}{3}+y\binom{-1}{1}=
+   \binom{10}{5}) - a genuine 2-row column vector in parentheses, not a
+   division and not a binomial-coefficient stack. Reuses the same rounded-
+   paren flanks as .s94p above and the same .s98 cell styling; .s97b is a
+   simple 2-row single-column stack (no per-instance inline style needed,
+   unlike .s97's variable column count, since a binom is always exactly one
+   column of two rows). */
+.s97b { display:grid; grid-template-columns:1fr; gap:3px 0; align-items:center; padding:4px 8px; font-size:14.5px; }
+
+/* A matrix/binom is itself a tall multi-row unit, same page-break-tearing
+   risk already documented for .s31 (stacked fraction) and .s90 (glued
+   sqrt/fraction chain) above. */
+.s94, .s94p { break-inside: avoid; }
+
+@media (max-width: 700px) {
+  .s97, .s97b { font-size:13px; gap:2px 8px; padding:3px 5px; }
+}
+
+/* Plain data table (this chapter's only two - ex_3.1's men/women-workers
+   data, q_3.52's sales data - both live inside their item's own :::prompt
+   rather than inside a solution step, per this chapter's own 08_tag
+   manifest note). A clean bordered/striped table in the page's own
+   palette (teal header, matching the pill accent color), not a bare
+   unstyled browser default. Wrapped in a scrollable .s101 div (a distinct
+   class from the matrix-cell .s98 above - a table's own wrapper is a
+   block-level div around a <table>, never nested inside a math span, but
+   kept as its own name rather than reusing .s98 to avoid any ambiguity
+   between the two very different uses) so border-radius on the outer
+   wrapper isn't clipped by the table's own border. */
+.s101 { overflow-x:auto; margin:10px 0; break-inside: avoid; }
+.s99 { border-collapse:collapse; font-family:'STIX Two Text',serif; font-size:15px; min-width:100%; }
+.s99 tr:first-child td.s100 { background:#10989e; color:#ffffff; font-weight:700; }
+.s99 tr:nth-child(even):not(:first-child) td.s100 { background:#f2f9fa; }
+.s99 td.s100 { border:1px solid #cfe8ea; padding:6px 12px; text-align:center; white-space:nowrap; }

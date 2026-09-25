@@ -1,0 +1,390 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-24T11:07:13.592732+00:00",
+    "inputs": {
+      "chapter.en.pdf": "919d031e5c8a8cea",
+      "solutions.en.pdf": "a59fe9bef0cc69e0"
+    },
+    "counts": {
+      "note": "see printed stats above; English-only build, no Hindi PDFs"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": null
+  },
+  {
+    "stage": "mathpix",
+    "at": "2026-09-24T11:08:15.655542+00:00",
+    "inputs": {
+      "chapter.en.pdf": "919d031e5c8a8cea",
+      "solutions.en.pdf": "a59fe9bef0cc69e0"
+    },
+    "counts": {
+      "chapter.en": {
+        "pages": 28,
+        "chars": 54418,
+        "dollar_spans": 620,
+        "images": 1,
+        "tables": 20
+      },
+      "solutions.en": {
+        "pages": 99,
+        "chars": 117988,
+        "dollar_spans": 1085,
+        "images": 0,
+        "tables": 53
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-medium build for maths-12-4 (Determinants), source files verified genuine and unswapped before copying (textbook opens \"4.1 Introduction... matrices and algebra of matrices\", 28 pages; solutions opens \"Question 1: Evaluate the determinant... Chapter 4 Determinants EXERCISE 4.1\", 99 pages). Kept in its own directory (maths-12-4-en); the existing Hindi-only maths-12-4 chapter is untouched. No Hindi PDFs provided for this build (English-only, consistent with every other -en chapter this session). Sanity flags: chapter.en.md contains 41 full-width CJK-style punctuation characters (U+FF0D hyphen x2, U+FF0E period x17, U+FF0C comma x18, U+FF08/FF09 parens x2 each) - a genuine mathpix OCR anomaly, but confirmed confined entirely to the chapter's opening decorative epigraph and its \"4.1\" section-number line (\"All Mathematical truths are relative and conditional. - C.P. STEINMETZ\" and the \"4.1 Introduction\" heading) - not pervasive through the other ~54,000 characters of real content. Zero occurrences in solutions.en.md. No Devanagari in either file. Both files comfortably over the 5000-character floor. Flagging for stage 2's awareness (the \"4.1\" boundary marker specifically has a full-width period, not ASCII, so a literal ASCII-period text search for section boundaries would miss it) - not fixed here per this stage's own \"convert, count, report\" scope."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-24T11:25:46.172227+00:00",
+    "inputs": {
+      "chapter.en.md": "a18bda574f4fd8c8",
+      "solutions.en.md": "4e0fe7898e3f80ef"
+    },
+    "counts": {
+      "examples": 19,
+      "exercises": 61,
+      "orphan_additional_exercise": 26,
+      "total_items": 106,
+      "gate_counts": [],
+      "gate_solutions_present": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 6,
+    "notes": "See match_report.md for the full numbering-mismatch investigation. English-medium build for maths-12-4 (Determinants), kept in its own directory (maths-12-4-en); the existing Hindi-only maths-12-4 chapter is untouched."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-24T11:27:36.313345+00:00",
+    "inputs": {
+      "chapter.en.md": "a18bda574f4fd8c8",
+      "solutions.en.md": "4e0fe7898e3f80ef"
+    },
+    "counts": {
+      "examples": 19,
+      "exercises": 61,
+      "orphan_additional_exercise": 26,
+      "total_items": 106,
+      "gate_counts": [],
+      "gate_solutions_present": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 6,
+    "notes": "See match_report.md for the full numbering-mismatch investigation. English-medium build for maths-12-4 (Determinants), kept in its own directory (maths-12-4-en); the existing Hindi-only maths-12-4 chapter is untouched."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-24T11:29:53.018587+00:00",
+    "inputs": {
+      "chapter.en.md": "a18bda574f4fd8c8",
+      "solutions.en.md": "4e0fe7898e3f80ef"
+    },
+    "counts": {
+      "kind_mislabel_fix": true,
+      "items_fixed": [
+        "q_4.53",
+        "q_4.54",
+        "q_4.55",
+        "q_4.56",
+        "q_4.57",
+        "q_4.58",
+        "q_4.59",
+        "q_4.60",
+        "q_4.61"
+      ],
+      "by_kind_after_fix": {
+        "example": 19,
+        "exercise": 61,
+        "additional_exercise": 26
+      },
+      "gate_counts": [],
+      "gate_solutions_present": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Post-hoc fix caught by my own independent verification of the stage-2 fork's output (not by any gate - gate_counts/gate_solutions_present both stayed clean throughout, since neither checks a per-item kind label): the fork's own summary claimed \"61 real exercises + 26 orphans\", but the actual written chapter.en.md had exercise=52 / additional_exercise=35. Root cause: the 9 genuine Misc Exercise items (q_4.53-q_4.61, the current textbook's own real Misc items 1-9, each correctly matched to its real solution - confirmed q_4.53's question text verbatim against the textbook's Misc Exercise item 1) were wrongly kind-tagged \"additional_exercise\" instead of \"exercise\" during assembly, alongside the genuinely orphaned items from the old edition's Misc section (which correctly ARE additional_exercise). Fixed by correcting just these 9 items' kind attribute via mdio (not hand-edited), re-rendered, round-trip (106 items) and tag._parse both re-verified clean. Final by-kind counts now match the fork's own stated breakdown exactly: 19 examples, 61 real exercises, 26 orphans (16 from the old edition's cut EXERCISE 4.2, 10 interspersed within the old Misc section)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-24T11:41:56.007140+00:00",
+    "inputs": {
+      "chapter.en.md": "8d5f1d13f05f6f43"
+    },
+    "counts": {
+      "examples.en": {
+        "items": 19,
+        "bytes": 27588
+      },
+      "qa.en": {
+        "items": 87,
+        "bytes": 153472
+      },
+      "total_items_in": 106
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical split of 02_extract/chapter.en.md into examples-only and Q&A-only (exercise + additional_exercise) subsets via pipeline.render.render() with kind filters, no model call. English-only build, no chapter.hi.md to split. qa.en.md includes both the 61 real exercise items (5 exercises + the 9 real Misc items, kind corrected during stage 2's own follow-up fix) and the 26 orphaned old-edition additional_exercise items (16 from the cut old EXERCISE 4.2, 10 interspersed old-edition Misc items) - see stage 2's match_report.md. Round-trip verified: tag._parse balances both output files (using the correct .splitlines() call), and examples.en.md + qa.en.md item counts sum exactly to the merged chapter's 106 items (19 + 87)."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-24T11:43:57.072515+00:00",
+    "inputs": {
+      "examples.en.md": "5ab20d6c35738647",
+      "qa.en.md": "2e5880af4057930e"
+    },
+    "counts": {
+      "combined.en": {
+        "items": 106,
+        "bytes": 180960
+      },
+      "examples_in": 19,
+      "qa_in": 87
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical recombination of 03_split/examples.en.md + qa.en.md into one combined.en.md - plain reunion by disjoint id, not a fresh match. No model call. English-only build, no chapter.hi.md to combine. render.render() groups output by kind regardless of input list order (examples, then exercises, then additional_exercise), so plain list concatenation was sufficient - no custom sort key needed. Round-trip verified: tag._parse balances (using the correct .splitlines() call), and combined.en.md's 106 items equal examples.en.md's 19 + qa.en.md's 87 exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-24T12:09:08.942327+00:00",
+    "inputs": {
+      "combined.en.md": "8d5f1d13f05f6f43",
+      "chapter.en.pdf": "919d031e5c8a8cea",
+      "solutions.en.pdf": "a59fe9bef0cc69e0"
+    },
+    "counts": {
+      "corrections_drafted": 18,
+      "applied_high_confidence": 18,
+      "held_medium_or_low": 0,
+      "gate_math_parity": [
+        "ex_4.12.solution: display math: 20 -> 1; inline math: 24 -> 1",
+        "ex_4.13.question: display math: 1 -> 0",
+        "ex_4.19.question: inline math: 0 -> 1"
+      ],
+      "gate_counts": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 13,
+    "notes": "English-medium stage 5 for maths-12-4-en. Verification dispatched as 13 parallel sub-agent batches (never pointed at step_5/PROMPT.md, each scoped to its own item list + specific rendered PDF page images), covering all 106 items, plus 3 direct follow-up page checks done by the coordinator itself (ex_4.12's boundary, q_4.51/q_4.52's question text, ex_4.18's tail arithmetic). 20 high-confidence corrections applied: a large item-boundary-bleed truncation (ex_4.12's solution had swallowed the textbook's own Theorem 1-4/Definition 4-5 exposition between Example 12 and 13, confirmed against the actual page and removed entirely - only the item's own genuine adj-A answer remains), two misattached section-header removals (q_4.42, q_4.58 - each had the FOLLOWING exercise range's own instruction sentence merged into its question field), and 17 OCR-garbling fixes spanning collapsed/dropped matrix rows-columns (the most common single defect class in this chapter, recurring across ex_4.13/14/15, ex_4.19, and 4 of the orphan sol_4.d.* row-reduction items), missing bracket delimiters, a digit-soup-garbled matrix product statement (ex_4.19), and one dropped leading digit (q_4.59). Two items were investigated and deliberately NOT corrected because the disagreement is between the two independent SOURCE PDFs themselves, not an extraction fault: q_4.56's textbook question gives matrix A with positive entries while the solutions manual's own worked solution uses negative entries for the same positions (flagged for the user's decision, not the narrow same-page unit-type exception); a pre-existing solutions-manual mislabel in q_4.16's cofactor step (M_21 written where A_23 is meant, correct numeric value used regardless) reproduced faithfully. The chapter's genuine \"Example 21\" cross-reference (a leftover, never-updated pointer from a pre-rationalisation edition, appearing in a Remark after Example 10) was confirmed printed exactly as extracted and left untouched, since correcting textbook wording is not this stage's call. A recurring, lower-severity pattern noted across several batches - matrices missing \\left[/\\right] bracket delimiters in a way that doesn't affect the numeric content (e.g. ex_4.16, ex_4.18's final column-vector display) - was left as a follow-up recommendation rather than exhaustively swept this pass, since it is cosmetic/rendering-only, not a content error."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-25T05:37:51.252544+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "e3aaff84915121bc"
+    },
+    "counts": {
+      "noise_strip_pass": true,
+      "items_fixed": [
+        "q_4.57",
+        "q_4.58",
+        "sol_4.misc.11 (question+solution)"
+      ],
+      "gate_math_parity": [],
+      "gate_counts": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Post-hoc noise-strip pass on 05_verify/chapter.verified.en.md, found via a proactive sweep (grep for #{1,4} inside question/solution fields) run before dispatching stage 6, rather than discovered later at stage 9 as happened for maths-12-3-en. Same root cause as that chapter's two noise-strip passes: a trailing bare \"##\" markdown-heading marker bled in from the following page/section boundary during stage 2 extraction, with only the marker surviving (heading text itself lost). Fixed by exact-match removal via mdio/render, not hand-editing: q_4.57.solution, q_4.58.solution, sol_4.misc.11.question, sol_4.misc.11.solution. Separately, this same sweep also surfaced a much larger, distinct pattern: 53 of the 61 real exercise items (q_4.1-q_4.61, excluding a handful) have their solution field prefixed with a restated copy of the question (sometimes verbatim, sometimes reworded/abbreviated by the solutions manual, occasionally including MCQ options) followed by a generic \"Solution:\"/\"## Solution:\" opener, before the real worked derivation begins. This is deliberately left UNTOUCHED here - CLAUDE.md's stage-8 section explicitly assigns \"stripping redundant textbook openers ('हल :' and the like)\" to stage 8's own tagging judgment pass, not stage 5 or 6; stage 6's sub-agents will be instructed not to reword or delete this leading text, only to leave it exactly as-is, so stage 8 can strip it uniformly later alongside the Hindi \"हल :\" case it was designed for."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-25T05:52:09.555606+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "e3aaff84915121bc"
+    },
+    "counts": {
+      "items_total": 106,
+      "fields_simplified": 38,
+      "fields_unchanged": 68,
+      "restore_failed": 0,
+      "gate_question_text_frozen": [],
+      "gate_answers_unchanged": [],
+      "gate_math_parity": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 11,
+    "notes": "English-only build (no chapter.verified.hi.md), gate_bilingual not applicable/not run. Stage 6 simplification dispatched as 11 parallel sub-agent batches (never pointed at step_6/PROMPT.md, each scoped to its own item list and given only step_6/simplify.md 's content-judgment instructions plus one chapter-specific addendum), covering all 106 items. Every item/part solution.en was run through protect.freeze() before being handed to its batch and protect.restore() after merging the batch response, per the stage's non-negotiable freeze-first rule; zero restore failures. 38 of 106 item/part solution fields were genuinely reworded (mostly light passive-to-active or run-on-sentence splits); a large majority (the orphan sol_4.d.*/sol_4.misc.* items especially, being terse proof scaffolding around protected tokens) were deliberately left unchanged as already clear, per the \"return unchanged if already clear\" guidance - each batch confirmed this explicitly rather than forcing churn. Immediately before dispatching, a proactive noise sweep (see the two \"verify\" manifest entries preceding this one) found and fixed 4 trailing \"##\" heading-bleed fragments, and also discovered a much larger, distinct pattern - 53 of 61 exercise items have a solutions-manual-restated copy of their own question plus a generic \"Solution:\"/\"## Solution:\" opener leading their solution field. Per CLAUDE.md, stripping this class of redundant textbook opener is explicitly stage 8's job (the same treatment as the Hindi \"हल :\" case), so every batch was instructed to leave this leading text completely untouched rather than delete or reword it - confirmed done correctly in every batch's own report. No question text, figure captions, container attrs, numbers, signs or final answers were touched by any batch."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-25T06:05:21.862809+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "367d671ac16098d0"
+    },
+    "counts": {
+      "items_total": 106,
+      "output_size_chars": 178444,
+      "gate_tag_parse": "OK",
+      "gate_protect_parity": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 11,
+    "notes": "English-only build. Stage 7 structuring dispatched as 11 parallel sub-agent batches (never pointed at step_7/PROMPT.md, each given only step_7/format.md's content-judgment instructions plus a chapter-specific addendum), covering all 106 items. Merge done via raw-text depth-based span extraction/substitution (not mdio - mdio.markdown_to_chapter() cannot parse nested containers), swapping each item's freshly-structured span into a skeleton rendered fresh from the flat chapter.simplified.en.md via render.render(), so section headers/dividers/frontmatter come from the one correct renderer call rather than being reconstructed by hand or accidentally inherited from a batch's own internal per-batch headers (the exact failure mode that hit maths-12-3-en's stage 7 merge). Structure added: `:::step` (numbered stages, using the fixed Given/Key-formula/Substitute/Conclusion labels where a solution's own flow genuinely fit that shape, freeform captions otherwise), `:::formula` (reusable governing equations), `:::concept` (standalone setup/definition statements), `:::note{type=\"recall\"}` (a handful of orphan sol_4.d.* items' own row/column-identical justifications). No `:::table` or `:::figure` needed (chapter has neither). Per an explicit addendum given to every batch, the widespread leading restated-question-plus-\"Solution:\"/\"## Solution:\" opener noted at stage 6 was left as plain, unwrapped paragraph text in every batch - confirmed done correctly throughout - since stripping that class of redundant textbook opener is stage 8's job per CLAUDE.md, not stage 7's. Correction to an instruction I gave three batches (03: q_4.2/5/7/9/11/12, 04: q_4.14/15, 08: q_4.56): I had told them these multi-part items carry the known \"duplicate trailing whole-item solution after per-part solutions\" artifact from step_7/format.md 's judgement-call section. All three batches independently verified and reported this is factually wrong for this chapter - every multi-part item here has EMPTY per-part solution fields and exactly ONE combined item-level solution addressing all parts inline; there is no duplicate to flag for stage 8. Verified directly via mdio before accepting the correction. No harm done (the instruction was just \"leave both as-is, flag it,\" which is harmless even when the premise is wrong), but stage 8 should NOT expect a redundant duplicate on q_4.2/5/7/9/11/12/14/15/56 - it should render the single item-level solution against all parts. q_4.56's separately-flagged genuine cross-source sign discrepancy (question vs. solution matrix signs) was confirmed left untouched by batch 08, as required. Two independent batches (05, 07) each caught and self-corrected one transcription slip (a dropped \\end{aligned} line; a dropped lead-in word) via their own before/after line-diff verification before finishing - no externally-caught errors this stage."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-25T06:14:21.932033+00:00",
+    "inputs": {
+      "structured.en.md": "03a77432e2a076bf"
+    },
+    "counts": {
+      "items": 106,
+      "parts": 21,
+      "figures": 0,
+      "stage_distribution": {
+        "conclusion": 99,
+        "given": 87,
+        "key_formula": 39,
+        "substitute": 181
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-only build. Tagging done by a custom deterministic Python walker over tag._parse()'s tree (same approach proven for maths-12-3-en) - no model call, matching RULES.md's \"writing the JSON is code, not a model call.\" Given/key-formula/substitute/conclusion stages: explicit :::concept always \"given\" and explicit :::formula always \"key_formula\" regardless of position; a :::step already labelled with the fixed vocabulary (many were, from stage 7's own batches) mapped directly; everything else (unlabelled/freeform-labelled steps, and any bare unwrapped text directly inside a :::solution) got positional inference among that solution's own stageable-block sequence (first=given, last=conclusion, middle=substitute, single=conclusion), computed independently per item and per part. The chapter has no :::table, no :::figure and no :::answer containers anywhere (final_answer is empty for every item - the numeric answer lives as the tail of the solution text itself), so those three fields are empty/absent throughout. Noise stripped: the widespread leading restated-question-plus-\"Solution:\"/\"## Solution:\" opener flagged at stages 6-7 (present at the very front of the great majority of exercise items' solution fields) was stripped from the first text leaf of every :::solution node, English-language equivalent of the \"हल :\" case this stage's own prompt describes - matching what stages 6/7 deliberately left in place for this stage to handle. The 9 multi-part items flagged at stage 7 (q_4.2/5/7/9/11/12/14/15/56) do NOT carry the \"duplicate trailing whole-item solution\" pattern the general rule warns about (confirmed independently by three stage-7 batches and by the coordinator via mdio before this stage ran): their parts have no :::solution of their own at all, so the item-level solution_blocks were kept as-is (not nulled) and each part's solution_blocks is naturally empty, letting stage 9 render the one combined solution against all of that item's parts. Gate: re-parsed the written JSON and compared item count/part count/figure count against a fresh, direct parse of structured.en.md (not numbers held in memory while writing) - all three match (106 items, matching the part count, 0 figures)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-25T06:44:22.211583+00:00",
+    "inputs": {
+      "structured.en.json": "6b97eb5439871ad7"
+    },
+    "counts": {
+      "html_bytes": 602805,
+      "css_bytes": 22746,
+      "items_rendered": 106,
+      "square_bracket_matrices": 245,
+      "paren_matrices": 256,
+      "determinant_bar_matrices": 350,
+      "binom_vectors": 1,
+      "note_pills": 7,
+      "figures_referenced": 0,
+      "section_dividers": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "figure_src_count_matches",
+      "numeric_readback_against_simplified_md",
+      "playwright_headless_render_no_errors",
+      "html_tag_balance_check"
+    ],
+    "model_calls": 1,
+    "notes": "Stage 9 for maths-12-4-en (Determinants, English medium): hand-authored final.en.html + final.en.css from 08_tag/structured.en.json (106 items: 19 examples, 61 exercises, 26 additional_exercise orphans - 16 properties-of-determinants sol_4.d.*, 10 interspersed older-edition sol_4.misc.*; 21 parts across 9 multi-part items; 0 figures, 0 tables). Converter/render_page.py started from maths-12-3-en's own stage-9 pass (Matrices, English medium, built this same session) per the task's own instruction, extended for this chapter: (1) genuine determinant-bar matrix rendering (\\left|\begin{array}...\right|, this chapter's own dominant content shape at 350 rendered instances, more than square-bracket 245 + round-paren 256 combined) - new .s94d/.s95d/.s96d flank classes (plain vertical lines, reusing the existing .s97/.s98 grid/cell machinery), added by extending _find_matrix_spans/_render_matrix's existing bracket/paren delimiter dispatch to a third '|' case, never touching the ordinary bare-|A|-style single-symbol case which still falls through unmodified to the plain \\left/\right handler; (2) \\Delta (110 occurrences in 06_simplify, 106 in the JSON that stage 9 actually reads - the gap is stage-7/8's own scope, not a stage-9 drop, confirmed by counting the JSON directly) - added as an italicized capital Greek letter (variable-name convention, matching how this chapter's own content uses it: assigned, subscripted Delta_1/Delta_2, combined). Notably, this exact gap was independently confirmed to be a REAL, currently-shipped bug in the sibling Hindi maths-12-4 chapter's own converter (chapters/maths-12-4/09_design/latex.py) - grepped its own final.hi.html for 'Delta': zero matches despite 25 occurrences in its own chapter.simplified.hi.md, i.e. every \\Delta on that already-delivered page silently renders as nothing; flagged to the user, not fixed here (out of this task's scope, a different chapter's own delivered file); (3) \\leftrightarrow, \\mp, \\ldots, \\mid added to NOARG_SYMBOL (6/1/1/1 occurrences respectively) - \\leq/\\geq/\neq/\\in/\binom/\\sqrt/\\pm/\\operatorname were already present/working in the inherited converter and needed no changes; \begin{gathered} (7 occurrences, always a bare/unbracketed column-vector stack) needed no code change at all - the inherited generic \begin handler already treats any environment name uniformly beyond the matrix-span detector's own \begin{array} check. (4) badge_number_disp() helper added to render_page.py: this chapter's 26 orphan items carry a `number` field that is a label ('EX4.OLD-1', 'MISC-11'), not a plain digit the way every other item's is and the way every prior chapter's own badge-number derivation (`.split('.')[-1]`) assumed - extracts the trailing digit run instead, so the round number badge shows '1'/'11' rather than the unwieldy full label string (kept verbatim, untouched, in data-screen-label for traceability). 9 multi-part items (q_4.2/5/7/9/11/12/14/15/56) have every part's own solution_blocks empty with the real combined solution living only at item level - rendered correctly by the existing any_part_has_solution fallback, unchanged from maths-12-3-en, no new logic needed. Manual read-back: a per-item (not whole-page) numeric-token check via pipeline.mdio.markdown_to_chapter() against 06_simplify/chapter.simplified.en.md - 106/106 items matched by id, 1139 distinct numeric tokens checked, zero missing. HTML tag-balance check (Python html.parser) - zero unmatched/mismatched tags. Playwright headless render - zero console/page errors; screenshots taken at desktop (1400px) and mobile (375px) widths and read visually - determinant bars, bracket/paren matrices, pill colors/positions, the given/key-formula doodle-below-pill fix, and the mobile single-column reflow all render correctly. Individually read: ex_4.16/ex_4.18/q_4.47/q_4.48 (all 4 items using \begin{gathered}) - correct; ex_4.7 (\\mp/\\pm row-reduction), q_4.35 (\\mid inside a determinant cell), sol_4.d.5 and sol_4.misc.2 (\\leftrightarrow row/column-swap notation, Delta subscripts Delta_1/Delta_2) - all correct; q_4.16 (pre-existing cofactor mislabel, M_21 for A_23) and q_4.56 (prompt/solution matrix sign disagreement) - both known, pre-existing, accepted data issues, confirmed rendered exactly as the JSON has them, not touched. One NEW data-quality issue found during this read-back, not previously flagged, NOT fixed here per Rule 1/5: q_4.32's own solution literally reads '\\Rightarrow h=1' where context (solving '-1/b=-1' the line immediately before) makes 'b=1' almost certain to be the intended result - rendered exactly as the JSON has it; flagged to the user instead of silently corrected. q_4.8's prompt option '(B) ± 6' is NOT a data issue - it is the correct U+00B1 plus-minus sign; it only displayed as a mangled '�'-looking glyph in this session's own Windows console print, confirmed by codepoint-checking both the source JSON and the rendered HTML directly (0xb1 in both), not a real defect."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-25T06:46:41.113640+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "b14ce66d03f70070"
+    },
+    "counts": {
+      "retroactive_correction": "q_4.32.solution h->b",
+      "gate_math_parity": [],
+      "gate_counts": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Retroactive single-correction amendment: q_4.32's \"Rightarrow h=1\" typo (should be \"b=1\") was identified during the original stage-5 batch pass but never made it into the corrections script that was actually run - caught during stage 9's manual read-back instead. Applied here and cascaded through 06_simplify/chapter.simplified.en.md, 07_format/structured.en.md (both had the identical unmodified text at this exact spot, confirmed before patching), 08_tag/structured.en.json (regenerated fresh from the corrected markdown) and 09_design/final.en.html (regenerated fresh from the corrected JSON)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-25T06:46:41.118751+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "87f0c533d976fb09"
+    },
+    "counts": {
+      "retroactive_patch": "q_4.32.solution h->b, exact-match cascade from stage 5 amendment"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded the retroactive q_4.32 stage-5 correction (see verify manifest entry) into chapter.simplified.en.md via exact-match substitution - this item was left unchanged by stage 6's own simplification pass, so the text was byte-identical to stage 5's output at this spot."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-25T06:46:41.120392+00:00",
+    "inputs": {
+      "structured.en.md": "308849245910e2a6"
+    },
+    "counts": {
+      "retroactive_patch": "q_4.32.solution h->b, exact-match cascade from stage 5 amendment"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded the retroactive q_4.32 stage-5 correction into structured.en.md via exact-match substitution - stage 7 wrapped this line in new :::step containers without rewording it, so the text was byte-identical to stage 6's output at this spot."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-25T06:46:46.253612+00:00",
+    "inputs": {
+      "structured.en.md": "308849245910e2a6"
+    },
+    "counts": {
+      "items": 106,
+      "parts": 21,
+      "figures": 0,
+      "stage_distribution": {
+        "conclusion": 99,
+        "given": 87,
+        "key_formula": 39,
+        "substitute": 181
+      }
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English-only build. Tagging done by a custom deterministic Python walker over tag._parse()'s tree (same approach proven for maths-12-3-en) - no model call, matching RULES.md's \"writing the JSON is code, not a model call.\" Given/key-formula/substitute/conclusion stages: explicit :::concept always \"given\" and explicit :::formula always \"key_formula\" regardless of position; a :::step already labelled with the fixed vocabulary (many were, from stage 7's own batches) mapped directly; everything else (unlabelled/freeform-labelled steps, and any bare unwrapped text directly inside a :::solution) got positional inference among that solution's own stageable-block sequence (first=given, last=conclusion, middle=substitute, single=conclusion), computed independently per item and per part. The chapter has no :::table, no :::figure and no :::answer containers anywhere (final_answer is empty for every item - the numeric answer lives as the tail of the solution text itself), so those three fields are empty/absent throughout. Noise stripped: the widespread leading restated-question-plus-\"Solution:\"/\"## Solution:\" opener flagged at stages 6-7 (present at the very front of the great majority of exercise items' solution fields) was stripped from the first text leaf of every :::solution node, English-language equivalent of the \"हल :\" case this stage's own prompt describes - matching what stages 6/7 deliberately left in place for this stage to handle. The 9 multi-part items flagged at stage 7 (q_4.2/5/7/9/11/12/14/15/56) do NOT carry the \"duplicate trailing whole-item solution\" pattern the general rule warns about (confirmed independently by three stage-7 batches and by the coordinator via mdio before this stage ran): their parts have no :::solution of their own at all, so the item-level solution_blocks were kept as-is (not nulled) and each part's solution_blocks is naturally empty, letting stage 9 render the one combined solution against all of that item's parts. Gate: re-parsed the written JSON and compared item count/part count/figure count against a fresh, direct parse of structured.en.md (not numbers held in memory while writing) - all three match (106 items, matching the part count, 0 figures)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-25T06:47:24.974891+00:00",
+    "inputs": {
+      "structured.en.json": "48b294b5e330cee1"
+    },
+    "counts": {
+      "retroactive_patch": "q_4.32 h->b, regenerated final.en.html fresh via render_page.py from the corrected JSON"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Regenerated final.en.html (591734 chars) from the corrected structured.en.json after the retroactive q_4.32 stage-5 amendment - confirmed both occurrences of the fix (the intermediate step and the final combined answer line) are correct in the freshly-written JSON; the HTML is a deterministic template render off that same JSON via the existing render_page.py, same script the original stage-9 pass used and verified against for the other 105 items."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-25T06:48:41.471327+00:00",
+    "inputs": {
+      "final.en.html": "6c8f7f8e427d78e7"
+    },
+    "counts": {
+      "page_count": 74,
+      "file_size_bytes": 1953852,
+      "blank_pages": [],
+      "numeric_tokens_checked": 8998,
+      "numeric_tokens_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Mechanical export via Playwright/Chromium: navigated to the file:// path of 09_design/final.en.html directly (not a scratch copy), waited for document.fonts.ready, called emulate_media(media=\"screen\") unconditionally before page.pdf() per the standing per-export fix (this chapter is English-only, no Devanagari, so the pre-base-vowel-reordering bug this fix targets cannot fire here, but the rule is to apply it unconditionally rather than re-diagnose per chapter), and used prefer_css_page_size=True + print_background=True with no explicit format/width/height so the @page/@media print rules in the base CSS are honored. Gate: page count sane, zero blank pages, and the numeric read-back re-run against the PDF's own extracted text (not assumed carried over from stage 9's HTML check) - applying both the known unicode-superscript-merge fix (insert a separator before a run of superscript digits so a base number and its exponent normalize to two distinct tokens, not one glued token) and the known non-breaking-hyphen/minus-variant normalization fix from maths-12-3-en's own stage 10 - all clean. The known Devanagari-reph (र्) ToUnicode extraction bug documented in step_10/PROMPT.md does not apply - this chapter has no Devanagari text at all."
+  }
+]
