@@ -1,0 +1,1964 @@
+{
+  "front": {
+    "title": "Inverse Trigonometric Functions",
+    "chapter": "2"
+  },
+  "items": [
+    {
+      "id": "ex_2.1",
+      "kind": "example",
+      "number": "1",
+      "topic": "Principal value of sin^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\sin ^{-1}\\left(\\frac{1}{\\sqrt{2}}\\right)$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\sin ^{-1}\\left(\\frac{1}{\\sqrt{2}}\\right)=y$. Then, $\\sin y=\\frac{1}{\\sqrt{2}}$."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We know that the range of the principal value branch of $\\sin ^{-1}$ is $\\frac{-\\pi}{2}, \\frac{\\pi}{2}$ and $\\sin \\left(\\frac{\\pi}{4}\\right)=\\frac{1}{\\sqrt{2}}$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, principal value of $\\sin ^{-1}\\left(\\frac{1}{\\sqrt{2}}\\right)$ is $\\frac{\\pi}{4}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_2.2",
+      "kind": "example",
+      "number": "2",
+      "topic": "Principal value of cot^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\cot ^{-1}\\left(\\frac{-1}{\\sqrt{3}}\\right)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\cot ^{-1}\\left(\\frac{-1}{\\sqrt{3}}\\right)=y$. Then,\n\n$$\n\\cot y=\\frac{-1}{\\sqrt{3}}=-\\cot \\left(\\frac{\\pi}{3}\\right)=\\cot \\left(\\pi-\\frac{\\pi}{3}\\right)=\\cot \\left(\\frac{2 \\pi}{3}\\right)\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We know that the range of principal value branch of $\\cot ^{-1}$ is $(0, \\pi)$ and $\\cot \\left(\\frac{2 \\pi}{3}\\right)=\\frac{-1}{\\sqrt{3}}$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Hence, principal value of $\\cot ^{-1}\\left(\\frac{-1}{\\sqrt{3}}\\right)$ is $\\frac{2 \\pi}{3}$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_2.3",
+      "kind": "example",
+      "number": "3",
+      "topic": "Sine inverse double-angle identity",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Show that\n(i) $\\sin ^{-1}\\left(2 x \\sqrt{1-x^{2}}\\right)=2 \\sin ^{-1} x,-\\frac{1}{\\sqrt{2}} \\leq x \\leq \\frac{1}{\\sqrt{2}}$\n(ii) $\\sin ^{-1}\\left(2 x \\sqrt{1-x^{2}}\\right)=2 \\cos ^{-1} x, \\frac{1}{\\sqrt{2}} \\leq x \\leq 1$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "(i) Let $x=\\sin \\theta$. Then $\\sin ^{-1} x=\\theta$. We have\n$$\n\\begin{aligned}\n\\sin ^{-1}\\left(2 x \\sqrt{1-x^{2}}\\right) & =\\sin ^{-1}\\left(2 \\sin \\theta \\sqrt{1-\\sin ^{2} \\theta}\\right) \\\\\n& =\\sin ^{-1}(2 \\sin \\theta \\cos \\theta)=\\sin ^{-1}(\\sin 2 \\theta)=2 \\theta \\\\\n& =2 \\sin ^{-1} x\n\\end{aligned}\n$$\n(ii) Take $x=\\cos \\theta$, then proceeding as above, we get, $\\sin ^{-1}\\left(2 x \\sqrt{1-x^{2}}\\right)=2 \\cos ^{-1} x$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_2.4",
+      "kind": "example",
+      "number": "4",
+      "topic": "Simplify inverse tangent expression",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Express $\\tan ^{-1} \\frac{\\cos x}{1-\\sin x},-\\frac{3 \\pi}{2}<x<\\frac{\\pi}{2}$ in the simplest form."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We write\n$$\n\\begin{aligned}\n\\tan ^{-1}\\left(\\frac{\\cos x}{1-\\sin x}\\right) & =\\tan ^{-1}\\left[\\frac{\\cos ^{2} \\frac{x}{2}-\\sin ^{2} \\frac{x}{2}}{\\cos ^{2} \\frac{x}{2}+\\sin ^{2} \\frac{x}{2}-2 \\sin \\frac{x}{2} \\cos \\frac{x}{2}}\\right] \\\\\n& =\\tan ^{-1}\\left[\\frac{\\left(\\cos \\frac{x}{2}+\\sin \\frac{x}{2}\\right)\\left(\\cos \\frac{x}{2}-\\sin \\frac{x}{2}\\right)}{\\left(\\cos \\frac{x}{2}-\\sin \\frac{x}{2}\\right)^{2}}\\right] \\\\\n& =\\tan ^{-1}\\left[\\frac{\\cos \\frac{x}{2}+\\sin \\frac{x}{2}}{\\cos \\frac{x}{2}-\\sin \\frac{x}{2}}\\right]=\\tan ^{-1}\\left[\\frac{1+\\tan \\frac{x}{2}}{1-\\tan \\frac{x}{2}}\\right] \\\\\n& =\\tan ^{-1}\\left[\\tan \\left(\\frac{\\pi}{4}+\\frac{x}{2}\\right)\\right]=\\frac{\\pi}{4}+\\frac{x}{2}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_2.5",
+      "kind": "example",
+      "number": "5",
+      "topic": "Simplify inverse cotangent expression",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write $\\cot ^{-1}\\left(\\frac{1}{\\sqrt{x^{2}-1}}\\right), x>1$ in the simplest form."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $x=\\sec \\theta$. Then $\\sqrt{x^{2}-1}=\\sqrt{\\sec ^{2} \\theta-1}=\\tan \\theta$.\nSo, $\\cot ^{-1} \\frac{1}{\\sqrt{x^{2}-1}}=\\cot ^{-1}(\\cot \\theta)=\\theta=\\sec ^{-1} x$. This is the simplest form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex_2.6",
+      "kind": "example",
+      "number": "6",
+      "topic": "Value of sin^-1(sin x) outside principal range",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the value of $\\sin ^{-1}\\left(\\sin \\frac{3 \\pi}{5}\\right)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "We know that $\\sin ^{-1}(\\sin x)=x$. So $\\sin ^{-1}\\left(\\sin \\frac{3 \\pi}{5}\\right)=\\frac{3 \\pi}{5}$.\nBut $\\quad \\frac{3 \\pi}{5} \\notin\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$. This is outside the principal branch of $\\sin ^{-1} x$, so it is not yet the final answer.\nNow, $\\quad \\sin \\left(\\frac{3 \\pi}{5}\\right)=\\sin \\left(\\pi-\\frac{3 \\pi}{5}\\right)=\\sin \\frac{2 \\pi}{5}$, and $\\frac{2 \\pi}{5} \\in\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$.\nSo $\\quad \\sin ^{-1}\\left(\\sin \\frac{3 \\pi}{5}\\right)=\\sin ^{-1}\\left(\\sin \\frac{2 \\pi}{5}\\right)=\\frac{2 \\pi}{5}$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.1",
+      "kind": "exercise",
+      "number": "1",
+      "topic": "Principal value of sin^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\sin ^{-1}\\left(-\\frac{1}{2}\\right)$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\sin ^{-1}\\left(-\\frac{1}{2}\\right)=y$\nHence,\n\n$$\n\\begin{aligned}\n\\sin y & =\\left(-\\frac{1}{2}\\right) \\\\\n& =-\\sin \\left(\\frac{\\pi}{6}\\right) \\\\\n& =\\sin \\left(-\\frac{\\pi}{6}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\sin ^{-1}(x)$ is $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, principal value of $\\sin ^{-1}\\left(-\\frac{1}{2}\\right)=\\left(-\\frac{\\pi}{6}\\right)$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$-\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.2",
+      "kind": "exercise",
+      "number": "2",
+      "topic": "Principal value of cos^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\cos ^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let,\n\n$$\n\\cos ^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)=y\n$$\n\nHence,\n\n$$\n\\begin{aligned}\n\\cos y & =\\left(\\frac{\\sqrt{3}}{2}\\right) \\\\\n& =\\cos \\frac{\\pi}{6}\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\cos ^{-1}(x)$ is $(0, \\pi)$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, principal value of $\\cos ^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)=\\left(\\frac{\\pi}{6}\\right)$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.3",
+      "kind": "exercise",
+      "number": "3",
+      "topic": "Principal value of cosec^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\operatorname{cosec}^{-1}(2)$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\operatorname{cosec}^{-1}(2)=y$\nHence,\n\n$$\n\\begin{aligned}\n\\operatorname{cosec} y & =2 \\\\\n& =\\operatorname{cosec}\\left(\\frac{\\pi}{6}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\operatorname{cosec}^{-1}(x)=\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]-\\{0\\}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, principal value of $\\operatorname{cosec}^{-1}(2)=\\left(\\frac{\\pi}{6}\\right)$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.4",
+      "kind": "exercise",
+      "number": "4",
+      "topic": "Principal value of tan^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\tan ^{-1}(-\\sqrt{3})$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\tan ^{-1}(-\\sqrt{3})=y$\nHence,\n\n$$\n\\begin{aligned}\n\\tan y & =-\\sqrt{3} \\\\\n& =-\\tan \\left(\\frac{\\pi}{3}\\right) \\\\\n& =\\tan \\left(-\\frac{\\pi}{3}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\tan ^{-1}(x)=\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, principal value of $\\tan ^{-1}(-\\sqrt{3})=\\left(-\\frac{\\pi}{3}\\right)$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$-\\frac{\\pi}{3}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.5",
+      "kind": "exercise",
+      "number": "5",
+      "topic": "Principal value of cos^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\cos ^{-1}\\left(-\\frac{1}{2}\\right)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\cos ^{-1}\\left(-\\frac{1}{2}\\right)=y$\n\nHence,\n\n$$\n\\begin{aligned}\n\\cos y & =-\\frac{1}{2} \\\\\n& =-\\cos \\left(\\frac{\\pi}{3}\\right) \\\\\n& =\\cos \\left(\\pi-\\frac{\\pi}{3}\\right) \\\\\n& =\\cos \\left(\\frac{2 \\pi}{3}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\cos ^{-1}(x)=[0, \\pi]$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, principal value of $\\cos ^{-1}\\left(-\\frac{1}{2}\\right)=\\left(\\frac{2 \\pi}{3}\\right)$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{2 \\pi}{3}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.6",
+      "kind": "exercise",
+      "number": "6",
+      "topic": "Principal value of tan^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\tan ^{-1}(-1)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\tan ^{-1}(-1)=y$\nHence,\n\n$$\n\\begin{aligned}\n\\tan y & =-1 \\\\\n& =-\\tan \\left(\\frac{\\pi}{4}\\right) \\\\\n& =\\tan \\left(-\\frac{\\pi}{4}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\tan ^{-1}(x)=\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, principal value of $\\tan ^{-1}(-1)=\\left(-\\frac{\\pi}{4}\\right)$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$-\\frac{\\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.7",
+      "kind": "exercise",
+      "number": "7",
+      "topic": "Principal value of sec^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\sec ^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\sec ^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right)=y$\nHence,\n\n$$\n\\begin{aligned}\n\\sec y & =\\frac{2}{\\sqrt{3}} \\\\\n& =\\sec \\left(\\frac{\\pi}{6}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\sec ^{-1}(x)=[0, \\pi]-\\left\\{\\frac{\\pi}{2}\\right\\}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, principal value of $\\sec ^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right)=\\left(\\frac{\\pi}{6}\\right)$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.8",
+      "kind": "exercise",
+      "number": "8",
+      "topic": "Principal value of cot^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\cot ^{-1}(\\sqrt{3})$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\cot ^{-1}(\\sqrt{3})=y$\nHence,\n\n$$\n\\begin{aligned}\n\\cot y & =\\sqrt{3} \\\\\n& =\\cot \\left(\\frac{\\pi}{6}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\cot ^{-1}(x)=(0, \\pi)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, principal value of $\\cot ^{-1}(\\sqrt{3})=\\left(\\frac{\\pi}{6}\\right)$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.9",
+      "kind": "exercise",
+      "number": "9",
+      "topic": "Principal value of cos^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\cos ^{-1}\\left(-\\frac{1}{\\sqrt{2}}\\right)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\cos ^{-1}\\left(-\\frac{1}{\\sqrt{2}}\\right)=y$\nHence,\n\n$$\n\\begin{aligned}\n\\cos y & =-\\frac{1}{\\sqrt{2}} \\\\\n& =-\\cos \\left(\\frac{\\pi}{4}\\right) \\\\\n& =\\cos \\left(-\\frac{\\pi}{4}\\right) \\\\\n& =\\cos \\left(\\pi-\\frac{\\pi}{4}\\right) \\\\\n& =\\cos \\left(\\frac{3 \\pi}{4}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\cos ^{-1}(x)=[0, \\pi]$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, principal value of $\\cos ^{-1}\\left(-\\frac{1}{\\sqrt{2}}\\right)=\\left(\\frac{3 \\pi}{4}\\right)$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{3 \\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.10",
+      "kind": "exercise",
+      "number": "10",
+      "topic": "Principal value of cosec^-1",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the principal value of $\\operatorname{cosec}^{-1}(-\\sqrt{2})$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\operatorname{cosec}^{-1}(-\\sqrt{2})=y$\nHence,\n\n$$\n\\begin{aligned}\n\\operatorname{cosec} y & =-\\sqrt{2} \\\\\n& =-\\operatorname{cosec}\\left(\\frac{\\pi}{4}\\right) \\\\\n& =\\operatorname{cosec}\\left(-\\frac{\\pi}{4}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\operatorname{cosec}^{-1}(x)=\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]-\\{0\\}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, principal value of $\\operatorname{cosec}^{-1}(-\\sqrt{2})=\\left(-\\frac{\\pi}{4}\\right)$."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$-\\frac{\\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.11",
+      "kind": "exercise",
+      "number": "11",
+      "topic": "Sum of inverse trig values",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the value of $\\tan ^{-1}(1)+\\cos ^{-1}-\\frac{1}{2}+\\sin ^{-1}-\\frac{1}{2}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\tan ^{-1}(1)=x$\nHence,\n\n$$\n\\begin{aligned}\n\\tan x & =1 \\\\\n& =\\tan \\left(\\frac{\\pi}{4}\\right)\n\\end{aligned}\n$$\n\nTherefore,\n\n$$\n\\tan ^{-1}(1)=\\left(\\frac{\\pi}{4}\\right)\n$$"
+            }
+          ],
+          "label": "tan^-1(1)"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, let $\\cos ^{-1}\\left(-\\frac{1}{2}\\right)=y$\nHence,\n\n$$\n\\begin{aligned}\n\\cos y & =-\\frac{1}{2} \\\\\n& =-\\cos \\left(\\frac{\\pi}{3}\\right) \\\\\n& =\\cos \\left(\\pi-\\frac{\\pi}{3}\\right) \\\\\n& =\\cos \\left(\\frac{2 \\pi}{3}\\right)\n\\end{aligned}\n$$\n\nTherefore,\n\n$$\n\\cos ^{-1}\\left(-\\frac{1}{2}\\right)=\\frac{2 \\pi}{3}\n$$"
+            }
+          ],
+          "label": "cos^-1(-1/2)"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Again, let $\\sin ^{-1}\\left(-\\frac{1}{2}\\right)=z$\n\nHence,\n\n$$\n\\begin{aligned}\n\\sin z & =-\\frac{1}{2} \\\\\n& =-\\sin \\left(\\frac{\\pi}{6}\\right) \\\\\n& =\\sin \\left(-\\frac{\\pi}{6}\\right)\n\\end{aligned}\n$$\n\nTherefore,\n\n$$\n\\sin ^{-1}\\left(-\\frac{1}{2}\\right)=-\\frac{\\pi}{6}\n$$"
+            }
+          ],
+          "label": "sin^-1(-1/2)"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus,\n\n$$\n\\begin{aligned}\n\\tan ^{-1}(1)+\\cos ^{-1}\\left(-\\frac{1}{2}\\right)+\\sin ^{-1}\\left(-\\frac{1}{2}\\right) & =\\frac{\\pi}{4}+\\frac{2 \\pi}{3}-\\frac{\\pi}{6} \\\\\n& =\\frac{3 \\pi+8 \\pi-2 \\pi}{12} \\\\\n& =\\frac{9 \\pi}{12} \\\\\n& =\\frac{3 \\pi}{4}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{3 \\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.12",
+      "kind": "exercise",
+      "number": "12",
+      "topic": "Sum of inverse trig values",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Find the value of $\\cos ^{-1} \\frac{1}{2}+2 \\sin ^{-1} \\frac{1}{2}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\tan ^{-1}(1)=x$\nHence,\n\n$$\n\\begin{aligned}\n\\cos x & =\\frac{1}{2} \\\\\n& =\\cos \\left(\\frac{\\pi}{3}\\right)\n\\end{aligned}\n$$\n\nTherefore,\n\n$$\n\\cos ^{-1}\\left(\\frac{1}{2}\\right)=\\frac{\\pi}{3}\n$$"
+            }
+          ],
+          "label": "cos^-1(1/2)"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let, $\\sin ^{-1}\\left(\\frac{1}{2}\\right)=y$\nHence,\n\n$$\n\\begin{aligned}\n\\sin y & =\\frac{1}{2} \\\\\n& =\\sin \\left(\\frac{\\pi}{6}\\right)\n\\end{aligned}\n$$\n\nTherefore,\n\n$$\n\\sin ^{-1}\\left(\\frac{1}{2}\\right)=\\frac{\\pi}{6}\n$$"
+            }
+          ],
+          "label": "sin^-1(1/2)"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus\n\n$$\n\\begin{aligned}\n\\cos ^{-1}\\left(\\frac{1}{2}\\right)+2 \\sin ^{-1}\\left(\\frac{1}{2}\\right) & =\\frac{\\pi}{3}+2\\left(\\frac{\\pi}{6}\\right) \\\\\n& =\\frac{2 \\pi}{3}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{2 \\pi}{3}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.13",
+      "kind": "exercise",
+      "number": "13",
+      "topic": "Range of sin^-1 (multiple choice)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "If $\\sin ^{-1} x=y$, then\n(A) $0 \\leq y \\leq \\pi$\n(B) $-\\frac{\\pi}{2} \\leq y \\leq \\frac{\\pi}{2}$\n(C) $0<y<\\pi$\n(D) $-\\frac{\\pi}{2}<y<\\frac{\\pi}{2}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that $\\sin ^{-1} x=y$"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\sin ^{-1} x=\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, $-\\frac{\\pi}{2} \\leq y \\leq \\frac{\\pi}{2}$\nThe answer is B."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Option (B)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.1.14",
+      "kind": "exercise",
+      "number": "14",
+      "topic": "Difference of inverse trig values (multiple choice)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1} \\sqrt{3}-\\sec ^{-1}(-2)$ is equal to\n(A) $\\pi$\n(B) $-\\frac{\\pi}{3}$\n(C) $\\frac{\\pi}{3}$\n(D) $\\frac{2 \\pi}{3}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\tan ^{-1}(\\sqrt{3})=x$\nHence,\n\n$$\n\\begin{aligned}\n\\tan x & =\\sqrt{3} \\\\\n& =\\tan \\left(\\frac{\\pi}{3}\\right)\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "tan^-1(sqrt3)"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\tan ^{-1} x=\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, $\\tan ^{-1}(\\sqrt{3})=\\left(\\frac{\\pi}{3}\\right)$\n\nLet $\\sec ^{-1}(-2)=y$\nHence,\n\n$$\n\\begin{aligned}\n\\sec y & =(-2) \\\\\n& =-\\sec \\left(\\frac{\\pi}{3}\\right) \\\\\n& =\\sec \\left(-\\frac{\\pi}{3}\\right) \\\\\n& =\\sec \\left(\\pi-\\frac{\\pi}{3}\\right) \\\\\n& =\\sec \\left(\\frac{2 \\pi}{3}\\right)\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "sec^-1(-2)"
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Range of the principal value of $\\sec ^{-1} \\mathrm{x}=[0, \\pi]-\\left\\{\\frac{\\pi}{2}\\right\\}$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore, $\\sec ^{-1}(-2)=\\frac{2 \\pi}{3}$\nThus,\n\n$$\n\\begin{aligned}\n\\tan ^{-1} \\sqrt{3}-\\sec ^{-1}(-2) & =\\frac{\\pi}{3}-\\frac{2 \\pi}{3} \\\\\n& =-\\frac{\\pi}{3}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Option (B)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.1",
+      "kind": "exercise",
+      "number": "1",
+      "topic": "Prove triple-angle sine identity",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove $3 \\sin ^{-1} x=\\sin ^{-1}\\left(3 x-4 x^{3}\\right), x \\in\\left[-\\frac{1}{2}, \\frac{1}{2}\\right]$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $x=8 \\mathrm{in}$\nHence, $\\sin ^{-1}(x)=$\nNow,\n\n$$\n\\begin{aligned}\n\\text { RHS } & =\\sin ^{-1}\\left(3 x-4 x^{3}\\right) \\\\\n& =\\sin 4(\\sin \\sin - \\\\\n& =\\sin ^{-1}(\\sin 3) \\\\\n& =\\theta \\\\\n& =3 \\sin ^{-1} x \\\\\n& =L H S\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.2",
+      "kind": "exercise",
+      "number": "2",
+      "topic": "Prove triple-angle cosine identity",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove $3 \\cos ^{-1} x=\\cos ^{-1}\\left(4 x^{3}-3 x\\right), x \\in\\left[\\frac{1}{2}, 1\\right]$."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $x=\\theta_{\\mathrm{os}}$\nHence, $\\operatorname{tos}^{-1}(x)=$\nNow,\n\n$$\n\\begin{aligned}\nR H S & =\\cos ^{-1}\\left(4 x^{3}-3 x\\right) \\\\\n& =\\theta \\operatorname{os} 3^{1}\\left(\\operatorname{coscos} \\sin ^{-}\\right) \\\\\n& =\\cos ^{-1}(\\cos 3) \\\\\n& =\\theta \\\\\n& =3 \\cos ^{-1} x \\\\\n& =L H S\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.3",
+      "kind": "exercise",
+      "number": "3",
+      "topic": "Simplify inverse tangent expression",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1} \\frac{\\sqrt{1+x^{2}}-1}{x}, x \\neq 0$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $x=\\tan \\theta \\Rightarrow \\theta=\\tan ^{-1} x$\nHence,\n\n$$\n\\begin{aligned}\n\\tan ^{-1} \\frac{\\sqrt{1+x^{2}}-1}{x} & =\\tan ^{-1}\\left(\\frac{\\sqrt{1+\\tan ^{2} \\theta}-1}{\\tan \\theta}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{\\sec \\theta-1}{\\tan \\theta}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{1-\\cos \\theta}{\\sin \\theta}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{2 \\sin ^{2} \\frac{\\theta}{2}}{2 \\sin \\frac{\\theta}{2} \\cos \\frac{\\theta}{2}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\tan \\frac{\\theta}{2}\\right) \\\\\n& =\\frac{\\theta}{2} \\\\\n& =\\frac{1}{2} \\tan ^{-1} x\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{1}{2} \\tan ^{-1} x$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.4",
+      "kind": "exercise",
+      "number": "4",
+      "topic": "Simplify inverse tangent expression",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}\\left(\\sqrt{\\frac{1-\\cos x}{1+\\cos x}}\\right), 0<x<\\pi$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since, $1-\\cos x=2 \\sin ^{2} \\frac{x}{2}$ and $1+\\cos x=2 \\cos ^{2} \\frac{x}{2}$\nHence,\n\n$$\n\\begin{aligned}\n\\tan ^{-1}\\left(\\sqrt{\\frac{1-\\cos x}{1+\\cos x}}\\right) & =\\tan ^{-1}\\left(\\sqrt{\\frac{2 \\sin ^{2} \\frac{x}{2}}{2 \\cos ^{2} \\frac{x}{2}}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{\\sin \\frac{x}{2}}{\\cos \\frac{x}{2}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\tan \\frac{x}{2}\\right) \\\\\n& =\\frac{x}{2}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{x}{2}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.5",
+      "kind": "exercise",
+      "number": "5",
+      "topic": "Simplify inverse tangent expression",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}\\left(\\frac{\\cos x-\\sin x}{\\cos x+\\sin x}\\right), \\frac{-\\pi}{4}<x<\\frac{3 \\pi}{4}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\tan ^{-1}\\left(\\frac{\\cos x-\\sin x}{\\cos x+\\sin x}\\right) & =\\tan ^{-1}\\left(\\frac{\\frac{\\cos x-\\sin x}{\\cos x}}{\\frac{\\cos x+\\sin x}{\\cos x}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{1-\\frac{\\sin x}{\\cos x}}{1+\\frac{\\sin x}{\\cos x}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{1-\\tan x}{1+\\tan x}\\right) \\\\\n& =\\tan ^{-1}(1)-\\tan ^{-1}(\\tan x) \\\\\n& =\\frac{\\pi}{4}-x\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{4}-x$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.6",
+      "kind": "exercise",
+      "number": "6",
+      "topic": "Simplify inverse tangent expression",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1} \\frac{x}{\\sqrt{a^{2}-x^{2}}},|x|<a$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let\n\n$$\nx=a \\sin \\theta \\Rightarrow \\theta=\\sin ^{-1}\\left(\\frac{x}{a}\\right)\n$$\n\nHence,\n\n$$\n\\begin{aligned}\n\\tan ^{-1} \\frac{x}{\\sqrt{a^{2}-x^{2}}} & =\\tan ^{-1}\\left(\\frac{a \\sin \\theta}{\\sqrt{a^{2}-a^{2} \\sin ^{2} \\theta}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{a \\sin \\theta}{a \\sqrt{1-\\sin ^{2} \\theta}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{a \\sin \\theta}{a \\cos \\theta}\\right) \\\\\n& =\\tan ^{-1}(\\tan \\theta) \\\\\n& =\\theta \\\\\n& =\\sin ^{-1} \\frac{x}{a}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\sin ^{-1} \\frac{x}{a}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.7",
+      "kind": "exercise",
+      "number": "7",
+      "topic": "Simplify inverse tangent expression",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}\\left(\\frac{3 a^{2} x-x^{3}}{a^{3}-3 a x^{2}}\\right), a>0 ; \\frac{-a}{\\sqrt{3}}<x<\\frac{a}{\\sqrt{3}}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $x=a \\tan \\theta \\Rightarrow \\theta=\\tan ^{-1}\\left(\\frac{x}{a}\\right)$\nHence,\n\n$$\n\\begin{aligned}\n\\tan ^{-1}\\left(\\frac{3 a^{2} x-x^{3}}{a^{3}-3 a x^{2}}\\right) & =\\tan ^{-1}\\left(\\frac{3 a^{2} \\cdot a \\tan \\theta-a^{3} \\tan ^{3} \\theta}{a^{3}-3 a \\cdot a^{2} \\tan ^{2} \\theta}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{3 a^{3} \\tan \\theta-a^{3} \\tan ^{3} \\theta}{a^{3}-3 a^{3} \\tan ^{2} \\theta}\\right) \\\\\n& =\\tan ^{-1}(\\tan 3 \\theta) \\\\\n& =3 \\theta \\\\\n& =3 \\tan ^{-1} \\frac{x}{a}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$3 \\tan ^{-1} \\frac{x}{a}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.8",
+      "kind": "exercise",
+      "number": "8",
+      "topic": "Value of nested inverse trig expression",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}\\left[2 \\cos \\left(2 \\sin ^{-1} \\frac{1}{2}\\right)\\right]$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\sin ^{-1} \\frac{1}{2}=x$\nHence,\n\n$$\n\\begin{aligned}\n\\sin x & =\\frac{1}{2} \\\\\n& =\\sin \\left(\\frac{\\pi}{6}\\right) \\\\\nx & =\\frac{\\pi}{6} \\\\\n\\sin ^{-1}\\left(\\frac{1}{2}\\right) & =\\frac{\\pi}{6}\n\\end{aligned}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan ^{-1}\\left[2 \\cos \\left(2 \\sin ^{-1} \\frac{1}{2}\\right)\\right] & =\\tan ^{-1}\\left[2 \\cos \\left(2 \\times \\frac{\\pi}{6}\\right)\\right] \\\\\n& =\\tan ^{-1}\\left[2 \\cos \\frac{\\pi}{3}\\right] \\\\\n& =\\tan ^{-1}\\left[2 \\times \\frac{1}{2}\\right] \\\\\n& =\\tan ^{-1}[1] \\\\\n& =\\frac{\\pi}{4}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.9",
+      "kind": "exercise",
+      "number": "9",
+      "topic": "Value of combined inverse trig expression",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan \\frac{1}{2}\\left[\\sin ^{-1} \\frac{2 x}{1+x^{2}}+\\cos ^{-1} \\frac{1-y^{2}}{1+y^{2}}\\right],|x|<1, y>0$ and $x y<1$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $x=\\tan \\theta \\Rightarrow \\theta=\\tan ^{-1} x$\nHence,\n\n$$\n\\begin{aligned}\n\\sin ^{-1} \\frac{2 x}{1+x^{2}} & =\\sin ^{-1}\\left(\\frac{2 \\tan \\theta}{1+\\tan ^{2} \\theta}\\right) \\\\\n& =\\sin ^{-1}(\\sin 2 \\theta) \\\\\n& =2 \\theta \\\\\n& =2 \\tan ^{-1} x\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "sin^-1 relation"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, let $y=\\tan \\phi \\Rightarrow \\phi=\\tan ^{-1} y$\nHence,\n\n$$\n\\begin{aligned}\n\\cos ^{-1} \\frac{1-y^{2}}{1+y^{2}} & =\\cos ^{-1}\\left(\\frac{1-\\tan ^{2} \\phi}{1+\\tan ^{2} \\phi}\\right) \\\\\n& =\\cos ^{-1}(\\cos 2 \\phi) \\\\\n& =2 \\phi \\\\\n& =2 \\tan ^{-1} y\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "cos^-1 relation"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore,\n\n$$\n\\begin{aligned}\n\\tan \\frac{1}{2}\\left(\\sin ^{-1} \\frac{2 x}{1+x^{2}}+\\cos ^{-1} \\frac{1-y^{2}}{1+y^{2}}\\right) & =\\tan \\frac{1}{2}\\left(2 \\tan ^{-1} x+2 \\tan ^{-1} y\\right) \\\\\n& =\\tan \\left(\\tan ^{-1} x+\\tan ^{-1} y\\right) \\\\\n& =\\tan \\left[\\tan ^{-1}\\left(\\frac{x+y}{1-x y}\\right)\\right] \\\\\n& =\\left(\\frac{x+y}{1-x y}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{x+y}{1-x y}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.10",
+      "kind": "exercise",
+      "number": "10",
+      "topic": "Value of sin^-1(sin x) outside principal range",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\sin ^{-1}\\left(\\sin \\frac{2 \\pi}{3}\\right)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since, ${ }^{\\text {θin }}$ sin ( $\\theta-$ )\nTherefore,\n\n$$\n\\begin{aligned}\n\\sin ^{-1}\\left(\\sin \\frac{2 \\pi}{3}\\right) & =\\sin ^{-1}\\left[\\sin \\left(\\pi-\\frac{2 \\pi}{3}\\right)\\right] \\\\\n& =\\sin ^{-1}\\left(\\sin \\frac{\\pi}{3}\\right) \\\\\n& =\\frac{\\pi}{3}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{3}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.11",
+      "kind": "exercise",
+      "number": "11",
+      "topic": "Value of tan^-1(tan x) outside principal range",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}\\left(\\tan \\frac{3 \\pi}{4}\\right)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since, ${ }^{\\text {tan } \\tan }(\\theta-)$\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan ^{-1}\\left(\\tan \\frac{3 \\pi}{4}\\right) & =\\tan ^{-1}\\left[-\\tan \\left(-\\frac{3 \\pi}{4}\\right)\\right] \\\\\n& =\\tan ^{-1}\\left[-\\tan \\left(\\pi-\\frac{\\pi}{4}\\right)\\right] \\\\\n& =\\tan ^{-1}\\left[-\\tan \\left(\\frac{\\pi}{4}\\right)\\right] \\\\\n& =\\tan ^{-1}\\left[\\tan \\left(-\\frac{\\pi}{4}\\right)\\right] \\\\\n& =\\left(-\\frac{\\pi}{4}\\right)\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$-\\frac{\\pi}{4}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.12",
+      "kind": "exercise",
+      "number": "12",
+      "topic": "Value of combined inverse trig expression",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan \\left(\\sin ^{-1} \\frac{3}{5}+\\cot ^{-1} \\frac{3}{2}\\right)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\sin ^{-1} \\frac{3}{5}=x \\Rightarrow \\sin x=\\frac{3}{5}$\nThen,\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\cos x=\\sqrt{1-\\sin ^{2} x}=\\frac{4}{5} \\\\\n& \\Rightarrow \\sec x=\\frac{5}{4}\n\\end{aligned}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan x & =\\sqrt{\\sec ^{2} x-1} \\\\\n& =\\sqrt{\\frac{25}{16}-1} \\\\\n& =\\frac{3}{4} \\\\\nx & =\\tan ^{-1} \\frac{3}{4} \\\\\n\\sin ^{-1} \\frac{3}{5} & =\\tan ^{-1} \\frac{3}{4}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "sin^-1(3/5) relation"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now,\n\n$$\n\\cot ^{-1} \\frac{3}{2}=\\tan ^{-1} \\frac{2}{3}\n$$"
+            }
+          ],
+          "label": "cot^-1(3/2) relation"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, by using (1) and (2)\n\n$$\n\\begin{aligned}\n\\tan \\left(\\sin ^{-1} \\frac{3}{5}+\\cot ^{-1} \\frac{2}{3}\\right) & =\\tan \\left(\\tan ^{-1} \\frac{3}{4}+\\tan ^{-1} \\frac{2}{3}\\right) \\\\\n& =\\tan \\left[\\tan ^{-1} \\frac{\\frac{3}{4}+\\frac{2}{3}}{1-\\frac{3}{4} \\cdot \\frac{2}{3}}\\right] \\\\\n& =\\tan \\left(\\tan ^{-1} \\frac{17}{6}\\right) \\\\\n& =\\frac{17}{6}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{17}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.13",
+      "kind": "exercise",
+      "number": "13",
+      "topic": "Value of cos^-1(cos x) outside principal range (multiple choice)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\cos ^{-1}\\left(\\cos \\frac{7 \\pi}{6}\\right)$ is equal to\n(A) $\\frac{7 \\pi}{6}$\n(B) $\\frac{5 \\pi}{6}$\n(C) $\\frac{\\pi}{3}$\n(D) $\\frac{\\pi}{6}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\cos ^{-1}\\left(\\cos \\frac{7 \\pi}{6}\\right) & =\\cos ^{-1}\\left(\\cos \\frac{-7 \\pi}{6}\\right) \\\\\n& =\\cos ^{-1}\\left[\\cos \\left(2 \\pi-\\frac{7 \\pi}{6}\\right)\\right] \\\\\n& =\\cos ^{-1}\\left[\\cos \\left(\\frac{5 \\pi}{6}\\right)\\right] \\\\\n& =\\frac{5 \\pi}{6}\n\\end{aligned}\n$$\n\nThus, the correct option is B."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Option (B)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.14",
+      "kind": "exercise",
+      "number": "14",
+      "topic": "Value of trig expression with inverse sine (multiple choice)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\sin \\left(\\frac{\\pi}{3}-\\sin ^{-1}\\left(-\\frac{1}{2}\\right)\\right)$ is equal to\n(A) $\\frac{1}{2}$\n(B) $\\frac{1}{3}$\n(C) $\\frac{1}{4}$\n(D) 1"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\sin ^{-1}\\left(-\\frac{1}{2}\\right)=x$\nHence,\n\n$$\n\\begin{aligned}\n\\sin x & =-\\frac{1}{2} \\\\\n& =-\\sin \\frac{\\pi}{6} \\\\\n& =\\sin \\left(-\\frac{\\pi}{6}\\right) \\\\\nx & =-\\frac{\\pi}{6}\n\\end{aligned}\n$$\n\nSince, Range of principal value of $\\sin ^{-1}(x)=\\left[\\frac{-\\pi}{2}, \\frac{\\pi}{2}\\right]$.\nTherefore,\n\n$$\n\\sin ^{-1}\\left(-\\frac{1}{2}\\right)=-\\frac{\\pi}{6}\n$$\n\nThen,\n\n$$\n\\begin{aligned}\n\\sin \\left(\\frac{\\pi}{3}-\\sin ^{-1}\\left(-\\frac{1}{2}\\right)\\right) & =\\sin \\left(\\frac{\\pi}{3}+\\frac{\\pi}{6}\\right) \\\\\n& =\\sin \\left(\\frac{\\pi}{2}\\right) \\\\\n& =1\n\\end{aligned}\n$$\n\nThus, the correct option is D."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Option (D)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.2.15",
+      "kind": "exercise",
+      "number": "15",
+      "topic": "Difference of inverse trig values (multiple choice)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1} \\sqrt{3}-\\cot ^{-1}(-\\sqrt{3})$ is equal to\n(A) $\\pi$\n(B) $-\\frac{\\pi}{2}$\n(C) 0\n(D) $2 \\sqrt{3}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\tan ^{-1} \\sqrt{3}=x$\nHence,\n\n$$\n\\tan x=\\sqrt{3}=\\tan \\frac{\\pi}{3} \\text {, where } \\frac{\\pi}{3} \\in\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)\n$$\n\nTherefore, $\\tan ^{-1} \\sqrt{3}=\\frac{\\pi}{3}$\nNow, let $\\cot ^{-1}(-\\sqrt{3})=y$\n\nHence,\n\n$$\n\\begin{aligned}\n\\cot y & =(-\\sqrt{3}) \\\\\n& =-\\cot \\left(\\frac{\\pi}{6}\\right) \\\\\n& =\\cot \\left(\\pi-\\frac{\\pi}{6}\\right) \\\\\n& =\\cot \\left(\\frac{5 \\pi}{6}\\right)\n\\end{aligned}\n$$\n\nSince, Range of principal value of $\\cot ^{-1} x=(0, \\pi)$ Therefore,\n\n$$\n\\cot ^{-1}(-\\sqrt{3})=\\frac{5 \\pi}{6}\n$$\n\nThen,\n\n$$\n\\begin{aligned}\n\\tan ^{-1} \\sqrt{3}-\\cot ^{-1}(-\\sqrt{3}) & =\\frac{\\pi}{3}-\\frac{5 \\pi}{6} \\\\\n& =-\\frac{\\pi}{2}\n\\end{aligned}\n$$\n\nThus, the correct option is B."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Option (B)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.1",
+      "kind": "additional_exercise",
+      "number": "1",
+      "topic": "Value of cos^-1(cos x) outside principal range",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\cos ^{-1}\\left(\\cos \\frac{13 \\pi}{6}\\right)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\cos ^{-1}\\left(\\cos \\frac{13 \\pi}{6}\\right) & =\\cos ^{-1}\\left[\\cos \\left(2 \\pi+\\frac{\\pi}{6}\\right)\\right] \\\\\n& =\\cos ^{-1}\\left[\\cos \\frac{\\pi}{6}\\right] \\\\\n& =\\frac{\\pi}{6}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.2",
+      "kind": "additional_exercise",
+      "number": "2",
+      "topic": "Value of tan^-1(tan x) outside principal range",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\tan ^{-1}\\left(\\tan \\frac{7 \\pi}{6}\\right)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\tan ^{-1}\\left(\\tan \\frac{7 \\pi}{6}\\right) & =\\tan ^{-1}\\left[\\tan \\left(2 \\pi-\\frac{5 \\pi}{6}\\right)\\right] \\\\\n& =\\tan ^{-1}\\left[-\\tan \\left(\\frac{5 \\pi}{6}\\right)\\right] \\\\\n& =\\tan ^{-1}\\left[\\tan \\left(\\pi-\\frac{5 \\pi}{6}\\right)\\right] \\\\\n& =\\tan ^{-1}\\left[\\tan \\frac{\\pi}{6}\\right] \\\\\n& =\\frac{\\pi}{6}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$\\frac{\\pi}{6}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.3",
+      "kind": "additional_exercise",
+      "number": "3",
+      "topic": "Prove sine-to-tangent double-angle identity",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove that $2 \\sin ^{-1} \\frac{3}{5}=\\tan ^{-1} \\frac{24}{7}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\sin ^{-1} \\frac{3}{5}=x \\Rightarrow \\sin x=\\frac{3}{5}$\nThen,\n\n$$\n\\cos x=\\sqrt{1-\\left(\\frac{3}{5}\\right)^{2}}=\\frac{4}{5}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan x & =\\frac{3}{4} \\\\\nx & =\\tan ^{-1} \\frac{3}{4} \\\\\n\\sin ^{-1} \\frac{3}{5} & =\\tan ^{-1} \\frac{3}{4}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "sin^-1(3/5) relation"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus,\n\n$$\n\\begin{aligned}\n\\text { LHS } & =2 \\sin ^{-1} \\frac{3}{5} \\\\\n& =2 \\tan ^{-1} \\frac{3}{4} \\quad \\text { [from (1)] } \\\\\n& =\\tan ^{-1}\\left(\\frac{2 \\times \\frac{3}{4}}{1-\\left(\\frac{3}{4}\\right)^{2}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{24}{7}\\right) \\\\\n& =\\text { RHS }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.4",
+      "kind": "additional_exercise",
+      "number": "4",
+      "topic": "Sum of two inverse sines as inverse tangent",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove that $\\sin ^{-1} \\frac{8}{17}+\\sin ^{-1} \\frac{3}{5}=\\tan ^{-1} \\frac{77}{36}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\sin ^{-1} \\frac{8}{17}=x \\Rightarrow \\sin x=\\frac{8}{17}$\nThen,\n\n$$\n\\cos x=\\sqrt{1-\\left(\\frac{8}{17}\\right)^{2}}=\\sqrt{\\frac{225}{289}}=\\frac{15}{17}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan x & =\\frac{8}{15} \\\\\nx & =\\tan ^{-1} \\frac{8}{15} \\\\\n\\sin ^{-1} \\frac{8}{17} & =\\tan ^{-1} \\frac{8}{15}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "sin^-1(8/17) relation"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, let $\\sin ^{-1} \\frac{3}{5}=y \\Rightarrow \\sin y=\\frac{3}{5}$\nThen,\n\n$$\n\\cos y=\\sqrt{1-\\left(\\frac{3}{5}\\right)^{2}}=\\sqrt{\\frac{16}{25}}=\\frac{4}{5}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan y & =\\frac{3}{4} \\\\\ny & =\\tan ^{-1} \\frac{3}{4} \\\\\n\\sin ^{-1} \\frac{3}{5} & =\\tan ^{-1} \\frac{3}{4}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "sin^-1(3/5) relation"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, by using (1) and (2)\n\n$$\n\\begin{aligned}\n\\text { LHS } & =\\sin ^{-1} \\frac{8}{17}+\\sin ^{-1} \\frac{3}{5} \\\\\n& =\\tan ^{-1} \\frac{8}{15}+\\tan ^{-1} \\frac{3}{4} \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{8}{15}+\\frac{3}{4}}{1-\\frac{8}{15} \\cdot \\frac{3}{4}}\\right] \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{32+45}{60}}{\\frac{60-24}{60}}\\right] \\\\\n& =\\tan ^{-1} \\frac{77}{36} \\\\\n& =\\text { RHS }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.5",
+      "kind": "additional_exercise",
+      "number": "5",
+      "topic": "Sum of two inverse cosines as another inverse cosine",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove that $\\cos ^{-1} \\frac{4}{5}+\\cos ^{-1} \\frac{12}{13}=\\cos ^{-1} \\frac{33}{65}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\cos ^{-1} \\frac{4}{5}=x \\Rightarrow \\cos x=\\frac{4}{5}$\nThen,\n\n$$\n\\sin x=\\sqrt{1-\\left(\\frac{4}{5}\\right)^{2}}=\\frac{3}{5}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan x & =\\frac{3}{4} \\\\\nx & =\\tan ^{-1} \\frac{3}{4} \\\\\n\\cos ^{-1} \\frac{4}{5} & =\\tan ^{-1} \\frac{3}{4}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "cos^-1(4/5) relation"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, let $\\cos ^{-1} \\frac{12}{13}=y \\Rightarrow \\cos y=\\frac{12}{13}$\n\nThen,\n\n$$\n\\sin y=\\frac{5}{13}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan y & =\\frac{5}{12} \\\\\ny & =\\tan ^{-1} \\frac{5}{12} \\\\\n\\cos ^{-1} \\frac{12}{13} & =\\tan ^{-1} \\frac{5}{12}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "cos^-1(12/13) relation"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, by using (1) and (2)\n\n$$\n\\begin{aligned}\n\\cos ^{-1} \\frac{4}{5}+\\cos ^{-1} \\frac{12}{13} & =\\tan ^{-1} \\frac{3}{4}+\\tan ^{-1} \\frac{5}{12} \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{3}{4}+\\frac{5}{12}}{1-\\frac{3}{4} \\cdot \\frac{5}{12}}\\right] \\\\\n& =\\tan ^{-1}\\left[\\frac{56}{33}\\right]\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "Intermediate combine"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, let $\\cos ^{-1} \\frac{33}{65}=z \\Rightarrow \\cos z=\\frac{33}{65}$\nThen,\n\n$$\n\\sin z=\\sqrt{1-\\left(\\frac{33}{65}\\right)^{2}}=\\frac{56}{65}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan z & =\\frac{33}{56} \\\\\nz & =\\tan ^{-1} \\frac{56}{33} \\\\\n\\cos ^{-1} \\frac{33}{65} & =\\tan ^{-1} \\frac{56}{33}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "cos^-1(33/65) relation"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, by using (3) and (4)\n\n$$\n\\cos ^{-1} \\frac{4}{5}+\\cos ^{-1} \\frac{12}{13}=\\cos ^{-1} \\frac{33}{65}\n$$\n\nHence proved."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.6",
+      "kind": "additional_exercise",
+      "number": "6",
+      "topic": "Sum of inverse cosine and inverse sine as another inverse sine",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove that $\\cos ^{-1} \\frac{12}{13}+\\sin ^{-1} \\frac{3}{5}=\\sin ^{-1} \\frac{56}{65}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\cos ^{-1} \\frac{12}{13}=y \\Rightarrow \\cos y=\\frac{12}{13}$\nThen,\n\n$$\n\\sin y=\\sqrt{1-\\left(\\frac{12}{13}\\right)^{2}}=\\frac{5}{13}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan y & =\\frac{5}{12} \\\\\ny & =\\tan ^{-1} \\frac{5}{12} \\\\\n\\cos ^{-1} \\frac{12}{13} & =\\tan ^{-1} \\frac{5}{12}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "cos^-1(12/13) relation"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, let $\\sin ^{-1} \\frac{3}{5}=x \\Rightarrow \\sin x=\\frac{3}{5}$\nThen,\n\n$$\n\\cos x=\\sqrt{1-\\left(\\frac{3}{5}\\right)^{2}}=\\frac{4}{5}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan x & =\\frac{3}{4} \\\\\nx & =\\tan ^{-1} \\frac{3}{4} \\\\\n\\sin ^{-1} \\frac{3}{5} & =\\tan ^{-1} \\frac{3}{4}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "sin^-1(3/5) relation"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, let $\\sin ^{-1} \\frac{56}{65}=z \\Rightarrow \\sin z=\\frac{56}{65}$\nThen,\n\n$$\n\\cos z=\\sqrt{1-\\left(\\frac{56}{65}\\right)^{2}}=\\frac{33}{65}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n& \\tan z=\\frac{56}{33} \\\\\n& z=\\tan ^{-1} \\frac{56}{33} \\\\\n& \\sin ^{-1} \\frac{56}{65}=\\tan ^{-1} \\frac{56}{33}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "sin^-1(56/65) relation"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, by using (1) and (2)\n\n$$\n\\begin{aligned}\n\\text { LHS } & =\\cos ^{-1} \\frac{12}{13}+\\sin ^{-1} \\frac{3}{5} \\\\\n& =\\tan ^{-1} \\frac{5}{12}+\\tan ^{-1} \\frac{3}{4} \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{5}{12}+\\frac{3}{4}}{1-\\frac{5}{12} \\cdot \\frac{3}{4}}\\right] \\\\\n& =\\tan ^{-1}\\left[\\frac{\\frac{20+36}{48}}{\\frac{48-15}{48}}\\right] \\\\\n& =\\tan ^{-1}\\left(\\frac{56}{33}\\right) \\\\\n& =\\sin ^{-1} \\frac{56}{65} \\quad \\text { [Using (3)] } \\\\\n& =\\text { RHS }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.7",
+      "kind": "additional_exercise",
+      "number": "7",
+      "topic": "Inverse tangent as sum of inverse sine and inverse cosine",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove that $\\tan ^{-1} \\frac{63}{16}=\\sin ^{-1} \\frac{5}{13}+\\cos ^{-1} \\frac{3}{5}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\sin ^{-1} \\frac{5}{13}=x \\Rightarrow \\sin x=\\frac{5}{13}$\nThen,\n\n$$\n\\cos x=\\sqrt{1-\\left(\\frac{5}{13}\\right)^{2}}=\\frac{12}{13}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan x & =\\frac{5}{12} \\\\\nx & =\\tan ^{-1} \\frac{5}{12} \\\\\n\\sin ^{-1} \\frac{5}{13} & =\\tan ^{-1} \\frac{5}{12}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "sin^-1(5/13) relation"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Now, let $\\cos ^{-1} \\frac{3}{5}=y \\Rightarrow \\cos y=\\frac{3}{5}$\nThen,\n\n$$\n\\sin y=\\sqrt{1-\\left(\\frac{3}{5}\\right)^{2}}=\\frac{4}{5}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\tan y & =\\frac{4}{3} \\\\\ny & =\\tan ^{-1} \\frac{4}{3} \\\\\n\\cos ^{-1} \\frac{3}{5} & =\\tan ^{-1} \\frac{4}{3}\n\\end{aligned}\n$$"
+            }
+          ],
+          "label": "cos^-1(3/5) relation"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, by using (1) and (2)\n\n$$\n\\begin{aligned}\n\\text { RHS } & =\\sin ^{-1} \\frac{5}{13}+\\cos ^{-1} \\frac{3}{5} \\\\\n& =\\tan ^{-1} \\frac{5}{12}+\\tan ^{-1} \\frac{4}{3} \\\\\n& =\\tan ^{-1}\\left(\\frac{\\frac{5}{12}+\\frac{4}{3}}{1-\\frac{5}{12} \\cdot \\frac{4}{3}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{63}{16}\\right) \\\\\n& =L H S\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.8",
+      "kind": "additional_exercise",
+      "number": "8",
+      "topic": "Inverse tangent of √x",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove that $\\tan ^{-1} \\sqrt{x}=\\frac{1}{2} \\cos ^{-1} \\frac{1-x}{1+x}, x \\in[0,1]$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $x=\\tan ^{2} \\theta$\nThen,\n\n$$\n\\begin{aligned}\n\\sqrt{x} & =\\tan \\theta \\\\\n\\theta & =\\tan ^{-1} \\sqrt{x}\n\\end{aligned}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n\\left(\\frac{1-x}{1+x}\\right) & =\\frac{1-\\tan ^{2} \\theta}{1+\\tan ^{2} \\theta} \\\\\n& =\\cos 2 \\theta\n\\end{aligned}\n$$\n\nThus,\n\n$$\n\\begin{aligned}\n\\text { RHS } & =\\frac{1}{2} \\cos ^{-1}\\left(\\frac{1-x}{1+x}\\right) \\\\\n& =\\frac{1}{2} \\cos ^{-1}(\\cos 2 \\theta) \\\\\n& =\\frac{1}{2} \\times 2 \\theta \\\\\n& =\\theta \\\\\n& =\\tan ^{-1} \\sqrt{x} \\\\\n& =\\text { LHS }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.9",
+      "kind": "additional_exercise",
+      "number": "9",
+      "topic": "Inverse cotangent of a trigonometric ratio",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove that $\\cot ^{-1}\\left(\\frac{\\sqrt{1+\\sin x}+\\sqrt{1-\\sin x}}{\\sqrt{1+\\sin x}-\\sqrt{1-\\sin x}}\\right)=\\frac{x}{2}, x \\in\\left(0, \\frac{\\pi}{4}\\right)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n\\left(\\frac{\\sqrt{1+\\sin x}+\\sqrt{1-\\sin x}}{\\sqrt{1+\\sin x}-\\sqrt{1-\\sin x}}\\right) & =\\frac{(\\sqrt{1+\\sin x}+\\sqrt{1-\\sin x})^{2}}{(\\sqrt{1+\\sin x})^{2}-(\\sqrt{1-\\sin x})^{2}} \\quad \\text { (by rationalizing) } \\\\\n& =\\frac{(1+\\sin x)+(1-\\sin x)+2 \\sqrt{(1+\\sin x)(1-\\sin x)}}{1+\\sin x-1+\\sin x} \\\\\n& =\\frac{2\\left(1+\\sqrt{1-\\sin ^{2} x}\\right)}{2 \\sin x}=\\frac{1+\\cos x}{\\sin x} \\\\\n& =\\frac{2 \\cos ^{2} \\frac{x}{2}}{2 \\sin \\frac{x}{2} \\cos \\frac{x}{2}} \\\\\n& =\\cot \\frac{x}{2}\n\\end{aligned}\n$$\n\nThus,\n\n$$\n\\begin{aligned}\nL H S & =\\cot ^{-1}\\left(\\frac{\\sqrt{1+\\sin x}+\\sqrt{1-\\sin x}}{\\sqrt{1+\\sin x}-\\sqrt{1-\\sin x}}\\right) \\\\\n& =\\cot ^{-1}\\left(\\cot \\frac{x}{2}\\right) \\\\\n& =\\frac{x}{2} \\\\\n& =R H S\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.10",
+      "kind": "additional_exercise",
+      "number": "10",
+      "topic": "Inverse tangent of a ratio as a shifted half-inverse-cosine",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Prove that $\\tan ^{-1}\\left(\\frac{\\sqrt{1+x}-\\sqrt{1-x}}{\\sqrt{1+x}+\\sqrt{1-x}}\\right)=\\frac{\\pi}{4}-\\frac{1}{2} \\cos ^{-1} x,-\\frac{1}{\\sqrt{2}} \\leq x \\leq 1$ [Hint: Put $x=\\cos 2 \\theta$ ]"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $x=\\cos 2 \\theta \\Rightarrow \\theta=\\frac{1}{2} \\cos ^{-1} x$\nThus,\n\n$$\n\\begin{aligned}\n\\text { LHS } & =\\tan ^{-1}\\left(\\frac{\\sqrt{1+x}-\\sqrt{1-x}}{\\sqrt{1+x}+\\sqrt{1-x}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{\\sqrt{1+\\cos 2 \\theta}-\\sqrt{1-\\cos 2 \\theta}}{\\sqrt{1+\\cos 2 \\theta}+\\sqrt{1-\\cos 2 \\theta}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{\\sqrt{2 \\cos ^{2} \\theta}-\\sqrt{2 \\sin ^{2} \\theta}}{\\sqrt{2 \\cos ^{2} \\theta}+\\sqrt{2 \\sin ^{2} \\theta}}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{\\sqrt{2} \\cos \\theta-\\sqrt{2} \\sin \\theta}{\\sqrt{2} \\cos \\theta+\\sqrt{2} \\sin \\theta}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{\\cos \\theta-\\sin \\theta}{\\cos \\theta+\\sin \\theta}\\right) \\\\\n& =\\tan ^{-1}\\left(\\frac{1-\\tan \\theta}{1+\\tan \\theta}\\right) \\\\\n& =\\tan ^{-1} 1-\\tan ^{-1}(\\tan \\theta) \\\\\n& =\\frac{\\pi}{4}-\\theta \\\\\n& =\\frac{\\pi}{4}-\\frac{1}{2} \\cos ^{-1} x \\\\\n& =\\text { RHS }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.11",
+      "kind": "additional_exercise",
+      "number": "11",
+      "topic": "Solve an inverse trig equation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Solve $2 \\tan ^{-1}(\\cos x)=\\tan ^{-1}(2 \\operatorname{cosec} x)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that $2 \\tan ^{-1}(\\cos x)=\\tan ^{-1}(2 \\operatorname{cosec} x)$\nSince, $2 \\tan ^{-1}(x)=\\tan ^{-1} \\frac{2 x}{1-x^{2}}$\nHence,\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\tan ^{-1}\\left(\\frac{2 \\cos x}{1-\\cos ^{2} x}\\right)=\\tan ^{-1}(2 \\operatorname{cosec} x) \\\\\n& \\Rightarrow\\left(\\frac{2 \\cos x}{1-\\cos ^{2} x}\\right)=(2 \\operatorname{cosec} x) \\\\\n& \\Rightarrow \\frac{2 \\cos x}{\\sin ^{2} x}=\\frac{2}{\\sin x} \\\\\n& \\Rightarrow \\cos x=\\sin x \\\\\n& \\Rightarrow \\tan x=1 \\\\\n& \\Rightarrow \\tan x=\\tan \\frac{\\pi}{4}\n\\end{aligned}\n$$\n\nTherefore,\n\n$$\nx=n \\pi+\\frac{\\pi}{4}, \\text { where } n \\in Z .\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$x=n \\pi+\\frac{\\pi}{4}, n \\in Z$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.12",
+      "kind": "additional_exercise",
+      "number": "12",
+      "topic": "Solve an inverse trig equation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Solve $\\tan ^{-1} \\frac{1-x}{1+x}=\\frac{1}{2} \\tan ^{-1} x,(x>0)$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Since $\\tan ^{-1} x-\\tan ^{-1} y=\\tan ^{-1} \\frac{x-y}{1+x y}$\nHence,\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\tan ^{-1} \\frac{1-x}{1+x}=\\frac{1}{2} \\tan ^{-1} x \\\\\n& \\Rightarrow \\tan ^{-1} 1-\\tan ^{-1} x=\\frac{1}{2} \\tan ^{-1} x \\\\\n& \\Rightarrow \\frac{\\pi}{4}=\\frac{3}{2} \\tan ^{-1} x \\\\\n& \\Rightarrow \\tan ^{-1} x=\\frac{\\pi}{6} \\\\\n& \\Rightarrow x=\\tan \\frac{\\pi}{6} \\\\\n& \\Rightarrow x=\\frac{1}{\\sqrt{3}}\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "$x=\\frac{1}{\\sqrt{3}}$"
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.13",
+      "kind": "additional_exercise",
+      "number": "13",
+      "topic": "Value of sin(tan^-1 x) (multiple choice)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "$\\sin \\left(\\tan ^{-1} x\\right),|x|<1$ is equal to\n(A) $\\frac{x}{\\sqrt{1-x^{2}}}$\n(B) $\\frac{1}{\\sqrt{1-x^{2}}}$\n(C) $\\frac{1}{\\sqrt{1+x^{2}}}$\n(D) $\\frac{x}{\\sqrt{1+x^{2}}}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $\\tan y=x$\nTherefore,\n\n$$\n\\sin y=\\frac{x}{\\sqrt{1+x^{2}}}\n$$\n\nNow, let $\\tan ^{-1} x=y$\nTherefore,\n\n$$\ny=\\sin ^{-1}\\left(\\frac{x}{\\sqrt{1+x^{2}}}\\right)\n$$\n\nHence,\n\n$$\n\\tan ^{-1} x=\\sin ^{-1}\\left(\\frac{x}{\\sqrt{1+x^{2}}}\\right)\n$$\n\nThus,\n\n$$\n\\begin{aligned}\n\\sin \\left(\\tan ^{-1} x\\right) & =\\sin \\left(\\sin ^{-1}\\left(\\frac{x}{\\sqrt{1+x^{2}}}\\right)\\right) \\\\\n& =\\frac{x}{\\sqrt{1+x^{2}}}\n\\end{aligned}\n$$\n\nThus, the correct option is D."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Option (D)"
+        }
+      ]
+    },
+    {
+      "id": "q_2.3.14",
+      "kind": "additional_exercise",
+      "number": "14",
+      "topic": "Solve an inverse-sine equation (multiple choice)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Solve: $\\sin ^{-1}(1-x)-2 \\sin ^{-1} x=\\frac{\\pi}{2}$, then $x$ is equal to\n(A) $0, \\frac{1}{2}$\n(B) $1, \\frac{1}{2}$\n(C) 0\n(D) $\\frac{1}{2}$"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that $\\sin ^{-1}(1-x)-2 \\sin ^{-1} x=\\frac{\\pi}{2}$\n\n$$\n\\begin{aligned}\n& \\Rightarrow \\sin ^{-1}(1-x)-2 \\sin ^{-1} x=\\frac{\\pi}{2} \\\\\n& \\Rightarrow-2 \\sin ^{-1} x=\\frac{\\pi}{2}-\\sin ^{-1}(1-x) \\\\\n& \\Rightarrow-2 \\sin ^{-1} x=\\cos ^{-1}(1-x)\n\\end{aligned}\n$$\n\nLet $\\sin ^{-1} x=y \\Rightarrow \\sin y=x$\nHence,\n\n$$\n\\begin{aligned}\n\\cos y & =\\sqrt{1-x^{2}} \\\\\ny & =\\cos ^{-1}\\left(\\sqrt{1-x^{2}}\\right) \\\\\n\\sin ^{-1} x & =\\cos ^{-1} \\sqrt{1-x^{2}}\n\\end{aligned}\n$$\n\nFrom equation (1), we have\n\n$$\n-2 \\cos ^{-1} \\sqrt{1-x^{2}}=\\cos ^{-1}(1-x)\n$$\n\nPut $x=\\sin y$\n\n$$\n\\begin{aligned}\n& \\Rightarrow-2 \\cos ^{-1} \\sqrt{1-\\sin ^{2} y}=\\cos ^{-1}(1-\\sin y) \\\\\n& \\Rightarrow-2 \\cos ^{-1}(\\cos y)=\\cos ^{-1}(1-\\sin y) \\\\\n& \\Rightarrow-2 y=\\cos ^{-1}(1-\\sin y) \\\\\n& \\Rightarrow 1-\\sin y=\\cos (-2 y) \\\\\n& \\Rightarrow 1-\\sin y=\\cos 2 y \\\\\n& \\Rightarrow 1-\\sin y=1-2 \\sin ^{2} y \\\\\n& \\Rightarrow 2 \\sin ^{2} y-\\sin y=0 \\\\\n& \\Rightarrow \\sin y(2 \\sin y-1)=0 \\\\\n& \\Rightarrow \\sin y=0, \\frac{1}{2}\n\\end{aligned}\n$$\n\nTherefore,\n\n$$\nx=0, \\frac{1}{2}\n$$\n\nWhen $x=\\frac{1}{2}$, it does not satisfy the equation.\nHence, $x=0$ is the only solution\nThus, the correct option is C."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Option (C)"
+        }
+      ]
+    }
+  ]
+}

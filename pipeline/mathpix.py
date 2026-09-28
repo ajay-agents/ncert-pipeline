@@ -44,7 +44,7 @@ def _download_images(md_text: str, images_dir: Path, chapter: str) -> str:
             ext = Path(url.split("?", 1)[0]).suffix or ".png"
             name = f"fig_{chapter}_{counter}{ext}"
             counter += 1
-            resp = requests.get(url)
+            resp = requests.get(url, timeout=30)
             resp.raise_for_status()
             (images_dir / name).write_bytes(resp.content)
             seen[url] = f"images/{name}"
@@ -79,13 +79,14 @@ def convert(pdf_path: str | Path, out_dir: str | Path, subject: str,
 
     with pdf_path.open("rb") as fh:
         r = requests.post(f"{BASE}/pdf", headers=_headers(),
-                          files={"file": fh}, data={"options_json": json.dumps(options)})
+                          files={"file": fh}, data={"options_json": json.dumps(options)},
+                          timeout=180)
     r.raise_for_status()
     pdf_id = r.json()["pdf_id"]
 
     deadline = time.time() + timeout
     while time.time() < deadline:
-        status = requests.get(f"{BASE}/pdf/{pdf_id}", headers=_headers()).json()
+        status = requests.get(f"{BASE}/pdf/{pdf_id}", headers=_headers(), timeout=30).json()
         if status.get("status") == "completed":
             break
         if status.get("status") == "error":
@@ -94,7 +95,7 @@ def convert(pdf_path: str | Path, out_dir: str | Path, subject: str,
     else:
         raise TimeoutError(f"mathpix timed out on {pdf_path.name}")
 
-    md = requests.get(f"{BASE}/pdf/{pdf_id}.md", headers=_headers())
+    md = requests.get(f"{BASE}/pdf/{pdf_id}.md", headers=_headers(), timeout=60)
     md.raise_for_status()
     text = _download_images(md.text, out_dir / "images", chapter)
     # pdf_path.stem is already e.g. "chapter.hi" (only .pdf is stripped) — the

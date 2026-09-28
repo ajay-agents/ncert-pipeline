@@ -52,6 +52,13 @@ NOARG_SYMBOL = {
     "cup": NBSP + "\u222a" + NBSP,
     "prime": "\u2032",
     "ldots": "\u2026",
+    # Ceiling brackets - unhandled by this converter until now (never
+    # exercised by any prior chapter's own content). Caught for real on
+    # this chapter's own q_5.1.32/33: `\lceil...\rceil` fell through to
+    # literal backslash-command text on the page (the same "unknown
+    # command -> its own bare name" failure mode step_9/PROMPT.md already
+    # documents for set-theory/relations notation in a different chapter).
+    "lceil": "\u2308", "rceil": "\u2309",
 }
 # Greek letters are italicized, matching standard math typesetting (a
 # variable name), same convention as every prior chapter's converter.
@@ -665,7 +672,24 @@ def _convert_inner(s, bypass_division=False):
                         # where an empty leading "&"-continuation cell was
                         # already dropped above) needs none.
                         row_htmls.append((NBSP * 2).join(cell_htmls))
-                    out.append('<span class="s92">' + "".join(f'<span class="s93">{r}</span>' for r in row_htmls) + '</span>')
+                    # A `cases` environment is LaTeX's own shorthand for
+                    # `\left\{ \begin{array}...\end{array} \right.` - the
+                    # defining left brace is part of what `cases` itself
+                    # means, not something the source has to spell out
+                    # separately. A source that instead writes the brace
+                    # explicitly (`\left\{\begin{array}...\right.`) already
+                    # gets one from the `left`/`right` handler above; a bare
+                    # `\begin{cases}` got none at all before this, rendering
+                    # the exact same piecewise-function shape inconsistently
+                    # depending only on which of the two equivalent source
+                    # spellings this chapter happened to use (caught for
+                    # real: 21 of this chapter's own occurrences use the bare
+                    # `cases` form and rendered with no brace, next to 40
+                    # `\left\{\begin{array}` ones that did). Always emit the
+                    # brace for `cases` specifically - never for `array`/
+                    # `aligned`/`gathered`, which have no such implied brace.
+                    prefix = "{" if envname == "cases" else ""
+                    out.append(prefix + '<span class="s92">' + "".join(f'<span class="s93">{r}</span>' for r in row_htmls) + '</span>')
                     i = j
                     continue
                 if cmd in OPERATOR_NAMES:

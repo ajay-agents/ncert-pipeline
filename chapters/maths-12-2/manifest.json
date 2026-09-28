@@ -227,5 +227,203 @@
     ],
     "model_calls": 0,
     "notes": "Mechanical export pass (Playwright/Chromium), no model judgment. No export.py existed yet for this chapter - wrote one following the identical standard pattern used by every other chapter (page.goto the real 09_design file:// path, document.fonts.ready wait, page.emulate_media(media='screen') immediately before page.pdf() per step_10/PROMPT.md's standing Devanagari pre-base vowel-reordering fix, print_background=True + prefer_css_page_size=True, no explicit format/width/height). Output: 18 pages, sane for 49 items (6 examples + 43 exercises across 4 sections) - this chapter's content is unusually compact per item (mostly 2-6 line symbolic derivations, no figures, no long numeric substitutions), giving a much higher items-per-page density (~2.7) than a numerically-dense Physics chapter would, consistent with this chapter's own content shape, not a red flag. Zero blank pages. Numeric read-back re-run against the PDF's own extracted text (via PyMuPDF, mdio.markdown_to_chapter against 06_simplify/chapter.simplified.hi.md, same source stage 9 used): all 20 numeric tokens from every question/final_answer field found - zero missing. Superscript-exponent normalization used a separator-inserting translate (not a raw str.translate with no separator) per the documented merged-token trap, though this chapter's own final answers are almost entirely plain pi-fraction angles (pi/6, 2pi/3, etc.) rather than powers-of-ten, so the trap was not actually triggered here - the guard was still applied defensively, matching every prior chapter's practice. Visually spot-checked pages 1, 9 and 18 (rendered to PNG via fitz): page 1 shows the title, the first section divider (भाग 1 · उदाहरण) and three example cards rendering correctly (Devanagari renders correctly, not mis-shaped or garbled - the pre-base vowel-reordering fix confirmed working); page 18 (last page) ends cleanly with q_2.5.14's boxed (C) answer and nothing truncated. Known, standing, unfixed limitation noted per step_10/PROMPT.md (not a gate failure, not this chapter's own bug): Chromium's print-to-PDF pipeline can drop the reph 'र्' character from a 'र्'+consonant sequence's extractable text layer while rendering it correctly on screen/in the PDF's visual output - affects copy/search of the PDF, not this chapter's numeric gate (digits only) or its visual correctness. This chapter's own content uses 'निष्कर्ष' (conclusion pill label) repeatedly, a reph-bearing word, so copy-pasted or re-extracted text from this specific PDF will read it one character short, same as every prior chapter using that same label."
+  },
+  {
+    "stage": "mathpix",
+    "at": "2026-09-24T06:45:39.763051+00:00",
+    "inputs": {
+      "chapter.en.pdf": "7387c02883d71d3f",
+      "solutions.en.pdf": "d4941db5fb2948a8"
+    },
+    "counts": {
+      "chapter_en_pages": 16,
+      "chapter_en_chars": 24424,
+      "chapter_en_dollar_spans": 327,
+      "chapter_en_image_refs": 14,
+      "solutions_en_pages": 39,
+      "solutions_en_chars": 36639,
+      "solutions_en_dollar_spans": 422
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "First Maths chapter processed this session (biology 1-5 and chemistry chapters were prior work). English track only (Hindi track's own mathpix stage already completed in an earlier session, untouched here). Verified via page-1 renders before conversion: chapter.en.pdf is the genuine 'Chapter 2: Inverse Trigonometric Functions', solutions.en.pdf is the matching solutions manual, printed as 'Chapter 2 Inverse Trigonometric Functions' - UNLIKE every chemistry/biology chapter processed so far, this Maths solutions manual uses the SAME chapter number as the textbook (no rationalised-edition +1 offset). Operational note: the initial mathpix.convert() call hung indefinitely (~48 min, 0% CPU, no progress) partway through image downloading for this chapter - root-caused to pipeline/mathpix.py's requests.post()/requests.get() calls having NO timeout parameter anywhere, so a single stalled network read could block forever. Added explicit timeouts (180s upload, 30s status poll, 60s .md fetch, 30s per-image download) to all four HTTP calls in mathpix.py - a real, reusable reliability fix to the shared module, not chapter-specific. Killed the hung process, cleared its 3 partial images, and re-ran the conversion cleanly with the fix in place; completed normally in a few minutes. This chapter's structure is also new for this pipeline: unlike every biology/chemistry chapter (one flat EXERCISES block), this chapter has TWO numbered exercises (EXERCISE 2.1, 14 items; EXERCISE 2.2, 15 items), a 'Miscellaneous Examples' section (1 example, numbered continuing from the chapter's own Examples 1-5 as Example 6), a 'Miscellaneous Exercise on Chapter 2' (14 items), and a 'Historical Note' section (never seen before) - will need kind=example AND kind=additional_exercise handling at stage 2, unlike any biology chapter. Fixed 3 mechanical/content defects: (1) a 59-char fullwidth-CJK-punctuation corruption run spanning chars 0-1652 (the chapter's own '2.1 Introduction'/'2.2 Basic Concepts' expository sections, never extracted as items) - character-mapped to ASCII; deliberately did NOT chase every resulting missing-space cosmetic issue in this zone given its low extraction-relevance and the chapter's much larger overall scope, unlike the smaller biology-chapter intros where full spacing cleanup was worthwhile; (2) 'EXERCISE 2.1' had lost its '##' heading marker entirely (plain text) - fixed; (3) a genuine CONTENT-LOSS defect: EXERCISE 2.2's own item 4 ('$\\tan^{-1}(\\sqrt{(1-\\cos x)/(1+\\cos x)}), 0<x<\\pi$') was silently dropped entirely by mathpix between items 3 and 5 - confirmed missing via direct page-12 image inspection (the source page has items 3 and 4 side-by-side in a 2-column layout, likely confusing mathpix's own column-order detection) - recovered verbatim from the page image and inserted at its correct position. Also normalized ALL 52 bare 'Question N:'/52 bare 'Solution:' labels in solutions.en.md to '## ' headings via a single global regex substitution (this solutions manual's own convention differs from every biology chapter's 'Answer N:' - it uses a bare 'Solution:' label instead, and unlike biology chapters' inconsistent heading-drop pattern, mathpix dropped essentially ALL of these here, only 1 of 52 Question headings had survived correctly) - confirmed 0 bare labels remain after the fix. MAJOR FINDING requiring careful stage-2 handling, NOT resolved here per extract.md's own instruction to leave numbering reconciliation to stage 2/3's join_solutions() (documented in full detail here specifically so stage 2 does not trust a naive automated join, matching the exact 'interspersed extras' trap step_2/PROMPT.md warns about for physics-12-3/12-5): solutions.en.md's own Question numbering resets to 1 at each of its 3 section headings, and its counts do NOT match the chapter's own item counts for 2 of the 3 sections - EXERCISE 2.1 is clean (solutions Q1-14 = chapter items 1-14, 1:1, verified by content). EXERCISE 2.2 has 21 solutions-manual questions for the chapter's own 15 items - 6 are genuine orphaned leftovers from an older/unrationalised edition, INTERSPERSED not trailing, confirmed one-by-one by content: solutions Q1=ch.1, Q2=ch.2, Q3=EXTRA (tan^-1 2/11 + tan^-1 7/24), Q4=EXTRA (2tan^-1 1/2 + tan^-1 1/7), Q5=ch.3, Q6=EXTRA (tan^-1 1/sqrt(x^2-1)), Q7=ch.4 (the item recovered above), Q8=ch.5, Q9=ch.6, Q10=ch.7, Q11=ch.8, Q12=EXTRA (cot(tan^-1 a + cot^-1 a)), Q13=ch.9, Q14=EXTRA (sin(sin^-1 1/5 + cos^-1 x)=1), Q15=EXTRA (tan^-1((x-1)/(x-2))+tan^-1((x+1)/(x+2))=pi/4), Q16=ch.10, Q17=ch.11, Q18=ch.12, Q19=ch.13, Q20=ch.14, Q21=ch.15 (every mapped pair's content cross-checked directly, not inferred from position alone). MISCELLANEOUS EXERCISE has 17 solutions-manual questions for the chapter's own 14 items - 3 orphaned extras, also interspersed: solutions Q1-7=ch.1-7, Q8=EXTRA (tan^-1 1/5+tan^-1 1/7+tan^-1 1/3+... type identity), Q9=ch.8, Q10=ch.9, Q11=ch.10, Q12=EXTRA (9pi/8 - (9/4)sin^-1 1/3 = ... - this one's own text looked possibly truncated mid-expression in the mathpix output, worth a direct PDF check at stage 5 regardless of its orphan status), Q13=ch.11, Q14=ch.12, Q15=ch.13, Q16=ch.14, Q17=EXTRA (tan^-1(x/y)-tan^-1((x-y)/(x+y)) multiple choice). None of this was rewritten in solutions.en.md itself - the raw mathpix numbering is left exactly as extracted (now with '##' headings only); stage 2 should build EXERCISE 2.2's and MISCELLANEOUS EXERCISE's joins by hand using the mapping above rather than trusting match.join_solutions()'s plain number-based join, which would silently mispair every item from the first orphan onward in each section."
+  },
+  {
+    "stage": "extract",
+    "at": "2026-09-24T07:04:23.764071+00:00",
+    "inputs": {
+      "chapter.en.md": "6b0592801187f43f",
+      "solutions.en.md": "43d6d454c6e2bcbb"
+    },
+    "counts": {
+      "items_total": 49,
+      "examples": 6,
+      "exercise_2_1": 14,
+      "exercise_2_2": 15,
+      "miscellaneous_exercise": 14,
+      "figures": 0,
+      "orphaned_solutions_discarded": 9
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "HAND-BUILT merge, not match.join_solutions() for 2 of 3 exercise sections - see stage-1 manifest entry and memory file chapter_maths_12_2.md for the full content-verified mapping. EXAMPLES (6) and EXERCISE 2.1 (14) are clean 1:1 matches by printed number. EXERCISE 2.2 (15 chapter items) and MISCELLANEOUS EXERCISE ON CHAPTER 2 (14 chapter items) each had MORE solutions-manual questions than chapter items - 6 and 3 orphaned extras respectively, from an older/unrationalised edition, INTERSPERSED not trailing - matching the documented physics-12-3/12-5 trap in step_2/PROMPT.md. Every solutions-manual entry in both sections was read and content-matched against the chapter text one at a time rather than trusting a plain number join. The 9 orphaned solutions entries were NOT extracted as items (no chapter counterpart exists in this edition) and are listed in full in match_report.md rather than silently discarded without explanation, per Rule 5. ID-COLLISION FIX: EXERCISE 2.1 and EXERCISE 2.2 are both printed 1..N within this chapter; ids use a section-scoped scheme (q_2.1.N / q_2.2.N / q_2.3.N for the Miscellaneous Exercise) to avoid collision, while each item.number still holds its true printed number within its own section. gate_counts and gate_solutions_present both pass with zero fails. Independently round-tripped the rendered chapter.en.md back through mdio.markdown_to_chapter() and confirmed: 49 items (6/29/14 by kind), all ids unique, the item-4 content-loss defect recovered at stage 1 round-trips with its solution intact, and the q_2.1.11 mathpix parenthesization defect is preserved verbatim (not silently cleaned up) for stage 5. 5 items/solutions flagged for stage 5 correction (2 genuinely garbled mathpix OCR solutions in EXERCISE 2.2 items 1-2 needing full reconstruction from the source PDF, 2 minor garbled opening lines in EXERCISE 2.2 items 10-11, 1 OCR glyph confusion in Misc Exercise item 8) - see match_report.md for the complete list. Zero figures needed extraction as items - all 14 image refs in chapter.en.md are in expository body text (2.1 Introduction / 2.3 Properties sections), not tied to any example or exercise."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-24T07:08:33.738437+00:00",
+    "inputs": {
+      "chapter.en.md": "e42f83979acba655"
+    },
+    "counts": {
+      "examples_en_chars": 4375,
+      "examples_en_items": 6,
+      "qa_en_chars": 37290,
+      "qa_en_items": 43,
+      "items_total_roundtrip": 49
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Hindi track (chapters/maths-12-2/02_extract/chapter.hi.md, 03_split/examples.hi.md + qa.hi.md) was already fully processed through all 10 stages in an earlier session - confirmed via manifest.unchanged_since(\"split\", chapter.hi.md) == True before starting, so it was correctly left untouched this stage rather than re-split. Parsed 02_extract/chapter.en.md via mdio.markdown_to_chapter(), merge_by_id(en, None) (English-only merge - handles the single-language case per its own docstring), then rendered two kind-filtered subsets via render.render(): examples.en.md (kind=example) and qa.en.md (kinds=exercise,additional_exercise). Verified the round trip by parsing BOTH output files with tag._parse() (passing text.splitlines(), not the raw string - a raw string would silently iterate character-by-character instead of line-by-line and produce a nonsense low count, which is exactly what happened on the first attempt here before catching it) and counting each file's top-level containers: examples.en.md has 6, qa.en.md has 43, summing to 49 - matching 02_extract's own merged chapter item count exactly, confirming nothing was gained or lost in the split. No TagError raised by either parse, so all containers balance."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-24T07:10:56.299775+00:00",
+    "inputs": {
+      "examples.en.md": "0d3380285f439995",
+      "qa.en.md": "6ee83798934da468"
+    },
+    "counts": {
+      "combined_en_chars": 41536,
+      "combined_en_items": 49
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Hindi track (04_combined/combined.hi.md) was already fully processed through all 10 stages in an earlier session - confirmed via manifest.unchanged_since(\"combine\", examples.hi.md, qa.hi.md) == True before starting, so it was correctly left untouched. Parsed examples.en.md and qa.en.md via mdio.markdown_to_chapter() (not merge_by_id(), which is specifically a bilingual en/hi field-merge keyed by matching ids - these two files instead hold two DISJOINT sets of item ids split by kind, not two languages of the same items, so the correct reunion is a plain list concatenation of their items, which render.render() then re-groups into example/exercise/additional_exercise sections regardless of list order anyway). Verified the round trip two ways: (1) tag._parse() on the rendered combined.en.md (via .splitlines(), not the raw string) counted exactly 49 top-level containers, matching stage 3's 6+43 exactly, no TagError; (2) combined.en.md compared byte-for-byte identical to 02_extract/chapter.en.md (same length, same content) - confirming the split-then-combine round trip lost or reordered nothing at all."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-24T07:21:20.539654+00:00",
+    "inputs": {
+      "combined.en.md": "e42f83979acba655",
+      "chapter.en.pdf": "7387c02883d71d3f",
+      "solutions.en.pdf": "d4941db5fb2948a8"
+    },
+    "counts": {
+      "corrections_applied_high": 1,
+      "corrections_held": 0,
+      "items_flagged_not_corrected": 5,
+      "batches_reviewed": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Hindi track (05_verify/chapter.verified.hi.md) already complete from an earlier session - confirmed via manifest.unchanged_since(\"verify\", combined.hi.md, chapter.hi.pdf, solutions.hi.pdf) == True (note: unchanged_since needed the PER-LANGUAGE input set, not all four raw PDFs together - Hindi's own prior verify entry only ever hashed chapter.hi.pdf + solutions.hi.pdf, so checking against all four raw PDFs falsely returned False the first time; re-checked with the matching per-language subset and confirmed True). Left Hindi untouched. This stage was done directly by hand-inspecting rendered PDF page images (fitz/PyMuPDF, 200-250dpi) rather than dispatching model batches, given the chapter's manageable size (49 items across 16 chapter pages + 39 solutions pages) and the amount of context already built up from stages 1-2's own page-by-page reading. Every example, every EXERCISE 2.1/2.2 item, and every Miscellaneous Exercise item's question AND solution text was checked directly against its source PDF page image. ONE high-confidence correction applied: q_2.3.8 (Misc Exercise item 8) solution ends \"=\text{ I.HS }\" in the extracted markdown - solutions.en.pdf page 33 clearly shows \"= LHS\", an L/I glyph OCR confusion. gate_math_parity and gate_counts both pass with zero fails after applying (before/after snapshotted correctly via chapter.model_copy(deep=True) per the stage's own warning about a vacuous self-comparison). FIVE items flagged and deliberately NOT auto-corrected, reported here for the user's own decision rather than folded into the correction batch: (1) q_2.1.12's solution genuinely reads \"Let, tan^-1(1)=x\" for a question about cos^-1(1/2) - confirmed via solutions.en.pdf page 7 that this is what the OFFICIAL solutions manual itself prints (not a mathpix misread - the scanned glyphs are unambiguous), so per Rule 5 this is a genuine error in the source itself and stays untouched, matching the biology-12-5 precedent for source-manual errors. (2) q_2.2.1 and (3) q_2.2.2's solutions (EXERCISE 2.2 items 1-2, proving 3sin^-1x and 3cos^-1x triple-angle identities) are genuinely corrupted at the PDF FONT-RENDERING level on solutions.en.pdf pages 10-11 - overlapping/substituted glyphs (\"Let x=θin\", \"=θin−4(θαsinθ - ³ )\" etc.) that cannot be literally transcribed with confidence even at 250dpi. The underlying standard identity proof is inferable (same pattern as the analogous, only-slightly-less-garbled Q2, and a universally standard NCERT proof), but since verify.md requires should_be to be \"what the PDF actually shows\" and the glyphs themselves are unrecoverable rather than just ambiguous content, this is flagged for the user's explicit sign-off rather than silently \"corrected\" to the inferred standard proof. (4) q_2.2.10 and (5) q_2.2.11's solutions (from sol.Q16/Q17) each have one garbled opening reference line (\"Since, θin sin (θ-)\" / \"Since, tan tan (θ-)\") before the derivation continues clearly and correctly - same font-corruption category, same treatment: flagged, not corrected. One EARLIER stage-1 flag resolved as unfounded during this pass: the \"9π/8 identity looked possibly truncated\" note on solutions Q12 (an orphan, not extracted as an item) was checked directly against solutions.en.pdf page 34 and is in fact complete and clean - no truncation, no action needed regardless since it has no chapter counterpart to attach to. Also independently reconfirmed q_2.1.11's \"missing parens\" noted at stage 1 is NOT a mathpix defect: chapter.en.pdf page 10 itself genuinely prints \"cos^-1 -1/2\" with no visible enclosing parentheses (a textbook PDF typesetting quirk, not an extraction error) - mathpix was faithful to the source, so no correction was made or needed there."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-24T07:26:35.298420+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "8fe8e1d3a8c7796b"
+    },
+    "counts": {
+      "items_simplified": 2,
+      "items_unchanged": 47,
+      "restore_failed": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Hindi track (06_simplify/chapter.simplified.hi.md) already complete from an earlier session - confirmed via manifest.unchanged_since(\"simplify\", chapter.verified.hi.md) == True, left untouched. gate_bilingual was SKIPPED for this stage, consistent with how this chapter has been treated at every prior stage: English and Hindi are two independently-completed tracks for this chapter, not field-merged via merge_by_id() (Hindi's own item ids come from an earlier, separately-run extraction and do not share this session's section-scoped en id scheme), so there is no meaningful bilingual merge to gate here - matching the precedent already established for biology-12-3/12-4/12-5's own English-only additions alongside a pre-existing Hindi track. Did this stage by hand rather than dispatching a model batch, given how few items in this chapter actually contained simplifiable prose: this is a proof-heavy Maths chapter where nearly every solution is already a terse \"Let X, Hence, Therefore, Thus\" formula chain - scanned the whole 1812-line verified file for genuine textbook-register prose (multi-clause reasoning, \"which is\", \"But\"/\"However\" connectives, passive voice) rather than assuming a uniform low simplification rate; found real candidates in exactly 2 of 49 items, both worked EXAMPLES (not exercises - exercise solutions in this chapter are uniformly terse derivation chains with nothing left to simplify without churning). ex_2.5: split one sentence ending \"...=sec^-1 x, which is the simplest form\" into two short sentences. ex_2.6: broke a 4-line chain of \"We know...Therefore...But...which is...However...and...Therefore\" into shorter, more direct sentences that state what each step establishes, per simplify.md's \"break long sentences into short ones\" guidance - re-read the result specifically for the reversed-comparison trap step_6/simplify.md warns about (physics-12-2's V_A/V_B incident); no comparative relationship was reordered here (the sentence at issue is a set-membership check, not an X-vs-Y comparison). Both items' solutions were frozen via protect.freeze() before rewriting and restored via protect.restore() after - restore() raised no ProtectionError for either (no protected token lost, duplicated, or invented), confirming every formula/number survived untouched. All three gates pass with zero fails: gate_question_text_frozen, gate_answers_unchanged, gate_math_parity (checked before/after via two independently-parsed Chapter objects, not aliases of the same object, per the stage's own warning about a vacuous self-comparison)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-24T07:49:25.723714+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "680b1c454ba6ecdd"
+    },
+    "counts": {
+      "items_total": 49,
+      "items_structured": 23,
+      "items_left_plain": 26,
+      "output_chars": 44584
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Hindi track (07_format/structured.hi.md) already complete from an earlier session - confirmed via manifest.unchanged_since(\"format\", chapter.simplified.hi.md) == True, left untouched. Did this stage directly rather than dispatching a model batch, given the amount of per-item structural judgment already built up handling this chapter through stages 1-6. Zero tables and zero figures in this chapter (confirmed at stage 2 - all 14 image refs are expository, not item-attached), so :::table and :::figure had nothing to wrap. No textbook remarks worth a :::note either (the only candidate, Misc Exercise item 10's own \"[Hint: Put x = cos 2theta]\", is part of the immutable question text itself, not a separate remark to extract). Applied :::step/:::formula structure to 23 of 49 items where a genuine multi-stage shape exists: (1) EXERCISE 2.1's 10 uniform \"find principal value\" items (q_2.1.1-10) plus Examples 1-2, each split as step{Substitute} + formula{Key formula, the cited principal-value range} + step{Conclusion}, matching RULES.md's fixed vocabulary; (2) q_2.1.11/12/14, which chain 2-3 sub-derivations before combining - split into one step per named sub-result (freeform labels naming which term, since these aren't simple given/formula/substitute/conclude) plus a final step{Conclusion}; (3) q_2.1.13 fit the same simple pattern as items 1-10 and was folded into that batch; (4) q_2.2.9/12 and q_2.3.3/4/5/6/7 - \"Prove that X+Y=Z\" identity proofs that explicitly build 2-4 named intermediate relations \"...(1)\", \"...(2)\" before a final combining step - split one step per relation plus a final step{Conclusion}, preserving the source's own numbering references (\"Thus, by using (1) and (2)\") unchanged in the text. Left 26 items as plain, unstructured solution prose: q_2.2.1/2 (the two font-corrupted, already-flagged-not-corrected items - deliberately not structuring content whose exact wording is already uncertain); all \"write ... in the simplest form\" single-continuous-derivation items (q_2.2.3,5,6,7,8,10,11 and their kin) where there is no genuinely separable given/formula/substitute/conclude shape, just one uninterrupted algebra chain; MCQ and equation-solving items with a single derivation chain to one boxed answer (q_2.2.13/14/15, q_2.3.1/2/8/9/10/11/12/13/14) - per format.md's own guidance, \"a two-line substitution is one block, not three steps\" and \"forcing structure onto ordinary prose is worse than leaving it unmarked.\" Verification, not just trusting the write: (1) protect.parity() between chapter.simplified.en.md and structured.en.md reports zero drift in display math/inline math/table/image counts; (2) tag._parse() on the full output succeeds with no TagError, confirming every container balances and no tag line has stray text; (3) independently re-parsed the OLD (flat) file via mdio and the NEW (nested) file via tag._parse's own tree, then for every one of the 49 items stripped all container tag lines from the new solution content and compared whitespace-normalized text against the old solution content verbatim - zero wording differences across all 49 items, and zero question-text differences (Rule 4) - confirming this stage only inserted markup, never changed a word, digit or symbol."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-24T07:59:42.869992+00:00",
+    "inputs": {
+      "structured.en.md": "0fea767fa3e60b9e"
+    },
+    "counts": {
+      "items": 49,
+      "parts": 0,
+      "distinct_figure_srcs": 0,
+      "stage_given": 10,
+      "stage_substitute": 26,
+      "stage_key_formula": 15,
+      "stage_conclusion": 49,
+      "block_type_step": 85,
+      "block_type_formula": 15
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Hindi track (08_tag/structured.hi.json) already complete from an earlier session - confirmed via manifest.unchanged_since(\"tag\", structured.hi.md) == True, left untouched. This stage was FULLY mechanical for this chapter - zero model judgment calls needed, since every explicitly-labelled step at stage 7 already used the fixed given/key-formula/substitute/conclusion vocabulary where it applied, and every other step was either freeform-labelled (correctly falls through to positional inference in pipeline/serialize.py's own _label_to_stage()) or left as a single unstructured block (correctly resolves to stage=\"conclusion\" per the single-block rule). Ran pipeline.serialize.structured_md_to_json() directly - no hand-written per-item stage decisions were needed this time, unlike a chapter where stage 7 left many steps unlabelled for stage 8 to judge. Gate: freshly re-counted items/parts/figures directly from structured.en.md via tag._parse() and serialize.count_figures_in_raw_text(), independent of the JSON-writing code path, and compared against the written JSON's own counts - all three match exactly (49 items, 0 parts, 0 figures - this chapter has no parts and no item-attached figures, confirmed already at stage 2). Spot-checked 3 representative items: q_2.1.1 (the simple 3-part template - Substitute/Key formula/Conclusion labels correctly mapped to their stage, with the now-redundant label field correctly omitted since it equals the stage name); q_2.1.11 (the freeform-labelled relation-chain template - \"tan^-1(1)\"/\"cos^-1(-1/2)\"/\"sin^-1(-1/2)\" labels correctly PRESERVED as label since they do not match the fixed vocabulary, with stage correctly positionally inferred as given/substitute/substitute, and the final \"Conclusion\"-labelled step correctly mapped directly with its label dropped); q_2.2.1 (one of the two still-flagged, deliberately-unstructured garbled items - confirmed it serializes as a single block with stage=\"conclusion\" (the single-stageable-block rule) and its garbled content preserved byte-for-byte, not silently cleaned up during serialization). Also grepped the full JSON for any leaked \"Solution\"-opener text bleeding into a block's own flow - none found (this chapter never had a bare \"Solution\" line duplicating the container's own label=\"Solution\" attribute, unlike chemistry-12-1's English track)."
+  },
+  {
+    "stage": "retroactive_topic_fix",
+    "at": "2026-09-24T08:42:38.394704+00:00",
+    "inputs": {},
+    "counts": {
+      "items_affected": 1,
+      "files_touched": 7
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track. Discovered during stage 9's mandatory artifact scan (a plain-text scan for leftover raw-LaTeX-looking tokens in the rendered page): q_2.3.8's own topic field read \"Inverse tangent of sqrt(x) as half an inverse cosine\" - 9 words (exceeds RULES.md's Item Topics guideline of 2-6 words) and used the informal ASCII \"sqrt(x)\" instead of proper notation, which the artifact scan flagged as looking like a leftover unconverted LaTeX command. Topic is explicitly NOT gated/immutable content per RULES.md (\"written once at extraction as a categorising label..., never checked against the source PDF..., not simplified\"), so fixed directly without any correction-list/gate machinery: shortened to \"Inverse tangent of √x\" using the proper radical character. Since topic passes through every stage unchanged from its original 02_extract value, applied the same string replacement identically across all 7 files where it appears verbatim (02_extract/chapter.en.md, 03_split/qa.en.md, 04_combined/combined.en.md, 05_verify/chapter.verified.en.md, 06_simplify/chapter.simplified.en.md, 07_format/structured.en.md, 08_tag/structured.en.json) rather than re-running each stage's own logic, since topic is a pure passthrough attribute untouched by any stage's own transformation - then re-ran 09_design's render script to regenerate final.en.html from the corrected JSON. No other field affected; gate results already recorded for stages 2-8 remain valid since no gated content changed."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-24T08:43:06.206792+00:00",
+    "inputs": {
+      "structured.en.json": "80583680eeb5cac2"
+    },
+    "counts": {
+      "html_bytes": 155754,
+      "css_bytes": 16804,
+      "items_rendered": 49,
+      "figures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Hindi track (09_design/final.hi.html + final.hi.css) already complete from an earlier session - confirmed via manifest.unchanged_since(\"design\", structured.hi.json) == True, left untouched. Reused, rather than rebuilt from scratch, the Hindi session's own render_page.py + latex.py already sitting in this chapter's 09_design/ directory - the LaTeX-to-HTML converter is fully language-agnostic (verified: zero Devanagari characters anywhere in latex.py's own source) and this chapter's English content uses the identical underlying math notation set as its Hindi counterpart, so every trap already fixed during that session's build (division-rewrite, unit/exponent bypass, non-breaking-space gluing, \\left\right as one unit, environment row-splitting, etc. - the full list in step_9/PROMPT.md) carries over directly. Copied final.hi.css to final.en.css unchanged (same base font stack already used for English chapters elsewhere in this pipeline - confirmed by checking biology-12-5's own final.en.css, which uses the identical Noto Serif Devanagari + STIX Two Text import). Wrote a new render_page_en.py adapting only the language-specific strings (structured.en.json path, English pill labels Given/Key formula/Substitute/Conclusion, English section headings Examples/Exercise 2.1/Exercise 2.2/Miscellaneous Exercise, \"Part (x)\" instead of \"भाग (x)\", lang=\"en\", English title/header text) - render_page.py itself (Hindi) untouched. Verified converter coverage BEFORE trusting it: extracted every distinct backslash-command actually used in structured.en.json (44 found, e.g. \\sin/\\cos/\tan/\\cot/\\sec/\frac/\\sqrt/\\left/\right/\begin/\\end/\\Rightarrow/\\in/\notin/\\leq/\neq/\\phi/\theta/\\pi/\times/\\cdot/\\quad/\\operatorname/\\mathrm/\text, after filtering out JSON-newline-escape false positives like \nHence/\nThen) and confirmed every one already has explicit handling in latex.py - no gap-filling needed this time. Checks performed: (1) 0 figures, 0 <img> tags (matches stage 2's own finding of zero item-attached figures) - trivially passes; (2) automated numeric/text read-back - every numeric token from every question AND final_answer field in 06_simplify/chapter.simplified.en.md (348 tokens total) confirmed present somewhere in the rendered page text, 0 missing; (3) artifact scan for leftover raw LaTeX (stray $ signs, unconverted backslash-commands) - 0 found; a false-positive-looking \"stray brace\" hit turned out to be correct literal set-exclusion notation ([-pi/2,pi/2]-{0}) rendering exactly as intended, not a bug; a genuine minor issue - an overlong, informally-worded topic string containing literal \"sqrt(x)\" - was found and fixed (see the separate retroactive_topic_fix manifest entry just above this one); (4) manual visual read-back via 8 Playwright screenshots covering every structural pattern from stage 7: the simple 3-part template (ex_2.1), a freeform-labelled multi-relation chain (q_2.1.11, q_2.3.5), a chain with two separate Key-formula citations (q_2.1.14), a still-flagged garbled/unstructured item (q_2.2.1, confirmed its corrupted content renders completely unaltered, not silently cleaned up), an MCQ (q_2.3.13), and the item with the stage-5 I.HS->LHS correction applied (q_2.3.8, confirmed \"= LHS\" renders correctly, not the pre-correction \"I.HS\"). All 8 confirmed visually correct: pills group and color-cycle correctly, stacked fractions and superscript exponents render properly (double-checked <sup>2</sup> directly in the raw HTML after a screenshot made it look ambiguous at this zoom level), boxed answer echoes match extracted final answers exactly. One known, already-documented limitation observed (not a new bug, not fixed): multi-relation items' middle relations merge into one anonymous \"Substitute\" pill with no visual divider between sub-relations, per step_9/PROMPT.md's own documented note about the four-stage model's fit for this content shape - affects q_2.1.11/12/14, q_2.2.9/12, q_2.3.3-7 (10 items); each sub-relation still reads clearly since the source text itself uses natural transition phrasing (\"Now, let...\"/\"Again, let...\") between them, unlike the fully-independent-parallel-cases shape the prompt warns is worse."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-24T08:47:18.064474+00:00",
+    "inputs": {
+      "final.en.html": "c4bee22d960d7665"
+    },
+    "counts": {
+      "page_count": 28,
+      "blank_pages": 0,
+      "pdf_bytes": 890497,
+      "numeric_tokens_checked": 348,
+      "numeric_tokens_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Hindi track (10_pdf/final.hi.pdf) already complete from an earlier session - confirmed via manifest.unchanged_since(\"pdf\", final.hi.html) == True, left untouched. Reused the Hindi session's own export.py as the basis for a new export_en.py - the export logic itself is entirely language-agnostic (Playwright/Chromium rendering + the standing emulate_media(\"screen\") fix), only the html_path/out_path needed changing. Note: the original export.py had a hardcoded path under C:\\Users\\ajayr\\... (a different Windows username, evidently built on a teammate's machine in an earlier session, consistent with this repo's multi-contributor git history) - export_en.py uses this session's own C:\\Users\\gunja\\... path instead. Applied the emulate_media(media=\"screen\") fix unconditionally per step_10/PROMPT.md's own instruction, even though this is an English-only page with no Devanagari text that the underlying pre-base-vowel-reordering bug actually affects - cheap standing practice per the prompt, not skipped just because this chapter's own language does not need it. Gate (all code, no model judgment): page count 28 (sane for 49 items of dense math content, matching the same order of magnitude as Hindi's own final.hi.pdf); 0 blank pages; numeric read-back re-run directly against the EXPORTED PDF's own extracted text (fitz.Page.get_text(), not assumed carried over from stage 9's HTML-based check) - all 348 numeric tokens from every question/final_answer in 06_simplify/chapter.simplified.en.md found, 0 missing. Applied the documented superscript-separator fix when normalizing unicode superscript exponents back to ASCII digits (inserting \"^\" before a run of superscript characters, rather than a raw translate with no separator) to avoid the base-number-plus-exponent gluing trap documented in step_10/PROMPT.md, though this chapter's own superscripts render via HTML <sup> tags rather than literal unicode superscript codepoints (confirmed by direct HTML inspection at stage 9), so this specific trap was likely not actually live for this chapter's own content - applied as standing defensive practice regardless, per the same \"unconditional, not per-chapter re-diagnosis\" reasoning as the screen-media fix. Additionally spot-checked 4 rendered PDF pages directly (1, 6, 15, 28 - covering the first Examples page, an EXERCISE 2.1 mid-page, the two still-flagged garbled items q_2.2.10/11 rendering their corrupted content unaltered, and the final Misc Exercise item) - no fraction, sqrt, or stage pill visibly split across a page boundary anywhere checked, matching the break-inside:avoid rules already present in the base/chapter CSS from stage 9."
   }
 ]
