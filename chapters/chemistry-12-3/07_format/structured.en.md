@@ -46,13 +46,19 @@ Table 3.1: Average rates of hydrolysis of butyl chloride
 
 Table 3.1 shows that the average rate falls from $1.90 \times 10^{-4} \mathrm{~mol} \mathrm{~L}^{-1} \mathrm{~s}^{-1}$ to $0.4 \times 10^{-4} \mathrm{~mol} \mathrm{~L}^{-1} \mathrm{~s}^{-1}$. But average rate cannot tell us the rate at one particular instant, since it stays constant over whichever time interval we use to calculate it. So, to get the rate at a particular moment, we find the instantaneous rate. We get this by taking the average rate over the smallest possible time interval, say d$t$ (that is, when $\Delta t$ approaches zero). So, for an infinitesimally small d$t$, the instantaneous rate is given by
 
-:::formula{label="Instantaneous rate"}
+:::formula{label="Average rate"}
 $$
 r_{\mathrm{av}}=\frac{-\Delta[\mathrm{R}]}{\Delta t}=\frac{\Delta[\mathrm{P}]}{\Delta t} \quad (3.3)
 $$
 :::
 
-As $\Delta t \rightarrow 0$ or $\quad r_{\text {inst }}=\frac{-\mathrm{d}[\mathrm{R}]}{\mathrm{d} t}=\frac{\mathrm{d}[\mathrm{P}]}{\mathrm{d} t}$
+As $\Delta t \rightarrow 0$, this becomes the instantaneous rate:
+
+:::formula{label="Instantaneous rate"}
+$$
+r_{\text {inst }}=\frac{-\mathrm{d}[\mathrm{R}]}{\mathrm{d} t}=\frac{\mathrm{d}[\mathrm{P}]}{\mathrm{d} t}
+$$
+:::
 
 :::figure{src="images/fig_3_18.jpg" id="fig_3_18"}
 Fig 3.2
@@ -613,14 +619,14 @@ $$
 \begin{aligned}
 & \text { Rate }=k[\mathrm{~A}][\mathrm{B}]^{2} \\
 & =\left(2.0 \times 10^{-6} \mathrm{~mol}^{-2} \mathrm{~L}^{2} \mathrm{~s}^{-1}\right)\left(0.06 \mathrm{~mol} \mathrm{~L}^{-1}\right)\left(0.18 \mathrm{~mol} \mathrm{~L}^{-1}\right)^{2} \\
-& =3.89 \mathrm{~mol} \mathrm{~L}^{-1} \mathrm{~s}^{-1}
+& =3.9 \times 10^{-9} \mathrm{~mol} \mathrm{~L}^{-1} \mathrm{~s}^{-1}
 \end{aligned}
 $$
 :::
 :::
 
 :::answer
-**Answer:** Initial rate $=8.0 \times 10^{-9} \mathrm{~mol}^{-2} \mathrm{~L}^{2} \mathrm{~s}^{-1}$; after $[\mathrm{A}]$ falls to $0.06 \mathrm{~mol} \mathrm{~L}^{-1}$, rate $=3.89 \mathrm{~mol} \mathrm{~L}^{-1} \mathrm{~s}^{-1}$
+**Answer:** Initial rate $=8.0 \times 10^{-9} \mathrm{~mol}^{-2} \mathrm{~L}^{2} \mathrm{~s}^{-1}$; after $[\mathrm{A}]$ falls to $0.06 \mathrm{~mol} \mathrm{~L}^{-1}$, rate $=3.9 \times 10^{-9} \mathrm{~mol} \mathrm{~L}^{-1} \mathrm{~s}^{-1}$
 :::
 
 :::
@@ -709,7 +715,7 @@ Unit of rate = bar min-1
 $$
 \begin{aligned}
 & \text { Rate }=k\left(p_{\mathrm{CH}_{3} \mathrm{OCH}_{3}}\right)^{3 / 2} \\
-& \Rightarrow k=\frac{\text { Rate }}{\left(p_{\mathrm{CH}_{3} \mathrm{OCH}_{1}}\right)^{3 / 2}}
+& \Rightarrow k=\frac{\text { Rate }}{\left(p_{\mathrm{CH}_{3} \mathrm{OCH}_{3}}\right)^{3 / 2}}
 \end{aligned}
 $$
 :::
@@ -838,7 +844,7 @@ The Arrhenius equation expresses this temperature effect quantitatively:
 
 :::formula{label="Key formula"}
 $$
-k=\mathrm{A} e^{-E_{s} / \mathrm{R} T}
+k=\mathrm{A} e^{-E_{a} / \mathrm{R} T}
 $$
 :::
 
@@ -866,7 +872,7 @@ Calculate the average rate of reaction between the time interval 30 to 60 second
 
 :::solution{label="Solution"}
 :::step{label="Substitute"}
-(i) Average rate of reaction between the time interval, 30 to 60 seconds, $=\frac{d[\text { Ester }]}{d t}$
+(i) Average rate of reaction between the time interval, 30 to 60 seconds, $=-\frac{\Delta[\text { Ester }]}{\Delta t}$
 $$
 \begin{aligned}
 & =\frac{0.31-0.17}{60-30} \\
@@ -1491,7 +1497,7 @@ From the graph, the half life is obtained as 1450 s.
 :::
 
 :::concept{label="Given"}
-(iv) The given reaction is of the first order as the plot, $\log \left[\mathrm{N}_{2} \mathrm{O}_{5}\right]_{\mathrm{V} / \mathrm{s}} t$, is a straight line.
+(iv) The given reaction is of the first order as the plot of $\log \left[\mathrm{N}_{2} \mathrm{O}_{5}\right]$ vs $t$ is a straight line.
 :::
 
 :::formula{label="Key formula"}
@@ -1513,7 +1519,7 @@ $$
 $$
 
 v/s $t$, we get
-Again, slope of the line of the plot $\log \left[\mathrm{N}_{2} \mathrm{O}_{5}\right]_{\mathrm{V} / \mathrm{s}} t$ is given by
+Again, slope of the line of the plot of $\log \left[\mathrm{N}_{2} \mathrm{O}_{5}\right]$ vs $t$ is given by
 
 $$
 -\frac{k}{2.303} .
@@ -1766,15 +1772,15 @@ At $t=t \quad \mathrm{P}_{0}-p \quad p \quad p$
 
 :::step{label="Substitute"}
 $$
-\mathrm{P}_{l}=\left(\mathrm{P}_{0}-p\right)+p+p
+\mathrm{P}_{t}=\left(\mathrm{P}_{0}-p\right)+p+p
 $$
 
 After time, $t$, total pressure,
 
 $$
 \begin{aligned}
-& \Rightarrow \mathrm{P}_{1}=\mathrm{P}_{0}+p \\
-& \Rightarrow p=\mathrm{P}_{1}-\mathrm{P}_{0}
+& \Rightarrow \mathrm{P}_{t}=\mathrm{P}_{0}+p \\
+& \Rightarrow p=\mathrm{P}_{t}-\mathrm{P}_{0}
 \end{aligned}
 $$
 
@@ -1867,7 +1873,7 @@ At $t=t \quad \mathrm{P}_{0}-\mathrm{p} \quad \mathrm{p} \quad \mathrm{p}$
 
 :::step{label="Substitute"}
 $$
-\mathrm{P}_{l}=\left(\mathrm{P}_{0}-p\right)+p+p
+\mathrm{P}_{t}=\left(\mathrm{P}_{0}-p\right)+p+p
 $$
 
 After time, $t$, total pressure,
@@ -1880,7 +1886,7 @@ $$
 $$
 
 $$
-\mathrm{P}_{0}-p=\mathrm{P}_{0}-\left(\mathrm{P}_{1}-\mathrm{P}_{0}\right)
+\mathrm{P}_{0}-p=\mathrm{P}_{0}-\left(\mathrm{P}_{t}-\mathrm{P}_{0}\right)
 $$
 
 Therefore,
@@ -1925,11 +1931,11 @@ $$
 \end{aligned}
 $$
 
-Therefore, when the total pressure is 0.65 atm, pressure of $\mathrm{SOCl}_{2}$ is
+Therefore, when the total pressure is 0.65 atm, pressure of $\mathrm{SO}_{2}\mathrm{Cl}_{2}$ is
 
 $$
 \begin{aligned}
-& p_{\mathrm{SOCl}_{2}}=\mathrm{P}_{0}-\mathrm{p} \\
+& p_{\mathrm{SO}_{2}\mathrm{Cl}_{2}}=\mathrm{P}_{0}-\mathrm{p} \\
 & =0.5-0.15 \\
 & =0.35 \mathrm{~atm}
 \end{aligned}
@@ -1937,11 +1943,11 @@ $$
 :::
 
 :::step{label="Conclusion"}
-Therefore, the rate of equation, when total pressure is 0.65 atm, is given by,
+Therefore, the rate of reaction, when total pressure is 0.65 atm, is given by,
 
 $$
 \begin{aligned}
-& \text { Rate }=k\left(p_{\mathrm{SoCl}_{2}}\right) \\
+& \text { Rate }=k\left(p_{\mathrm{SO}_{2}\mathrm{Cl}_{2}}\right) \\
 & =\left(2.23 \times 10^{-3} \mathrm{~s}^{-1}\right)(0.35 \mathrm{~atm}) \\
 & =7.8 \times 10^{-4} \mathrm{~atm} \mathrm{~s}^{-1}
 \end{aligned}
@@ -2135,10 +2141,10 @@ Consider a certain reaction A → Products with $k=2.0 \times 10^{-2} \mathrm{~s
 
 :::solution{label="Solution"}
 :::concept{label="Given"}
-$k=2.0 \times 10^{-2} \mathrm{~s}^{-1} T=100 \mathrm{~s}$
+$k=2.0 \times 10^{-2} \mathrm{~s}^{-1}, t=100 \mathrm{~s}$
 
 $$
-[\mathrm{A}]_{\mathrm{o}}=1.0 \mathrm{moL}^{-1}
+[\mathrm{A}]_{\mathrm{o}}=1.0 \mathrm{~mol} \mathrm{~L}^{-1}
 $$
 
 Since the unit of $k$ is $\mathrm{s}^{-1}$, the given reaction is a first order reaction.
@@ -2259,7 +2265,7 @@ $$
 The Arrhenius equation is
 
 $$
-k=\mathrm{Ae}^{-E_{\alpha} / \mathrm{RT}}(\mathrm{ii})
+k=\mathrm{Ae}^{-E_{a} / \mathrm{RT}}(\mathrm{ii})
 $$
 :::
 
@@ -2301,7 +2307,7 @@ The Arrhenius equation is
 
 $$
 \begin{aligned}
-& k=\mathrm{Ae}^{-E_{s} / \mathrm{R} T} \\
+& k=\mathrm{Ae}^{-E_{a} / \mathrm{R} T} \\
 & \Rightarrow \ln k=\ln \mathrm{A}-\frac{E_{a}}{\mathrm{R} T} \\
 & \Rightarrow \ln k=\log \mathrm{A}-\frac{E_{a}}{\mathrm{R} T} \\
 & \Rightarrow \log k=\log \mathrm{A}-\frac{E_{a}}{2.303 \mathrm{R} T}
@@ -2556,7 +2562,7 @@ $$
 & \text { Therefore, } \log \frac{4 k_{1}}{k_{2}}=\frac{E_{a}}{2.303 \times 8.314}\left(\frac{313-293}{293 \times 313}\right. \\
 & \begin{aligned}
 & \Rightarrow 0.6021=\frac{20 \times E_{a}}{2.303 \times 8.314 \times 293 \times 313} \\
-& \Rightarrow E_{\alpha}=\frac{0.6021 \times 2.303 \times 8.314 \times 293 \times 313}{20} \\
+& \Rightarrow E_{a}=\frac{0.6021 \times 2.303 \times 8.314 \times 293 \times 313}{20} \\
 & \quad=52863.33 \mathrm{~J} \mathrm{~mol}^{-1} \\
 &=52.86 \mathrm{~kJ} \mathrm{~mol}^{-1}
 \end{aligned}
@@ -2724,7 +2730,7 @@ A first order reaction has a rate constant $1.15 \times 10^{-3} \mathrm{~s}^{-1}
 From the question, we know:
 Initial amount = 5 g
 Final concentration $=3 \mathrm{~g}$
-Rate constant $=1.1510^{-3} \mathrm{~s}^{-1}$
+Rate constant $=1.15 \times 10^{-3} \mathrm{~s}^{-1}$
 :::
 
 :::step{label="Substitute"}
@@ -2856,10 +2862,6 @@ $$
 & =52.9 \mathrm{~kJ} \mathrm{~mol}^{-1}
 \end{aligned}
 $$
-:::
-
-:::note{type="tip"}
-Note: There is a slight variation between this answer and the one given in the NCERT textbook.
 :::
 :::
 

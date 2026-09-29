@@ -859,5 +859,109 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.en.html file:// path (not a scratch copy), waited on networkidle + document.fonts.ready + a 300ms settle, called page.emulate_media(media='screen') unconditionally before page.pdf() (the standing per-export fix for Chromium's print-media text-shaping bug - applied even though this is an English-only chapter with no Devanagari, per this project's own standing rule to apply it unconditionally rather than per-chapter-diagnose), print_background=True + prefer_css_page_size=True, no explicit format/width/height. Gate (fitz/PyMuPDF): page count 35 (sane for a 49-item chapter, matching chemistry-12-2's ~26 pages for 43 items and chemistry-12-1's 42 pages for 66 items at a consistent density), 0 blank pages. Numeric read-back re-run against the PDF's OWN extracted text (not assumed carried over from the stage-9 HTML check) with the documented superscript/subscript-merge-trap guard (insert a separator before a run of super/subscript characters when normalizing, so '10^39' normalizes to two distinct tokens '10' and '39' rather than gluing into '1039'): 199 numeric tokens checked, 0 missing. Visually spot-checked page 1 (ex_3.1, including the just-fixed Table 3.1 header) - renders cleanly, correct pagination, no cut-off content."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-28T06:31:09.072775+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "51e16bfb162f75a6"
+    },
+    "counts": {
+      "corrections_applied": 19,
+      "corrections_held": 0,
+      "items_affected": 8
+    },
+    "gates_failed": {
+      "gate_math_parity": [
+        "q_3.15.solution: inline math: 7 -> 9 (expected - 'V/s' garble split into plain 'vs' text + its own $t$ span, no numeric/scientific content changed)"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Retroactive fix pass, English medium only, prompted by an external review plus the user's own direct corrections. 19 Correction objects applied via pipeline.verify.apply_corrections at min_confidence='high', all held=0 (every 'found' matched exactly once): q_3.2 (2x, user-authorized: the manual's own printed final rate drops the x10^-9 magnitude entirely - '=3.89 mol L^-1 s^-1' - user specified the book's intended value is 3.9x10^-9, not a more-precise-looking 3.89x10^-9 some reviews suggest; corrected both the working step and the answer-line restatement to 3.9x10^-9); q_3.4 (OCH1->OCH3, OCR digit misread inconsistent with the same item's own correct usage two lines above); q_3.8 (d[Ester]/dt -> -Delta[Ester]/Delta t: this is an AVERAGE rate over a finite 30s interval, not instantaneous - every other average-rate calc in this chapter uses -Delta[X]/Delta t with the minus sign; the manual's own d/dt notation here was inconsistent with its own house style, though the arithmetic itself was already correct); it_3.5 (1.1510^-3 -> 1.15x10^-3, missing multiplication sign, inconsistent with the same item's own question/Substitute step); q_3.20/q_3.21 (P_l/P_1 -> P_t x4, OCR glyph confusion (l/1 for t), inconsistent with P_t used correctly elsewhere in the same derivations); q_3.21 (SOCl2/SoCl2 -> SO2Cl2 x3, wrong compound - thionyl chloride instead of sulfuryl chloride, the actual substance per the item's own question and Given block; 'rate of equation'->'rate of reaction'); q_3.24 (capital T->lowercase t for a time value, 'moL^-1'->'mol L^-1' missing space); q_3.26 (E_alpha->E_a, Greek-alpha/OCR glyph confusion, inconsistent with E_a used correctly three lines below in the same item); q_3.15 (2x, 'V/s' garbled OCR rendering of the informal 'vs' (versus) mis-attached as a bogus bracket subscript, replaced with plain 'vs'). Cascaded the identical fixes into 06_simplify (2 of them - E_s->E_a in it_3.7/q_3.27, and E_alpha->E_a in q_3.30 - were introduced at OR only found needing the fix beyond 05_verify's own text, since those specific symbol corruptions either post-date stage 5's own text or were an additional instance caught during this same sweep; applied directly at whichever stage first carried the wrong text, per RULES.md's cascade guidance) and 07_format (line-scoped exact-match edits, tag._parse clean afterward, protect.parity shows the two pre-existing/expected deviations only: 'images: 1->0' from an already-documented earlier-session fix, and 'display math 179->180 / inline math 372->371' from wrapping the previously-inline r_inst formula into its own display block, see the format entry below). TASK 1: q_3.1/q_3.6/q_3.9/q_3.13/q_3.15's question data was ALREADY correct (parts fully present with real prompt text) - the missing-part-text symptom was purely a stage-9 render-script bug, fixed directly in 09_design (see that entry). q_3.8's claimed missing 'part 2' (pseudo-first-order rate constant) was investigated directly against 00_raw/chapter.en.pdf page 85 (the real, current, Rationalised-edition NCERT textbook) and found NOT SUPPORTED: the actual printed Exercise 3.8 has only one part (average rate), no 'ester' wording, generic '[A]' notation - exactly matching what this chapter's own question.en field already has. The user's own recollection that 'it actually asked for part 2 in the book' does not hold up against the primary source; NOT fixed (no invented question text added), flagged for the user's own awareness in the session report - most likely explanation is that the third-party solutions manual answers an older, pre-Rationalisation two-part version of this exercise that the current textbook edition dropped down to one part. FLAGGED, NOT FIXED (confirmed genuine defects already printed in the actual source pages/textbook, left untouched per Rule 4/5 and this chapter's own established stage-5 precedent for it_3.6/q_3.15(vi)/q_3.21/q_3.26/q_3.29): Ex 3.22's whole Arrhenius table/lnA/A/predicted-k working (root-caused via independent recomputation: the table's 'ln k' row is actually ln(k x1000), the slope display is missing a x10^3 factor though Ea=102.27 kJ/mol still comes out correct via the manual's own two-point method, but ln A=37.911 and A=2.91x10^6 are both genuinely wrong by 10 orders of magnitude and the two predicted rate constants at 303K/323K are each off by roughly 1000x - confirmed present in the source via 01_mathpix/solutions.en.md, not re-derived or silently corrected here since that would mean authoring a new derivation not sourced from any of this chapter's actual documents); q_3.2's initial-rate unit ('mol^-2 L^2 s^-1' printed where a rate's own unit must be 'mol L^-1 s^-1') and '0.06 mol^-1' missing L (both confirmed via direct page image, page 8 of solutions.en.pdf) - not user-authorized to fix, left as printed; Ex 3.13(i) missing x10^-3 (confirmed via mathpix, 0.693/200=3.47x10^-3 s printed as '3.47 s'); Ex 3.15(ii) '81.5' vs '0.815x10^-2' (confirmed via direct page image, page 21); Ex 3.15(vi) 0.639 vs 0.693 (already documented from an earlier stage-5 pass); Ex 3.29 '2.2877' vs '0.2877' (confirmed via direct page image, page 37 - the very next line already uses the correct 0.2877); Ex 3.30 'log(4k1/k2)' vs 'log(4k1/k1)=log4' (confirmed present in the raw source, internally the numeric step still correctly uses log4=0.6021); it_3.6(ii) 'R\"=1/4ka' vs '1/4ka^2' (confirmed via mathpix, same genuine-manual-arithmetic-shorthand pattern as its own part (i)'s already-documented 0.01155/1.155 defect); it_3.9 missing minus sign on 'log x=18.8323' (confirmed via direct page image, page 6 - the following antilog step correctly treats it as negative via bar notation, so the final answer is unaffected); Ex 3.26's '10_11 s-1'/'e-28000K/T' garbled subscript typesetting (confirmed via direct page image, page 34 - the source's own equation editor rendered these superscripts as subscripts; unambiguous in meaning, left as printed); it_3.3/Ex 3.3's own question unit 'mol^-1 L s^-1' for a zero-order k (immutable exercise text per Rule 4, confirmed via chapter.en.pdf page 85 - cannot reword, and adding an explanatory note was not explicitly authorized this session); Example 3.1's Table 3.1 t=500s row not present in the question's own data table (confirmed via direct page image, page 64 of chapter.en.pdf - this is the REAL, OFFICIAL NCERT textbook's own Table 3.1, not a third-party artifact; left exactly as the actual book prints it, no row removed or note added); Example 3.6's k=4.98x10^-4 vs an independently recomputed ~4.92x10^-4 (confirmed as ordinary textbook intermediate-rounding - using the book's own rounded 'log(0.5/0.476)=0.0216' reproduces 4.98x10^-4 exactly; not an error, reviewer overstated); Example 3.9's Ea/A given without units (confirmed genuine in chapter.en.pdf's own Example 3.9, the real textbook's own printed omission - Example 3.10's own units were independently checked and found already correct, so only Example 3.9 is genuinely affected); Ex 3.20/Ex 3.28's 'slight variation from NCERT textbook' notes: UNVERIFIABLE - chapter.en.pdf's own 'Answers to Some Intext Questions' section covers only Intext questions, never Exercises, so no official comparison value exists in this repo for either exercise; left untouched (unlike it_3.8's note - see below). Ex 3.21's table header 'Time/s^-1' (already documented as confirmed-genuine in an earlier stage-5 pass, present identically in both chapter.en.pdf and the solutions manual). REMOVED as demonstrably stale (unlike Ex 3.20/28 above, an official value DOES exist here): it_3.8's 'slight variation between this answer and the NCERT textbook' note - chapter.en.pdf's own 'Answers to Some Intext Questions' section states '3.8 Ea=52.897 kJ mol^-1', matching this chapter's own computed 52897.78 J/mol=52.9 kJ/mol to rounding precision; the note is stale and was deleted from 05_verify/06_simplify/07_format (plain sentence removed at 5/6; the wrapping :::note{type=\"tip\"} container removed at 7) and re-serialized into 08_tag/structured.en.json. NOT SUBSTANTIATED after a full search of this chapter's data and rendered HTML: Ex 3.10's claimed 'wrong exponent, y=0.1' (this chapter's own q_3.10 uses y=0 exactly, not 0.1, and its full derivation is internally consistent; no matching defect found) and its claimed literal '</sup>' visible tag text (zero escaped/visible sup or sub tags found anywhere in the current final.en.html - most likely already resolved by an earlier session's general \\left\\{ converter bugfix, or the review saw a stale pre-fix PDF)."
+  },
+  {
+    "stage": "format_correction",
+    "at": "2026-09-28T06:31:09.078555+00:00",
+    "inputs": {
+      "structured.en.md": "c58ee84bc5eb4ce7"
+    },
+    "counts": {
+      "corrections_cascaded": 20,
+      "structural_fixes": 2
+    },
+    "gates_failed": {
+      "protect_parity_vs_06_simplify": [
+        "display math: 179 -> 180 (expected - Example 3.1's r_inst formula moved from inline to its own display block, see below)",
+        "inline math: 372 -> 371 (expected, same cause - the removed inline span)",
+        "images: 1 -> 0 (pre-existing, already documented from an earlier session's fig_3_18 bare-markdown-to-container fix)"
+      ]
+    },
+    "gates_passed": [
+      "tag_parse"
+    ],
+    "model_calls": 0,
+    "notes": "Cascaded all 19 verify-stage corrections plus the standalone q_3.30 E_alpha->E_a catch (found only while patching the rendered HTML, added retroactively to 05/06/07/08 too) into structured.en.md by exact-match line-scoped substitution, each verified count==1 (or the expected count for a pattern repeated across items) before writing. Two structural (non-textual) fixes also applied directly in 07_format only, since they concern container labels/notes that only exist from stage 7 onward: (1) Example 3.1's ':::formula{label=\"Instantaneous rate\"}' actually wrapped the AVERAGE-rate equation (3.3, r_av/Delta notation) - relabelled to 'Average rate', and the previously-inline r_inst formula (=-d[R]/dt=d[P]/dt) was given its own proper ':::formula{label=\"Instantaneous rate\"}' display block immediately after, matching what the surrounding prose already promises. Re-verified against chapter.en.pdf page 64 first: the actual textbook's own equation ORDER (r_av eq 3.3, then r_inst) was already correct in this pipeline throughout - the external review's 'wrong order' claim does not hold up against the real source; this was a label/container-structure fix only, not a content-order fix, and it has no visible effect on the rendered pill badges since those are auto-inferred by stage_position (given/key_formula/substitute/conclusion), not by this freeform label text - kept anyway as a data-hygiene improvement with zero rendering risk. (2) it_3.8's stale ':::note{type=\"tip\"}' (see verify entry) removed, re-parsed clean afterward."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-28T06:31:09.083705+00:00",
+    "inputs": {
+      "structured.en.md": "c58ee84bc5eb4ce7"
+    },
+    "counts": {
+      "items": 49,
+      "parts": 22,
+      "figures": 3,
+      "items_updated": 8
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "item_count_match",
+      "part_count_match",
+      "figure_src_match"
+    ],
+    "model_calls": 0,
+    "notes": "Regenerated 08_tag/structured.en.json in full via pipeline.serialize.structured_md_to_json (pure code) from the corrected 07_format/structured.en.md, rather than a surgical patch, since the fixes were spread across many items and a full regeneration is cheap and safer here. Verified: 49/49 items, 22/22 parts, figure src set {fig_3_18, fig_3_27, fig_3_28} unchanged and matching on both sides (checked via a recursive deep walk, not just item.figures/part.figures, since fig_3_18 sits nested inside ex_3.1's own solution_blocks flow). it_3.8's note blocks: 0 (confirmed removed). ex_3.1's two formula blocks now carry label='Average rate' and label='Instantaneous rate' respectively (both still auto-inferred to stage='key_formula' for pill rendering, as expected - the label text itself is not what drives the rendered badge). Chapter-wide sweep for the render-bug shape (parts non-empty, every part's own solution_blocks empty, item-level solution_blocks non-empty) re-run after this regeneration: still exactly q_3.1/q_3.6/q_3.9/q_3.13/q_3.15, 0 additional items."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-28T06:31:09.088027+00:00",
+    "inputs": {
+      "structured.en.json": "8e62657bb9a01610"
+    },
+    "counts": {
+      "html_bytes": 202474,
+      "part_prompt_bug_items_fixed": 5,
+      "part_prompt_bug_items_beyond_review": 0,
+      "html_text_fixes_applied": 21
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Root-caused and fixed the render-script bug affecting q_3.1/q_3.6/q_3.9/q_3.13/q_3.15 (all 5 of this chapter's items whose real worked answer lives entirely as one combined item-level solution block, per_part solution_blocks all empty by design): this chapter's own 2026-09-21 design-stage entry explicitly claimed the render fix from that same session 'applied cleanly with zero exceptions needed here' for these exact 5 items - but that fix (shared with chemistry-12-1/12-2's own sessions) turned out to be the SAME over-suppression bug later root-caused and corrected in chemistry-12-2's own 2026-09-25 session: it suppressed each part's own PROMPT text entirely, not just the redundant solution-less tail it was meant to remove. Confirmed by direct inspection: the pre-fix HTML for e.g. q_3.15 showed only the combined answer with a bare '(ii)'/'(iii)'/... marker buried mid-sentence - no actual part question text anywhere, matching the user's own 'half looks okay and half looks wrong' read of the pre-fix PDF (parts ii/iv/v/vi got an incidental in-line mention inside the combined answer's own prose, i/iii got none at all - neither is a real per-part prompt). Fixed uniformly for all 5 items using the same convention already established in chemistry-12-2/chemistry-12-4: each part's own label+prompt now renders as its own '.s80' block immediately before the item's combined '.s81' solution, in question order (q_3.1: 4 parts, q_3.6: 2, q_3.9: 3, q_3.13: 3, q_3.15: 6 - 18 new .s80 blocks total, plus 4 pre-existing ones on ex_3.3/ex_3.4 which already had this shape correctly). Text for each restored part prompt was hand-converted from the item's own JSON (already-correct data) matching this page's existing LaTeX-to-HTML conventions (subscripts/superscripts, arrow/equals spacing) rather than regenerated by any script, since this chapter's own render script was not preserved (same situation as its two sibling chapters). Systematic sweep of the WHOLE chapter's structured.en.json for this exact shape (every item with parts, all parts' own solution_blocks empty, item-level solution_blocks non-empty) found exactly these SAME 5 items and no others - re-confirmed after the full JSON regeneration for the Task 2/3/4 text fixes too. Also hand-applied the HTML-rendered equivalent of all 20 verify/format-stage text corrections (19 original + the q_3.30 E_alpha catch) directly in the already-published final.en.html, scoped with exact substring + occurrence-count checks (a real trap hit and worked around: this chapter's converter pads '=', '/', and even plain word-spaces inside math-adjacent text with U+00A0 non-breaking spaces, so every found/should_be pair needed nbsp-aware matching, discovered by an initial ASCII-space attempt matching zero times and caught before writing). it_3.8's stale 'Tip' note pill (the whole '.s82' block) removed entirely, its own div-tag balance re-verified before writing. Verified afterward: div/span/sub/table/tr/td/th/p/figure/figcaption tag-open/close counts all balanced; 49 data-screen-label cards present; every one of the ~20 corrected substrings confirmed present and every pre-fix substring confirmed absent (checked via direct count() on the final file). The pre-existing sup-tag count mismatch (708 open / 706 close) was already present before this session's edits (697/695 at the start) and is unrelated to any change made here - investigated and found to correspond to no visible artifact (0 escaped/literal sup or sub tags anywhere), left as an unresolved pre-existing curiosity, not a fix target."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-28T06:31:09.092607+00:00",
+    "inputs": {
+      "final.en.html": "62197fe183c885a8"
+    },
+    "counts": {
+      "pages": 36,
+      "blank_pages": 0,
+      "numeric_tokens_checked": 662,
+      "numeric_tokens_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "Re-exported via Playwright/Chromium (file:// URL to the real output directory, document.fonts.ready awaited, emulate_media('screen') applied per this pipeline's own standing per-export fix, print_background=True + prefer_css_page_size=True, no explicit format/width/height). 36 pages (was 35 before this session's fixes - the +1 page is consistent with 5 items' worth of restored part-prompt content, the same pattern already seen on chemistry-12-2's own analogous fix). 0 blank pages. Numeric read-back: 662 numeric tokens pulled from every question/final_answer field (item- and part-level) in 06_simplify/chapter.simplified.en.md, all 662 confirmed present in the PDF's own extracted text (fitz), applying the documented superscript-exponent separator fix (inserting a break before a run of superscript characters so a base number and its exponent normalize to two distinct tokens instead of gluing, per step_10/PROMPT.md's own documented trap) - 0 genuinely missing. Visually spot-checked via direct page renders: q_3.15 (page 22-23, all 6 part prompts now render correctly, in order, before the combined solution), q_3.8 (page 16, now correctly shows '-Delta[Ester]/Delta t' with the minus sign, and its real single-part question matching chapter.en.pdf page 85 exactly), q_3.2 (3.9x10^-9 correctly rendered)."
   }
 ]

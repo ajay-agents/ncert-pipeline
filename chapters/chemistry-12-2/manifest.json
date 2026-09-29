@@ -723,5 +723,123 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical re-export of final.en.html after the paired 'design' manifest entry's retroactive fix. Page count 26->25 (removed redundant clutter, not content). Gates pass."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-25T13:17:59.001823+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "d4fdcc6bb3c2ee64",
+      "chapter.en.pdf": "ca0f380fbfe6a0a4",
+      "solutions.en.pdf": "ac2a1b8347676eef"
+    },
+    "counts": {
+      "corrections_applied": 26,
+      "corrections_held": 0,
+      "authored_content_items": 1,
+      "items_affected": 20
+    },
+    "gates_failed": {
+      "gate_math_parity": [
+        "it_2.13.solution: display math: 0 -> 3 (expected - authorized one-time authored content, see notes)"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Retroactive fix pass, English medium only, prompted by an external review of the already-completed chapter (chemistry-12-2, Electrochemistry). Coordinated by three parallel research forks that verified every claim against 01_mathpix/solutions.en.md, 01_mathpix/chapter.en.md, and (for ambiguous cases) the actual PDF pages directly, before any fix was written; see the session's own final report for the claim-by-claim verdicts. 26 Correction objects applied via pipeline.verify.apply_corrections at min_confidence='high', all held=0 (every 'found' matched exactly once): q_2.4 (E(Cr3+/Cr) sign, -0.74V not +0.74V, confirmed against this chapter's own standard-potential table); q_2.6 (removed a leaked internal reviewer note baked into final_answer -- 'as stated...see report' is not source content; the underlying 1.104V-vs-1.04V figure is a genuine solutions-manual self-contradiction, left untouched and reported, not silently corrected); q_2.7 (a literal '## Molar conductivity:' markdown-heading-bleed rendered as visible text, converted to plain bold; 'I=1' OCR ell-vs-capital-I fixed to 'l=1'); q_2.10 (four kappa/K symbol-confusion fixes matching this chapter's own extract_match manifest note, plus 'interrupts'->'intercepts'); q_2.11 (a conductivity restated with the wrong unit, S m^-1 instead of the item's own S cm^-1; one bonus K->kappa fix found while in there, not in the original review); ex_2.9 (k->K_a symbol fix, corroborated by the item's own final_answer; cm^3->cm^2 unit OCR fix); it_2.9 (proportional-sign '\\propto' OCR'd for alpha, with a duplicated stray 'c'); it_2.8 (missing charge on OH-, missing '=' in an aligned Kohlrausch's-law derivation row); q_2.13/q_2.14/it_2.3/q_2.18 (four separate 'e^{-1}' spurious-exponent OCR fixes on electron symbols, plus one more AI->Al beyond the one already fixed in q_2.1); q_2.18 (S2O6^2- -> S2O8^2-, corroborated independently against this chapter's own reliably-extracted chapter.en.pdf text -- a real chemistry error, not just an OCR guess); q_2.17 (two of the OCR reading-order-scrambled conclusion sentences for parts ii/iii restored -- pure reordering of words already present, no invention; part i's conclusion and the whole iv/v block were NOT touched -- genuinely missing/interleaved words there, flagged instead, see report); it_2.12 (one whole-field reorder, same class as this chapter's own already-applied it_2.5 fix); it_2.15 (hydrate formula comma -> centered dot). Task 1: it_2.13's solution field was empty (confirmed genuine gap, already documented in this chapter's own extract_match manifest note: the solutions manual's intext-question sequence jumps 3.12->3.14, no 3.13 anywhere) -- authored directly per the user's explicit one-time exception (same policy as chemistry-12-1's own 11 similarly-gapped items), prepended with the identical 'Not in official solutions manual' banner text used there, content derived from standard electrochemistry and cross-checked against this same chapter's own discharge-reaction notation for the lead storage battery. FLAGGED, not fixed (textbook/solutions-manual's own genuine content, not an extraction bug -- confirmed by direct page reads): Example 2.3's '-21227' J (textbook's own arithmetic typo, chapter.en.pdf page 10 confirmed); q_2.6's 1.104V/1.04V self-contradiction and its lack of a derivation (both genuinely how the manual prints it); q_2.4's 'Delta_r G = -2.303 RT ln K' formula (confirmed on the actual scanned page -- a real double-conversion error, but the manual's own); q_2.4(ii)'s cell notation missing Pt(s) (confirmed on-page omission); Ex 2.6/2.7/q_2.17's stale 'Fig. 3.7'/'Table 3.4'/'Table 3.1' cross-references (confirmed genuinely printed this way in both the real textbook PDF and the solutions manual's own Chapter-3-numbered header -- same rationalised-edition-offset pattern already established for this chapter, per the chemistry-12-1 precedent: flagged, not silently renumbered); q_2.18(i)'s 'Ag anode is attacked by NO3- ions' (confirmed deliberate, internally-consistent manual phrasing, not OCR damage); q_2.17's duplicated '(iv)' part label (confirmed genuinely printed twice in the source, no '(v)' -- a real manual typo); Intext 2.1's emf framing and its 1atm/1bar inconsistency (both confirmed as the manual's own wording/inconsistency). REVIEWER OVERSTATED / no discrepancy found: Ex 2.10's 111.1-vs-111.15 claim (table value is a correctly-rounded 111.1, no error); Intext 2.6's log-rounding claim (matches the solutions manual exactly, no alternate 'textbook key' exists in this repo to compare against); Intext 2.3's oxidation/reduction framing (the manual's own wording is self-consistent once its very next sentence is read). Not substantiated at all: a claimed 'H(H+,1/2H2)' Nernst-equation symbol error and a claimed misplaced mid-derivation answer value -- neither located anywhere in this chapter's data after a full search."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-25T13:18:50.580149+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "1b3c9beddec91fcc"
+    },
+    "counts": {
+      "corrections_cascaded": 25,
+      "authored_content_items": 1
+    },
+    "gates_failed": {
+      "gate_math_parity": [
+        "it_2.13.solution: display math: 0 -> 3 (expected, see verify entry)"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Cascaded the same verify-stage session's fixes forward: for each of the 26 corrections, checked chapter.simplified.en.md's own copy of the affected field with .count() first -- 25 of 26 still held the identical pre-fix text (stage 6's own batch never touched these exercise/intext solutions -- simplification in this chapter only ever reworded EXAMPLE solutions, never exercise/intext ones) and got the identical found->should_be swap; the 1 exception (q_2.18's OCR word-order fix) was found ALREADY correctly reordered here -- stage 6's own batch had independently fixed that exact spot's wording during its own pass, confirmed no conflict with the verify-stage fix. it_2.13's solution set directly (same authored content as verify, carried through unchanged -- intext solutions are never simplified)."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-25T13:18:50.621401+00:00",
+    "inputs": {
+      "structured.en.md": "c3215273e1caa637"
+    },
+    "counts": {
+      "corrections_cascaded": 25,
+      "authored_content_items": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "structured.en.md's nested :::step/:::concept/:::formula containers can't round-trip through mdio.markdown_to_chapter (by design -- it only parses pre-stage-7 flat item structure), so each item's own container span was located by line-based bracket matching (tag.py's own OPEN_RE/CLOSE_RE) and the identical found->should_be swap applied scoped to just that span, verified count==1 within the span (not globally -- one 'e^{-1}' found/should_be pair collides across two different items' text if matched unscoped, confirmed and avoided). Same 25/26 applied, same 1 already-resolved skip as the simplify stage. it_2.13's new :::solution block authored directly in the container vocabulary (:::note{type=\"caution\" label=\"Not in official solutions manual\"}, then :::concept{label=\"Given\"}, :::formula{label=\"Key formula\"}, :::step{label=\"Conclusion\"}), matching the exact banner-container precedent already established in chemistry-12-1's own structured.en.md. Re-parsed with tag._parse() after every edit to confirm the file stays well-formed."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-25T13:18:50.625945+00:00",
+    "inputs": {
+      "structured.en.json": "92b63419ca823c65"
+    },
+    "counts": {
+      "items": 43,
+      "parts_total": 25,
+      "corrections_cascaded": 25,
+      "authored_content_items": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "No structural/judgment re-tagging needed for the 25 text corrections -- each one is a pure content edit inside an already-correctly-staged block's own text, so applied by walking the existing JSON tree per item (recursive string-replace within that item's own subtree only, verified exactly one match across the whole subtree before writing), leaving every block's existing given/key_formula/substitute/conclusion assignment untouched. it_2.13's solution_blocks built directly matching the same note/concept/formula/step schema used elsewhere in this JSON (note_type='caution', stage='given'/'key_formula'/'conclusion'), figures=[] (none). Re-parsed the whole file after writing and re-counted items (43, unchanged) and parts (25, unchanged) against a fresh count -- matches, nothing dropped or duplicated."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-25T13:18:50.632203+00:00",
+    "inputs": {
+      "final.en.html": "b22ece171648cec2",
+      "final.en.css": "93c26a5a237d84d8"
+    },
+    "counts": {
+      "html_bytes": 143744,
+      "part_prompt_bug_items_fixed": 8,
+      "part_prompt_bug_items_beyond_review": 0,
+      "html_text_fixes_applied": 25,
+      "authored_content_items": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Root-caused and fixed the render-script bug the review's 8 flagged items (q_2.3/2.4/2.5/2.12/2.13/2.14/2.17/2.18) all shared: every one of them is a multi-part item whose real worked answer lives entirely as ONE combined item-level solution block (parts.solution_blocks all empty by design, per stage 8's own documented duplicate-solution-artifact handling), but the previous session's own retroactive fix (see this chapter's own 2026-09-21 manifest entries) over-corrected: it suppressed each part's own PROMPT too, not just the redundant solution-less tail it was actually trying to remove -- discarding real, non-redundant sub-question text (e.g. q_2.3's 'Which of the electrode is negatively charged?') that appears nowhere else on the page. q_2.13 alone had a one-item exception (RESTORE_PARTS_FOR) forcing its own parts to render anyway, but as a tail AFTER the solution rather than before it, unlike every other multi-part item on this page. Fixed uniformly for all 8 items: each part's own label+prompt now renders as its own '.s80' block (the same convention already used elsewhere in this repo for a real per-part prompt, e.g. chemistry-12-4's q_4.1) immediately before the item's combined '.s81' solution, in question order; q_2.13's old post-solution tail was removed and replaced with the same before-solution placement as the other 7, for consistency. Systematic sweep of the WHOLE chapter's structured.en.json for this exact shape (every item with parts, all parts' own solution_blocks empty, item-level solution_blocks non-empty) found exactly these SAME 8 items and no others -- every item in this chapter that has any parts at all falls in this one shape; 0 additional items beyond the review's original 8. Also applied the HTML-rendered equivalent of all 25 verify-stage text corrections (the 26th, q_2.18's word-order fix, needed no HTML change -- already correct here, matching the simplify-stage finding), scoped to each item's own card (bounded by its own 'data-screen-label' marker) and verified count==1 within that scope before writing -- a real trap hit and fixed along the way: this chapter's own converter pads '=' and '×' with non-breaking spaces (U+00A0) per this pipeline's own documented convention, so a found/should_be pair authored with plain ASCII spaces silently matched zero times until the search was made whitespace-flexible (regex matching ' ' OR U+00A0). it_2.13's new solution authored directly as HTML matching house style (the '.task1-note' banner, one Given pill, one Key-formula pill with both half-reactions, one Conclusion pill with the overall reaction plus a materials-involved summary) -- the '.task1-note' CSS class (identical rule, copied verbatim) added to this chapter's own final.en.css, since it didn't exist here yet. Verified afterward: div open/close tag counts balanced (1187/1187), all 43 'data-screen-label' cards still present, no duplicate 'Part (i)' labels, every one of the 25 corrected substrings confirmed present and every one of the 25 pre-fix substrings confirmed absent."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-25T13:18:50.636242+00:00",
+    "inputs": {
+      "final.en.html": "b22ece171648cec2"
+    },
+    "counts": {
+      "pages": 26,
+      "blank_pages": 0,
+      "numeric_tokens_checked": 352,
+      "numeric_tokens_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_read_back"
+    ],
+    "model_calls": 0,
+    "notes": "Mechanical re-export via Playwright/Chromium (file:// URL to the real output directory, document.fonts.ready awaited, emulate_media('screen') applied per this pipeline's own standing per-export fix, print_background=True + prefer_css_page_size=True, no explicit format/width/height). 26 pages (was 25 before this session's fixes -- the extra page is consistent with 8 items' worth of restored part-prompt content plus it_2.13's newly-authored solution, not a content loss). 0 blank pages. Numeric read-back: 352 numeric tokens pulled from every question/final_answer field (item- and part-level) in 06_simplify/chapter.simplified.en.md, all 352 confirmed present in the PDF's own extracted text (fitz). One instance of the documented base+exponent merge trap hit for real here, a variant not literally covered by step_10/PROMPT.md's own unicode-superscript-character example: this chapter's '10^{34}'/'10^{22}' exponents render as plain raised ASCII digits with no separating character at the text-extraction layer at all (not unicode superscript glyphs), so fitz's own get_text() glues them straight onto their '10' base with zero characters between ('2.25\\xa0\\xd7\\xa01022' for '2.25\\xd710^{22}') -- confirmed by direct inspection of the raw extracted page text. Handled by recognizing a token that's a '10^{N}' exponent in the source as satisfied if any merged digit-run in the PDF text starts with '10' and ends with that exact exponent, rather than only ever expecting it as a standalone token -- both of this chapter's own affected values (q_2.4's '10^{34}', it_2.10's '10^{22}') confirmed present this way; 0 genuinely missing after accounting for it."
   }
 ]

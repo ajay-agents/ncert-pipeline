@@ -205,7 +205,7 @@ $\mathrm{Hg}\left[\mathrm{Co}(\mathrm{SCN})_{4}\right]$
 :::
 
 :::solution
-mercury (I) tetrathiocyanato-S-cobaltate(III)
+mercury (I) tetrathiocyanato-S-cobaltate(III) (as printed in the textbook; note that mononuclear Hg(I) is unusual - Hg(I) is otherwise only known as the dimeric Hg2^2+ ion - but this is the formal oxidation-state bookkeeping NCERT itself uses for this name)
 :::
 
 :::answer
@@ -338,11 +338,10 @@ $$
 $$
 :::
 
-tetraamminocopper(ii) sulphate
+tetraamminecopper(II) sulphate
 Both $\quad \mathrm{FeSO}_{4} \cdot\left(\mathrm{NH}_{4}\right)_{2} \mathrm{SO}_{4} \cdot 6 \mathrm{H}_{2} \mathrm{O}$ and $\left[\mathrm{Cu}\left(\mathrm{NH}_{3}\right)_{4}\right] \mathrm{SO}_{4} \cdot 5 \mathrm{H}_{2} \mathrm{O}$ are addition compounds. The only major difference is that the former is a double salt, while the latter is a coordination compound.
 
-A double salt is an addition compound. It is stable in the solid state, but breaks up into its constituent ions when dissolved. These compounds show the individual properties of their constituents. For example, $\mathrm{FeSO}_{4} \cdot\left(\mathrm{NH}_{4}\right)_{2} \mathrm{SO}_{4} \cdot 6 \mathrm{H}_{2} \mathrm{O}$ breaks into $\mathrm{Fe}^{2+}, \mathrm{NH}^{4+}$ and $\mathrm{SO}_{4}{ }^{2-}$ ions. So it gives a positive test for $\mathrm{Fe}^{2+}$ ions. A coordination compound is an addition compound that keeps its identity both in the solid state and in solution. Here, the individual properties of the constituents are lost. This happens because $\left[\mathrm{Cu}\left(\mathrm{NH}_{3}\right)_{4}\right] \mathrm{SO}_{4} \cdot 5 \mathrm{H}_{2} \mathrm{O}$ does not show the test for $\mathrm{Cu}^{2+}$. The ions present in the $\left[\mathrm{Cu}\left(\mathrm{NH}_{3}\right)_{4}\right] \mathrm{SO}_{4} \cdot 5 \mathrm{H}_{2} \mathrm{O}$ are $\left[\mathrm{Cu}\left(\mathrm{NH}_{3}\right)_{4}\right]^{2+}$ and $\mathrm{SO}_{4}{ }^{2-}$ solution of
--
+A double salt is an addition compound. It is stable in the solid state, but breaks up into its constituent ions when dissolved. These compounds show the individual properties of their constituents. For example, $\mathrm{FeSO}_{4} \cdot\left(\mathrm{NH}_{4}\right)_{2} \mathrm{SO}_{4} \cdot 6 \mathrm{H}_{2} \mathrm{O}$ breaks into $\mathrm{Fe}^{2+}, \mathrm{NH}^{4+}$ and $\mathrm{SO}_{4}{ }^{2-}$ ions. So it gives a positive test for $\mathrm{Fe}^{2+}$ ions. A coordination compound is an addition compound that keeps its identity both in the solid state and in solution. Here, the individual properties of the constituents are lost. Since $\left[\mathrm{Cu}\left(\mathrm{NH}_{3}\right)_{4}\right] \mathrm{SO}_{4} \cdot 5 \mathrm{H}_{2} \mathrm{O}$ retains its identity (as the complex ion) in solution, it does not show the test for $\mathrm{Cu}^{2+}$. The ions present in the $\left[\mathrm{Cu}\left(\mathrm{NH}_{3}\right)_{4}\right] \mathrm{SO}_{4} \cdot 5 \mathrm{H}_{2} \mathrm{O}$ are $\left[\mathrm{Cu}\left(\mathrm{NH}_{3}\right)_{4}\right]^{2+}$ and $\mathrm{SO}_{4}{ }^{2-}$.
 :::
 
 :::
@@ -359,11 +358,11 @@ Explain with two examples each of the following: coordination entity, ligand, co
 :::concept{label="Coordination entity"}
 Coordination entity:
 
-A coordination entity is a charged species — it carries either a positive or a negative charge. In a coordination entity, a suitable number of neutral molecules or negative ions (called ligands) surround the central atom or ion. For example:
+A coordination entity constitutes a central metal atom or ion bonded to a fixed number of ions or molecules; it may be cationic, anionic, or neutral overall. In a coordination entity, a suitable number of neutral molecules or negative ions (called ligands) surround the central atom or ion. For example:
 
 $$
 \begin{array}{ll}
-{\left[\mathrm{Ni}\left(\mathrm{NH}_{3}\right)_{6}\right]^{2+},\left[\mathrm{Fe}(\mathrm{CN})_{6}\right]^{4+}} & =\text { cationic complex } \\
+{\left[\mathrm{Ni}\left(\mathrm{NH}_{3}\right)_{6}\right]^{2+},\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]^{3+}} & =\text { cationic complex } \\
 {\left[\mathrm{PtCl}_{4}\right]^{2-},\left[\mathrm{Ag}(\mathrm{CN})_{2}\right]^{-}} & =\text {anionic complex } \\
 {\left[\mathrm{Ni}(\mathrm{CO})_{4}\right],\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{4} \mathrm{Cl}_{2}\right]} & =\text { neutral complex }
 \end{array}
@@ -378,7 +377,7 @@ $$
 :::concept{label="Ligands"}
 Ligands
 
-Neutral molecules or negatively charged ions that surround the metal atom in a coordination entity or a coordinal complex are called ligands. For example,
+Neutral molecules or negatively charged ions that surround the metal atom in a coordination entity or a coordination complex are called ligands. For example,
 $\ddot{\mathrm{N}} \mathrm{H}_{3}, \mathrm{H}_{2} \ddot{\mathrm{O}}, \mathrm{Cl}^{-},-\mathrm{OH}$. Ligands are usually polar and have at least one unshared pair of valence electrons.
 :::
 :::
@@ -401,16 +400,15 @@ For example:
 
 :::
 
-:::part{label="(vi)"}
+:::part{label="(iv)"}
 :::solution
 :::concept{label="Coordination polyhedron"}
 Coordination polyhedron:
 
 The coordination polyhedron is the spatial arrangement of the ligands that are directly attached to the central metal ion in the coordination sphere. For example:
 
-
-
-Tetrahedral
+(a) $\left[\mathrm{Ni}(\mathrm{CO})_{4}\right]$ is tetrahedral.
+(b) $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]^{3+}$ is octahedral.
 :::
 :::
 
@@ -477,10 +475,9 @@ Ambidentate ligands:
 
 Ligands that can attach themselves to the central metal atom through two different atoms are called ambidentate ligands. For example:
 
-(a)
+(a) Nitrite ion, $\mathrm{NO}_{2}^{-}$: can coordinate either through the nitrogen atom (nitro, $-\mathrm{NO}_{2}$) or through an oxygen atom (nitrito, $-\mathrm{ONO}$).
 
-
-(b)
+(b) Thiocyanate ion, $\mathrm{SCN}^{-}$: can coordinate through the sulphur atom (thiocyanato, $-\mathrm{SCN}$) or through the nitrogen atom (isothiocyanato, $-\mathrm{NCS}$).
 :::
 :::
 
@@ -530,9 +527,9 @@ $\left[\mathrm{CoBr}_{2}(\mathrm{en})_{2}\right]^{+}$
 $$
 \begin{aligned}
 & {\left[\begin{array}{lll}
-\mathrm{Co} & (\mathrm{Br})_{2} & \left.(\mathrm{en})_{2}\right]^{2+} \\
-\downarrow & \downarrow & \downarrow
-\end{array}\right.} \\
+\mathrm{Co} & (\mathrm{Br})_{2} & (\mathrm{en})_{2}
+\end{array}\right]^{2+}} \\
+& \downarrow \quad \downarrow \quad \downarrow \\
 & x+2(-1)+2(0)=+1 \\
 & x-2=+1 \\
 & x=+3
@@ -625,7 +622,7 @@ Tetrahydroxidozincate(II)
 :::
 
 :::solution
-$\quad\left[\mathrm{Zn}(\mathrm{OH})\right]^{2-}$
+$\quad\left[\mathrm{Zn}(\mathrm{OH})_{4}\right]^{2-}$
 :::
 
 :::
@@ -724,7 +721,7 @@ Pentaamminenitrito-N-cobalt(III)
 :::
 
 :::solution
-$\left[\mathrm{Co}\left[\mathrm{NO}_{2}\right)\left(\mathrm{NH}_{3}\right)_{5}\right]^{2+}$
+$\left[\mathrm{Co}\left(\mathrm{NO}_{2}\right)\left(\mathrm{NH}_{3}\right)_{5}\right]^{2+}$
 :::
 
 :::
@@ -755,7 +752,7 @@ $\left[\mathrm{Pt}\left(\mathrm{NH}_{3}\right)_{2} \mathrm{Cl}\left(\mathrm{NH}_
 :::
 
 :::solution
-Diamminechlorido(methylamine) platinum(II) chloride
+Diamminechlorido(methanamine)platinum(II) chloride
 :::
 
 :::
@@ -766,7 +763,7 @@ $\left[\mathrm{Ti}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right]^{3+}$
 :::
 
 :::solution
-Hexaquatitanium(III) ion
+Hexaaquatitanium(III) ion
 :::
 
 :::
@@ -777,7 +774,7 @@ $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{4} \mathrm{Cl}\left(\mathrm{NO}_
 :::
 
 :::solution
-Tetraamminichloridonitrito-N-Cobalt(III) chloride
+Tetraamminechloridonitrito-N-cobalt(III) chloride
 :::
 
 :::
@@ -788,7 +785,7 @@ $\left[\mathrm{Mn}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right]^{2+}$
 :::
 
 :::solution
-Hexaquamanganese(II) ion
+Hexaaquamanganese(II) ion
 :::
 
 :::
@@ -821,7 +818,7 @@ $\left[\mathrm{Co}(\mathrm{en})_{3}\right]^{3+}$
 :::
 
 :::solution
-Tris(ethane-1, 2-diammine) cobalt(III) ion
+Tris(ethane-1,2-diamine)cobalt(III) ion
 :::
 
 :::
@@ -866,31 +863,31 @@ Trans-isomer
 :::concept{label="Optical isomerism"}
 (b) Optical isomerism:
 
-This type of isomerism arises in chiral molecules. The isomers are mirror images of each other, and they cannot be superimposed on one another.
+This type of isomerism arises in chiral molecules. The isomers are mirror images of each other, and they cannot be superimposed on one another. For example, $\left[\mathrm{Co}(\mathrm{en})_{3}\right]^{3+}$ exists as a pair of non-superimposable mirror-image (d and l) forms.
 :::
 
 :::concept{label="Linkage isomerism"}
 (c) Linkage isomerism: This type of isomerism is found in complexes that contain ambidentate ligands. For example:
-$\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5}\left(\mathrm{NO}_{2}\right)\right] \mathrm{Cl}_{2}$ and $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5}(\mathrm{ONO}) \mathrm{Cl}_{2}\right.$
-Yellow form Red form (d)
+$\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5}\left(\mathrm{NO}_{2}\right)\right] \mathrm{Cl}_{2}$ and $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5}(\mathrm{ONO})\right] \mathrm{Cl}_{2}$
+Yellow form, Red form
 :::
 
 :::concept{label="Coordination isomerism"}
 Coordination isomerism:
 This type of isomerism arises when ligands are interchanged between the cationic and anionic entities of different metal ions present in the complex.
-$\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]\left[\mathrm{Cr}(\mathrm{CN})_{6}\right]$ and $\left[\mathrm{Cr}\left(\mathrm{NH}_{3}\right)_{6}\right]\left[\mathrm{Co}(\mathrm{CN})_{6}\right](\mathbf{e})$
+$\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]\left[\mathrm{Cr}(\mathrm{CN})_{6}\right]$ and $\left[\mathrm{Cr}\left(\mathrm{NH}_{3}\right)_{6}\right]\left[\mathrm{Co}(\mathrm{CN})_{6}\right]$
 :::
 
 :::concept{label="Ionization isomerism"}
 Ionization isomerism:
 This type of isomerism arises when a counter ion replaces a ligand within the coordination sphere. So complexes with the same composition, but that give different ions when dissolved in water, are called ionization isomers. For example,
-$\left.\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{SO}_{4}\right) \mathrm{Br}$ and $\left.\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{Br}\right] \mathrm{SO}_{4}$.
+$\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{SO}_{4}\right] \mathrm{Br}$ and $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{Br}\right] \mathrm{SO}_{4}$.
 :::
 
 :::concept{label="Solvate isomerism"}
 (f) Solvate isomerism:
 Solvate isomers differ in whether the solvent molecule is directly bonded to the metal ion, or is simply present as a free solvent molecule in the crystal lattice.
-$\left[\mathrm{Cr}\left[\mathrm{H}_{2} \mathrm{O}\right)_{6}\right] \mathrm{Cl}_{3}\left[\mathrm{Cr}\left(\mathrm{H}_{2} \mathrm{O}\right)_{5} \mathrm{Cl}\right] \mathrm{Cl}_{2} . \mathrm{H}_{2} \mathrm{O}\left[\mathrm{Cr}\left(\mathrm{H}_{2} \mathrm{O}\right)_{5} \mathrm{Cl}_{2}\right] \mathrm{Cl} .2 \mathrm{H}_{2} \mathrm{O}$
+$\left[\mathrm{Cr}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right] \mathrm{Cl}_{3}$, $\left[\mathrm{Cr}\left(\mathrm{H}_{2} \mathrm{O}\right)_{5} \mathrm{Cl}\right] \mathrm{Cl}_{2} . \mathrm{H}_{2} \mathrm{O}$, $\left[\mathrm{Cr}\left(\mathrm{H}_{2} \mathrm{O}\right)_{5} \mathrm{Cl}_{2}\right] \mathrm{Cl} .2 \mathrm{H}_{2} \mathrm{O}$
 Violet Blue-green Dark green
 :::
 :::
@@ -1011,7 +1008,7 @@ Draw all the isomers (geometrical and optical) of:
 :::
 
 :::figure{src="images/fig_5_166.jpg" id="fig_5_166"}
-Optical isomers of trans-[CoCl2(en)2]+ - part (i)
+Trans-[CoCl2(en)2]+ isomer, optically inactive (superimposable on its own mirror image) - part (i)
 :::
 
 :::figure{src="images/fig_5_167.jpg" id="fig_5_167"}
@@ -1073,6 +1070,12 @@ $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{2} \mathrm{Cl}_{2}(\mathrm{en})\
 
 :::solution
 $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{2} \mathrm{Cl}_{2}(\mathrm{en})\right]^{+}$
+
+The en ligand always spans two cis positions. Of the remaining four sites, the two Cl (and correspondingly the two NH3) can be arranged either cis or trans to each other, giving in total three stereoisomers:
+
+Trans-$\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{2} \mathrm{Cl}_{2}(\mathrm{en})\right]^{+}$ (the two Cl trans to each other) - has a mirror plane, optically inactive.
+
+Cis-$\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{2} \mathrm{Cl}_{2}(\mathrm{en})\right]^{+}$ (the two Cl cis to each other) - chiral, exists as a non-superimposable pair of optical isomers (d and l), optically active.
 :::
 
 :::
@@ -1096,11 +1099,9 @@ Write all the geometrical isomers of $\left[\operatorname{Pt}\left(\mathrm{NH}_{
 :::
 
 :::solution{label="Solution"}
-$\left[\mathrm{Pt}\left(\mathrm{NH}_{3}\right)(\mathrm{Br})(\mathrm{Cl})(\mathrm{py})\right.$
+$\left[\mathrm{Pt}\left(\mathrm{NH}_{3}\right)(\mathrm{Br})(\mathrm{Cl})(\mathrm{py})\right]$ is a Pt(II), 4-coordinate complex, which (being a d8 metal ion) is square planar, not tetrahedral. A square planar MABCD complex (four different unidentate ligands) has 3 geometrical isomers, one for each possible pair of mutually trans ligands.
 
-
-
-None of the above isomers show optical isomerism. Tetrahedral complexes rarely show optical isomerism — they do so only when unsymmetrical chelating agents are present.
+None of these three isomers exhibits optical isomerism: a square planar MABCD complex always retains the plane of the four ligands and the metal as a mirror plane, so it is superimposable on its own mirror image regardless of which ligands are trans to which.
 :::
 
 :::
@@ -1116,7 +1117,7 @@ Aqueous copper sulphate solution (blue in colour) gives:
 
 :::solution{label="Solution"}
 :::concept{label="Given"}
-Aqueous $\mathrm{CuSO}_{4}$ exists as $\left[\mathrm{Cu}\left(\mathrm{H}_{2} \mathrm{O}\right)_{4}\right] \mathrm{SO}_{4}$. It is blue because of the $\left[\mathrm{Cu}\left[\mathrm{H}_{2} \mathrm{O}\right)_{4}\right]^{2+}$ ions present.
+Aqueous $\mathrm{CuSO}_{4}$ exists as $\left[\mathrm{Cu}\left(\mathrm{H}_{2} \mathrm{O}\right)_{4}\right] \mathrm{SO}_{4}$. It is blue because of the $\left[\mathrm{Cu}\left(\mathrm{H}_{2} \mathrm{O}\right)_{4}\right]^{2+}$ ions present.
 :::
 
 :::step{n="1"}
@@ -1154,14 +1155,18 @@ What is the coordination entity formed when excess of aqueous KCN is added to an
 :::formula
 $$
 \begin{aligned}
-& \mathrm{CuSO}_{4(a q)}+4 \mathrm{KCN}_{(a q)} \longrightarrow \mathrm{K}_{2}\left[\mathrm{Cu}(\mathrm{CN})_{4}\right]_{(a q)}+\mathrm{K}_{2} \mathrm{SO}_{4(a q)} \\
-& \text {.e., }\left[\mathrm{Cu}\left(\mathrm{H}_{2} \mathrm{O}\right)_{4}\right]^{2+}+4 \mathrm{CN}^{-} \longrightarrow\left[\mathrm{Cu}(\mathrm{CN})_{4}\right]^{2-}+4 \mathrm{H}_{2} \mathrm{O}
+& 2\mathrm{CuSO}_{4(a q)}+10 \mathrm{KCN}_{(a q)} \longrightarrow 2\mathrm{K}_{3}\left[\mathrm{Cu}(\mathrm{CN})_{4}\right]_{(a q)}+2\mathrm{K}_{2} \mathrm{SO}_{4(a q)}+(\mathrm{CN})_2 \\
+& \text {i.e., } 2\left[\mathrm{Cu}\left(\mathrm{H}_{2} \mathrm{O}\right)_{4}\right]^{2+}+10\mathrm{CN}^{-} \longrightarrow 2\left[\mathrm{Cu}(\mathrm{CN})_{4}\right]^{3-}+8 \mathrm{H}_{2} \mathrm{O}+(\mathrm{CN})_2
 \end{aligned}
 $$
 :::
 
 :::step{label="Conclusion"}
-So the coordination entity formed is $\mathrm{K}_{2}\left[\mathrm{Cu}(\mathrm{CN})_{4}\right] . \mathrm{K}_{2}\left[\mathrm{Cu}(\mathrm{CN})_{4}\right]_{\text {is a }}$, a very stable complex. It does not ionize to give $\mathrm{Cu}^{2+}$ ions in water. So $\mathrm{Cu}^{2+}$ ions are not precipitated when $\mathrm{H}_{2} \mathrm{~S}_{(g)}$ is passed through the solution.
+In excess $\mathrm{KCN}$, $\mathrm{Cu}^{2+}$ is actually reduced to $\mathrm{Cu}^{+}$, with the excess $\mathrm{CN}^{-}$ itself oxidised to cyanogen, $(\mathrm{CN})_{2}$:
+$$
+2\mathrm{Cu}^{2+}+10\mathrm{CN}^{-} \longrightarrow 2\left[\mathrm{Cu}(\mathrm{CN})_{4}\right]^{3-}+(\mathrm{CN})_{2}
+$$
+Thus, the coordination entity formed is the very stable $\left[\mathrm{Cu}(\mathrm{CN})_{4}\right]^{3-}$ (i.e. $\mathrm{K}_{3}\left[\mathrm{Cu}(\mathrm{CN})_{4}\right]$), which does not dissociate to give free $\mathrm{Cu}^{2+}$ (or even $\mathrm{Cu}^{+}$) ions in solution. Since no free $\mathrm{Cu}^{2+}$ ions remain available, $\mathrm{CuS}$ is not precipitated when $\mathrm{H}_{2}\mathrm{~S}_{(g)}$ is passed through the solution.
 :::
 :::
 
@@ -1175,55 +1180,55 @@ Discuss the nature of bonding in the following coordination entities on the basi
 :::
 
 :::figure{src="images/fig_5_176.jpg" id="fig_5_176"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+Orbitals of Fe2+ ion before hybridisation (3d6, high-spin, one 3d orbital pair from Hund's-rule filling) - part (i)
 :::
 
 :::figure{src="images/fig_5_177.jpg" id="fig_5_177"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+3d electrons of Fe2+ paired by the strong-field CN- ligand (t2g6eg0) - part (i)
 :::
 
 :::figure{src="images/fig_5_178.jpg" id="fig_5_178"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+d2sp3 hybridised (empty) orbitals of Fe2+ - part (i)
 :::
 
 :::figure{src="images/fig_5_179.jpg" id="fig_5_179"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+d2sp3 hybrid orbitals of Fe2+ filled by six CN- electron pairs - part (i)
 :::
 
 :::figure{src="images/fig_5_180.jpg" id="fig_5_180"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+Orbitals of Fe3+ ion (3d5, high-spin) - part (ii)
 :::
 
 :::figure{src="images/fig_5_181.jpg" id="fig_5_181"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+sp3d2 hybridised orbitals of Fe3+, empty and then filled by six F- electron pairs - part (ii)
 :::
 
 :::figure{src="images/fig_5_182.jpg" id="fig_5_182"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+Orbitals of Co3+ ion (3d6, high-spin) - part (iii)
 :::
 
 :::figure{src="images/fig_5_183.jpg" id="fig_5_183"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+sp3d2 hybridised (empty) orbitals of Co3+ - part (iii)
 :::
 
 :::figure{src="images/fig_5_184.jpg" id="fig_5_184"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+sp3d2 hybrid orbitals of Co3+ filled by electron pairs from the oxalate ligands - part (iii)
 :::
 
 :::figure{src="images/fig_5_185.jpg" id="fig_5_185"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+Orbitals of Co3+ ion (3d6, high-spin) - part (iv)
 :::
 
 :::figure{src="images/fig_5_186.jpg" id="fig_5_186"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+3d6 configuration of Co3+ ion - part (iv)
 :::
 
 :::figure{src="images/fig_5_187.jpg" id="fig_5_187"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+sp3d2 hybridised (empty) orbitals of Co3+ - part (iv)
 :::
 
 :::figure{src="images/fig_5_188.jpg" id="fig_5_188"}
-Valence bond orbital-filling diagram (electron configuration and hybridisation) for one of parts (i)-(iv)
+sp3d2 hybrid orbitals of Co3+, empty and then filled by six F- electron pairs - part (iv)
 :::
 
 :::part{label="(i)"}
@@ -1373,10 +1378,7 @@ A spectrochemical series arranges common ligands in increasing order of their cr
 
 :::formula{label="Ligand order"}
 $$
-\begin{aligned}
-& \mathrm{I}-<\mathrm{Br}^{-}<\mathrm{S}^{2-}<\mathrm{SCN}^{-}<\mathrm{Cl}^{-}<\mathrm{N}_{3}<\mathrm{F}^{-}<\mathrm{OH}^{-}<\mathrm{C}_{2} \mathrm{O}_{4}^{2-} \sim \mathrm{H}_{2} \mathrm{O}<\mathrm{NCS}^{-} \sim \mathrm{H}^{-}<\mathrm{CN}^{-}<\mathrm{NH}_{3} \\
-& <\text { en } \sim \mathrm{SO}_{3}^{2-}<\mathrm{NO}_{2}^{-}<\text {phen }<\mathrm{CO}
-\end{aligned}
+I^{-}<Br^{-}<SCN^{-}<Cl^{-}<S^{2-}<F^{-}<OH^{-}<C_{2}O_{4}^{2-}<H_{2}O<NCS^{-}<edta^{4-}<NH_{3}<en<CN^{-}<CO
 $$
 :::
 :::
@@ -1420,9 +1422,7 @@ $\left[\mathrm{Cr}\left(\mathrm{NH}_{3}\right)_{6}\right]^{3+}$ is paramagnetic 
 :::
 
 :::solution{label="Solution"}
-Cr is in the +3 oxidation state, i.e., $d^{3}$ configuration. Also, $\mathrm{NH}_{3}$ is a weak field ligand. It does not cause pairing of electrons in the $3 d$ orbital. $\mathrm{Cr}^{3+}$
-
-So it undergoes $d^{2} s p^{3}$ hybridization, and the electrons in the $3 d$ orbitals stay unpaired. Hence, it is paramagnetic.
+Cr is in the +3 oxidation state, i.e., $d^{3}$ configuration. For a $d^3$ ion, ligand field strength does not actually matter: with only three electrons and three $t_{2g}$ orbitals available, all three electrons occupy the $t_{2g}$ level singly (Hund's rule) whether the ligand is weak or strong field — pairing only becomes possible from the fourth electron onward ($d^4$ and beyond). $\mathrm{Cr}^{3+}$ ($t_{2g}{}^{3}e_g{}^{0}$) undergoes $d^{2} s p^{3}$ hybridization with all three $3d$ electrons unpaired. Hence, it is paramagnetic.
 
 In $\left[\mathrm{Ni}(\mathrm{CN})_{4}\right]^{2-}$, Ni is in the +2 oxidation state, i.e., $d^{8}$ configuration.
 $\mathrm{Ni}^{2+}$
@@ -1504,14 +1504,14 @@ The oxidation state can be given as:
 
 $$
 \begin{aligned}
-& x-6=-3 x \\
-& =+3
+& x-6=-3 \\
+& x=+3
 \end{aligned}
 $$
 :::
 
 :::step{n="2" label="Conclusion"}
-The $d$ orbital occupation for $\mathrm{Co}^{3+}$ is $t_{2 \mathrm{~g}}{ }^{6} e_{g}{ }^{0 .}$
+Oxalate (C2O4^2-) is a weak-field ligand (it sits below H2O in the spectrochemical series), so it does not pair the 3d electrons of Co3+. The $d$ orbital occupation for $\mathrm{Co}^{3+}$ is therefore $t_{2 \mathrm{~g}}{ }^{4} e_{g}{ }^{2}$ (high-spin, outer-orbital sp3d2 complex, 4 unpaired electrons) - consistent with Ex 5.15(iii)'s valence-bond-theory answer for the same ion.
 :::
 :::
 
@@ -1574,7 +1574,7 @@ $$
 :::
 
 :::step{n="2" label="Conclusion"}
-The $d$ orbital occupation for $\mathrm{Co}^{2+}$ is $e_{g}{ }^{4} t_{2 \mathrm{~g}}{ }^{3 .}$
+The $d$ orbital occupation for $\mathrm{Co}^{2+}$ is $e^{4} t_{2}{ }^{3}$ (tetrahedral splitting, so the plain $e/t_2$ labels apply, not the octahedral $e_g/t_{2g}$ labels).
 :::
 :::
 
@@ -1650,7 +1650,7 @@ $$
 \begin{aligned}
 & =\sqrt{3(3+2)} \\
 & =\sqrt{15} \\
-& \sim 4 \mathrm{BM}
+& \approx 3.87 \mathrm{BM}
 \end{aligned}
 $$
 :::
@@ -1660,7 +1660,7 @@ $$
 
 :::part{label="(ii)"}
 :::prompt
-$\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{Cl}_{-}\right] \mathrm{Cl}_{2}$
+$\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{Cl}\right] \mathrm{Cl}_{2}$
 :::
 
 :::solution
@@ -1672,7 +1672,7 @@ octahedral.
 Electronic configuration $d^{6}: t_{2 g}{ }^{6}$.
 Stereochemistry:
 
-2 isomers
+An MA5B octahedron (five identical NH3 + one Cl) has only one possible spatial arrangement — all five NH3 positions are equivalent by symmetry, so no geometrical or optical isomers exist.
 
 Magnetic Moment $=0$
 :::
@@ -1695,8 +1695,8 @@ Stereochemistry:
 
 Facial isomer
 
-Meriodional isomer
-Both isomers are optically active. Therefore, a total of 4 isomers exist.
+Meridional isomer
+Both the facial and meridional isomers possess a mirror plane (fac has C3v symmetry, mer has Cs symmetry), so both are optically inactive. Therefore, a total of 2 isomers exist (fac and mer).
 
 :::formula{label="Key formula"}
 Magnetic moment, $\mu=\sqrt{n(n+2)}$
@@ -1707,7 +1707,7 @@ $$
 \begin{aligned}
 & =\sqrt{3(3+2)} \\
 & =\sqrt{15} \\
-& \sim 4 \mathrm{BM}
+& \approx 3.87 \mathrm{BM}
 \end{aligned}
 $$
 :::
@@ -1722,9 +1722,9 @@ $\mathrm{Cs}\left[\mathrm{FeCl}_{4}\right]$
 
 :::solution
 $\mathrm{Cs}\left[\mathrm{FeCl}{ }_{4}\right]$
-IUPAC name: Caesium tetrachloroferrate (III)
+IUPAC name: Caesium tetrachloridoferrate(III)
 Oxidation state of $\mathrm{Fe}=+3$
-Electronic configuration of $d^{6}=e_{g}{ }^{2} t_{2 \mathrm{~g}}{ }^{3}$
+Electronic configuration of $d^{5}=e^{2} t_{2}{ }^{3}$
 Coordination number = 4
 Shape: tetrahedral
 Stereochemistry: optically inactive Magnetic
@@ -1735,7 +1735,7 @@ $$
 \begin{aligned}
 & =\sqrt{n(n+2)} \\
 & =\sqrt{5(5+2)} \\
-& =\sqrt{35} \sim 6 \mathrm{BM}
+& =\sqrt{35} \approx 5.92 \mathrm{BM}
 \end{aligned}
 $$
 :::
@@ -1750,13 +1750,13 @@ $\mathrm{K}_{4}\left[\mathrm{Mn}(\mathrm{CN})_{6}\right]$
 
 :::solution
 $\mathrm{K}_{4}\left[\mathrm{Mn}(\mathrm{CN})_{6}\right]$
-Potassium hexacyanomanganate(II)
+Potassium hexacyanidomanganate(II)
 Oxidation state of manganese $=+2$
-Electronic configuration: $d^{5+}: t_{2 g}{ }^{5}$
+Electronic configuration: $d^{5}: t_{2 g}{ }^{5}$
 Coordination number $=6$ Shape:
 octahedral.
 
-Streochemistry: optically inactive
+Stereochemistry: optically inactive
 
 :::formula{label="Key formula"}
 Magnetic moment, $\mu=\sqrt{n(n+2)}$
@@ -1782,6 +1782,24 @@ $$
 
 :::prompt
 Explain the violet colour of the complex $\left[\mathrm{Ti}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right]^{3+}$ on the basis of crystal field theory.
+:::
+
+:::solution{label="Solution"}
+:::note{type="caution" label="Not in official solutions manual"}
+This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+:::
+
+:::concept{label="Given"}
+In $\left[\mathrm{Ti}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right]^{3+}$, $\mathrm{Ti}^{3+}$ has a single $3d$ electron ($3d^{1}$ configuration). Under the octahedral crystal field of the six water ligands, the five degenerate $3d$ orbitals split into the lower-energy $t_{2g}$ set and the higher-energy $e_g$ set; in the ground state, this single electron occupies one of the $t_{2g}$ orbitals.
+:::
+
+:::concept{label="d-d transition"}
+When white light falls on the complex, $\left[\mathrm{Ti}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right]^{3+}$ absorbs light of the energy needed to promote this electron from the $t_{2g}$ level to the $e_g$ level (a $d$-$d$ transition); this absorbed energy corresponds to light in the yellow-green region of the visible spectrum (crystal-field splitting energy $\Delta_{o}$ for this ion, around 20,300 cm$^{-1}$).
+:::
+
+:::step{label="Conclusion"}
+Since the yellow-green component of white light is absorbed, the complementary colour, violet, is transmitted - which is the colour observed for aqueous solutions of $\left[\mathrm{Ti}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right]^{3+}$.
+:::
 :::
 
 :::
@@ -1872,7 +1890,7 @@ extraction/metallurgy of metals.
 :::solution
 Role of coordination compounds in extraction or metallurgy of metals:
 
-Extracting some metals from their ores involves forming complexes. For example, in aqueous solution, gold combines with cyanide ions to form $\left[\mathrm{Au}(\mathrm{CN})_{2}\right]$. Gold is later extracted from this solution by adding zinc metal.
+Extracting some metals from their ores involves forming complexes. For example, in aqueous solution, gold combines with cyanide ions to form $\left[\mathrm{Au}(\mathrm{CN})_{2}\right]^{-}$. Gold is later extracted from this solution by adding zinc metal.
 :::
 
 :::
@@ -1893,7 +1911,7 @@ How many ions are produced from the complex $\mathrm{Co}\left(\mathrm{NH}_{3}\ri
 :::solution{label="Solution"}
 The given complex can be written as $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right] \mathrm{Cl}_{2}$.
 
-Thus, $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]^{+}$ along with two $\mathrm{Cl}^{-}$ ions are produced.
+Thus, $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]^{2+}$ along with two $\mathrm{Cl}^{-}$ ions are produced.
 :::
 
 :::answer
@@ -1930,7 +1948,7 @@ $$
 \begin{aligned}
 & =\sqrt{3(3+2)} \\
 & =\sqrt{15} \\
-& \sim 4 \mathrm{BM}
+& \approx 3.87 \mathrm{BM}
 \end{aligned}
 $$
 :::
@@ -1955,7 +1973,7 @@ $$
 $$
 \begin{aligned}
 & =\sqrt{24} \\
-& \sim 5 \mathrm{BM}
+& \approx 4.90 \mathrm{BM}
 \end{aligned}
 $$
 :::
@@ -2097,10 +2115,10 @@ iron(III) hexacyanidoferrate(II)
 :::
 
 :::solution{label="Solution"}
-(i) $\quad\left[\mathrm{CO}\left(\mathrm{H}_{2} \mathrm{O}\right)_{2}\left(\mathrm{NH}_{3}\right)_{4}\right] \mathrm{Cl}_{3}$
+(i) $\quad\left[\mathrm{Co}\left(\mathrm{H}_{2} \mathrm{O}\right)_{2}\left(\mathrm{NH}_{3}\right)_{4}\right] \mathrm{Cl}_{3}$
 (ii) $\mathrm{K}_{2}\left[\mathrm{Ni}(\mathrm{CN})_{4}\right]$
 (iii) $\left[\mathrm{Cr}(\mathrm{en})_{3}\right] \mathrm{Cl}_{3}$
-(vi) $\left[\mathrm{Pt}(\mathrm{NH})_{3} \mathrm{BrCl}\left(\mathrm{NO}_{2}\right)\right]^{-}$
+(iv) $\left[\mathrm{Pt}\left(\mathrm{NH}_{3}\right) \mathrm{BrCl}\left(\mathrm{NO}_{2}\right)\right]^{-}$
 (v) $\quad\left[\mathrm{PtCl}_{2}(\mathrm{en})_{2}\right]\left(\mathrm{NO}_{3}\right)_{2}$
 (vi) $\quad \mathrm{Fe}_{4}\left[\mathrm{Fe}(\mathrm{CN})_{6}\right]_{3}$
 :::
@@ -2159,10 +2177,10 @@ $\left[\mathrm{Pt}\left(\mathrm{NH}_{3}\right)_{2} \mathrm{Cl}\left(\mathrm{NH}_
 :::solution{label="Solution"}
 (i) Hexaamminecobalt(III) chloride
 (ii) Pentaamminechloridocobalt(III) chloride
-(iii) Potassium hexacyanoferrate(III)
+(iii) Potassium hexacyanidoferrate(III)
 (iv) Potassium trioxalatoferrate(III)
 (v) Potassium tetrachloridopalladate(II)
-(vi) Diamminechlorido(methylamine)platinum(II) chloride
+(vi) Diamminechlorido(methanamine)platinum(II) chloride
 :::
 
 :::
@@ -2221,14 +2239,12 @@ The trans-isomer is optically inactive, but the cis-isomer is optically active.
 
 Two optical isomers are possible for this structure.
 
-(iii) $\left[\mathrm{CO}\left(\mathrm{NH}_{3}\right)_{5}\left(\mathrm{NO}_{2}\right)\right]\left(\mathrm{NO}_{3}\right)_{2}$
-A pair of optical isomers:
-
-It can also show linkage isomerism.
+(iii) $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5}\left(\mathrm{NO}_{2}\right)\right]\left(\mathrm{NO}_{3}\right)_{2}$
+This is an MA5B octahedron (five NH3 + one NO2), so no geometrical or optical isomers are possible. It shows linkage isomerism.
 
 :::formula{label="Linkage isomerism"}
 $$
-\left[\mathrm{CO}\left(\mathrm{NH}_{3}\right)_{5}\left(\mathrm{NO}_{2}\right)\right]\left(\mathrm{NO}_{3}\right)_{2} \text { and }\left[\mathrm{CO}\left(\mathrm{NH}_{3}\right)_{5}(\mathrm{ONO})\right]\left(\mathrm{NO}_{3}\right)_{2}
+\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5}\left(\mathrm{NO}_{2}\right)\right]\left(\mathrm{NO}_{3}\right)_{2} \text { and }\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5}(\mathrm{ONO})\right]\left(\mathrm{NO}_{3}\right)_{2}
 $$
 :::
 
@@ -2236,7 +2252,7 @@ It can also show ionization isomerism.
 
 :::formula{label="Ionization isomerism"}
 $$
-\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5}\left(\mathrm{NO}_{2}\right)\right]\left(\mathrm{NO}_{3}\right)_{2} \quad\left[\mathrm{CO}\left(\mathrm{NH}_{3}\right)_{5}\left(\mathrm{NO}_{3}\right)\right]\left(\mathrm{NO}_{3}\right)\left(\mathrm{NO}_{2}\right)
+\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5}\left(\mathrm{NO}_{2}\right)\right]\left(\mathrm{NO}_{3}\right)_{2} \quad\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5}\left(\mathrm{NO}_{3}\right)\right]\left(\mathrm{NO}_{3}\right)\left(\mathrm{NO}_{2}\right)
 $$
 :::
 
@@ -2263,21 +2279,21 @@ When ionization isomers are dissolved in water, they ionize to give different io
 
 :::step{n="1"}
 $$
-\left[\mathrm{CO}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{Cl}\right] \mathrm{SO}_{4}+\mathrm{Ba}^{2+} \longrightarrow \mathrm{BaSO}_{4} \downarrow
+\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{Cl}\right] \mathrm{SO}_{4}+\mathrm{Ba}^{2+} \longrightarrow \mathrm{BaSO}_{4} \downarrow
 $$
 
 White precipitate
 
 $$
-\left[\mathrm{CO}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{Cl}\right] \mathrm{SO}_{4}+\mathrm{Ag}^{+} \longrightarrow \text { No reaction }
+\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{Cl}\right] \mathrm{SO}_{4}+\mathrm{Ag}^{+} \longrightarrow \text { No reaction }
 $$
 :::
 
 :::step{n="2"}
 $$
 \begin{aligned}
-& {\left[\mathrm{CO}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{SO}_{4}\right] \mathrm{Cl}+\mathrm{Ba}^{2+} \longrightarrow \text { No reaction }} \\
-& {\left[\mathrm{CO}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{SO}_{4}\right] \mathrm{Cl}+\mathrm{Ag}^{+} \longrightarrow \quad \mathrm{AgCl} \downarrow}
+& {\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{SO}_{4}\right] \mathrm{Cl}+\mathrm{Ba}^{2+} \longrightarrow \text { No reaction }} \\
+& {\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{5} \mathrm{SO}_{4}\right] \mathrm{Cl}+\mathrm{Ag}^{+} \longrightarrow \quad \mathrm{AgCl} \downarrow}
 \end{aligned}
 $$
 
@@ -2347,7 +2363,7 @@ Since there are 2 unpaired electrons here, it is paramagnetic.
 #### Additional Question 5.6
 
 :::prompt
-$5.6\left[\mathrm{NiCl}_{4}\right]^{2-}$ is paramagnetic while $\left[\mathrm{Ni}(\mathrm{CO})_{4}\right]$ is diamagnetic though both are tetrahedral. Why?
+$\left[\mathrm{NiCl}_{4}\right]^{2-}$ is paramagnetic while $\left[\mathrm{Ni}(\mathrm{CO})_{4}\right]$ is diamagnetic though both are tetrahedral. Why?
 :::
 
 :::figure{src="images/fig_5_135.jpg" id="fig_5_135"}
@@ -2378,7 +2394,7 @@ But CO is a strong field ligand. So it pairs up the unpaired $3 d$ electrons. It
 #### Additional Question 5.7
 
 :::prompt
-$5.7\left[\mathrm{Fe}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right]^{3+}$ is strongly paramagnetic whereas $\left[\mathrm{Fe}(\mathrm{CN})_{6}\right]^{3-}$ is weakly paramagnetic. Explain.
+$\left[\mathrm{Fe}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right]^{3+}$ is strongly paramagnetic whereas $\left[\mathrm{Fe}(\mathrm{CN})_{6}\right]^{3-}$ is weakly paramagnetic. Explain.
 :::
 
 :::figure{src="images/fig_5_137.jpg" id="fig_5_137"}
@@ -2493,23 +2509,9 @@ $4 d$
 
 
 
-$\mathrm{NH}_{3}$ being a strong field ligand causes the
+For $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]^{3+}$: $\mathrm{NH}_{3}$ is a strong field ligand, so it pairs up the six $3d$ electrons of $\mathrm{Co}^{3+}$ ($d^6$), giving $t_{2g}{}^{6}e_g{}^{0}$. This leaves two $3d$ orbitals vacant, so $\mathrm{Co}^{3+}$ undergoes $d^{2}sp^{3}$ hybridisation using the two now-empty inner $3d$ orbitals. Hence $\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]^{3+}$ is an inner orbital complex (diamagnetic).
 
-
-
-
-
-pairing. Therefore, Ni can undergo $d^{2} s p^{3}$
-
-If $\mathrm{NH}_{3}$ causes the pairing, then only one $3 d$ hybridization. orbital is empty. Thus, it cannot undergo
-
-
-$d^{2} s p^{3}$ hybridization. Therefore, it undergoes $s p^{3} d^{2}$ hybridization.
-Hence, it is an inner orbital complex.
-
-
-
-Hence, it forms an outer orbital complex.
+For $\left[\mathrm{Ni}\left(\mathrm{NH}_{3}\right)_{6}\right]^{2+}$: $\mathrm{Ni}^{2+}$ has a $d^8$ configuration, so even with a strong field ligand the eight electrons must occupy all five $3d$ orbitals ($t_{2g}{}^{6}e_g{}^{2}$, 2 unpaired) - no $3d$ orbital is left vacant. $\mathrm{Ni}^{2+}$ therefore cannot undergo $d^{2}sp^{3}$ hybridisation and instead uses the outer $4d$ orbitals, undergoing $sp^{3}d^{2}$ hybridisation. Hence $\left[\mathrm{Ni}\left(\mathrm{NH}_{3}\right)_{6}\right]^{2+}$ forms an outer orbital complex (paramagnetic, 2 unpaired electrons).
 :::
 
 :::
@@ -2530,7 +2532,7 @@ $$
 $$
 
 :::concept{label="Given"}
-In this complex, Pt is in the +2 state. It has a square planar structure. So it undergoes $\mathrm{dsp}^{2}$ hybridization. The electronic configuration of $\operatorname{Pd}(+2)$ is $5 d^{8}$.
+In this complex, Pt is in the +2 state. It has a square planar structure. So it undergoes $\mathrm{dsp}^{2}$ hybridization. The electronic configuration of $\operatorname{Pt}(+2)$ is $5 d^{8}$.
 :::
 
 

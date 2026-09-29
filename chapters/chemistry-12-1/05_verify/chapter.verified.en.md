@@ -114,7 +114,7 @@ $$
 x(\text { Nitrogen })=\frac{n \mathrm{~mol}}{n \mathrm{~mol}+55.5 \mathrm{~mol}}=\frac{n}{55.5}=1.29 \times 10^{-5}
 $$
 
-( $n$ in denominator is neglected as it is \ll 55.5)
+( $n$ in denominator is neglected as it is $\ll$ 55.5)
 Thus $n=1.29 \times 10^{-5} \times 55.5 \mathrm{~mol}=7.16 \times 10^{-4} \mathrm{~mol}$
 
 $$
@@ -128,7 +128,7 @@ $$
 
 :::
 
-:::example{number="1.5" kind="example" id="ex_1.5" topic="Vapour pressure of an ideal binary solution" corrections_applied="1"}
+:::example{number="1.5" kind="example" id="ex_1.5" topic="Vapour pressure of an ideal binary solution" corrections_applied="2"}
 #### Example 1.5
 
 :::prompt
@@ -164,7 +164,7 @@ y_{\mathrm{CHCl}_{3}} & =62.4 \mathrm{~mm} \mathrm{Hg} / 347.9 \mathrm{~mm} \mat
 \end{aligned}
 $$
 
-Note: Since, $\mathrm{CH}_{2} \mathrm{Cl}_{2}$ is a more volatile component than $\mathrm{CHCl}_{3}$, $\left[p_{\mathrm{CH}_{2} \mathrm{Cl}_{2}}^{O}=\right.$ 415 mm Hg and $p_{\mathrm{CHCl}_{3}}^{o}=200 \mathrm{~mm} \mathrm{Hg}$ ] and the vapour phase is also richer in $\mathrm{CH}_{2} \mathrm{Cl}_{2}\left[y_{\mathrm{CH}_{2} \mathrm{Cl}_{2}}=0.82\right.$ and $\left.y_{\mathrm{CHCl}_{3}}=0.18\right]$, it may thus be concluded that at equilibrium, vapour phase will be always rich in the component which is more volatile.
+Note: Since, $\mathrm{CH}_{2} \mathrm{Cl}_{2}$ is a more volatile component than $\mathrm{CHCl}_{3}$, $p_{\mathrm{CH}_{2} \mathrm{Cl}_{2}}^{O}=415 \mathrm{~mm} \mathrm{Hg}$ and $p_{\mathrm{CHCl}_{3}}^{o}=200 \mathrm{~mm} \mathrm{Hg}$ and the vapour phase is also richer in $\mathrm{CH}_{2} \mathrm{Cl}_{2}\left[y_{\mathrm{CH}_{2} \mathrm{Cl}_{2}}=0.82\right.$ and $\left.y_{\mathrm{CHCl}_{3}}=0.18\right]$, it may thus be concluded that at equilibrium, vapour phase will be always rich in the component which is more volatile.
 :::
 
 :::answer
@@ -243,7 +243,7 @@ Therefore, molar mass of the solute, $M_{2}=58 \mathrm{~g} \mathrm{~mol}^{-1}$
 
 :::
 
-:::example{number="1.9" kind="example" id="ex_1.9" topic="Freezing point depression of ethylene glycol solution"}
+:::example{number="1.9" kind="example" id="ex_1.9" topic="Freezing point depression of ethylene glycol solution" corrections_applied="1"}
 #### Example 1.9
 
 :::prompt
@@ -260,7 +260,7 @@ Hence molality of ethylene glycol $=\frac{0.73 \mathrm{~mol}}{0.60 \mathrm{~kg}}
 Therefore freezing point depression,
 
 $$
-\ddot{\mathrm{A}} T_{\mathrm{f}}=1.86 \mathrm{~K} \mathrm{~kg} \mathrm{~mol}^{-1} \times 1.2 \mathrm{~mol} \mathrm{~kg}^{-1}=2.2 \mathrm{~K}
+\Delta T_{\mathrm{f}}=1.86 \mathrm{~K} \mathrm{~kg} \mathrm{~mol}^{-1} \times 1.2 \mathrm{~mol} \mathrm{~kg}^{-1}=2.2 \mathrm{~K}
 $$
 
 Freezing point of the aqueous solution $=273.15 \mathrm{~K}-2.2 \mathrm{~K}=270.95 \mathrm{~K}$
@@ -464,6 +464,22 @@ $$
 Define the term solution. How many types of solutions are formed? Write briefly about each type with an example.
 :::
 
+:::solution{label="Solution"}
+**Not in official solutions manual:** This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+
+A solution is a homogeneous mixture of two or more chemically non-reacting substances, in which one substance (the solute) is dissolved in another (the solvent); its composition and properties are uniform throughout.
+
+Solutions are classified into three broad types based on the physical state of the solvent, and each of these has three further types based on the physical state of the solute:
+
+- **Gaseous solutions** (solvent is a gas) -- e.g. a mixture of oxygen and nitrogen gases (gas in gas); chloroform vapour mixed with nitrogen gas (liquid in gas); camphor vapour in nitrogen gas (solid in gas).
+- **Liquid solutions** (solvent is a liquid) -- e.g. oxygen dissolved in water (gas in liquid); ethanol dissolved in water (liquid in liquid); glucose dissolved in water (solid in liquid).
+- **Solid solutions** (solvent is a solid) -- e.g. hydrogen dissolved in palladium (gas in solid); mercury in gold, an amalgam (liquid in solid); copper dissolved in gold, an alloy (solid in solid).
+:::
+
+:::answer
+**Answer:** A solution is a homogeneous mixture of two or more substances; solutions are of three broad types -- gaseous, liquid and solid -- each further divided by the physical state of the solute, e.g. oxygen in water (gas in liquid), ethanol in water (liquid in liquid), glucose in water (solid in liquid).
+:::
+
 :::
 
 :::question{number="1.2" kind="exercise" id="q_1.2" topic="Solid solution with a gaseous solute"}
@@ -471,6 +487,16 @@ Define the term solution. How many types of solutions are formed? Write briefly 
 
 :::prompt
 Give an example of a solid solution in which the solute is a gas.
+:::
+
+:::solution{label="Solution"}
+**Not in official solutions manual:** This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+
+A solid solution in which the solute is a gas is formed, for example, when hydrogen gas is absorbed (dissolved) in palladium metal -- written as $\mathrm{H_2}$ in $\mathrm{Pd}$.
+:::
+
+:::answer
+**Answer:** Hydrogen gas dissolved in palladium metal ($\mathrm{H_2}$ in $\mathrm{Pd}$) is a solid solution with a gaseous solute.
 :::
 
 :::
@@ -487,11 +513,37 @@ Define the following terms:
 Mole fraction
 :::
 
+:::solution
+**Not in official solutions manual:** This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+
+Mole fraction of a component in a solution is the ratio of the number of moles of that component to the total number of moles of all components present. For a two-component solution with $n_1$ mol of solvent and $n_2$ mol of solute,
+$$
+x_1 = \frac{n_1}{n_1+n_2}, \qquad x_2 = \frac{n_2}{n_1+n_2}
+$$
+Mole fraction does not depend on temperature.
+:::
+
+:::answer
+**Answer:** Mole fraction $x = \dfrac{\text{moles of the component}}{\text{total moles of all components}}$.
+:::
+
 :::
 
 :::part{label="ii"}
 :::prompt
 Molality
+:::
+
+:::solution
+Molality ($m$) is the number of moles of solute dissolved per kilogram of solvent:
+$$
+\text{Molality} = \frac{\text{moles of solute}}{\text{mass of solvent in kg}}
+$$
+Since it is defined using the mass (not volume) of solvent, molality does not change with temperature.
+:::
+
+:::answer
+**Answer:** Molality $= \dfrac{\text{moles of solute}}{\text{mass of solvent (kg)}}$, unit $\mathrm{mol\,kg^{-1}}$.
 :::
 
 :::
@@ -501,11 +553,34 @@ Molality
 Molarity
 :::
 
+:::solution
+Molarity ($M$) is the number of moles of solute dissolved per litre of solution:
+$$
+\text{Molarity} = \frac{\text{moles of solute}}{\text{volume of solution in litres}}
+$$
+Because the volume of a solution changes slightly with temperature, molarity is temperature-dependent.
+:::
+
+:::answer
+**Answer:** Molarity $= \dfrac{\text{moles of solute}}{\text{volume of solution (L)}}$, unit $\mathrm{mol\,L^{-1}}$.
+:::
+
 :::
 
 :::part{label="iv"}
 :::prompt
 Mass percentage.
+:::
+
+:::solution
+Mass percentage of a component is the mass of that component per 100 g of solution:
+$$
+\text{Mass \%} = \frac{\text{mass of the component}}{\text{total mass of the solution}} \times 100\%
+$$
+:::
+
+:::answer
+**Answer:** Mass $\% = \dfrac{\text{mass of the component}}{\text{total mass of solution}} \times 100$.
 :::
 
 :::
@@ -519,6 +594,31 @@ Mass percentage.
 Concentrated nitric acid used in laboratory work is 68\% nitric acid by mass in aqueous solution. What should be the molarity of such a sample of the acid if the density of the solution is $1.504 \mathrm{~g} \mathrm{~mL}^{-1}$ ?
 :::
 
+:::solution{label="Solution"}
+**Not in official solutions manual:** This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+
+Consider 1 litre (1000 mL) of the acid solution. Its mass is
+$$
+1000~\mathrm{mL} \times 1.504~\mathrm{g~mL^{-1}} = 1504~\mathrm{g}
+$$
+Mass of $\mathrm{HNO_3}$ present (68% by mass):
+$$
+0.68 \times 1504~\mathrm{g} = 1022.72~\mathrm{g}
+$$
+Molar mass of $\mathrm{HNO_3} = 1+14+3\times16 = 63~\mathrm{g~mol^{-1}}$
+$$
+\text{Moles of } \mathrm{HNO_3} = \frac{1022.72}{63} = 16.23~\mathrm{mol}
+$$
+Since this is the amount of acid in 1 litre of solution,
+$$
+\text{Molarity} = \frac{16.23~\mathrm{mol}}{1~\mathrm{L}} = 16.23~\mathrm{M}
+$$
+:::
+
+:::answer
+**Answer:** 16.23 M
+:::
+
 :::
 
 :::question{number="1.5" kind="exercise" id="q_1.5" topic="Molality, mole fraction and molarity of glucose solution"}
@@ -528,6 +628,32 @@ Concentrated nitric acid used in laboratory work is 68\% nitric acid by mass in 
 A solution of glucose in water is labelled as 10\% w/w, what would be the molality and mole fraction of each component in the solution? If the density of solution is $1.2 \mathrm{~g} \mathrm{~mL}^{-1}$, then what shall be the molarity of the solution?
 :::
 
+:::solution{label="Solution"}
+**Not in official solutions manual:** This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+
+A 10% w/w glucose solution means 10 g of glucose ($\mathrm{C_6H_{12}O_6}$, $M=180~\mathrm{g~mol^{-1}}$) is present in 100 g of solution, i.e. in $(100-10)=90~\mathrm{g}$ of water.
+
+Moles of glucose $= \dfrac{10}{180} = 0.0556~\mathrm{mol}$; mass of water $= 0.090~\mathrm{kg}$.
+$$
+\text{Molality} = \frac{0.0556~\mathrm{mol}}{0.090~\mathrm{kg}} = 0.617~\mathrm{mol~kg^{-1}}
+$$
+Moles of water $= \dfrac{90}{18} = 5~\mathrm{mol}$.
+$$
+x_{\text{glucose}} = \frac{0.0556}{0.0556+5} = 0.0111, \qquad x_{\text{water}} = 1-0.0111 = 0.9889
+$$
+Volume of 100 g of solution (density $1.2~\mathrm{g~mL^{-1}}$):
+$$
+\frac{100~\mathrm{g}}{1.2~\mathrm{g~mL^{-1}}} = 83.33~\mathrm{mL} = 0.08333~\mathrm{L}
+$$
+$$
+\text{Molarity} = \frac{0.0556~\mathrm{mol}}{0.08333~\mathrm{L}} = 0.667~\mathrm{M}
+$$
+:::
+
+:::answer
+**Answer:** Molality = 0.617 mol kg⁻¹; mole fraction of glucose = 0.0111 (water = 0.9889); molarity = 0.667 M
+:::
+
 :::
 
 :::question{number="1.6" kind="exercise" id="q_1.6" topic="Volume of HCl to react with a carbonate/bicarbonate mixture"}
@@ -535,6 +661,31 @@ A solution of glucose in water is labelled as 10\% w/w, what would be the molali
 
 :::prompt
 How many mL of 0.1 M HCl are required to react completely with 1 g mixture of $\mathrm{Na}_{2} \mathrm{CO}_{3}$ and $\mathrm{NaHCO}_{3}$ containing equimolar amounts of both?
+:::
+
+:::solution{label="Solution"}
+**Not in official solutions manual:** This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+
+Let $n$ mol each of $\mathrm{Na_2CO_3}$ ($M=106~\mathrm{g~mol^{-1}}$) and $\mathrm{NaHCO_3}$ ($M=84~\mathrm{g~mol^{-1}}$) be present (equimolar mixture, total mass 1 g):
+$$
+106n + 84n = 1 \Rightarrow 190n = 1 \Rightarrow n = 5.263\times10^{-3}~\mathrm{mol}
+$$
+Both salts react with HCl:
+$$
+\mathrm{Na_2CO_3 + 2HCl \rightarrow 2NaCl + H_2O + CO_2} \qquad \mathrm{NaHCO_3 + HCl \rightarrow NaCl + H_2O + CO_2}
+$$
+So $\mathrm{Na_2CO_3}$ needs $2n$ mol HCl and $\mathrm{NaHCO_3}$ needs $n$ mol HCl -- $3n$ mol in total:
+$$
+3 \times 5.263\times10^{-3} = 1.579\times10^{-2}~\mathrm{mol~HCl}
+$$
+Volume of 0.1 M HCl needed:
+$$
+\frac{1.579\times10^{-2}~\mathrm{mol}}{0.1~\mathrm{mol~L^{-1}}} = 0.1579~\mathrm{L} = 157.9~\mathrm{mL}
+$$
+:::
+
+:::answer
+**Answer:** 157.9 mL
 :::
 
 :::
@@ -579,6 +730,30 @@ $$
 An antifreeze solution is prepared from 222.6 g of ethylene glycol $\left(\mathrm{C}_{2} \mathrm{H}_{6} \mathrm{O}_{2}\right)$ and 200 g of water. Calculate the molality of the solution. If the density of the solution is $1.072 \mathrm{~g} \mathrm{~mL}^{-1}$, then what shall be the molarity of the solution?
 :::
 
+:::solution{label="Solution"}
+**Not in official solutions manual:** This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+
+Molar mass of ethylene glycol ($\mathrm{C_2H_6O_2}$) $=62~\mathrm{g~mol^{-1}}$.
+$$
+\text{Moles of } \mathrm{C_2H_6O_2} = \frac{222.6}{62} = 3.590~\mathrm{mol}
+$$
+Mass of water $=200~\mathrm{g}=0.200~\mathrm{kg}$.
+$$
+\text{Molality} = \frac{3.590~\mathrm{mol}}{0.200~\mathrm{kg}} = 17.95~\mathrm{mol~kg^{-1}}
+$$
+Total mass of solution $=222.6+200=422.6~\mathrm{g}$; with density $1.072~\mathrm{g~mL^{-1}}$:
+$$
+\text{Volume} = \frac{422.6~\mathrm{g}}{1.072~\mathrm{g~mL^{-1}}} = 394.2~\mathrm{mL} = 0.3942~\mathrm{L}
+$$
+$$
+\text{Molarity} = \frac{3.590~\mathrm{mol}}{0.3942~\mathrm{L}} = 9.11~\mathrm{M}
+$$
+:::
+
+:::answer
+**Answer:** Molality = 17.95 mol kg⁻¹; molarity = 9.11 M
+:::
+
 :::
 
 :::question{number="1.9" kind="exercise" id="q_1.9" topic="Chloroform contamination: percent by mass and molality"}
@@ -593,11 +768,39 @@ A sample of drinking water was found to be severely contaminated with chloroform
 express this in percent by mass
 :::
 
+:::solution
+**Not in official solutions manual:** This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+
+A contamination level of 15 ppm by mass means 15 g of $\mathrm{CHCl_3}$ per $10^6$ g of water, i.e.
+$$
+\frac{15}{10^6}\times100\% = 0.0015\%
+$$
+:::
+
+:::answer
+**Answer:** 0.0015% by mass
+:::
+
 :::
 
 :::part{label="ii"}
 :::prompt
 determine the molality of chloroform in the water sample.
+:::
+
+:::solution
+Molar mass of $\mathrm{CHCl_3} = 12+1+3\times35.5 = 119.5~\mathrm{g~mol^{-1}}$. In $10^6$ g of (essentially) water, the 15 g of chloroform is
+$$
+\frac{15}{119.5} = 0.1255~\mathrm{mol}
+$$
+and the mass of water is effectively $10^6~\mathrm{g} = 1000~\mathrm{kg}$ (the dissolved chloroform's own mass is negligible next to it), so
+$$
+\text{Molality} = \frac{0.1255~\mathrm{mol}}{1000~\mathrm{kg}} = 1.25\times10^{-4}~\mathrm{mol~kg^{-1}}
+$$
+:::
+
+:::answer
+**Answer:** 1.25 × 10⁻⁴ mol kg⁻¹
 :::
 
 :::
@@ -611,6 +814,16 @@ determine the molality of chloroform in the water sample.
 What role does the molecular interaction play in a solution of alcohol and water?
 :::
 
+:::solution{label="Solution"}
+**Not in official solutions manual:** This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+
+In pure ethanol and in pure water, each liquid's own molecules are held together by strong hydrogen bonding. When they are mixed, ethanol's $-\mathrm{OH}$ group can still hydrogen-bond with water, but these alcohol-water interactions are somewhat weaker than the original alcohol-alcohol and water-water hydrogen bonds. This makes it easier for molecules to escape into the vapour phase, so the solution's vapour pressure is higher than Raoult's law predicts, and an ethanol-water solution shows positive deviation from ideal behaviour.
+:::
+
+:::answer
+**Answer:** The alcohol-water hydrogen bonds are weaker than the pure-liquid hydrogen bonds they replace, so the solution shows positive deviation from Raoult's law.
+:::
+
 :::
 
 :::question{number="1.11" kind="exercise" id="q_1.11" topic="Gas solubility decreasing with temperature"}
@@ -620,6 +833,16 @@ What role does the molecular interaction play in a solution of alcohol and water
 Why do gases always tend to be less soluble in liquids as the temperature is raised?
 :::
 
+:::solution{label="Solution"}
+**Not in official solutions manual:** This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+
+Dissolution of a gas in a liquid is generally an exothermic process ($\Delta H < 0$) -- it is accompanied by the release of heat, similar in spirit to condensation. By Le Chatelier's principle, raising the temperature shifts this dynamic equilibrium in the direction that absorbs the added heat, i.e. towards the gas coming back out of solution. The dissolved gas molecules also gain kinetic energy at higher temperature, making it easier for them to escape the liquid. Both effects make gases less soluble in liquids as the temperature is raised.
+:::
+
+:::answer
+**Answer:** Gas dissolution in a liquid is exothermic, so by Le Chatelier's principle its solubility falls as temperature rises.
+:::
+
 :::
 
 :::question{number="1.12" kind="exercise" id="q_1.12" topic="Henry's law statement and applications"}
@@ -627,6 +850,25 @@ Why do gases always tend to be less soluble in liquids as the temperature is rai
 
 :::prompt
 State Henry's law and mention some important applications.
+:::
+
+:::solution{label="Solution"}
+**Not in official solutions manual:** This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+
+Henry's law states that, at a constant temperature, the partial pressure of a gas in the vapour phase is directly proportional to the mole fraction of the gas dissolved in the solution:
+$$
+p = K_H\, x
+$$
+where $K_H$ is the Henry's law constant for that gas-solvent pair.
+
+Some important applications:
+- Carbonated drinks are bottled under high $\mathrm{CO_2}$ pressure to keep more gas dissolved; the fizz appears when the bottle is opened and the pressure drops.
+- Scuba divers' breathing tanks are diluted with helium (rather than nitrogen), because nitrogen's higher solubility under the increased pressure at depth can cause the 'bends' when it comes out of solution too quickly on ascent.
+- At high altitude, the lower partial pressure of oxygen means less oxygen dissolves in the blood, which can cause altitude sickness (anoxia) in climbers and people who travel to high altitudes.
+:::
+
+:::answer
+**Answer:** $p = K_H x$; applications include bottling carbonated drinks, scuba divers' gas tanks, and altitude sickness from low oxygen partial pressure.
 :::
 
 :::
@@ -690,7 +932,7 @@ Hence, partial pressure of the gas shall be 0.764 bar.
 
 :::
 
-:::question{number="1.14" kind="exercise" id="q_1.14" topic="Positive/negative deviation from Raoult's law and mixing enthalpy"}
+:::question{number="1.14" kind="exercise" id="q_1.14" topic="Positive/negative deviation from Raoult's law and mixing enthalpy" corrections_applied="3"}
 #### Question 1.14
 
 :::prompt
@@ -711,19 +953,19 @@ According to Raoult's law, the partial vapour pressure of each volatile componen
 In the case of an ideal solution, the enthalpy of the mixing of the pure components for forming the solution is zero.
 
 $$
-\Delta_{\mathrm{sol}} H=0
+\Delta_{\text{mix}} H=0
 $$
 
 In the case of solutions showing positive deviations, absorption of heat takes place.
 
 $$
-\therefore \Delta_{\text {sol }} H=\text { Positive }
+\therefore \Delta_{\text {mix }} H=\text { Positive }
 $$
 
 In the case of solutions showing negative deviations, evolution of heat takes place.
 
 $$
-\therefore \Delta_{\text {sol }} H=\text { Negative }
+\therefore \Delta_{\text {mix }} H=\text { Negative }
 $$
 :::
 
@@ -852,7 +1094,7 @@ $$
 
 :::
 
-:::question{number="1.17" kind="exercise" id="q_1.17" topic="Vapour pressure of a 1 molal non-volatile solute solution"}
+:::question{number="1.17" kind="exercise" id="q_1.17" topic="Vapour pressure of a 1 molal non-volatile solute solution" corrections_applied="1"}
 #### Question 1.17
 
 :::prompt
@@ -860,7 +1102,7 @@ The vapour pressure of water is 12.3 kPa at 300 K . Calculate vapour pressure of
 :::
 
 :::solution{label="Solution"}
-1 molal solution means 1 mol of the solute is present in 100 g of the solvent (water).
+1 molal solution means 1 mol of the solute is present in 1000 g of the solvent (water).
 Molar mass of water $=18 \mathrm{~g} \mathrm{~mol}^{-1}$
 
 $$
@@ -1199,7 +1441,7 @@ $$
 
 :::
 
-:::question{number="1.22" kind="exercise" id="q_1.22" topic="Concentration of glucose solution from osmotic pressure"}
+:::question{number="1.22" kind="exercise" id="q_1.22" topic="Concentration of glucose solution from osmotic pressure" corrections_applied="2"}
 #### Question 1.22
 
 :::prompt
@@ -1211,13 +1453,13 @@ Here,
 
 $$
 \begin{aligned}
-& T=300 \mathrm{~K} \sqcap \\
-& =1.52 \mathrm{bar} \\
+& T=300 \mathrm{~K} \\
+& \Pi=1.52 \mathrm{bar} \\
 & \mathrm{R}=0.083 \mathrm{bar} \mathrm{~L} \mathrm{~K}^{-1} \mathrm{~mol}^{-1}
 \end{aligned}
 $$
 
-Applying the relation, $п=$
+Applying the relation, $\Pi=$
 CRT
 
 $$
@@ -1235,7 +1477,7 @@ $$
 
 :::
 
-:::question{number="1.23" kind="exercise" id="q_1.23" topic="Dominant intermolecular interaction in given pairs"}
+:::question{number="1.23" kind="exercise" id="q_1.23" topic="Dominant intermolecular interaction in given pairs" corrections_applied="3"}
 #### Question 1.23
 
 :::prompt
@@ -1248,7 +1490,7 @@ n-hexane and n-octane
 :::
 
 :::solution
-Van der Wall's forces of attraction.
+Van der Waals' forces of attraction.
 :::
 
 :::
@@ -1259,7 +1501,7 @@ $\mathrm{I}_{2}$ and $\mathrm{CCl}_{4}$
 :::
 
 :::solution
-Van der Wall's forces of attraction.
+Van der Waals' forces of attraction.
 :::
 
 :::
@@ -1270,7 +1512,7 @@ $\mathrm{NaClO}_{4}$ and water
 :::
 
 :::solution
-Ion-diople interaction.
+Ion-dipole interaction.
 :::
 
 :::
@@ -1320,7 +1562,7 @@ $\mathrm{KCl}<\mathrm{CH}_{3} \mathrm{OH}<\mathrm{CH}_{3} \mathrm{CN}<$ Cyclohex
 
 :::
 
-:::question{number="1.25" kind="exercise" id="q_1.25" topic="Solubility classification of given compounds in water"}
+:::question{number="1.25" kind="exercise" id="q_1.25" topic="Solubility classification of given compounds in water" corrections_applied="1"}
 #### Question 1.25
 
 :::prompt
@@ -1366,7 +1608,7 @@ ethylene glycol
 :::
 
 :::solution
-Ethylene glycol [structural formula shown inline in source as an embedded SVG image of HO-CH2-CH2-OH; omitted here, see note in stage report] has polar -OH group and can form H-bond. Thus, it is highly soluble in water.
+Ethylene glycol $\mathrm{HO-CH_2-CH_2-OH}$ has polar -OH group and can form H-bond. Thus, it is highly soluble in water.
 :::
 
 :::
@@ -1546,7 +1788,7 @@ Molar mass of benzoic acid $\left(\mathrm{C}_{6} \mathrm{H}_{5} \mathrm{COOH}\ri
 
 :::
 
-:::question{number="1.31" kind="exercise" id="q_1.31" topic="Trend in freezing point depression across acetic/trichloroacetic/trifluoroacetic acid"}
+:::question{number="1.31" kind="exercise" id="q_1.31" topic="Trend in freezing point depression across acetic/trichloroacetic/trifluoroacetic acid" corrections_applied="1"}
 #### Question 1.31
 
 :::prompt
@@ -1558,7 +1800,7 @@ Acetic acid
 
 Trichloroacetic acid Trifhoroacetic acid
 
-[Source shows structural-formula images for acetic acid, trichloroacetic acid and trifluoroacetic acid inline here, before the explanation; omitted, see note in stage report]
+$\mathrm{CH_3COOH}$ (acetic acid), $\mathrm{CCl_3COOH}$ (trichloroacetic acid), $\mathrm{CF_3COOH}$ (trifluoroacetic acid)
 
 Among $\mathrm{H}, \mathrm{Cl}$, and $\mathrm{F}, \mathrm{H}$ is least electronegative while F is most electronegative. Then, F can withdraw electrons towards itself more than CI and H. Thus, trifluoroacetic acid can easily lose $\mathrm{H}^{+}$ions i.e., trifluoroacetic acid ionizes to the largest extent. Now, the more ions produced, the greater is the depression of the freezing point. Hence, the depression in the freezing point increases in the order:
 
@@ -1871,7 +2113,7 @@ $$
 
 :::
 
-:::question{number="1.36" kind="exercise" id="q_1.36" topic="Vapour pressures of pure liquids A and B from a mixture"}
+:::question{number="1.36" kind="exercise" id="q_1.36" topic="Vapour pressures of pure liquids A and B from a mixture" corrections_applied="1"}
 #### Question 1.36
 
 :::prompt
@@ -1933,12 +2175,12 @@ $$
 :::
 
 :::answer
-**Answer:** Hence, the vapour pressure of pure liquid A is 280.7 torr.
+**Answer:** Hence, the vapour pressure of pure liquid A is 280.7 torr. Vapour pressure of liquid A in the solution, $p_A = 32$ torr.
 :::
 
 :::
 
-:::question{number="1.37" kind="exercise" id="q_1.37" topic="Plotting vapour pressure vs composition for acetone-chloroform"}
+:::question{number="1.37" kind="exercise" id="q_1.37" topic="Plotting vapour pressure vs composition for acetone-chloroform" corrections_applied="2"}
 #### Question 1.37
 
 :::prompt
@@ -1959,11 +2201,11 @@ Plot of $p_{\text{total}}$, $p_{\text{chloroform}}$ and $p_{\text{acetone}}$ as 
 :::solution{label="Solution"}
 From the question, we have the following data
 
-| 100 × × acetone | 0 | 11.8 | 23.4 | 36.0 | 50.8 | 58.2 | 64.5 | 72.1 |
+| $100 \times x_{\text{acetone}}$ | 0 | 11.8 | 23.4 | 36.0 | 50.8 | 58.2 | 64.5 | 72.1 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Pacetone /mm Hg | 0 | 54.9 | 110.1 | 202.4 | 322.7 | 405.9 | 454.1 | 521.1 |
 | Pchloroform/mm Hg | 632.8 | 548.1 | 469.4 | 359.7 | 257.7 | 193.6 | 161.2 | 120.7 |
-| Ptota $\boldsymbol{(} \mathbf{m m ~ H g} \boldsymbol{)}$ | 632.8 | 603.0 | 579.5 | 562.1 | 580.4 | 599.5 | 615.3 | 641.8 |
+| $P_{\text{total}}$ (mm Hg) | 632.8 | 603.0 | 579.5 | 562.1 | 580.4 | 599.5 | 615.3 | 641.8 |
 :::
 
 :::answer
@@ -1972,7 +2214,7 @@ From the question, we have the following data
 
 :::
 
-:::question{number="1.38" kind="exercise" id="q_1.38" topic="Mole fraction of benzene in vapour phase (benzene-toluene)"}
+:::question{number="1.38" kind="exercise" id="q_1.38" topic="Mole fraction of benzene in vapour phase (benzene-toluene)" corrections_applied="1"}
 #### Question 1.38
 
 :::prompt
@@ -2038,7 +2280,6 @@ $$
 p_{b}=x_{b} \times p_{b}
 $$
 
-And, partial vapour pressure of toluene, $p_{t}=x_{t} \times p_{t}$
 And, partial vapour pressure of toluene, $p_{t}=x_{t} \times p_{t}$
 
 $$
@@ -2171,7 +2412,7 @@ $$
 
 :::
 
-:::question{number="1.41" kind="exercise" id="q_1.41" topic="Osmotic pressure of a K2SO4 solution"}
+:::question{number="1.41" kind="exercise" id="q_1.41" topic="Osmotic pressure of a K2SO4 solution" corrections_applied="1"}
 #### Question 1.41
 
 :::prompt
@@ -2209,7 +2450,7 @@ $$
 \end{aligned}
 $$
 
-Appling the following relation,
+Applying the following relation,
 
 $$
 \begin{aligned}
@@ -2272,7 +2513,7 @@ Mass percentage of $\mathrm{CCl}_{4}=(100-15.28) \%$
 
 :::
 
-:::question{number="1.2" kind="additional_exercise" id="it_1.2" topic="Mole fraction of benzene in CCl4"}
+:::question{number="1.2" kind="additional_exercise" id="it_1.2" topic="Mole fraction of benzene in CCl4" corrections_applied="1"}
 #### Additional Question 1.2
 
 :::prompt
@@ -2287,7 +2528,7 @@ Molar mass of benzene $\left(\mathrm{C}_{6} \mathrm{H}_{6}\right)=(6 \times 12+6
 $=78 \mathrm{~g} \mathrm{~mol}^{-1}$
 ∴ Number of moles of $\mathrm{C}_{6} \mathrm{H}_{6}=\frac{30}{78} \mathrm{~mol}$
 $=0.3846 \mathrm{~mol}$
-Molar mass of carbon tetrachloride $\left(\mathrm{CCl}_{4}\right)=1 \times 12+4 \times 355$
+Molar mass of carbon tetrachloride $\left(\mathrm{CCl}_{4}\right)=1 \times 12+4 \times 35.5$
 $=154 \mathrm{~g} \mathrm{~mol}^{-1}$
 ∴ Number of moles of $\mathrm{CCl}_{4}=\frac{70}{154} \mathrm{~mol}$
 $=0.4545 \mathrm{~mol}$
@@ -2353,7 +2594,7 @@ Therefore, molarity $=\frac{0.015}{0.5 \mathrm{~L}} \mathrm{~mol}$
 
 :::
 
-:::question{number="1.4" kind="additional_exercise" id="it_1.4" topic="Mass of urea for a molal solution"}
+:::question{number="1.4" kind="additional_exercise" id="it_1.4" topic="Mass of urea for a molal solution" corrections_applied="1"}
 #### Additional Question 1.4
 
 :::prompt
@@ -2367,7 +2608,7 @@ $$
 =60 \mathrm{~g} \mathrm{~mol}^{-1}
 $$
 
-0.25 molar aqueous solution of urea means:
+0.25 molal aqueous solution of urea means:
 
 1000 g of water contains 0.25 mol = (0.25 × 60)g of urea
 
@@ -2586,7 +2827,7 @@ $$
 
 :::
 
-:::question{number="1.8" kind="additional_exercise" id="it_1.8" topic="Composition of liquid and vapour phase from vapour pressures"}
+:::question{number="1.8" kind="additional_exercise" id="it_1.8" topic="Composition of liquid and vapour phase from vapour pressures" corrections_applied="1"}
 #### Additional Question 1.8
 
 :::prompt
@@ -2611,7 +2852,9 @@ $$
 & \Rightarrow p_{\text {total }}=p_{\mathrm{A}}^{0} x_{\mathrm{A}}+p_{\mathrm{B}}^{0}\left(1-x_{\mathrm{A}}\right) \\
 & \Rightarrow p_{\text {total }}=p_{\mathrm{A}}^{0} x_{\mathrm{A}}+p_{\mathrm{B}}^{0}-p_{\mathrm{B}}^{0} x_{\mathrm{A}} \\
 & \Rightarrow p_{\text {total }}=\left(p_{\mathrm{A}}^{0}-p_{\mathrm{B}}^{0}\right) x_{\mathrm{A}}+p_{\mathrm{B}}^{0} \\
-& \Rightarrow 600=(450-700) x_{\mathrm{A}}+700
+& \Rightarrow 600=(450-700) x_{\mathrm{A}}+700 \\
+& \Rightarrow -100=-250 x_{\mathrm{A}} \\
+& \Rightarrow x_{\mathrm{A}}=0.4
 \end{aligned}
 $$
 

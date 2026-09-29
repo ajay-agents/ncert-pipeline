@@ -24,12 +24,12 @@ measured, never typed. Re-run after any stage whose output changed.
 ## Empty fields (Rule 5 — must stay visible, never silently filled)
 
 - items with no solution at all: 0 — (none)
-- items with no final answer at all: 10 — q_1.1, q_1.2, q_1.3, q_1.10, q_1.11, q_1.12, q_1.14, q_1.23, q_1.25, q_1.31
+- items with no final answer at all: 4 — q_1.14, q_1.23, q_1.25, q_1.31
 
 ## Stage history (`manifest.json`)
 
-- entries: 35
+- entries: 39
 - stages run at least once: combine, design, extract_match, format, format_correction, mathpix, pdf, simplify, split, tag, verify, verify_correction
 - total model calls across all entries: 47
-- gates that have failed at some point: front_unchanged, gate_bilingual, gate_math_parity_hi, item_count_match, no_blank_pages, numeric_readback_vs_pdf_text, page_count_sane, tag_parse, visual_spot_check
+- gates that have failed at some point: front_unchanged, gate_bilingual, gate_math_parity_en, gate_math_parity_hi, item_count_match, no_blank_pages, numeric_readback_vs_pdf_text, page_count_sane, tag_parse, visual_spot_check
 

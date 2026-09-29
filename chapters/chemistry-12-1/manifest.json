@@ -703,5 +703,156 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical re-export of final.en.html after the paired 'design' manifest entry's retroactive fix. Gates pass."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-25T07:36:17.739815+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "b85dac20fc043177",
+      "chapter.en.pdf": "99d19dbb008280c3",
+      "solutions.en.pdf": "a35447d2a2a44d73"
+    },
+    "counts": {
+      "task1_items_authored": 11,
+      "corrections_applied": 21,
+      "corrections_held": 0,
+      "claims_flagged_not_fixed": 8,
+      "claims_reviewed_no_defect": 8
+    },
+    "gates_failed": {
+      "gate_math_parity_en": [
+        "q_1.2.solution: inline math: 0 -> 2",
+        "q_1.3 part i.solution: display math: 0 -> 1; inline math: 0 -> 2",
+        "q_1.3 part ii.solution: display math: 0 -> 1; inline math: 0 -> 1",
+        "q_1.3 part iii.solution: display math: 0 -> 1; inline math: 0 -> 1",
+        "q_1.3 part iv.solution: display math: 0 -> 1",
+        "q_1.4.solution: display math: 0 -> 4; inline math: 0 -> 2",
+        "q_1.5.solution: display math: 0 -> 4; inline math: 0 -> 7",
+        "q_1.6.solution: display math: 0 -> 4; inline math: 0 -> 10",
+        "q_1.8.solution: display math: 0 -> 4; inline math: 0 -> 5",
+        "q_1.9 part i.solution: display math: 0 -> 1; inline math: 0 -> 2",
+        "q_1.9 part ii.solution: display math: 0 -> 2; inline math: 0 -> 3",
+        "q_1.10.solution: inline math: 0 -> 1",
+        "q_1.11.solution: inline math: 0 -> 1",
+        "q_1.12.solution: display math: 0 -> 1; inline math: 0 -> 2",
+        "q_1.25 part iv.solution: inline math: 0 -> 1",
+        "q_1.31.solution: inline math: 3 -> 6",
+        "q_1.37.solution: inline math: 1 -> 2",
+        "q_1.38.solution: inline math: 5 -> 4"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_en"
+    ],
+    "model_calls": 0,
+    "notes": "[POST-HOC REVIEW FIX for stage 'verify', English only] Investigated an external review's ~35 claims across 4 tasks for this chapter's English track. TASK 1 (user-authorized, one-time Rule-5 exception): authored solutions for the 11 items with genuinely no solution anywhere in the 51-page solutions manual (q_1.1-1.6, 1.8-1.12 -- confirmed real via this chapter's own extract_match manifest history), computed from the question text + standard chemistry (no separate printed exercise answer key exists in 00_raw for this chapter -- only an 'Answers to Intext Questions' section, which covers a different question set, it_1.x). Each of the 11 carries a visible '**Not in official solutions manual:**' lead sentence (the container-tag :::note{type=caution} form isn't valid at this flat, pre-stage-7 stage per mdio.py's own parser -- it will be added properly as a real :::note block at stage 7, where nested containers are first introduced). TASK 2/3/4: verified every claim against 00_raw/chapter.en.pdf (has a real text layer) and page-by-page image reads of 00_raw/solutions.en.pdf (scanned, no text layer) before touching anything. Applied 21 high-confidence corrections for genuine transcription/extraction defects (OCR glyph corruption: 'Ä T f'->'Delta T_f' in ex_1.9, a Cyrillic-looking Pi in q_1.22; a same-page self-contradiction in q_1.17's molality definition (100 g vs the 1000 g its own next line computes with); a dropped decimal in it_1.2's CCl4 molar mass (355->35.5); a mislabeled molar/molal in it_1.4 that contradicts its own question and math; a genuinely dropped derivation line in it_1.8 (matches mathpix's own '[Omitted long context line]' marker, restored from the source page image); a Delta_sol H/Delta_mix H terminology confusion in q_1.14 (question verified against chapter.en.pdf asks Delta_mix H; the solutions-manual answer used Delta_sol H throughout); spelling typos (Van der Wall's/Ion-diople/Appling); a leaked internal pipeline note baked into two solution fields (q_1.25(iv), q_1.31) where the extraction should have described the source's embedded structural-formula images in words instead -- replaced with the actual formulas; an incomplete q_1.36 final answer (question asks two values, only one was echoed even though the second was already derived in the same solution); q_1.37's corrupted table headers ('Ptota', '100 x x acetone'); a duplicated line in q_1.38; and a fragile mismatched-bracket LaTeX construct in ex_1.5 that a later stage-9 render bug turns into a stray literal period ('p CH2Cl2 O = . 415'). Explicitly FLAGGED, NOT fixed, per Rule 5 / step_5/verify.md's 'not your call' guidance: q_1.13's solution reuses a mass exponent (6.56e-2 g) that contradicts its own question's unambiguous 6.56e-3 g, making the final answer 10x too small (~0.764 bar vs a correct ~7.62 bar) -- self-consistent through the whole page, not an isolated slip, so treated as the source's own error rather than a same-page-unit-slip-style correction; q_1.26's question (verified verbatim against chapter.en.pdf) genuinely asks for 'molarity' while the solutions-manual answer computes molality and never uses the given density -- a known textbook/answer-key mismatch, not this pipeline's call; Examples 1.2/1.5/1.6/1.8/1.11's stale 'equation (2.x)' cross-references, confirmed character-for-character against chapter.en.pdf's own embedded text layer as genuinely printed that way in the real textbook (an old-edition chapter-renumbering artifact, inconsistently fixed elsewhere in the same book) -- not this pipeline's place to silently renumber; it_1.7's empty '[Since, ]' bracket, confirmed via page image to be exactly how the source itself prints it (a genuine gap, not invented around); and it_1.7's premature rounding of n(CO2) from 0.0422 to 0.042 mol before the final multiplication, also confirmed genuinely printed that way. Reviewed and found NOT to be defects (disagree with the external review): Example 1.13's van't Hoff wording (a faithful, accurate simplification of chapter.en.pdf's own real prose); q_1.25(iii)'s '-OH' description of formic acid (imprecise but the source's own verbatim wording, a content judgment call, not overridden); it_1.4/it_1.10/it_1.11's 'slight variation from NCERT' notes (genuinely printed in the source manual itself, confirmed via page image, not leftover pipeline text); it_1.2's 'missing mole-fraction complement' (the question only asks for benzene's mole fraction); q_1.18's claimed formula-vs-exact-Raoult's-law note (Raoult's law's (p-deg-p)/p-deg = x2 relation is exact, not an approximation -- no defect found); q_1.16/1.20/1.32 and Example 1.12's claimed rounding errors (checked arithmetic and page images -- all match the source exactly); '1.3(a)' (no matching defect identified in exercise 1.3, example 1.3, or intext 1.3(a) under any reading of that label). Every fix's exact-once 'found' text and the 11 new items were verified via pipeline.verify.apply_corrections()/direct model assignment, never by hand-editing the markdown. gate_math_parity's 18 flagged deltas were individually reconciled against this exact list -- all 18 are these deliberate additions/edits, zero unexplained. gate_counts and gate_solutions_present (en) both pass clean (gate_solutions_present: 11 -> 0). Cascaded to 06_simplify/07_format/08_tag/09_design/10_pdf -- see their own manifest entries. Hindi track untouched."
+  },
+  {
+    "stage": "verify_correction",
+    "at": "2026-09-25T07:42:44.053630+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "c0279f8fe4512832"
+    },
+    "counts": {
+      "corrections_applied": 22,
+      "addendum": true
+    },
+    "gates_failed": {
+      "gate_math_parity_en": [
+        "ex_1.4.solution: inline math: 4 -> 5",
+        "q_1.2.solution: inline math: 0 -> 2",
+        "q_1.3 part i.solution: display math: 0 -> 1; inline math: 0 -> 2",
+        "q_1.3 part ii.solution: display math: 0 -> 1; inline math: 0 -> 1",
+        "q_1.3 part iii.solution: display math: 0 -> 1; inline math: 0 -> 1",
+        "q_1.3 part iv.solution: display math: 0 -> 1",
+        "q_1.4.solution: display math: 0 -> 4; inline math: 0 -> 2",
+        "q_1.5.solution: display math: 0 -> 4; inline math: 0 -> 7",
+        "q_1.6.solution: display math: 0 -> 4; inline math: 0 -> 10",
+        "q_1.8.solution: display math: 0 -> 4; inline math: 0 -> 5",
+        "q_1.9 part i.solution: display math: 0 -> 1; inline math: 0 -> 2",
+        "q_1.9 part ii.solution: display math: 0 -> 2; inline math: 0 -> 3",
+        "q_1.10.solution: inline math: 0 -> 1",
+        "q_1.11.solution: inline math: 0 -> 1",
+        "q_1.12.solution: display math: 0 -> 1; inline math: 0 -> 2",
+        "q_1.25 part iv.solution: inline math: 0 -> 1",
+        "q_1.31.solution: inline math: 3 -> 6",
+        "q_1.37.solution: inline math: 1 -> 2",
+        "q_1.38.solution: inline math: 5 -> 4"
+      ]
+    },
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present_en"
+    ],
+    "model_calls": 0,
+    "notes": "[ADDENDUM to the previous verify_correction entry, same pass] One more fix found while regenerating 08_tag/structured.en.json: ex_1.4's solution note already carried the correct Task-4-review-flagged '\\ll' (much-less-than) text, but bare (outside $...$), which is why stage 9's converter showed it literally instead of as '≪'. Wrapped in math delimiters ('$\\ll$') at the data layer (chapter.verified.en.md / chapter.simplified.en.md / structured.en.md), added to 05_verify/corrections.md as a 22nd correction. gate_math_parity's now-19 raw diffs are the same 18 reconciled additions from before plus this one (ex_1.4: inline math 4 -> 5, from adding the $ $ wrapper) -- still zero unexplained."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-25T10:50:26.931220+00:00",
+    "inputs": {
+      "structured.en.md": "c06482de18aec3ae"
+    },
+    "counts": {
+      "items": 66,
+      "parts": 19,
+      "figures": 3,
+      "given": 53,
+      "key_formula": 21,
+      "substitute": 64,
+      "conclusion": 68
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "item_part_figure_count_match"
+    ],
+    "model_calls": 0,
+    "notes": "[POST-HOC REVIEW FIX cascade, English only] Regenerated 08_tag/structured.en.json from the corrected 07_format/structured.en.md (pure code, per step_8/PROMPT.md -- no model call: walked pipeline.tag._parse()'s tree, the given/key-formula/substitute/conclusion stage inferred positionally exactly as documented). Verified against a fresh, direct count from structured.en.md (not against numbers already in memory): 66 items, 19 parts, 3 distinct figure srcs -- all match exactly, zero dropped or duplicated. Two real bugs were found and fixed in the regeneration script itself while building this (not present in the original 09-19 JSON, which this session never touched until now): (1) a figures-collector test bug in this session's own verification harness, not the generator; (2) a genuine generator bug -- a solution block containing a :::note followed by bare (uncontainered) text lost that trailing text entirely, because the block-ordering pass only re-walked *named* containers and silently skipped bare strings. Caught by manually reviewing q_1.1's and q_1.3(i)'s rendered output (the caution banner showed with no solution text below it) rather than trusting the item/part/figure count gate alone, since that gate can't see a block-level drop within an otherwise-correct item. Fixed by rewriting the block builder as a single true-document-order pass instead of a first-pass-then-rewalk two-pass design. Every other item's JSON (the 55 untouched by this session's fixes) was spot-diffed against the pre-existing structured.en.json and differs only by an added explicit `label` on every solution_block (previously omitted when stage 7 left a step unlabelled; now always the resolved English label, matching what stage 9 needs to render the pill text and harmless since it's a pure superset)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-25T10:50:26.934205+00:00",
+    "inputs": {
+      "structured.en.json": "b152c69a9c51b1d2"
+    },
+    "counts": {
+      "corrections_applied_at_html_layer": 20,
+      "items_rebuilt_from_scratch": 11,
+      "readback_numeric_tokens_checked": 118,
+      "readback_missing": 0,
+      "console_errors": 0,
+      "broken_images": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "visual_spot_check",
+      "numeric_readback"
+    ],
+    "model_calls": 0,
+    "notes": "[POST-HOC REVIEW FIX for stage 'design', English only] This chapter's original 09_design build script (2026-09-19, per this chapter's own earlier manifest entries) was not preserved in the chapter directory, this session's scratchpad, or git history -- confirmed by searching all three before concluding a fresh script was needed, per the task's own guidance for this situation. Rather than reconstruct the full hand-tuned LaTeX-to-HTML converter from scratch (high risk of reintroducing the exact edge-case bugs that build's own manifest entry documented fixing), used a hybrid approach: (1) the 20 corrections/typo fixes from this pass were applied as direct, exact-string HTML edits at their existing rendered locations (same discipline as the Hindi track's own precedent for a lost render script -- see this chapter's 2026-09-18 Hindi design manifest entry); (2) the 11 Task-1 items (previously rendered as question-only cards with no solution content) were rebuilt as complete cards from 08_tag/structured.en.json using a small purpose-built renderer, reusing this file's own existing CSS classes verbatim (badge/doodle/separator/boxed-answer class sets for each of the 4 rotating colours, confirmed empirically from sibling same-colour exercise cards already in the page -- teal=s15/16/17/19/39/37(p), orange=s40/41/42/43/58/44(p), pink=s46/47/48/49/51/50(p), purple=s52/53/54/55/57/56(p), all sharing the same global given/key-formula/substitute/conclusion pill classes s23-s38 that every colour already uses) rather than inventing new ones, and a small new .task1-note CSS class (amber banner, added to final.en.css) for the visible 'Not in official solutions manual' marker Task 1 requires -- distinct from the pill system since it is provenance metadata, not a solution step. Caught and fixed two real bugs in this new renderer before accepting it, via Playwright screenshots of representative cards from every colour and every structural shape (plain single-block, given/substitute/conclusion, multi-part): (1) a nested \\text{}/\\mathrm{} inside \\frac{}/\\dfrac{} broke the brace-free fraction matcher, showing raw LaTeX on the page -- fixed by converting sub/superscripts and stripping \\mathrm/\\text wrappers before the fraction pass, not after; (2) the caution note itself was silently dropped from every rendered card because of the stage-8 bug described in that stage's own manifest entry above. Final numeric read-back: every numeric token in every item's own final_answer (118 tokens across all 66 items, both pre-existing and the 11 new ones) confirmed present in the rendered page's own extracted text; 0 console errors; 0 broken images; div/svg tag counts balanced; item count still 66."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-25T10:51:28.451870+00:00",
+    "inputs": {
+      "final.en.html": "01059988cd75e349",
+      "final.en.css": "c2bef8b65f2efdb0"
+    },
+    "counts": {
+      "page_count": 45,
+      "blank_pages": 0,
+      "file_bytes": 1795675,
+      "readback_numeric_tokens_checked": 467,
+      "readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_readback_vs_pdf_text"
+    ],
+    "model_calls": 0,
+    "notes": "[POST-HOC REVIEW FIX cascade, English only] Re-exported 10_pdf/final.en.pdf from the corrected 09_design/final.en.html via Playwright/Chromium exactly per step_10/PROMPT.md's recipe: goto with wait_until='networkidle', an explicit document.fonts.ready wait, emulate_media(media='screen') immediately before page.pdf() (this chapter has no Devanagari text so the pre-base-vowel-reordering bug that fix targets doesn't apply here, but applied it unconditionally anyway per the prompt's own 'cheap enough to apply unconditionally' guidance), print_background=True + prefer_css_page_size=True, no explicit format/width/height. Page count 45 (was 42 before this pass -- the 11 newly-authored solutions add real content, so a page-count increase is expected, not a red flag). Gates: page count sane (45, within normal range for a 66-item chapter), zero blank pages, and the numeric read-back re-run against the PDF's own fitz-extracted text (not assumed carried over from the stage-9 HTML check) -- 467 numeric tokens pulled from every item's and part's own question + final_answer fields in 06_simplify/chapter.simplified.en.md, 0 missing. Unicode superscript/subscript digits were normalized with a separator inserted before each new run (not a raw translate()), per this same prompt's own documented trap, so a base number and its exponent land as two distinct tokens rather than gluing into one and hiding a real number from matching. This chapter has no embedded Devanagari reph sequences, so the separately-documented ToUnicode/reph CMap limitation doesn't apply to this export."
   }
 ]

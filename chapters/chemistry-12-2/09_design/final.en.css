@@ -137,6 +137,16 @@ table { break-inside: auto; }
    column across a printed/exported page. */
 .s31, .s14, .s90 { break-inside: avoid; }
 
+/* it_2.13: same one-time "authored, not from the official manual" banner
+   convention as chemistry-12-1's own q_1.1 etc. - reused verbatim. */
+.task1-note {
+  display:flex; align-items:flex-start; gap:8px;
+  background:#fff8e6; border:1.4px solid #f0b429; border-radius:8px;
+  padding:8px 12px; margin:8px 0 12px 0; font-size:14px; line-height:1.4;
+}
+.task1-note .task1-note-label { font-weight:700; color:#8a5a00; white-space:nowrap; }
+.task1-note .task1-note-text { color:#6b4700; }
+
 /* .s90: '=' immediately followed by a \frac{}{}/\sqrt{} glued into one
    nowrap unit (a bare nbsp on '=' alone doesn't stop the browser breaking
    right at the boundary between plain text and an adjacent inline-block-

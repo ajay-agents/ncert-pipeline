@@ -520,5 +520,120 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export pass via Playwright/Chromium (page.pdf with print_background=True, prefer_css_page_size=True, no explicit format/width/height), navigated to 09_design/final.en.html's own real file:// path so its relative CSS/images/ references resolve exactly as for any other viewer. Waited on document.fonts.ready plus a short settle timeout before printing, and called page.emulate_media(media='screen') immediately before page.pdf() per the standing per-export fix (English-only chapter, so the specific Devanagari pre-base-vowel-reordering bug this guards against doesn't apply here, but applied unconditionally anyway matching the established 'cheap enough to always do' practice). Gates: page count 33 (sane for a 48-item chapter, well within 3-150); 0 blank pages; numeric read-back re-run against the PDF's own extracted text (via fitz, with the superscript-exponent separator fix applied before normalizing, so a base number and its exponent - e.g. 10^-8 - never merge into one false token) - 3 distinctive (decimal or 3+-digit) tokens checked, 0 missing. This chapter is English-only, so the known Devanagari reph ('र्') ToUnicode-CMap extraction bug documented in step_10/PROMPT.md does not apply. No CALIBRATION re-run needed (PDF export has nothing for it to read)."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-29T05:36:14.345020+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "28838b1042499b7d",
+      "chapter.en.pdf": "9cca0d995461bb4b",
+      "chapter.hi.pdf": "45a59d27bcbbf401",
+      "solutions.en.pdf": "1faa94983c864598",
+      "solutions.hi.pdf": "e7f74cd6c9a739b9"
+    },
+    "counts": {
+      "corrections_applied_pass2": 56,
+      "corrections_applied_pass3_it_5.4": 4,
+      "direct_manipulations": 4
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_counts",
+      "gate_solutions_present"
+    ],
+    "model_calls": 0,
+    "notes": "Post-completion cleanup pass (independent re-verification session): applied 56 corrections plus 4 direct chapter-object edits from an external review of chemistry-12-5, each independently re-verified against chapter.en.pdf (spectrochemical series p.132, ambidentate ligand examples p.121, amminebromidochloridonitrito-N-platinate(II) part iv p.125, q_5.24's own five sub-parts p.139) and real coordination chemistry (spin states, isomer counts, IUPAC nomenclature) where the solutions manual's own content was wrong, not just an OCR artifact against the textbook. A third, smaller pass fixed a CO/Co OCR-confusion recurrence in it_5.4 missed on the first sweep. q_5.25 (violet colour of [Ti(H2O)6]3+ via CFT) is the one genuinely, completely missing solution in this chapter - populated under the same user-authorised 'Not in official solutions manual' banner exception used for chemistry-12-1/12-2/12-3/12-4 earlier this session. Full claim-by-claim disposition in the session's final report; corrections.md carries every individual correction's found/should_be/reason."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-29T05:36:14.364248+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "711b36d33545d2b9"
+    },
+    "counts": {
+      "items_total": 48
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 0,
+    "notes": "Cascaded the stage-5 cleanup pass's content fixes forward: re-applied the same 56 corrections directly against chapter.simplified.en.md (45 matched verbatim; 11 had been reworded by the original stage-6 pass and were patched by hand to the same effect, then verified against the gates above); re-applied the 4 direct manipulations. No new simplification was performed."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-29T05:36:37.860184+00:00",
+    "inputs": {
+      "structured.en.md": "9de779488bdffb49"
+    },
+    "counts": {
+      "items": 48,
+      "parts": 87
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "tag_parse",
+      "protect_parity_6_to_7"
+    ],
+    "model_calls": 0,
+    "notes": "Cascaded the same content fixes into structured.en.md via raw-text find/replace scoped per item/part (mdio can't round-trip post-stage-7 nested containers), including q_5.25's new solution (wrapped as note+concept+step, matching the chemistry-12-2 it_2.13 precedent for this banner), the q_5.3 part-label fix, and 14 figure-caption fixes (fig_5_166 + the 13 identical Ex 5.15 placeholders individually labelled after directly viewing each image)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-29T05:36:37.867694+00:00",
+    "inputs": {
+      "structured.en.md": "9de779488bdffb49"
+    },
+    "counts": {
+      "items": 48,
+      "parts": 87,
+      "figures": 64
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "item_count_matches_fresh",
+      "part_count_matches_fresh",
+      "figure_count_matches_fresh"
+    ],
+    "model_calls": 0,
+    "notes": "Regenerated in full via pipeline.serialize.structured_md_to_json (pure code) from the updated 07_format/structured.en.md. Checked for, and did not find, the 'part-prompt render bug' pattern (parts non-empty, every part's own solution_blocks empty, item-level solution_blocks non-empty) reported in chemistry-12-2/12-3: it_5.1/5.2/5.3 show this exact shape but it is correct here, not a bug - these items' parts only ever carried prompts, with the real combined answer as one trailing item-level :::solution listing all sub-answers together (matches the original solutions-manual layout confirmed at stage-2 extraction, and serialize.py's own suppress_as_duplicate logic correctly leaves the item-level solution populated since no part has its own)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-29T05:36:57.942228+00:00",
+    "inputs": {
+      "structured.en.json": "73de51771b1e2635"
+    },
+    "counts": {
+      "content_fixes_applied": 40
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hand-patched final.en.html/.css directly (matching the JSON's content, not regenerated from scratch) so the existing hand-authored layout/markup was preserved: all naming/formula/spelling fixes, the Ex 5.23(i) oxalate spin-state correction, the q_5.12/q_5.14/q_5.19/it_5.8 rewrites, q_5.25's new solution (added a .task1-note CSS rule copied verbatim from chemistry-12-2's own final.en.css, not forked/reinvented), the q_5.3 part-label fix, and 14 figure-caption fixes. No code gate at this stage per CLAUDE.md; correctness rests on the manual read-back which is documented claim-by-claim in the session's final report."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-29T05:36:58.161816+00:00",
+    "inputs": {
+      "final.en.html": "6b4871bbda371f61",
+      "final.en.css": "7b70ffbbd2215075"
+    },
+    "counts": {
+      "page_count": 34,
+      "file_size_bytes": 1968262,
+      "numeric_tokens_checked": 311,
+      "numeric_tokens_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_read_back"
+    ],
+    "model_calls": 0,
+    "notes": "Exported via Playwright/Chromium per step_10/PROMPT.md's recipe: file:// URL to the actual 09_design/final.en.html (not a copy), document.fonts.ready wait, emulate_media('screen') before page.pdf(), print_background=True + prefer_css_page_size=True, no explicit format/width/height. Numeric read-back re-ran with superscript-aware normalization (a separator inserted before a run of unicode superscript digits, not a raw translate(), to avoid gluing a base number to its exponent per this stage's own documented trap) against every question/final_answer numeric token in 06_simplify/chapter.simplified.en.md - 311 tokens checked, 0 missing."
   }
 ]

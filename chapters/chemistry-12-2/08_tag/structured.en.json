@@ -473,7 +473,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "$\\Lambda_{m}=\\frac{\\kappa}{c}=\\frac{4.95 \\times 10^{-5} \\mathrm{Scm}^{-1}}{0.001028 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}}=48.15 \\mathrm{~S} \\mathrm{~cm}^{3} \\mathrm{~mol}^{-1}$"
+              "text": "$\\Lambda_{m}=\\frac{\\kappa}{c}=\\frac{4.95 \\times 10^{-5} \\mathrm{Scm}^{-1}}{0.001028 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}}=48.15 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$"
             }
           ]
         },
@@ -483,7 +483,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "$$\n\\begin{aligned}\n& \\alpha=\\frac{\\Lambda_{m}}{\\Lambda_{m}^{\\mathrm{o}}}=\\frac{48.15 \\mathrm{Scm}^{2} \\mathrm{~mol}^{-1}}{390.5 \\mathrm{Scm}^{2} \\mathrm{~mol}^{-1}}=0.1233 \\\\\n& \\mathrm{k}=\\frac{\\mathrm{c} \\alpha^{2}}{(1-\\alpha)}=\\frac{0.001028 \\mathrm{molL}^{-1} \\times(0.1233)^{2}}{1-0.1233}=1.78 \\times 10^{-5} \\mathrm{~mol} \\mathrm{~L}^{-1}\n\\end{aligned}\n$$"
+              "text": "$$\n\\begin{aligned}\n& \\alpha=\\frac{\\Lambda_{m}}{\\Lambda_{m}^{\\mathrm{o}}}=\\frac{48.15 \\mathrm{Scm}^{2} \\mathrm{~mol}^{-1}}{390.5 \\mathrm{Scm}^{2} \\mathrm{~mol}^{-1}}=0.1233 \\\\\n& K_{a}=\\frac{\\mathrm{c} \\alpha^{2}}{(1-\\alpha)}=\\frac{0.001028 \\mathrm{molL}^{-1} \\times(0.1233)^{2}}{1-0.1233}=1.78 \\times 10^{-5} \\mathrm{~mol} \\mathrm{~L}^{-1}\n\\end{aligned}\n$$"
             }
           ]
         }
@@ -736,7 +736,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "(i) $E_{\\mathrm{Cr}^{3+} / \\mathrm{Cr}}^{\\ominus}=0.74 \\mathrm{~V}$\n$$\nE_{\\mathrm{Cd}^{2+} / \\mathrm{Cd}}^{\\ominus}=-0.40 \\mathrm{~V}\n$$\n\nThe galvanic cell of the given reaction is depicted as:\n\n$$\n\\mathrm{Cr}_{(s)}\\left|\\mathrm{Cr}_{(a q)}^{3+} \\| \\mathrm{Cd}_{(a q)}^{2+}\\right| \\mathrm{Cd}_{(s)}\n$$"
+              "text": "(i) $E_{\\mathrm{Cr}^{3+} / \\mathrm{Cr}}^{\\ominus}=-0.74 \\mathrm{~V}$\n$$\nE_{\\mathrm{Cd}^{2+} / \\mathrm{Cd}}^{\\ominus}=-0.40 \\mathrm{~V}\n$$\n\nThe galvanic cell of the given reaction is depicted as:\n\n$$\n\\mathrm{Cr}_{(s)}\\left|\\mathrm{Cr}_{(a q)}^{3+} \\| \\mathrm{Cd}_{(a q)}^{2+}\\right| \\mathrm{Cd}_{(s)}\n$$"
             }
           ]
         },
@@ -938,7 +938,7 @@
       "answer": [
         {
           "type": "text",
-          "text": "$E^{\\ominus} = 1.104 \\mathrm{~V}$ (as stated); $\\Delta_{r}G^{\\ominus} = -213.04 \\mathrm{~kJ}$ (calculation shown uses $1.04$, not $1.104$ — see report)"
+          "text": "$E^{\\ominus} = 1.104 \\mathrm{~V}$; $\\Delta_{r}G^{\\ominus} = -213.04 \\mathrm{~kJ}$"
         }
       ]
     },
@@ -972,7 +972,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "## Molar conductivity:\n\nAt a given concentration, molar conductivity is the conductance of a volume V of solution that contains 1 mole of the electrolyte, kept between two electrodes with area of cross-section $A$ and unit length between them.\n\n$$\n\\Lambda_{m}=\\kappa \\frac{A}{l}\n$$\n\nNow, $I=1$ and $A=\\mathrm{V}$ (volume containing 1 mole of the electrolyte).\n\n$$\n\\therefore \\Lambda_{m}=\\kappa \\mathrm{V}\n$$\n\nMolar conductivity increases as concentration decreases. This happens because the total volume V of the solution containing one mole of the electrolyte increases on dilution.\nThe variation of $\\Lambda_{m}$ with $\\sqrt{\\mathrm{c}}$ for strong and weak electrolytes is shown in the following plot:"
+              "text": "**Molar conductivity:**\n\nAt a given concentration, molar conductivity is the conductance of a volume V of solution that contains 1 mole of the electrolyte, kept between two electrodes with area of cross-section $A$ and unit length between them.\n\n$$\n\\Lambda_{m}=\\kappa \\frac{A}{l}\n$$\n\nNow, $l=1$ and $A=\\mathrm{V}$ (volume containing 1 mole of the electrolyte).\n\n$$\n\\therefore \\Lambda_{m}=\\kappa \\mathrm{V}\n$$\n\nMolar conductivity increases as concentration decreases. This happens because the total volume V of the solution containing one mole of the electrolyte increases on dilution.\nThe variation of $\\Lambda_{m}$ with $\\sqrt{\\mathrm{c}}$ for strong and weak electrolytes is shown in the following plot:"
             }
           ],
           "label": "Molar conductivity"
@@ -1100,7 +1100,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "Then, $\\kappa=1.237 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.0316 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\Lambda_{m}=\\frac{\\kappa}{c} \\\\\n& =\\frac{1.237 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.001 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =123.7 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=11.85 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.010 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\mathrm{K}=11.85 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.1 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\Lambda_{m}=\\frac{\\kappa}{c} \\\\\n& =\\frac{11.85 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.010 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =118.5 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=23.15 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.020 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\kappa=23.15 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.1414 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\Lambda_{m}=\\frac{K}{c} \\\\\n& =\\frac{23.15 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.020 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =115.8 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=55.53 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.050 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\kappa=55.53 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.2236 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\kappa=\\frac{\\kappa}{c} \\\\\n& =\\frac{55.53 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.050 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =111.11 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=106.74 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.100 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\kappa=106.74 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.3162 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\Lambda_{m}=\\frac{K}{c} \\\\\n= & \\frac{106.74 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.100 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n= & 106.74 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Now, we }\n\\end{aligned}\n$$\n\nhave the following data:"
+              "text": "Then, $\\kappa=1.237 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.0316 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\Lambda_{m}=\\frac{\\kappa}{c} \\\\\n& =\\frac{1.237 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.001 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =123.7 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=11.85 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.010 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\kappa=11.85 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.1 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\Lambda_{m}=\\frac{\\kappa}{c} \\\\\n& =\\frac{11.85 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.010 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =118.5 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=23.15 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.020 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\kappa=23.15 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.1414 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\Lambda_{m}=\\frac{K}{c} \\\\\n& =\\frac{23.15 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.020 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =115.8 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=55.53 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.050 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\kappa=55.53 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.2236 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\therefore \\Lambda_{m}=\\frac{\\kappa}{c} \\\\\n& =\\frac{55.53 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.050 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n& =111.11 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Given, } \\\\\n& \\kappa=106.74 \\times 10^{-2} \\mathrm{~S} \\mathrm{~m}^{-1}, \\mathrm{c}=0.100 \\mathrm{M}\n\\end{aligned}\n$$\n\nThen, $\\kappa=106.74 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}, \\mathrm{c}^{1 / 2}=0.3162 \\mathrm{M}^{1 / 2}$\n\n$$\n\\begin{aligned}\n& \\Lambda_{m}=\\frac{\\kappa}{c} \\\\\n= & \\frac{106.74 \\times 10^{-4} \\mathrm{~S} \\mathrm{~cm}^{-1}}{0.100 \\mathrm{~mol} \\mathrm{~L}^{-1}} \\times \\frac{1000 \\mathrm{~cm}^{3}}{\\mathrm{~L}} \\\\\n= & 106.74 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1} \\text { Now, we }\n\\end{aligned}\n$$\n\nhave the following data:"
             }
           ]
         },
@@ -1114,7 +1114,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "Since the line interrupts ${ }^{\\Lambda_{m}}$ at $124.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}, \\Lambda_{m}^{0}=124.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$."
+              "text": "Since the line intercepts ${ }^{\\Lambda_{m}}$ at $124.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}, \\Lambda_{m}^{0}=124.0 \\mathrm{~S} \\mathrm{~cm}^{2} \\mathrm{~mol}^{-1}$."
             }
           ]
         }
@@ -1145,7 +1145,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "Given, $\\kappa=7.896 \\times 10^{-5} \\mathrm{~S} \\mathrm{~m}^{-1} \\mathrm{c}$\n$=0.00241 \\mathrm{~mol} \\mathrm{~L}^{-1}$"
+              "text": "Given, $\\kappa=7.896 \\times 10^{-5} \\mathrm{~S} \\mathrm{~cm}^{-1} \\mathrm{c}$\n$=0.00241 \\mathrm{~mol} \\mathrm{~L}^{-1}$"
             }
           ]
         },
@@ -1165,7 +1165,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "$$\n\\Lambda_{m}=\\frac{K}{\\mathrm{c}}\n$$"
+              "text": "$$\n\\Lambda_{m}=\\frac{\\kappa}{\\mathrm{c}}\n$$"
             }
           ]
         },
@@ -1341,7 +1341,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "(i) According to the question,\n\n$$\n\\mathrm{Ca}^{2+}+2 \\mathrm{e}^{-1} \\longrightarrow \\underset{40 \\mathrm{~g}}{\\mathrm{Ca}}\n$$"
+              "text": "(i) According to the question,\n\n$$\n\\mathrm{Ca}^{2+}+2 \\mathrm{e}^{-} \\longrightarrow \\underset{40 \\mathrm{~g}}{\\mathrm{Ca}}\n$$"
             }
           ]
         },
@@ -1371,7 +1371,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "Electricity required to produce 27 g of AI = 3 F\nTherefore, electricity required to produce 40 g of $\\mathrm{Al}=\\frac{3 \\times 40}{27} \\mathrm{~F}$ $=4.44 \\mathrm{~F}$"
+              "text": "Electricity required to produce 27 g of Al = 3 F\nTherefore, electricity required to produce 40 g of $\\mathrm{Al}=\\frac{3 \\times 40}{27} \\mathrm{~F}$ $=4.44 \\mathrm{~F}$"
             }
           ]
         }
@@ -1444,7 +1444,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "(ii) According to the question,\n\n$$\n\\mathrm{Fe}^{2+} \\longrightarrow \\mathrm{Fe}^{3+}+\\mathrm{e}^{-1}\n$$"
+              "text": "(ii) According to the question,\n\n$$\n\\mathrm{Fe}^{2+} \\longrightarrow \\mathrm{Fe}^{3+}+\\mathrm{e}^{-}\n$$"
             }
           ]
         },
@@ -1639,7 +1639,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "(i) $$\n\\begin{array}{cl}\n\\left.\\mathrm{Fe}^{3+}{ }_{(\\mathrm{aq})}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Fe}^{2+}{ }_{(\\mathrm{aq})}\\right] \\times 2 ; & E^{0}=+0.77 \\mathrm{~V} \\\\\n2 \\mathrm{I}_{(\\mathrm{aq})}^{-} \\longrightarrow \\mathrm{I}_{2(\\mathrm{~s})}+2 \\mathrm{e}^{-} ; & E^{0}=-0.54 \\mathrm{~V} \\\\\n\\hline 2 \\mathrm{Fe}^{3+}{ }_{(\\mathrm{aq})}+2 \\mathrm{I}_{(\\mathrm{aq})}^{-} \\longrightarrow 2 \\mathrm{Fe}^{2+}{ }_{(\\mathrm{aq})}+\\mathrm{I}_{2(\\mathrm{~s})} ; & E^{0}=+0.23 \\mathrm{~V}\n\\end{array}\n$$\nSince 3+(aq) and I-(aq) is feasible.\n(ii) $$\n\\begin{array}{ll}\n\\left.\\mathrm{Ag}_{(a q)}^{+}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Ag}_{(s)}\\right] \\times 2 ; & E^{\\circ}=+0.80 \\mathrm{~V}, \\mathrm{Fe} \\\\\n\\mathrm{Cu}_{(s)} \\quad \\longrightarrow \\mathrm{Cu}_{(a q)}^{2+}+2 \\mathrm{e}^{-} ; & E^{\\circ}=-0.34 \\mathrm{~V} \\\\\n2 \\mathrm{Ag}_{(a q)}^{+}+\\mathrm{Cu}_{(s)} \\longrightarrow 2 \\mathrm{Ag}_{(s)}+\\mathrm{Cu}_{(a q)}^{2+} ; & E^{\\circ}=+0.46 \\mathrm{~V}\n\\end{array}\n$$\n$E^{\\circ}$ for the overall reaction is positive, the rea ction between Ag Since + (aq) and $\\mathrm{Cu}_{(s)}$ is feasible.\n(iii) $$\n\\begin{array}{ll}\n\\left.\\mathrm{Fe}^{3+}{ }_{(a q)}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Fe}^{2+}{ }_{(a q)}\\right] \\times 2 ; & E^{0}=+0.77 \\mathrm{~V} \\\\\n2 \\mathrm{Br}^{-}{ }_{(a q)} \\longrightarrow \\mathrm{Br}_{2(q)}+2 \\mathrm{e}^{-} \\quad ; & E^{0}=-1.09 \\mathrm{~V} \\\\\n\\hline 2 \\mathrm{Fe}^{3+}{ }_{(a q)}+2 \\mathrm{Br}^{-}{ }_{(a q)} \\longrightarrow 2 \\mathrm{Fe}^{2+}{ }_{(a q)} \\text { and } \\mathrm{Br}_{2(i)} ; & E^{0}=-0.32 \\mathrm{~V}\n\\end{array}\n$$\nSince $E^{\\circ}$ for the overall reaction is negative, the reaction between Fe 3+ - (aq) and Br (aq) is not feasible.\n(iv) $$\n\\begin{array}{ll}\n\\mathrm{Ag}_{(s)} \\longrightarrow \\mathrm{Ag}_{(a q)}^{+}+\\mathrm{e}^{-} & ; E^{0}=-0.80 \\mathrm{~V} \\\\\n\\mathrm{Fe}^{3+}{ }_{(a q)}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Fe}^{2+}(a q) & ; E^{0}=+0.77 \\mathrm{~V} \\\\\n\\hline \\mathrm{Ag}_{(s)}+\\mathrm{Fe}^{3+}{ }_{(a q)} \\longrightarrow \\mathrm{Ag}_{(a q)}^{+}+\\mathrm{Fe}^{2+}{ }_{(a q)} & ; E^{0}=-0.03 \\mathrm{~V}\n\\end{array}\n$$\n(iv) $$\n\\mathrm{Br}_{2(a q)}+2 \\mathrm{e}^{-} \\longrightarrow 2 \\mathrm{Br}_{(a q)}^{-} \\quad ; E^{\\circ}=+1.09 \\mathrm{~V}\n$$\n!\n$$\n\\begin{aligned}\n& \\left.\\mathrm{Fe}^{2+}{ }_{(a q)} \\longrightarrow \\mathrm{Fe}^{3+}{ }_{(a q)}+\\mathrm{e}^{-}\\right] \\times 2 \\quad ; \\quad E^{\\circ}=-0.77 \\mathrm{~V} \\quad \\text { en } \\mathrm{Ag} \\quad \\text { (s) } \\text { and } \\mathrm{Fe}_{3+(a q)} \\text { is } \\\\\n& \\mathrm{Br}_{2(a q)}+2 \\mathrm{Fe}^{2+}{ }_{(a q)} \\longrightarrow 2 \\mathrm{Br}^{-}{ }_{(a q)}+2 \\mathrm{Fe}^{3+}{ }_{(a q)} ; \\quad E^{\\circ}=+0.32 \\mathrm{~V} \\quad \\text { not feasible. }\n\\end{aligned}\n$$\n$E^{\\circ}$ for the overall reaction is positive, the reaction between Br Since 2(aq) and $\\mathrm{Fe}_{2+(a q)}$ is feasible."
+              "text": "(i) $$\n\\begin{array}{cl}\n\\left.\\mathrm{Fe}^{3+}{ }_{(\\mathrm{aq})}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Fe}^{2+}{ }_{(\\mathrm{aq})}\\right] \\times 2 ; & E^{0}=+0.77 \\mathrm{~V} \\\\\n2 \\mathrm{I}_{(\\mathrm{aq})}^{-} \\longrightarrow \\mathrm{I}_{2(\\mathrm{~s})}+2 \\mathrm{e}^{-} ; & E^{0}=-0.54 \\mathrm{~V} \\\\\n\\hline 2 \\mathrm{Fe}^{3+}{ }_{(\\mathrm{aq})}+2 \\mathrm{I}_{(\\mathrm{aq})}^{-} \\longrightarrow 2 \\mathrm{Fe}^{2+}{ }_{(\\mathrm{aq})}+\\mathrm{I}_{2(\\mathrm{~s})} ; & E^{0}=+0.23 \\mathrm{~V}\n\\end{array}\n$$\nSince 3+(aq) and I-(aq) is feasible.\n(ii) $$\n\\begin{array}{ll}\n\\left.\\mathrm{Ag}_{(a q)}^{+}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Ag}_{(s)}\\right] \\times 2 ; & E^{\\circ}=+0.80 \\mathrm{~V}, \\mathrm{Fe} \\\\\n\\mathrm{Cu}_{(s)} \\quad \\longrightarrow \\mathrm{Cu}_{(a q)}^{2+}+2 \\mathrm{e}^{-} ; & E^{\\circ}=-0.34 \\mathrm{~V} \\\\\n2 \\mathrm{Ag}_{(a q)}^{+}+\\mathrm{Cu}_{(s)} \\longrightarrow 2 \\mathrm{Ag}_{(s)}+\\mathrm{Cu}_{(a q)}^{2+} ; & E^{\\circ}=+0.46 \\mathrm{~V}\n\\end{array}\n$$\nSince $E^{\\circ}$ for the overall reaction is positive, the reaction between Ag+ (aq) and $\\mathrm{Cu}_{(s)}$ is feasible.\n(iii) $$\n\\begin{array}{ll}\n\\left.\\mathrm{Fe}^{3+}{ }_{(a q)}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Fe}^{2+}{ }_{(a q)}\\right] \\times 2 ; & E^{0}=+0.77 \\mathrm{~V} \\\\\n2 \\mathrm{Br}^{-}{ }_{(a q)} \\longrightarrow \\mathrm{Br}_{2(q)}+2 \\mathrm{e}^{-} \\quad ; & E^{0}=-1.09 \\mathrm{~V} \\\\\n\\hline 2 \\mathrm{Fe}^{3+}{ }_{(a q)}+2 \\mathrm{Br}^{-}{ }_{(a q)} \\longrightarrow 2 \\mathrm{Fe}^{2+}{ }_{(a q)} \\text { and } \\mathrm{Br}_{2(i)} ; & E^{0}=-0.32 \\mathrm{~V}\n\\end{array}\n$$\nSince $E^{\\circ}$ for the overall reaction is negative, the reaction between Fe3+ (aq) and Br- (aq) is not feasible.\n(iv) $$\n\\begin{array}{ll}\n\\mathrm{Ag}_{(s)} \\longrightarrow \\mathrm{Ag}_{(a q)}^{+}+\\mathrm{e}^{-} & ; E^{0}=-0.80 \\mathrm{~V} \\\\\n\\mathrm{Fe}^{3+}{ }_{(a q)}+\\mathrm{e}^{-} \\longrightarrow \\mathrm{Fe}^{2+}(a q) & ; E^{0}=+0.77 \\mathrm{~V} \\\\\n\\hline \\mathrm{Ag}_{(s)}+\\mathrm{Fe}^{3+}{ }_{(a q)} \\longrightarrow \\mathrm{Ag}_{(a q)}^{+}+\\mathrm{Fe}^{2+}{ }_{(a q)} & ; E^{0}=-0.03 \\mathrm{~V}\n\\end{array}\n$$\n(iv) $$\n\\mathrm{Br}_{2(a q)}+2 \\mathrm{e}^{-} \\longrightarrow 2 \\mathrm{Br}_{(a q)}^{-} \\quad ; E^{\\circ}=+1.09 \\mathrm{~V}\n$$\n!\n$$\n\\begin{aligned}\n& \\left.\\mathrm{Fe}^{2+}{ }_{(a q)} \\longrightarrow \\mathrm{Fe}^{3+}{ }_{(a q)}+\\mathrm{e}^{-}\\right] \\times 2 \\quad ; \\quad E^{\\circ}=-0.77 \\mathrm{~V} \\quad \\text { en } \\mathrm{Ag} \\quad \\text { (s) } \\text { and } \\mathrm{Fe}_{3+(a q)} \\text { is } \\\\\n& \\mathrm{Br}_{2(a q)}+2 \\mathrm{Fe}^{2+}{ }_{(a q)} \\longrightarrow 2 \\mathrm{Br}^{-}{ }_{(a q)}+2 \\mathrm{Fe}^{3+}{ }_{(a q)} ; \\quad E^{\\circ}=+0.32 \\mathrm{~V} \\quad \\text { not feasible. }\n\\end{aligned}\n$$\n$E^{\\circ}$ for the overall reaction is positive, the reaction between Br Since 2(aq) and $\\mathrm{Fe}_{2+(a q)}$ is feasible."
             }
           ]
         }
@@ -1776,7 +1776,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "$$\n\\mathrm{H}^{+}{ }_{(a q)}+\\mathrm{e}^{-} \\longrightarrow \\frac{1}{2} \\mathrm{H}_{2(g)}\n$$\n\nAt the anode, the following processes are possible.\n\n$$\n\\begin{aligned}\n& 2 \\mathrm{H}_{2} \\mathrm{O}_{(i)} \\longrightarrow \\mathrm{O}_{2(g)}+4 \\mathrm{H}_{(a q)}^{+}+4 \\mathrm{e}^{-} ; E^{\\circ}=+1.23 \\mathrm{~V} \\\\\n& 2 \\mathrm{SO}_{4(a q)}^{2-} \\longrightarrow \\mathrm{S}_{2} \\mathrm{O}_{6(a q)}^{2-}+2 \\mathrm{e}^{-} ; E^{\\circ}=+1.96 \\mathrm{~V}\n\\end{aligned}\n$$"
+              "text": "$$\n\\mathrm{H}^{+}{ }_{(a q)}+\\mathrm{e}^{-} \\longrightarrow \\frac{1}{2} \\mathrm{H}_{2(g)}\n$$\n\nAt the anode, the following processes are possible.\n\n$$\n\\begin{aligned}\n& 2 \\mathrm{H}_{2} \\mathrm{O}_{(i)} \\longrightarrow \\mathrm{O}_{2(g)}+4 \\mathrm{H}_{(a q)}^{+}+4 \\mathrm{e}^{-} ; E^{\\circ}=+1.23 \\mathrm{~V} \\\\\n& 2 \\mathrm{SO}_{4(a q)}^{2-} \\longrightarrow \\mathrm{S}_{2} \\mathrm{O}_{8(a q)}^{2-}+2 \\mathrm{e}^{-} ; E^{\\circ}=+1.96 \\mathrm{~V}\n\\end{aligned}\n$$"
             }
           ]
         },
@@ -1836,7 +1836,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "The following oxidation reactions are possible at the anode.\nAt the anode, the reaction with a lower value of\n\n$$\n\\begin{aligned}\n& \\mathrm{Cl}_{(a q)}^{-} \\longrightarrow 1 / 2 \\mathrm{Cl}_{2(g)}+\\mathrm{e}^{-1} ; E^{0}=1.36 \\mathrm{~V} \\\\\n& 2 \\mathrm{H}_{2} \\mathrm{O}_{(i)} \\longrightarrow \\mathrm{O}_{2(g)}+4 \\mathrm{H}_{(a q)}^{+}+4 \\mathrm{e}^{-} ; E^{0}=+1.23 \\mathrm{~V}\n\\end{aligned}\n$$"
+              "text": "The following oxidation reactions are possible at the anode.\nAt the anode, the reaction with a lower value of\n\n$$\n\\begin{aligned}\n& \\mathrm{Cl}_{(a q)}^{-} \\longrightarrow 1 / 2 \\mathrm{Cl}_{2(g)}+\\mathrm{e}^{-} ; E^{0}=1.36 \\mathrm{~V} \\\\\n& 2 \\mathrm{H}_{2} \\mathrm{O}_{(i)} \\longrightarrow \\mathrm{O}_{2(g)}+4 \\mathrm{H}_{(a q)}^{+}+4 \\mathrm{e}^{-} ; E^{0}=+1.23 \\mathrm{~V}\n\\end{aligned}\n$$"
             }
           ]
         },
@@ -1951,7 +1951,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "$$\n\\mathrm{Fe}^{2+} \\longrightarrow \\mathrm{Fe}^{3+}+\\mathrm{e}^{-1} ; E^{\\ominus}=-0.77 \\mathrm{~V}\n$$"
+              "text": "$$\n\\mathrm{Fe}^{2+} \\longrightarrow \\mathrm{Fe}^{3+}+\\mathrm{e}^{-} ; E^{\\ominus}=-0.77 \\mathrm{~V}\n$$"
             }
           ]
         },
@@ -2160,7 +2160,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "$$\n\\begin{aligned}\n\\Lambda_{m\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)}^{0} & =\\lambda_{\\mathrm{H}^{+}}^{0}+\\lambda_{\\mathrm{OH}}^{0} \\\\\n& =\\left(\\lambda_{\\mathrm{H}^{+}}^{0}+\\lambda_{\\mathrm{Cl}^{-}}^{0}\\right)+\\left(\\lambda_{\\mathrm{Na}^{+}}^{0}+\\lambda_{\\mathrm{OH}^{-}}^{0}\\right)-\\left(\\lambda_{\\mathrm{Na}^{+}}^{0}+\\lambda_{\\mathrm{Cl}^{-}}^{0}\\right) \\\\\n\\Lambda_{m(\\mathrm{HCl})}^{0} & +\\Lambda_{m(\\mathrm{NaOH})}^{0}-\\Lambda_{m(\\mathrm{NaCl})}^{0}\n\\end{aligned}\n$$\n\n$$\n\\Lambda_{m}^{0}\n$$"
+              "text": "$$\n\\begin{aligned}\n\\Lambda_{m\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)}^{0} & =\\lambda_{\\mathrm{H}^{+}}^{0}+\\lambda_{\\mathrm{OH}^{-}}^{0} \\\\\n& =\\left(\\lambda_{\\mathrm{H}^{+}}^{0}+\\lambda_{\\mathrm{Cl}^{-}}^{0}\\right)+\\left(\\lambda_{\\mathrm{Na}^{+}}^{0}+\\lambda_{\\mathrm{OH}^{-}}^{0}\\right)-\\left(\\lambda_{\\mathrm{Na}^{+}}^{0}+\\lambda_{\\mathrm{Cl}^{-}}^{0}\\right) \\\\\n& =\\Lambda_{m(\\mathrm{HCl})}^{0}+\\Lambda_{m(\\mathrm{NaOH})}^{0}-\\Lambda_{m(\\mathrm{NaCl})}^{0}\n\\end{aligned}\n$$\n\n$$\n\\Lambda_{m}^{0}\n$$"
             }
           ]
         },
@@ -2215,7 +2215,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "Thus, dissociation constant:\n\n$$\n\\begin{aligned}\nK & =\\frac{c \\propto c^{2}}{(1-\\propto)} \\\\\n& =\\frac{\\left(0.025 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)(0.114)^{2}}{(1-0.114)} \\\\\n& =3.67 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1}\n\\end{aligned}\n$$"
+              "text": "Thus, dissociation constant:\n\n$$\n\\begin{aligned}\nK & =\\frac{c \\alpha^{2}}{(1-\\alpha)} \\\\\n& =\\frac{\\left(0.025 \\mathrm{~mol} \\mathrm{~L}^{-1}\\right)(0.114)^{2}}{(1-0.114)} \\\\\n& =3.67 \\times 10^{-4} \\mathrm{~mol} \\mathrm{~L}^{-1}\n\\end{aligned}\n$$"
             }
           ]
         }
@@ -2328,7 +2328,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "The given reaction is as follows:\n\n$$\n\\begin{aligned}\n& \\mathrm{Cr}_{2} \\mathrm{O}_{7}^{2-}+14 \\mathrm{H}^{+}+6 \\mathrm{e}^{-} \\rightarrow 2 \\mathrm{Cr}^{3+}+7 \\mathrm{H}_{2} \\mathrm{O} \\text {, the required quantity of electricity will } \\\\\n& \\text { Therefore, to reduce } 1 \\text { mole of } \\mathrm{Cr}_{2} \\mathrm{O}_{7}^{2-}=6 \\mathrm{~F} \\\\\n& =6 \\times 96487 \\mathrm{C} \\\\\n& =578922 \\mathrm{C}\n\\end{aligned}\n$$"
+              "text": "The given reaction is as follows:\n\n$$\n\\begin{aligned}\n& \\mathrm{Cr}_{2} \\mathrm{O}_{7}^{2-}+14 \\mathrm{H}^{+}+6 \\mathrm{e}^{-} \\rightarrow 2 \\mathrm{Cr}^{3+}+7 \\mathrm{H}_{2} \\mathrm{O} \\\\\n& \\text { Therefore, to reduce } 1 \\text { mole of } \\mathrm{Cr}_{2} \\mathrm{O}_{7}^{2-} \\text {, the required quantity of electricity will } =6 \\mathrm{~F} \\\\\n& =6 \\times 96487 \\mathrm{C} \\\\\n& =578922 \\mathrm{C}\n\\end{aligned}\n$$"
             }
           ]
         }
@@ -2352,7 +2352,49 @@
         }
       ],
       "figures": [],
-      "solution_blocks": []
+      "solution_blocks": [
+        {
+          "type": "note",
+          "note_type": "caution",
+          "label": "Not in official solutions manual",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "On recharging, an external source of current is applied to the lead storage battery and the spontaneous discharge reaction is reversed; the electrode that was the anode during discharge acts as the cathode during charging, and the electrode that was the cathode during discharge acts as the anode during charging."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "At the cathode (charging), lead sulphate is reduced back to spongy lead:\n\n$$\n\\mathrm{PbSO}_{4}(\\mathrm{s})+2 \\mathrm{e}^{-} \\longrightarrow \\mathrm{Pb}(\\mathrm{s})+\\mathrm{SO}_{4}^{2-}(\\mathrm{aq})\n$$\n\nAt the anode (charging), lead sulphate is oxidised back to lead dioxide:\n\n$$\n\\mathrm{PbSO}_{4}(\\mathrm{s})+2 \\mathrm{H}_{2} \\mathrm{O}(\\mathrm{l}) \\longrightarrow \\mathrm{PbO}_{2}(\\mathrm{s})+\\mathrm{SO}_{4}^{2-}(\\mathrm{aq})+4 \\mathrm{H}^{+}(\\mathrm{aq})+2 \\mathrm{e}^{-}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Overall reaction on recharging (the exact reverse of the discharge reaction):\n\n$$\n2 \\mathrm{PbSO}_{4}(\\mathrm{s})+2 \\mathrm{H}_{2} \\mathrm{O}(\\mathrm{l}) \\longrightarrow \\mathrm{Pb}(\\mathrm{s})+\\mathrm{PbO}_{2}(\\mathrm{s})+2 \\mathrm{H}_{2} \\mathrm{SO}_{4}(\\mathrm{aq})\n$$\n\nThe materials involved are solid lead (Pb) and solid lead dioxide (PbO2), both regenerated from the lead sulphate (PbSO4) coating both electrodes after discharge, plus water and sulphuric acid in the electrolyte, whose concentration is restored as the two half-reactions proceed."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "it_2.14",
@@ -2467,7 +2509,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "Atmospheric oxygen then oxidises the ferrous ions further to ferric ions. These ferric ions combine with moisture in the surroundings to form hydrated ferric oxide, $\\left(\\mathrm{Fe}_{2} \\mathrm{O}_{3}, x \\mathrm{H}_{2} \\mathrm{O}\\right)_{\\text {i.e., rust. }}$.\n\nSo, rusting of iron can be seen as the setting up of an electrochemical cell."
+              "text": "Atmospheric oxygen then oxidises the ferrous ions further to ferric ions. These ferric ions combine with moisture in the surroundings to form hydrated ferric oxide, $\\left(\\mathrm{Fe}_{2} \\mathrm{O}_{3} \\cdot x \\mathrm{H}_{2} \\mathrm{O}\\right)_{\\text {i.e., rust. }}$.\n\nSo, rusting of iron can be seen as the setting up of an electrochemical cell."
             }
           ]
         }

@@ -14,7 +14,7 @@ measured, never typed. Re-run after any stage whose output changed.
 - figures: 64
 - verified: 0/48
 - simplified: 28/48
-- corrections applied so far: 76
+- corrections applied so far: 107
 
 ## Bilingual coverage — question text
 
@@ -23,12 +23,12 @@ measured, never typed. Re-run after any stage whose output changed.
 
 ## Empty fields (Rule 5 — must stay visible, never silently filled)
 
-- items with no solution at all: 1 — q_5.25
+- items with no solution at all: 0 — (none)
 - items with no final answer at all: 37 — ex_5.1, ex_5.4, ex_5.5, ex_5.7, q_5.1, q_5.2, q_5.3, q_5.4, q_5.6, q_5.7, q_5.8, q_5.10, q_5.11, q_5.13, q_5.14, q_5.15, q_5.16, q_5.17, q_5.18, q_5.19 … +17 more
 
 ## Stage history (`manifest.json`)
 
-- entries: 25
+- entries: 32
 - stages run at least once: combine, design, extract_match, format, format_correction, mathpix, pdf, simplify, split, tag, verify, verify_correction
 - total model calls across all entries: 47
 - gates that have failed at some point: front_unchanged, item_count_match, no_blank_pages, numeric_readback_vs_pdf_text, page_count_sane, tag_parse, visual_spot_check

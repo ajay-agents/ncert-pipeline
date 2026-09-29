@@ -362,14 +362,14 @@ The conductivity of $0.001028 \mathrm{~mol} \mathrm{~L}^{-1}$ acetic acid is $4.
 
 :::solution{label="Solution"}
 :::step{label="Substitute"}
-$\Lambda_{m}=\frac{\kappa}{c}=\frac{4.95 \times 10^{-5} \mathrm{Scm}^{-1}}{0.001028 \mathrm{~mol} \mathrm{~L}^{-1}} \times \frac{1000 \mathrm{~cm}^{3}}{\mathrm{~L}}=48.15 \mathrm{~S} \mathrm{~cm}^{3} \mathrm{~mol}^{-1}$
+$\Lambda_{m}=\frac{\kappa}{c}=\frac{4.95 \times 10^{-5} \mathrm{Scm}^{-1}}{0.001028 \mathrm{~mol} \mathrm{~L}^{-1}} \times \frac{1000 \mathrm{~cm}^{3}}{\mathrm{~L}}=48.15 \mathrm{~S} \mathrm{~cm}^{2} \mathrm{~mol}^{-1}$
 :::
 
 :::step{label="Conclusion"}
 $$
 \begin{aligned}
 & \alpha=\frac{\Lambda_{m}}{\Lambda_{m}^{\mathrm{o}}}=\frac{48.15 \mathrm{Scm}^{2} \mathrm{~mol}^{-1}}{390.5 \mathrm{Scm}^{2} \mathrm{~mol}^{-1}}=0.1233 \\
-& \mathrm{k}=\frac{\mathrm{c} \alpha^{2}}{(1-\alpha)}=\frac{0.001028 \mathrm{molL}^{-1} \times(0.1233)^{2}}{1-0.1233}=1.78 \times 10^{-5} \mathrm{~mol} \mathrm{~L}^{-1}
+& K_{a}=\frac{\mathrm{c} \alpha^{2}}{(1-\alpha)}=\frac{0.001028 \mathrm{molL}^{-1} \times(0.1233)^{2}}{1-0.1233}=1.78 \times 10^{-5} \mathrm{~mol} \mathrm{~L}^{-1}
 \end{aligned}
 $$
 :::
@@ -540,7 +540,7 @@ $\mathrm{Fe}^{2+}(\mathrm{aq})+\mathrm{Ag}^{+}(\mathrm{aq}) \rightarrow \mathrm{
 
 :::solution{label="Solution"}
 :::concept{label="Given"}
-(i) $E_{\mathrm{Cr}^{3+} / \mathrm{Cr}}^{\ominus}=0.74 \mathrm{~V}$
+(i) $E_{\mathrm{Cr}^{3+} / \mathrm{Cr}}^{\ominus}=-0.74 \mathrm{~V}$
 $$
 E_{\mathrm{Cd}^{2+} / \mathrm{Cd}}^{\ominus}=-0.40 \mathrm{~V}
 $$
@@ -805,7 +805,7 @@ $$
 :::
 
 :::answer
-**Answer:** $E^{\ominus} = 1.104 \mathrm{~V}$ (as stated); $\Delta_{r}G^{\ominus} = -213.04 \mathrm{~kJ}$ (calculation shown uses $1.04$, not $1.104$ — see report)
+**Answer:** $E^{\ominus} = 1.104 \mathrm{~V}$; $\Delta_{r}G^{\ominus} = -213.04 \mathrm{~kJ}$
 :::
 
 :::
@@ -837,7 +837,7 @@ Conductivity always decreases as concentration decreases, for both weak and stro
 :::
 
 :::concept{label="Molar conductivity"}
-## Molar conductivity:
+**Molar conductivity:**
 
 At a given concentration, molar conductivity is the conductance of a volume V of solution that contains 1 mole of the electrolyte, kept between two electrodes with area of cross-section $A$ and unit length between them.
 
@@ -845,7 +845,7 @@ $$
 \Lambda_{m}=\kappa \frac{A}{l}
 $$
 
-Now, $I=1$ and $A=\mathrm{V}$ (volume containing 1 mole of the electrolyte).
+Now, $l=1$ and $A=\mathrm{V}$ (volume containing 1 mole of the electrolyte).
 
 $$
 \therefore \Lambda_{m}=\kappa \mathrm{V}
@@ -965,7 +965,7 @@ $$
 \end{aligned}
 $$
 
-Then, $\mathrm{K}=11.85 \times 10^{-4} \mathrm{~S} \mathrm{~cm}^{-1}, \mathrm{c}^{1 / 2}=0.1 \mathrm{M}^{1 / 2}$
+Then, $\kappa=11.85 \times 10^{-4} \mathrm{~S} \mathrm{~cm}^{-1}, \mathrm{c}^{1 / 2}=0.1 \mathrm{M}^{1 / 2}$
 
 $$
 \begin{aligned}
@@ -991,7 +991,7 @@ Then, $\kappa=55.53 \times 10^{-4} \mathrm{~S} \mathrm{~cm}^{-1}, \mathrm{c}^{1 
 
 $$
 \begin{aligned}
-& \therefore \kappa=\frac{\kappa}{c} \\
+& \therefore \Lambda_{m}=\frac{\kappa}{c} \\
 & =\frac{55.53 \times 10^{-4} \mathrm{~S} \mathrm{~cm}^{-1}}{0.050 \mathrm{~mol} \mathrm{~L}^{-1}} \times \frac{1000 \mathrm{~cm}^{3}}{\mathrm{~L}} \\
 & =111.11 \mathrm{~S} \mathrm{~cm}^{2} \mathrm{~mol}^{-1} \text { Given, } \\
 & \kappa=106.74 \times 10^{-2} \mathrm{~S} \mathrm{~m}^{-1}, \mathrm{c}=0.100 \mathrm{M}
@@ -1002,7 +1002,7 @@ Then, $\kappa=106.74 \times 10^{-4} \mathrm{~S} \mathrm{~cm}^{-1}, \mathrm{c}^{1
 
 $$
 \begin{aligned}
-& \Lambda_{m}=\frac{K}{c} \\
+& \Lambda_{m}=\frac{\kappa}{c} \\
 = & \frac{106.74 \times 10^{-4} \mathrm{~S} \mathrm{~cm}^{-1}}{0.100 \mathrm{~mol} \mathrm{~L}^{-1}} \times \frac{1000 \mathrm{~cm}^{3}}{\mathrm{~L}} \\
 = & 106.74 \mathrm{~S} \mathrm{~cm}^{2} \mathrm{~mol}^{-1} \text { Now, we }
 \end{aligned}
@@ -1018,7 +1018,7 @@ have the following data:
 :::
 
 :::step{label="Conclusion"}
-Since the line interrupts ${ }^{\Lambda_{m}}$ at $124.0 \mathrm{~S} \mathrm{~cm}^{2} \mathrm{~mol}^{-1}, \Lambda_{m}^{0}=124.0 \mathrm{~S} \mathrm{~cm}^{2} \mathrm{~mol}^{-1}$.
+Since the line intercepts ${ }^{\Lambda_{m}}$ at $124.0 \mathrm{~S} \mathrm{~cm}^{2} \mathrm{~mol}^{-1}, \Lambda_{m}^{0}=124.0 \mathrm{~S} \mathrm{~cm}^{2} \mathrm{~mol}^{-1}$.
 :::
 :::
 
@@ -1037,7 +1037,7 @@ Conductivity of 0.00241 M acetic acid is $7.896 \times 10^{-5} \mathrm{~S} \math
 
 :::solution{label="Solution"}
 :::concept{label="Given"}
-Given, $\kappa=7.896 \times 10^{-5} \mathrm{~S} \mathrm{~m}^{-1} \mathrm{c}$
+Given, $\kappa=7.896 \times 10^{-5} \mathrm{~S} \mathrm{~cm}^{-1} \mathrm{c}$
 $=0.00241 \mathrm{~mol} \mathrm{~L}^{-1}$
 :::
 
@@ -1045,7 +1045,7 @@ Then, molar conductivity,
 
 :::formula{label="Key formula"}
 $$
-\Lambda_{m}=\frac{K}{\mathrm{c}}
+\Lambda_{m}=\frac{\kappa}{\mathrm{c}}
 $$
 :::
 
@@ -1206,7 +1206,7 @@ How much electricity in terms of Faraday is required to produce
 (i) According to the question,
 
 $$
-\mathrm{Ca}^{2+}+2 \mathrm{e}^{-1} \longrightarrow \underset{40 \mathrm{~g}}{\mathrm{Ca}}
+\mathrm{Ca}^{2+}+2 \mathrm{e}^{-} \longrightarrow \underset{40 \mathrm{~g}}{\mathrm{Ca}}
 $$
 :::
 
@@ -1228,7 +1228,7 @@ $$
 :::
 
 :::step{label="Substitute"}
-Electricity required to produce 27 g of AI = 3 F
+Electricity required to produce 27 g of Al = 3 F
 Therefore, electricity required to produce 40 g of $\mathrm{Al}=\frac{3 \times 40}{27} \mathrm{~F}$ $=4.44 \mathrm{~F}$
 :::
 :::
@@ -1290,7 +1290,7 @@ $$
 (ii) According to the question,
 
 $$
-\mathrm{Fe}^{2+} \longrightarrow \mathrm{Fe}^{3+}+\mathrm{e}^{-1}
+\mathrm{Fe}^{2+} \longrightarrow \mathrm{Fe}^{3+}+\mathrm{e}^{-}
 $$
 :::
 
@@ -1476,7 +1476,7 @@ Since 3+(aq) and I-(aq) is feasible.
 2 \mathrm{Ag}_{(a q)}^{+}+\mathrm{Cu}_{(s)} \longrightarrow 2 \mathrm{Ag}_{(s)}+\mathrm{Cu}_{(a q)}^{2+} ; & E^{\circ}=+0.46 \mathrm{~V}
 \end{array}
 $$
-$E^{\circ}$ for the overall reaction is positive, the rea ction between Ag Since + (aq) and $\mathrm{Cu}_{(s)}$ is feasible.
+Since $E^{\circ}$ for the overall reaction is positive, the reaction between Ag+ (aq) and $\mathrm{Cu}_{(s)}$ is feasible.
 (iii) $$
 \begin{array}{ll}
 \left.\mathrm{Fe}^{3+}{ }_{(a q)}+\mathrm{e}^{-} \longrightarrow \mathrm{Fe}^{2+}{ }_{(a q)}\right] \times 2 ; & E^{0}=+0.77 \mathrm{~V} \\
@@ -1484,7 +1484,7 @@ $E^{\circ}$ for the overall reaction is positive, the rea ction between Ag Since
 \hline 2 \mathrm{Fe}^{3+}{ }_{(a q)}+2 \mathrm{Br}^{-}{ }_{(a q)} \longrightarrow 2 \mathrm{Fe}^{2+}{ }_{(a q)} \text { and } \mathrm{Br}_{2(i)} ; & E^{0}=-0.32 \mathrm{~V}
 \end{array}
 $$
-Since $E^{\circ}$ for the overall reaction is negative, the reaction between Fe 3+ - (aq) and Br (aq) is not feasible.
+Since $E^{\circ}$ for the overall reaction is negative, the reaction between Fe3+ (aq) and Br- (aq) is not feasible.
 (iv) $$
 \begin{array}{ll}
 \mathrm{Ag}_{(s)} \longrightarrow \mathrm{Ag}_{(a q)}^{+}+\mathrm{e}^{-} & ; E^{0}=-0.80 \mathrm{~V} \\
@@ -1601,7 +1601,7 @@ At the anode, the following processes are possible.
 $$
 \begin{aligned}
 & 2 \mathrm{H}_{2} \mathrm{O}_{(i)} \longrightarrow \mathrm{O}_{2(g)}+4 \mathrm{H}_{(a q)}^{+}+4 \mathrm{e}^{-} ; E^{\circ}=+1.23 \mathrm{~V} \\
-& 2 \mathrm{SO}_{4(a q)}^{2-} \longrightarrow \mathrm{S}_{2} \mathrm{O}_{6(a q)}^{2-}+2 \mathrm{e}^{-} ; E^{\circ}=+1.96 \mathrm{~V}
+& 2 \mathrm{SO}_{4(a q)}^{2-} \longrightarrow \mathrm{S}_{2} \mathrm{O}_{8(a q)}^{2-}+2 \mathrm{e}^{-} ; E^{\circ}=+1.96 \mathrm{~V}
 \end{aligned}
 $$
 :::
@@ -1634,7 +1634,7 @@ At the anode, the reaction with a lower value of
 
 $$
 \begin{aligned}
-& \mathrm{Cl}_{(a q)}^{-} \longrightarrow 1 / 2 \mathrm{Cl}_{2(g)}+\mathrm{e}^{-1} ; E^{0}=1.36 \mathrm{~V} \\
+& \mathrm{Cl}_{(a q)}^{-} \longrightarrow 1 / 2 \mathrm{Cl}_{2(g)}+\mathrm{e}^{-} ; E^{0}=1.36 \mathrm{~V} \\
 & 2 \mathrm{H}_{2} \mathrm{O}_{(i)} \longrightarrow \mathrm{O}_{2(g)}+4 \mathrm{H}_{(a q)}^{+}+4 \mathrm{e}^{-} ; E^{0}=+1.23 \mathrm{~V}
 \end{aligned}
 $$
@@ -1720,7 +1720,7 @@ Substances that are stronger oxidising agents than ferrous ions can oxidise ferr
 
 :::formula{label="Key formula"}
 $$
-\mathrm{Fe}^{2+} \longrightarrow \mathrm{Fe}^{3+}+\mathrm{e}^{-1} ; E^{\ominus}=-0.77 \mathrm{~V}
+\mathrm{Fe}^{2+} \longrightarrow \mathrm{Fe}^{3+}+\mathrm{e}^{-} ; E^{\ominus}=-0.77 \mathrm{~V}
 $$
 :::
 
@@ -1891,9 +1891,9 @@ Applying Kohlrausch's law of independent migration of ions, the $\Lambda^{0}$ va
 :::formula{label="Key formula"}
 $$
 \begin{aligned}
-\Lambda_{m\left(\mathrm{H}_{2} \mathrm{O}\right)}^{0} & =\lambda_{\mathrm{H}^{+}}^{0}+\lambda_{\mathrm{OH}}^{0} \\
+\Lambda_{m\left(\mathrm{H}_{2} \mathrm{O}\right)}^{0} & =\lambda_{\mathrm{H}^{+}}^{0}+\lambda_{\mathrm{OH}^{-}}^{0} \\
 & =\left(\lambda_{\mathrm{H}^{+}}^{0}+\lambda_{\mathrm{Cl}^{-}}^{0}\right)+\left(\lambda_{\mathrm{Na}^{+}}^{0}+\lambda_{\mathrm{OH}^{-}}^{0}\right)-\left(\lambda_{\mathrm{Na}^{+}}^{0}+\lambda_{\mathrm{Cl}^{-}}^{0}\right) \\
-\Lambda_{m(\mathrm{HCl})}^{0} & +\Lambda_{m(\mathrm{NaOH})}^{0}-\Lambda_{m(\mathrm{NaCl})}^{0}
+& =\Lambda_{m(\mathrm{HCl})}^{0}+\Lambda_{m(\mathrm{NaOH})}^{0}-\Lambda_{m(\mathrm{NaCl})}^{0}
 \end{aligned}
 $$
 
@@ -1950,7 +1950,7 @@ Thus, dissociation constant:
 
 $$
 \begin{aligned}
-K & =\frac{c \propto c^{2}}{(1-\propto)} \\
+K & =\frac{c \alpha^{2}}{(1-\alpha)} \\
 & =\frac{\left(0.025 \mathrm{~mol} \mathrm{~L}^{-1}\right)(0.114)^{2}}{(1-0.114)} \\
 & =3.67 \times 10^{-4} \mathrm{~mol} \mathrm{~L}^{-1}
 \end{aligned}
@@ -2044,8 +2044,8 @@ The given reaction is as follows:
 
 $$
 \begin{aligned}
-& \mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}+14 \mathrm{H}^{+}+6 \mathrm{e}^{-} \rightarrow 2 \mathrm{Cr}^{3+}+7 \mathrm{H}_{2} \mathrm{O} \text {, the required quantity of electricity will } \\
-& \text { Therefore, to reduce } 1 \text { mole of } \mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}=6 \mathrm{~F} \\
+& \mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}+14 \mathrm{H}^{+}+6 \mathrm{e}^{-} \rightarrow 2 \mathrm{Cr}^{3+}+7 \mathrm{H}_{2} \mathrm{O} \\
+& \text { Therefore, to reduce } 1 \text { mole of } \mathrm{Cr}_{2} \mathrm{O}_{7}^{2-} \text {, the required quantity of electricity will } =6 \mathrm{~F} \\
 & =6 \times 96487 \mathrm{C} \\
 & =578922 \mathrm{C}
 \end{aligned}
@@ -2063,6 +2063,40 @@ $$
 
 :::prompt
 Write the chemistry of recharging the lead storage battery, highlighting all the materials that are involved during recharging.
+:::
+
+:::solution{label="Solution"}
+:::note{type="caution" label="Not in official solutions manual"}
+This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question.
+:::
+
+:::concept{label="Given"}
+On recharging, an external source of current is applied to the lead storage battery and the spontaneous discharge reaction is reversed; the electrode that was the anode during discharge acts as the cathode during charging, and the electrode that was the cathode during discharge acts as the anode during charging.
+:::
+
+:::formula{label="Key formula"}
+At the cathode (charging), lead sulphate is reduced back to spongy lead:
+
+$$
+\mathrm{PbSO}_{4}(\mathrm{s})+2 \mathrm{e}^{-} \longrightarrow \mathrm{Pb}(\mathrm{s})+\mathrm{SO}_{4}^{2-}(\mathrm{aq})
+$$
+
+At the anode (charging), lead sulphate is oxidised back to lead dioxide:
+
+$$
+\mathrm{PbSO}_{4}(\mathrm{s})+2 \mathrm{H}_{2} \mathrm{O}(\mathrm{l}) \longrightarrow \mathrm{PbO}_{2}(\mathrm{s})+\mathrm{SO}_{4}^{2-}(\mathrm{aq})+4 \mathrm{H}^{+}(\mathrm{aq})+2 \mathrm{e}^{-}
+$$
+:::
+
+:::step{label="Conclusion"}
+Overall reaction on recharging (the exact reverse of the discharge reaction):
+
+$$
+2 \mathrm{PbSO}_{4}(\mathrm{s})+2 \mathrm{H}_{2} \mathrm{O}(\mathrm{l}) \longrightarrow \mathrm{Pb}(\mathrm{s})+\mathrm{PbO}_{2}(\mathrm{s})+2 \mathrm{H}_{2} \mathrm{SO}_{4}(\mathrm{aq})
+$$
+
+The materials involved are solid lead (Pb) and solid lead dioxide (PbO2), both regenerated from the lead sulphate (PbSO4) coating both electrodes after discharge, plus water and sulphuric acid in the electrolyte, whose concentration is restored as the two half-reactions proceed.
+:::
 :::
 
 :::
@@ -2123,7 +2157,7 @@ $$
 :::
 
 :::step{label="Conclusion"}
-Atmospheric oxygen then oxidises the ferrous ions further to ferric ions. These ferric ions combine with moisture in the surroundings to form hydrated ferric oxide, $\left(\mathrm{Fe}_{2} \mathrm{O}_{3}, x \mathrm{H}_{2} \mathrm{O}\right)_{\text {i.e., rust. }}$.
+Atmospheric oxygen then oxidises the ferrous ions further to ferric ions. These ferric ions combine with moisture in the surroundings to form hydrated ferric oxide, $\left(\mathrm{Fe}_{2} \mathrm{O}_{3} \cdot x \mathrm{H}_{2} \mathrm{O}\right)_{\text {i.e., rust. }}$.
 
 So, rusting of iron can be seen as the setting up of an electrochemical cell.
 :::

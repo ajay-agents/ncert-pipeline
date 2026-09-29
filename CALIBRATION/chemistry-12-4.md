@@ -14,7 +14,7 @@ measured, never typed. Re-run after any stage whose output changed.
 - figures: 0
 - verified: 0/58
 - simplified: 41/58
-- corrections applied so far: 44
+- corrections applied so far: 47
 
 ## Bilingual coverage — question text
 
@@ -28,8 +28,8 @@ measured, never typed. Re-run after any stage whose output changed.
 
 ## Stage history (`manifest.json`)
 
-- entries: 30
-- stages run at least once: combine, design, extract_match, format, format_correction, mathpix, pdf, simplify, split, tag, verify, verify_correction
-- total model calls across all entries: 61
+- entries: 38
+- stages run at least once: combine, design, design-fixup, extract_match, format, format-fixup, format_correction, mathpix, pdf, simplify, simplify-fixup, split, tag, tag-fixup, verify, verify_correction
+- total model calls across all entries: 62
 - gates that have failed at some point: front_unchanged, item_count_match, no_blank_pages, numeric_readback_vs_pdf_text, page_count_sane, tag_parse, visual_spot_check
 

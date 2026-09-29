@@ -626,5 +626,110 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export via Playwright/Chromium per step_10/PROMPT.md: navigated to the real 09_design/final.en.html file:// path, waited on networkidle + document.fonts.ready + a 300ms settle, called page.emulate_media(media='screen') unconditionally before page.pdf() (the standing per-export fix for Chromium's print-media text-shaping bug, applied even though this is an English-only chapter with no Devanagari, per this project's own standing rule to apply it unconditionally), print_background=True + prefer_css_page_size=True, no explicit format/width/height. Gate (fitz/PyMuPDF): page count 27 (sane for a 58-item chapter - lower page-per-item density than the other 3 chemistry chapters since most of this chapter's solutions are short, single-block qualitative answers rather than multi-line numeric derivations), 0 blank pages. Numeric read-back re-run against the PDF's OWN extracted text (not assumed carried over from the stage-9 HTML check) with the documented superscript/subscript-merge-trap guard: 23 numeric tokens checked (fewer than the other 3 chemistry chapters, consistent with this chapter's mostly qualitative content - electron configurations, comparisons, definitions - rather than heavy numeric calculation), 0 missing. Visually spot-checked page 1 (Examples 4.1-4.4, including the it_4.4 fix carried all the way through to the exported PDF) - renders cleanly, correct pagination, no cut-off content, no console errors. With this, chemistry-12-4's English track is complete through all 10 stages, alongside its pre-existing, separately-completed Hindi track - matching the now-established pattern for chemistry-12-1/12-2/12-3 this session."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-28T07:41:55.955997+00:00",
+    "inputs": {
+      "combined.en.md": "27017dbcde70a5ce",
+      "chapter.en.pdf": "4f33bf2825d1d693",
+      "chapter.hi.pdf": "a964070502b8a475",
+      "solutions.en.pdf": "b7fae14ad6f4bab3",
+      "solutions.hi.pdf": "931bc554036c55af"
+    },
+    "counts": {
+      "corrections_applied": 44,
+      "corrections_held": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_math_parity",
+      "gate_counts"
+    ],
+    "model_calls": 0,
+    "notes": "Retroactive fix pass (session 2026-09-28) against an external chemistry review of chemistry-12-4 (Task A/B/C claims): 11 factual-value claims, 12 conceptual claims and several formatting/leftover-text claims independently re-verified against the source chapter.en.pdf (Tables 4.1, 4.10, 4.11) and real inorganic chemistry (electron configurations, magnetic moments, redox half-reaction balancing) before being applied as high-confidence corrections; no genuinely missing solutions found (gate_solutions_present clean) and no part-prompt render-bug items found in 08_tag/structured.en.json."
+  },
+  {
+    "stage": "simplify-fixup",
+    "at": "2026-09-28T07:48:29.716404+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "fae80f7e8b4535ee",
+      "chapter.verified.hi.md": "f11acdd10dbf2d24"
+    },
+    "counts": {
+      "corrections_applied_total": 44,
+      "note": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "gate_question_text_frozen",
+      "gate_answers_unchanged",
+      "gate_math_parity"
+    ],
+    "model_calls": 0,
+    "notes": "Cascaded all 44 stage-5 retroactive-fix-pass corrections (session 2026-09-28) into 06_simplify/chapter.simplified.en.md, patching either the identical verified-stage text or simplify's own reworded phrasing as needed (protect.freeze() kept every math/table span byte-identical through simplify, so only plain-prose wording needed a second, reworded-aware pass)."
+  },
+  {
+    "stage": "format-fixup",
+    "at": "2026-09-28T07:53:33.872816+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "d2be08d69ffd8811"
+    },
+    "counts": {
+      "corrections_cascaded": 44
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded all 44 stage-5 retroactive-fix-pass corrections (session 2026-09-28) into 07_format/structured.en.md, patching the same (byte-identical) text as 06_simplify; re-parsed with pipeline.tag._parse() to confirm no broken container syntax was introduced."
+  },
+  {
+    "stage": "tag-fixup",
+    "at": "2026-09-28T07:53:33.877450+00:00",
+    "inputs": {
+      "structured.en.md": "097c8352ffae77a7"
+    },
+    "counts": {
+      "corrections_cascaded": 44
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded all 44 stage-5 retroactive-fix-pass corrections (session 2026-09-28) into 08_tag/structured.en.json by walking the JSON tree and patching each affected text/html leaf (a handful of fixes that span more than one given/key_formula/substitute/conclusion block, e.g. q_4.31 Ce3+ magnetic moment and q_4.16(ii)/q_4.14 SO2 half-reaction and pH-equilibrium fixes, were patched block-by-block rather than as one flat string); verified no genuinely-missing solutions (gate_solutions_present) and no part-prompt render-bug items in this chapter."
+  },
+  {
+    "stage": "design-fixup",
+    "at": "2026-09-28T11:03:46.976481+00:00",
+    "inputs": {
+      "structured.en.json": "5202830b426423dc"
+    },
+    "counts": {
+      "corrections_cascaded": 44
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Hand-patched 09_design/final.en.html to reflect all 44 stage-5 retroactive-fix-pass corrections (session 2026-09-28), matching the already-fixed structured.en.json content: chemistry-content fixes (Ce3+ magnetic moment, SO2/MnO4- half-reaction, ozone duplicate-species equation, colour rule, dichromate/chromate pH equilibrium, electron configurations, Table 4.1/4.11 data, mischmetall uses, interstitial compounds, nitric-acid-vs-actinoids, lanthanoid-contraction-makes-separation-harder, backwards E-degree reasoning, melting-point explanation) plus formatting fixes (## heading bleed, stray markdown table separators, CO2+/Co2+ OCR confusion, T1/Ti and V subscript typos, mislabelled part, missing space, stray spaces in bracket notation, and a general sweep of the \".→\"+unmatched-\"]\" half-reaction bracket rendering bug found in q_4.15/q_4.16). No new CSS classes were needed (final.en.css left untouched) since every fix reused existing component classes. Verified: no literal \"##\"/\":---\" remains, no stray period-arrow remains, balanced div/span tag counts."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-28T11:03:46.978689+00:00",
+    "inputs": {
+      "final.en.html": "aebb8800b627b9fd"
+    },
+    "counts": {
+      "page_count": 27,
+      "blank_pages": 0,
+      "numeric_tokens_checked": 135,
+      "numeric_tokens_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [
+      "page_count_sane",
+      "no_blank_pages",
+      "numeric_read_back"
+    ],
+    "model_calls": 0,
+    "notes": "Re-exported 10_pdf/final.en.pdf from the corrected 09_design/final.en.html via Playwright/Chromium (networkidle + document.fonts.ready + emulate_media(\"screen\") + prefer_css_page_size + print_background), per step_10/PROMPT.md. Gate: 27 pages (sane for a 58-item chapter), no blank pages, and a numeric read-back re-run against the PDFs own extracted text (135 numeric tokens pulled from every question/final_answer field in 06_simplify/chapter.simplified.en.md via mdio.markdown_to_chapter, unicode-superscript-normalized with a separator inserted before each exponent run to avoid the base+exponent merge trap) found 0 missing."
   }
 ]

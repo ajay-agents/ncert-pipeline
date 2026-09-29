@@ -160,7 +160,7 @@ Cerium ( $Z=58$ )
 
 ## Questions and Solutions
 
-:::question{number="4.1" kind="exercise" id="q_4.1" topic="Electronic configurations of transition ions" corrections_applied="2"}
+:::question{number="4.1" kind="exercise" id="q_4.1" topic="Electronic configurations of transition ions" corrections_applied="5"}
 #### Question 4.1
 
 :::prompt
@@ -188,7 +188,7 @@ $\mathrm{Pm}^{3+}$
 :::solution
 $\mathrm{Pm}^{3+}: 1 s^{2} 2 s^{2} 2 p^{6} 3 s^{2} 3 p^{6} 3 d^{10} 4 s^{2} 4 p^{6} 4 d^{10} 5 s^{2} 5 p^{6} 4 f^{4}$
 
-Or, $[\mathrm{Xe}]^{54} 3 d^{3}$
+Or, $[\mathrm{Xe}]^{54} 4 f^{4}$
 :::
 
 :::
@@ -240,7 +240,7 @@ $\mathrm{Lu}^{2+}$
 :::solution
 $\mathrm{Lu}^{2+}$ : $1 s^{2} 2 s^{2} 2 p^{6} 3 s^{2} 3 p^{6} 3 d^{10} 4 s^{2} 4 p^{6} 4 d^{10} 5 s^{2} 5 p^{6} 4 f^{14} 5 d^{1}$
 
-Or, $[\mathrm{Xe}]^{54} 2 f^{14} 3 d^{3}$
+Or, $[\mathrm{Xe}]^{54} 4 f^{14} 5 d^{1}$
 :::
 
 :::
@@ -264,7 +264,7 @@ $\mathrm{Th}^{4+}$
 :::
 
 :::solution
-$\mathrm{Th}^{4+}$ : $1 s^{2} 2 s^{2} 2 p^{6} 3 s^{2} 3 p^{6} 3 d^{10} 4 s^{2} 4 p^{6} 4 d^{10} 4 f^{14} 5 s^{2} 5 p^{6} 5 d^{10} 6 s^{2} 6 s^{6}$ Or, $[\mathrm{Rn}]^{86}$
+$\mathrm{Th}^{4+}$ : $1 s^{2} 2 s^{2} 2 p^{6} 3 s^{2} 3 p^{6} 3 d^{10} 4 s^{2} 4 p^{6} 4 d^{10} 4 f^{14} 5 s^{2} 5 p^{6} 5 d^{10} 6 s^{2} 6 p^{6}$ Or, $[\mathrm{Rn}]^{86}$
 :::
 
 :::
@@ -287,7 +287,7 @@ changes to a more stable $3 d^{5}$ configuration. Therefore, $\mathrm{Fe}^{2+}$ 
 
 :::
 
-:::question{number="4.3" kind="exercise" id="q_4.3" topic="Stability trend of +2 oxidation state" corrections_applied="1"}
+:::question{number="4.3" kind="exercise" id="q_4.3" topic="Stability trend of +2 oxidation state" corrections_applied="2"}
 #### Question 4.3
 
 :::prompt
@@ -309,7 +309,6 @@ It can be easily observed that except Sc, all others metals display +2 oxidation
 
 $$
 \begin{aligned}
-& \mathrm{Sc}(+2)=d^{1} \\
 & \mathrm{Ti}(+2)=d^{2} \\
 & \mathrm{~V}(+2)=d^{3} \\
 & \mathrm{Cr}(+2)=d^{4} \\
@@ -335,7 +334,7 @@ The elements in the first-half of the transition series exhibit many oxidation s
 
 :::
 
-:::question{number="4.5" kind="exercise" id="q_4.5" topic="Stable oxidation states from d-configurations"}
+:::question{number="4.5" kind="exercise" id="q_4.5" topic="Stable oxidation states from d-configurations" corrections_applied="2"}
 #### Question 4.5
 
 :::prompt
@@ -345,14 +344,13 @@ What may be the stable oxidation state of the transition element with the follow
 :::solution{label="Solution"}
 |  | Electronic configuration in ground state | Stable oxidation states |
 | :--- | :--- | :--- |
-| (i) | $3 d^{3}$ (Vanadium) | +2, +3, +4 and +5 |
+| (i) | $3 d^{3}$ (Vanadium) | +5 |
 
 
-| (ii) | $3 d^{5}$ (Chromium) | +3, +4, +6 |
-| :--- | :--- | :--- |
-| (iii) | $3 d^{5}$ (Manganese) | +2, +4, +6, +7 |
-| (iv) | $3 d^{8}$ (Cobalt) | +2, +3 |
-| (v) | $3 d^{4}$ | There is no3d ${ }^{4}$ configuration in ground state. |
+| (ii) | $3 d^{5}$ (Chromium) | +3 |
+| (iii) | $3 d^{5}$ (Manganese) | +2 |
+| (iv) | $3 d^{8}$ (Nickel) | +2 |
+| (v) | $3 d^{4}$ | There is no $3 d^{4}$ configuration in the ground state of any transition element. |
 :::
 
 :::
@@ -380,7 +378,7 @@ Oxidation state of Mn is + 7.
 
 :::
 
-:::question{number="4.7" kind="exercise" id="q_4.7" topic="Lanthanoid contraction and its consequences"}
+:::question{number="4.7" kind="exercise" id="q_4.7" topic="Lanthanoid contraction and its consequences" corrections_applied="1"}
 #### Question 4.7
 
 :::prompt
@@ -391,12 +389,11 @@ What is lanthanoid contraction? What are the consequences of lanthanoid contract
 As we move along the lanthanoid series, the atomic number increases gradually by one. This means that the number of electrons and protons present in an atom also increases by one. As electrons are being added to the same shell, the effective nuclear charge increases. This happens because the increase in nuclear attraction due to the addition of proton is more pronounced than the increase in the interelectronic repulsions due to the
 addition of electron. Also, with the increase in atomic number, the number of electrons in the $4 f$ orbital also increases. The $4 f$ electrons have poor shielding effect. Therefore, the effective nuclear charge experienced by the outer electrons increases. Consequently, the attraction of the nucleus for the outermost electrons increases. This results in a steady decrease in the size of lanthanoids with the increase in the atomic number. This is termed as lanthanoid contraction.
 
-## Consequences of lanthanoid contraction
+**Consequences of lanthanoid contraction:**
 
-(i) There is similarity in the properties of second and third transition series. ii.
-
-Separation of lanthanoids is possible due to lanthanide contraction.
-(iii) It is due to lanthanide contraction that there is variation in the basic strength of lanthanide hydroxides. (Basic strength decreases from $\mathrm{La}(\mathrm{OH})_{3}$ to $\mathrm{Lu}(\mathrm{OH})_{3}$.)
+(i) There is similarity in the properties of the second and third transition series.
+(ii) Lanthanoid contraction makes the lanthanoids so close to one another in size and properties that separating them from each other is difficult.
+(iii) It is due to lanthanoid contraction that there is variation in the basic strength of lanthanoid hydroxides. (Basic strength decreases from $\mathrm{La}(\mathrm{OH})_{3}$ to $\mathrm{Lu}(\mathrm{OH})_{3}$.)
 :::
 
 :::
@@ -444,7 +441,7 @@ In the lanthanide series, +3 oxidation state is most common i.e., $\operatorname
 
 :::
 
-:::question{number="4.11" kind="exercise" id="q_4.11" topic="Reasons for transition metal properties"}
+:::question{number="4.11" kind="exercise" id="q_4.11" topic="Reasons for transition metal properties" corrections_applied="1"}
 #### Question 4.11
 
 :::prompt
@@ -479,7 +476,7 @@ The transition metals generally form coloured compounds.
 :::
 
 :::solution
-Most of the complexes of transition metals are coloured. This is because of the absorption of radiation from visible light region to promote an electron from one of the $d$-orbitals to another. In the presence of ligands, the $d$-orbitals split up into two sets of orbitals having different energies. Therefore, the transition of electrons can take place from one set toanother. The energy required for these transitions is quite small and falls
+Most of the complexes of transition metals are coloured. This is because of the absorption of radiation from visible light region to promote an electron from one of the $d$-orbitals to another. In the presence of ligands, the $d$-orbitals split up into two sets of orbitals having different energies. Therefore, the transition of electrons can take place from one set to another. The energy required for these transitions is quite small and falls
 in the visible region of radiation. The ions of transition metals absorb the radiation of a particular wavelength and the rest is reflected, imparting colour to the solution.
 :::
 
@@ -500,7 +497,7 @@ The catalytic activity of the transition elements can be explained by two basic 
 
 :::
 
-:::question{number="4.12" kind="exercise" id="q_4.12" topic="Interstitial compounds in transition metals"}
+:::question{number="4.12" kind="exercise" id="q_4.12" topic="Interstitial compounds in transition metals" corrections_applied="1"}
 #### Question 4.12
 
 :::prompt
@@ -508,7 +505,7 @@ What are interstitial compounds? Why are such compounds well known for transitio
 :::
 
 :::solution{label="Solution"}
-Transition metals are large in size and contain lots of interstitial sites. Transition elements can trap atoms of other elements (that have small atomic size), such as H, C, N, in the interstitial sites of their crystal lattices. The resulting compounds are called interstitial compounds.
+Transition metals are large in size and contain lots of interstitial sites (voids) in their crystal lattices. Small atoms of other elements, such as H, C or N, get trapped in these interstitial sites; the resulting compounds - usually non-stoichiometric (e.g. VH0.56) and neither typically ionic nor covalent - are called interstitial compounds. They are well known for transition metals because of these large lattices, and are characterised by: (i) high melting points, higher than the pure metal; (ii) considerable hardness, some approaching diamond; (iii) retained metallic conductivity; and (iv) chemical inertness.
 :::
 
 :::
@@ -526,7 +523,7 @@ In transition elements, the oxidation state can vary from +1 to the highest oxid
 
 :::
 
-:::question{number="4.14" kind="exercise" id="q_4.14" topic="Potassium dichromate preparation and pH effect"}
+:::question{number="4.14" kind="exercise" id="q_4.14" topic="Potassium dichromate preparation and pH effect" corrections_applied="2"}
 #### Question 4.14
 
 :::prompt
@@ -553,16 +550,21 @@ $$
 \mathrm{Na}_{2} \mathrm{Cr}_{2} \mathrm{O}_{7}+2 \mathrm{KCl} \longrightarrow \mathrm{~K}_{2} \mathrm{Cr}_{2} \mathrm{O}_{7}+2 \mathrm{NaCl}
 $$
 
-Potassium chloride being less soluble than sodium chloride is obtained in the form of orange coloured crystals and can be removed by filtration.
-The dichromate ion $\left(\mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}\right)$ exists in equilibrium with chromate $\left(\mathrm{CrO}_{4}^{2-}\right)_{\text {ion at } \mathrm{pH} 4}$. However, by changing the pH , they can be interconverted.
+Sodium dichromate is more soluble than potassium dichromate, so orange crystals of potassium dichromate crystallise out of the solution and can be removed by filtration.
+The chromate ($\mathrm{CrO}_{4}^{2-}$, yellow) and dichromate ($\mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}$, orange) ions are interconvertible in aqueous solution, depending on the pH.
 
 $$
-2 \mathrm{CrO}_{4}^{2-} \hat{ \pm}_{\text {Alkali }}^{2 \text { alaid }} 2 \mathrm{HCrO}_{4}^{-} \quad \hat{ \pm}_{\text {Alkalt }}^{\text {2ladat }} \mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}
+\begin{aligned}
+& 2 \mathrm{CrO}_{4}^{2-}+2 \mathrm{H}^{+} \longrightarrow \mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}+\mathrm{H}_{2} \mathrm{O} \\
+& \mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}+2 \mathrm{OH}^{-} \longrightarrow 2 \mathrm{CrO}_{4}^{2-}+\mathrm{H}_{2} \mathrm{O}
+\end{aligned}
 $$
 
-| Chromate | Hydrogen | Dichromate |
-| :--- | :--- | :--- |
-| (Yellow) | chromate | (Orange) |
+Increasing the pH (making the solution more alkaline) shifts the equilibrium towards chromate, turning the solution yellow; decreasing it (acidifying) shifts it back towards dichromate, turning it orange.
+
+| Chromate | Dichromate |
+| :--- | :--- |
+| (Yellow) | (Orange) |
 :::
 
 :::
@@ -645,7 +647,7 @@ $$
 
 :::
 
-:::question{number="4.16" kind="exercise" id="q_4.16" topic="Potassium permanganate preparation and reactions"}
+:::question{number="4.16" kind="exercise" id="q_4.16" topic="Potassium permanganate preparation and reactions" corrections_applied="2"}
 #### Question 4.16
 
 :::prompt
@@ -672,9 +674,9 @@ $$
 Acidified potassium permanganate oxidizes $\mathrm{SO}_{2}$ to sulphuric acid.
 $$
 \begin{aligned}
-& \mathrm{MnO}_{4}^{-}+6 \mathrm{H}^{+}+5 \mathrm{e}^{-}\left.\longrightarrow \mathrm{Mn}^{2+}+3 \mathrm{H}_{2} \mathrm{O}\right] \times 2 \\
-& 2 \mathrm{H}_{2} \mathrm{O}+2 \mathrm{SO}_{2}+\mathrm{O}_{2}\left.\longrightarrow 4 \mathrm{H}^{+}+2 \mathrm{SO}_{4}^{2-}+2 \mathrm{e}^{-}\right] \times 5 \\
-& \hline 2 \mathrm{MnO}_{4}^{-}+10 \mathrm{SO}_{2}+5 \mathrm{O}_{2}+4 \mathrm{H}_{2} \mathrm{O} \longrightarrow 2 \mathrm{Mn}^{2+}+10 \mathrm{SO}_{4}^{2-}+8 \mathrm{H}^{+} \\
+& \left.\mathrm{MnO}_{4}^{-}+8 \mathrm{H}^{+}+5 \mathrm{e}^{-} \longrightarrow \mathrm{Mn}^{2+}+4 \mathrm{H}_{2} \mathrm{O}\right] \times 2 \\
+& \left.\mathrm{SO}_{2}+2 \mathrm{H}_{2} \mathrm{O} \longrightarrow \mathrm{SO}_{4}^{2-}+4 \mathrm{H}^{+}+2 \mathrm{e}^{-}\right] \times 5 \\
+& \hline 2 \mathrm{MnO}_{4}^{-}+5 \mathrm{SO}_{2}+2 \mathrm{H}_{2} \mathrm{O} \longrightarrow 2 \mathrm{Mn}^{2+}+5 \mathrm{SO}_{4}^{2-}+4 \mathrm{H}^{+} \\
 & \hline
 \end{aligned}
 $$
@@ -735,14 +737,14 @@ Oxidation by ozone
 $$
 \begin{aligned}
 & 2 \mathrm{~K}_{2} \mathrm{MnO}_{4}+\mathrm{O}_{3}+\mathrm{H}_{2} \mathrm{O} \longrightarrow 2 \mathrm{KMnO}_{4}+2 \mathrm{KOH}+\mathrm{O}_{2} \\
-& 2 \mathrm{MnO}_{4}^{2-}+\mathrm{O}_{3}+\mathrm{H}_{2} \mathrm{O} \longrightarrow 2 \mathrm{MnO}_{4}^{2-}+2 \mathrm{OH}^{-}+\mathrm{O}_{2}
+& 2 \mathrm{MnO}_{4}^{2-}+\mathrm{O}_{3}+\mathrm{H}_{2} \mathrm{O} \longrightarrow 2 \mathrm{MnO}_{4}^{-}+2 \mathrm{OH}^{-}+\mathrm{O}_{2}
 \end{aligned}
 $$
 :::
 
 :::
 
-:::question{number="4.17" kind="exercise" id="q_4.17" topic="E-degree values and metal ion stability"}
+:::question{number="4.17" kind="exercise" id="q_4.17" topic="E-degree values and metal ion stability" corrections_applied="2"}
 #### Question 4.17
 
 :::prompt
@@ -750,7 +752,7 @@ For $\mathrm{M}^{2+} / \mathrm{M}$ and $\mathrm{M}^{3+} / \mathrm{M}^{2+}$ syste
 
 $$
 \begin{array}{llll}
-\mathrm{Cr}^{2+} / \mathrm{Cr} & -0.9 \mathrm{~V} & \mathrm{Cr}^{3} / \mathrm{Cr}^{2+} & -0.4 \mathrm{~V} \\
+\mathrm{Cr}^{2+} / \mathrm{Cr} & -0.9 \mathrm{~V} & \mathrm{Cr}^{3+} / \mathrm{Cr}^{2+} & -0.4 \mathrm{~V} \\
 \mathrm{Mn}^{2+} / \mathrm{Mn} & -1.2 \mathrm{~V} & \mathrm{Mn}^{3+} / \mathrm{Mn}^{2+} & +1.5 \mathrm{~V} \\
 \mathrm{Fe}^{2+} / \mathrm{Fe} & -0.4 \mathrm{~V} & \mathrm{Fe}^{3+} / \mathrm{Fe}^{2+} & +0.8 \mathrm{~V}
 \end{array}
@@ -765,7 +767,7 @@ the stability of $\mathrm{Fe}^{3+}$ in acid solution as compared to that of $\ma
 :::
 
 :::solution
-The ${ }^{\ominus}$ value for $\mathrm{Fe}^{3+} / \mathrm{Fe}^{2+}$ is higher than that for $\mathrm{Cr}^{3+} / \mathrm{Cr}^{2+}$ and lower than that for $\mathrm{Mn}^{3+} / \mathrm{Mn}^{2+}$. So, the reduction of $\mathrm{Fe}^{3+}$ to $\mathrm{Fe}^{2+}$ is easier than the reduction of $\mathrm{Mn}^{3+}$ to $\mathrm{Mn}^{2+}$, but not as easy as the reduction of $\mathrm{Cr}^{3+}$ to $\mathrm{Cr}^{2+}$. Hence, $\mathrm{Fe}^{3+}$ is more stable than $\mathrm{Mn}^{3+}$, but less stable than $\mathrm{Cr}^{3+}$. These metal ions can be arranged in the increasing order of their stability as: $\mathrm{Mn}^{3+}<\mathrm{Fe}^{3+}<\mathrm{Cr}^{3+}$
+The $E^{\ominus}$ value for $\mathrm{Fe}^{3+} / \mathrm{Fe}^{2+}$ is higher than that for $\mathrm{Cr}^{3+} / \mathrm{Cr}^{2+}$ and lower than that for $\mathrm{Mn}^{3+} / \mathrm{Mn}^{2+}$. A higher (more positive) value means the ion is reduced more easily, so $\mathrm{Mn}^{3+}$ is reduced to $\mathrm{Mn}^{2+}$ most easily, $\mathrm{Fe}^{3+}$ to $\mathrm{Fe}^{2+}$ less easily, and $\mathrm{Cr}^{3+}$ to $\mathrm{Cr}^{2+}$ least easily of the three. Hence, $\mathrm{Cr}^{3+}$ is the most stable of the three ions in acid solution, $\mathrm{Fe}^{3+}$ is next, and $\mathrm{Mn}^{3+}$ is the least stable. These metal ions can be arranged in the increasing order of their stability as: $\mathrm{Mn}^{3+}<\mathrm{Fe}^{3+}<\mathrm{Cr}^{3+}$
 :::
 
 :::
@@ -786,7 +788,7 @@ So, the oxidation of Fe to $\mathrm{Fe}^{2+}$ is not as easy as the oxidation of
 
 :::
 
-:::question{number="4.18" kind="exercise" id="q_4.18" topic="Colour prediction of aqueous ions"}
+:::question{number="4.18" kind="exercise" id="q_4.18" topic="Colour prediction of aqueous ions" corrections_applied="1"}
 #### Question 4.18
 
 :::prompt
@@ -794,27 +796,26 @@ Predict which of the following will be coloured in aqueous solution? $\mathrm{Ti
 :::
 
 :::solution{label="Solution"}
-Only the ions that have electrons in $d$-orbital will be coloured. The ions in which $d$-orbital is empty will be colourless.
+Colour comes from d-d transitions, which need a partially filled $d$-orbital: an ion with an empty or completely filled $d$-subshell is colourless.
 
 | Element | Atomic Number | Ionic State | Electronic configuration in ionic state |
 | :--- | :--- | :--- | :--- |
 
 
-| Ti | 22 | $\mathrm{T} 1^{3+}$ | $[\mathrm{Ar}] 3 d^{1}$ |
-| :--- | :--- | :--- | :--- |
-| V | 23 | $\mathrm{V}_{3+}$ | $[\mathrm{Ar}] 3 d^{2}$ |
+| Ti | 22 | $\mathrm{Ti}^{3+}$ | $[\mathrm{Ar}] 3 d^{1}$ |
+| V | 23 | $\mathrm{V}^{3+}$ | $[\mathrm{Ar}] 3 d^{2}$ |
 | Cu | 29 | $\mathrm{Cu}^{+}$ | $[\mathrm{Ar}] 3 d^{10}$ |
 | Sc | 21 | $\mathrm{Sc}^{3+}$ | [Ar] |
 | Mn | 25 | $\mathrm{Mn}^{2+}$ | $[\mathrm{Ar}] 3 d^{5}$ |
 | Fe | 26 | $\mathrm{Fe}^{3+}$ | $[\mathrm{Ar}] 3 d^{5}$ |
 | Co | 27 | $\mathrm{Co}^{2+}$ | $[\mathrm{Ar}] 3 d^{7}$ |
 
-From the above table, it can be easily observed that only $\mathrm{Sc}^{3+}$ has an empty $d$-orbital. All other ions, except $\mathrm{Sc}^{3+}$, will be coloured in aqueous solution because of $d-d$ transitions.
+From the table, $\mathrm{Sc}^{3+}$ and $\mathrm{Cu}^{+}$ have no partially filled $d$-orbital (empty or full), so both are colourless; the rest are coloured because of d-d transitions in a partially filled $d$-subshell.
 :::
 
 :::
 
-:::question{number="4.19" kind="exercise" id="q_4.19" topic="Stability of +2 oxidation state comparison"}
+:::question{number="4.19" kind="exercise" id="q_4.19" topic="Stability of +2 oxidation state comparison" corrections_applied="1"}
 #### Question 4.19
 
 :::prompt
@@ -832,7 +833,6 @@ Compare the stability of +2 oxidation state for the elements of the first transi
 
 
 | Co | +1 | +2 | +3 | +4 | +5 |  |  |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Ni | +1 | +2 | +3 | +4 |  |  |  |
 | Cu | +1 | +2 | +3 |  |  |  |  |
 | Zn |  | +2 |  |  |  |  |  |
@@ -842,7 +842,7 @@ From the above table, it is evident that the maximum number of oxidation states 
 
 :::
 
-:::question{number="4.20" kind="exercise" id="q_4.20" topic="Actinoids vs lanthanoids comparison" corrections_applied="1"}
+:::question{number="4.20" kind="exercise" id="q_4.20" topic="Actinoids vs lanthanoids comparison" corrections_applied="2"}
 #### Question 4.20
 
 :::prompt
@@ -889,7 +889,7 @@ chemical reactivity.
 :::
 
 :::solution
-In the lanthanide series, the earlier members of the series are more reactive. They have reactivity that is comparable to Ca . With an increase in the atomic number, the lanthanides start behaving similar to Al. Actinoids, on the other hand, are highly reactive metals, especially when they are finely divided. When they are added to boiling water, they give a mixture of oxide and hydride. Actinoids combine with most of the non-metals at moderate temperatures. Alkalies have no action on these actinoids. In case of acids, they are slightly affected by nitric acid (because of the formation of a protective oxide layer).
+In the lanthanide series, the earlier members of the series are more reactive. They have reactivity that is comparable to Ca . With an increase in the atomic number, the lanthanides start behaving similar to Al. Actinoids, on the other hand, are highly reactive metals, especially when they are finely divided. When they are added to boiling water, they give a mixture of oxide and hydride. Actinoids combine with most of the non-metals at moderate temperatures. Alkalies have no action on these actinoids. Hydrochloric acid attacks all of them, but most are only slightly affected by nitric acid because of the formation of a protective oxide layer.
 :::
 
 :::
@@ -985,7 +985,7 @@ In the first transition series, Cu exhibits +1 oxidation state very frequently. 
 
 :::
 
-:::question{number="4.24" kind="exercise" id="q_4.24" topic="Unpaired electrons in gaseous ions"}
+:::question{number="4.24" kind="exercise" id="q_4.24" topic="Unpaired electrons in gaseous ions" corrections_applied="1"}
 #### Question 4.24
 
 :::prompt
@@ -998,7 +998,7 @@ Calculate the number of unpaired electrons in the following gaseous ions: $\math
 | (i) | $\mathrm{Mn}^{3+},[\mathrm{Ar}] 3 d^{4}$ | 4 |
 | (ii) | $\mathrm{Cr}^{3+},[\mathrm{Ar}] 3 d^{3}$ | 3 |
 | (iii) | $\mathrm{V}^{3+},[\mathrm{Ar}] 3 d^{2}$ | 2 |
-| (vi) | $\mathrm{Ti}^{3+},[\mathrm{Ar}] 3 d^{1}$ | 1 |
+| (iv) | $\mathrm{Ti}^{3+},[\mathrm{Ar}] 3 d^{1}$ | 1 |
 
 $\mathrm{Cr}^{3+}$ is the most stable in aqueous solutions owing to a $t_{2 g}^{3}$ configuration.
 :::
@@ -1054,7 +1054,7 @@ So, oxo-anions of a metal have the highest oxidation state. For example, in $\ma
 
 :::
 
-:::question{number="4.26" kind="exercise" id="q_4.26" topic="Preparation of dichromate and permanganate"}
+:::question{number="4.26" kind="exercise" id="q_4.26" topic="Preparation of dichromate and permanganate" corrections_applied="3"}
 #### Question 4.26
 
 :::prompt
@@ -1087,17 +1087,14 @@ $$
 \mathrm{Na}_{2} \mathrm{Cr}_{2} \mathrm{O}_{7}+2 \mathrm{KCl} \longrightarrow \mathrm{~K}_{2} \mathrm{Cr}_{2} \mathrm{O}_{7}+2 \mathrm{NaCl}
 $$
 
-Potassium chloride being less soluble than sodium chloride is obtained in the form of orange coloured crystals and can be removed by filtration.
+Sodium dichromate is more soluble than potassium dichromate, so orange crystals of potassium dichromate crystallise out of the solution and can be removed by filtration.
 The dichromate ion $\left(\mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}\right)$ exists in equilibrium with chromate $\left(\mathrm{CrO}_{4}^{2-}\right)_{\text {ion at } \mathrm{pH} 4}$. However, by changing the pH , they can be interconverted.
 
 $$
-\begin{array}{llcl}
-2 \mathrm{CrO}_{4}^{2-} & \stackrel{\text { Acid }}{\text { Alkali }} & 2 \mathrm{HCrO}_{4}^{-} & \stackrel{\text { Acid }}{\leftrightarrow} \\
-\text { Chromate } & & \text { Hydrogen } & \\
-\text { (Yellow) } & & \text { chromate } & \\
-\text { (Yellow } & & \text { Dichromate } \\
-\text { (Orange) } &
-\end{array}
+\begin{aligned}
+& 2 \mathrm{CrO}_{4}^{2-}+2 \mathrm{H}^{+} \longrightarrow \mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}+\mathrm{H}_{2} \mathrm{O} \\
+& \mathrm{Cr}_{2} \mathrm{O}_{7}^{2-}+2 \mathrm{OH}^{-} \longrightarrow 2 \mathrm{CrO}_{4}^{2-}+\mathrm{H}_{2} \mathrm{O}
+\end{aligned}
 $$
 :::
 
@@ -1148,7 +1145,7 @@ Oxidation by ozone
 $$
 \begin{aligned}
 & 2 \mathrm{~K}_{2} \mathrm{MnO}_{4}+\mathrm{O}_{3}+\mathrm{H}_{2} \mathrm{O} \longrightarrow 2 \mathrm{KMnO}_{4}+2 \mathrm{KOH}+\mathrm{O}_{2} \\
-& 2 \mathrm{MnO}_{4}^{2-}+\mathrm{O}_{3}+\mathrm{H}_{2} \mathrm{O} \longrightarrow 2 \mathrm{MnO}_{4}^{2-}+2 \mathrm{OH}^{-}+\mathrm{O}_{2}
+& 2 \mathrm{MnO}_{4}^{2-}+\mathrm{O}_{3}+\mathrm{H}_{2} \mathrm{O} \longrightarrow 2 \mathrm{MnO}_{4}^{-}+2 \mathrm{OH}^{-}+\mathrm{O}_{2}
 \end{aligned}
 $$
 :::
@@ -1157,7 +1154,7 @@ $$
 
 :::
 
-:::question{number="4.27" kind="exercise" id="q_4.27" topic="Alloys containing lanthanoid metals"}
+:::question{number="4.27" kind="exercise" id="q_4.27" topic="Alloys containing lanthanoid metals" corrections_applied="1"}
 #### Question 4.27
 
 :::prompt
@@ -1171,9 +1168,8 @@ An important alloy of lanthanoids is Mischmetal. It contains lanthanoids (94-95\
 
 Uses
 
-(1) Mischmetal is used in cigarettes and gas lighters.
-(2) It is used in flame throwing tanks.
-(3) It is used in tracer bullets and shells.
+(1) A good deal of mischmetal is used in Mg-based alloys to make lighter flints (as in cigarette/gas lighters).
+(2) It is used to make bullets and shells.
 :::
 
 :::
@@ -1191,7 +1187,7 @@ Inner transition metals are those elements in which the last electron enters the
 
 :::
 
-:::question{number="4.29" kind="exercise" id="q_4.29" topic="Actinoid oxidation state complexity"}
+:::question{number="4.29" kind="exercise" id="q_4.29" topic="Actinoid oxidation state complexity" corrections_applied="1"}
 #### Question 4.29
 
 :::prompt
@@ -1199,8 +1195,7 @@ The chemistry of the actinoid elements is not so smooth as that of the lanthanoi
 :::
 
 :::solution{label="Solution"}
-Lanthanoids primarily show three oxidation states (+2, +3, +4). Among these oxidation states, +3 state is the most common. Lanthanoids display a limited number of oxidation states because the energy difference between $4 f, 5 d$, and $6 s$ orbitals is quite large. On the other hand, the energy difference between $5 f, 6 d$, and $7 s$ orbitals is very less. Hence, actinoids display a large number of oxidation states. For example, uranium and plutonium
-display +3, +4, +5, and +6 oxidation states while neptunium displays +3, +4, +5, and +7. The most common oxidation state in case of actinoids is also +3.
+Lanthanoids primarily show three oxidation states (+2, +3, +4). Among these oxidation states, +3 state is the most common. Lanthanoids display a limited number of oxidation states because the energy difference between $4 f, 5 d$, and $6 s$ orbitals is quite large. On the other hand, the energy difference between $5 f, 6 d$, and $7 s$ orbitals is very less. Hence, actinoids display a large number of oxidation states. For example, uranium displays +3, +4, +5, and +6 oxidation states, while neptunium and plutonium display +3, +4, +5, +6, and +7. The most common oxidation state in case of actinoids is also +3.
 :::
 
 :::
@@ -1218,7 +1213,7 @@ The last element in the actinoid series is lawrencium, Lr. Its atomic number is 
 
 :::
 
-:::question{number="4.31" kind="exercise" id="q_4.31" topic="Ce3+ configuration and magnetic moment"}
+:::question{number="4.31" kind="exercise" id="q_4.31" topic="Ce3+ configuration and magnetic moment" corrections_applied="1"}
 #### Question 4.31
 
 :::prompt
@@ -1227,8 +1222,13 @@ Use Hund's rule to derive the electronic configuration of $\mathrm{Ce}^{3+}$ ion
 
 :::solution{label="Solution"}
 $$
-\mathrm{Ce}: 1 s^{2} 2 s^{2} 2 p^{6} 3 s^{2} 3 p^{6} 3 d^{10} 4 s^{2} 4 p^{6} 4 d^{10} 5 s^{2} 5 p^{6} 4 f^{1} 5 d^{1} 6 s^{2}
+\begin{aligned}
+& \mathrm{Ce}: 1 s^{2} 2 s^{2} 2 p^{6} 3 s^{2} 3 p^{6} 3 d^{10} 4 s^{2} 4 p^{6} 4 d^{10} 5 s^{2} 5 p^{6} 4 f^{1} 5 d^{1} 6 s^{2} \\
+& \mathrm{Ce}^{3+}: 1 s^{2} 2 s^{2} 2 p^{6} 3 s^{2} 3 p^{6} 3 d^{10} 4 s^{2} 4 p^{6} 4 d^{10} 5 s^{2} 5 p^{6} 4 f^{1}
+\end{aligned}
 $$
+
+Removing 3 electrons from neutral Ce (the two 6s electrons and the one 5d electron) leaves Ce3+ with one unpaired 4f electron (Hund's rule).
 
 Magnetic moment can be calculated as:
 
@@ -1239,15 +1239,14 @@ $$
 Where,
 $n=$ number of unpaired electrons
 
-In Ce, $n=2$
-Therefore, $\mu=\sqrt{2(2+2)}$
+In Ce3+, $n=1$
+Therefore, $\mu=\sqrt{1(1+2)}$
 
 $$
 \begin{aligned}
-& =\sqrt{2 \times 4} \\
-& =\sqrt{8} \\
-& =2 \sqrt{2} \\
-& =2.828 \mathrm{BM}
+& =\sqrt{1 \times 3} \\
+& =\sqrt{3} \\
+& =1.73 \mathrm{BM}
 \end{aligned}
 $$
 :::
@@ -1280,7 +1279,7 @@ Yb after forming $\mathrm{Yb}^{2+}$ attains a stable electronic configuration of
 
 :::
 
-:::question{number="4.33" kind="exercise" id="q_4.33" topic="Actinoid vs lanthanoid chemistry comparison"}
+:::question{number="4.33" kind="exercise" id="q_4.33" topic="Actinoid vs lanthanoid chemistry comparison" corrections_applied="4"}
 #### Question 4.33
 
 :::prompt
@@ -1288,22 +1287,22 @@ Compare the chemistry of the actinoids with that of lanthanoids with reference t
 :::
 
 :::solution{label="Solution"}
-## Electronic configuration
+**Electronic configuration:**
 
 The general electronic configuration for lanthanoids is $[\mathrm{Xe}]^{54} 4 f^{0-14} 5 d^{0-1} 6 s^{2}$ and that for actinoids is $[\mathrm{Rn}]^{86} 5 f^{1-14} 6 d^{0-1} 7 s^{2}$. Unlike $4 f$ orbitals, $5 f$ orbitals are not deeply buried and participate in bonding to a greater extent.
 
-## Oxidation states
+**Oxidation states:**
 
 The principal oxidation state of lanthanoids is (+3). However, sometimes we also encounter oxidation states of + 2 and + 4. This is because of extra stability of fully-filled and half-filled orbitals. Actinoids exhibit a greater range of oxidation states. This is because the $5 f, 6 d$, and $7 s$ levels are of comparable energies. Again, ( +3 ) is the principal oxidation state for actinoids. Actinoids such as lanthanoids have more compounds in +3 state than in +4 state.
 
-## Chemical reactivity
+**Chemical reactivity:**
 
-In the lanthanide series, the earlier members of the series are more reactive. They have reactivity that is comparable to Ca . With an increase in the atomic number, the lanthanides start behaving similar to Al. Actinoids, on the other hand, are highly reactive metals, especially when they are finely divided. When they are added to boiling water, they give a mixture of oxide and hydride. Actinoids combine with most of the non-metals at moderate temperatures. Alkalies have no action on these actinoids. In case of acids, they are slightly affected by nitric acid (because of the formation of a protective oxide layer).
+In the lanthanide series, the earlier members of the series are more reactive. They have reactivity that is comparable to Ca . With an increase in the atomic number, the lanthanides start behaving similar to Al. Actinoids, on the other hand, are highly reactive metals, especially when they are finely divided. When they are added to boiling water, they give a mixture of oxide and hydride. Actinoids combine with most of the non-metals at moderate temperatures. Alkalies have no action on these actinoids. Hydrochloric acid attacks all of them, but most are only slightly affected by nitric acid because of the formation of a protective oxide layer.
 :::
 
 :::
 
-:::question{number="4.34" kind="exercise" id="q_4.34" topic="Electronic configurations of given atomic numbers"}
+:::question{number="4.34" kind="exercise" id="q_4.34" topic="Electronic configurations of given atomic numbers" corrections_applied="1"}
 #### Question 4.34
 
 :::prompt
@@ -1317,14 +1316,13 @@ Write the electronic configurations of the elements with the atomic numbers 61, 
 
 
 | 91 | $[\mathrm{Rn}]^{86} 5 f^{2} 6 d^{1} 7 s^{2}$ |
-| :--- | :--- |
-| 101 | $[\mathrm{Rn}]^{86} 5 f^{13} 5 d^{0} 7 s^{2}$ |
+| 101 | $[\mathrm{Rn}]^{86} 5 f^{13} 6 d^{0} 7 s^{2}$ |
 | 109 | $[\mathrm{Rn}]^{86} 5 f^{14} 6 d^{7} 7 s^{2}$ |
 :::
 
 :::
 
-:::question{number="4.35" kind="exercise" id="q_4.35" topic="First series vs heavier transition series"}
+:::question{number="4.35" kind="exercise" id="q_4.35" topic="First series vs heavier transition series" corrections_applied="5"}
 #### Question 4.35
 
 :::prompt
@@ -1342,8 +1340,8 @@ In the first transition series, two elements show unusual electronic configurati
 
 $$
 \begin{aligned}
-& \operatorname{Cr}(24)=3 d^{5} 4 s^{\prime} \\
-& \operatorname{Cu}(29)=3 d^{10} 4 s^{\prime}
+& \operatorname{Cr}(24)=3 d^{5} 4 s^{1} \\
+& \operatorname{Cu}(29)=3 d^{10} 4 s^{1}
 \end{aligned}
 $$
 
@@ -1351,6 +1349,7 @@ Similarly, there are exceptions in the second transition series. These are:
 
 $$
 \begin{aligned}
+& \operatorname{Nb}(41)=4 d^{4} 5 s^{1} \\
 & \operatorname{Mo}(42)=4 d^{5} 5 s^{1} \\
 & \operatorname{Tc}(43)=4 d^{6} 5 s^{1} \\
 & \operatorname{Ru}(44)=4 d^{7} 5 s^{1} \\
@@ -1364,7 +1363,6 @@ There are some exceptions in the third transition series as well. These are:
 
 $$
 \begin{aligned}
-& \mathrm{W}(74)=5 d^{4} 6 s^{2} \\
 & \mathrm{Pt}(78)=5 d^{9} 6 s^{1} \\
 & \mathrm{Au}(79)=5 d^{10} 6 s^{1}
 \end{aligned}
@@ -1380,7 +1378,7 @@ As a result of these exceptions, it happens many times that the electronic confi
 In each of the three transition series the number of oxidation states shown by the elements is the maximum in the middle and the minimum at the extreme ends.
 
 However, +2 and +3 oxidation states are quite stable for all elements present in the first transition series. All metals present in the first transition series form stable compounds in the +2 and +3 oxidation states. The stability of the +2 and +3 oxidation states decreases in the second and the third transition series, wherein higher oxidation states are more important.
-For example $\left[\mathrm{Fe}(\mathrm{Cn})_{6}\right]^{4-},\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]^{3+},\left[\mathrm{Ti}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right]^{3+}$ are stable complexes, but no such complexes are known for the second and third transition series such as Mo, W, Rh, In. They form complexes in which their oxidation states are high. For example: $\mathrm{WCl}_{6}, \mathrm{ReF}_{7}$, $\mathrm{RuO}_{4}$, etc.
+For example $\left[\mathrm{Fe}(\mathrm{CN})_{6}\right]^{4-},\left[\mathrm{Co}\left(\mathrm{NH}_{3}\right)_{6}\right]^{3+},\left[\mathrm{Ti}\left(\mathrm{H}_{2} \mathrm{O}\right)_{6}\right]^{3+}$ are stable complexes, but no such complexes are known for the second and third transition series such as Mo, W, Rh, Ir. They form complexes in which their oxidation states are high. For example: $\mathrm{WCl}_{6}, \mathrm{ReF}_{7}$, $\mathrm{RuO}_{4}$, etc.
 :::
 
 :::
@@ -1403,7 +1401,7 @@ Atomic size generally decreases from left to right across a period. Now, among t
 
 :::
 
-:::question{number="4.36" kind="exercise" id="q_4.36" topic="3d electron count in hydrated ions"}
+:::question{number="4.36" kind="exercise" id="q_4.36" topic="3d electron count in hydrated ions" corrections_applied="2"}
 #### Question 4.36
 
 :::prompt
@@ -1414,22 +1412,21 @@ Write down the number of 3d electrons in each of the following ions: $\mathrm{Ti
 | Metal ion | Number of $\boldsymbol{d}$-electrons | Filling of $\boldsymbol{d}$-orbitals |
 | :--- | :--- | :--- |
 | $\mathrm{Ti}^{2+}$ | 2 | $t_{2 g}^{2}$ |
-| $\mathrm{V}_{2+}$ | 3 | $t_{2 g}^{3}$ |
+| $\mathrm{V}^{2+}$ | 3 | $t_{2 g}^{3}$ |
 | $\mathrm{Cr}^{3+}$ | 3 | $t_{2 g}^{3}$ |
 | $\mathrm{Mn}^{2+}$ | 5 | $t_{2 g}^{3} e_{g}^{2}$ |
 
 
 | $\mathrm{Fe}^{2+}$ | 6 | $t_{2 g}^{4} e_{g}^{2}$ |
-| :--- | :--- | :--- |
 | $\mathrm{Fe}^{3+}$ | 5 | $t_{2 g}^{3} e_{g}^{2}$ |
-| $\mathrm{CO}^{2+}$ | 7 | $t_{2 g}^{5} e_{g}^{2}$ |
+| $\mathrm{Co}^{2+}$ | 7 | $t_{2 g}^{5} e_{g}^{2}$ |
 | $\mathrm{Ni}^{2+}$ | 8 | $t_{2 g}^{6} e_{g}^{2}$ |
 | $\mathrm{Cu}^{2+}$ | 9 | $t_{2 g}^{6} e_{g}^{3}$ |
 :::
 
 :::
 
-:::question{number="4.37" kind="exercise" id="q_4.37" topic="First series' distinct properties"}
+:::question{number="4.37" kind="exercise" id="q_4.37" topic="First series' distinct properties" corrections_applied="1"}
 #### Question 4.37
 
 :::prompt
@@ -1441,13 +1438,13 @@ The properties of the elements of the first transition series differ from those 
 (i) The atomic sizes of the elements of the first transition series are smaller than those of the heavier elements (elements of $2^{\text {nd }}$ and $3^{\text {rd }}$ transition series).
 
 However, the atomic sizes of the elements in the third transition series are virtually the same as those of the corresponding members in the second transition series. This is due to lanthanoid contraction.
-(ii) +2 and +3 oxidation states are more common for elements in the first transition series, while higher oxidation states are more common for the heavier elements. (iii) The enthalpies of atomisation of the elements in the first transition series are lower than those of the corresponding elements in the second and third transition series. (iv) The melting and boiling points of the first transition series are lower than those of the heavier transition elements. This is because of the occurrence of stronger metallic bonding (M-M bonding).
+(ii) +2 and +3 oxidation states are more common for elements in the first transition series, while higher oxidation states are more common for the heavier elements. (iii) The enthalpies of atomisation of the elements in the first transition series are lower than those of the corresponding elements in the second and third transition series. (iv) The melting and boiling points of the first transition series are lower than those of the heavier transition elements. This is because the heavier elements' more diffuse 4d and 5d orbitals overlap more extensively, giving stronger metallic (M-M) bonding than in the first series.
 (v) The elements of the first transition series form low-spin or high-spin complexes depending upon the strength of the ligand field. However, the heavier transition elements form only low-spin complexes, irrespective of the strength of the ligand field.
 :::
 
 :::
 
-:::question{number="4.38" kind="exercise" id="q_4.38" topic="Magnetic moment of complex species" corrections_applied="1"}
+:::question{number="4.38" kind="exercise" id="q_4.38" topic="Magnetic moment of complex species" corrections_applied="4"}
 #### Question 4.38
 
 :::prompt
@@ -1461,10 +1458,10 @@ What can be inferred from the magnetic moment values of the following complex sp
 :::
 
 :::solution{label="Solution"}
-Magnetic
+Magnetic moment is given as
 
 $$
-\mu \text { ) is given as } \mu=\sqrt{n(n+2)} \text { moment }(.
+\mu=\sqrt{n(n+2)}
 $$
 
 For value $n=1$,
@@ -1497,7 +1494,7 @@ $$
 \mu=\sqrt{5(5+2)}=\sqrt{35}=5.92
 $$
 
-(i) $\mathbf{K}_{\mathbf{4}}\left[\mathbf{M n}(\mathbf{C N})_{\mathbf{6}}\right]$
+(i) $\mathbf{K}_{\mathbf{4}}\left[\mathbf{Mn}(\mathbf{CN})_{\mathbf{6}}\right]$
 
 For in transition metals, the magnetic moment is calculated from the spin-only formula. Therefore,
 
@@ -1513,7 +1510,7 @@ $\sqrt{n(n+2)}=5.3$
 We can see from the above calculation that the given value is closest to $n=4$. Also, in this complex, Fe is in the +2 oxidation state. This means that Fe has 6 electrons in the $d$ orbital.
 
 Hence, we can say that $\mathrm{H}_{2} \mathrm{O}$ is a weak field ligand and does not cause the pairing of electrons.
-(iii) $\mathbf{K}_{\mathbf{2}}\left[\mathbf{M n C l}_{\mathbf{4}}\right]$
+(iii) $\mathbf{K}_{\mathbf{2}}\left[\mathbf{MnCl}_{\mathbf{4}}\right]$
 $\sqrt{n(n+2)}=5.9$
 We can see from the above calculation that the given value is closest to $n=5$. Also, in this complex, Mn is in the +2 oxidation state. This means that Mn has 5 electrons in the $d$ orbital.
 
@@ -1611,7 +1608,7 @@ Second ionization energies are higher than the first since it becomes difficult 
 
 :::
 
-:::question{number="4.6" kind="additional_exercise" id="it_4.6" topic="Highest oxidation state in oxides/fluorides"}
+:::question{number="4.6" kind="additional_exercise" id="it_4.6" topic="Highest oxidation state in oxides/fluorides" corrections_applied="1"}
 #### Additional Question 4.6
 
 :::prompt
@@ -1619,12 +1616,12 @@ Why is the highest oxidation state of a metal exhibited in its oxide or fluoride
 :::
 
 :::solution{label="Solution"}
-Both oxide and fluoride ions are highly electronegative and have a very small size. Due to these properties, they are able to oxidize the metal to its highest oxidation state.
+Oxygen and fluorine are small, highly electronegative atoms, which lets them pull electron density strongly from a metal and stabilise it in a high oxidation state. Oxygen can, in addition, form multiple (p pi - d pi) bonds with the metal, letting it stabilise even higher oxidation states than fluorine can (e.g. Mn reaches +7 in Mn2O7 but not in any fluoride) - which is why a transition metal's highest oxidation state is usually seen in its oxide or fluoride.
 :::
 
 :::
 
-:::question{number="4.7" kind="additional_exercise" id="it_4.7" topic="Comparing reducing agents Cr2+ and Fe2+"}
+:::question{number="4.7" kind="additional_exercise" id="it_4.7" topic="Comparing reducing agents Cr2+ and Fe2+" corrections_applied="1"}
 #### Additional Question 4.7
 
 :::prompt
@@ -1635,18 +1632,18 @@ Which is a stronger reducing agent $\mathrm{Cr}^{2+}$ or $\mathrm{Fe}^{2+}$ and 
 The following reactions are involved when $\mathrm{Cr}^{2+}$ and $\mathrm{Fe}^{2+}$ act as reducing agents.
 
 $$
-\begin{array}{ll}
-\longrightarrow & \mathrm{Cr}_{2}+3+\mathrm{Fe}_{2}+ \\
-E^{\circ} \mathrm{Cr}^{3+} / \mathrm{Cr}^{2+} & \text { The value is }-0.41 \mathrm{~V} \text { and } E_{\mathrm{Fe}^{3+} / \mathrm{Fe}^{2+}}^{\circ} \text { is }+0.77 \mathrm{~V} . \text { This means that } \mathrm{Cr}^{2+} \text { can }
-\end{array}
+\begin{aligned}
+& \mathrm{Cr}^{2+} \longrightarrow \mathrm{Cr}^{3+}+\mathrm{e}^{-} ; \quad E^{\ominus}=-0.41 \mathrm{~V} \\
+& \mathrm{Fe}^{2+} \longrightarrow \mathrm{Fe}^{3+}+\mathrm{e}^{-} ; \quad E^{\ominus}=+0.77 \mathrm{~V}
+\end{aligned}
 $$
 
-be easily oxidized to $\mathrm{Cr}^{3+}$, but $\mathrm{Fe}^{2+}$ does not get oxidized to $\mathrm{Fe}^{3+}$ easily. Therefore, $\mathrm{Cr}^{2+}$ is a better reducing agent that $\mathrm{Fe}^{3+}$.
+$\mathrm{Cr}^{2+}$ is readily oxidised to $\mathrm{Cr}^{3+}$ (negative E-value), but $\mathrm{Fe}^{2+}$ is not easily oxidised to $\mathrm{Fe}^{3+}$ (positive E-value). Therefore, it is a better reducing agent than $\mathrm{Fe}^{2+}$.
 :::
 
 :::
 
-:::question{number="4.8" kind="additional_exercise" id="it_4.8" topic="Spin-only magnetic moment calculation" corrections_applied="1"}
+:::question{number="4.8" kind="additional_exercise" id="it_4.8" topic="Spin-only magnetic moment calculation" corrections_applied="2"}
 #### Additional Question 4.8
 
 :::prompt
@@ -1671,7 +1668,7 @@ $$
 & \Rightarrow \sqrt{n(n+2)}=\mu \\
 & \Rightarrow \sqrt{3(3+2)}=\mu \\
 & \Rightarrow \sqrt{15}=\mu \\
-& \mu \approx 4 \mathrm{BM}
+& \mu \approx 3.87 \mathrm{BM}
 \end{aligned}
 $$
 :::

@@ -19,39 +19,42 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
-              "text": "Assume we have 100 g of solution — we can start with any amount, since the result will be the same. This solution contains 20 g of ethylene glycol and 80 g of water."
+              "text": "Solution\nAssume we have 100 g of solution — we can start with any amount, since the result will be the same. This solution contains 20 g of ethylene glycol and 80 g of water."
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Molar mass of $\\mathrm{C}_{2} \\mathrm{H}_{6} \\mathrm{O}_{2}=12 \\times 2+1 \\times 6+16 \\times 2=62 \\mathrm{~g} \\mathrm{~mol}^{-1}$.\nMoles of $\\mathrm{C}_{2} \\mathrm{H}_{6} \\mathrm{O}_{2}=\\frac{20 \\mathrm{~g}}{62 \\mathrm{~g} \\mathrm{~mol}^{-1}}=0.322 \\mathrm{~mol}$\n\n$$\n\\begin{gathered}\n\\text { Moles of water }=\\frac{80 \\mathrm{~g}}{18 \\mathrm{~g} \\mathrm{~mol}^{-1}}=4.444 \\mathrm{~mol} \\\\\n\\mathrm{x}_{\\text {glycol }}=\\frac{\\text { moles of } \\mathrm{C}_{2} \\mathrm{H}_{6} \\mathrm{O}_{2}}{\\text { moles of } \\mathrm{C}_{2} \\mathrm{H}_{6} \\mathrm{O}_{2}+\\text { moles of } \\mathrm{H}_{2} \\mathrm{O}} \\\\\n=\\frac{0.322 \\mathrm{~mol}}{0.322 \\mathrm{~mol}+4.444 \\mathrm{~mol}}=0.068\n\\end{gathered}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Similarly, $x_{\\text {water }}=\\frac{4.444 \\mathrm{~mol}}{0.322 \\mathrm{~mol}+4.444 \\mathrm{~mol}}=0.932$\nMole fraction of water can also be calculated as: $1-0.068=0.932$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$x_{\\text{glycol}} = 0.068$ (and $x_{\\text{water}} = 0.932$)"
+          "text": "**Answer:** $x_{\\text{glycol}} = 0.068$ (and $x_{\\text{water}} = 0.932$)"
         }
       ]
     },
@@ -70,19 +73,20 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
-              "text": "Moles of $\\mathrm{NaOH}=\\frac{5 \\mathrm{~g}}{40 \\mathrm{~g} \\mathrm{~mol}^{-1}}=0.125 \\mathrm{~mol}$\nVolume of the solution in litres $=450 \\mathrm{~mL} / 1000 \\mathrm{~mL} \\mathrm{~L}^{-1}$\nUsing equation (2.8),\n\n$$\n\\begin{aligned}\n\\text { Molarity } & =\\frac{0.125 \\mathrm{~mol} \\times 1000 \\mathrm{~mL} \\mathrm{~L}^{-1}}{450 \\mathrm{~mL}}=0.278 \\mathrm{M} \\\\\n& =0.278 \\mathrm{~mol} \\mathrm{~L}^{-1} \\\\\n& =0.278 \\mathrm{~mol} \\mathrm{dm}^{-3}\n\\end{aligned}\n$$"
+              "text": "Solution Moles of $\\mathrm{NaOH}=\\frac{5 \\mathrm{~g}}{40 \\mathrm{~g} \\mathrm{~mol}^{-1}}=0.125 \\mathrm{~mol}$\nVolume of the solution in litres $=450 \\mathrm{~mL} / 1000 \\mathrm{~mL} \\mathrm{~L}^{-1}$\nUsing equation (2.8),\n\n$$\n\\begin{aligned}\n\\text { Molarity } & =\\frac{0.125 \\mathrm{~mol} \\times 1000 \\mathrm{~mL} \\mathrm{~L}^{-1}}{450 \\mathrm{~mL}}=0.278 \\mathrm{M} \\\\\n& =0.278 \\mathrm{~mol} \\mathrm{~L}^{-1} \\\\\n& =0.278 \\mathrm{~mol} \\mathrm{dm}^{-3}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "0.278 M ($0.278 \\mathrm{~mol} \\mathrm{~L}^{-1}$)"
+          "text": "**Answer:** 0.278 M ($0.278 \\mathrm{~mol} \\mathrm{~L}^{-1}$)"
         }
       ]
     },
@@ -101,19 +105,20 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Molar mass of $\\mathrm{C}_{2} \\mathrm{H}_{4} \\mathrm{O}_{2}: 12 \\times 2+1 \\times 4+16 \\times 2=60 \\mathrm{~g} \\mathrm{~mol}^{-1}$\nSolution\nMoles of $\\mathrm{C}_{2} \\mathrm{H}_{4} \\mathrm{O}_{2}=\\frac{2.5 \\mathrm{~g}}{60 \\mathrm{~g} \\mathrm{~mol}^{-1}}=0.0417 \\mathrm{~mol}$\nMass of benzene in $\\mathrm{kg}=75 \\mathrm{~g} / 1000 \\mathrm{~g} \\mathrm{~kg}^{-1}=75 \\times 10^{-3} \\mathrm{~kg}$\n\n$$\n\\begin{aligned}\n\\text { Molality of } \\mathrm{C}_{2} \\mathrm{H}_{4} \\mathrm{O}_{2} & =\\frac{\\text { Moles of } \\mathrm{C}_{2} \\mathrm{H}_{4} \\mathrm{O}_{2}}{\\mathrm{~kg} \\text { of benzene }}=\\frac{0.0417 \\mathrm{~mol} \\times 1000 \\mathrm{~g} \\mathrm{~kg}^{-1}}{75 \\mathrm{~g}} \\\\\n& =0.556 \\mathrm{~mol} \\mathrm{~kg}^{-1}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$0.556 \\mathrm{~mol} \\mathrm{~kg}^{-1}$"
+          "text": "**Answer:** $0.556 \\mathrm{~mol} \\mathrm{~kg}^{-1}$"
         }
       ]
     },
@@ -132,13 +137,14 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
-              "text": "The solubility of a gas is related to its mole fraction in the aqueous solution, which we find using Henry's law. Thus:\n\n$$\nx(\\text { Nitrogen })=\\frac{p \\text { (nitrogen) }}{K_{\\mathrm{H}}}=\\frac{0.987 \\mathrm{bar}}{76,480 \\mathrm{bar}}=1.29 \\times 10^{-5}\n$$\n\n1 litre of water contains 55.5 mol of water. If $n$ represents number of moles of $\\mathrm{N}_{2}$ in solution,\n\n$$\nx(\\text { Nitrogen })=\\frac{n \\mathrm{~mol}}{n \\mathrm{~mol}+55.5 \\mathrm{~mol}}=\\frac{n}{55.5}=1.29 \\times 10^{-5}\n$$"
+              "text": "Solution\nThe solubility of a gas is related to its mole fraction in the aqueous solution, which we find using Henry's law. Thus:\n\n$$\nx(\\text { Nitrogen })=\\frac{p \\text { (nitrogen) }}{K_{\\mathrm{H}}}=\\frac{0.987 \\mathrm{bar}}{76,480 \\mathrm{bar}}=1.29 \\times 10^{-5}\n$$\n\n1 litre of water contains 55.5 mol of water. If $n$ represents number of moles of $\\mathrm{N}_{2}$ in solution,\n\n$$\nx(\\text { Nitrogen })=\\frac{n \\mathrm{~mol}}{n \\mathrm{~mol}+55.5 \\mathrm{~mol}}=\\frac{n}{55.5}=1.29 \\times 10^{-5}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "note",
@@ -147,25 +153,26 @@
           "flow": [
             {
               "type": "text",
-              "text": "( $n$ in denominator is neglected as it is \\ll 55.5)"
+              "text": "( $n$ in denominator is neglected as it is $\\ll$ 55.5)"
             }
           ]
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Thus $n=1.29 \\times 10^{-5} \\times 55.5 \\mathrm{~mol}=7.16 \\times 10^{-4} \\mathrm{~mol}$\n\n$$\n=\\frac{7.16 \\times 10^{-4} \\mathrm{~mol} \\times 1000 \\mathrm{mmol}}{1 \\mathrm{~mol}}=0.716 \\mathrm{mmol}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "0.716 mmol"
+          "text": "**Answer:** 0.716 mmol"
         }
       ]
     },
@@ -184,23 +191,25 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "(i) Molar mass of $\\mathrm{CH}_{2} \\mathrm{Cl}_{2}=12 \\times 1+1 \\times 2+35.5 \\times 2=85 \\mathrm{~g} \\mathrm{~mol}^{-1}$\nMolar mass of $\\mathrm{CHCl}_{3}=12 \\times 1+1 \\times 1+35.5 \\times 3=119.5 \\mathrm{~g} \\mathrm{~mol}^{-1}$\n$$\n\\begin{aligned}\n\\text { Moles of } \\mathrm{CH}_{2} \\mathrm{Cl}_{2} & =\\frac{40 \\mathrm{~g}}{85 \\mathrm{~g} \\mathrm{~mol}^{-1}}=0.47 \\mathrm{~mol} \\\\\n\\text { Moles of } \\mathrm{CHCl}_{3} & =\\frac{25.5 \\mathrm{~g}}{119.5 \\mathrm{~g} \\mathrm{~mol}^{-1}}=0.213 \\mathrm{~mol} \\\\\n\\text { Total number of moles } & =0.47 \\mathrm{~mol}+0.213 \\mathrm{~mol}=0.683 \\mathrm{~mol} \\\\\nx_{\\mathrm{CH}_{2} \\mathrm{Cl}_{2}}=\\frac{0.47 \\mathrm{~mol}}{0.683 \\mathrm{~mol}} & =0.688 \\\\\nx_{\\mathrm{CHCl}_{3}}=1.00-0.688 & =0.312\n\\end{aligned}\n$$\nUsing equation (2.16),\n$$\n\\begin{aligned}\np_{\\text {total }} & =p_{1}^{0}+\\left(p_{2}^{0}-p_{1}^{0}\\right) x_{2}=200+(415-200) \\times 0.688 \\\\\n& =200+147.9=347.9 \\mathrm{~mm} \\mathrm{Hg}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "(ii) Using relation (2.19), $y_{\\mathrm{i}}=p_{\\mathrm{i}} / p_{\\text {total }}$, we get the mole fraction of each component in the gas phase ( $y_{i}$ ).\n$$\n\\begin{aligned}\np_{\\mathrm{CH}_{2} \\mathrm{Cl}_{2}} & =0.688 \\times 415 \\mathrm{~mm} \\mathrm{Hg}=285.5 \\mathrm{~mm} \\mathrm{Hg} \\\\\np_{\\mathrm{CHCl}_{3}} & =0.312 \\times 200 \\mathrm{~mm} \\mathrm{Hg}=62.4 \\mathrm{~mm} \\mathrm{Hg} \\\\\ny_{\\mathrm{CH}_{2} \\mathrm{Cl}_{2}} & =285.5 \\mathrm{~mm} \\mathrm{Hg} / 347.9 \\mathrm{~mm} \\mathrm{Hg}=0.82 \\\\\ny_{\\mathrm{CHCl}_{3}} & =62.4 \\mathrm{~mm} \\mathrm{Hg} / 347.9 \\mathrm{~mm} \\mathrm{Hg}=0.18\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         },
         {
           "type": "note",
@@ -209,7 +218,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "Note: Since, $\\mathrm{CH}_{2} \\mathrm{Cl}_{2}$ is more volatile than $\\mathrm{CHCl}_{3}$, $\\left[p_{\\mathrm{CH}_{2} \\mathrm{Cl}_{2}}^{O}=\\right.$ 415 mm Hg and $p_{\\mathrm{CHCl}_{3}}^{o}=200 \\mathrm{~mm} \\mathrm{Hg}$ ] and the vapour phase is also richer in $\\mathrm{CH}_{2} \\mathrm{Cl}_{2}\\left[y_{\\mathrm{CH}_{2} \\mathrm{Cl}_{2}}=0.82\\right.$ and $\\left.y_{\\mathrm{CHCl}_{3}}=0.18\\right]$. So at equilibrium, the vapour phase is always richer in the more volatile component."
+              "text": "Note: Since, $\\mathrm{CH}_{2} \\mathrm{Cl}_{2}$ is more volatile than $\\mathrm{CHCl}_{3}$, $p_{\\mathrm{CH}_{2} \\mathrm{Cl}_{2}}^{O}=415 \\mathrm{~mm} \\mathrm{Hg}$ and $p_{\\mathrm{CHCl}_{3}}^{o}=200 \\mathrm{~mm} \\mathrm{Hg}$ and the vapour phase is also richer in $\\mathrm{CH}_{2} \\mathrm{Cl}_{2}\\left[y_{\\mathrm{CH}_{2} \\mathrm{Cl}_{2}}=0.82\\right.$ and $\\left.y_{\\mathrm{CHCl}_{3}}=0.18\\right]$. So at equilibrium, the vapour phase is always richer in the more volatile component."
             }
           ]
         }
@@ -217,7 +226,7 @@
       "answer": [
         {
           "type": "text",
-          "text": "$p_{\\text{total}} = 347.9$ mm Hg; $y_{\\mathrm{CH}_2\\mathrm{Cl}_2} = 0.82$, $y_{\\mathrm{CHCl}_3} = 0.18$"
+          "text": "**Answer:** $p_{\\text{total}} = 347.9$ mm Hg; $y_{\\mathrm{CH}_2\\mathrm{Cl}_2} = 0.82$, $y_{\\mathrm{CHCl}_3} = 0.18$"
         }
       ]
     },
@@ -236,39 +245,42 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
-              "text": "The known quantities are:\n$p_{1}{ }^{0}=0.850$ bar; $p=0.845$ bar; $M_{1}=78 \\mathrm{~g} \\mathrm{~mol}^{-1} ; w_{2}=0.5 \\mathrm{~g} ; w_{1}=39 \\mathrm{~g}$"
+              "text": "Solution\nThe known quantities are:\n$p_{1}{ }^{0}=0.850$ bar; $p=0.845$ bar; $M_{1}=78 \\mathrm{~g} \\mathrm{~mol}^{-1} ; w_{2}=0.5 \\mathrm{~g} ; w_{1}=39 \\mathrm{~g}$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Substituting these values into equation (2.28), we get:\n\n$$\n\\frac{0.850 \\text { bar }-0.845 \\text { bar }}{0.850 \\text { bar }}=\\frac{0.5 \\mathrm{~g} \\times 78 \\mathrm{~g} \\mathrm{~mol}^{-1}}{M_{2} \\times 39 \\mathrm{~g}}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "So $M_{2}=170 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$170 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
+          "text": "**Answer:** $170 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
         }
       ]
     },
@@ -287,29 +299,31 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Moles of glucose $=18 \\mathrm{~g} / 180 \\mathrm{~g} \\mathrm{~mol}^{-1}=0.1 \\mathrm{~mol}$\nNumber of kilograms of solvent $=1 \\mathrm{~kg}$\nThus molality of glucose solution $=0.1 \\mathrm{~mol} \\mathrm{~kg}^{-1}$\nFor water, change in boiling point $\\Delta T_{\\mathrm{b}}=K_{\\mathrm{b}} \\times m=0.52 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1} \\times 0.1 \\mathrm{~mol} \\mathrm{~kg}^{-1}=0.052 \\mathrm{~K}$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Water boils at 373.15 K at 1.013 bar pressure. So the boiling point of the solution is $373.15+0.052=373.202 \\mathrm{~K}$."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "373.202 K"
+          "text": "**Answer:** 373.202 K"
         }
       ]
     },
@@ -328,29 +342,42 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Solution"
+            }
+          ],
+          "stage": "given"
+        },
+        {
+          "type": "step",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "The elevation $\\left(\\Delta T_{\\mathrm{b}}\\right)$ in the boiling point $=354.11 \\mathrm{~K}-353.23 \\mathrm{~K}=0.88 \\mathrm{~K}$. Substituting these values into expression (2.33), we get:\n\n$$\nM_{2}=\\frac{2.53 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}{ }^{-1} \\times 1.8 \\mathrm{~g} \\times 1000 \\mathrm{~g} \\mathrm{~kg}^{-1}}{0.88 \\mathrm{~K} \\times 90 \\mathrm{~g}}=58 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "So the molar mass of the solute is $M_{2}=58 \\mathrm{~g} \\mathrm{~mol}^{-1}$."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$58 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
+          "text": "**Answer:** $58 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
         }
       ]
     },
@@ -369,29 +396,42 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
-              "text": "Depression in freezing point depends on molality. So the molality of the solution with respect to ethylene glycol $=\\frac{\\text { moles of ethylene glycol }}{\\text { mass of water in kilogram }}$\n\nMoles of ethylene glycol $=\\frac{45 \\mathrm{~g}}{62 \\mathrm{~g} \\mathrm{~mol}^{-1}}=0.73 \\mathrm{~mol}$\nMass of water in $\\mathrm{kg}=\\frac{600 \\mathrm{~g}}{1000 \\mathrm{~g} \\mathrm{~kg}^{-1}}=0.6 \\mathrm{~kg}$\nHence molality of ethylene glycol $=\\frac{0.73 \\mathrm{~mol}}{0.60 \\mathrm{~kg}}=1.2 \\mathrm{~mol} \\mathrm{~kg}^{-1}$\nSo the freezing point depression is:\n\n$$\n\\ddot{\\mathrm{A}} T_{\\mathrm{f}}=1.86 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1} \\times 1.2 \\mathrm{~mol} \\mathrm{~kg}^{-1}=2.2 \\mathrm{~K}\n$$"
+              "text": "Solution"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Depression in freezing point depends on molality. So the molality of the solution with respect to ethylene glycol $=\\frac{\\text { moles of ethylene glycol }}{\\text { mass of water in kilogram }}$\n\nMoles of ethylene glycol $=\\frac{45 \\mathrm{~g}}{62 \\mathrm{~g} \\mathrm{~mol}^{-1}}=0.73 \\mathrm{~mol}$\nMass of water in $\\mathrm{kg}=\\frac{600 \\mathrm{~g}}{1000 \\mathrm{~g} \\mathrm{~kg}^{-1}}=0.6 \\mathrm{~kg}$\nHence molality of ethylene glycol $=\\frac{0.73 \\mathrm{~mol}}{0.60 \\mathrm{~kg}}=1.2 \\mathrm{~mol} \\mathrm{~kg}^{-1}$\nSo the freezing point depression is:\n\n$$\n\\Delta T_{\\mathrm{f}}=1.86 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1} \\times 1.2 \\mathrm{~mol} \\mathrm{~kg}^{-1}=2.2 \\mathrm{~K}\n$$"
+            }
+          ],
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Freezing point of the aqueous solution $=273.15 \\mathrm{~K}-2.2 \\mathrm{~K}=270.95 \\mathrm{~K}$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$\\Delta T_f = 2.2$ K; freezing point of solution $= 270.95$ K"
+          "text": "**Answer:** $\\Delta T_f = 2.2$ K; freezing point of solution $= 270.95$ K"
         }
       ]
     },
@@ -410,29 +450,42 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Solution"
+            }
+          ],
+          "stage": "given"
+        },
+        {
+          "type": "step",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Substituting the values of various terms involved in equation (1.36) we get,\n\n$$\nM_{2}=\\frac{5.12 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1} \\times 1.00 \\mathrm{~g} \\times 1000 \\mathrm{~g} \\mathrm{~kg}^{-1}}{0.40 \\times 50 \\mathrm{~g}}=256 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Thus, molar mass of the solute $=256 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$256 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
+          "text": "**Answer:** $256 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
         }
       ]
     },
@@ -451,29 +504,31 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
-              "text": "The known quantities are: $\\Pi=2.57 \\times 10^{-3}$ bar,\n\n$$\n\\begin{aligned}\n& V=200 \\mathrm{~cm}^{3}=0.200 \\text { litre } \\\\\n& T=300 \\mathrm{~K} \\\\\n& \\mathrm{R}=0.083 \\mathrm{~L} \\text { bar } \\mathrm{mol}^{-1} \\mathrm{~K}^{-1}\n\\end{aligned}\n$$"
+              "text": "Solution\nThe known quantities are: $\\Pi=2.57 \\times 10^{-3}$ bar,\n\n$$\n\\begin{aligned}\n& V=200 \\mathrm{~cm}^{3}=0.200 \\text { litre } \\\\\n& T=300 \\mathrm{~K} \\\\\n& \\mathrm{R}=0.083 \\mathrm{~L} \\text { bar } \\mathrm{mol}^{-1} \\mathrm{~K}^{-1}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Substituting these values into equation (2.42), we get:\n\n$$\nM_{2}=\\frac{1.26 \\mathrm{~g} \\times 0.083 \\mathrm{~L} \\mathrm{bar} \\mathrm{~K}^{-1} \\mathrm{~mol}^{-1} \\times 300 \\mathrm{~K}}{2.57 \\times 10^{-3} \\mathrm{bar} \\times 0.200 \\mathrm{~L}}=61,022 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$61,022 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
+          "text": "**Answer:** $61,022 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
         }
       ]
     },
@@ -492,70 +547,75 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "The known quantities are: $\\mathrm{w}_{2}=2 \\mathrm{~g} ; K_{\\mathrm{f}}=4.9 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1} ; \\mathrm{w}_{1}=25 \\mathrm{~g}$,\n\n$$\n\\Delta T_{f}=1.62 \\mathrm{~K}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Substituting these values into equation (1.36), we get:\n\n$$\nM_{2}=\\frac{4.9 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1} \\times 2 \\mathrm{~g} \\times 1000 \\mathrm{~g} \\mathrm{~kg}^{-1}}{25 \\mathrm{~g} \\times 1.62 \\mathrm{~K}}=241.98 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\nSo the experimental molar mass of benzoic acid in benzene is\n\n$$\n=241.98 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Association equilibrium",
           "flow": [
             {
               "type": "text",
               "text": "Now consider this equilibrium for the acid:\n\n$$\n2 \\mathrm{C}_{6} \\mathrm{H}_{5} \\mathrm{COOH} \\rightleftharpoons\\left(\\mathrm{C}_{6} \\mathrm{H}_{5} \\mathrm{COOH}\\right)_{2}\n$$\n\nLet $x$ be the degree of association of the solute. Then $(1-x)$ mol of benzoic acid remains unassociated, and $\\frac{x}{2}$ mol is present as associated benzoic acid at equilibrium. So the total number of moles of particles at equilibrium is:\n\n$$\n1-x+\\frac{x}{2}=1-\\frac{x}{2}\n$$\n\nSo the total number of moles of particles at equilibrium equals the van't Hoff factor $i$."
             }
           ],
-          "label": "Association equilibrium"
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\text { But } i=\\frac{\\text { Normal molar mass }}{\\text { Abnormal molar mass }}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "$$\n=\\frac{122 \\mathrm{~g} \\mathrm{~mol}^{-1}}{241.98 \\mathrm{~g} \\mathrm{~mol}^{-1}}\n$$\n\nor\n\n$$\n\\frac{x}{2}=1-\\frac{122}{241.98}=1-0.504=0.496\n$$\n\nor\n\n$$\nx=2 \\times 0.496=0.992\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "So the degree of association of benzoic acid in benzene is 99.2 \\%."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Degree of association = 99.2%"
+          "text": "**Answer:** Degree of association = 99.2%"
         }
       ]
     },
@@ -574,50 +634,64 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Solution"
+            }
+          ],
+          "stage": "given"
+        },
+        {
+          "type": "step",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n\\text { Number of moles of acetic acid } & =\\frac{0.6 \\mathrm{~mL} \\times 1.06 \\mathrm{~g} \\mathrm{~mL}^{-1}}{60 \\mathrm{~g} \\mathrm{~mol}^{-1}} \\\\\n& =0.0106 \\mathrm{~mol}=n\n\\end{aligned}\n$$\n\nMolality $=\\frac{0.0106 \\mathrm{~mol}}{1000 \\mathrm{~mL} \\times 1 \\mathrm{~g} \\mathrm{~mL}^{-1}}=0.0106 \\mathrm{~mol} \\mathrm{~kg}^{-1}$\nUsing equation (1.35)\n\n$$\n\\Delta T_{\\mathrm{f}}=1.86 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1} \\times 0.0106 \\mathrm{~mol} \\mathrm{~kg}^{-1}=0.0197 \\mathrm{~K}\n$$\n\nvan't Hoff Factor $(i)=\\frac{\\text { Observed freezing point }}{\\text { Calculated freezing point }}=\\frac{0.0205 \\mathrm{~K}}{0.0197 \\mathrm{~K}}=1.041$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Dissociation setup",
           "flow": [
             {
               "type": "text",
               "text": "Acetic acid is a weak electrolyte. It dissociates into two ions per molecule: acetate and hydrogen ions. Let $x$ be the degree of dissociation of acetic acid. Then we have $n(1-x)$ moles of undissociated acetic acid, $n x$ moles of $\\mathrm{CH}_{3} \\mathrm{COO}^{-}$ and $n x$ moles of $\\mathrm{H}^{+}$ ions,\n\n$$\n\\begin{array}{ccc}\n\\mathrm{CH}_{3} \\mathrm{COOH} & \\rightleftharpoons & \\mathrm{H}^{+}+\\mathrm{CH}_{3} \\mathrm{COO}^{-} \\\\\nn \\mathrm{~mol} & 0 & 0 \\\\\nn(1-x) & n x \\mathrm{~mol} & n x \\mathrm{~mol}\n\\end{array}\n$$\n\nThus total moles of particles are: $n(1-x+x+x)=n(1+x)$"
             }
           ],
-          "label": "Dissociation setup"
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "$$\ni=\\frac{n(1+x)}{n}=1+x=1.041\n$$\n\nThus degree of dissociation of acetic acid $=x=1.041-1.000=0.041$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& \\text { Then } \\quad\\left[\\mathrm{CH}_{3} \\mathrm{COOH}\\right]=n(1-x)=0.0106(1-0.041), \\\\\n& {\\left[\\mathrm{CH}_{3} \\mathrm{COO}^{-}\\right]=n x=0.0106 \\times 0.041,\\left[\\mathrm{H}^{+}\\right]=n x=0.0106 \\times 0.041 .} \\\\\n& \\mathrm{K}_{\\mathrm{a}}=\\frac{\\left[\\mathrm{CH}_{3} \\mathrm{COO}^{-}\\right]\\left[\\mathrm{H}^{+}\\right]}{\\left[\\mathrm{CH}_{3} \\mathrm{COOH}\\right]}=\\frac{0.0106 \\times 0.041 \\times 0.0106 \\times 0.041}{0.0106(1.00-0.041)} \\\\\n& =1.86 \\times 10^{-5}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$i = 1.041$; $K_a = 1.86 \\times 10^{-5}$"
+          "text": "**Answer:** $i = 1.041$; $K_a = 1.86 \\times 10^{-5}$"
         }
       ]
     },
@@ -633,7 +707,36 @@
         }
       ],
       "figures": [],
-      "solution_blocks": []
+      "solution_blocks": [
+        {
+          "type": "note",
+          "note_type": "caution",
+          "label": "Not in official solutions manual",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "label": "Conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "A solution is a homogeneous mixture of two or more chemically non-reacting substances, in which one substance (the solute) is dissolved in another (the solvent); its composition and properties are uniform throughout.\n\nSolutions are classified into three broad types based on the physical state of the solvent, and each of these has three further types based on the physical state of the solute:\n\n- **Gaseous solutions** (solvent is a gas) -- e.g. a mixture of oxygen and nitrogen gases (gas in gas); chloroform vapour mixed with nitrogen gas (liquid in gas); camphor vapour in nitrogen gas (solid in gas).\n- **Liquid solutions** (solvent is a liquid) -- e.g. oxygen dissolved in water (gas in liquid); ethanol dissolved in water (liquid in liquid); glucose dissolved in water (solid in liquid).\n- **Solid solutions** (solvent is a solid) -- e.g. hydrogen dissolved in palladium (gas in solid); mercury in gold, an amalgam (liquid in solid); copper dissolved in gold, an alloy (solid in solid)."
+            }
+          ],
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**Answer:** A solution is a homogeneous mixture of two or more substances; solutions are of three broad types -- gaseous, liquid and solid -- each further divided by the physical state of the solute, e.g. oxygen in water (gas in liquid), ethanol in water (liquid in liquid), glucose in water (solid in liquid)."
+        }
+      ]
     },
     {
       "id": "q_1.2",
@@ -647,7 +750,36 @@
         }
       ],
       "figures": [],
-      "solution_blocks": []
+      "solution_blocks": [
+        {
+          "type": "note",
+          "note_type": "caution",
+          "label": "Not in official solutions manual",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "label": "Conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "A solid solution in which the solute is a gas is formed, for example, when hydrogen gas is absorbed (dissolved) in palladium metal -- written as $\\mathrm{H_2}$ in $\\mathrm{Pd}$."
+            }
+          ],
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**Answer:** Hydrogen gas dissolved in palladium metal ($\\mathrm{H_2}$ in $\\mathrm{Pd}$) is a solid solution with a gaseous solute."
+        }
+      ]
     },
     {
       "id": "q_1.3",
@@ -670,7 +802,36 @@
               "text": "Mole fraction"
             }
           ],
-          "solution_blocks": []
+          "solution_blocks": [
+            {
+              "type": "note",
+              "note_type": "caution",
+              "label": "Not in official solutions manual",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "label": "Conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Mole fraction of a component in a solution is the ratio of the number of moles of that component to the total number of moles of all components present. For a two-component solution with $n_1$ mol of solvent and $n_2$ mol of solute,\n$$\nx_1 = \\frac{n_1}{n_1+n_2}, \\qquad x_2 = \\frac{n_2}{n_1+n_2}\n$$\nMole fraction does not depend on temperature."
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**Answer:** Mole fraction $x = \\dfrac{\\text{moles of the component}}{\\text{total moles of all components}}$."
+            }
+          ]
         },
         {
           "label": "ii",
@@ -680,7 +841,25 @@
               "text": "Molality"
             }
           ],
-          "solution_blocks": []
+          "solution_blocks": [
+            {
+              "type": "step",
+              "label": "Conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Molality ($m$) is the number of moles of solute dissolved per kilogram of solvent:\n$$\n\\text{Molality} = \\frac{\\text{moles of solute}}{\\text{mass of solvent in kg}}\n$$\nSince it is defined using the mass (not volume) of solvent, molality does not change with temperature."
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**Answer:** Molality $= \\dfrac{\\text{moles of solute}}{\\text{mass of solvent (kg)}}$, unit $\\mathrm{mol\\,kg^{-1}}$."
+            }
+          ]
         },
         {
           "label": "iii",
@@ -690,7 +869,25 @@
               "text": "Molarity"
             }
           ],
-          "solution_blocks": []
+          "solution_blocks": [
+            {
+              "type": "step",
+              "label": "Conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Molarity ($M$) is the number of moles of solute dissolved per litre of solution:\n$$\n\\text{Molarity} = \\frac{\\text{moles of solute}}{\\text{volume of solution in litres}}\n$$\nBecause the volume of a solution changes slightly with temperature, molarity is temperature-dependent."
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**Answer:** Molarity $= \\dfrac{\\text{moles of solute}}{\\text{volume of solution (L)}}$, unit $\\mathrm{mol\\,L^{-1}}$."
+            }
+          ]
         },
         {
           "label": "iv",
@@ -700,7 +897,25 @@
               "text": "Mass percentage."
             }
           ],
-          "solution_blocks": []
+          "solution_blocks": [
+            {
+              "type": "step",
+              "label": "Conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Mass percentage of a component is the mass of that component per 100 g of solution:\n$$\n\\text{Mass \\%} = \\frac{\\text{mass of the component}}{\\text{total mass of the solution}} \\times 100\\%\n$$"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**Answer:** Mass $\\% = \\dfrac{\\text{mass of the component}}{\\text{total mass of solution}} \\times 100$."
+            }
+          ]
         }
       ],
       "solution_blocks": []
@@ -717,7 +932,58 @@
         }
       ],
       "figures": [],
-      "solution_blocks": []
+      "solution_blocks": [
+        {
+          "type": "note",
+          "note_type": "caution",
+          "label": "Not in official solutions manual",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "label": "Given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Consider 1 litre (1000 mL) of the acid solution. Its mass is $1000~\\mathrm{mL} \\times 1.504~\\mathrm{g~mL^{-1}} = 1504~\\mathrm{g}$. Mass of $\\mathrm{HNO_3}$ present (68% by mass): $0.68 \\times 1504~\\mathrm{g} = 1022.72~\\mathrm{g}$. Molar mass of $\\mathrm{HNO_3} = 1+14+3\\times16 = 63~\\mathrm{g~mol^{-1}}$."
+            }
+          ],
+          "stage": "given"
+        },
+        {
+          "type": "step",
+          "label": "Substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\text{Moles of } \\mathrm{HNO_3} = \\frac{1022.72}{63} = 16.23~\\mathrm{mol}\n$$\nThis is the amount of acid present in 1 litre of solution."
+            }
+          ],
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "label": "Conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\text{Molarity} = \\frac{16.23~\\mathrm{mol}}{1~\\mathrm{L}} = 16.23~\\mathrm{M}\n$$"
+            }
+          ],
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**Answer:** 16.23 M"
+        }
+      ]
     },
     {
       "id": "q_1.5",
@@ -731,7 +997,58 @@
         }
       ],
       "figures": [],
-      "solution_blocks": []
+      "solution_blocks": [
+        {
+          "type": "note",
+          "note_type": "caution",
+          "label": "Not in official solutions manual",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "label": "Given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "A 10% w/w glucose solution means 10 g of glucose ($\\mathrm{C_6H_{12}O_6}$, $M=180~\\mathrm{g~mol^{-1}}$) is present in 100 g of solution, i.e. in $(100-10)=90~\\mathrm{g}$ of water."
+            }
+          ],
+          "stage": "given"
+        },
+        {
+          "type": "step",
+          "label": "Substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Moles of glucose $= \\dfrac{10}{180} = 0.0556~\\mathrm{mol}$; mass of water $= 0.090~\\mathrm{kg}$.\n$$\n\\text{Molality} = \\frac{0.0556~\\mathrm{mol}}{0.090~\\mathrm{kg}} = 0.617~\\mathrm{mol~kg^{-1}}\n$$\nMoles of water $= \\dfrac{90}{18} = 5~\\mathrm{mol}$.\n$$\nx_{\\text{glucose}} = \\frac{0.0556}{0.0556+5} = 0.0111, \\qquad x_{\\text{water}} = 1-0.0111 = 0.9889\n$$\nVolume of 100 g of solution (density $1.2~\\mathrm{g~mL^{-1}}$):\n$$\n\\frac{100~\\mathrm{g}}{1.2~\\mathrm{g~mL^{-1}}} = 83.33~\\mathrm{mL} = 0.08333~\\mathrm{L}\n$$"
+            }
+          ],
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "label": "Conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\text{Molarity} = \\frac{0.0556~\\mathrm{mol}}{0.08333~\\mathrm{L}} = 0.667~\\mathrm{M}\n$$"
+            }
+          ],
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**Answer:** Molality = 0.617 mol kg⁻¹; mole fraction of glucose = 0.0111 (water = 0.9889); molarity = 0.667 M"
+        }
+      ]
     },
     {
       "id": "q_1.6",
@@ -745,7 +1062,58 @@
         }
       ],
       "figures": [],
-      "solution_blocks": []
+      "solution_blocks": [
+        {
+          "type": "note",
+          "note_type": "caution",
+          "label": "Not in official solutions manual",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "label": "Given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Let $n$ mol each of $\\mathrm{Na_2CO_3}$ ($M=106~\\mathrm{g~mol^{-1}}$) and $\\mathrm{NaHCO_3}$ ($M=84~\\mathrm{g~mol^{-1}}$) be present (equimolar mixture, total mass 1 g):$$106n + 84n = 1 \\Rightarrow 190n = 1 \\Rightarrow n = 5.263\\times10^{-3}~\\mathrm{mol}$$Both salts react with HCl: $\\mathrm{Na_2CO_3 + 2HCl \\rightarrow 2NaCl + H_2O + CO_2}$ and $\\mathrm{NaHCO_3 + HCl \\rightarrow NaCl + H_2O + CO_2}$."
+            }
+          ],
+          "stage": "given"
+        },
+        {
+          "type": "step",
+          "label": "Substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{Na_2CO_3}$ needs $2n$ mol HCl and $\\mathrm{NaHCO_3}$ needs $n$ mol HCl -- $3n$ mol in total:\n$$\n3 \\times 5.263\\times10^{-3} = 1.579\\times10^{-2}~\\mathrm{mol~HCl}\n$$"
+            }
+          ],
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "label": "Conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\frac{1.579\\times10^{-2}~\\mathrm{mol}}{0.1~\\mathrm{mol~L^{-1}}} = 0.1579~\\mathrm{L} = 157.9~\\mathrm{mL}\n$$"
+            }
+          ],
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**Answer:** 157.9 mL"
+        }
+      ]
     },
     {
       "id": "q_1.7",
@@ -762,33 +1130,36 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Total amount of solute present in the mixture is given by,\n\n$$\n\\begin{aligned}\n& 300 \\times \\frac{25}{100}+400 \\times \\frac{40}{100} \\\\\n& =75+160 \\\\\n& =235 \\mathrm{~g}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Total amount of solution $=300+400=700 \\mathrm{~g}$\nTherefore, mass percentage $(\\mathrm{w} / \\mathrm{w})$ of the solute in the resulting solution, $=\\frac{235}{700} \\times 100 \\%$\n= 33.57\\%"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "And, mass percentage (w/w) of the solvent in the resulting solution,\n\n$$\n\\begin{aligned}\n& =(100-33.57) \\% \\\\\n& =66.43 \\%\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ]
     },
@@ -804,7 +1175,58 @@
         }
       ],
       "figures": [],
-      "solution_blocks": []
+      "solution_blocks": [
+        {
+          "type": "note",
+          "note_type": "caution",
+          "label": "Not in official solutions manual",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "label": "Given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Molar mass of ethylene glycol ($\\mathrm{C_2H_6O_2}$) $=62~\\mathrm{g~mol^{-1}}$. $$\\text{Moles of } \\mathrm{C_2H_6O_2} = \\frac{222.6}{62} = 3.590~\\mathrm{mol}$$ Mass of water $=200~\\mathrm{g}=0.200~\\mathrm{kg}$."
+            }
+          ],
+          "stage": "given"
+        },
+        {
+          "type": "step",
+          "label": "Substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\text{Molality} = \\frac{3.590~\\mathrm{mol}}{0.200~\\mathrm{kg}} = 17.95~\\mathrm{mol~kg^{-1}}\n$$\nTotal mass of solution $=222.6+200=422.6~\\mathrm{g}$; with density $1.072~\\mathrm{g~mL^{-1}}$:\n$$\n\\text{Volume} = \\frac{422.6~\\mathrm{g}}{1.072~\\mathrm{g~mL^{-1}}} = 394.2~\\mathrm{mL} = 0.3942~\\mathrm{L}\n$$"
+            }
+          ],
+          "stage": "substitute"
+        },
+        {
+          "type": "step",
+          "label": "Conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\text{Molarity} = \\frac{3.590~\\mathrm{mol}}{0.3942~\\mathrm{L}} = 9.11~\\mathrm{M}\n$$"
+            }
+          ],
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**Answer:** Molality = 17.95 mol kg⁻¹; molarity = 9.11 M"
+        }
+      ]
     },
     {
       "id": "q_1.9",
@@ -827,7 +1249,36 @@
               "text": "express this in percent by mass"
             }
           ],
-          "solution_blocks": []
+          "solution_blocks": [
+            {
+              "type": "note",
+              "note_type": "caution",
+              "label": "Not in official solutions manual",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+                }
+              ]
+            },
+            {
+              "type": "step",
+              "label": "Conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "A contamination level of 15 ppm by mass means 15 g of $\\mathrm{CHCl_3}$ per $10^6$ g of water, i.e.\n$$\n\\frac{15}{10^6}\\times100\\% = 0.0015\\%\n$$"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**Answer:** 0.0015% by mass"
+            }
+          ]
         },
         {
           "label": "ii",
@@ -837,7 +1288,25 @@
               "text": "determine the molality of chloroform in the water sample."
             }
           ],
-          "solution_blocks": []
+          "solution_blocks": [
+            {
+              "type": "step",
+              "label": "Conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "Molar mass of $\\mathrm{CHCl_3} = 12+1+3\\times35.5 = 119.5~\\mathrm{g~mol^{-1}}$. In $10^6$ g of (essentially) water, the 15 g of chloroform is\n$$\n\\frac{15}{119.5} = 0.1255~\\mathrm{mol}\n$$\nand the mass of water is effectively $10^6~\\mathrm{g} = 1000~\\mathrm{kg}$ (the dissolved chloroform's own mass is negligible next to it), so\n$$\n\\text{Molality} = \\frac{0.1255~\\mathrm{mol}}{1000~\\mathrm{kg}} = 1.25\\times10^{-4}~\\mathrm{mol~kg^{-1}}\n$$"
+                }
+              ],
+              "stage": "conclusion"
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "**Answer:** 1.25 × 10⁻⁴ mol kg⁻¹"
+            }
+          ]
         }
       ],
       "solution_blocks": []
@@ -854,7 +1323,36 @@
         }
       ],
       "figures": [],
-      "solution_blocks": []
+      "solution_blocks": [
+        {
+          "type": "note",
+          "note_type": "caution",
+          "label": "Not in official solutions manual",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "label": "Conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "In pure ethanol and in pure water, each liquid's own molecules are held together by strong hydrogen bonding. When they are mixed, ethanol's $-\\mathrm{OH}$ group can still hydrogen-bond with water, but these alcohol-water interactions are somewhat weaker than the original alcohol-alcohol and water-water hydrogen bonds. This makes it easier for molecules to escape into the vapour phase, so the solution's vapour pressure is higher than Raoult's law predicts, and an ethanol-water solution shows positive deviation from ideal behaviour."
+            }
+          ],
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**Answer:** The alcohol-water hydrogen bonds are weaker than the pure-liquid hydrogen bonds they replace, so the solution shows positive deviation from Raoult's law."
+        }
+      ]
     },
     {
       "id": "q_1.11",
@@ -868,7 +1366,36 @@
         }
       ],
       "figures": [],
-      "solution_blocks": []
+      "solution_blocks": [
+        {
+          "type": "note",
+          "note_type": "caution",
+          "label": "Not in official solutions manual",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "label": "Conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Dissolution of a gas in a liquid is generally an exothermic process ($\\Delta H < 0$) -- it is accompanied by the release of heat, similar in spirit to condensation. By Le Chatelier's principle, raising the temperature shifts this dynamic equilibrium in the direction that absorbs the added heat, i.e. towards the gas coming back out of solution. The dissolved gas molecules also gain kinetic energy at higher temperature, making it easier for them to escape the liquid. Both effects make gases less soluble in liquids as the temperature is raised."
+            }
+          ],
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**Answer:** Gas dissolution in a liquid is exothermic, so by Le Chatelier's principle its solubility falls as temperature rises."
+        }
+      ]
     },
     {
       "id": "q_1.12",
@@ -882,7 +1409,36 @@
         }
       ],
       "figures": [],
-      "solution_blocks": []
+      "solution_blocks": [
+        {
+          "type": "note",
+          "note_type": "caution",
+          "label": "Not in official solutions manual",
+          "flow": [
+            {
+              "type": "text",
+              "text": "This answer was computed for completeness, since the official English solutions manual does not contain a solution for this question."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "label": "Conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Henry's law states that, at a constant temperature, the partial pressure of a gas in the vapour phase is directly proportional to the mole fraction of the gas dissolved in the solution:\n$$\np = K_H\\, x\n$$\nwhere $K_H$ is the Henry's law constant for that gas-solvent pair.\n\nSome important applications:\n- Carbonated drinks are bottled under high $\\mathrm{CO_2}$ pressure to keep more gas dissolved; the fizz appears when the bottle is opened and the pressure drops.\n- Scuba divers' breathing tanks are diluted with helium (rather than nitrogen), because nitrogen's higher solubility under the increased pressure at depth can cause the 'bends' when it comes out of solution too quickly on ascent.\n- At high altitude, the lower partial pressure of oxygen means less oxygen dissolves in the blood, which can cause altitude sickness (anoxia) in climbers and people who travel to high altitudes."
+            }
+          ],
+          "stage": "conclusion"
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "**Answer:** $p = K_H x$; applications include bottling carbonated drinks, scuba divers' gas tanks, and altitude sickness from low oxygen partial pressure."
+        }
+      ]
     },
     {
       "id": "q_1.13",
@@ -899,59 +1455,64 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Molar mass of ethane $\\left(\\mathrm{C}_{2} \\mathrm{H}_{6}\\right)=2 \\times 12+6 \\times 1$\n\n$$\n=30 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\n∴ Number of moles present in $6.56 \\times 10^{-2} \\mathrm{~g}$ of ethane\n\n$$\n=\\frac{6.56 \\times 10^{-2}}{30}\n$$\n\n$=2.187 \\times 10^{-3} \\mathrm{~mol}$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Let the number of moles of the solvent be $x$. By Henry's law,\n\n$$\n\\begin{aligned}\n& p=K_{\\mathrm{H}} x \\\\\n& \\Rightarrow 1 \\mathrm{bar}=K_{\\mathrm{H}} \\cdot \\frac{2.187 \\times 10^{-3}}{2.187 \\times 10^{-3}+x} \\\\\n& \\Rightarrow 1 \\mathrm{bar}=K_{\\mathrm{H}} \\frac{2.187 \\times 10^{-3}}{x} \\\\\n& \\Rightarrow K_{\\mathrm{H}}=\\frac{x}{2.187 \\times 10^{-3}} \\text { bar } \\quad\\left(\\text { Since } x \\gg 2.187 \\times 10^{-3}\\right)\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Number of moles present in $5.00 \\times 10^{-2} \\mathrm{~g}$ of ethane\n\n$$\n=\\frac{5.00 \\times 10^{-2}}{30} \\mathrm{~mol}\n$$\n\n$=1.67 \\times 10^{-3} \\mathrm{~mol}$."
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Applying Henry's law again,\n\n$$\n\\begin{aligned}\np & =K_{\\mathrm{H} X} \\\\\n& =\\frac{x}{2.187 \\times 10^{-3}} \\times \\frac{1.67 \\times 10^{-3}}{\\left(1.67 \\times 10^{-3}\\right)+x} \\\\\n& =\\frac{x}{2.187 \\times 10^{-3}} \\times \\frac{1.67 \\times 10^{-3}}{x} \\quad\\left(\\text { Since, } x \\gg 1.67 \\times 10^{-3}\\right)\n\\end{aligned}\n$$\n\n= 0.764 bar"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "So the partial pressure of the gas is 0.764 bar."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "0.764 bar"
+          "text": "**Answer:** 0.764 bar"
         }
       ]
     },
@@ -979,46 +1540,47 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "By Raoult's law, each volatile component's partial vapour pressure in a solution is directly proportional to its mole fraction. A solution that obeys Raoult's law at every concentration is called an ideal solution. A solution that does not obey Raoult's law is non-ideal, and its vapour pressure is either higher or lower than Raoult's law predicts. If the vapour pressure is higher, the solution shows positive deviation. If it is lower, the solution shows negative deviation."
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Ideal solution",
           "flow": [
             {
               "type": "text",
-              "text": "For an ideal solution, the enthalpy of mixing the pure components is zero.\n\n$$\n\\Delta_{\\mathrm{sol}} H=0\n$$"
+              "text": "For an ideal solution, the enthalpy of mixing the pure components is zero.\n\n$$\n\\Delta_{\\text{mix}} H=0\n$$"
             }
           ],
-          "label": "Ideal solution"
+          "stage": "given"
         },
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Positive deviation",
           "flow": [
             {
               "type": "text",
-              "text": "For a solution with positive deviation, heat is absorbed on mixing.\n\n$$\n\\therefore \\Delta_{\\text {sol }} H=\\text { Positive }\n$$"
+              "text": "For a solution with positive deviation, heat is absorbed on mixing.\n\n$$\n\\therefore \\Delta_{\\text {mix }} H=\\text { Positive }\n$$"
             }
           ],
-          "label": "Positive deviation"
+          "stage": "given"
         },
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Negative deviation",
           "flow": [
             {
               "type": "text",
-              "text": "For a solution with negative deviation, heat is released on mixing.\n\n$$\n\\therefore \\Delta_{\\text {sol }} H=\\text { Negative }\n$$"
+              "text": "For a solution with negative deviation, heat is released on mixing.\n\n$$\n\\therefore \\Delta_{\\text {mix }} H=\\text { Negative }\n$$"
             }
           ],
-          "label": "Negative deviation"
+          "stage": "given"
         }
       ]
     },
@@ -1037,39 +1599,42 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Here,\nVapour pressure of the solution at normal boiling point $\\left(p_{1}\\right)=1.004$ bar\nVapour pressure of pure water at normal boiling point $\\left(p_{1}^{0}\\right)=1.013$ bar\nMass of solute, $\\left(w_{2}\\right)=2 \\mathrm{~g}$\nMass of solvent (water), $\\left(w_{1}\\right)=98 \\mathrm{~g}$\nMolar mass of solvent (water), $\\left(M_{1}\\right)=18 \\mathrm{~g} \\mathrm{~mol}^{-1}$."
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "By Raoult's law,\n\n$$\n\\begin{aligned}\n& \\frac{p_{1}^{0}-p_{1}}{p_{1}^{0}}=\\frac{w_{2} \\times M_{1}}{M_{2} \\times w_{1}} \\\\\n& \\Rightarrow \\frac{1.013-1.004}{1.013}=\\frac{2 \\times 18}{M_{2} \\times 98} \\\\\n& \\Rightarrow \\frac{0.009}{1.013}=\\frac{2 \\times 18}{M_{2} \\times 98} \\\\\n& \\Rightarrow M_{2}=\\frac{1.013 \\times 2 \\times 18}{0.009 \\times 98} \\\\\n& =41.35 \\mathrm{~g} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "So the molar mass of the solute is $41.35 \\mathrm{~g} \\mathrm{~mol}^{-1}$."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "41.35 g mol⁻¹"
+          "text": "**Answer:** 41.35 g mol⁻¹"
         }
       ]
     },
@@ -1088,59 +1653,64 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Vapour pressure of\n\n$$\n\\left(p_{1}^{0}\\right)=105.2 \\mathrm{kPa}\n$$\n\nheptane heptane\nVapour pressure of $\\left(p_{2}^{0}\\right)=46.8 \\mathrm{kPa}$\noctane"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "We know that,\nMolar mass of heptane $\\left(\\mathrm{C}_{7} \\mathrm{H}_{16}\\right)=7 \\times 12+16 \\times 1$\n\n$$\n=100 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\n∴ Number of moles of heptane $=\\frac{26}{100} \\mathrm{~mol}$\n\n$$\n\\text { = } 0.26 \\mathrm{~mol}\n$$\n\nMolar mass of octane $\\left(\\mathrm{C}_{8} \\mathrm{H}_{18}\\right)=8 \\times 12+18 \\times 1$\n\n$$\n=114 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\n∴ Number of moles of octane $=\\frac{35}{114} \\mathrm{~mol}$\n\n$$\n\\text { = } 0.31 \\mathrm{~mol}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Mole fraction of heptane, $x_{1}=\\frac{0.26}{0.26+0.31}$\n\n$$\n=0.456\n$$\n\nAnd, mole fraction of octane, $x_{2}=1-0.456$\n\n$$\n=0.544\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Now, partial pressure of heptane, $p_{1}=x_{1} p_{1}^{0}$\n\n$$\n\\begin{aligned}\n& =0.456 \\times 105.2 \\\\\n& =47.97 \\mathrm{kPa}\n\\end{aligned}\n$$\n\nPartial pressure of octane, $p_{2}=x_{2} p_{2}^{0}$\n\n$$\n\\begin{aligned}\n& =0.544 \\times 46.8 \\\\\n& =25.46 \\mathrm{kPa}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Hence, vapour pressure of solution, $p_{\\text {total }}=p_{1}+p_{2}$\n\n$$\n\\begin{aligned}\n& =47.97+25.46 \\\\\n& =73.43 \\mathrm{kPa}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "73.43 kPa"
+          "text": "**Answer:** 73.43 kPa"
         }
       ]
     },
@@ -1159,69 +1729,75 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
-              "text": "1 molal solution means 1 mol of the solute is present in 100 g of the solvent (water).\nMolar mass of water $=18 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
+              "text": "1 molal solution means 1 mol of the solute is present in 1000 g of the solvent (water).\nMolar mass of water $=18 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& \\therefore \\text { Number of moles present in } 1000 \\mathrm{~g} \\text { of water } \\quad=\\frac{1000}{18} \\\\\n& =55.56 \\mathrm{~mol}\n\\end{aligned}\n$$\n\nTherefore, mole fraction of the solute in the solution is\n\n$$\nx_{2}=\\frac{1}{1+55.56}=0.0177 .\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "It is given that,\n\nVapour pressure of water, $p_{1}^{0} \\quad=12.3 \\mathrm{kPa}$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Applying the relation,\n\n$$\n\\frac{p_{1}^{0}-p_{1}}{p_{1}^{0}}=x_{2}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& \\Rightarrow \\frac{12.3-p_{1}}{12.3}=0.0177 \\\\\n& \\Rightarrow p_{1}=12.0823 \\\\\n& =12.08 \\mathrm{kPa} \\text { (approximately) }\n\\end{aligned} \\Rightarrow 12.3-p_{1}=0.2177\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "So the vapour pressure of the solution is 12.08 kPa."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "12.08 kPa"
+          "text": "**Answer:** 12.08 kPa"
         }
       ]
     },
@@ -1240,49 +1816,53 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Let the vapour pressure of pure octane be $p_{1}^{0}$.\nSo the vapour pressure of octane after adding the solute is\n\n$$\n\\frac{80}{100} p_{1}^{0}=0.8 p_{1}^{0} .\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Molar mass of solute, $M_{2}=40 \\mathrm{~g} \\mathrm{~mol}^{-1}$\nMass of octane, $w_{1}=114 \\mathrm{~g}$\nMolar mass of octane, $\\left(\\mathrm{C}_{8} \\mathrm{H}_{18}\\right), M_{1}=8 \\times 12+18 \\times 1$\n\n$$\n=114 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Applying the relation,\n\n$$\n\\begin{aligned}\n& \\frac{p_{1}^{0}-p_{1}}{p_{1}^{0}}=\\frac{w_{2} \\times M_{1}}{M_{2} \\times w_{1}} \\\\\n& \\Rightarrow \\frac{p_{1}^{0}-0.8 p_{1}^{0}}{p_{1}^{0}}=\\frac{w_{2} \\times 114}{40 \\times 114} \\\\\n& \\Rightarrow \\frac{0.2 p_{1}^{0}}{p_{1}^{0}}=\\frac{w_{2}}{40} \\\\\n& \\Rightarrow 0.2=\\frac{w_{2}}{40} \\\\\n& \\Rightarrow w_{2}=8 \\mathrm{~g}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "So the required mass of the solute is 8 g."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "8 g"
+          "text": "**Answer:** 8 g"
         }
       ]
     },
@@ -1310,49 +1890,53 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "given",
+              "label": "Given",
               "flow": [
                 {
                   "type": "text",
                   "text": "(i) Let, the molar mass of the solute be $\\mathrm{M} \\mathrm{g} \\mathrm{mol}^{-1}$\n$$\nn_{1}=\\frac{90 \\mathrm{~g}}{18 \\mathrm{~g} \\mathrm{~mol}^{-1}}=5 \\mathrm{~mol}\n$$\nNow, the no. of moles of solvent (water),\n$$\nn_{2}=\\frac{30 \\mathrm{~g}}{\\mathrm{M} \\mathrm{~mol}^{-1}}=\\frac{30}{\\mathrm{M}} \\mathrm{~mol}\n$$\n\nAnd, the no. of moles of solute,\n\n$$\np_{1}=2.8 \\mathrm{kPa}\n$$\n\nApplying the relation:\n\n$$\n\\begin{aligned}\n& \\frac{p_{1}^{0}-p_{1}}{p_{1}^{0}}=\\frac{n_{2}}{n_{1}+n_{2}} \\\\\n& \\Rightarrow \\frac{p_{1}^{0}-2.8}{p_{1}^{0}}=\\frac{\\frac{30}{\\mathrm{M}}}{5+\\frac{30}{\\mathrm{M}}} \\\\\n& \\Rightarrow 1-\\frac{2.8}{p_{1}^{0}}=\\frac{\\frac{30}{\\mathrm{M}}}{\\frac{5 \\mathrm{M}+30}{\\mathrm{M}}} \\\\\n& \\Rightarrow 1-\\frac{2.8}{p_{1}^{0}}=\\frac{30}{5 \\mathrm{M}+30} \\\\\n& \\Rightarrow \\frac{2.8}{p_{1}^{0}}=1-\\frac{30}{5 \\mathrm{M}+30} \\\\\n& \\Rightarrow \\frac{2.8}{p_{1}^{0}}=\\frac{5 \\mathrm{M}+30-30}{5 \\mathrm{M}+30} \\\\\n& \\Rightarrow \\frac{2.8}{p_{1}^{0}}=\\frac{5 \\mathrm{M}}{5 \\mathrm{M}+30} \\\\\n& \\Rightarrow \\frac{p_{1}^{0}}{2.8}=\\frac{5 \\mathrm{M}+30}{5 \\mathrm{M}}\n\\end{aligned}\n$$"
                 }
-              ]
+              ],
+              "stage": "given"
             },
             {
               "type": "step",
-              "stage": "substitute",
+              "label": "Substitute",
               "flow": [
                 {
                   "type": "text",
                   "text": "After the addition of 18 g of water:\n\n$$\n\\begin{aligned}\n& n_{1}=\\frac{90+18 \\mathrm{~g}}{18}=6 \\mathrm{~mol} \\\\\n& p_{1}=2.9 \\mathrm{kPa}\n\\end{aligned}\n$$\n\nAgain, applying the relation:\n\n$$\n\\begin{aligned}\n& \\frac{p_{1}^{0}-p_{1}}{p_{1}^{0}}=\\frac{n_{2}}{n_{1}+n_{2}} \\\\\n& \\Rightarrow \\frac{p_{1}^{0}-2.9}{p_{1}^{0}}=\\frac{\\frac{30}{\\mathrm{M}}}{6+\\frac{30}{\\mathrm{M}}} \\\\\n& \\Rightarrow 1-\\frac{2.9}{p_{1}^{0}}=\\frac{\\frac{30}{\\mathrm{M}}}{\\frac{6 \\mathrm{M}+30}{\\mathrm{M}}} \\\\\n& \\Rightarrow 1-\\frac{2.9}{p_{1}^{0}}=\\frac{30}{6 \\mathrm{M}+30} \\\\\n& \\Rightarrow \\frac{2.9}{p_{1}^{0}}=1-\\frac{30}{6 \\mathrm{M}+30} \\\\\n& \\Rightarrow \\frac{2.9}{p_{1}^{0}}=\\frac{6 \\mathrm{M}+30-30}{6 \\mathrm{M}+30} \\\\\n& \\Rightarrow \\frac{2.9}{p_{1}^{0}}=\\frac{6 \\mathrm{M}}{6 \\mathrm{M}+30} \\\\\n& \\Rightarrow \\frac{p_{1}^{0}}{2.9}=\\frac{6 \\mathrm{M}+30}{6 \\mathrm{M}}\n\\end{aligned}\n$$"
                 }
-              ]
+              ],
+              "stage": "substitute"
             },
             {
               "type": "step",
-              "stage": "substitute",
+              "label": "Substitute",
               "flow": [
                 {
                   "type": "text",
                   "text": "Dividing equation (i) by (ii), we have:\n\n$$\n\\begin{aligned}\n& \\frac{2.9}{2.8}=\\frac{\\frac{5 \\mathrm{M}+30}{5 \\mathrm{M}}}{\\frac{6 \\mathrm{M}+30}{6 \\mathrm{M}}} \\\\\n& \\Rightarrow \\frac{2.9}{2.8} \\times \\frac{6 \\mathrm{M}+30}{6}=\\frac{5 \\mathrm{M}+30}{5} \\\\\n& \\Rightarrow 2.9 \\times 5 \\times(6 \\mathrm{M}+30)=2.8 \\times 6 \\times(5 \\mathrm{M}+30) \\\\\n& \\Rightarrow 87 \\mathrm{M}+435=84 \\mathrm{M}+504 \\\\\n& \\Rightarrow 3 \\mathrm{M}=69 \\\\\n& \\Rightarrow \\mathrm{M}=23 \\mathrm{u}\n\\end{aligned}\n$$"
                 }
-              ]
+              ],
+              "stage": "substitute"
             },
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
                   "text": "Therefore, the molar mass of the solute is $23 \\mathrm{~g} \\mathrm{~mol}^{-1}$."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ],
           "answer": [
             {
               "type": "text",
-              "text": "23 g mol⁻¹"
+              "text": "**Answer:** 23 g mol⁻¹"
             }
           ]
         },
@@ -1367,29 +1951,31 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "substitute",
+              "label": "Substitute",
               "flow": [
                 {
                   "type": "text",
                   "text": "(ii) Putting the value of ' M ' in equation (i), we have:\n\n$$\n\\frac{p_{1}^{0}}{2.8}=\\frac{5 \\times 23+30}{5 \\times 23}\n$$\n\n$$\n\\Rightarrow \\frac{p_{1}^{0}}{2.8}=\\frac{145}{115}\n$$\n\n$$\n\\Rightarrow p_{1}^{0}=3.53\n$$"
                 }
-              ]
+              ],
+              "stage": "substitute"
             },
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
                   "text": "Hence, the vapour pressure of water at 298 K is 3.53 kPa."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ],
           "answer": [
             {
               "type": "text",
-              "text": "3.53 kPa"
+              "text": "**Answer:** 3.53 kPa"
             }
           ]
         }
@@ -1411,79 +1997,86 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Here, $\\Delta T_{f}=(273.15-271) \\mathrm{K}$\n= 2.15 K\nMolar mass of sugar $\\left(\\mathrm{C}_{12} \\mathrm{H}_{22} \\mathrm{O}_{11}\\right)=12 \\times 12+22 \\times 1+11 \\times 16$\n\n$$\n=342 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\n5\\% solution (by mass) of cane sugar in water means 5 g of cane sugar is present in (100 $-5) \\mathrm{g}=95 \\mathrm{~g}$ of water."
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Now, number of moles of cane sugar $=\\frac{5}{342} \\mathrm{~mol}$\n$=0.0146 \\mathrm{~mol}$\nTherefore, molality of the solution,\n\n$$\nm=\\frac{0.0146 \\mathrm{~mol}}{0.095 \\mathrm{~kg}}\n$$\n\n$=0.1537 \\mathrm{~mol} \\mathrm{~kg}^{-1}$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Applying the relation,\n\n$$\n\\begin{aligned}\n& \\Delta T_{f}=K_{f} \\times m \\\\\n& \\begin{aligned}\n\\Rightarrow K_{f} & =\\frac{\\Delta T_{f}}{m} \\\\\n& =\\frac{2.15 \\mathrm{~K}}{0.1537 \\mathrm{~mol} \\mathrm{~kg}^{-1}}\n\\end{aligned} \\\\\n& =13.99 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Molar mass of glucose $\\left(\\mathrm{C}_{6} \\mathrm{H}_{12} \\mathrm{O}_{6}\\right)=6 \\times 12+12 \\times 1+6 \\times 16=$\n$180 \\mathrm{~g} \\mathrm{~mol}^{-1}$\n5\\% glucose in water means 5 g of glucose is present in $(100-5) \\mathrm{g}=95 \\mathrm{~g}$ of water."
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "∴ Number of moles of glucose $=\\frac{5}{180} \\mathrm{~mol}$\n$=0.0278 \\mathrm{~mol}$\nTherefore, molality of the solution,\n\n$$\nm=\\frac{0.0278 \\mathrm{~mol}}{0.095 \\mathrm{~kg}}\n$$\n\n$=0.2926 \\mathrm{~mol} \\mathrm{~kg}^{-1}$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Applying the relation,\n\n$$\n\\begin{aligned}\n& \\Delta T_{f}=K_{f} \\times m \\\\\n& =13.99 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1} \\times 0.2926 \\mathrm{~mol} \\mathrm{~kg}^{-1} \\\\\n& =4.09 \\mathrm{~K} \\text { (approximately) }\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "So the freezing point of the 5\\% glucose solution is $(273.15-4.09) \\mathrm{K}=269.06 \\mathrm{~K}$."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "269.06 K"
+          "text": "**Answer:** 269.06 K"
         }
       ]
     },
@@ -1502,49 +2095,53 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "First, we find the molar mass of AB2 and AB4 using the freezing point depression formula:\n\n$$\n\\begin{aligned}\n& M_{2}=\\frac{1000 \\times w_{2} \\times k_{f}}{\\Delta T_{f} \\times w_{1}} \\\\\n& \\quad M_{\\mathrm{AB}_{2}}=\\frac{1000 \\times 1 \\times 5.1}{2.3 \\times 20}\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& =110.87 \\mathrm{~g} \\mathrm{~mol}^{-1} \\\\\n& M_{\\mathrm{AB}_{4}}=\\frac{1000 \\times 1 \\times 5.1}{1.3 \\times 20} \\\\\n& =196.15 \\mathrm{~g} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$\n\nNow, we have the molar masses of $\\mathrm{AB}_{2}$ and $\\mathrm{AB}_{4}$ as $110.87 \\mathrm{~g} \\mathrm{~mol}^{-1}$ and $196.15 \\mathrm{~g} \\mathrm{~mol}^{-1}$ respectively."
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Let the atomic masses of A and B be x and y respectively.\nNow, we can write:\n\n$$\n\\begin{aligned}\n& x+2 y=110.87 \\\\\n& x+4 y=196.15\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Subtracting equation (i) from (ii), we have\n\n$$\n\\begin{aligned}\n& 2 y=85.28 \\\\\n& \\Rightarrow y=42.64\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Putting the value of ' $y$ ' in equation (1), we have $x$\n\n$$\n\\begin{aligned}\n& +2 \\times 42.64=110.87 \\\\\n& \\Rightarrow x=25.59\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Hence, the atomic masses of A and B are 25.59 u and 42.64 u respectively."
+          "text": "**Answer:** Hence, the atomic masses of A and B are 25.59 u and 42.64 u respectively."
         }
       ]
     },
@@ -1563,39 +2160,42 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
-              "text": "We are given:\n\n$$\n\\begin{aligned}\n& T=300 \\mathrm{~K} \\sqcap \\\\\n& =1.52 \\mathrm{bar} \\\\\n& \\mathrm{R}=0.083 \\mathrm{bar} \\mathrm{~L} \\mathrm{~K}^{-1} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
+              "text": "We are given:\n\n$$\n\\begin{aligned}\n& T=300 \\mathrm{~K} \\\\\n& \\Pi=1.52 \\mathrm{bar} \\\\\n& \\mathrm{R}=0.083 \\mathrm{bar} \\mathrm{~L} \\mathrm{~K}^{-1} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
-              "text": "Applying the relation, $п=$\nCRT"
+              "text": "Applying the relation, $\\Pi=$\nCRT"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& \\Rightarrow C=\\frac{\\pi}{\\mathrm{R} T} \\\\\n&=\\frac{1.52 \\mathrm{bar}}{0.083 \\mathrm{bar} \\mathrm{~L} \\mathrm{~K}^{-1} \\mathrm{~mol}^{-1} \\times 300 \\mathrm{~K}} \\\\\n&=0.061 \\mathrm{~mol}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Since the volume of the solution is 1 L, the concentration of the solution would be 0.061 M."
+          "text": "**Answer:** Since the volume of the solution is 1 L, the concentration of the solution would be 0.061 M."
         }
       ]
     },
@@ -1623,13 +2223,14 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
-                  "text": "Van der Wall's forces of attraction."
+                  "text": "Van der Waals' forces of attraction."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ]
         },
@@ -1644,13 +2245,14 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
-                  "text": "Van der Wall's forces of attraction."
+                  "text": "Van der Waals' forces of attraction."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ]
         },
@@ -1665,13 +2267,14 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
-                  "text": "Ion-diople interaction."
+                  "text": "Ion-dipole interaction."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ]
         },
@@ -1686,13 +2289,14 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
                   "text": "Dipole-dipole interaction."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ]
         },
@@ -1707,13 +2311,14 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
                   "text": "Dipole-dipole interaction."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ]
         }
@@ -1735,19 +2340,20 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "$n$-octane is a non-polar solvent, so it dissolves non-polar solutes more easily than polar solutes in the $n$-octane.\n\nThe order of increasing polarity is:\nCyclohexane $<\\mathrm{CH}_{3} \\mathrm{CN}<\\mathrm{CH}_{3} \\mathrm{OH}<\\mathrm{KCl}$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Therefore, the order of increasing solubility is:\n$\\mathrm{KCl}<\\mathrm{CH}_{3} \\mathrm{OH}<\\mathrm{CH}_{3} \\mathrm{CN}<$ Cyclohexane"
+          "text": "**Answer:** Therefore, the order of increasing solubility is:\n$\\mathrm{KCl}<\\mathrm{CH}_{3} \\mathrm{OH}<\\mathrm{CH}_{3} \\mathrm{CN}<$ Cyclohexane"
         }
       ]
     },
@@ -1775,13 +2381,14 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
                   "text": "Phenol $\\left(\\mathrm{C}_{6} \\mathrm{H}_{5} \\mathrm{OH}\\right)$ has the polar group -OH and non-polar group $-\\mathrm{C}_{6} \\mathrm{H}_{5}$. Thus, phenol is partially soluble in water."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ]
         },
@@ -1796,13 +2403,14 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
                   "text": "Toluene $\\left(\\mathrm{C}_{6} \\mathrm{H}_{5}-\\mathrm{CH}_{3}\\right)$ has no polar groups. Thus, toluene is insoluble in water."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ]
         },
@@ -1817,13 +2425,14 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
                   "text": "Formic acid $(\\mathrm{HCOOH})$ has the polar group -OH and can form H-bond with water. Thus, formic acid is highly soluble in water."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ]
         },
@@ -1838,13 +2447,14 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
-                  "text": "Ethylene glycol [structural formula shown inline in source as an embedded SVG image of HO-CH2-CH2-OH; omitted here, see note in stage report] has polar -OH group and can form H-bond. Thus, it is highly soluble in water."
+                  "text": "Ethylene glycol $\\mathrm{HO-CH_2-CH_2-OH}$ has polar -OH group and can form H-bond. Thus, it is highly soluble in water."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ]
         },
@@ -1859,13 +2469,14 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
                   "text": "Chloroform is insoluble in water."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ]
         },
@@ -1880,13 +2491,14 @@
           "solution_blocks": [
             {
               "type": "step",
-              "stage": "conclusion",
+              "label": "Conclusion",
               "flow": [
                 {
                   "type": "text",
                   "text": "Pentanol $\\left(\\mathrm{C}_{5} \\mathrm{H}_{11} \\mathrm{OH}\\right)$ has polar -OH group, but it also contains a very bulky nonpolar $-\\mathrm{C}_{5} \\mathrm{H}_{11}$ group. Thus, pentanol is partially soluble in water."
                 }
-              ]
+              ],
+              "stage": "conclusion"
             }
           ]
         }
@@ -1908,13 +2520,14 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Number of moles present in 92 g of $\\mathrm{Na}^{+}$ions $=\\frac{92 \\mathrm{~g}}{23 \\mathrm{~g} \\mathrm{~mol}^{-1}}$\n$=4 \\mathrm{~mol}$\n\n$$\n=\\frac{4 \\mathrm{~mol}}{1 \\mathrm{~kg}}\n$$\n\n= 4 m"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ]
     },
@@ -1933,49 +2546,53 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Solubility product of $\\mathrm{CuS}, K_{\\mathrm{sp}}=6 \\times 10^{-16}$. Let $s$ be the solubility of CuS in $\\mathrm{mol} \\mathrm{L}^{-1}$.\n\n$$\n\\mathrm{CuS} \\leftrightarrow \\mathrm{Cu}^{2+}+\\mathrm{S}^{2-}\n$$\n\nS S"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Now,\n\n$$\nK_{s p}=\\left[\\mathrm{Cu}^{2+}\\right]\\left[\\mathrm{S}^{2-}\\right]\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "$=s \\times s$\n$=s^{2}$\nSo, $K_{\\mathrm{sp}}=s^{2}=6 \\times 10^{-16}$\n\n$$\n\\Rightarrow s=\\sqrt{6 \\times 10^{-16}}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "$$\n=2.45 \\times 10^{-8} \\mathrm{~mol} \\mathrm{~L}^{-1}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Hence, the maximum molarity of CuS in an aqueous solution is $2.45 \\times 10^{-8} \\mathrm{~mol} \\mathrm{~L}^{-1}$."
+          "text": "**Answer:** Hence, the maximum molarity of CuS in an aqueous solution is $2.45 \\times 10^{-8} \\mathrm{~mol} \\mathrm{~L}^{-1}$."
         }
       ]
     },
@@ -1994,19 +2611,20 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "6.5 g of $\\mathrm{C}_{9} \\mathrm{H}_{8} \\mathrm{O}_{4}$ is dissolved in 450 g of $\\mathrm{CH}_{3} \\mathrm{CN}$.\n\nThen, total mass of the solution $=(6.5+450) \\mathrm{g}$\n\n$$\n=456.5 \\mathrm{~g}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Therefore, mass percentage of $\\mathrm{C}_{9} \\mathrm{H}_{8} \\mathrm{O}_{4}=\\frac{6.5}{456.5} \\times 100 \\%$\n= 1.424\\%"
+          "text": "**Answer:** Therefore, mass percentage of $\\mathrm{C}_{9} \\mathrm{H}_{8} \\mathrm{O}_{4}=\\frac{6.5}{456.5} \\times 100 \\%$\n= 1.424\\%"
         }
       ]
     },
@@ -2025,43 +2643,47 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "The molar mass of nalorphene $\\left(\\mathrm{C}_{19} \\mathrm{H}_{21} \\mathrm{NO}_{3}\\right)$ is given as:\n\n$$\n19 \\times 12+21 \\times 1+1 \\times 14+3 \\times 16=311 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "In $1.5 \\times 10^{-3} \\mathrm{~m}$ aqueous solution of nalorphene,\n1 kg (1000 g) of water contains $1.5 \\times 10^{-3} \\mathrm{~mol}=1.5 \\times 10^{-3} \\times 311 \\mathrm{~g}$\n\n$$\n=0.4665 \\mathrm{~g}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "So, total mass of the solution $=(1000+0.4665) \\mathrm{g}$\n\n$$\n=1000.4665 \\mathrm{~g}\n$$\n\nSo the solution containing 0.4665 g of nalorphene weighs 1000.4665 g."
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "So, the mass of solution containing 1.5 mg of nalorphene is:\n\n$$\n\\begin{aligned}\n& \\frac{1000.4665 \\times 1.5 \\times 10^{-3}}{0.4665} \\mathrm{~g} \\\\\n& =3.22 \\mathrm{~g}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         },
         {
           "type": "note",
@@ -2078,7 +2700,7 @@
       "answer": [
         {
           "type": "text",
-          "text": "Hence, the mass of aqueous solution required is 3.22 g."
+          "text": "**Answer:** Hence, the mass of aqueous solution required is 3.22 g."
         }
       ]
     },
@@ -2097,40 +2719,42 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "A 0.15 M solution of benzoic acid in methanol means 1000 mL of solution contains 0.15 mol of benzoic acid."
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "So, 250 mL of solution contains $=\\frac{0.15 \\times 250}{1000} \\mathrm{~mol}$ of benzoic acid $=0.0375 \\mathrm{~mol}$ of benzoic acid"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Molar mass",
           "flow": [
             {
               "type": "text",
               "text": "Molar mass of benzoic acid $\\left(\\mathrm{C}_{6} \\mathrm{H}_{5} \\mathrm{COOH}\\right)=7 \\times 12+6 \\times 1+2 \\times 16$ $=122 \\mathrm{~g} \\mathrm{~mol}^{-1}$"
             }
           ],
-          "label": "Molar mass"
+          "stage": "key_formula"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Hence, required benzoic acid $=0.0375 \\mathrm{~mol} \\times 122 \\mathrm{~g} \\mathrm{~mol}^{-1}$ $=4.575 \\mathrm{~g}$"
+          "text": "**Answer:** Hence, required benzoic acid $=0.0375 \\mathrm{~mol} \\times 122 \\mathrm{~g} \\mathrm{~mol}^{-1}$ $=4.575 \\mathrm{~g}$"
         }
       ]
     },
@@ -2149,13 +2773,14 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
-              "text": "Acetic acid\n\nTrichloroacetic acid Trifhoroacetic acid\n\n[Source shows structural-formula images for acetic acid, trichloroacetic acid and trifluoroacetic acid inline here, before the explanation; omitted, see note in stage report]\n\nAmong $\\mathrm{H}, \\mathrm{Cl}$, and $\\mathrm{F}, \\mathrm{H}$ is the least electronegative and F is the most electronegative. So F pulls electrons towards itself more strongly than Cl and H. This means trifluoroacetic acid loses $\\mathrm{H}^{+}$ions most easily, so it ionizes the most. The more ions a solution has, the greater the depression in freezing point. So the freezing point depression increases in this order:\n\nAcetic acid < trichloroacetic acid < trifluoroacetic acid"
+              "text": "Acetic acid\n\nTrichloroacetic acid Trifhoroacetic acid\n\n$\\mathrm{CH_3COOH}$ (acetic acid), $\\mathrm{CCl_3COOH}$ (trichloroacetic acid), $\\mathrm{CF_3COOH}$ (trifluoroacetic acid)\n\nAmong $\\mathrm{H}, \\mathrm{Cl}$, and $\\mathrm{F}, \\mathrm{H}$ is the least electronegative and F is the most electronegative. So F pulls electrons towards itself more strongly than Cl and H. This means trifluoroacetic acid loses $\\mathrm{H}^{+}$ions most easily, so it ionizes the most. The more ions a solution has, the greater the depression in freezing point. So the freezing point depression increases in this order:\n\nAcetic acid < trichloroacetic acid < trifluoroacetic acid"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ]
     },
@@ -2174,69 +2799,61 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Molar mass of $\\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{CHClCOOH}=15+14+13+35.5+12+16+16+1$\n\n$$\n=122.5 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\n∴ No. of moles present in 10 g of\n\n$$\n\\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{CHClCOOH}=\\frac{10 \\mathrm{~g}}{122.5 \\mathrm{~g} \\mathrm{~mol}^{-1}}\n$$\n\n$$\n=0.0816 \\mathrm{~mol}\n$$\n\nIt is given that 10 g of is added to 250 g of water.\n\n$$\n\\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{CHClCOOH}\n$$\n\n$$\n\\begin{aligned}\n& \\therefore \\text { Molality of the solution }, \\quad=\\frac{0.0186}{250} \\times 1000 \\\\\n& =0.3264 \\mathrm{~mol} \\mathrm{~kg}^{-1}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Let $a$ be the degree of dissociation of $\\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{CHClCOOH}$.\n$\\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{CHClCOOH}$ undergoes dissociation according to the following equation:\n\n$$\n\\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{CHClCOOH} \\leftrightarrow \\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{CHClCOO}^{-}+\\mathrm{H}^{+}\n$$\n\n| Initial conc. | $\\mathrm{C} \\mathrm{mol} \\mathrm{L}^{-1}$ | 0 | 0 |\n| :--- | :--- | :--- | :--- |\n| At equilibrium | $\\mathrm{C}(1-\\alpha)$ | $\\mathrm{C} \\alpha$ | $\\mathrm{C} \\alpha$ |"
-            }
-          ]
-        },
-        {
-          "type": "formula",
-          "stage": "key_formula",
-          "flow": [
+            },
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& \\therefore K_{a}=\\frac{C \\alpha \\cdot C \\alpha}{C(1-\\alpha)} \\\\\n& =\\frac{C \\alpha^{2}}{1-\\alpha}\n\\end{aligned}\n$$"
-            }
-          ]
-        },
-        {
-          "type": "step",
-          "stage": "substitute",
-          "flow": [
+            },
             {
               "type": "text",
               "text": "Since $a$ is very small with respect to $1,1-\\mathrm{a} \\approx 1$\nNow,\n\n$$\nK_{a}=\\frac{C \\alpha^{2}}{1}\n$$\n\n$$\n\\begin{aligned}\n\\Rightarrow K_{a} & =C \\alpha^{2} \\\\\n\\Rightarrow \\alpha & =\\sqrt{\\frac{K_{a}}{C}} \\\\\n& =\\sqrt{\\frac{1.4 \\times 10^{-3}}{0.3264}} \\quad\\left(\\because K_{a}=1.4 \\times 10^{-3}\\right) \\\\\n& =0.0655\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Again,\n\n$$\n\\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{CHClCOOH} \\leftrightarrow \\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{CHClCOO}^{-}+\\mathrm{H}^{+}\n$$\n\n| Initial moles | 1 | 0 | 0 |\n| :--- | :--- | :--- | :--- |\n| At equilibrium | $1-\\alpha$ | $\\alpha$ | $\\alpha$ |\n\nTotal moles of equilibrium $=1-\\mathrm{a}+\\mathrm{a}+\\mathrm{a}$\n\n$$\n=1+a\n$$\n\n$$\n\\begin{aligned}\n& \\therefore i=\\frac{1+\\alpha}{1} \\\\\n& =1+\\alpha \\\\\n& =1+0.0655 \\\\\n& =1.0655\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Hence, the depression in the freezing point of water is given as:\n\n$$\n\\begin{aligned}\n& \\Delta T_{f}=i \\cdot K_{f} m \\\\\n& =1.0655 \\times 1.86 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1} \\times 0.3264 \\mathrm{~mol} \\mathrm{~kg}^{-1} \\\\\n& =0.65 \\mathrm{~K}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$\\Delta T_{f} = 0.65 \\mathrm{~K}$"
+          "text": "**Answer:** $\\Delta T_{f} = 0.65 \\mathrm{~K}$"
         }
       ]
     },
@@ -2255,59 +2872,64 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "It is given that:\n\n$$\n\\begin{aligned}\n& w_{1}=500 \\mathrm{~g} \\\\\n& w_{2}=19.5 \\mathrm{~g} \\\\\n& K_{f}=1.86 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1} \\\\\n& \\Delta T_{f}=1 \\mathrm{~K}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "We know that:\n\n$$\n\\begin{aligned}\n& M_{2}=\\frac{K_{f} \\times w_{2} \\times 1000}{\\Delta T_{f} \\times w_{1}} \\\\\n& =\\frac{1.86 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1} \\times 19.5 \\mathrm{~g} \\times 1000 \\mathrm{~g} \\mathrm{~kg}^{-1}}{500 \\mathrm{~g} \\times 1 \\mathrm{~K}} \\\\\n& =72.54 \\mathrm{~g} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$\n\nTherefore, observed molar mass of $\\mathrm{CH}_{2} \\mathrm{FCOOH},\\left(M_{2}\\right)_{\\text {obs }}=72.54 \\mathrm{~g} \\mathrm{~mol}$\n\nThe calculated molar mass of $\\mathrm{CH}_{2} \\mathrm{FCOOH}$\n\n$$\n\\begin{aligned}\n\\left(M_{2}\\right)_{\\mathrm{cal}} & =14+19+12+16+16+1 \\\\\n& =78 \\mathrm{~g} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$\n\nTherefore, van't Hoff factor, is:\n\n$$\n\\begin{aligned}\n& =\\frac{78 \\mathrm{~g} \\mathrm{~mol}^{-1}}{72.54 \\mathrm{~g} \\mathrm{~mol}^{-1}} \\\\\n& =1.0753\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Let a be the degree of dissociation of $\\mathrm{CH}_{2} \\mathrm{FCOOH}$\n\n$$\n\\mathrm{CH}_{2} \\mathrm{FCOOH} \\leftrightarrow \\mathrm{CH}_{2} \\mathrm{FCOO}^{-}+\\mathrm{H}^{+}\n$$\n\n| Initial conc. | $\\mathrm{C} \\mathrm{mol} \\mathrm{L}^{-1}$ | 0 | 0 |  |\n| :--- | :--- | :--- | :--- | :--- |\n| At equilibrium | $\\mathrm{C}(1-\\alpha)$ | $\\mathrm{C} \\alpha$ | $\\mathrm{C} \\alpha$ | Total $=\\mathrm{C}(1+\\alpha)$ |\n\n$$\n\\begin{aligned}\n& \\therefore i=\\frac{C(1+\\alpha)}{C} \\\\\n& \\Rightarrow i=1+\\alpha \\\\\n& \\Rightarrow \\alpha=i-1 \\\\\n& =1.0753-1 \\\\\n& =0.0753\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Now, the value of $K_{a}$ is given as:\n\n$$\n\\begin{aligned}\nK_{a} & =\\frac{\\left[\\mathrm{CH}_{2} \\mathrm{FCOO}^{-}\\right]\\left[\\mathrm{H}^{+}\\right]}{\\left[\\mathrm{CH}_{2} \\mathrm{FCOOH}\\right]} \\\\\n& =\\frac{C \\alpha \\cdot C \\alpha}{C(1-\\alpha)} \\\\\n= & \\frac{C \\alpha^{2}}{1-\\alpha}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Taking the volume of the solution as 500 mL, we have the concentration:\n\n$$\n\\begin{aligned}\nC & =\\frac{\\frac{19.5}{78}}{500} \\times 1000 \\mathrm{M} \\\\\n& =0.5 \\mathrm{M}\n\\end{aligned}\n$$\n\n$$\nK_{a}=\\frac{C \\alpha^{2}}{1-\\alpha}\n$$\n\nTherefore,\n\n$$\n\\begin{aligned}\n& =\\frac{0.5 \\times(0.0753)^{2}}{1-0.0753} \\\\\n& =\\frac{0.5 \\times 0.00567}{0.9247} \\\\\n& =0.00307 \\text { (approximately) } \\\\\n& =3.07 \\times 10^{-3}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Van't Hoff factor $i = 1.0753$; dissociation constant $K_{a} = 3.07 \\times 10^{-3}$."
+          "text": "**Answer:** Van't Hoff factor $i = 1.0753$; dissociation constant $K_{a} = 3.07 \\times 10^{-3}$."
         }
       ]
     },
@@ -2326,29 +2948,31 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Vapour pressure of water, $p_{1}^{0}=17.535 \\mathrm{~mm}$ of Hg\nMass of glucose, $w_{2}=25 \\mathrm{~g}$\nMass of water, $w_{1}=450 \\mathrm{~g}$\nWe know that,\nMolar mass of glucose $\\left(\\mathrm{C}_{6} \\mathrm{H}_{12} \\mathrm{O}_{6}\\right), M_{2}=6 \\times 12+12 \\times 1+6 \\times 16=$ $180 \\mathrm{~g} \\mathrm{~mol}^{-1}$\n\nMolar mass of water, $M_{1}=18 \\mathrm{~g} \\mathrm{~mol}^{-1}$\nThen, number of moles of glucose, $n_{2}=\\frac{25}{180 \\mathrm{~g} \\mathrm{~mol}^{-1}}$\n\n$$\n\\text { = } 0.139 \\mathrm{~mol}\n$$\n\nAnd, number of moles of water,\n\n$$\nn_{1}=\\frac{450 \\mathrm{~g}}{18 \\mathrm{~g} \\mathrm{~mol}^{-1}}\n$$\n\n$=25 \\mathrm{~mol}$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "We know that,\n\n$$\n\\begin{aligned}\n& \\frac{p_{1}^{0}-p_{1}}{p_{1}^{0}}=\\frac{n_{1}}{n_{2}+n_{1}} \\\\\n& \\Rightarrow \\frac{17.535-p_{1}}{17.535}=\\frac{0.139}{0.139+25} \\\\\n& \\Rightarrow 17.535-p_{1}=\\frac{0.139 \\times 17.535}{25.139} \\\\\n& \\Rightarrow 17.535-p_{1}=0.097 \\\\\n& \\Rightarrow p_{1}=17.44 \\mathrm{~mm} \\text { of } \\mathrm{Hg}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Hence, the vapour pressure of water is 17.44 mm of Hg."
+          "text": "**Answer:** Hence, the vapour pressure of water is 17.44 mm of Hg."
         }
       ]
     },
@@ -2367,29 +2991,31 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Here, $p=760$\n\n$$\n\\mathrm{mm} \\mathrm{Hg} \\mathrm{k}_{\\mathrm{H}}=4.27 \\times 10^{5}\n$$\n\nmm Hg"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "According to\nHenry's law,\n\n$$\n\\begin{aligned}\n& p=\\mathrm{k}_{\\mathrm{H}} X \\\\\n& \\Rightarrow x=\\frac{p}{k_{\\mathrm{H}}} \\\\\n& \\quad=\\frac{760 \\mathrm{~mm} \\mathrm{Hg}}{4.27 \\times 10^{5} \\mathrm{~mm} \\mathrm{Hg}} \\\\\n& =177.99 \\times 10^{-5} \\\\\n& =178 \\times 10^{-5} \\text { (approximately) }\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Hence, the mole fraction of methane in benzene is $178 \\times 10^{-5}$."
+          "text": "**Answer:** Hence, the mole fraction of methane in benzene is $178 \\times 10^{-5}$."
         }
       ]
     },
@@ -2408,39 +3034,42 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Number of moles of liquid A, $n_{\\mathrm{A}}=\\frac{100}{140} \\mathrm{~mol}$ $=0.714 \\mathrm{~mol}$\nNumber of moles of liquid B, $n_{\\mathrm{B}}=\\frac{1000}{180} \\mathrm{~mol}$ $=5.556 \\mathrm{~mol}$\n\nThen, mole fraction of A, $x_{\\mathrm{A}}=\\frac{n_{\\mathrm{A}}}{n_{\\mathrm{A}}+n_{\\mathrm{B}}}$\n\n$$\n\\begin{aligned}\n& =\\frac{0.714}{0.714+5.556} \\\\\n& =0.114\n\\end{aligned}\n$$\n\nAnd, mole fraction of $\\mathrm{B}, x_{\\mathrm{B}}=1-0.114$\n\n$$\n=0.886\n$$\n\nVapour pressure of pure liquid $\\mathrm{B}, p_{\\mathrm{B}}^{0}=500$ torr"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Therefore, vapour pressure of liquid B in the solution,\n\n$$\n\\begin{aligned}\n& p_{\\mathrm{B}}=p_{\\mathrm{B}}^{0} x_{\\mathrm{B}} \\\\\n= & 500 \\times 0.886 \\\\\n= & 443 \\text { torr }\n\\end{aligned}\n$$\n\nTotal vapour pressure of the solution, $p_{\\text {total }}=475$ torr\n∴ Vapour pressure of liquid A in the solution,\n\n$$\n\\begin{aligned}\n& p_{\\mathrm{A}}=p_{\\text {total }}-p_{\\mathrm{B}}=475-443 \\\\\n& =32 \\text { torr }\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Now,\n\n$$\n\\begin{aligned}\n& p_{\\mathrm{A}}=p_{\\mathrm{A}}^{0} x_{\\mathrm{A}} \\\\\n& \\begin{aligned}\n\\Rightarrow p_{\\mathrm{A}}^{0}= & \\frac{p_{\\mathrm{A}}}{x_{\\mathrm{A}}} \\\\\n& =\\frac{32}{0.114}\n\\end{aligned} \\\\\n& =280.7 \\text { torr }\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Hence, the vapour pressure of pure liquid A is 280.7 torr."
+          "text": "**Answer:** Hence, the vapour pressure of pure liquid A is 280.7 torr. Vapour pressure of liquid A in the solution, $p_A = 32$ torr."
         }
       ]
     },
@@ -2464,23 +3093,24 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "From the question, we have the following data"
             }
-          ]
+          ],
+          "stage": "conclusion"
         },
         {
           "type": "table",
-          "html": "| 100 × × acetone | 0 | 11.8 | 23.4 | 36.0 | 50.8 | 58.2 | 64.5 | 72.1 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Pacetone /mm Hg | 0 | 54.9 | 110.1 | 202.4 | 322.7 | 405.9 | 454.1 | 521.1 |\n| Pchloroform/mm Hg | 632.8 | 548.1 | 469.4 | 359.7 | 257.7 | 193.6 | 161.2 | 120.7 |\n| Ptota $\\boldsymbol{(} \\mathbf{m m ~ H g} \\boldsymbol{)}$ | 632.8 | 603.0 | 579.5 | 562.1 | 580.4 | 599.5 | 615.3 | 641.8 |"
+          "html": "| $100 \\times x_{\\text{acetone}}$ | 0 | 11.8 | 23.4 | 36.0 | 50.8 | 58.2 | 64.5 | 72.1 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Pacetone /mm Hg | 0 | 54.9 | 110.1 | 202.4 | 322.7 | 405.9 | 454.1 | 521.1 |\n| Pchloroform/mm Hg | 632.8 | 548.1 | 469.4 | 359.7 | 257.7 | 193.6 | 161.2 | 120.7 |\n| $P_{\\text{total}}$ (mm Hg) | 632.8 | 603.0 | 579.5 | 562.1 | 580.4 | 599.5 | 615.3 | 641.8 |"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "It can be observed from the graph that the plot for the $p_{\\text {total }}$ of the solution curves downwards. Therefore, the solution shows negative deviation from the ideal behaviour."
+          "text": "**Answer:** It can be observed from the graph that the plot for the $p_{\\text {total }}$ of the solution curves downwards. Therefore, the solution shows negative deviation from the ideal behaviour."
         }
       ]
     },
@@ -2499,59 +3129,64 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Molar mass of benzene $\\left(\\mathrm{C}_{6} \\mathrm{H}_{6}\\right)=6 \\times 12+6 \\times 1$\n\n$$\n=78 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\nMolar mass of toluene $\\left(\\mathrm{C}_{6} \\mathrm{H}_{5} \\mathrm{CH}_{3}\\right)=7 \\times 12+8 \\times 1$\n\n$$\n=92 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\nNow, no. of moles present in 80 g of benzene\n\nAnd, no. of moles present in 100 g of toluene\n\n$$\n\\begin{aligned}\n& =\\frac{80}{78} \\mathrm{~mol}=1.026 \\mathrm{~mol} \\\\\n& =\\frac{100}{92} \\mathrm{~mol}=1.087 \\mathrm{~mol}\n\\end{aligned}\n$$\n\n∴ Mole fraction of benzene, $X_{b}$\nAnd, mole fraction of toluene,\n\n$$\n\\begin{aligned}\n& =\\frac{1.026}{1.026+1.087}=0.486 \\\\\n& x_{t}=1-0.486=0.514\n\\end{aligned}\n$$\n\nIt is given that vapour pressure of pure benzene,\n\n$$\np_{h}^{0}=50.71 \\mathrm{~mm} \\mathrm{Hg}\n$$\n\nAnd, vapour pressure of pure toluene,\n\n$$\np_{t}^{0}=32.06 \\mathrm{~mm} \\mathrm{Hg}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
-              "text": "Therefore, partial vapour pressure of benzene,\n\n$$\n\\begin{aligned}\n& =0.486 \\times 50.71 \\\\\n& =24.645 \\mathrm{~mm} \\mathrm{Hg}\n\\end{aligned}\n$$\n\n$$\np_{b}=x_{b} \\times p_{b}\n$$\n\nAnd, partial vapour pressure of toluene, $p_{t}=x_{t} \\times p_{t}$\nAnd, partial vapour pressure of toluene, $p_{t}=x_{t} \\times p_{t}$\n\n$$\n\\begin{aligned}\n& =0.514 \\times 32.06 \\\\\n& =16.479 \\mathrm{~mm} \\mathrm{Hg}\n\\end{aligned}\n$$"
+              "text": "Therefore, partial vapour pressure of benzene,\n\n$$\n\\begin{aligned}\n& =0.486 \\times 50.71 \\\\\n& =24.645 \\mathrm{~mm} \\mathrm{Hg}\n\\end{aligned}\n$$\n\n$$\np_{b}=x_{b} \\times p_{b}\n$$\n\nAnd, partial vapour pressure of toluene, $p_{t}=x_{t} \\times p_{t}$\n\n$$\n\\begin{aligned}\n& =0.514 \\times 32.06 \\\\\n& =16.479 \\mathrm{~mm} \\mathrm{Hg}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Hence, mole fraction of benzene in vapour phase is given by:\n\n$$\n\\frac{p_{b}}{p_{b}+p_{t}}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& =\\frac{24.645}{24.645+16.479} \\\\\n& =\\frac{24.645}{41.124}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& =0.599 \\\\\n& =0.6\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Mole fraction of benzene in vapour phase $\\approx 0.6$."
+          "text": "**Answer:** Mole fraction of benzene in vapour phase $\\approx 0.6$."
         }
       ]
     },
@@ -2570,49 +3205,53 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Percentage of oxygen $\\left(\\mathrm{O}_{2}\\right)$ in air $=20 \\%$\nPercentage of nitrogen $\\left(\\mathrm{N}_{2}\\right)$ in air $=79 \\%$\nWater is in equilibrium with air at a total pressure of 10 atm. That is, $(10 \\times 760) \\mathrm{mm} \\mathrm{Hg}=7600 \\mathrm{~mm} \\mathrm{Hg}$\nTherefore,\nPartial pressure of oxygen, $p_{\\mathrm{o}_{2}}=\\frac{20}{100} \\times 7600 \\mathrm{~mm} \\mathrm{Hg}$\n$=1520 \\mathrm{~mm} \\mathrm{Hg}$\nPartial pressure of nitrogen, $p_{\\mathrm{N}_{2}}=\\frac{79}{100} \\times 7600 \\mathrm{mmHg}$\n= 6004 mmHg"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Now, according to Henry's law:\n\n$$\np=K_{\\mathrm{H} \\cdot x}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "For oxygen:\n\n$$\n\\begin{aligned}\np_{\\mathrm{O}_{2}}= & K_{\\mathrm{H}} \\cdot x_{\\mathrm{O}_{2}} \\\\\n\\Rightarrow x_{\\mathrm{O}_{2}} & =\\frac{p_{\\mathrm{O}_{2}}}{K_{\\mathrm{H}}} \\\\\n& =\\frac{1520 \\mathrm{~mm} \\mathrm{Hg}}{3.30 \\times 10^{7} \\mathrm{~mm} \\mathrm{Hg}} \\quad \\text { (Given } K_{\\mathrm{H}}=3.30 \\times 10^{7} \\mathrm{~mm} \\mathrm{Hg} \\text { ) } \\\\\n& =4.61 \\times 10^{-5}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "For nitrogen:\n\n$$\n\\begin{aligned}\np_{\\mathrm{N}_{2}}= & K_{\\mathrm{H}} \\cdot x_{\\mathrm{N}_{2}} \\\\\n\\Rightarrow x_{\\mathrm{N}_{2}} & =\\frac{p_{\\mathrm{N}_{2}}}{K_{\\mathrm{H}}} \\\\\n& =\\frac{6004 \\mathrm{~mm} \\mathrm{Hg}}{6.51 \\times 10^{7} \\mathrm{~mm} \\mathrm{Hg}} \\\\\n& =9.22 \\times 10^{-5}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Hence, the mole fractions of oxygen and nitrogen in water are $4.61 \\times 10^{-5}$ and $9.22 \\times 10^{-5}$ respectively."
+          "text": "**Answer:** Hence, the mole fractions of oxygen and nitrogen in water are $4.61 \\times 10^{-5}$ and $9.22 \\times 10^{-5}$ respectively."
         }
       ]
     },
@@ -2631,29 +3270,31 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "We know that,\n\n$$\n\\begin{aligned}\n& \\pi=i \\frac{n}{V} \\mathrm{R} T \\\\\n& \\Rightarrow \\pi=i \\frac{w}{M V} \\mathrm{R} T \\\\\n& \\Rightarrow w=\\frac{\\pi M V}{i \\mathrm{R} T} \\\\\n& \\pi=0.75 \\mathrm{~atm} \\\\\n& V=2.5 \\mathrm{~L} \\\\\n& i=2.47 \\\\\n& T=(27+273) \\mathrm{K}=300 \\mathrm{~K}\n\\end{aligned}\n$$\n\nHere,\n\n$$\n\\begin{aligned}\n& \\mathrm{R}=0.0821 \\mathrm{~L} \\mathrm{~atm} \\mathrm{~K}^{-1} \\mathrm{~mol}^{-1} \\\\\n& \\mathrm{M}=1 \\times 40+2 \\times 35.5 \\\\\n& =111 \\mathrm{~g} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Therefore, $w=\\frac{0.75 \\times 111 \\times 2.5}{2.47 \\times 0.0821 \\times 300}$\n\n$$\n=3.42 \\mathrm{~g}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Hence, the required amount of $\\mathrm{CaCl}_{2}$ is 3.42 g."
+          "text": "**Answer:** Hence, the required amount of $\\mathrm{CaCl}_{2}$ is 3.42 g."
         }
       ]
     },
@@ -2672,29 +3313,31 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "When $\\mathrm{K}_{2} \\mathrm{SO}_{4}$ is dissolved in water, $\\mathrm{K}^{+}$and $\\mathrm{SO}_{4}^{2-}$ ions are produced.\n\n$$\n\\mathrm{K}_{2} \\mathrm{SO}_{4} \\longrightarrow 2 \\mathrm{~K}^{+}+\\mathrm{SO}_{4}^{2-}\n$$\n\nTotal number of ions produced = 3\n\n$$\n\\therefore i=3 \\text { Given, } w=25 \\mathrm{mg}=0.025\n$$\n\ng\n\n$$\n\\begin{aligned}\n& V=2 \\mathrm{~L} \\\\\n& T=25^{\\circ} \\mathrm{C}=(25+273) \\mathrm{K}=298 \\mathrm{~K} \\text { Also, }\n\\end{aligned}\n$$\n\nwe know that:\n\n$$\n\\begin{aligned}\n& \\mathrm{R}=0.0821 \\mathrm{~L} \\text { atm } \\mathrm{K}^{-1} \\mathrm{~mol}^{-1} \\\\\n& M=(2 \\times 39)+(1 \\times 32)+(4 \\times 16)=174 \\mathrm{~g} \\mathrm{~mol}^{-1}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
-              "text": "Appling the following relation,\n\n$$\n\\begin{aligned}\n\\pi & =i \\frac{n}{v} \\mathrm{R} T \\\\\n& =i \\frac{w}{M} \\frac{1}{v} \\mathrm{R} T \\\\\n& =3 \\times \\frac{0.025}{174} \\times \\frac{1}{2} \\times 0.0821 \\times 298\n\\end{aligned}\n$$"
+              "text": "Applying the following relation,\n\n$$\n\\begin{aligned}\n\\pi & =i \\frac{n}{v} \\mathrm{R} T \\\\\n& =i \\frac{w}{M} \\frac{1}{v} \\mathrm{R} T \\\\\n& =3 \\times \\frac{0.025}{174} \\times \\frac{1}{2} \\times 0.0821 \\times 298\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$\\pi = 5.27 \\times 10^{-3} \\mathrm{~atm}$"
+          "text": "**Answer:** $\\pi = 5.27 \\times 10^{-3} \\mathrm{~atm}$"
         }
       ]
     },
@@ -2713,39 +3356,42 @@
       "solution_blocks": [
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Mass percentage of $\\mathrm{C}_{6} \\mathrm{H}_{6}$\n\n$$\n=\\frac{\\text { Mass of } \\mathrm{C}_{6} \\mathrm{H}_{6}}{\\text { Total mass of the solution }} \\times 100 \\%\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& =\\frac{\\text { Mass of } \\mathrm{C}_{6} \\mathrm{H}_{6}}{\\text { Mass of } \\mathrm{C}_{6} \\mathrm{H}_{6}+\\text { Mass of } \\mathrm{CCl}_{4}} \\times 100 \\% \\\\\n& =\\frac{22}{22+122} \\times 100 \\% \\\\\n& =15.28 \\% \\\\\n& =\\frac{\\text { Mass of } \\mathrm{CCl}_{4}}{\\text { Total mass of the solution }} \\times 100 \\%\n\\end{aligned}\n$$\n\nMass percentage of $\\mathrm{CCl}_{4}$\n\n$$\n\\begin{aligned}\n& =\\frac{\\text { Mass of } \\mathrm{CCl}_{4}}{\\text { Mass of } \\mathrm{C}_{6} \\mathrm{H}_{6}+\\text { Mass of } \\mathrm{CCl}_{4}} \\times 100 \\% \\\\\n& =\\frac{122}{22+122} \\times 100 \\% \\\\\n& =84.72 \\%\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Alternatively,\nMass percentage of $\\mathrm{CCl}_{4}=(100-15.28) \\%$\n= 84.72\\%"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Mass percentage of $\\mathrm{C}_{6} \\mathrm{H}_{6}$ = 15.28\\%; Mass percentage of $\\mathrm{CCl}_{4}$ = 84.72\\%"
+          "text": "**Answer:** Mass percentage of $\\mathrm{C}_{6} \\mathrm{H}_{6}$ = 15.28\\%; Mass percentage of $\\mathrm{CCl}_{4}$ = 84.72\\%"
         }
       ]
     },
@@ -2764,49 +3410,53 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Let the total mass of the solution be 100 g and the mass of benzene be 30 g .\n∴ Mass of carbon tetrachloride $=(100-30) \\mathrm{g}$\n$=70 \\mathrm{~g}$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
-              "text": "Molar mass of benzene $\\left(\\mathrm{C}_{6} \\mathrm{H}_{6}\\right)=(6 \\times 12+6 \\times 1) \\mathrm{g} \\mathrm{mol}^{-1}$\n$=78 \\mathrm{~g} \\mathrm{~mol}^{-1}$\n∴ Number of moles of $\\mathrm{C}_{6} \\mathrm{H}_{6}=\\frac{30}{78} \\mathrm{~mol}$\n$=0.3846 \\mathrm{~mol}$\nMolar mass of carbon tetrachloride $\\left(\\mathrm{CCl}_{4}\\right)=1 \\times 12+4 \\times 355$\n$=154 \\mathrm{~g} \\mathrm{~mol}^{-1}$\n∴ Number of moles of $\\mathrm{CCl}_{4}=\\frac{70}{154} \\mathrm{~mol}$\n$=0.4545 \\mathrm{~mol}$"
+              "text": "Molar mass of benzene $\\left(\\mathrm{C}_{6} \\mathrm{H}_{6}\\right)=(6 \\times 12+6 \\times 1) \\mathrm{g} \\mathrm{mol}^{-1}$\n$=78 \\mathrm{~g} \\mathrm{~mol}^{-1}$\n∴ Number of moles of $\\mathrm{C}_{6} \\mathrm{H}_{6}=\\frac{30}{78} \\mathrm{~mol}$\n$=0.3846 \\mathrm{~mol}$\nMolar mass of carbon tetrachloride $\\left(\\mathrm{CCl}_{4}\\right)=1 \\times 12+4 \\times 35.5$\n$=154 \\mathrm{~g} \\mathrm{~mol}^{-1}$\n∴ Number of moles of $\\mathrm{CCl}_{4}=\\frac{70}{154} \\mathrm{~mol}$\n$=0.4545 \\mathrm{~mol}$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Thus, the mole fraction of $\\mathrm{C}_{6} \\mathrm{H}_{6}$ is given as:\n$\\frac{\\text { Number of moles of } \\mathrm{C}_{6} \\mathrm{H}_{6}}{\\text { Number of moles of } \\mathrm{C}_{6} \\mathrm{H}_{6}+\\text { Number of moles of } \\mathrm{CCl}_{4}}$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& =\\frac{0.3846}{0.3846+0.4545} \\\\\n& =0.458\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Mole fraction of $\\mathrm{C}_{6} \\mathrm{H}_{6}$ = 0.458"
+          "text": "**Answer:** Mole fraction of $\\mathrm{C}_{6} \\mathrm{H}_{6}$ = 0.458"
         }
       ]
     },
@@ -2825,39 +3475,42 @@
       "solution_blocks": [
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Molarity is given by:\n\n$$\n\\text { Molarity }=\\frac{\\text { Moles of solute }}{\\text { Volume of solution in litre }}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "(a) Molar mass of $\\mathrm{Co}\\left(\\mathrm{NO}_{3}\\right)_{2} .6 \\mathrm{H}_{2} \\mathrm{O}=59+2(14+3 \\times 16)+6 \\times 18$\n\n$$\n=291 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\n∴ Moles of $\\mathrm{Co}\\left(\\mathrm{NO}_{3}\\right)_{2} .6 \\mathrm{H}_{2} \\mathrm{O}=\\frac{30}{291} \\mathrm{~mol}$\n\n$$\n\\text { = } 0.103 \\mathrm{~mol}\n$$\n\nTherefore, molarity $=\\frac{0.103 \\mathrm{~mol}}{4.3 \\mathrm{~L}}$\n= 0.023 M"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "(b) Number of moles present in 1000 mL of $0.5 \\mathrm{M} \\mathrm{H}_{2} \\mathrm{SO}_{4}=0.5 \\mathrm{~mol}$\n∴ Number of moles present in 30 mL of $0.5 \\mathrm{M} \\mathrm{H}_{2} \\mathrm{SO}_{4}=\\frac{0.5 \\times 30}{1000} \\mathrm{~mol}$\n\n$$\n\\text { = } 0.015 \\mathrm{~mol}\n$$\n\nTherefore, molarity $=\\frac{0.015}{0.5 \\mathrm{~L}} \\mathrm{~mol}$\n= 0.03 M"
             }
-          ]
+          ],
+          "stage": "substitute"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "(a) 0.023 M; (b) 0.03 M"
+          "text": "**Answer:** (a) 0.023 M; (b) 0.03 M"
         }
       ]
     },
@@ -2876,39 +3529,42 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
-              "text": "Molar mass of urea $\\left(\\mathrm{NH}_{2} \\mathrm{CONH}_{2}\\right)=2(1 \\times 14+2 \\times 1)+1 \\times 12+1 \\times 16$\n\n$$\n=60 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\n0.25 molar aqueous solution of urea means:\n\n1000 g of water contains 0.25 mol = (0.25 × 60)g of urea\n\n$$\n\\text { = } 15 \\text { g of urea }\n$$\n\nThat is,\n$(1000+15) \\mathrm{g}$ of solution contains 15 g of urea"
+              "text": "Molar mass of urea $\\left(\\mathrm{NH}_{2} \\mathrm{CONH}_{2}\\right)=2(1 \\times 14+2 \\times 1)+1 \\times 12+1 \\times 16$\n\n$$\n=60 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\n0.25 molal aqueous solution of urea means:\n\n1000 g of water contains 0.25 mol = (0.25 × 60)g of urea\n\n$$\n\\text { = } 15 \\text { g of urea }\n$$\n\nThat is,\n$(1000+15) \\mathrm{g}$ of solution contains 15 g of urea"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Therefore, $2.5 \\mathrm{~kg}(2500 \\mathrm{~g})$ of solution contains\n\n$$\n=\\frac{15 \\times 2500}{1000+15} \\mathrm{~g}\n$$\n\n$$\n\\begin{aligned}\n& =36.95 \\mathrm{~g} \\\\\n& =37 \\mathrm{~g} \\text { of urea (approximately) }\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Hence, mass of urea required = 37 g\nNote: There is a slight variation in this answer and the one given in the NCERT textbook."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "37 g of urea"
+          "text": "**Answer:** 37 g of urea"
         }
       ]
     },
@@ -2927,39 +3583,42 @@
       "solution_blocks": [
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "(a) Molar mass of $\\mathrm{KI}=39+127=166 \\mathrm{~g} \\mathrm{~mol}^{-1}$\n\n20\\% (mass/mass) aqueous solution of KI means 20 g of KI is present in 100 g of solution. That is,\n\n$$\n\\begin{aligned}\n& 20 \\mathrm{~g} \\text { of } \\mathrm{KI} \\text { is present in }(100-20) \\mathrm{g} \\text { of water }=80 \\mathrm{~g} \\text { of water } \\\\\n& \\qquad=\\frac{\\text { Moles of } \\mathrm{KI}}{\\text { Mass of water in } \\mathrm{kg}}\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n= & \\frac{\\frac{20}{166}}{0.08} \\mathrm{~m} \\\\\n= & 1.506 \\mathrm{~m} \\\\\n= & 1.51 \\mathrm{~m} \\text { (approximately) }\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "(b) It is given that the density of the solution $=1.202 \\mathrm{~g} \\mathrm{~mL}^{-1}$\n$$\n\\begin{aligned}\n& \\therefore \\text { Volume of } 100 \\mathrm{~g} \\text { solution }=\\frac{\\text { Mass }}{\\text { Density }} \\\\\n& =\\frac{100 \\mathrm{~g}}{1.202 \\mathrm{~g} \\mathrm{~mL}} \\\\\n& =83.19 \\mathrm{~mL} \\\\\n& =83.19 \\times 10^{-3} \\mathrm{~L}\n\\end{aligned}\n$$\nTherefore, molarity of the solution\n$$\n=\\frac{\\frac{20}{166} \\mathrm{~mol}}{83.19 \\times 10^{-3} \\mathrm{~L}}\n$$\n$=1.45 \\mathrm{M}$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "(c) Moles of KI\n\nMoles of water\n\n$$\n\\begin{array}{ll}\n\\text { Therefore, } & =\\frac{20}{166}=0.12 \\mathrm{~mol} \\\\\n=0.0263 & =\\frac{80}{18}=4.44 \\mathrm{~mol}\n\\end{array}\n$$\n\nmole fraction of KI\n\n$$\n=\\frac{0.12}{0.12+4.44}\n$$\n\n$$\n=\\frac{\\text { Moles of KI }}{\\text { Moles of KI + Moles of water }}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "(a) 1.51 m; (b) 1.45 M; (c) mole fraction of KI = 0.0263"
+          "text": "**Answer:** (a) 1.51 m; (b) 1.45 M; (c) mole fraction of KI = 0.0263"
         }
       ]
     },
@@ -2978,59 +3637,64 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "It is given that the solubility of $\\mathrm{H}_{2} \\mathrm{~S}$ in water at STP is 0.195 m, i.e., 0.195 mol of $\\mathrm{H}_{2} \\mathrm{~S}$ is dissolved in 1000 g of water.\n\n$$\n\\begin{aligned}\n& \\qquad=\\frac{1000 \\mathrm{~g}}{18 \\mathrm{~g} \\mathrm{~mol}^{-1}} \\\\\n& \\begin{array}{l}\n\\text { Moles of water } \\\\\n=55.56 \\mathrm{~mol}\n\\end{array}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "$$\n=\\frac{\\text { Moles of } \\mathrm{H}_{2} \\mathrm{~S}}{\\text { Moles of } \\mathrm{H}_{2} \\mathrm{~S}+\\text { Moles of water }}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& =\\frac{0.195}{0.195+55.56} \\\\\n& =0.0035\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "At STP, pressure $(p)=0.987$ bar\nAccording to Henry's law: $p=$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& \\mathrm{K}_{\\mathrm{H} X} \\\\\n& \\begin{aligned}\n\\Rightarrow \\mathrm{K}_{\\mathrm{H}} & =\\frac{p}{x} \\\\\n& =\\frac{0.987}{0.0035} \\mathrm{bar}\n\\end{aligned} \\\\\n& =282 \\text { bar }\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$K_H$ = 282 bar"
+          "text": "**Answer:** $K_H$ = 282 bar"
         }
       ]
     },
@@ -3049,49 +3713,53 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "It is given that:\n\n$$\n\\begin{aligned}\n& \\mathrm{K}_{\\mathrm{H}}=1.67 \\times 10^{8} \\mathrm{~Pa} \\\\\n& p_{\\mathrm{CO}_{2}}=2.5 \\mathrm{~atm}=2.5 \\times 1.01325 \\times 10^{5} \\mathrm{~Pa} \\\\\n& =2.533125 \\times 10^{5} \\mathrm{~Pa}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "According to Henry's law:\n\n$$\n\\begin{aligned}\n& p_{\\mathrm{CO}_{2}}=\\mathrm{K}_{\\mathrm{H}} x \\\\\n& \\Rightarrow x=\\frac{p_{\\mathrm{CO}_{2}}}{\\mathrm{~K}_{\\mathrm{H}}} \\\\\n& \\quad=\\frac{2.533125 \\times 10^{5}}{1.67 \\times 10^{8}} \\\\\n& =0.00152\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "We can write,\n\n$$\nn_{\\mathrm{CO}_{2}} \\text { is negligible as compared to }{ }^{n_{\\mathrm{H}_{2} \\mathrm{O}}} \\quad \\text { [Since, ] }\n$$\n\nIn 500 mL of soda water, the volume of water = 500 mL (the amount of soda present is neglected). We can write:\n\n$$\n\\begin{aligned}\n& 500 \\mathrm{~mL} \\text { of water }=500 \\mathrm{~g} \\text { of water } \\\\\n& =\\frac{500}{18} \\mathrm{~mol} \\text { of water } \\\\\n& =27.78 \\mathrm{~mol} \\text { of water }\n\\end{aligned}\n$$\n\nNow, $\\frac{n_{\\mathrm{CO}_{2}}}{n_{\\mathrm{H}_{2} \\mathrm{O}}}=x$\n$\\frac{n_{\\mathrm{CO}_{2}}}{27.78}=0.00152$\n\n$$\nn_{\\mathrm{CO}_{2}}=0.042 \\mathrm{~mol}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Hence, quantity of $\\mathrm{CO}_{2}$ in 500 mL of soda water $=(0.042 \\times 44) \\mathrm{g}$\n\n$$\n=1.848 \\mathrm{~g}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "1.848 g of $\\mathrm{CO}_2$"
+          "text": "**Answer:** 1.848 g of $\\mathrm{CO}_2$"
         }
       ]
     },
@@ -3110,49 +3778,53 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "It is given that:\n\n$$\n\\begin{aligned}\n& p_{\\mathrm{A}}^{0}=450 \\mathrm{~mm} \\text { of } \\mathrm{Hg} \\\\\n& p_{\\mathrm{B}}^{0}=700 \\mathrm{~mm} \\text { of } \\mathrm{Hg} \\\\\n& p_{\\text {total }}=600 \\mathrm{~mm} \\text { of } \\mathrm{Hg}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
-              "text": "From Raoult's law:\n\n$$\n\\begin{aligned}\n& \\Rightarrow p_{\\text {total }}=p_{\\mathrm{A}}^{0} x_{\\mathrm{A}}+p_{\\mathrm{B}}^{0}\\left(1-x_{\\mathrm{A}}\\right) \\\\\n& \\Rightarrow p_{\\text {total }}=p_{\\mathrm{A}}^{0} x_{\\mathrm{A}}+p_{\\mathrm{B}}^{0}-p_{\\mathrm{B}}^{0} x_{\\mathrm{A}} \\\\\n& \\Rightarrow p_{\\text {total }}=\\left(p_{\\mathrm{A}}^{0}-p_{\\mathrm{B}}^{0}\\right) x_{\\mathrm{A}}+p_{\\mathrm{B}}^{0} \\\\\n& \\Rightarrow 600=(450-700) x_{\\mathrm{A}}+700\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& p_{\\mathrm{A}}=p_{\\mathrm{A}}^{0} x_{\\mathrm{A}} \\\\\n& p_{\\mathrm{B}}=p_{\\mathrm{B}}^{0} x_{\\mathrm{B}}=p_{\\mathrm{B}}^{0}\\left(1-x_{\\mathrm{A}}\\right)\n\\end{aligned}\n$$\n\n$$\n\\begin{gathered}\n\\text { Therefore, total } \\\\\n\\text { pressure, } \\\\\np_{\\text {total }}=p_{\\mathrm{A}}+p_{\\mathrm{B}}\n\\end{gathered}\n$$"
+              "text": "From Raoult's law:\n\n$$\n\\begin{aligned}\n& \\Rightarrow p_{\\text {total }}=p_{\\mathrm{A}}^{0} x_{\\mathrm{A}}+p_{\\mathrm{B}}^{0}\\left(1-x_{\\mathrm{A}}\\right) \\\\\n& \\Rightarrow p_{\\text {total }}=p_{\\mathrm{A}}^{0} x_{\\mathrm{A}}+p_{\\mathrm{B}}^{0}-p_{\\mathrm{B}}^{0} x_{\\mathrm{A}} \\\\\n& \\Rightarrow p_{\\text {total }}=\\left(p_{\\mathrm{A}}^{0}-p_{\\mathrm{B}}^{0}\\right) x_{\\mathrm{A}}+p_{\\mathrm{B}}^{0} \\\\\n& \\Rightarrow 600=(450-700) x_{\\mathrm{A}}+700 \\\\\n& \\Rightarrow -100=-250 x_{\\mathrm{A}} \\\\\n& \\Rightarrow x_{\\mathrm{A}}=0.4\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\n& p_{\\mathrm{A}}=p_{\\mathrm{A}}^{0} x_{\\mathrm{A}} \\\\\n& p_{\\mathrm{B}}=p_{\\mathrm{B}}^{0} x_{\\mathrm{B}}=p_{\\mathrm{B}}^{0}\\left(1-x_{\\mathrm{A}}\\right)\n\\end{aligned}\n$$\n\n$$\n\\begin{gathered}\n\\text { Therefore, total } \\\\\n\\text { pressure, } \\\\\np_{\\text {total }}=p_{\\mathrm{A}}+p_{\\mathrm{B}}\n\\end{gathered}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "substitute",
+          "label": "Substitute",
           "flow": [
             {
               "type": "text",
               "text": "Therefore,\n\n$$\n\\begin{aligned}\n& =1-0.4 \\\\\n& =0.6\n\\end{aligned}\n$$\n\nNow, $p_{\\mathrm{A}}=p_{\\mathrm{A}}^{0} x_{\\mathrm{A}}$\n\n$$\n\\begin{aligned}\n& =450 \\times 0.4=180 \\mathrm{~mm} \\text { of } \\mathrm{Hg} \\\\\n& p_{\\mathrm{B}}=p_{\\mathrm{B}}^{0} x_{\\mathrm{B}} \\\\\n& =700 \\times 0.6\n\\end{aligned}\n$$\n\n$=420 \\mathrm{~mm}$ of Hg. Now, in the vapour phase, mole fraction of liquid $\\mathrm{A}=\\frac{p_{\\mathrm{A}}}{p_{\\mathrm{A}}+p_{\\mathrm{B}}}$\n\n$$\n\\begin{aligned}\n& =\\frac{180}{180+420} \\\\\n& =\\frac{180}{600} \\\\\n& =0.30\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "substitute"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "And, mole fraction of liquid $\\mathrm{B}=1-0.30$\n\n$$\n\\text { = } 0.70\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Liquid mixture: $x_A$ = 0.4, $x_B$ = 0.6; Vapour phase: mole fraction A = 0.30, mole fraction B = 0.70"
+          "text": "**Answer:** Liquid mixture: $x_A$ = 0.4, $x_B$ = 0.6; Vapour phase: mole fraction A = 0.30, mole fraction B = 0.70"
         }
       ]
     },
@@ -3171,39 +3843,42 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "It is given that vapour pressure of water, $p_{1}^{0}=23.8 \\mathrm{~mm}$ of Hg\nWeight of water taken, $w_{1}=850 \\mathrm{~g}$\nWeight of urea taken, $W_{2}=50 \\mathrm{~g}$\nMolecular weight of water, $M_{1}=18 \\mathrm{~g} \\mathrm{~mol}^{-1}$\nMolecular weight of urea, $M_{2}=60 \\mathrm{~g} \\mathrm{~mol}^{-1}$\nNow, we have to calculate vapour pressure of water in the solution. We take vapour pressure as $p_{1}$."
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Now, from Raoult's law, we have:\n\n$$\n\\begin{aligned}\n& \\frac{p_{1}^{0}-p_{1}}{p_{1}^{0}}=\\frac{n_{2}}{n_{1}+n_{2}} \\\\\n& \\Rightarrow \\frac{p_{1}^{0}-p_{1}}{p_{1}^{0}}=\\frac{\\frac{w_{2}}{M_{2}}}{\\frac{w_{1}}{M_{1}}+\\frac{w_{2}}{M_{2}}} \\\\\n& \\Rightarrow \\frac{23.8-p_{1}}{23.8}=\\frac{\\frac{50}{60}}{\\frac{850}{18}+\\frac{50}{60}} \\\\\n& \\Rightarrow \\frac{23.8-p_{1}}{23.8}=\\frac{0.83}{47.22+0.83} \\\\\n& \\Rightarrow \\frac{23.8-p_{1}}{23.8}=0.0173 \\\\\n& \\Rightarrow p_{1}=23.4 \\mathrm{~mm} \\text { of } \\mathrm{Hg}\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Hence, the vapour pressure of water in the given solution is 23.4 mm of Hg. Its relative lowering is 0.0173."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "Vapour pressure = 23.4 mm of Hg; relative lowering = 0.0173"
+          "text": "**Answer:** Vapour pressure = 23.4 mm of Hg; relative lowering = 0.0173"
         }
       ]
     },
@@ -3222,39 +3897,42 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Here, elevation of boiling point $\\Delta T_{b}=(100+273)-(99.63+273)$\n\n$$\n=0.37 \\mathrm{~K}\n$$\n\nMass of water, $w_{1}=500 \\mathrm{~g}$\nMolar mass of sucrose $\\left(\\mathrm{C}_{12} \\mathrm{H}_{22} \\mathrm{O}_{11}\\right), M_{2}=11 \\times 12+22 \\times 1+11 \\times 16$\n\n$$\n=342 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\nMolal elevation constant, $K_{b}=0.52 \\mathrm{~K} \\mathrm{~kg} \\mathrm{~mol}^{-1}$. We know that:"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& \\Delta T_{b}=\\frac{K_{b} \\times 1000 \\times w_{2}}{M_{2} \\times w_{1}} \\\\\n& \\Rightarrow w_{2}=\\frac{\\Delta T_{b} \\times M_{2} \\times w_{1}}{K_{b} \\times 1000} \\\\\n& =\\frac{0.37 \\times 342 \\times 500}{0.52 \\times 1000} \\\\\n& =121.67 \\mathrm{~g} \\text { (approximately) }\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Hence, 121.67 g of sucrose is to be added.\nNote: There is a slight variation in this answer and the one given in the NCERT textbook."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "121.67 g of sucrose"
+          "text": "**Answer:** 121.67 g of sucrose"
         }
       ]
     },
@@ -3273,39 +3951,42 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "Mass of acetic acid, $w_{1}=75 \\mathrm{~g}$\nMolar mass of ascorbic acid $\\left(\\mathrm{C}_{6} \\mathrm{H}_{8} \\mathrm{O}_{6}\\right)$, $M_{2}=6 \\times 12+8 \\times 1+6 \\times 16$\n\n$$\n=176 \\mathrm{~g} \\mathrm{~mol}^{-1}\n$$\n\nLowering of melting point, $\\Delta T_{f}=1.5 \\mathrm{~K}$. We know that:"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& \\Delta T_{f}=\\frac{K_{f} \\times w_{2} \\times 1000}{M_{2} \\times w_{1}} \\\\\n& \\Rightarrow w_{2}=\\frac{\\Delta T_{f} \\times M_{2} \\times w_{1}}{K_{f} \\times 1000} \\\\\n& \\quad=\\frac{1.5 \\times 176 \\times 75}{3.9 \\times 1000} \\\\\n& =5.08 \\mathrm{~g} \\text { (approx) }\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "Hence, 5.08 g of ascorbic acid is needed to be dissolved.\nNote: There is a slight variation in this answer and the one given in the NCERT textbook."
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "5.08 g of ascorbic acid"
+          "text": "**Answer:** 5.08 g of ascorbic acid"
         }
       ]
     },
@@ -3324,39 +4005,42 @@
       "solution_blocks": [
         {
           "type": "concept",
-          "stage": "given",
+          "label": "Given",
           "flow": [
             {
               "type": "text",
               "text": "It is given that:\nVolume of water, $V=450 \\mathrm{~mL}=0.45 \\mathrm{~L}$\nTemperature, $T=(37+273) \\mathrm{K}=310 \\mathrm{~K}$\nNumber of moles of the polymer, $n=\\frac{1}{185000} \\mathrm{~mol}$\nWe know that:"
             }
-          ]
+          ],
+          "stage": "given"
         },
         {
           "type": "formula",
-          "stage": "key_formula",
+          "label": "Key formula",
           "flow": [
             {
               "type": "text",
               "text": "Osmotic pressure,\n\n$$\n\\pi=\\frac{n}{V} \\mathrm{R} T\n$$"
             }
-          ]
+          ],
+          "stage": "key_formula"
         },
         {
           "type": "step",
-          "stage": "conclusion",
+          "label": "Conclusion",
           "flow": [
             {
               "type": "text",
               "text": "$$\n\\begin{aligned}\n& =\\frac{1}{185000} \\mathrm{~mol} \\times \\frac{1}{0.45 \\mathrm{~L}} \\times 8.314 \\times 10^{3} \\mathrm{PaL} \\mathrm{~K}^{-1} \\mathrm{~mol}^{-1} \\times 310 \\mathrm{~K} \\\\\n& =30.98 \\mathrm{~Pa} \\\\\n& =31 \\mathrm{~Pa} \\text { (approximately) }\n\\end{aligned}\n$$"
             }
-          ]
+          ],
+          "stage": "conclusion"
         }
       ],
       "answer": [
         {
           "type": "text",
-          "text": "$\\pi$ = 31 Pa (approximately)"
+          "text": "**Answer:** $\\pi$ = 31 Pa (approximately)"
         }
       ]
     }
