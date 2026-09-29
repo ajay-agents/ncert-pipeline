@@ -221,7 +221,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "(j) The zygote divides to form blastocyst, which is fertilization implanted in uterus."
+                  "text": "(j) The zygote divides to form blastocyst, which is implanted in uterus."
                 }
               ]
             }
@@ -308,7 +308,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "Functions of the Testis\n\n- Testis makes male gametes called spermatozoa. This process is called spermatogenesis.\n- Leydig cells in the seminiferous tubules make the male sex hormone testosterone. Testosterone helps develop secondary sex characteristics in males."
+              "text": "Functions of the Testis\n\n- Testis makes male gametes called spermatozoa. This process is called spermatogenesis.\n- Leydig (interstitial) cells, found outside the seminiferous tubules in the interstitial spaces, make the male sex hormone testosterone (androgens). Testosterone helps develop secondary sex characteristics in males."
             }
           ],
           "label": "Functions of testis"
@@ -829,7 +829,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "(a) Androgens are produced by Sertoli cells. (False)\nAndrogens are produced by Leydig cells found in seminiferous tubules of the testis."
+                  "text": "(a) Androgens are produced by Sertoli cells. (False)\nAndrogens are produced by Leydig cells, found outside the seminiferous tubules (interstitial spaces) of the testis."
                 }
               ]
             }
@@ -871,7 +871,7 @@
               "flow": [
                 {
                   "type": "text",
-                  "text": "(c) Leydig cells are found in ovary. (False)\n\nLeydig cells are found in the seminiferous tubules of the testis."
+                  "text": "(c) Leydig cells are found in ovary. (False)\n\nLeydig cells are found in the interstitial spaces outside the seminiferous tubules of the testis."
                 }
               ]
             }

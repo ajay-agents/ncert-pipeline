@@ -23,7 +23,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "The male gametophyte, or pollen grain, develops inside the pollen chamber of the anther. The female gametophyte, also called the embryo sac, develops inside the nucellus of the ovule from the functional megaspore."
+              "text": "The male gametophyte, or pollen grain, develops inside the pollen sac of the anther. The female gametophyte, also called the embryo sac, develops inside the nucellus of the ovule from the functional megaspore."
             }
           ]
         }
@@ -157,7 +157,7 @@
           "flow": [
             {
               "type": "text",
-              "text": "The various parts of an ovule are -\n\n- Funiculus - A stalk-like structure that attaches the ovule to the placenta of the ovary.\n- Hilum - The point where the body of the ovule joins the funiculus.\n- Integuments - The outer layers around the ovule. They protect the developing embryo.\n- Micropyle - A narrow pore formed by the projection of the integuments. The pollen tube enters the ovule through this pore at fertilization.\n- Nucellus - A mass of parenchymatous tissue enclosed by the integuments from the outside. It nourishes the developing embryo, and the embryo sac lies inside it.\n- Chalazal - The swollen basal part of the nucellus from which the integuments arise."
+              "text": "The various parts of an ovule are -\n\n- Funiculus - A stalk-like structure that attaches the ovule to the placenta of the ovary.\n- Hilum - The point where the body of the ovule joins the funiculus.\n- Integuments - The outer layers around the ovule. They protect the developing embryo.\n- Micropyle - A narrow pore formed by the projection of the integuments. The pollen tube enters the ovule through this pore at fertilization.\n- Nucellus - A mass of parenchymatous tissue enclosed by the integuments from the outside. It nourishes the developing embryo, and the embryo sac lies inside it.\n- Chalazal - The swollen basal part of the ovule from which the integuments arise."
             }
           ],
           "label": "Parts of the ovule"

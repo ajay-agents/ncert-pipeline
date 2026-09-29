@@ -535,5 +535,94 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Mechanical export pass via Playwright/Chromium, same settings as every prior chapter (print_background=True, prefer_css_page_size=True, document.fonts.ready wait, emulate_media(media='screen') applied unconditionally per standing practice even though this English-only chapter has no Devanagari content to trigger the specific bug that fix guards against). Gates: page count 7 (sane for an 18-item, low-figure chapter); 0 blank pages; numeric read-back re-run against the PDF's own extracted text found 0 qualifying tokens (the gate's own regex only counts decimals/3+-digit integers, and this chapter's only 2 numeric tokens - both confirmed present at stage 9 - are short and don't meet that stricter threshold; not a gap, this chapter is genuinely close to number-free). This chapter is English-only, so the known Devanagari reph ('र्') ToUnicode-CMap extraction bug documented in step_10/PROMPT.md does not apply. No CALIBRATION re-run needed. This completes all 10 stages of biology-12-1's English track."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-29T06:38:33.696528+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "9defea9df44db64c"
+    },
+    "counts": {
+      "corrections_applied": 2,
+      "held": 0,
+      "gate_math_parity": [],
+      "gate_counts": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "User-supplied retroactive corrections (English medium): q_1.1 \"pollen chamber\"->\"pollen sac\" (not standard anther terminology); q_1.4 chalaza description \"basal part of the nucellus\"->\"basal part of the ovule\" (the chalaza is part of the ovule, not the nucellus specifically). Two other user-flagged items (q_1.7, q_1.8/q_1.9) were NOT touched - the quoted text matches the current content exactly with no stated error, so nothing was changed pending clarification from the user on what specifically is wrong there (per Rule 5, never guess/invent a \"fix\" to content that already matches what was quoted as needing correction)."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-29T06:38:33.704407+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "f14eb659008776e4"
+    },
+    "counts": {
+      "retroactive_patch": "q_1.1 pollen sac, q_1.4 chalaza/ovule - exact-match cascade from stage 5 amendment"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded the two user-supplied stage-5 corrections into chapter.simplified.en.md via exact-match substitution."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-29T06:38:33.705796+00:00",
+    "inputs": {
+      "structured.en.md": "6ed6828b51f84972"
+    },
+    "counts": {
+      "retroactive_patch": "q_1.1 pollen sac, q_1.4 chalaza/ovule"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded into structured.en.md via exact-match substitution; tag._parse confirmed clean."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-29T06:38:33.707037+00:00",
+    "inputs": {
+      "structured.en.json": "172a888ae7b4de9c"
+    },
+    "counts": {
+      "retroactive_patch": "q_1.1 pollen sac, q_1.4 chalaza/ovule"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded into structured.en.json via exact-match substitution (no structural/JSON-shape change needed)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-29T06:38:33.708291+00:00",
+    "inputs": {
+      "final.en.html": "2a7f634157055bbc"
+    },
+    "counts": {
+      "retroactive_patch": "q_1.1 pollen sac, q_1.4 chalaza/ovule"
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded into final.en.html via exact-match substitution (no structural change to the page)."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-29T06:39:08.180446+00:00",
+    "inputs": {
+      "final.en.html": "2a7f634157055bbc"
+    },
+    "counts": {
+      "page_count": 7,
+      "file_size_bytes": 493170,
+      "blank_pages": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Re-exported final.en.pdf via Playwright/Chromium after the two user-supplied text corrections (q_1.1 pollen sac, q_1.4 chalaza/ovule) were cascaded through 05-09. Confirmed both corrected phrases appear in the PDF's own extracted text and the old \"pollen chamber\" wording is gone."
   }
 ]

@@ -10,7 +10,7 @@ title: "Human Reproduction"
 
 ## Questions and Solutions
 
-:::question{number="2.1" kind="exercise" id="q_2.1" topic="Fill in the blanks: reproductive terms"}
+:::question{number="2.1" kind="exercise" id="q_2.1" topic="Fill in the blanks: reproductive terms" corrections_applied="1"}
 #### Question 2.1
 
 :::prompt
@@ -122,7 +122,7 @@ Zygote divides to form $\_\_\_\_$ which is implanted in uterus.
 :::
 
 :::solution
-(j) The zygote divides to form blastocyst, which is fertilization implanted in uterus.
+(j) The zygote divides to form blastocyst, which is implanted in uterus.
 :::
 
 :::
@@ -166,7 +166,7 @@ The female reproductive system
 
 :::
 
-:::question{number="2.4" kind="exercise" id="q_2.4" topic="Functions of testis and ovary"}
+:::question{number="2.4" kind="exercise" id="q_2.4" topic="Functions of testis and ovary" corrections_applied="1"}
 #### Question 2.4
 
 :::prompt
@@ -177,7 +177,7 @@ Write two major functions each of testis and ovary.
 Functions of the Testis
 
 - They produce male gametes called spermatozoa by the process of spermatogenesis.
-- The leydig cells of the seminiferous tubules secrete the male sex hormone called testosterone. Testosterone aids the development of secondary sex characteristics in males.
+- Leydig (interstitial) cells, found outside the seminiferous tubules in the interstitial spaces, secrete the male sex hormone called testosterone (androgens). Testosterone aids the development of secondary sex characteristics in males.
 
 Functions of the ovary
 
@@ -397,7 +397,7 @@ Fimbriae
 
 :::
 
-:::question{number="2.16" kind="exercise" id="q_2.16" topic="True or False: reproductive physiology"}
+:::question{number="2.16" kind="exercise" id="q_2.16" topic="True or False: reproductive physiology" corrections_applied="2"}
 #### Question 2.16
 
 :::prompt
@@ -411,7 +411,7 @@ Androgens are produced by Sertoli cells. (True/False)
 
 :::solution
 (a) Androgens are produced by Sertoli cells. (False)
-Androgens are produced by Leydig cells found in seminiferous tubules of the testis.
+Androgens are produced by Leydig cells, found outside the seminiferous tubules (interstitial spaces) of the testis.
 :::
 
 :::
@@ -435,7 +435,7 @@ Leydig cells are found in ovary. (True/False)
 :::solution
 (c) Leydig cells are found in ovary. (False)
 
-Leydig cells are found in the seminiferous tubules of the testis.
+Leydig cells are found in the interstitial spaces outside the seminiferous tubules of the testis.
 :::
 
 :::

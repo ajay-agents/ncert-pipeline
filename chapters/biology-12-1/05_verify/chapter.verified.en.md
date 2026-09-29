@@ -10,7 +10,7 @@ title: "Sexual Reproduction in Flowering Plants"
 
 ## Questions and Solutions
 
-:::question{number="1.1" kind="exercise" id="q_1.1" topic="Sites of gametophyte development in a flower"}
+:::question{number="1.1" kind="exercise" id="q_1.1" topic="Sites of gametophyte development in a flower" corrections_applied="1"}
 #### Question 1.1
 
 :::prompt
@@ -18,7 +18,7 @@ Name the parts of an angiosperm flower in which development of male and female g
 :::
 
 :::solution{label="Solution"}
-The male gametophyte or the pollen grain develops inside the pollen chamber of the anther, whereas the female gametophyte (also known as the embryo sac) develops inside the nucellus of the ovule from the functional megaspore.
+The male gametophyte or the pollen grain develops inside the pollen sac of the anther, whereas the female gametophyte (also known as the embryo sac) develops inside the nucellus of the ovule from the functional megaspore.
 :::
 
 :::
@@ -58,7 +58,7 @@ During the development of microsporangium, each cell of the sporogenous tissue a
 
 :::
 
-:::question{number="1.4" kind="exercise" id="q_1.4" topic="Structure of a typical angiosperm ovule"}
+:::question{number="1.4" kind="exercise" id="q_1.4" topic="Structure of a typical angiosperm ovule" corrections_applied="1"}
 #### Question 1.4
 
 :::prompt
@@ -78,7 +78,7 @@ The various parts of an ovule are -
 - Integuments -They are the outer layers surrounding the ovule that provide protection to the developing embryo.
 - Micropyle - It is a narrow pore formed by the projection of integuments. It marks the point where the pollen tube enters the ovule at the time of fertilization.
 - Nucellus - It is a mass of the parenchymatous tissue surrounded by the integuments from the outside. The nucellus provides nutrition to the developing embryo. The embryo sac is located inside the nucellus.
-- Chalazal - It is the based swollen part of the nucellus from where the integuments originate.
+- Chalazal - It is the swollen basal part of the ovule from where the integuments originate.
 :::
 
 :::

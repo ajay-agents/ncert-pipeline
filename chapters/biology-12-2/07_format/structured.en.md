@@ -122,7 +122,7 @@ Zygote divides to form $\_\_\_\_$ which is implanted in uterus.
 :::
 
 :::solution
-(j) The zygote divides to form blastocyst, which is fertilization implanted in uterus.
+(j) The zygote divides to form blastocyst, which is implanted in uterus.
 :::
 
 :::
@@ -178,7 +178,7 @@ Write two major functions each of testis and ovary.
 Functions of the Testis
 
 - Testis makes male gametes called spermatozoa. This process is called spermatogenesis.
-- Leydig cells in the seminiferous tubules make the male sex hormone testosterone. Testosterone helps develop secondary sex characteristics in males.
+- Leydig (interstitial) cells, found outside the seminiferous tubules in the interstitial spaces, make the male sex hormone testosterone (androgens). Testosterone helps develop secondary sex characteristics in males.
 :::
 
 :::concept{label="Functions of ovary"}
@@ -465,7 +465,7 @@ Androgens are produced by Sertoli cells. (True/False)
 
 :::solution
 (a) Androgens are produced by Sertoli cells. (False)
-Androgens are produced by Leydig cells found in seminiferous tubules of the testis.
+Androgens are produced by Leydig cells, found outside the seminiferous tubules (interstitial spaces) of the testis.
 :::
 
 :::
@@ -489,7 +489,7 @@ Leydig cells are found in ovary. (True/False)
 :::solution
 (c) Leydig cells are found in ovary. (False)
 
-Leydig cells are found in the seminiferous tubules of the testis.
+Leydig cells are found in the interstitial spaces outside the seminiferous tubules of the testis.
 :::
 
 :::

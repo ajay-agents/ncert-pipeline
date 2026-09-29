@@ -18,7 +18,7 @@ Name the parts of an angiosperm flower in which development of male and female g
 :::
 
 :::solution{label="Solution"}
-The male gametophyte, or pollen grain, develops inside the pollen chamber of the anther. The female gametophyte, also called the embryo sac, develops inside the nucellus of the ovule from the functional megaspore.
+The male gametophyte, or pollen grain, develops inside the pollen sac of the anther. The female gametophyte, also called the embryo sac, develops inside the nucellus of the ovule from the functional megaspore.
 :::
 
 :::
@@ -96,7 +96,7 @@ The various parts of an ovule are -
 - Integuments - The outer layers around the ovule. They protect the developing embryo.
 - Micropyle - A narrow pore formed by the projection of the integuments. The pollen tube enters the ovule through this pore at fertilization.
 - Nucellus - A mass of parenchymatous tissue enclosed by the integuments from the outside. It nourishes the developing embryo, and the embryo sac lies inside it.
-- Chalazal - The swollen basal part of the nucellus from which the integuments arise.
+- Chalazal - The swollen basal part of the ovule from which the integuments arise.
 :::
 :::
 

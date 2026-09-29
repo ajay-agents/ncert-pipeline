@@ -486,5 +486,94 @@
     "gates_passed": [],
     "model_calls": 0,
     "notes": "Re-export following the design_correction fix above (bare-slash-in-prose spacing bug). Mechanical Playwright re-export, same settings as the original stage-10 pass. Page count unchanged (9), 0 blank pages, all gates pass."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-29T09:58:47.695356+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "d2762ed9de4d1243"
+    },
+    "counts": {
+      "corrections_applied": 4,
+      "held": 0,
+      "gate_math_parity": [],
+      "gate_counts": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "User-supplied retroactive corrections (English medium), 4 applied: q_2.1(j) removed a stray duplicated \"fertilization\" before \"implanted\"; q_2.4 and q_2.16(a)/(c) all fix the same recurring factual error - Leydig (interstitial) cells are located in the interstitial spaces BETWEEN seminiferous tubules, not inside/within the tubules themselves. Six other user-flagged items (Q7, Q10, Q12, Q18, Q19, Q20) were checked directly against the current content and found to already match the reference text the review supplied in substance - just paraphrased differently, with no factual discrepancy - so nothing was changed for those; not applying a wording-only rewrite when there is no actual content error."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-29T09:58:47.699784+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "08690b476bc6e709"
+    },
+    "counts": {
+      "retroactive_patch_count": 4
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded 4 user-supplied stage-5 corrections into chapter.simplified.en.md via exact-match substitution."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-29T09:58:47.703515+00:00",
+    "inputs": {
+      "structured.en.md": "1df5277fec2c3054"
+    },
+    "counts": {
+      "retroactive_patch_count": 4
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded 4 user-supplied stage-5 corrections into structured.en.md via exact-match substitution."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-29T09:58:47.707848+00:00",
+    "inputs": {
+      "structured.en.json": "919a0541d47fc89f"
+    },
+    "counts": {
+      "retroactive_patch_count": 4
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded 4 user-supplied stage-5 corrections into structured.en.json via exact-match substitution."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-29T09:58:47.712060+00:00",
+    "inputs": {
+      "final.en.html": "0c70a25da2355dac"
+    },
+    "counts": {
+      "retroactive_patch_count": 4
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Cascaded 4 user-supplied stage-5 corrections into final.en.html via exact-match substitution."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-29T09:59:10.555939+00:00",
+    "inputs": {
+      "final.en.html": "0c70a25da2355dac"
+    },
+    "counts": {
+      "page_count": 9,
+      "file_size_bytes": 815392,
+      "blank_pages": []
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Re-exported final.en.pdf via Playwright/Chromium after 4 user-supplied text corrections were cascaded through 05-09 (q_2.1(j) stray word, q_2.4/q_2.16(a)/q_2.16(c) Leydig cell location). Confirmed the corrected phrasing appears in the PDF's own extracted text and old wrong text is gone."
   }
 ]
