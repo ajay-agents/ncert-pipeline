@@ -1,7 +1,7 @@
 # NCERT Solutions Pipeline — operating rules
 
-Bilingual (English + Hindi) NCERT solutions for Physics, Chemistry, Maths and
-Biology, Classes 11–12. Each chapter moves through ten stages, one stage
+Bilingual (English + Hindi) NCERT solutions for Physics, Chemistry, Maths,
+Biology and Economics, Classes 11–12. Each chapter moves through ten stages, one stage
 per session — never run two stages in one pass. The stage prompts live in
 `step_1/` … `step_10/` (see README.md's chain table for what each does);
 `.claude/commands/stageN-*.md` are thin wrappers over them so `/stage1-mathpix`

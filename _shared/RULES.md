@@ -52,6 +52,14 @@ technical terms, no hyphens, simple sentence structure.
 - **Physics / Maths** — dense inline math; the protection layer matters most here.
 - **Chemistry** — reactions may arrive as `\ce{}` or as images; both are protected.
 - **Biology** — figure-heavy and low on math; caption accuracy is the main risk.
+- **Economics** — prose-heavy; a conceptual chapter (e.g. "Introduction") may
+  have no numbers at all and no worked `example` items, only `exercise`
+  ones — don't force an empty Examples section. Comparison/difference
+  tables (micro vs macro, and the like) are common; a numerical chapter
+  (national income accounting, money multiplier) can still have real
+  calculations needing the same protection layer as Physics/Maths, so
+  don't assume every Economics chapter is math-free just because the
+  first one is.
 
 ## Container vocabulary (stages 7–9)
 

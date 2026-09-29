@@ -1,0 +1,328 @@
+{
+  "front": {
+    "title": "Money and Banking",
+    "chapter": "3"
+  },
+  "items": [
+    {
+      "id": "q_3.1",
+      "kind": "exercise",
+      "number": "1",
+      "topic": "Barter system and its drawbacks",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is a barter system? What are its drawbacks?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Barter system is a system in which goods are exchanged for goods. Suppose I have 1 kg of rice and I need 2 metres of cloth then I first need to find a person who will exchange the rice available with me with cloth. The major drawback of barter system is this double coincidence. The other drawbacks are - lack of common unit of value, store of value, and standard of deferred payments\n\nThese other disadvantages of barter system are being discussed below -\n\na) Lack of Common Measure of Value - The absence of a common unit of measurement to evaluate the goods for exchange makes proper accounting impossible.\nb) Lack of Store of Value - In barter system it was not possible to store things for future because many of the goods are perishable in nature.\nc) Lack of standard for deferred payments - In barter system it was not possible to make future payments or contractual payments."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.2",
+      "kind": "exercise",
+      "number": "2",
+      "topic": "Functions of money",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What are the main functions of money? How does money overcome the shortcomings of a barter system?"
+        }
+      ],
+      "figures": [
+        {
+          "src": "images/fig_3_1.jpg",
+          "caption": "Functions of Money"
+        }
+      ],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Functions of Money -\n\na) Primary Functions\n(1) Medium of Exchange - It facilitates buying and selling of goods and services so the exchange has become very simple and it can be conducted on a large scale.\n(2) Measure of Value - Measurement of the value of goods being exchanged was very difficult in barter system due to lack of common unit of account but this difficulty is removed by the introduction of money. Now every good and services can be valued in terms of money.\nb) Secondary Functions\n(1) Standard of deferred payment - Money has made deferred payments much easier than before. When we borrow money from someone we will return it along with interest. It was difficult to make such transaction in terms of goods or services in barter system.\n(2) Store of Value - Storing wealth is quite easy with introduction of money. It was not convenient to store value in barter system because goods are perishable.\n\nMoney overcomes the problem of barter system by replacing the C-C economy with monetary economy (where C-C stands for commodity to commodity).\n-In the barter system, the major drawback of barter system was double coincidence of wants. Invention of money has overcome the problem of double coincidence of wants.\n-When there was no money, it was difficult to give common unit of value to goods or commodities, but now every goods and services can be measured in terms of money.\n-Money facilitates the contractual future payments which were impossible at the time of barter system.\n-Money facilitates store of value, which was not possible in barter system due to perishable nature of goods."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.3",
+      "kind": "exercise",
+      "number": "3",
+      "topic": "Transaction demand for money",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is transaction demand for money? How is it related to the value of transactions over a specified period of time?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Transaction demand for money is the amount of money required for current or day to day transactions. It is that quantity of money which all the individuals and firms desire to keep in their hand for the purpose of financing their forthcoming expenditure.\n\nThere are two motives of holding transaction money - income motive and business motive. Income motive is from the perspective of consumers who want money to meet household expenditure. Business motive is from the perspective of businessman who needs money to carry on their business activities.\n\nThe relation between transaction demand for money and value of transactions over a unit period of time is symbolized by\n\n$$\n\\begin{aligned}\n& \\mathrm{M}_{\\mathrm{T}}^{\\mathrm{D}}=\\mathrm{KT} \\\\\n& 1 / \\mathrm{K} \\mathrm{M}_{\\mathrm{T}}^{\\mathrm{D}}=\\mathrm{T}\n\\end{aligned}\n$$\n\n$1 / \\mathrm{K}=\\mathrm{v}=$ velocity of circulation of money\n$\\mathrm{v} \\mathrm{M}_{\\mathrm{T}}^{\\mathrm{D}}=\\mathrm{T}$\nT = Total value of transactions in the economy over a period of time\nK is a positive fraction\n$\\mathrm{M}^{\\mathrm{D}}{ }_{\\mathrm{T}}=$ Stock of money people are willing to hold at a particular point of time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.4",
+      "kind": "exercise",
+      "number": "4",
+      "topic": "Alternative definitions of money supply",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What are the alternative definitions of money supply in India?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The supply of money means total volume of money held by the public (individuals and firms) at any particular point of time. It is a stock concept as it is concerned with a particular point of time.\n\nAlternative measures of money supply\nIn India Reserve Bank of India uses four alternative measures of money supply called $\\mathrm{M}_{1} \\mathrm{M}_{2} \\mathrm{M}_{3}$ and $\\mathrm{M}_{4}$. Among these $\\mathrm{M}_{1}$ is the most commonly used measure of money supply because its components are regarded most liquid assets.\n\nAll of these are discussed below\n\na) $\\mathrm{M}_{1}=\\mathrm{C}+\\mathrm{DD}+\\mathrm{OD}$.\n\nC denotes currency held by public\n\nDD denotes demand deposits in banks and\nOD stands for other deposits in RBI\n\nb) $\\mathrm{M}_{2}=\\mathrm{M}_{1}+$ saving deposits with post office savings banks\nc) $\\mathrm{M}_{3}=\\mathrm{M}_{1}+$ net time deposits of banks\nd) $\\mathrm{M}_{4}=\\mathrm{M}_{3}+$ total deposits with post office saving organisations excluding NSC\n\nIn practice $\\mathrm{M}_{1}$ is widely used as measure of money supply and is also called aggregate monetary resource of society."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.5",
+      "kind": "exercise",
+      "number": "5",
+      "topic": "Legal tender and fiat money",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is a 'legal tender'? What is 'fiat money'?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Legal Tender - It is a medium of payment recognised by a legal system to be valid for meeting a financial obligation. Legal tender is any official medium of payment recognized by law that can be used to extinguish a public or private debt, or meet a financial obligation. It is the money issued by monetary authority or government, which cannot be refused by any person in payment for transactions. Government issues an order describing what is money and that becomes legal tender money.\n\nFor ex - In India currency notes and coins are legal tender money.\nFiat Money - Fiat is a Latin word, which means 'let there be'. Fiat money refers to any currency lacking intrinsic value (without back up of gold or silver or any other reserves) that is declared legal tender by a government. It is any money backed by the order of government to act as money. People have to accept it in exchange for goods and services and for discharge of debt. It is also called legal tender as it circulates in country on government's order.\n\nEx - Dollar, they are just pieces of paper printed with symbols - they have no intrinsic value of their own. They only become valuable when the government decrees that they have worth"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.6",
+      "kind": "exercise",
+      "number": "6",
+      "topic": "High powered money",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is High Powered Money?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "High powered money refers to the money produced by RBI and government of India. It can also be defined as the total liability of monetary authority of the country and RBI.\n\nIt consists of -\n-Currency in hands of public\n-Cash reserve of commercial banks\n-Other deposits with RBI\n$\\mathrm{H}=\\mathrm{C}+\\mathrm{R}$\nWhere\nH is high powered money\nC is currency and\nR is cash reserves with commercial banks\nHigh powered money is also called monetary base"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.7",
+      "kind": "exercise",
+      "number": "7",
+      "topic": "Functions of a commercial bank",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Explain the functions of a commercial bank."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The functions of commercial banks are being discussed below -\n\n1. Accepting Deposits - The banks accept deposits from public, which may be of following types -\na. Saving Deposits - This type of account is for those who need to save a part of their income and earn interest on them. The withdrawals from these accounts are limited. These accounts offer interest on the amount saved.\nb. Fixed Deposits - In this account the amount is deposited for a fixed period of time decided in advance. It offers a higher rate of interest than saving account but the depositors do not have withdrawal facility in between. If the deposit is liquidated before maturity period, the rate of interest is reduced.\nc. Current Deposits - This type of account is for businesses. There is no restriction on number of deposits and withdrawal and the account holder enjoys overdraft facility too i.e., the withdrawals can be more than the account balance, but such account does not offer any interest.\n2. Granting of Loans and Advances - The banks grant loan and advances for various purposes. The loans are given for long period and advances are granted for short term. Interest is charged on these loans and advances. The interest charged here is more than the interest given on deposits.\n3. Agency Functions - The banks perform certain agency functions for their customers, these are -\na. Transfer of Funds - The banks provides easy mobility of funds through internet or other bank instruments.\nb. Collection of Funds - The bank collects the money for its customers through cheque or bill.\nc. Periodic Payments - On standing instructions of the customer, banks make payment of loan, credit cards, bills, etc.\nd. Periodic Collections - The bank collects salary, pension, dividend, premium etc. on behalf of the customer.\ne. Other Agency Functions - The banks perform various agency functions like trustee, executor, etc.\n4. Discounting Bills of Exchange - The Banks performs this function for the businesses. It discounts the B/R and provides immediate finance to the businessman.\n5. Credit Creation - The Banks create credit by using the demand deposits and play a big role in economic development of the country.\n6. Other Functions - The Banks performs following functions also -\na. Issue of Drafts and Letter of Credit\nb. Locker Facility\nc. Underwriting of Shares\nd. Dealing in Foreign Exchange\ne. Social Welfare Programmes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.8",
+      "kind": "exercise",
+      "number": "8",
+      "topic": "Money multiplier",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is money multiplier? What determines the value of this multiplier?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Money multiplier or credit multiplier indicates the maximum amount of additional money that can be legally created by the commercial banks.\n\nThe value of money multiplier $=1 / \\mathrm{LRR}$\nWhere\nLRR is Legal Reserve Ratio\nLegal Reserve Ratio (LRR) is the reserve required to be maintained by the commercial banks as a percentage of their demand deposits.\n\nThere are two more ratios which play an important role in the determination of the value of money multiplier, they are cash reserve ratio and cash deposit ratio.\n-The higher will be the CRR, the lower will be the volume of credit creation and vice-versa\n-CDR is the ratio between additional money released by RBI and received by public is actually deposited into banks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.9",
+      "kind": "exercise",
+      "number": "9",
+      "topic": "Instruments of monetary policy",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What are the instruments of monetary policy of RBI?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The monetary policy or credit policy of RBI involves two instruments qualitative and quantitative. Both of them are being discussed below -\n\n1) Quantitative measures include -\ni) Bank Rate: Bank rate is the rate at which Central Bank (RBI) provides loan to the commercial bank. The RBI controls money supply through bank rate in given manner - Increasing the bank rate will make loans expensive for commercial banks and therefore they will increase the rate of lending and the public capacity to take credit will fall and vice-versa.\nii) Open Market Operations (OMO): Open market operation means buying and selling securities in open market so as to affect the supply of money in the economy the selling of securities by RBI will wipe out extra cash balance on economy and therefore the money supply will be Limited whereas buying securities by RBI will pump additional money in the economy and the money supply will increase.\niii) Variable Reserve Ratios: The Reserve Bank uses two types of reserve ratio to regulate the money supply - the Statutory Liquidity Ratio (SLR) and the Cash Reserve Ratio (CRR). SLR refers to the minimum percentage of assets to be maintained with RBI are there in fixed or liquid form. If SLR is increased the credit flow will reduce and vice a versa. CRR refers to the minimum amount of fund that has to be maintained by commercial bank with RBI in form of deposit. If CRR will be increased\nthen the commercial banks will have less money to lend and thus the money supply will decrease and vice-a-versa.\n2) Qualitative measures include -\ni) Margin Requirements: Commercial banks grant loan on the basis of the value of security being mortgage, so the banks keep a margin which is the difference between market value of the security mortgaged and the loan value. If the Central Bank decides to restrict flow of money it raises the margin requirement of loan and vice versa.\nii) Selective credit control: Selective credit control: It is an instrument of monetary policy that affects the flow of credit to a particular sector positively and negatively. The positive aspect is concerned with increased flow of credit to the priority sector whereas negative aspect is to restrict credit to a particular sector.\niii) Moral Suasion: It is a persuasion technique followed by Central Bank to pressurize the commercial banks to abide by the monetary policy, it involves meetings, seminars, speeches, etc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_3.10",
+      "kind": "exercise",
+      "number": "10",
+      "topic": "Commercial bank as creator of money",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Do you consider a commercial bank 'creator of money' in the economy?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The primary function of commercial banks is money creation or credit creation in an economy. It is assumed that the depositors would not be withdrawing all of their funds at a particular time. They have the capacity to generate credit through demand deposits. These demand deposits make credit more than the initial deposit."
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "For example, let us assume that the entire commercial banking system is one unit and call it Bank. The reserve ratio for the bank is $10 \\%$. Assuming that there is no leakage of cash and all transactions are cheque transaction. A deposits rupee 1000 in bank, the bank will keep 100 as cash reserve and\nwill lend 900 Mr. B. Mr. B uses the money to buy good from C who deposits the same into Bank now the bank will keep the reserve ratio of 10\\% and given new loan of 810, and so on.\n\nThis is presented by the following table."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "| ↓ Deposit ↓ |  |  |  |  |  |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| CRR | v | Loan | Deposit | Loan | Reserve |\n| 100 | 1000 | 900 | 1000 | 900 | 100 |\n| 90 | 900 | 810 | 1900 | 1710 | 190 |\n| 81 | 810 | 729 | 2710 | 2429 | 271 |\n| 73 | 729 | 656 | 3439 | 3085 | 344 |\n|  |  |  |  |  |  |\n|  |  |  |  |  |  |\n|  |  |  |  |  |  |\n|  |  |  |  |  |  |\n|  |  |  |  |  |  |\n| Total |  |  | 10000 | 9000 | 1000 |\n\nAll amounts are rounded off to the nearest rupee"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The credit multiplier is given by $1 / \\mathrm{CRR}=1000(1 / 10 \\%)=10000$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Thus, with a cash reserve of $10 \\%$., a deposit of Rs. 1,000 results in a Rs. 10,000 increase in money supply."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Thus, with a cash reserve of 10%., a deposit of Rs. 1,000 results in a Rs. 10,000 increase in money supply."
+        }
+      ]
+    },
+    {
+      "id": "q_3.11",
+      "kind": "exercise",
+      "number": "11",
+      "topic": "RBI as lender of last resort",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What role of RBI is known as 'lender of last resort'?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "When a commercial bank faces financial crisis and fails to obtain funds from other sources then the central bank plays a vital role of lender of last resort. It provides the financial assistance in form of credit. This role of Central Bank saves the commercial bank from bankruptcy. Thus the\ncentral bank plays the role of guarantor for the commercial banks and maintains sound and healthy banking system in the economy.\n\nThrough this role, the central bank ensures that\n\n- The banking system of the country does not suffer from any setback\n- The money market remains stable"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

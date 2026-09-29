@@ -17,6 +17,7 @@ SUBJECT_OPTIONS = {
     "maths":     {"include_smiles": False},
     "chemistry": {"include_smiles": True, "include_chemistry_as_image": False},
     "biology":   {"include_smiles": False, "enable_tables_fallback": True},
+    "economics": {"include_smiles": False, "enable_tables_fallback": True},
 }
 
 

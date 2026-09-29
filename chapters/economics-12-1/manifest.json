@@ -1,0 +1,194 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-28T11:17:05.583639+00:00",
+    "inputs": {
+      "chapter.en.pdf": "e446357561356385",
+      "solutions.en.pdf": "6f3a67d5b6f2c502"
+    },
+    "counts": {
+      "chapter_pages": 8,
+      "chapter_chars": 21221,
+      "chapter_dollar_spans": 0,
+      "chapter_table_rows": 13,
+      "chapter_images": 5,
+      "solutions_pages": 5,
+      "solutions_chars": 5480,
+      "solutions_dollar_spans": 2,
+      "solutions_table_rows": 9,
+      "solutions_images": 1,
+      "total_figures_downloaded": 6
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "First Economics chapter processed by this pipeline - added as a new subject per explicit user confirmation this session (pipeline/schema.py's Chapter.subject Literal extended to include 'economics'; CLAUDE.md's own scope line and _shared/RULES.md's subject-notes section updated to match). English track only - no Hindi PDFs were provided for this chapter; per explicit user confirmation this session (the one configuration step_1/PROMPT.md says not to proceed with silently), started English-only, Hindi to be added in a later session if/when provided. Chapter identified and verified before conversion (per standing discipline of never trusting a newly-provided file at face value): chapter.en.pdf (8 pages) is NCERT's 'Introductory Macroeconomics' (Class 12) Chapter 1 'Introduction' - confirmed via direct text extraction ('Introductory Macroeconomics' appears as the running header on every page, 'You must have already been introduced to a study of basic microeconomics' opens the chapter). solutions.en.pdf (5 pages, no text layer - same as every other subject's own solutions PDF in this pipeline) confirmed via a rendered page-1 image to be a genuine third-party Exercises solutions guide for the same chapter ('CHAPTER - 1 INTRODUCTION Exercises Question 1: What is the difference between microeconomics and macroeconomics?...'). SUBJECT-SHAPE NOTE for future Economics chapters: this chapter has no worked 'Example' items at all (Economics textbooks don't use NCERT's Maths/Physics-style worked-example convention) - only Exercise questions; a genuine comparison table (micro vs macro) appears in the solutions; at least one genuine numeric value requiring protection ('GDP fell by 15%'), confirming this subject isn't uniformly math-free even in a conceptual/introductory chapter - added to _shared/RULES.md's own subject-notes section. SANITY CHECKS: chapter.en.md 21221 chars, 0 $ spans (pure prose - expected for this specific chapter's own content, not a general Economics-subject rule), 13 table-row lines (chapter-side boxed definitions/comparisons), 5 image references (portraits of Adam Smith, John Maynard Keynes and similar - decorative/biographical, confirmed by their own surrounding caption text, not diagrams needing figure-to-item linking the way a Physics/Biology chapter's own figures do). solutions.en.md 5480 chars, 2 $ spans (one genuine protected number, '$15 \\%$', confirmed by direct inspection - not spurious OCR math-delimiting), 9 table-row lines (the same micro-vs-macro comparison table, restated in the solution to Question 1), 1 image reference (a genuine flow-chart diagram illustrating the Great Depression's causal chain, confirmed by its own preceding caption text - not decorative). 6 total figures downloaded to 01_mathpix/images/ (fig_1_0 through fig_1_5) - matches 5 (chapter) + 1 (solutions) exactly. No Devanagari characters in either file (expected, English-only track). No suspicious signs flagged per step_1/PROMPT.md's own checklist (chapter file well over 5000 chars; the near-zero table/math count for the CHAPTER file is plausible for an introductory Economics chapter, not obviously wrong the way it would be for e.g. a Chemistry chapter with zero tables)."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-28T11:23:55.339552+00:00",
+    "inputs": {
+      "chapter.en.md": "d9228c287271ac50",
+      "solutions.en.md": "fb6491cb1b7dfa81"
+    },
+    "counts": {
+      "items_total": 4,
+      "examples": 0,
+      "exercises": 4,
+      "matched": 4,
+      "needs_review": 0,
+      "figures": 1,
+      "figures_excluded_as_decorative": 5,
+      "tables_repaired": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "English track only (no Hindi PDFs provided for this chapter - see stage 1's own manifest entry). First Economics chapter this pipeline has processed; given the tiny scale (4 exercise items total, no examples), extracted directly by hand-building schema.Item objects rather than a parsing script, per the same discipline used for small chapters elsewhere in this project. PART A: examples pass over chapter.en.md found zero Example items - confirmed genuine (this chapter, and per the newly-added _shared/RULES.md subject note, Economics generally, has no worked-example convention at all), not a missed extraction. Exercises pass found exactly 4 questions (chapter.en.md's own numbered list, lines 93-96 of the mathpix source). Solutions pass over solutions.en.md found exactly 4 matching entries (Question 1-4, each with its own 'Answer:' block). Both throwaway gate_counts checks (examples+exercises; solutions) pass with zero fails. A genuine mathpix table-splitting defect was found and fixed during extraction (not deferred to stage 5, since this is a structural reconstruction of the SAME table straddling a source PDF page break, not a content correction against different source text): solutions.en.md's own micro-vs-macro comparison table (Question 1's own answer) was split by mathpix into two separate markdown tables at the exact point the source PDF's own page breaks mid-row - row 2's own 'Macro Economics' cell was cut into 'Whole or total economic variables' (page 0) and a continuation fragment '| | | like aggregate demand, etc. |' rendered as a bogus second table with two empty leading cells (page 1). Confirmed via direct rendering of both solutions.en.pdf pages (200dpi) that this is one single logical row, not two separate table sections - merged into one clean 5-row table: 'Whole or total economic variables like aggregate demand, etc.' PART B: match.join_solutions() run for real (not hand-matched) - questions=4, solutions=4, matched=4, needs_review=[] (empty across unmatched_questions/orphan_solutions/duplicate_solutions). Given this chapter's own trivially small, strictly sequential 1-4 numbering with no separate additional-exercises section, spot-checked all 4 pairs directly against the rendered solutions.en.pdf pages anyway (per the standing lesson from other chapters that an empty needs_review doesn't guarantee a correct join on a larger/messier chapter) - all 4 confirmed genuinely correct, no drift. One figure (fig_1_5, a cause-and-effect flow chart for the Great Depression) attached to q_1.4, confirmed via its own preceding caption sentence in solutions.en.md ('The cause and effect relationship of the Great Depression can be summed up in this flow chart') and via direct visual inspection of the source page - a genuine informational diagram, not decorative. The chapter's other 5 figures (portraits of Adam Smith, Keynes, and similar) are pure chapter-narrative decoration with no exercise/item to attach to - correctly left out of the item model entirely, per this pipeline's own established practice for chapter-level content that has no home in the per-item schema (same reasoning as a whole skipped EXERCISE section in a rationalised Maths chapter). gate_bilingual not run (no Hindi chapter exists yet to align against - not a gap, this chapter's own English-only status was explicitly confirmed with the user before stage 1 began)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-28T11:30:12.466471+00:00",
+    "inputs": {
+      "chapter.en.md": "badd53d87f144fcd"
+    },
+    "counts": {
+      "examples_en_chars": 95,
+      "examples_en_items": 0,
+      "qa_en_chars": 6136,
+      "qa_en_items": 4,
+      "total_items": 4
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only (no Hindi chapter exists yet - no merge_by_id() needed). Pure mechanical split via pipeline.render.render()'s own kinds filter, no model call. examples.en.md is genuinely near-empty (95 chars - frontmatter only, 0 items) since this chapter has no Example items at all, confirmed already at stage 2 - not a splitting defect. qa.en.md carries all 4 exercise items, byte-content matching 02_extract/chapter.en.md exactly (same 4 items, same order). Item counts: 0 (examples) + 4 (qa) = 4, matching the merged chapter's own total exactly - nothing gained or lost in the split. tag._parse() round-trip confirmed balanced containers in both output files."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-28T11:38:35.835261+00:00",
+    "inputs": {
+      "examples.en.md": "6ceb8cd797a5e4a4",
+      "qa.en.md": "badd53d87f144fcd"
+    },
+    "counts": {
+      "combined_en_chars": 6136,
+      "combined_en_items": 4
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Pure mechanical recombination, no model call. CAUGHT A REAL FOOTGUN in step_4/PROMPT.md's own literal wording before writing this: the prompt says to combine examples.<lang>.md + qa.<lang>.md 'via pipeline.mdio.markdown_to_chapter() + pipeline.mdio.merge_by_id()' - but mdio.merge_by_id(en, hi) is a CROSS-LANGUAGE merge (fills hi-language fields onto en's own items by matching id) that only ever returns its FIRST argument's own item list; it does not append any item from the second argument that isn't already present in the first by id. Calling merge_by_id(examples_chapter, qa_chapter) here - as the prompt's own wording would suggest - would have silently returned an EMPTY chapter, since examples_chapter (the 'en' argument) has 0 items in this chapter (no Example items exist at all) and qa_chapter's 4 real items (the 'hi' argument, despite also being English) would simply never be copied over, being a disjoint-id same-language pair rather than the same items in two languages. Combined the two item lists by plain concatenation instead (examples' items + qa's items, preserving original order), which is what the two files being 'split from the same source in stage 3' actually calls for - a reunion of disjoint kind-subsets, not an id-keyed field merge. This footgun would recur for ANY future chapter whose own Examples split is empty (or, less obviously, whose examples.<lang>.md happens to have FEWER items than qa.<lang>.md, silently dropping only the excess qa items rather than all of them) - worth flagging to the user as a step_4/PROMPT.md wording risk, not something to silently route around every time. VERIFIED: combined.en.md (4 items) is BYTE-IDENTICAL to 02_extract/chapter.en.md, as expected since nothing was reordered or altered - the two are the same content taken on two different round trips through the container format. tag._parse() confirms balanced containers. Item count sums exactly (0 examples + 4 qa = 4), nothing gained or lost recombining."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-28T11:59:45.076268+00:00",
+    "inputs": {
+      "combined.en.md": "badd53d87f144fcd",
+      "chapter.en.pdf": "e446357561356385",
+      "solutions.en.pdf": "6f3a67d5b6f2c502"
+    },
+    "counts": {
+      "corrections_applied_high": 0,
+      "corrections_held": 0,
+      "items_verified": 4,
+      "pdf_pages_read": 6
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only (no Hindi to merge). Verified all 4 items directly against the original PDF pages, not the mathpix markdown alone, per this stage's own core requirement: rendered and read all 5 pages of solutions.en.pdf (200dpi) in full, and chapter.en.pdf's own page 7 (the Exercises list itself). Given the chapter's tiny scale (4 items total), did this as one batch rather than 5-8-item batches. RESULT: zero discrepancies found. Every question's own wording matches chapter.en.pdf's own printed Exercises list word-for-word (including punctuation); every solution's own wording, the 5-row micro-vs-macro table (already reconstructed correctly at stage 2 from its own page-break split), the 7-point capitalist-economy list, the 4-sector list, and the Great Depression answer's own a)-e) causes list and '15%' GDP figure all match their respective solutions.en.pdf pages exactly. Zero corrections needed - correctly wrote an empty corrections.md (matching a genuinely clean chapter, not a skipped check) and a chapter.verified.en.md that is the combined chapter passed through apply_corrections() with an empty correction list (same code path as every other chapter, not a special-cased copy). before/after snapshotted correctly via chapter.model_copy(deep=True) before calling apply_corrections() (per this stage's own explicit warning about a vacuous gate pass otherwise). gate_math_parity and gate_counts both pass with zero fails."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-28T12:01:56.571165+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "badd53d87f144fcd"
+    },
+    "counts": {
+      "total_solution_fields": 4,
+      "fields_simplified": 2,
+      "fields_left_unchanged": 2,
+      "restore_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. This chapter's own 4 solution fields are already prose-plain (no dense math/derivations to break up), so most of them needed no churn: q_1.1 (already short, clear sentences plus its own table) and q_1.3 (four short bullet points) were reviewed and left genuinely unchanged, per simplify.md's own 'if already clear, return unchanged - a valid outcome and better than churn.' 2 small edits made: q_1.2's own intro sentence ('are being discussed below' -> 'are given below', dropping textbook-register passive phrasing) and its own item 5 ('It is profit that guide the production in capitalist economy system' -> 'Profit guides production in a capitalist economy', shorter/active-voice, also fixes a subject-verb agreement slip in the source as a side effect of the rewrite, not a separate grammar-correction pass); q_1.4's own 'longest and deepest and most widespread depression of 20th century' -> 'longest, deepest and most widespread depression of the 20th century' (missing article added, list punctuation cleaned up). No number, unit or the '15%' GDP figure touched in any of these edits. Ran through protect.freeze()/restore() per field regardless of how little math each one actually had to protect (the '$15 \\%$' span in q_1.4), per this stage's own non-negotiable freeze-first rule - zero restore failures. GATES: gate_question_text_frozen, gate_answers_unchanged and gate_math_parity all pass with zero fails (confirms no question text was touched, no number changed, no protected span eaten). gate_bilingual reports 8 fails (every item's question AND solution 'missing a language') - this is INHERENT to this chapter's own current English-only state (no chapter.verified.hi.md exists yet to merge against), not a defect: every item genuinely has real English content and simply has no Hindi counterpart yet, exactly as expected for a chapter explicitly confirmed English-only with the user at stage 1. Will resolve itself once/if a Hindi track is added in a later session."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-28T12:06:01.794369+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "e2f44d612c4e9178"
+    },
+    "counts": {
+      "items_total": 4,
+      "table_blocks": 1,
+      "figures_moved": 1,
+      "items_with_structural_change": 2,
+      "items_left_flat": 2
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Worked as a plain-text splice on top of render()'s own output, same as every other chapter's own stage 7. 1 table wrapped (q_1.1's own micro-vs-macro comparison table, already correctly reconstructed at stage 2). 1 figure moved (fig_1_5, q_1.4's own Great Depression flow chart) from its default post-prompt position to its point of reference - the sentence 'The cause and effect relationship of the Great Depression can be summed up in this flow chart' that directly precedes it. DESIGN NOTE - a genuine content-shape mismatch, flagged here rather than silently improvised, matching the precedent already set in step_9/PROMPT.md for maths-12-5's own parallel-case-analysis mismatch: this chapter's 4 items are all essay/definitional answers (define a concept, then list 4-7 parallel features/sectors/causes), not computational derivations - none of them have a genuine given -> key-formula -> substitute -> conclusion shape the way a Physics/Maths/Chemistry solution does. Deliberately did NOT force any of the 3 remaining solutions (q_1.2, q_1.3, q_1.4's own prose) into :::step/:::concept wrapping, since none of their content is a 'stage of a worked solution' in the sense that vocabulary means - a definition followed by a parallel list of features/sectors/causes is already clear as plain paragraph text, and per format.md's own guidance, 'forcing structure onto ordinary prose is worse than leaving it unmarked.' Consequence for stage 8/9: each of these 3 items' own single unstructured solution block will mechanically receive stage='conclusion' (the 'only one stageable block' rule), so every one of them will render as one plain 'Conclusion' pill at stage 9 - an honest representation for an essay-type answer with no real given/substitute stages, but it does mean this chapter's own rendered page won't show the same four-color pill variety a computational chapter's page does. This is worth the user's own awareness before stage 9's design work, not a defect to silently route around by inventing artificial given/substitute stages that aren't really there. GATES: tag._parse() succeeds; protect.parity() between chapter.simplified.en.md and structured.en.md shows zero fails (the table wrap and figure move don't change any math/table/image count, only their wrapping/position). No same-line tag violations (checked directly, given step_9/PROMPT.md's own documented history of this exact mistake in other chapters)."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-28T12:11:36.939236+00:00",
+    "inputs": {
+      "structured.en.md": "59ed7b24e6a65607"
+    },
+    "counts": {
+      "items_total": 4,
+      "exercise": 4,
+      "figures": 1,
+      "table_blocks": 1,
+      "stage_given": 0,
+      "stage_key_formula": 0,
+      "stage_substitute": 0,
+      "stage_conclusion": 4
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Ran pipeline.serialize.structured_md_to_json() on 07_format/structured.en.md - purely mechanical, no model judgment, same as every other chapter's own stage 8. GATE (fresh direct counts from structured.en.md): item count 4 matches both the JSON and a direct tag._parse() walk. Distinct figure src count is 1 (fig_1_5) matching exactly between the JSON walk and an independent regex sweep of the raw text. STAGE DISTRIBUTION: all 4 items land on stage='conclusion' (given=0, key_formula=0, substitute=0) - exactly as flagged in stage 7's own manifest entry/memory note: this chapter's 4 essay-style answers were deliberately left as single unstructured blocks (no :::step/:::concept forced onto plain definitional/list prose), so the mechanical 'only one stageable block -> conclusion' rule assigns every one of them the same single stage. This is the correct, honest outcome for this content shape, not a processing gap - confirmed the design note from stage 7 held exactly as predicted. q_1.1's own :::table block correctly serialized with no stage key at all (tables never get one) - confirmed by direct inspection of its own solution_blocks list."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-28T12:19:46.853582+00:00",
+    "inputs": {
+      "structured.en.json": "edcd170ff4d5efdb"
+    },
+    "counts": {
+      "html_size_chars": 10476,
+      "figures": 1,
+      "tables": 1,
+      "readback_fields_checked": 8,
+      "readback_problems": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. First Economics chapter this pipeline has ever designed a page for. Hand-authored per step_9/PROMPT.md - no design skill, no Claude Design canvas. Adapted maths-12-5's own render_page_en.py/latex.py (the most recent, most feature-complete prior chapter's own script) since none of its accumulated bug fixes are Economics-specific, then heavily simplified for this chapter's own much simpler shape: a single 'Exercises' section (no Examples heading - 0 exist; no per-exercise-number subsections; no Miscellaneous section), no multi-part items, no case-split solutions - every item's own solution is a single flat block per stage 7's own design note (essay-style content has no genuine given/substitute shape). latex.py reused completely unmodified; this chapter's only real math is one inline '$15 \\%$' span, well within what it already handles. final.en.css copied from maths-12-5's own base (same font stack works for this chapter's plain-English content) plus one targeted addition: q_1.1's own comparison table has a genuine header row, rendered as <th class=\"s100\"> - the inherited .s99 td.s100 rule only ever selected <td>, so the header row would have rendered completely unstyled (no border/padding) next to its own styled data rows; added a matching th.s100 rule (bold, light background) rather than switching back to <td> and losing proper header semantics. Copied the one needed figure (fig_1_5.jpg) into 09_design/images/ itself, not a scratch copy. VERIFICATION: the single figure src resolves via os.path.exists against the real 09_design/ output directory. Mandatory manual read-back run against 06_simplify/chapter.simplified.en.md (not the stage-8 JSON): checked question, final_answer AND solution fields (going beyond the PROMPT's own minimum of question+final_answer, since this chapter's final_answer is empty for all 4 items - every item is a descriptive answer with no separate boxed result, so the real content to verify lives in solution) - 8 fields checked, zero problems, both numeric tokens and distinctive words. A whole-page LaTeX-leak sweep (every remaining backslash-command, every literal $) found zero. Visually inspected via Playwright screenshots: header, section divider, all 4 items' badges/pills/doodles cycling through the 4 colors correctly, the fixed table with its own proper header row, and the flow-chart figure landing exactly at its point of reference inside q_1.4's own solution, immediately after the sentence introducing it."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-28T12:22:54.112305+00:00",
+    "inputs": {
+      "final.en.html": "4189bd8176292437"
+    },
+    "counts": {
+      "page_count": 3,
+      "file_size_bytes": 251228,
+      "blank_pages": 0,
+      "readback_fields_checked": 8,
+      "readback_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. First Economics chapter this pipeline has ever exported to PDF. Exported 09_design/final.en.html to 10_pdf/final.en.pdf via Playwright/Chromium, adapting the same export.py shape used for every other chapter (networkidle + document.fonts.ready wait, emulate_media('screen') applied unconditionally per step_10/PROMPT.md's own guidance even though this page has no Devanagari content, print_background=True + prefer_css_page_size=True, no explicit format/width/height). GATES (all code, no model judgment): page count 3 - sane for this chapter's own tiny scale (4 items, no examples, one table, one figure - matches the 3 screenshot pages needed to view the whole page during stage 9's own manual read-back). Zero blank pages. Numeric read-back re-run against the PDF's own extracted text (not assumed carried over from stage 9's HTML-based check) - every numeric token from all 8 question/final_answer/solution fields in 06_simplify/chapter.simplified.en.md (including the Great Depression's own '1929' and '15' GDP-fall figures) confirmed present in the PDF's own text - zero missing. Implemented the exponent-merging superscript-separator guard step_10/PROMPT.md documents, though this chapter has no superscript exponents at all to exercise it (kept for parity with every other chapter's own export gate script, not because this chapter's own content needed it)."
+  }
+]

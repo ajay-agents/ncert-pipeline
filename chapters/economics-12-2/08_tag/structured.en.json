@@ -1,0 +1,681 @@
+{
+  "front": {
+    "title": "National Income Accounting",
+    "chapter": "2"
+  },
+  "items": [
+    {
+      "id": "ex_2.1",
+      "kind": "example",
+      "number": "1",
+      "topic": "GDP by the three methods (worked example)",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "There are two firms, A and B. Suppose A uses no raw material and produces cotton worth Rs. 50. A sells its cotton to firm B, who uses it to produce cloth. B sells the cloth produced to consumers for Rs. 200."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "1. GDP in the phase of production or the value added method:\n\nRecall that value added (VA) = Sales - Intermediate Goods\nThus,\n\n$$\n\\begin{aligned}\n& V A_{A}=50-O=50 \\\\\n& V A_{B}=200-50=150\n\\end{aligned}\n$$\n\nThus,\n\n$$\nG D P=V A_{A}+V A_{B}=200 .\n$$"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "Table 2.2: Distributions of GDPs for firms A and B\n|  | Firm A | Firm B |\n| :--- | :--- | :--- |\n| Sales | 50 | 200 |\n| Intermediate consumption | 0 | 50 |\n| Value added | 50 | 150 |"
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "2. GDP in the phase of disposition or the expenditure method:\n\nRecall that GDP = Sum of final expenditure or expenditures on goods and services for end use. In the above case, final expenditure is expenditure by consumers on cloth. Therefore, $\\mathrm{GDP}=200$."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "3. GDP in the phase of distribution or Income method\n\nLet us look at the firms A and B again.\nNow, of this 50 received by A, the firm gives Rs. 20 to the workers as wages, and keeps the remaining 30 as its profits. Similarly, B gives 60 as wages and keeps 90 as profits."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "Table 2.3: Distributions of factor incomes of firms A and B\n|  | Firm A | Firm B |\n| :--- | :--- | :--- |\n| Wages | 20 | 60 |\n| Profits | 30 | 90 |"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Recall that GDP by income method = sum total of factor incomes, which is equal to total wages received (workers of A and B) and total profits earned (by A and B), which is equal ${ }^{4}$ to $80+120=200$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.1",
+      "kind": "exercise",
+      "number": "2.1",
+      "topic": "Four factors of production and their remuneration",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What are the four factors of production and what are the remunerations to each of these called?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The four factors of production are -\n\na) Land - It is the gift of nature and it is called natural, original or primary factor of production.\nb) Labour - It is a person engaged in some physical work, it is called human factor of production.\nc) Capital - It means wealth, money or income which is invested in business, it helps in production function.\nd) Entrepreneur - It is the work of an entrepreneur to bring the required factors together and work harmoniously.\n\nThe remuneration paid to each of these factors are -\n\n- Rent for land\n- Wages and salaries for labour\n- Interest for capital and\n- Profit for entrepreneur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.2",
+      "kind": "exercise",
+      "number": "2.2",
+      "topic": "Equality of aggregate expenditure and factor payments",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Why should the aggregate final expenditure of an economy be equal to the aggregate factor payments? Explain."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The sum of total expenditure incurred in the economy must be equal to the factor income received by all the factors of production in an economy because the revenue earned by all the firms when taken together must be distributed among the factor of production as compensation.\n\nThis will be spent on buying various final goods and services, that is final expenditure will be incurred by way of -\n\n- Private Final Consumption Expenditure\n- Government Final Consumption Expenditure\n- Government Debt Consolidation Fund and\n- Net Exports"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.3",
+      "kind": "exercise",
+      "number": "2.3",
+      "topic": "Stock vs flow; net investment and capital",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Distinguish between stock and flow. Between net investment and capital which is a stock and which is a flow? Compare net investment and capital with flow of water into a tank."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The main differences between stock and flow are being listed below -"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "html": "| Basis of Difference | Stock | Flow |\n| :--- | :--- | :--- |\n| 1. Meaning | Stock refers to quantity of a variable which is measured at particular point of time. | Flow refers to quantity of a variable which is measured over a period of time. |\n| 2. Time | It has not time dimension. | It has time dimension as per hour, per day, per month. |\n| 3. Concept | It is static concept. | It is dynamic concept |\n| 4. Example | Quantity of money, wealth, etc. | Consumption investment, etc. |"
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Suppose if we take example of water tank, the water level (capital) is stock because it can be measured at a point of time and flowing water into the tanks (investment) is flow because it is measured over a period of time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.4",
+      "kind": "exercise",
+      "number": "2.4",
+      "topic": "Planned vs unplanned inventory accumulation",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "What is the difference between planned and unplanned inventory accumulation? Write down the relation between change in inventories and value added of a firm."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Planned inventory refers to a change in stock or inventories that occurs in a planned way. In a situation of planned inventory accumulation, the firm will plan to raise its inventories. In case of planned inventory accumulation firm has and an expected fall in sales, the firm will have unsold stock of goods which has been anticipated.\n\nFor example, if a firm has opening inventory of 1000 units and it wants to raise its inventory from 1000 to 2000 units and expects sales to be 10000 units, it will produce 11000 units, if at the end of the year it is found that the actual sales were also 10000 the firm will raise its inventory from 1000 to 2000 . The closing inventory will be -\n\nFinal Inventory or Closing Inventory = Opening Inventory + Production - Sale\n$=1000+11000-10000$\n$=2000$ units\nIn this case inventory accumulation is equal to the expected accumulation therefore it is a planned inventory accumulation.\n\nUnplanned inventory refers to a change in stock or inventories that occurs unexpectedly. In a situation of unplanned inventory accumulation due to unexpected fall in sales, the firm will have unsold goods, which has not been anticipated.\n\nFor example, if a firm has opening inventory of 1000 units and it wants to raise its inventory from 1000 to 2000 units and expects sales to be 10000 units, it will produce 11000 units, if at the end of the year it is found that the actual sales were 9000 units only then the closing inventory will be -\n\nFinal Inventory or Closing Inventory = Opening Inventory + Production - Sale\n$=1000+11000-9000$\n$=3000$ units\nThis was not expected, so it is example of unexpected inventory accumulation.\n\nThe relation between value added and the change in inventory is shown by the given equation:\n\nGross value added by a firm = Sales + Change in inventory - Value of intermediate goods\n\nIt implies that, as inventory increases, the value added by a firm will also increase, therefore there is a positive relationship between value added and the change in inventory."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.5",
+      "kind": "exercise",
+      "number": "2.5",
+      "topic": "Three identities for calculating GDP",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write down the three identities of calculating the GDP of a country by the three methods. Also briefly explain why each of these should give us the same value of GDP."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The three identities of calculating the GDP of a country are being discussed below -\n∵ Value Added Method -\nØ It is also called product method. Under this method national income is measured in terms of value addition by each producing enterprise.\n\nØ GDP at market price = GVA in primary sector at market price + GVA in secondary market at market price + GVA in territory sector at market price\n\nØ NDP at market price = GDP at market price - depreciation\nØ NDP at factor cost = NDP at market price - net indirect tax\nØ National income = NDP at market price + NFIA\n∵ Income method\n\nØ Under this method national income is measured in terms of factor payments to the owners of factors of production.\n\nØ Net domestic income = compensation of employees + operating surplus\n- mixed income of self employed\nØ National income = Net domestic income + NFIA\n∵ Expenditure method\n\nØ Under this method national income is measured in terms of expenditure on purchase of final goods and services produced in the economy.\n\nØ GDP at market price = Private final consumption expenditure + Government final consumption expenditure + Gross domestic fixed capital formation + Change in stock + Net Exports\n\nØ NDP at market price = GDP at market price - depreciation\nØ NDP at factor cost = NDP at market price - net indirect tax\nØ National income = NDP at factor cost + NFIA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q_2.6",
+      "kind": "exercise",
+      "number": "2.6",
+      "topic": "Budget deficit and trade deficit",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Define budget deficit and trade deficit. The excess of private investment over saving of a country in a particular year was Rs 2,000 crores. The amount of budget deficit was (-) Rs 1,500 crores. What was the volume of trade deficit of that country?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Budget deficit means when the amount by which government expenditure exceeds the tax revenue earned by government and trade deficit means when the amount of import expenditure exceeds the export revenue earned by the economy."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Budget deficit = G - T\nWhere,\nG is government expenditure\nT is government income that is tax revenue\nTrade deficit $=\\mathrm{M}-\\mathrm{T}$ or $(\\mathrm{I}-\\mathrm{S})+(\\mathrm{G}-\\mathrm{T})$\nWhere,\nM is import expenditure\nT is export revenue\nI is Investment × Inflow into the country\nS is saving"
+            }
+          ]
+        },
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "It is given that,\n$\\mathrm{I}-\\mathrm{S}=$ Rs. 2000 crores.\n$\\mathrm{G}-\\mathrm{T}=(-)$ Rs. 1500 crores."
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Therefore,\nTrade deficit $=[\\mathrm{I}-\\mathrm{S}]+[\\mathrm{G}-\\mathrm{T}]$\n$=2000+[-1500]$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "= Rs. 500 crores."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Trade deficit = Rs. 500 crores."
+        }
+      ]
+    },
+    {
+      "id": "q_2.7",
+      "kind": "exercise",
+      "number": "2.7",
+      "topic": "Calculating depreciation from GDP, NFIA, NNP",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Suppose the GDP at market price of a country in a particular year was Rs 1,100 crores. Net Factor Income from Abroad was Rs 100 crores. The value of Indirect taxes -Subsidies was Rs 150 crores and National Income was Rs 850 crores. Calculate the aggregate value of depreciation."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Given -\nNational Income $\\left(\\right.$ NNP $\\left._{\\text {FC }}\\right)=$ Rs. 850 crores\n$\\mathrm{GDP}_{\\mathrm{MP}}=$ Rs. 1100 crores\nNet factor income from abroad (NFIA) = Rs. 100 crores\nNet indirect taxes = Rs. 150 crores"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{NNP}_{\\mathrm{FC}}=+$ Net factor income from abroad - Depreciation - Net indirect taxes"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$850=1100+100-$ Depreciation -150\n$850=1100-50-$ Depreciation\n$850=1050$ - Depreciation\nDepreciation $=1050-850=$ Rs. 200 crores"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "So, depreciation is Rs. 200 crores."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Depreciation = Rs. 200 crores."
+        }
+      ]
+    },
+    {
+      "id": "q_2.8",
+      "kind": "exercise",
+      "number": "2.8",
+      "topic": "Calculating transfer payments from NNP and PDI",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Net National Product at Factor Cost of a particular country in a year is Rs 1,900 crores. There are no interest payments made by the households to the firms/government, or by the firms/government to the households. The Personal Disposable Income of the households is Rs 1,200 crores. The personal income taxes paid by them is Rs 600 crores and the value of retained earnings of the firms and government is valued at Rs 200 crores. What is the value of transfer payments made by the government and firms to the households?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Given -\n$\\mathrm{NNP}_{\\mathrm{FC}}=$ Rs. 1900 crores\nPersonal Disposable Income (PDI) = Rs. 1200 crores\nPersonal income $\\operatorname{tax}=$ Rs. 600 crores\nValue of retained earnings = Rs. 200 crores"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$\\mathrm{PDI}=\\mathrm{NNP}_{\\mathrm{FC}}-$ Value of retained earnings of firms and government + value of transfer payments - personal tax"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$1200=1900-200+$ Value of transfer payments -600\n$1200=1100$ + Value of transfer payments"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Value of transfer payment $=1200-1100=$ Rs 100 crores"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Value of transfer payments = Rs. 100 crores."
+        }
+      ]
+    },
+    {
+      "id": "q_2.9",
+      "kind": "exercise",
+      "number": "2.9",
+      "topic": "Calculating Personal Income and Personal Disposable Income",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "From the following data, calculate Personal Income and Personal Disposable Income.\n\n|  | Rs (crore) |\n| :--- | :--- |\n| (a) Net Domestic Product at factor cost | 8,000 |\n| (b) Net Factor Income from abroad | 200 |\n| (c) Undisbursed Profit | 1,000 |\n| (d) Corporate Tax | 500 |\n| (e) Interest Received by Households | 1,500 |\n| (f) Interest Paid by Households | 1,200 |\n| (g) Transfer Income | 300 |\n| (h) Personal Tax | 500 |"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Personal Income (PI) $=\\mathrm{NDP}_{\\mathrm{FC}}+$ Net factor income from abroad (NFIA) + Transfer Income - Undistributed profit - corporate tax - Net interest paid by households\n$\\mathrm{NDP}_{\\mathrm{FC}}=$ Rs. 8000 crores\nNFIA = Rs. 200 crores\nTransfer Income = Rs. 300 crores\nUndistributed profit = Rs. 1,000 crores\nCorporate $\\mathrm{tax}=$ Rs. 500 crores\nNet interest paid by households = Interest paid - Interest received\n\n$$\n\\begin{aligned}\n& =1200-1500 \\\\\n& =(-) \\text { Rs. } 300 \\text { crores } \\\\\n& \\text { PI }=8000+200+300-1000-500-(-300) \\\\\n& =8000+200+300-1000-500+300 \\\\\n& \\text { PI }=7300\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Personal Disposable income = Personal Income - Personal Payments\n\n$$\n\\begin{aligned}\n& =7300-500 \\\\\n& =\\text { Rs. } 6800 \\text { crores }\n\\end{aligned}\n$$"
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "Personal Income (PI) = Rs. 7,300 crores; Personal Disposable Income (PDI) = Rs. 6,800 crores."
+        }
+      ]
+    },
+    {
+      "id": "q_2.10",
+      "kind": "exercise",
+      "number": "2.10",
+      "topic": "Raju the barber's contribution to income measures",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "In a single day Raju, the barber, collects Rs 500 from haircuts; over this day, his equipment depreciates in value by Rs 50. Of the remaining Rs 450, Raju pays sales tax worth Rs 30, takes home Rs 200 and retains Rs 220 for improvement and buying of new equipment. He further pays Rs 20 as income tax from his income. Based on this information, complete Raju's contribution to the following measures of income (a) Gross Domestic Product (b) NNP\n\nat market price (c) NNP at factor cost (d) Personal income (e) Personal disposable income."
+        }
+      ],
+      "figures": [],
+      "parts": [
+        {
+          "label": "a",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "(a) Gross Domestic Product"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(i) GDPMP= Rs. 500 [Barber collects from haircut]"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "Gross Domestic Product = Rs. 500."
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "(b) NNP at market price"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(ii) NNPMP = GDP - Depreciation\n$$\n\\begin{aligned}\n& =500-50 \\\\\n& =\\text { Rs. } 450\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "NNP at market price = Rs. 450."
+            }
+          ]
+        },
+        {
+          "label": "c",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "(c) NNP at factor cost"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(iii) NNPFC = NNP - Sales tax\n$$\n\\begin{aligned}\n& =450-30 \\\\\n& =\\text { Rs. } 420\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "NNP at factor cost = Rs. 420."
+            }
+          ]
+        },
+        {
+          "label": "d",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "(d) Personal income"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(iv) PI = NNPFC- Retained earnings\n$$\n\\begin{aligned}\n& =420-220 \\\\\n& =\\text { Rs. } 200\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "Personal income = Rs. 200."
+            }
+          ]
+        },
+        {
+          "label": "e",
+          "prompt": [
+            {
+              "type": "text",
+              "text": "(e) Personal disposable income"
+            }
+          ],
+          "solution_blocks": [
+            {
+              "type": "step",
+              "stage": "conclusion",
+              "flow": [
+                {
+                  "type": "text",
+                  "text": "(v) PDI = PI - Income tax\n$$\n\\begin{aligned}\n& =200-20 \\\\\n& =\\text { Rs. } 180\n\\end{aligned}\n$$"
+                }
+              ]
+            }
+          ],
+          "answer": [
+            {
+              "type": "text",
+              "text": "Personal disposable income = Rs. 180."
+            }
+          ]
+        }
+      ],
+      "solution_blocks": []
+    },
+    {
+      "id": "q_2.11",
+      "kind": "exercise",
+      "number": "2.11",
+      "topic": "GNP deflator and price level change",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "The value of the nominal GNP of an economy was Rs 2,500 crores in a particular year. The value of GNP of that country during the same year, evaluated at the prices of same base year, was Rs 3,000 crores. Calculate the value of the GNP deflator of the year in percentage terms. Has the price level risen between the base year and the year under consideration?"
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "concept",
+          "stage": "given",
+          "flow": [
+            {
+              "type": "text",
+              "text": "Nominal GNP = Rs. 2500\nReal GNP = Rs. 3000"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "stage": "key_formula",
+          "flow": [
+            {
+              "type": "text",
+              "text": "GNP deflator $=($ Nominal GNP/Real GNP $) \\times 100$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "substitute",
+          "flow": [
+            {
+              "type": "text",
+              "text": "$$\n\\begin{aligned}\n& =(2500 / 3000) \\times 100 \\\\\n& =83.33 \\%\n\\end{aligned}\n$$"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "No, the price level has not risen but fallen down by 16.67 \\% [(100-83.33) \\%]."
+            }
+          ]
+        }
+      ],
+      "answer": [
+        {
+          "type": "text",
+          "text": "GNP deflator = 83.33%. The price level has not risen but fallen by 16.67%."
+        }
+      ]
+    },
+    {
+      "id": "q_2.12",
+      "kind": "exercise",
+      "number": "2.12",
+      "topic": "Limitations of GDP as a welfare index",
+      "prompt": [
+        {
+          "type": "text",
+          "text": "Write down some of the limitations of using GDP as an index of welfare of a country."
+        }
+      ],
+      "figures": [],
+      "solution_blocks": [
+        {
+          "type": "step",
+          "stage": "conclusion",
+          "flow": [
+            {
+              "type": "text",
+              "text": "The limitations of using GDP as an index of welfare of a country can be divided under following headings -\n\n1) Distribution of GDP - Increase in the rate of GDP is not an indicator of good economic welfare because GDP is concentrated in hands of some individuals only.\n2) Non-monetary exchanges - GDP is under-estimated by the way of not calculating non-monetary exchanges which are quite evident in rural areas in India so it is not a good indicator of economic welfare.\n3) Externalities - It refers to good and bad impact of an activity without paying the price or penalty for that, in this case if GDP is taken as welfare measure of an economy it will affect the actual welfare of the economy.\n4) Change in prices - If increase in GDP is due to rise in prices and not due to increase in production then it will not be a reliable index of economic welfare.\n5) Rate of population growth - GDP does not consider the changes in the population of a country. If the rate of population growth is higher than the rate of GDP growth, then the per capita availability of goods and services will decrease and the economic welfare will be adversely affected."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

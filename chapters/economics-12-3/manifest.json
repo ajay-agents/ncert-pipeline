@@ -1,0 +1,199 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-29T07:06:50.661228+00:00",
+    "inputs": {
+      "chapter.en.pdf": "d1b7f0407236a4fc",
+      "solutions.en.pdf": "1f58d76036cff7c1"
+    },
+    "counts": {
+      "chapter_pages": 17,
+      "chapter_chars": 45902,
+      "chapter_inline_math": 46,
+      "chapter_display_math": 17,
+      "chapter_table_lines": 88,
+      "chapter_images": 1,
+      "solutions_pages": 14,
+      "solutions_chars": 18217,
+      "solutions_inline_math": 18,
+      "solutions_display_math": 4,
+      "solutions_table_lines": 13,
+      "solutions_images": 1
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only - no Hindi PDFs provided for this textbook, same as economics-12-1/12-2 (already asked and approved for this textbook's own chapters; not re-asked here per that standing confirmation). Both raw PDFs independently verified as genuine before conversion: chapter.en.pdf's own page-1/page-2 text layer confirmed NCERT's own 'Introductory Macroeconomics' running header and 'Money and Banking' chapter title (17 pages); solutions.en.pdf (14 pages, no text layer - same as every other chapter's own solutions PDF in this pipeline) confirmed via a rendered page-1 image as the same third-party solutions guide's own 'CHAPTER - 3 / MONEY AND BANKING / EXERCISES' section, Question 1 onward. Ran pipeline.mathpix.convert() for both files (subject='economics', chapter='3'). chapter.en.md: 45,902 chars, 46 inline math spans, 17 display-math pairs, 88 table-line matches (this chapter's own money- multiplier/reserve-ratio tables - genuinely numerical, matching _shared/RULES.md's own Economics subject note that a numerical chapter like this one needs the same protection layer as Physics/Maths), 1 image (fig_3_0). solutions.en.md: 18,217 chars, 18 inline math spans, 4 display-math pairs, 13 table-line matches, 1 image (fig_3_1). Both images downloaded into 01_mathpix/images/. 0 Devanagari characters in either file (expected, English-only). Nothing suspicious flagged - char counts well above the 5000 floor, no Devanagari leakage into the English files."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-29T07:21:24.262880+00:00",
+    "inputs": {
+      "chapter.en.md": "e67547afb5a4dd87",
+      "solutions.en.md": "c843de62d45504ed"
+    },
+    "counts": {
+      "examples": 0,
+      "exercises": 11,
+      "solutions_in_manual": 14,
+      "matched": 11,
+      "orphan_solutions_discarded": 3,
+      "figures_kept": 1,
+      "figures_excluded_as_narrative": 1,
+      "appendices_excluded": 3,
+      "footnotes_excluded": 2,
+      "items_with_final_answer": 1,
+      "needs_review": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 4,
+    "notes": "English track only. Extracted 11 exercise questions from chapter.en.md (numbered 1-11, verified verbatim against the actual PDF page-15 text layer) and 14 raw solutions-document entries from solutions.en.md. 0 examples - no textbook-labelled 'Example:' anywhere in this chapter, confirmed by reading the full mathpix markdown; Box 3.1's own embedded present-value calculations and the main text's own money-multiplier walkthrough are narrative illustration, not a formally demarcated worked example, per this pipeline's own established extract-only-what's-demarcated rule. CRITICAL FINDING - drifted numbering (the exact trap step_2/PROMPT.md documents for physics-12-3/physics-12-5): the solutions manual inserts 3 extra questions (its own Q4: a bond-price calculation; Q5: why speculative demand is inversely related to interest rate; Q6: liquidity trap) immediately after its own Q3, none of which exist among the chapter's current 11 exercises. From there on the solutions manual's own numbering runs exactly 3 ahead: chapter's own Q4-Q11 correspond to solutions Q7-Q14, not solutions Q4-Q11. Confirmed the failure mode for real before trusting anything: ran match.join_solutions() on hand-typed stand-ins as a diagnostic first - it silently produced 8 WRONG pairings (q_3.4 through q_3.11) while reporting needs_review=['3.12','3.13','3.14'], which reads like 3 harmless trailing extras rather than the true 8-question systematic mismatch. Built the real merge entirely BY HAND instead, content- verified pair by pair (every one of the 11 exercises' own solution text read side by side against its matched exercise, not just the ones a number-match would flag) - see 02_extract/match_report.md for the full pairing table. The 3 orphaned solutions-manual entries (bond price, speculative demand direction, liquidity trap) were discarded, not fabricated into new exercise items - they answer questions that don't exist anywhere in the chapter's own current 11 exercises, and inventing a question not actually printed in chapter.en.pdf would violate Rule 4 (exercise text must be transcribed from the textbook, never authored). Same established practice as physics-12-3/12-5's own documented cases. fig_3_1.jpg (a 'Functions of Money' primary/secondary classification flowchart, embedded in the solutions manual's own Q2 answer) is a genuine informative diagram directly illustrating q_3.2's own answer - attached as a :::figure. fig_3_0.jpg (chapter's own Fig 3.1, 'The Speculative Demand for Money', embedded in Box 3.1) has no item home - Box 3.1 is excluded narrative, same reasoning as every other chapter's own untethered illustrations. Other excluded content (no item home, confirmed deliberately): 'Key Concepts' glossary (term-pair table); Box 3.1 'Demand and Supply for Money: A Detailed Discussion'; Box No. 3.2 'Demonetisation'; three explicitly-labelled appendices confirmed via direct PDF page-16/17 text extraction - Appendix 3.1 (infinite geometric series derivation), Appendix 3.2 (Table 3.4, M1/M3 data through 2024-25), Appendix 3.3 (Table 3.5, monetary base data through 2024-25), same updated-data-reprint pattern already established in economics-12-1/12-2; 2 footnote blocks (confirmed neither falls inside any of the 11 exercises). final_answer populated for exactly 1 item (q_3.10 - the only one with a clean, distinct concluding numeric result: 'a deposit of Rs. 1,000 results in a Rs. 10,000 increase in money supply'); the other 10 are descriptive/definitional with no separate boxed result. GATES: gate_counts (expected 11 exercises) passes. gate_solutions_present passes - every item has a solution. gate_bilingual shows 22 fails (11 items x 2 fields, question+solution both missing Hindi) - fully expected for this English-only chapter, not a defect, same as economics-12-1/12-2."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-29T07:52:35.484598+00:00",
+    "inputs": {
+      "chapter.en.md": "1cde58cf680895da"
+    },
+    "counts": {
+      "examples_chars": 105,
+      "examples_items": 0,
+      "qa_chars": 16844,
+      "qa_items": 11,
+      "total_items": 11
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Pure mechanical split via mdio.markdown_to_chapter() + render.render(kinds=...), no model call, no merge_by_id() needed (single-language chapter, nothing to merge). examples.en.md carries 0 items (just front matter/heading) - this chapter genuinely has no textbook-labelled worked example, confirmed at stage 2. qa.en.md carries all 11 exercises. Counts sum exactly (0+11=11, matching the merged chapter's own total). tag._parse() round-trip balanced in both files."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-29T07:54:55.924446+00:00",
+    "inputs": {
+      "examples.en.md": "74cf0c98c7eae246",
+      "qa.en.md": "1cde58cf680895da"
+    },
+    "counts": {
+      "combined_chars": 16844,
+      "combined_items": 11,
+      "byte_identical_to_extract": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Same mdio.merge_by_id() footgun already documented for economics-12-1/12-2's own stage 4 avoided again here (plain list concatenation instead, then a fresh Chapter built) - trivially harmless this time since examples.en.md has 0 items, but avoided unconditionally rather than relying on that. Verified combined.en.md (11 items) is byte-identical to 02_extract/chapter.en.md, as expected. tag._parse() confirms balanced containers; item count (11) matches examples(0)+qa(11) exactly."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-29T07:59:57.966281+00:00",
+    "inputs": {
+      "combined.en.md": "1cde58cf680895da",
+      "chapter.en.pdf": "d1b7f0407236a4fc",
+      "solutions.en.pdf": "1f58d76036cff7c1"
+    },
+    "counts": {
+      "corrections_found": 1,
+      "corrections_applied_high_confidence": 0,
+      "corrections_held_medium_confidence": 1,
+      "gate_math_parity_fails": 0,
+      "gate_counts_fails": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 2,
+    "notes": "English track only. Verified all 11 items directly against the actual PDF pages: rendered and read all 14 pages of solutions.en.pdf (150dpi) word-for-word, plus independently confirmed the chapter's own 11 questions via chapter.en.pdf's own genuine text layer at stage 2 (that PDF has real embedded text, unlike the scanned-image solutions PDF, so no re-render was needed to re-verify it here). 10 of 11 items' solutions match the extracted text exactly, word for word, including every number. ONE finding: q_3.10's own reserve/loan progression table has a header cell mathpix OCR'd as the literal letter 'v' - the actual printed page shows that cell as blank, with a downward arrow (part of a merged 'Deposit' header spanning two sub-columns) drawn into it graphically, not as text. Every number in every row of the table is confirmed correct and unaffected - this is a header-label artifact only, never a data error. Filed as ONE medium-confidence correction (not high - a purely graphical arrow has no certain text equivalent, blank is the closest faithful rendering but not a sure transcription) - held back by apply_corrections()'s default min_confidence='high' threshold, not applied. Flagged to the user for a decision rather than silently left at medium or auto-approved at a lower threshold. Confirmed the orphan-solutions finding from stage 2 again while reading page-by-page: solutions Q4 (bond price), Q5 (speculative demand direction) and Q6 (liquidity trap) are indeed genuinely printed in the solutions manual with no chapter counterpart - nothing to correct there, already handled at stage 2. 0 high-confidence corrections applied. gate_math_parity and gate_counts both pass with zero fails."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-29T08:05:33.978976+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "1cde58cf680895da"
+    },
+    "counts": {
+      "total_solution_fields": 11,
+      "fields_simplified": 2,
+      "fields_left_unchanged": 9,
+      "restore_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Reviewed all 11 solution fields via protect.freeze()'d text. This chapter's content is almost entirely clear, short definitional/descriptive prose - 9 of 11 fields were already clear and left unchanged, per simplify.md's own 'if already clear, return unchanged' permission. 2 fields touched, both narrow, unambiguous grammar-slip fixes, not register or clarity rewrites: q_3.1 ('goods are exchange for goods' -> 'goods are exchanged for goods', subject-verb agreement) and q_3.7 ('If offers a higher rate of interest' -> 'It offers a higher rate of interest', subject-pronoun typo, confirmed against the actual PDF page at stage 5 - the source itself prints 'If offers'). DELIBERATELY LEFT UNTOUCHED: q_3.9's own genuinely garbled sentence ('SLR refers to the minimum percentage of assets to be maintained with RBI are there in fixed or liquid form') - already confirmed word-for-word against the actual PDF page at stage 5 as a real authoring garble in the third-party solutions manual itself, not an extraction artifact. Same discipline already established on economics-12-2's own q_2.4: simplifying unclear source text risks inventing clarity that isn't genuinely there, not stage 6's call to make. No number, unit, or protected math/table span touched anywhere - ran every field through protect.freeze()/restore() regardless; zero restore failures across all 11 fields. GATES: gate_question_text_frozen/gate_answers_unchanged/gate_math_parity all pass with zero fails. gate_bilingual reports 22 fails (every item's own question+solution 'missing a language') - inherent to this chapter's current English-only state, not a defect, same as economics-12-1/12-2."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-29T09:56:56.721912+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "ce3c12452fffe73f"
+    },
+    "counts": {
+      "output_chars_en": 17152,
+      "items_with_structure_added": 1,
+      "items_left_flat": 10
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Applied inner component structure to 06_simplify/chapter.simplified.en.md per step_7/format.md, producing 07_format/structured.en.md. Only 1 of 11 items received structural markup: this chapter's content is almost entirely descriptive/definitional (barter drawbacks, functions of money, legal tender, high powered money, functions of a commercial bank, instruments of monetary policy, lender of last resort) with no genuine given-> formula->substitute->conclusion calculation shape - left flat per format.md's own 'forcing structure onto ordinary prose is worse than leaving it unmarked' guidance, same choice already made for economics-12-1's entire chapter. q_3.10 ('commercial bank as creator of money') is the one genuine worked-example shape in this chapter: a specific numeric scenario (Rs 1000 deposit, 10% reserve ratio), a round-by-round progression table, a credit-multiplier calculation, and a concluding numeric statement. Split into :::concept{label=\"Given\"} (the worked scenario setup), :::table (the reserve/loan progression table, kept exactly as extracted including the stage-5-flagged 'v' header cell - that correction remains held, unapplied, not stage 7's call to resolve), :::step{label=\"Substitute\"} (the credit-multiplier calculation line) and :::step{label=\"Conclusion\"} (the final stated result). No :::note/:::figure used inside any solution - q_3.2's own fig_3_1 stays an item-level figure (rendered before the solution, not moved into it), since the solution text never explicitly names/references it by caption or number, so format.md's own 'move it to its first reference point' rule does not apply. GATES: tag._parse() succeeds on the full output (12 top-level children under _root). protect.parity(stage6_text, stage7_text) returns zero problems - display math, inline math, table and image counts identical before and after, confirming pure structural wrapping with no content loss, duplication or rewording."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-29T09:59:58.028516+00:00",
+    "inputs": {
+      "structured.en.md": "8ddd4a92f56216f8"
+    },
+    "counts": {
+      "items": 11,
+      "parts": 0,
+      "distinct_figure_srcs": 1,
+      "stage_given": 2,
+      "stage_key_formula": 0,
+      "stage_substitute": 1,
+      "stage_conclusion": 11
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Ran pipeline/serialize.py (structured_md_to_json) against 07_format/structured.en.md. GATE (fresh, direct recount from structured.en.md vs the JSON just written): items 11==11, parts 0==0, distinct figure srcs {'images/fig_3_1.jpg'}=={'images/fig_3_1.jpg'}. PASS on all three. Stage-label distribution: given=2, substitute=1, conclusion=11. NOTED FOR THE STAGE 9 DESIGNER: q_3.10's own solution has 5 blocks, not the 4 intended at stage 7 - the item's OPENING plain-prose paragraph ('The primary function of commercial banks is money creation...') was deliberately left outside any container at stage 7 (general context, not part of the specific worked scenario), but stage 8's own container model has no 'this text has no stage' option for solution content: any text that isn't wrapped in an excluded container type (table/figure/note) always becomes its own anonymous 'step' block, and an unlabelled step gets a positional stage - here, first among 5 stageable-or-excluded blocks, so it gets 'given' by the same mechanical fallback rule as any other unlabelled step. The result: q_3.10 will render with TWO consecutive 'Given' pills (the generic intro paragraph, then the actual scenario's own :::concept{label=Given}) rather than one - not misleading (both genuinely are background/setup before the calculation), but a second pill of the same colour back-to-back is worth a glance during the stage 9 read-back rather than assumed fine. This is the same category of known four-stage-model limitation already documented for economics-12-2's own ex_2.1 (parallel-method steps getting positional tags) - not a bug introduced here, an unavoidable consequence of any multi-paragraph solution whose first paragraph is generic lead-in rather than part of the worked calculation itself."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-29T10:20:42.978762+00:00",
+    "inputs": {
+      "structured.en.json": "a9e719c54f26201d"
+    },
+    "counts": {
+      "html_chars": 29479,
+      "sections": 1,
+      "items_rendered": 11,
+      "parts_rendered": 0,
+      "figures": 1,
+      "missing_numeric_tokens": 0,
+      "render_bugs_found_and_fixed": 3
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Hand-authored 09_design/final.en.html + final.en.css, adapted directly from economics-12-2's own render_page_en.py/latex.py/final.en.css (same textbook/subject). final.en.css reused byte-for-byte unmodified. Single 'Exercises' section (0 examples, matching economics-12-1's own single-section shape). fig_3_1 (q_3.2's own item-level figure) copied into 09_design/images/ and confirmed resolving at the actual output path. THREE genuine rendering bugs found and fixed during the mandatory manual read-back, none previously exercised by economics-12-1/12-2's own content shapes: (1) latex.py's _rewrite_divisions() operates on a whole $$...$$ block's text BEFORE a \\begin{aligned} environment gets split into its own rows - on q_3.3's own two-row block ('M_T^D=KT \\\\& 1/K M_T^D=T'), the genuine division on row 2 searched backward for its numerator boundary straight through the row separator and found row 1's own trailing '=', swallowing row 1's right-hand side into a bogus fraction and leaving row 1 with an empty second line. Fixed by adding a depth-0 '\\\\' (row separator) and '&' (cell separator) as additional hard boundaries in both the numerator and denominator searches, same as the existing '=' check. Verified against a regression case (a normal single-row fraction with no \\\\/&) still renders correctly. (2) render_page_en.py's text_to_lines() sentence-splitter has no guard against a single-letter list marker ('a.', 'b.', ...) - this chapter's own solutions manual writes sub-lists this way (q_3.7, q_3.10), and every marker was being split onto its own stranded line, orphaned above its own list item. Fixed by not splitting when the accumulated buffer since the last split is exactly one lowercase letter plus a period. (3) The same splitter has no abbreviation guard at all - 'i.e.' split into two stranded fragments on q_3.7 ('...too i.' / 'e., the withdrawals...'), 'Rs.' (Rupees) split from its own following amount throughout q_3.10 and its own boxed answer, and 'Mr. B.' (q_3.10's own worked example) tore into four fragments. Fixed by protecting 'i.e.'/'e.g.' (with optional trailing comma), 'Rs.', and 'Mr.'/'Mrs.'/'Ms.'/'Dr.' (with an optional following single-capital-letter initial and its own period) the same way a $...$ math span already is, before line-splitting ever sees them. RETROACTIVE FINDING, reported to the user, not silently fixed elsewhere: bug (3)'s own 'Rs.' case is NOT new to this chapter - grepped economics-12-2's own ALREADY-SHIPPED final.en.html (all 10 stages complete) and found 18 separate instances of the identical 'Rs.' splitting bug already present in that chapter's own delivered HTML (and, since stage 10 exports from that same HTML, its own shipped PDF too). economics-12-1 never exposed this since it's entirely math-free and never once writes a currency amount. This is a pre-existing defect in this pipeline's own shared Economics render-script lineage, not something introduced this session - fixed here so it doesn't ship a third time, but economics-12-2's own copy needs the same fix plus a re-export, which the user should explicitly approve before it's touched (already-delivered work). NOTED FOR THE READ-BACK (already flagged at stage 8): q_3.10 renders with two consecutive 'Given' pills (its own generic intro paragraph, then its own explicit scenario-setup concept) - confirmed on the actual page, reads sensibly, not misleading. MANDATORY MANUAL READ-BACK: full-page screenshots reviewed crop-by- crop against every item, re-run after each of the three fixes above; a numeric-token script independently pulled every number from every question/final_answer/solution field (via mdio.markdown_to_chapter against 06_simplify, not the JSON) and confirmed each appears in the rendered HTML - 74 tokens checked, 0 missing, re-run clean after every fix. q_3.9's own genuinely garbled sentence ('SLR refers to the minimum percentage of assets to be maintained with RBI are there in fixed or liquid form') reads on the page exactly as in the source - preserved, not silently corrected. 1 figure, confirmed resolving against the real 09_design/images/ path."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-29T10:33:19.357550+00:00",
+    "inputs": {
+      "final.en.html": "4e17dbcb53329395"
+    },
+    "counts": {
+      "page_count": 7,
+      "file_size_bytes": 398491,
+      "blank_pages": 0,
+      "numeric_tokens_checked": 74,
+      "numeric_tokens_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Exported 09_design/final.en.html to 10_pdf/final.en.pdf via Playwright/Chromium (export_en.py, same shape as every other chapter's own script); emulate_media('screen') applied unconditionally per standing guidance even though this chapter's text is English. GATES (fitz/PyMuPDF): page count 7 - sane for 11 items (all single-block exercises except q_3.10's own given/table/substitute/conclusion structure) - not 1, not triple digits. 0 blank pages. Numeric read-back re-run against the PDF's OWN extracted text (not assumed carried over from stage 9's HTML check): pulled every numeric token from every question/final_answer/solution field in 06_simplify/chapter.simplified.en.md (via mdio.markdown_to_chapter) - 74 tokens checked across all 11 items, 0 missing. Applied the documented unicode-superscript-run separator fix when normalizing (kept for parity/safety; this chapter has no actual superscript-exponent content). All checks pass; no hand-editing of the PDF was needed. No CALIBRATION/calibrate.py re-run - it only reads pre-stage-7 flat markdown, per step_10/PROMPT.md's own explicit note that this stage needs none. This completes economics-12-3's English track through all 10 stages; Hindi not started (no Hindi PDFs provided for this textbook, same as economics-12-1/12-2). STILL OPEN, carried forward from stage 5: the held medium-confidence correction on q_3.10's own table header ('v' vs a genuinely blank arrow cell) was never explicitly approved or rejected - remains unapplied in the shipped chapter. Not a defect (the 'v' artifact is cosmetic, no data is wrong), but worth a final decision from the user if they want it cleaned up."
+  }
+]

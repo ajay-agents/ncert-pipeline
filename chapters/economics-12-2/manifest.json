@@ -1,0 +1,248 @@
+[
+  {
+    "stage": "mathpix",
+    "at": "2026-09-29T04:59:59.779687+00:00",
+    "inputs": {
+      "chapter.en.pdf": "89f1eea66614cbca",
+      "solutions.en.pdf": "d871a849305de6da"
+    },
+    "counts": {
+      "chapter_pages": 27,
+      "chapter_chars": 80751,
+      "chapter_dollar_spans": 164,
+      "chapter_table_rows": 81,
+      "chapter_images": 7,
+      "solutions_pages": 11,
+      "solutions_chars": 13163,
+      "solutions_dollar_spans": 43,
+      "solutions_table_rows": 16,
+      "solutions_images": 0,
+      "exercise_questions": 12
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Second Economics chapter (same textbook, Introductory Macroeconomics Class 12, as economics-12-1). English track only - no Hindi PDFs provided for this chapter either; continuing the same English-only pattern already confirmed with the user for economics-12-1, not re-asked this time since the preference is now established for this book, but noted here for the record per step_1/PROMPT.md's own standing rule about a missing-Hindi configuration. Chapter identified and verified before conversion: chapter.en.pdf (27 pages) is NCERT's 'Introductory Macroeconomics' Chapter 2 'National Income Accounting' - confirmed via direct text extraction. solutions.en.pdf (11 pages, no text layer) confirmed via a rendered page-1 image as the same third-party solutions guide's own Chapter 2 ('CHAPTER - 2 NATIONAL INCOME ACCOUNTING Exercises Question 1: What are the four factors of production...'). SUBJECT-SHAPE CONFIRMATION: this is the numerical Economics chapter the newly-added _shared/RULES.md subject note anticipated ('a numerical chapter (national income accounting, money multiplier) can still have real calculations needing the same protection layer as Physics/Maths') - 328 dollar-delimited math spans in chapter.en.md (vs economics-12-1's zero) and 86 in solutions.en.md, both counts confirmed even/balanced. 81 table-row lines in the chapter (national income data tables, factor-income breakdowns) and 16 in solutions. 12 numbered Exercise questions confirmed in BOTH documents with matching numbers 1-12 (grepped directly, not assumed) - unlike economics-12-1, the chapter's own exercise list has NO explicit heading at all (no '## EXERCISES' line - the numbered list just begins directly after the last content section, '2.5 GDP and Welfare', ends before 'Suggested Readings') - flagged for stage 2's own section-boundary detection. TWO GENUINE ANOMALIES FLAGGED for stage 2 attention (not fixed at this stage, which does no content judgment): (1) two appendix-style reference tables (Table 2.5 'GVA and GDP for India at constant (2024-25) prices', Table 2.6 'Components of Gross Domestic Product (2011-12) Constant Prices') appear AFTER 'Suggested Readings', past the end of both the content sections and the exercise list - reads as an updated-data appendix from a later reprint (matches the 'Reprint 2026-27' pattern already seen on economics-12-1's own pages), not tied to any specific exercise or example; per this pipeline's own established practice (e.g. economics-12-1's own excluded 'Key Concepts' glossary), this kind of un-contained chapter-appendix content likely has no home in the per-item schema and should probably be left unextracted, but stage 2 should confirm by checking the source PDF directly rather than assuming. (2) 4 footnote blocks ([^0]-[^3], corresponding to inline superscript-numbered footnote markers within the body text) will need careful handling if any fall inside an extracted item's own text span - check whether any footnote marker lands inside one of the 12 exercise questions or their own solutions before extraction, not just in the general chapter narrative. 7 images in chapter.en.md (fig_2_0 through fig_2_6) - likely genuine informational diagrams this time (the section is literally titled 'Circular Flow of Income'), unlike economics-12-1's own decorative portraits; stage 2 should check each one's own context individually rather than assuming either way. 0 images in solutions.en.md. No Devanagari in either file (expected, English-only track). Given this chapter's substantially larger scale and volume of real numeric content (vs economics-12-1's tiny 4-item, math-free chapter), stage 2 will likely need a parsing-script-based extraction approach (matching how larger Maths chapters in this pipeline were handled) rather than fully hand-built item construction, to preserve LaTeX verbatim and avoid retyping-error risk across 12 numerically-heavy exercises."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-29T05:21:02.441540+00:00",
+    "inputs": {
+      "chapter.en.md": "1b7842aaa158d149",
+      "solutions.en.md": "24c67464d267968f"
+    },
+    "counts": {
+      "items_total": 13,
+      "examples": 1,
+      "exercises": 12,
+      "matched": 12,
+      "needs_review": 0,
+      "multi_part_items": 1,
+      "parts": 5,
+      "figures_excluded_as_narrative": 6,
+      "tables_excluded_as_appendix": 2,
+      "footnotes_excluded": 6
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "English track only (no Hindi PDFs provided for this chapter). Built via a parsing script (not hand-typed) given this chapter's much larger scale and dense LaTeX content vs economics-12-1 - preserves verbatim math, eliminates retyping risk across 12 numerically-heavy exercises plus one worked example. PART A - EXAMPLES: found exactly ONE genuinely textbook-labelled 'Example:' in the whole chapter (the two-firm cotton/cloth GDP illustration, section 2.2.1) - extracted as ex_2.1. Every other inline numeric illustration in this chapter's own narrative (the wheat-bread value-added illustration, the shirt-inventory example, the bread-price GDP-deflator example, the rice-cloth CPI example, the GDP-distribution welfare example) is woven directly into the flowing exposition without the textbook's own 'Example' label or any other demarcation - per this pipeline's own established practice (extract only what the source itself demarcates, never invent boundaries around plausible-looking illustrative prose), none of these were extracted as separate items. Confirmed against the actual chapter.en.pdf page (rendered at 200dpi) that a figure appearing to interrupt the Example's own text (fig_2_4, captioned 'Fig. 2.2: Diagramtic Representation of GDP by the Three Methods') actually illustrates the PRECEDING general equation-equivalence discussion ('we may represent the equivalence by Fig. 2.2'), not this specific two-firm example - mathpix's own reading order just floated it into the same text stream because of the source page's two-column layout (the figure sits in a right-hand column next to the Example's own left-hand column). Excluded from ex_2.1's own figures accordingly - this general-discussion figure, like the chapter's other 5 images (fig_2_0/1/2/3/5/6, all embedded in general narrative sections with no example/exercise of their own to attach to), has no home in this pipeline's per-item schema. PART A - EXERCISES: 12 questions extracted from chapter.en.md's own unlabelled numbered list (no '## EXERCISES' heading exists at all in this chapter - the list just starts directly after the last content section, '2.5 GDP and Welfare', and ends before 'Suggested Readings' - flagged at stage 1, confirmed and handled here via a literal string-boundary split rather than a heading-based regex). PART A - SOLUTIONS: 12 solutions extracted from solutions.en.md's own 'Question N: ... Answer: ...' blocks. OTHER CHAPTER CONTENT DELIBERATELY EXCLUDED (no item counterpart, matching this pipeline's own established practice for un-contained chapter content - e.g. economics-12-1's own excluded 'Key Concepts' glossary): this chapter's own 'Key Concepts' glossary (2 tables, ~30 terms); 6 footnote blocks ([^0]-[^3], corresponding to inline superscript markers 1-6 in the general narrative - checked and confirmed none of the 6 markers falls inside any of the 12 exercise questions or the one example, all are pure narrative asides about investment/depreciation/SNA2008 methodology); and the two appendix-style reference tables (Table 2.5 'GVA and GDP for India at constant (2024-25) prices', Table 2.6 'Components of GDP (2011-12) Constant Prices') that appear AFTER 'Suggested Readings', past both the content sections and the exercise list - reads as an updated-data appendix from a later reprint (matches the 'Reprint 2026-27' pattern already seen on economics-12-1's own pages), not tied to any specific exercise or example. GENUINE MULTI-PART ITEM FOUND: q_2.10's own question telescopes 5 distinct labelled sub-asks into one combined sentence ('complete Raju's contribution to the following measures of income (a) Gross Domestic Product (b) NNP at market price (c) NNP at factor cost (d) Personal income (e) Personal disposable income') - the exact 'telescoped enumeration' shape documented in this pipeline's own step_9/PROMPT.md precedent. The solutions manual answers these using DIFFERENT labels - roman numerals (i)-(v) instead of the question's own letters (a)-(e) - so built q_2.10 as a genuine 5-part Item using the question's OWN a-e lettering (per the established 'match the chapter's own label convention over the solutions manual's differing one' rule, same precedent as maths-12-3's own Hindi lesson), with each part's own solution taken verbatim from the corresponding (i)-(v) segment of the solutions manual's answer. No other exercise has this shape - checked all 12 questions individually for hidden multi-part structure before settling on just this one (Q1's own four-factors-plus-remunerations shape and Q9's own PI-then-PDI shape both looked superficially similar but their own solutions answer them as ONE flowing narrative, not per an explicit per-label structure the question itself sets out - left both flat, matching economics-12-1's own precedent for not forcing structure that isn't genuinely there). MATCH: match.join_solutions() run for real (not hand-matched) - questions=12, solutions=12, matched=12, needs_review=[] (empty across unmatched_questions/orphan_solutions/duplicate_solutions) - clean, sequential 1-12 numbering on both sides with no drift. TWO GENUINE THIRD-PARTY-SOLUTIONS-MANUAL ANOMALIES noticed during extraction, flagged for stage 5's own verification against the actual PDF rather than corrected here (stage 2 transcribes as-is, per extract.md's own 'do not fix, complete or improve anything' rule): (1) Q2's own answer lists 'Government Debt Consolidation Fund' as one of four expenditure categories, which reads oddly next to the standard C+I+G+X-M breakdown taught in the chapter itself - may be a genuine error in this third-party guide, needs checking against its own printed page. (2) Q6's own answer reuses the symbol 'T' for two different things in the same answer (government tax revenue in the budget-deficit formula, then export revenue in the trade-deficit formula) - likely a typo for 'X' (exports) in the solutions manual's own printed text, needs checking against the source page. Both transcribed exactly as OCR'd for now, not silently corrected. q_2.10's own item-level prompt carries a mid-sentence line break ('...NNP\\n\\nat market price...') inherited directly from a page break in the original PDF - flagged for stage 5 to check whether this needs a formal whitespace correction or is fine as-is. Gates: gate_counts and gate_solutions_present both pass with zero fails on the assembled 13-item chapter (1 example + 12 exercises, 10 flat + Q10's own 5 parts)."
+  },
+  {
+    "stage": "extract_match",
+    "at": "2026-09-29T05:22:33.077752+00:00",
+    "inputs": {
+      "chapter.en.md": "5a6f71e2fa931db7"
+    },
+    "counts": {
+      "final_answers_added": 10,
+      "items_with_final_answer": 6,
+      "parts_with_final_answer": 5,
+      "items_still_correctly_empty": 7
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "Addendum to the extract_match entry immediately above, same stage, same session - not a separate pipeline stage. Caught via calibration: the initial extraction left final_answer empty for all 12 exercises, correct for the 7 purely descriptive/explanatory ones (q_2.1-2.5, q_2.12, plus ex_2.1's own three-method walkthrough) but a genuine gap for the 5 calculation questions that DO conclude with a clean, stated final numeric result distinct from their own derivation - per extract.md's own ':::answer: the boxed or stated result... leave it out for proofs, derivations and descriptive answers' rule, these should have had one from the start. Added final_answer for q_2.6 (trade deficit = Rs. 500 crores), q_2.7 (depreciation = Rs. 200 crores), q_2.8 (transfer payments = Rs. 100 crores), q_2.9 (PI = Rs. 7,300 crores; PDI = Rs. 6,800 crores), q_2.11 (GNP deflator = 83.33%, price level fell not rose), and each of q_2.10's own 5 parts (a-e, one final value each - GDP/NNPMP/NNPFC/PI/PDI respectively) - every value copied verbatim from the same solutions-manual text already in each item's own solution field, not invented. gate_counts still passes with zero fails; round-tripped the rewritten file back through markdown_to_chapter() and confirmed every new final_answer field matches exactly. Calibration re-run: 'no final answer' count dropped from 13 to the correct 7 (the genuinely descriptive items)."
+  },
+  {
+    "stage": "split",
+    "at": "2026-09-29T05:26:33.311355+00:00",
+    "inputs": {
+      "chapter.en.md": "5a6f71e2fa931db7"
+    },
+    "counts": {
+      "examples_en_chars": 1838,
+      "examples_en_items": 1,
+      "qa_en_chars": 16227,
+      "qa_en_items": 12,
+      "total_items": 13
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Pure mechanical split via pipeline.render.render()'s own kinds filter, no model call. examples.en.md carries the chapter's one genuine worked Example (ex_2.1). qa.en.md carries all 12 exercise items (10 flat + q_2.10's own 5 parts). Item counts: 1 (examples) + 12 (qa) = 13, matching the merged chapter's own total exactly - nothing gained or lost in the split. tag._parse() round-trip confirmed balanced containers in both output files."
+  },
+  {
+    "stage": "combine",
+    "at": "2026-09-29T05:29:07.951397+00:00",
+    "inputs": {
+      "examples.en.md": "4495276d7a8b18aa",
+      "qa.en.md": "f64e7afeef96c220"
+    },
+    "counts": {
+      "combined_en_chars": 17942,
+      "combined_en_items": 13
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Pure mechanical recombination, no model call. Same mdio.merge_by_id() footgun already documented for economics-12-1's own stage 4 applies here too (examples/qa are a disjoint-id same-language pair, not the same items in two languages - merge_by_id(en, hi) only ever returns its first argument's own item list) - avoided it the same way, combining the two item lists by plain concatenation instead of calling merge_by_id() on them. VERIFIED: combined.en.md (13 items) is BYTE-IDENTICAL to 02_extract/chapter.en.md, as expected since nothing was reordered or altered. tag._parse() confirms balanced containers. Item count sums exactly (1 example + 12 exercise = 13), nothing gained or lost recombining."
+  },
+  {
+    "stage": "verify",
+    "at": "2026-09-29T05:35:53.714530+00:00",
+    "inputs": {
+      "combined.en.md": "5a6f71e2fa931db7",
+      "chapter.en.pdf": "89f1eea66614cbca",
+      "solutions.en.pdf": "d871a849305de6da"
+    },
+    "counts": {
+      "corrections_applied_high": 0,
+      "corrections_held": 0,
+      "items_verified": 13,
+      "pdf_pages_read": 14,
+      "confirmed_source_anomalies": 2
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 3,
+    "notes": "English track only (no Hindi to merge). Verified all 13 items directly against the original PDF pages, not the mathpix markdown alone: rendered and read all 11 pages of solutions.en.pdf (150dpi) in full, plus chapter.en.pdf's own two exercise-list pages (24-25) and the Example's own page (14, already checked in detail during stage 2's own figure-attribution verification). Batched as roughly 4-page groups given the chapter's own scale (13 items, much larger than economics-12-1's 4). RESULT: zero discrepancies found beyond the two anomalies already flagged at stage 2, both now CONFIRMED as genuine content of the third-party solutions manual itself, not OCR defects: (1) q_2.2's own answer literally prints 'Government Debt Consolidation Fund' as an expenditure category (page 1 of solutions.en.pdf, directly confirmed) - odd next to the chapter's own standard C+I+G+X-M breakdown, but a genuine error in this third-party guide, not something stage 5 corrects per Rule 4/5 (transcribe faithfully, nothing invented - correcting a source error to match textbook theory would itself be an invention). (2) q_2.6's own answer literally reuses the symbol 'T' for both tax revenue and export revenue in the same answer (page 2 of solutions.en.pdf, directly confirmed, likely meant 'X' for exports) - same reasoning, left uncorrected. Also directly confirmed q_2.10's own mid-sentence line break is a genuine PAGE BREAK in the printed textbook itself (the sentence literally spans printed pages 33-34 of chapter.en.pdf, confirmed by direct inspection) - not an extraction artifact, correctly left as-is, no whitespace correction needed. Every number, formula, table cell and derivation across all 12 exercises and the one worked example matches its own source page exactly. ADDITIONALLY CONFIRMED (bonus finding from this pass): the two tables excluded at stage 2 as 'appendix-style content with no item home' are explicitly labelled 'Appendix 2.1' in the printed textbook's own page margin - definitively confirming that exclusion decision was correct, not just a reasonable inference. Zero corrections needed - wrote an empty corrections.md (matching a genuinely clean, if unusually large and math-heavy, chapter) and a chapter.verified.en.md that is the combined chapter passed through apply_corrections() with an empty correction list (same code path as every other chapter). before/after snapshotted correctly via chapter.model_copy(deep=True) before calling apply_corrections(). gate_math_parity and gate_counts both pass with zero fails."
+  },
+  {
+    "stage": "simplify",
+    "at": "2026-09-29T05:44:47.733287+00:00",
+    "inputs": {
+      "chapter.verified.en.md": "5a6f71e2fa931db7"
+    },
+    "counts": {
+      "total_solution_fields": 17,
+      "fields_simplified": 1,
+      "fields_left_unchanged": 16,
+      "restore_failures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Reviewed all 17 solution fields (13 items, 5 of them being q_2.10's own parts) via protect.freeze()'d text. This chapter's own content is almost entirely terse, calculation-style 'Given -> formula -> substitute -> result' derivations or short bulleted/definitional answers - genuinely already clear per simplify.md's own 'if already clear, return unchanged' permission, so 16 of 17 fields were reviewed and left unchanged. DELIBERATELY CONSERVATIVE given this chapter's own already-confirmed anomalies: this chapter has two source errors already confirmed genuine at stage 5 (q_2.2's 'Government Debt Consolidation Fund', q_2.6's reused 'T' symbol) - left both completely untouched here, since stage 6's remit is register/readability, not fact-checking or fixing a third-party guide's own content errors (Rule 4/5: transcribe faithfully, nothing invented - silently 'fixing' a wrong answer to match textbook theory would itself be an invention). 1 field touched: q_2.4's own two opening definitional sentences ('Planned inventory refers to changes in stock or inventories which has occurred in a planned way' -> 'a change...that occurs...', and the parallel 'Unplanned inventory refers to...which has incurred unexpectedly' -> '...that occurs unexpectedly' similarly) - narrow, high-confidence subject-verb-agreement and register fixes to the clearly-well-formed OPENING clauses only. Deliberately left the SAME field's own genuinely ambiguous/garbled middle sentence ('In case of planned inventory accumulation firm has and an expected fall in sales...') completely untouched - this reads as a real authoring typo or logical confusion in the third-party solutions manual itself (already independently confirmed word-for-word against the actual PDF page at stage 5), and 'simplifying' unclear source text risks either inventing clarity that isn't genuinely there or masking a defect stage 5 already examined and chose to preserve - not stage 6's call to make. No number, unit, or protected math span touched anywhere - ran every field through protect.freeze()/restore() regardless, per the stage's own non-negotiable freeze-first rule; zero restore failures across all 17 fields. GATES: gate_question_text_frozen/gate_answers_unchanged/gate_math_parity all pass with zero fails. gate_bilingual reports 25 fails (every item's own question/solution/final_answer combination 'missing a language') - inherent to this chapter's own current English-only state (no chapter.verified.hi.md exists), not a defect, same as economics-12-1's own identical situation."
+  },
+  {
+    "stage": "format",
+    "at": "2026-09-29T06:00:28.233638+00:00",
+    "inputs": {
+      "chapter.simplified.en.md": "51b362269ae75722"
+    },
+    "counts": {
+      "output_chars_en": 18828,
+      "items_with_structure_added": 7,
+      "items_left_flat": 6
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Applied inner component structure to 06_simplify/chapter.simplified.en.md per step_7/format.md, producing 07_format/structured.en.md. Only 7 of 13 items received any structural markup: items whose solution genuinely has stages or a table got wrapped; purely descriptive/definitional items (q_2.1, q_2.2, q_2.4, q_2.5, q_2.10 5 parts, q_2.12) were left as plain paragraph text per format.md own judgement-call guidance (forcing structure onto ordinary prose is worse than leaving it unmarked; a 2-4 line q_2.10 part is too short to genuinely split further). ex_2.1 (the one worked Example): split into :::step{n=1/2/3} for its own three parallel GDP methods (value-added, expenditure, income) - used generic n= numbering rather than the fixed Given/Formula/Substitute/Conclusion vocabulary since these are three ALTERNATE derivations of the same result, not one linear given-to-conclusion flow; Table 2.2 and Table 2.3 wrapped in :::table within their own steps. q_2.3: wrapped its own stock-vs-flow comparison table in :::table, left the surrounding prose unwrapped. q_2.6/2.7/2.8/2.11: genuine given-formula-substitute-conclusion calculations - applied the fixed 4-label vocabulary (:::concept{label=\"Given\"}, :::formula{label=\"Key formula\"}, :::step{label=\"Substitute\"}, :::step{label=\"Conclusion\"}) with ZERO reordering or wording changes - each source line kept in its own original position, even where the source states the formula before its own given data (q_2.6) rather than the canonical Given-first order, since stage 8 keys off explicit labels not position and step_7 rules forbid reordering content. q_2.9: two genuine sequential sub-calculations (Personal Income, then Personal Disposable Income) - used generic :::step{n=1/2} rather than forcing a single given/formula/substitute/conclusion split across both, since the two sub-results are themselves chained inputs, not one flat derivation; q_2.6/2.7/2.8/2.9's own q_2.10 anomalies (Government Debt Consolidation Fund, reused T symbol) and q_2.4's garbled middle sentence were left completely untouched (already confirmed genuine at stage 5, not a stage-7 concern). No note/figure containers used - no textbook remark or figure needed attaching to any item this chapter. GATES: tag._parse() succeeds on the full output (15 top-level children under _root). protect.parity(stage6_text, stage7_text) returns zero problems - display math, inline math, table and image counts identical before and after, confirming pure structural wrapping with no content loss or duplication."
+  },
+  {
+    "stage": "tag",
+    "at": "2026-09-29T06:10:55.052088+00:00",
+    "inputs": {
+      "structured.en.md": "de31e393f42d8374"
+    },
+    "counts": {
+      "items": 13,
+      "parts": 5,
+      "distinct_figure_srcs": 0,
+      "stage_given": 8,
+      "stage_key_formula": 4,
+      "stage_substitute": 6,
+      "stage_conclusion": 17
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Ran pipeline/serialize.py (structured_md_to_json) against 07_format/structured.en.md, no per-chapter hand logic needed - the shared stage-8 serializer already implements the given/key-formula/substitute/conclusion positional-inference rule, हल/Solution-opener stripping, answer-prefix stripping, and the duplicate-solution suppression rule. GATE (fresh, direct recount from structured.en.md vs the JSON just written): items 13==13, parts 5==5, distinct figure srcs 0==0 (this chapter genuinely has zero figures attached to any item - confirmed at stage 2, all 7 chapter images excluded as untethered narrative illustrations). PASS on all three. Stage-label distribution: given=8, key_formula=4, substitute=6, conclusion=17. The high conclusion count is expected, not a defect: every purely descriptive item left flat at stage 7 (q_2.1, q_2.2, q_2.4, q_2.5, q_2.12) has exactly ONE stageable block, which step_8/PROMPT.md's own rule assigns 'conclusion' outright (a solution with only one stageable block is entirely conclusion) - plus q_2.10's own 5 short parts, each likewise a single unlabelled block. NOTED FOR THE STAGE 9 DESIGNER: ex_2.1's own 3 parallel-method steps (n=1/2/3, deliberately left unlabelled at stage 7 since they are 3 alternate derivations, not one given-to-conclusion flow) and q_2.9's own 2 sequential-calculation steps (n=1/2) both received POSITIONAL given/substitute/conclusion stage tags from this stage's mechanical fallback rule, same as any other unlabelled step - this is documented, sanctioned pipeline behaviour (_shared/RULES.md: stage 8 infers the fixed stage by position for any unlabelled step, no carve-out for content that doesn't semantically fit), not a bug introduced here. Flagging it explicitly so stage 9's own manual read-back checks that the resulting pill colours (e.g. ex_2.1's income-method step showing a Conclusion pill, its own expenditure-method step showing Substitute) still read sensibly on the finished page rather than assuming it will."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-29T06:48:53.571667+00:00",
+    "inputs": {
+      "structured.en.json": "0ba290a8f80dd35a"
+    },
+    "counts": {
+      "html_chars": 41002,
+      "sections": 2,
+      "items_rendered": 13,
+      "parts_rendered": 5,
+      "missing_numeric_tokens": 0,
+      "figures": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 1,
+    "notes": "English track only. Hand-authored 09_design/final.en.html + final.en.css per step_9/PROMPT.md, adapted directly from economics-12-1's own render_page_en.py/latex.py/final.en.css (same textbook, same subject, no new rendering machinery needed). final.en.css reused byte-for-byte unmodified - every trap fix it already carries (mobile breakpoint, .s23 pill/doodle flex-column stacking, .s86-89 plain-box answer variants, .s99/.s100 table th/td styling, break-inside:avoid on fraction/fig/item-badge units) already covers this chapter's own content shape; nothing new was required. latex.py reused from economics-12-1 with one new chapter-specific fix (below). Two sections rendered (Examples, then Exercises forcing a page break) - economics-12-1 never exercised the Examples-section code path (0 examples there); this chapter's ex_2.1 is the first real use of it in this subject. NEW: implemented strip_telescoped_enumeration() for the first time in this subject - q_2.10's own item-level prompt telescopes all 5 part labels into one combined enumeration sentence. Verified, per-clause, against each same-labelled part's own prompt text (whitespace-normalized, since the item's own prompt carries a genuine PDF-page-break artifact splitting 'NNP' from 'at market price' - confirmed genuine at stage 5, untouched in the data) before stripping the enumerated tail from the DISPLAYED prompt only; found and fixed an off-by-one in the last-clause boundary search during the mandatory manual read-back (the trailing '.' was being included IN the clause text, failing its own substring check against the corresponding part prompt, so the strip silently never fired on the first render) before the fix landed. NEW LATEX FIX (caught during the manual read-back, not before): a literal '\\%' landing in PLAIN PROSE (outside any $...$ span) rendered with a visible literal backslash - q_2.11's own concluding sentence ('...fallen down by 16.67 \\% [(100-83.33) \\%].'). Inside a math span this already worked (the converter's own single-char-command handler silently drops the backslash, letting '%' through); prose is html-escaped directly and never reaches that converter. Added the same unescaping to convert_math_spans's own prose loop - the same 'one LaTeX escape needs handling in two separate code paths' trap step_9/PROMPT.md already documents for a bare backslash-brace, now confirmed for backslash-percent too. Grepped the chapter's own 06_simplify file for \\&/\\_/\\#/\\$ afterward - none found, so no further prose-escape gaps in this particular chapter. q_2.11's own 'Nominal GNP/Real GNP' in its prose lead-in (NOT inside a $...$ span in the source) was deliberately left as plain text with a literal slash, not force-converted to a stacked fraction - it's genuinely outside any math span, matching how the source itself presents it; the one genuine bare '/' division INSIDE a math span (the $$...$$ block's own '(2500 / 3000)') correctly became a stacked fraction via the existing division-rewrite logic, confirmed visually. MANDATORY MANUAL READ-BACK (step_9/PROMPT.md - no code gate on this stage's own HTML): read every question/final_answer/solution field in 06_simplify/chapter.simplified.en.md against the rendered page via full-page screenshots at multiple crops; separately, a numeric-token script pulled every number out of every question/final_answer/solution field (via mdio.markdown_to_chapter, not the JSON) and confirmed each appears in the rendered HTML text - 0 missing, re-run clean after both fixes above. Both of this chapter's own confirmed source anomalies (q_2.2's 'Government Debt Consolidation Fund', q_2.6's reused 'T' symbol) and q_2.4's own garbled middle sentence read on the page exactly as they do in the source - preserved, not silently corrected, per Rule 4/5. 0 figures (confirmed at stage 2) - the os.path.exists figure-src check is trivially satisfied; no images/ subfolder needed for this chapter. Scratch screenshots used for the read-back were deleted from 09_design/ before finishing - only final.en.html + final.en.css + the two reused/adapted scripts (render_page_en.py, latex.py) remain."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-29T06:58:54.670018+00:00",
+    "inputs": {
+      "final.en.html": "97fbd1caf986264b"
+    },
+    "counts": {
+      "page_count": 9,
+      "file_size_bytes": 448575,
+      "blank_pages": 0,
+      "numeric_tokens_checked": 185,
+      "numeric_tokens_missing": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "English track only. Exported 09_design/final.en.html to 10_pdf/final.en.pdf via Playwright/Chromium (export_en.py, adapted unchanged in shape from economics-12-1's own script), honoring the base CSS's @page/A4 rules via prefer_css_page_size=True + print_background=True; emulate_media('screen') applied unconditionally per step_10/PROMPT.md's own standing guidance, even though this chapter's text is English (no Devanagari pre-base-vowel risk here, but every chapter's export script stays the same shape). GATES (fitz/PyMuPDF): page count 9 - sane for 13 items (1 example + 12 exercises, several multi-step calculations) - not 1, not triple digits. 0 blank pages. Numeric read-back re-run against the PDF's OWN extracted text (not assumed carried over from stage 9's HTML check): pulled every numeric token from every question/final_answer/solution field in 06_simplify/chapter.simplified.en.md (via mdio.markdown_to_chapter) - 185 tokens checked across all 13 items (including q_2.10's 5 parts), 0 missing. Applied the documented unicode-superscript-run separator fix when normalizing (insert a '|' before a run of superscript digits rather than a raw translate, so a base number and its own exponent stay distinct tokens) even though this chapter has no actual superscript-exponent content - kept for parity/safety, harmless when unused. All checks pass; no hand-editing of the PDF was needed. No CALIBRATION/calibrate.py re-run - it only reads pre-stage-7 flat markdown, per step_10/PROMPT.md's own explicit note that this stage needs none. This completes economics-12-2's English track through all 10 stages; Hindi not started (no Hindi PDFs provided for this textbook, same as economics-12-1)."
+  },
+  {
+    "stage": "design",
+    "at": "2026-09-29T10:26:33.868018+00:00",
+    "inputs": {
+      "structured.en.json": "0ba290a8f80dd35a"
+    },
+    "counts": {
+      "html_chars": 40518,
+      "retroactive_fix": true,
+      "rs_splitting_instances_fixed": 18,
+      "missing_numeric_tokens": 0
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "RETROACTIVE FIX, user-approved 2026-09-29 after being surfaced by economics-12-3's own stage 9 read-back: text_to_lines()'s sentence- splitter had no abbreviation guard, so 'Rs.' (Rupees) - pervasive throughout this chapter's own numeric solutions - was being treated as ending a sentence and split from the amount immediately following it. Grepped this chapter's own PREVIOUSLY-SHIPPED final.en.html (all 10 stages had been complete) and found 18 separate instances (e.g. 'So, depreciation is Rs.' stranded above '200 crores.' on its own line). economics-12-1 never exposed this since it is entirely math-free and never writes a currency amount. Fixed render_page_en.py's text_to_lines() (added 'Rs.', 'i.e.'/'e.g.', 'Mr./Mrs./Ms./Dr.' and a single-letter list-marker guard - the last three not currently exercised by this chapter's own content but added so this copy matches the more robust converter used on economics-12-3) and latex.py's _rewrite_divisions() (a depth-0 '\\\\'/'&' boundary guard against a division on one \\begin{aligned} row reaching into a different row - also not currently triggered here, q_2.11's own '(2500 / 3000)' is fully self-contained on one row via the simple-paren pre-pass, but added for the same stay-current reason). Re-ran render_page_en.py, re-verified: numeric-token read-back (185 tokens across all 13 items including q_2.10's 5 parts, via mdio.markdown_to_chapter against 06_simplify) shows 0 missing, re-confirmed via screenshot that the previously-broken 'So, depreciation is Rs. 200 crores.' sentence (and others) now render whole. No content changed - html_chars grew from 41,002 to 40,518 (the fix REMOVES spurious line breaks, so fewer <div> wrapper pairs)."
+  },
+  {
+    "stage": "pdf",
+    "at": "2026-09-29T10:26:33.870160+00:00",
+    "inputs": {
+      "final.en.html": "5a60c4512b567512"
+    },
+    "counts": {
+      "page_count": 9,
+      "file_size_bytes": 444156,
+      "blank_pages": 0,
+      "numeric_tokens_checked": 185,
+      "numeric_tokens_missing": 0,
+      "retroactive_fix": true
+    },
+    "gates_failed": {},
+    "gates_passed": [],
+    "model_calls": 0,
+    "notes": "RETROACTIVE RE-EXPORT following the stage-9 Rs.-splitting fix above (user-approved 2026-09-29). Re-ran export_en.py against the corrected final.en.html. GATES: page count 9 (unchanged), 0 blank pages, numeric read-back re-run against the PDF's own extracted text - 185 tokens checked, 0 missing. Spot-confirmed the previously-broken 'So, depreciation is Rs. 200 crores.' sentence is intact in the PDF's own extracted text. This replaces the chapter's own previously-shipped final.en.pdf, which had the same 18-instance Rs.-splitting defect baked into its own extracted text layer."
+  }
+]
