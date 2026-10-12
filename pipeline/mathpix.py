@@ -18,6 +18,8 @@ SUBJECT_OPTIONS = {
     "chemistry": {"include_smiles": True, "include_chemistry_as_image": False},
     "biology":   {"include_smiles": False, "enable_tables_fallback": True},
     "economics": {"include_smiles": False, "enable_tables_fallback": True},
+    "business_studies": {"include_smiles": False, "enable_tables_fallback": True},
+    "accountancy": {"include_smiles": False, "enable_tables_fallback": True},
 }
 
 
@@ -44,9 +46,14 @@ def _download_images(md_text: str, images_dir: Path, chapter: str) -> str:
         if url not in seen:
             ext = Path(url.split("?", 1)[0]).suffix or ".png"
             name = f"fig_{chapter}_{counter}{ext}"
+            try:
+                resp = requests.get(url, timeout=30)
+                resp.raise_for_status()
+            except requests.exceptions.RequestException as e:
+                print(f"  WARNING: image download failed, keeping remote URL: {url} ({e})")
+                seen[url] = url
+                return f"![{alt}]({seen[url]})"
             counter += 1
-            resp = requests.get(url, timeout=30)
-            resp.raise_for_status()
             (images_dir / name).write_bytes(resp.content)
             seen[url] = f"images/{name}"
         return f"![{alt}]({seen[url]})"

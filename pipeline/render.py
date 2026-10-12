@@ -50,8 +50,9 @@ def render_item(item: Item, lang: Lang) -> str:
             out.append(cap)
         out.append(":::\n")
 
-    if item.parts:
-        for p in item.parts:
+    visible_parts = [p for p in item.parts if _part_has_content(p, lang)]
+    if visible_parts:
+        for p in visible_parts:
             out.append(f":::part{_attrs(label=p.label)}")
             pq = p.question.get(lang).strip()
             if pq:
@@ -80,6 +81,37 @@ def render_item(item: Item, lang: Lang) -> str:
     return "\n".join(out)
 
 
+def _part_has_content(part, lang: Lang) -> bool:
+    """A Part is real for `lang` only if it has some actual question/
+    solution/answer text in that language - not merely a shared label.
+    Needed for a genuine edition difference one level down from
+    `_has_content()` below: one language's own official textbook can add an
+    extra Part to an otherwise-shared item (political-science-12-4's Q6:
+    the Hindi edition's own fill-in-the-blanks has a 5th blank, "two
+    voluntary organisations active in protecting human rights", that
+    English's own Q6 never had at all) - without this check, render() would
+    still emit that Part's own empty container (a bare `:::part{label="e"}`
+    shell, no content at all) on the language that doesn't have it, rather
+    than omitting the Part entirely as it should."""
+    return bool(part.question.get(lang) or part.solution.get(lang) or part.final_answer.get(lang))
+
+
+def _has_content(item: Item, lang: Lang) -> bool:
+    """An item is real for `lang` only if it (or one of its own Parts) has
+    some actual question/solution/answer text in that language - not merely
+    a shared id. Needed for a genuine edition difference where one
+    language's own official textbook has an exercise the other language's
+    edition simply never printed (political-science-12-3: the Hindi
+    edition's own Exercises section has 11 numbered questions where
+    English's has 10, with different content for several) - without this
+    check, render() would still emit that item's own empty container
+    (a bare heading, no content at all) on the language that doesn't have
+    it, rather than omitting the item entirely as it should."""
+    if item.question.get(lang) or item.solution.get(lang) or item.final_answer.get(lang):
+        return True
+    return any(_part_has_content(p, lang) for p in item.parts)
+
+
 def render(chapter: Chapter, lang: Lang, kinds: tuple[str, ...] | None = None) -> str:
     kinds = kinds or ("example", "exercise", "additional_exercise")
     title = chapter.title.get(lang) or f"Chapter {chapter.chapter_number}"
@@ -97,7 +129,7 @@ def render(chapter: Chapter, lang: Lang, kinds: tuple[str, ...] | None = None) -
     ]
     body: list[str] = []
     for kind in kinds:
-        items = chapter.by_kind(kind)
+        items = [i for i in chapter.by_kind(kind) if _has_content(i, lang)]
         if not items:
             continue
         body.append(f"## {SECTIONS[lang][kind]}\n")

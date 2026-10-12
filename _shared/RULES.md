@@ -60,6 +60,35 @@ technical terms, no hyphens, simple sentence structure.
   calculations needing the same protection layer as Physics/Maths, so
   don't assume every Economics chapter is math-free just because the
   first one is.
+- **Business Studies** — almost entirely prose/conceptual, essentially no
+  numbers or worked `example` items in most chapters (management
+  principles, functions, characteristics) — expect an Exercises-only
+  chapter to be the norm, not the exception, and don't force an empty
+  Examples section. Comparison/difference tables (e.g. management as
+  art vs. science vs. profession) and enumerated lists (principles,
+  characteristics, steps in a process) are the dominant content shape;
+  case-study-style exercise questions (a short business scenario followed
+  by "identify the ... being described") are common and their scenario
+  text is exam question text under Rule 4 the same as any other exercise
+  prompt.
+- **Accountancy** — the opposite of Business Studies: heavily numerical,
+  with real worked `example` items the norm, not the exception (journal
+  entries, ledger postings, trial balances, financial statements,
+  depreciation/amortisation schedules). The protection layer matters as
+  much here as in Physics/Maths, but the thing being protected is usually
+  a **table** (a ledger's debit/credit columns, a trial balance, a
+  balance sheet) rather than inline math — treat every such table as
+  carrying real figures that must survive verification, simplification
+  and formatting byte-for-byte, the same discipline `gate_math_parity`
+  already applies to a table's row/column count. Amounts are often ₹
+  figures with thousands separators (`₹ 1,00,000`) in the Indian numbering
+  style, not `$...$` math — don't expect the existing math-protection
+  regex to catch these; verify them by direct row-by-row comparison
+  against the source PDF instead. A chapter can still open with a
+  conceptual/definitional section (meaning and objectives of accounting,
+  users of accounting information) before its own numerical exercises
+  begin, so don't assume every item is a worked calculation just because
+  the chapter overall is numerical.
 
 ## Container vocabulary (stages 7–9)
 

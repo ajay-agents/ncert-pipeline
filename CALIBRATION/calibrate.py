@@ -39,7 +39,25 @@ def _find_chapter_md(chapter_dir: Path):
             en_chapter = mdio.markdown_to_chapter(en_path.read_text(encoding="utf-8"), "en") if en_path.exists() else None
             hi_chapter = mdio.markdown_to_chapter(hi_path.read_text(encoding="utf-8"), "hi") if hi_path.exists() else None
             rel = stem + (".en.md" if en_path.exists() else "") + ("+" if en_path.exists() and hi_path.exists() else "") + (".hi.md" if hi_path.exists() else "")
-            return mdio.merge_by_id(en_chapter, hi_chapter), rel
+            merged = mdio.merge_by_id(en_chapter, hi_chapter)
+            # merge_by_id() only ever merges Hindi fields INTO an item id
+            # already present in en_chapter - it never adds a Hindi-only id
+            # that has no English counterpart at all. For almost every
+            # chapter this is a no-op (both languages share one id set), but
+            # a genuine edition-structure difference (political-science-12-3:
+            # the Hindi textbook's own Exercises section has 2 extra items,
+            # q_ps3.hi3/hi10, that the English edition never printed) means
+            # `merged` can silently under-count real items - every number
+            # below (item counts, bilingual coverage, empty-field flags) was
+            # being measured against only English's own item set, with the
+            # 2 Hindi-only items invisible to this report entirely. Append
+            # any hi_chapter item whose id isn't already in `merged`, so the
+            # report measures the true union of both languages' own real
+            # items, not just the ids merge_by_id() happens to touch.
+            if hi_chapter is not None:
+                merged_ids = {i.id for i in merged.items}
+                merged.items = merged.items + [i for i in hi_chapter.items if i.id not in merged_ids]
+            return merged, rel
     return None, None
 
 
