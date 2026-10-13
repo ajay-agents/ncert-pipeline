@@ -12,7 +12,7 @@ measured, never typed. Re-run after any stage whose output changed.
 - figures: 8
 - verified: 0/21
 - simplified: 14/21
-- corrections applied so far: 17
+- corrections applied so far: 0
 
 ## Bilingual coverage — question text
 
@@ -21,13 +21,13 @@ measured, never typed. Re-run after any stage whose output changed.
 
 ## Empty fields (Rule 5 — must stay visible, never silently filled)
 
-- items with no solution at all: 3 — q_2.9, q_2.13, q_2.14
+- items with no solution at all: 4 — q_2.3, q_2.9, q_2.13, q_2.14
 - items with no final answer at all: 19 — q_2.2, q_2.3, q_2.4, q_2.5, q_2.6, q_2.7, q_2.8, q_2.9, q_2.10, q_2.11, q_2.12, q_2.13, q_2.14, q_2.15, q_2.17, q_2.18, q_2.19, q_2.20, q_2.21
 
 ## Stage history (`manifest.json`)
 
-- entries: 31
+- entries: 35
 - stages run at least once: combine, design, design_correction, extract_match, format, mathpix, pdf, pdf_correction, simplify, split, tag, verify
-- total model calls across all entries: 19
+- total model calls across all entries: 20
 - no gate has ever failed for this chapter
 

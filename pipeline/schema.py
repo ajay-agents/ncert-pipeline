@@ -63,7 +63,7 @@ class Item(BaseModel):
 
 
 class Chapter(BaseModel):
-    subject: Literal["physics", "chemistry", "maths", "biology", "economics", "business_studies", "accountancy", "history", "geography", "political_science", "sociology"]
+    subject: Literal["physics", "chemistry", "maths", "biology", "economics", "business_studies", "accountancy", "history", "geography", "political_science", "sociology", "hindi", "english"]
     class_level: int             # 11 or 12
     chapter_number: str          # "10"
     title: Text = Field(default_factory=Text)

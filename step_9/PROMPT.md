@@ -110,6 +110,22 @@ derivation is more than one line — wrap `.s26` and `.s36` together inside
 one container and size *that* to `flex:1`, not the two of them
 individually.
 
+**The label pill itself (`.s24`/`.s28`/`.s34`/`.s35` for given/key-formula/
+substitute/conclusion, `.s74`/`.s75` for recall/caution notes) has no width
+limit and `white-space:nowrap`, sized for the exemplar's own short fixed
+4-word vocabulary inside a 135px label column.** A freeform `:::concept`/
+`:::note` label that runs longer (a specific compound's name, a multi-word
+principle) doesn't wrap — it grows past 135px and visually overlaps the
+adjacent content column instead. Caught for real across ~20 later chapters
+once one specific overlap (two freeform concept labels in a Chemistry
+coordination-compounds item) was reported and traced to the shared base
+CSS, not a one-off. Already fixed in `solutions-chapter-1.css` itself
+(so a fresh copy of it is clean), but if this chapter's own CSS was copied
+before that fix, or hand-edits these pill rules again, add back: `.s82 >
+.s23 .s24, .s82 > .s23 .s28, .s82 > .s23 .s34, .s82 > .s23 .s35, .s82 >
+.s23 .s74, .s82 > .s23 .s75 { white-space:normal; text-align:center; }`
+(swap `.s82` for `.s22` if this chapter still uses that wrapper).
+
 **A second trap, in `.s37`/`.s44`/`.s50`/`.s56` (the boxed final-answer
 span inside a conclusion pill)**: its border is an organic blob
 (`border-radius` given as percentages, e.g. `45% 55% 50% 50% / 60% 55% 45%
@@ -502,6 +518,27 @@ the `.s81` stack instead, the same way an item-level figure row already
 does. The figure-src-count check below catches this the same way it
 catches the flow-nested case — a mismatch there means the render script
 dropped something, not that stage 8's JSON is short a figure.
+
+**The exact same bare-top-level-block trap applies to `type: "table"`, not
+just `type: "figure"` — and is easy to miss because a chapter's own header
+comment in `group_blocks()` may have been written assuming "no notes occur
+in this chapter" without separately checking for tables.** A bare
+`:::table` (a worked example's own data table, not a ledger/price table
+nested in some other block's flow) carries no `stage` key the same way a
+bare figure doesn't; code that only special-cases `'note'`/`'figure'`
+before the `stage is None: continue` fallback silently drops the table
+entirely — not merged or garbled, just absent from the page. Caught for
+real in two Maths chapters sharing one render-script lineage (one had
+*no* note/figure/table handling at all) via a numeric read-back gap on a
+table's own values, and independently in a third, orphaned chapter with
+no surviving render script, needing a direct HTML patch instead. Fix:
+give `'table'` the same `group_blocks()` treatment as `'figure'` (its own
+group kind, checked before the `stage` dispatch) and render it as a real
+`<table>` via the chapter's existing `render_table_html()`-style helper
+(reuse the one already written for a flow-nested table if one exists,
+rather than writing a second). The table's own row/cell count — not just
+its presence — still needs the usual gate: compare the JSON block's
+source markdown row count against the rendered `<table>`'s row count.
 
 **`_strip_redundant_enumeration`'s own clause-boundary search for the
 *last* labelled clause (no following `(x)` marker to bound it) can mistake

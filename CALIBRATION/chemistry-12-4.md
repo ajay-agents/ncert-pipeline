@@ -28,8 +28,8 @@ measured, never typed. Re-run after any stage whose output changed.
 
 ## Stage history (`manifest.json`)
 
-- entries: 38
+- entries: 40
 - stages run at least once: combine, design, design-fixup, extract_match, format, format-fixup, format_correction, mathpix, pdf, simplify, simplify-fixup, split, tag, tag-fixup, verify, verify_correction
-- total model calls across all entries: 62
+- total model calls across all entries: 63
 - gates that have failed at some point: front_unchanged, item_count_match, no_blank_pages, numeric_readback_vs_pdf_text, page_count_sane, tag_parse, visual_spot_check
 

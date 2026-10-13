@@ -14,7 +14,7 @@ measured, never typed. Re-run after any stage whose output changed.
 - figures: 0
 - verified: 0/79
 - simplified: 0/79
-- corrections applied so far: 7
+- corrections applied so far: 0
 
 ## Bilingual coverage — question text
 
@@ -28,8 +28,8 @@ measured, never typed. Re-run after any stage whose output changed.
 
 ## Stage history (`manifest.json`)
 
-- entries: 6
-- stages run at least once: combine, extract_match, mathpix, simplify, split, verify
-- total model calls across all entries: 28
+- entries: 16
+- stages run at least once: combine, design, design_correction, extract_match, format, format_correction, mathpix, mathpix_chapter_only, pdf, simplify, split, tag, tag_correction, verify
+- total model calls across all entries: 37
 - gates that have failed at some point: gate_bilingual, gate_math_parity_hi
 

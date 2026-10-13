@@ -13,8 +13,8 @@ measured, never typed. Re-run after any stage whose output changed.
 - parts (sub-items): 21
 - figures: 0
 - verified: 0/80
-- simplified: 18/80
-- corrections applied so far: 2
+- simplified: 0/80
+- corrections applied so far: 0
 
 ## Bilingual coverage — question text
 
@@ -28,8 +28,8 @@ measured, never typed. Re-run after any stage whose output changed.
 
 ## Stage history (`manifest.json`)
 
-- entries: 11
-- stages run at least once: combine, design, extract_match, format, format_correction, mathpix, simplify, split, tag, tag_correction, verify
-- total model calls across all entries: 33
-- gates that have failed at some point: fresh_recount_figure_src_match, fresh_recount_item_id_match, fresh_recount_part_count_match, gate_bilingual, item_id_order_unchanged, manual_visual_readback, no_leaked_amp_or_colspec_text, no_leaked_latex_commands, no_stray_dollar_signs, numeric_readback_vs_chapter_simplified_hi, part_label_matches_extraction_source, tag_parse
+- entries: 13
+- stages run at least once: combine, design, extract_match, format, format_correction, mathpix, pdf, simplify, split, tag, tag_correction, verify
+- total model calls across all entries: 34
+- gates that have failed at some point: fresh_recount_figure_src_match, fresh_recount_item_id_match, fresh_recount_part_count_match, gate_bilingual, item_id_order_unchanged, manual_visual_readback, no_blank_pages, no_leaked_amp_or_colspec_text, no_leaked_latex_commands, no_stray_dollar_signs, numeric_readback_vs_chapter_simplified_hi, numeric_readback_vs_pdf_extracted_text, page_count_sane, part_label_matches_extraction_source, tag_parse
 

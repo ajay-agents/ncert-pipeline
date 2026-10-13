@@ -31,7 +31,15 @@ shape (`:::prompt`, `:::part{label="..."}`, `:::solution`, `:::answer`,
   characterise it as something it isn't. This field is never checked against
   the PDF (stage 5 has nothing to check it against) and is not rewritten in
   stage 6 — write it once, here, correctly. Since it becomes a single-line
-  `{k="v"}` attribute, never put a literal `"` or a newline in it.
+  `{k="v"}` attribute, never put a literal `"` or a newline in it. **Write it
+  in the same language as the pass you are extracting** — a Hindi label for
+  the `chapter.hi.md` item, an English label for `chapter.en.md`'s. This has
+  been gotten wrong before: a language-key mixup left several chapters'
+  Hindi items carrying the English descriptive phrase verbatim in their own
+  `topic` attribute (and the English-side field empty), which then surfaced
+  as an English badge on an otherwise-Hindi stage 9 page and needed a full
+  stage 2→10 re-cascade to fix. Translate, don't copy, when writing the
+  Hindi pass's own `topic=`.
 
 ## Do not
 

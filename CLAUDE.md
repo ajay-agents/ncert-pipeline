@@ -2,7 +2,16 @@
 
 Bilingual (English + Hindi) NCERT solutions for Physics, Chemistry, Maths,
 Biology, Economics, Business Studies and Accountancy, Classes 11–12. Each chapter moves through ten stages, one stage
-per session — never run two stages in one pass. The stage prompts live in
+at a time, in that order — never collapse two stages' own work into a
+single pass (each stage's own gates, manifest entry and report must each
+land before the next stage's work starts). When asked to take a chapter
+through several stages, or through the rest of its remaining stages, run
+them one after another without pausing to ask permission between each —
+only stop early if a gate fails, a stage's own PROMPT.md calls for a
+judgment call only the user can make, or the user asks to stop. Still
+report what each stage did (and append its manifest entry) before moving
+to the next, so the work stays a readable, auditable record one stage at
+a time even without a pause between them. The stage prompts live in
 `step_1/` … `step_10/` (see README.md's chain table for what each does);
 `.claude/commands/stageN-*.md` are thin wrappers over them so `/stage1-mathpix`
 etc. still work.

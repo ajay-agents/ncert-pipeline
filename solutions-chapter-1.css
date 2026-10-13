@@ -52,6 +52,16 @@ table { break-inside: auto; }
 .s33 { padding:5px 16px 0; white-space:nowrap; }
 .s34 { display:inline-block; background:#d6efc8; color:#2c5a17; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
 .s35 { display:inline-block; background:#ded4f8; color:#43287d; font-weight:700; font-size:17px; padding:5px 16px; border-radius:7px; white-space:nowrap; }
+/* .s22/.s82's label column is a fixed 135px; a freeform concept/note label
+   longer than this exemplar's own short given/key-formula/substitute/
+   conclusion vocabulary overflows that column's white-space:nowrap pill
+   into the adjacent content column - seen across ~20 later chapters' own
+   copies of this file before being traced back here. Scope to whichever
+   label-cell wrapper a later chapter actually uses. */
+.s22 > .s23 .s24, .s22 > .s23 .s28, .s22 > .s23 .s34, .s22 > .s23 .s35,
+.s22 > .s23 .s74, .s22 > .s23 .s75,
+.s82 > .s23 .s24, .s82 > .s23 .s28, .s82 > .s23 .s34, .s82 > .s23 .s35,
+.s82 > .s23 .s74, .s82 > .s23 .s75 { white-space:normal; text-align:center; }
 .s36 { font-size:20px; font-weight:700; line-height:1.6; display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
 .s37 { display:inline-block; border:2.6px solid #10989e; border-radius:45% 55% 50% 50% / 60% 55% 45% 50%; padding:4px 20px; font-weight:700; }
 .s38 { transform:translateY(-14px); }

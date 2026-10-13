@@ -28,8 +28,8 @@ measured, never typed. Re-run after any stage whose output changed.
 
 ## Stage history (`manifest.json`)
 
-- entries: 17
-- stages run at least once: combine, design, extract_match, format, mathpix, simplify, simplify_verified, split, tag, text_corruption_fixed, verify, verify_correction, verify_correction_reverted
+- entries: 21
+- stages run at least once: combine, design, design_bug_fixed, extract_match, format, mathpix, pdf, simplify, simplify_verified, split, tag, text_corruption_fixed, verify, verify_correction, verify_correction_reverted
 - total model calls across all entries: 11
 - gates that have failed at some point: all_items_have_topic, figure_src_resolves_in_09_design, gate_math_parity, numeric_readback_question_and_final_answer_vs_06_simplify, protect_parity, reparsed_counts_match_fresh_markdown_count, tag_parse
 
